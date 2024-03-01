@@ -3,28 +3,17 @@ import "./style.css";
 import type { JSX } from "solid-js";
 import { createSignal,Show } from "solid-js";
 
-
 function MenuItem(props: {href:string, children: JSX.Element }) {
-return <a href={props.href} class="flex sm-hidden lg-flex top-bar-meniitem h-10 c-white text-center  font-size-4 uppercase">{props.children}</a>
+return <a href={props.href} class="flex sm-hidden lg-flex top-bar-meniitem h-13 c-paper text-center font-size-4 xl-font-size-4.5 uppercase">{props.children}</a>
 }
 
 export default function LayoutDefault(props: { children?: JSX.Element }) {
   return (
     <div class="flex flex-col"
     >
-      <Blackbar> 
-        <div>
-          <a class="hover-color-white color-gray-4 font-size-3" href="/">Faluninfo.net</a>
-          <span class="c-white"> | </span>
-          <a class="hover-color-white color-gray-4 font-size-3" href="/">Фалунинфо ТВ</a>
-          <span class="c-white"> | </span>
-          <a class="hover-color-white color-gray-4 font-size-3" href="/">Фалунинфо ГАЛЕРИЯ</a>
-          <span class="c-white"> | </span>
-        </div>
-      </Blackbar>
       <Topbar>
         <Logo />
-        <div class="flex whitespace-nowrap flex-nowrap flex-justify-end flex-items-end font-size-14px font-semibold font-sans gap-1 xl-gap-4">
+        <div class="flex whitespace-nowrap flex-nowrap flex-justify-end flex-items-end font-semibold gap-1 xl-gap-7xl flex-content-center flex-items-center">
           <MenuItem href="/">Какво е Фалун Дафа</MenuItem>
           <MenuItem href="/">Защо е преследван</MenuItem>
           <MenuItem href="/">Отнемане на органи</MenuItem>
@@ -44,8 +33,7 @@ function Topbar(props: { children: JSX.Element }) {
   return (
     <div
       id="sidebar"
-      class="flex p-8 flex-shrink-0 line-height-5 border-b-2 bg-brand flex-justify-between sm-flex-items-center lg-flex-items-end"
-    >
+      class="flex p-8 flex-shrink-0 line-height-5 border-b-2 bg-brand flex-justify-between flex-items-center">
       {props.children}
     </div>
   );
@@ -72,7 +60,6 @@ function Logo() {
   return (
     <div
       style={{
-
         "display": "flex",
         "align-items": "center",
         "justify-content": "center",
@@ -83,16 +70,6 @@ function Logo() {
       </a>
     </div>
   );
-}
-
-function Blackbar(props: { children: JSX.Element }) {
-  return (
-    <div 
-    class="flex p-2 bg-gray-9 justify-end"
-    >
-      {props.children}
-    </div>
-  )
 }
 
 function HamburgerMenu(props: { children: JSX.Element }) {
