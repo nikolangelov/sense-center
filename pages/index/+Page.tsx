@@ -1,27 +1,57 @@
 import { Counter } from "./Counter";
 
+function FeaturedBlock (props: {text:string,image:string,url:string}) {
+  return (
+    <div class="flex flex-col lg-w-30% sm-w-65% w-80% b-solid b-1 b-#e7e7e7 mb-40px pb-8 hover-b-gray-3:hover" style="box-shadow: 0 0 10px #dadada;">
+      <img class="" src={props.image}></img>
+      <div class="pt-20px px-25px font-size-17px line-height-25px color-gray-8 font-sans pb-8">{props.text}</div>
+      <a href={props.url} class="text-center color-#005c88 hover-color-blue-8:hover" style="letter-spacing: .75px;">ПРОЧЕТЕТЕ ПОВЕЧЕ</a>
+    </div>
+  );
+}
+
 export default function Page() {
   return (
     <>
-      <h1 class="c-red flex-wrap">My vike-solid app</h1>
-      This page is:
-      <ul class="flex flex-row-reverse">
-        <li class="w-26">Rendered to HTML.</li>
-        <li class="w-26">  
-          Interactive. <Counter />
-        </li>
-      </ul>
-      
-     <div style="background-color:#ff0066;padding:20px;"> 
-      <form>
-      <label for="fname">First name:&#128509;</label>
-<input type="text" id="fname" name="fname"></input><br></br>
-<label for="lname">Last name:&#128509;</label>
-<input type="text" id="lname" name="lname"></input><br></br>
-<input type="submit" value="Submit"></input>
-</form>
-</div>
+      <div class="content">
+        <img src="\assets\home-page-blue-montage-1140x490_c-e1615502484310.jpg" class="w-full -mx-20px" style="width: calc(100% + 40px);"/>   
+        <section class="">
+          <div class="flex flex-wrap -mt-30 lg-flex-justify-between sm-flex-justify-center">
+          <FeaturedBlock 
+            text="Falun Gong, also known as Falun Dafa, is a spiritual practice in the Buddhist tradition. Falun Gong combines meditation and gentle exercises with a moral philosophy centered on the tenets of Truthfulness, Compassion, and Tolerance. Although introduced to the public in China in 1992, its roots extend back thousands of years."
+            image="\assets\FDI-1__what-is-falun-gong__1280px-1-640x360.jpg"
+            url="/"/>
+          <FeaturedBlock 
+            text="Falun Gong, also known as Falun Dafa, is a spiritual practice in the Buddhist tradition. Falun Gong combines meditation and gentle exercises with a moral philosophy centered on the tenets of Truthfulness, Compassion, and Tolerance. Although introduced to the public in China in 1992, its roots extend back thousands of years."
+            image="\assets\FDI-1__what-is-falun-gong__1280px-1-640x360.jpg"
+            url="/"/>
+          <FeaturedBlock 
+            text="Falun Gong, also known as Falun Dafa, is a spiritual practice in the Buddhist tradition. Falun Gong combines meditation and gentle exercises with a moral philosophy centered on the tenets of Truthfulness, Compassion, and Tolerance. Although introduced to the public in China in 1992, its roots extend back thousands of years."
+            image="\assets\FDI-1__what-is-falun-gong__1280px-1-640x360.jpg"
+            url="/"/>
+          </div>
+        </section>
+        <a href="/"><img class="max-w-full" src="\assets\FDinfo-HumanityArticle__v2.png"></img></a>
 
-    </>
+        <section class="">
+          <div class="flex flex-wrap lg-flex-justify-between sm-flex-justify-center mt-10">
+            <FeaturedBlock 
+              text="Falun Gong, also known as Falun Dafa, is a spiritual practice in the Buddhist tradition. Falun Gong combines meditation and gentle exercises with a moral philosophy centered on the tenets of Truthfulness, Compassion, and Tolerance. Although introduced to the public in China in 1992, its roots extend back thousands of years."
+              image="\assets\FDI-1__what-is-falun-gong__1280px-1-640x360.jpg"
+              url="/"/>
+            <FeaturedBlock 
+              text="Falun Gong, also known as Falun Dafa, is a spiritual practice in the Buddhist tradition. Falun Gong combines meditation and gentle exercises with a moral philosophy centered on the tenets of Truthfulness, Compassion, and Tolerance. Although introduced to the public in China in 1992, its roots extend back thousands of years."
+              image="\assets\FDI-1__what-is-falun-gong__1280px-1-640x360.jpg"
+              url="/"/>
+            <FeaturedBlock 
+              text="Falun Gong, also known as Falun Dafa, is a spiritual practice in the Buddhist tradition. Falun Gong combines meditation and gentle exercises with a moral philosophy centered on the tenets of Truthfulness, Compassion, and Tolerance. Although introduced to the public in China in 1992, its roots extend back thousands of years."
+              image="\assets\FDI-1__what-is-falun-gong__1280px-1-640x360.jpg"
+              url="/"/>
+          </div>
+        </section>
+        <a href="/"><img class="max-w-full" src="\assets\FDinfo-HumanityArticle__v2.png"></img></a>
+        <a href="/"><img class="max-w-full block mla mra mt-10" src="\assets\ShenYunZuoPin- Orange-Desktop-ZaDimo.png"></img></a>
+      </div>
+     </>
   );
 }
