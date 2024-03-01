@@ -1,15 +1,11 @@
 import 'uno.css'
 import "./style.css";
-
-import { Link } from "../components/Link";
 import type { JSX } from "solid-js";
-
-
-import { render } from "solid-js/web";
 import { createSignal,Show } from "solid-js";
 
+
 function MenuItem(props: {href:string, children: JSX.Element }) {
-return <a href={props.href}class="flex sm-hidden lg-flex top-bar-meniitem h-10 c-white text-center  font-size-4 uppercase">{props.children}</a>
+return <a href={props.href} class="flex sm-hidden lg-flex top-bar-meniitem h-10 c-white text-center  font-size-4 uppercase">{props.children}</a>
 }
 
 export default function LayoutDefault(props: { children?: JSX.Element }) {
@@ -24,7 +20,6 @@ export default function LayoutDefault(props: { children?: JSX.Element }) {
           <span class="c-white"> | </span>
           <a class="hover-color-white color-gray-4 font-size-3" href="/">Фалунинфо ГАЛЕРИЯ</a>
           <span class="c-white"> | </span>
-          <Counter></Counter>
         </div>
       </Blackbar>
       <Topbar>
@@ -45,30 +40,11 @@ export default function LayoutDefault(props: { children?: JSX.Element }) {
   );
 }
 
-function Counter() {
-  const [open,setOpen] = createSignal(false);
-
-  return (
-    <>
-      <Show when={!open()}>
-        <button class="hover-color-white cursor-pointer color-gray-4 bg-transparent b-none" onClick={() => setOpen(true)}>&#128269;</button>
-      </Show>
-        <Show when={open()}>
-            <input type="text" />
-            <button class="bg-black c-white font-extrabold b-none cursor-pointer" type="submit">GO</button>
-        </Show>
-        <Show when={open()}>
-          <button class="hover-color-white cursor-pointer color-gray-4 bg-transparent b-none" onClick={()=>setOpen(false)}>&#10006;</button>
-        </Show>
-    </>
-  );
-}
-
 function Topbar(props: { children: JSX.Element }) {
   return (
     <div
       id="sidebar"
-      class="flex p-8 flex-shrink-0 line-height-5 border-b-2 bg-blue-9 flex-justify-between sm-flex-items-center lg-flex-items-end"
+      class="flex p-8 flex-shrink-0 line-height-5 border-b-2 bg-brand flex-justify-between sm-flex-items-center lg-flex-items-end"
     >
       {props.children}
     </div>

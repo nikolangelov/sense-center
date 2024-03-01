@@ -1,9 +1,9 @@
 function FeaturedBlock (props: {text:string,image:string,url:string}) {
   return (
-    <div class="flex flex-col lg-w-30% sm-w-65% w-80% b-solid b-1 b-#e7e7e7 mb-40px pb-8 hover-b-gray-3:hover" style="box-shadow: 0 0 10px #dadada;">
+    <div class="flex flex-col lg-w-30% sm-w-65% w-80% b-solid b-1 b-paper-border mb-40px pb-8 hover-b-gray-3:hover cursor-pointer" style="box-shadow: 0 0 10px #dadada;">
       <img class="" src={props.image}></img>
       <div class="pt-20px px-25px font-size-17px line-height-25px color-gray-8 font-sans pb-8">{props.text}</div>
-      <a href={props.url} class="text-center color-#005c88 hover-color-blue-8:hover uppercase" style="letter-spacing: .75px;">Прочетете повече</a>
+      <a href={props.url} class="text-center color-paper-link hover-color-paper-link-hover uppercase" style="letter-spacing: .75px;">Прочетете повече</a>
     </div>
   );
 }

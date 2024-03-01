@@ -15,7 +15,21 @@ export default defineConfig({
 	},
 	envPrefix: "PUBLIC_",
 	plugins: [
-		UnoCSS(),
+		UnoCSS({
+			theme: {
+				colors: {
+					brand: "#005c88",
+					"brand-light": "#007faf",
+					"brand-dark": "#00254b",
+					"brand-inv": "#eee",
+					"paper": "#fff",
+					"paper-inv": "#000",
+					"paper-link": "#005c88",
+					"paper-link-hover": "#007faf",
+					"paper-border": "#e7e7e7",
+				}
+			}
+		}),
 		solid({ ssr: true }),
 		// the metaframework https://vike.dev/
 		vikePlugin(),
