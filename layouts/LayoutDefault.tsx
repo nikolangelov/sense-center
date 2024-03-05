@@ -36,11 +36,13 @@ export default function LayoutDefault(props: { children?: JSX.Element }) {
       </MainFooter>
       <BottomFooter>
         <div class="flex flex-row">
-          <MainFooterMenuItem href="/">За нас</MainFooterMenuItem>
-          <MainFooterMenuItem href="/">Политика за поверителност</MainFooterMenuItem>
-          <MainFooterMenuItem href="/">Условия за ползване</MainFooterMenuItem>
+          <BottomFooterMenuItem href="/">Политика за поверителност</BottomFooterMenuItem>
+          <div class="flex c-paper lg-font-size-5 font-size-13 lg-py-1.5 pt-5 lg-px-15 pr-8"> │ </div>
+          <BottomFooterMenuItem href="/">За нас</BottomFooterMenuItem>
+          <div class="flex c-paper lg-font-size-5 font-size-13 lg-py-1.5 pt-5 lg-px-15 pl-8"> │ </div>
+          <BottomFooterMenuItem href="/">Условия за ползване</BottomFooterMenuItem>
         </div>
-        <p class="c-paper">Copyright &copy; 2000-2024 - Фалун Дафа информационен център - Всички права запазени.</p>
+        <p class="c-paper text-center lg-font-size-3.5 font-size-8 font-400 lg-py-0 py-5" style="font-family: Open Sans, sans-serif;">Copyright &copy; 2000-2024 - Фалун Дафа информационен център - Всички права запазени.</p>
       </BottomFooter>
     </div>
   );
@@ -50,7 +52,7 @@ function Topbar(props: { children: JSX.Element }) {
   return (
     <div
       id="sidebar"
-      class="flex p-5 position-sticky top-0 flex-shrink-0 line-height-5 border-b-2 bg-brand flex-justify-between flex-items-center">
+      class="flex lg-p-5 p-12 position-sticky top-0 flex-shrink-0 line-height-5 border-b-2 bg-brand flex-justify-between flex-items-center">
       {props.children}
     </div>
   );
@@ -83,7 +85,7 @@ function Logo() {
       }}
     >
       <a href="/">
-        <img src="/assets/logo.png" width={150} height={43} />
+        <img src="/assets/logo.png" class="lg-w-34 lg-h-10 w-85 h-20"/>
       </a>
     </div>
   );
@@ -106,31 +108,34 @@ function HamburgerMenu(props: { children: JSX.Element }) {
 function MainFooter(props: { children: JSX.Element }) {
   return (
     <div
-      class="flex flex-col bg-brand-dark p-10 flex-shrink-0 flex-justify-between flex-items-center">
+      class="flex flex-col bg-brand-dark lg-p-4 p-10 flex-shrink-0 flex-justify-between flex-items-center">
       {props.children}
     </div>
   );
 }
 
 function MainFooterMenuItem(props: {href:string, children: JSX.Element }) {
-  return <a href={props.href} class="flex c-paper text-center font-normal font-size-4.5 py-1.5 hover-color-paper-link-hover:hover" style="font-family: Open Sans, sans-serif;">{props.children}</a>
+  return <a href={props.href} class="flex c-paper text-center font-normal lg-font-size-4.2 font-size-10 lg-py-1 py-3 hover-color-paper-link-hover:hover" style="font-family: Open Sans, sans-serif;">{props.children}</a>
   }
 
     function MainFooterSocialIcons() {
       return (
-        <div class="flex grid-items-center mb-7"
+        <div class="flex flex-items-center lg-mb-6 mb-10 lg-mt-5 mt-9"
         >
-          <a class="mr-7 ml-7" href="/">
-            <img src="\assets\SVG Icons\youtube.svg" width={50} height={50} />
+          <a class="lg-mx-7 mx-10 lg-my-0" href="/">
+            <img src="\assets\SVG Icons\youtube.svg" class="lg-w-13 lg-h-13 w-20 h-20"/>
           </a>
-          <a class="mr-7 ml-7" href="/">
-            <img src="\assets\SVG Icons\facebook.svg" width={40} height={40} />
+          <a class="lg-mx-7 mx-10 lg-my-0" href="/">
+            <img src="\assets\SVG Icons\facebook.svg" class="lg-w-11 lg-h-11 w-18 h-18"/>
           </a>
-          <a class="mr-7 ml-7" href="/">
-            <img src="\assets\SVG Icons\instagram.svg" width={45} height={45} />
+          <a class="lg-mx-7 mx-10 lg-my-0" href="/">
+            <img src="\assets\SVG Icons\instagram.svg" class="lg-w-12 lg-h-12 w-19 h-19"/>
           </a>
-          <a class="mr-7 ml-7" href="/">
-            <img src="\assets\SVG Icons\square-x-twitter.svg" width={45} height={45} />
+          <a class="lg-mx-7 mx-10 lg-my-0" href="/">
+            <img src="\assets\SVG Icons\square-x-twitter.svg" class="lg-w-12 lg-h-12 w-19 h-19"/>
+          </a>
+          <a href="/">
+            <svg xmlns="http://www.w3.org/2000/svg" class="lg-w-11 lg-h-11 w-18 h-18" viewBox="0 0 512 512"><path fill="#fafafa" d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z"/></svg>
           </a>
         </div>
       );
@@ -139,8 +144,12 @@ function MainFooterMenuItem(props: {href:string, children: JSX.Element }) {
     function BottomFooter(props: { children: JSX.Element }) {
       return (
         <div
-          class="flex flex-col bg-brand p-10 flex-shrink-0 flex-justify-between flex-items-center">
+          class="flex flex-col bg-#00152b p-3 flex-shrink-0 flex-justify-between flex-items-center">
           {props.children}
         </div>
       );
+    }
+
+    function BottomFooterMenuItem(props: {href:string, children: JSX.Element }) {
+      return <a href={props.href} class="flex c-paper text-center font-normal lg-font-size-3.5 font-size-9 py-1.5  hover-color-brand:hover" style="font-family: Open Sans, sans-serif;">{props.children}</a>
     }
