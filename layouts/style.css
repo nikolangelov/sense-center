@@ -39,10 +39,17 @@ body.page-is-transitioning #page-content {
   letter-spacing: 0.5px;
   margin-right: 8px;
   font-family: "Open Sans", sans-serif;
-  margin-bottom: -30px;
+  margin-bottom: -36px;
 }
 
-#sidebar {
-  position: sticky;
-  top: 0px;
+.colors {
+/*brand*/ color: #005c88;
+/*brand-light*/  color: #007faf;
+/*brand-dark*/ color: #00254b;
+/*brand-inv*/  color: #eee;
+/*paper*/  color: #fff;
+/*paper-inv*/  color: #000;
+/*paper-link*/  color: #005c88;
+/*paper-link-hover*/  color: #007faf;
+/*paper-border*/  color: #e7e7e7;
 }
