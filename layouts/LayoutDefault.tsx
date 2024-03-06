@@ -4,7 +4,7 @@ import type { JSX } from "solid-js";
 import { createSignal,Show } from "solid-js";
 
 function MenuItem(props: {href:string, children: JSX.Element }) {
-return <a href={props.href} class="flex sm-hidden lg-flex top-bar-meniitem h-14 c-paper text-center font-size-4 xl-font-size-4.8 uppercase">{props.children}</a>
+return <a href={props.href} class="flex sm-hidden lg-flex top-bar-meniitem h-13 c-paper text-center font-size-4 xl-font-size-4.8 uppercase">{props.children}</a>
 }
 
 export default function LayoutDefault(props: { children?: JSX.Element }) {
@@ -123,16 +123,16 @@ function MainFooterMenuItem(props: {href:string, children: JSX.Element }) {
         <div class="flex flex-items-center lg-mb-6 mb-10 lg-mt-5 mt-9"
         >
           <a class="lg-mx-7 mx-10 lg-my-0" href="/">
-            <img src="\assets\SVG Icons\youtube.svg" class="lg-w-13 lg-h-13 w-20 h-20"/>
+            <img src="/assets/SVG-social-Icons/youtube.svg" class="lg-w-13 lg-h-13 w-20 h-20"/>
           </a>
           <a class="lg-mx-7 mx-10 lg-my-0" href="/">
-            <img src="\assets\SVG Icons\facebook.svg" class="lg-w-11 lg-h-11 w-18 h-18"/>
+            <img src="/assets/SVG-social-Icons/facebook.svg" class="lg-w-11 lg-h-11 w-18 h-18"/>
           </a>
           <a class="lg-mx-7 mx-10 lg-my-0" href="/">
-            <img src="\assets\SVG Icons\instagram.svg" class="lg-w-12 lg-h-12 w-19 h-19"/>
+            <img src="/assets/SVG-social-Icons/instagram.svg" class="lg-w-12 lg-h-12 w-19 h-19"/>
           </a>
           <a class="lg-mx-7 mx-10 lg-my-0" href="/">
-            <img src="\assets\SVG Icons\square-x-twitter.svg" class="lg-w-12 lg-h-12 w-19 h-19"/>
+            <img src="/assets/SVG-social-Icons/square-x-twitter.svg" class="lg-w-12 lg-h-12 w-19 h-19"/>
           </a>
           <a href="/">
             <svg xmlns="http://www.w3.org/2000/svg" class="lg-w-11 lg-h-11 w-18 h-18" viewBox="0 0 512 512"><path fill="#fafafa" d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z"/></svg>
