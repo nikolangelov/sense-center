@@ -1,6 +1,6 @@
 function FeaturedBlock (props: {text:string,image:string,url:string}) {
   return (
-    <div class="flex flex-col lg-w-30% md-w-65% w-95% b-solid b-1 b-paper-border mb-30 pb-8 hover-b-gray-3:hover cursor-pointer" style="box-shadow: 0 0 10px #dadada;">
+    <div class="flex flex-col lg-w-30% sm-w-65% w-95% b-solid b-1 b-paper-border mb-30 pb-8 hover-b-gray-3:hover cursor-pointer" style="box-shadow: 0 0 10px #dadada;">
       <img class="" src={props.image}></img>
       <div class="pt-20px px-25px lg-font-size-4.2 font-size-12 line-height-18 lg-line-height-25px color-paper-inv font-sans lg-pb-8 lg-my-2 my-20 text-justify">{props.text}</div>
       <a href={props.url} class="text-center lg-font-size-4.3 font-size-14 font-100 color-paper-link hover-color-paper-link-hover uppercase lg-my-0 mb-15 mt-5" style="letter-spacing: .75px;">Прочетете повече</a>

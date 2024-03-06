@@ -31,8 +31,6 @@ export default defineConfig({
 			}
 		}),
 		solid({ ssr: true }),
-		// the metaframework https://vike.dev/
-		vikePlugin(),
 		// @ts-ignore
 		// only https://icon-sets.iconify.design/material-symbols/
 		// and https://icon-sets.iconify.design/cib/
