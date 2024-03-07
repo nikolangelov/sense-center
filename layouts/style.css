@@ -31,3 +31,137 @@ body.page-is-transitioning #page-content {
   margin-bottom: -30px;
 }
 
+
+
+
+
+
+
+/* CSS for Slideshow */
+.slideshow-container {
+  position: relative;
+  max-width: 800px;
+  margin: auto;
+  overflow: hidden;
+}
+
+.mySlides {
+  display: none;
+}
+
+.mySlides img {
+  width: 100%;
+  height: auto;
+}
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: auto;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 24px;
+  transition: 0.3s ease;
+  background-color: rgba(0, 0, 0, 0.5);
+  border: none;
+  border-radius: 0 3px 3px 0;
+  z-index: 1000;
+}
+
+.prev {
+  left: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.next {
+  right: 0;
+}
+
+.prev:hover, .next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 4px;
+}
+
+.dot-container {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 8px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.3s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+
+
+
+.sidebar-ul {
+  margin-left: 10px;
+  list-style-type: none;
+  counter-reset: li;
+}
+
+.sidebar-li{
+  display: list-item;
+}
+
+.sidebar-li:before {
+  counter-increment: li;
+  content: counter(li,decimal-leading-zero) " | ";
+  color: #989898;
+  display: inline-block;
+  width: 2em;
+  margin-left: -2.6em;
+}
+
+.sidebar-second-ul {
+  list-style-type: circle;
+  margin-left: -1.5em;
+}
+
+.first-block-arrow-element:after {
+  content: "";
+    position: absolute;
+    border-top: 8px solid;
+    left: 43%;
+    bottom: -5%;
+    border-left: 18px solid transparent;
+    border-right: 18px solid transparent;
+    border-top-color: #005c88;
+    z-index: 998!important;
+}
+
+.second-block-arrow-element:after {
+  content: "";
+    position: absolute;
+    border-top: 8px solid;
+    left: 43%;
+    bottom: -2%;
+    border-left: 18px solid transparent;
+    border-right: 18px solid transparent;
+    border-top-color: #e9e9e9;
+    z-index: 998!important;
+}
