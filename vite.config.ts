@@ -8,7 +8,7 @@ import UnoCSS from 'unocss/vite'
 
 
 const isProduction = process.env.NODE_ENV === "production"
-
+const mainFontFamily = '"Inter Tight", sans-serif';
 export default defineConfig({
 	server: {
 		host: true,
@@ -16,6 +16,33 @@ export default defineConfig({
 	},
 	plugins: [
 		UnoCSS({
+			rules: [
+				["typography-title", {
+					'font-family': mainFontFamily,
+					'font-weight': 700,
+					'font-size': '25px',
+				}],
+				["typography-subtitle", {
+					'font-family': mainFontFamily,
+					'font-weight': 600,
+					'font-size': '18px',
+				}],
+				["typography-caption", {
+					'font-family': mainFontFamily,
+					'font-weight': 400,
+					'font-size': '16px',
+				}],
+				["typography-body", {
+					'font-family': mainFontFamily,
+					'font-weight': 300,
+					'font-size': '17px',
+				}],
+				["typography-ui", {
+					'font-family': mainFontFamily,
+					'font-weight': 500,
+					'font-size': '17px',
+				}],
+			],
 			theme: {
 				colors: {
 					brand: "#005c88",
@@ -27,8 +54,8 @@ export default defineConfig({
 					"paper-link": "#005c88",
 					"paper-link-hover": "#007faf",
 					"paper-border": "#e7e7e7",
-				}
-			}
+				},
+			},
 		}),
 		vike({prerender: true}),
 		vikeSolid(),

@@ -9,7 +9,7 @@ import InstagramIcon from '~icons/mdi/instagram';
 import TwitterXLineIcon from '~icons/ri/twitter-x-line';
 
 function MenuItem(props: {href:string, children: JSX.Element }) {
-return <a href={props.href} class="hidden lg-flex top-bar-meniitem h-13 c-paper text-center font-size-4 xl-font-size-4.8 uppercase">{props.children}</a>
+return <a href={props.href} class="hidden font-ui lg-flex top-bar-meniitem h-13 c-paper text-center font-size-4 xl-font-size-4.8 uppercase">{props.children}</a>
 }
 
 export default function LayoutDefault(props: { children?: JSX.Element }) {
