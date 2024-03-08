@@ -1,7 +1,7 @@
+import vikeSolid from "vike-solid/config";
 import type { Config } from "vike/types";
-import vikeSolid from "vike-solid";
+import Head from "../layouts/Head";
 import Layout from "../layouts/LayoutDefault";
-import Head from "./Head";
 
 // Default config (can be overridden by pages)
 export default {
@@ -10,6 +10,5 @@ export default {
   // <title>
   title: "My Vike Solid App",
   // <meta name="description">
-  description: "Demo showcasing vike-solid",
   extends: vikeSolid,
 } satisfies Config;

@@ -1,4 +1,5 @@
 import { defineConfig } from "vite"
+import vike from "vike/plugin";
 import vikeSolid from "vike-solid/vite";
 
 import { fileURLToPath, URL } from "node:url"
@@ -13,7 +14,6 @@ export default defineConfig({
 		host: true,
 		port: 4002,
 	},
-	envPrefix: "PUBLIC_",
 	plugins: [
 		UnoCSS({
 			theme: {
@@ -30,7 +30,8 @@ export default defineConfig({
 				}
 			}
 		}),
-		vikeSolid({vps: {prerender: true}}),
+		vike({prerender: true}),
+		vikeSolid(),
 		// @ts-ignore
 		// only https://icon-sets.iconify.design/material-symbols/
 		// and https://icon-sets.iconify.design/cib/
@@ -44,11 +45,5 @@ export default defineConfig({
 			// must also be defined in tsconfig!
 			"#src": fileURLToPath(new URL("./src", import.meta.url)),
 		},
-	},
-	build: {
-		// target is es2022 to support top level await
-		// https://caniuse.com/?search=top%20level%20await
-		target: "es2022",
-		minify: isProduction,
-	},
+	}
 })
