@@ -8,7 +8,7 @@ export default {
   Layout,
   Head,
   // <title>
-  title: "My Vike Solid App",
+  title: "Фалун Дафа Информационен Център",
   // <meta name="description">
   extends: vikeSolid,
 } satisfies Config;
