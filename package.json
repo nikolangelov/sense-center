@@ -1,23 +1,24 @@
 {
   "private": true,
   "scripts": {
-    "dev": "vike-solid dev",
-    "build": "vike-solid build",
-    "preview": "vike-solid preview",
+    "dev": "vite dev",
+    "copyfiles": "copyfiles -u 1 \"assets/**/*.{html,css,scss,ttf,woff,woff2,eot,svg,jpg,png,js}\" dist/client/assets",
+    "build": "vite build && npm run copyfiles",
+    "preview": "vite preview",
     "test": "tsc --noEmit"
   },
   "dependencies": {
     "@iconify-json/mdi": "^1.1.64",
     "@iconify-json/ri": "^1.1.20",
     "@payloadcms/richtext-lexical": "^0.7.0",
+    "copyfiles": "^2.4.1",
     "payload-rest-client": "^0.1.0",
     "cross-fetch": "^4.0.0",
     "escape-html": "^1.0.3",
     "node-fetch": "^3.3.2",
-    "solid-js": "^1.8.6",
+    "solid-js": "^1.8.15",
     "unocss": "^0.57.7",
-    "vike": "^0.4.147",
-    "vike-solid": "^0.2.5"
+    "vike-solid": "^0.2.9"
   },
   "devDependencies": {
     "@types/escape-html": "^1.0.4",
