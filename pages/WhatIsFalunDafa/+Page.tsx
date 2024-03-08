@@ -1,10 +1,10 @@
 export default function Page() {
   return (
     <>
-      <img src="/assets/WhatisFalunGong__v1.3-1140x490.png" class="max-w-full block mla mra -mt-5"/>
+      <img src="/assets/WhatisFalunGong__v1.3-1140x490.png" class="-mt-5 w-full -mx-20px -mt-5" style="width: calc(100% + 40px);"/>
       <div class="flex">
         <div class="content">
-          <div class="px-15 pt-20">
+          <div class="md-px-15 px-0 md-pt-20 pt-5">
             <h1 class="pb-6">Какво е Фалун Дафа</h1>
             <h2 class="pb-6">Упражненията на Фалун Дафа</h2>
             <div class="pb-13 line-height-6 font-size-4">Фалун Гонг е древен китайски духовен метод,, произхождащ от будистката традиция. Произнася се "Фа-луун Гонг" и се състои от морални принципи, медитация и четири плавни упражнения, представляващи уникален и високо ефективен способ за подобряване на здравето и повишаване на енергийните нива.</div>
@@ -32,57 +32,59 @@ export default function Page() {
           </div>
         </div>
 
-        <div class="lg-block hidden w-33% mt-12 mr-6">
-          <div class="first-block-arrow-element block relative bg-brand px-11 py-6">
-            <a href="/"><div class="whitespace-nowrap c-paper font-600 py-2 font-size-4">Какво е Фалун Дафа</div></a>
-            <a href="/"><div class="whitespace-nowrap c-paper font-600 py-2 font-size-4">Защо е преследван</div></a>
-            <a href="/"><div class="whitespace-nowrap c-paper font-600 py-2 font-size-4">Какви са доказателствата</div></a>
-          </div>
-          <div class="second-block-arrow-element block relative bg-#e9e9e9 px-5 py-6">
-            <h3 class="font-size-4.3 ml-1.8">Историята на Фалун Дафа</h3>
-            <ul class="sidebar-ul flex flex-col">
-              <li class="sidebar-li py-2">
-                <a href="/" class="c-brand hover-c-brand-light:hover line-height-5 font-size-4">Какви са доказателствата</a>
-              </li>
-              <li class="sidebar-li py-2">
-                <a href="/" class="c-brand hover-c-brand-light:hover line-height-5 font-size-4">Какви са доказателствата</a>
-              </li>
-              <li class="sidebar-li py-2">
-                <a href="/" class="c-brand hover-c-brand-light:hover line-height-5 font-size-4">Какви са доказателствата</a>
-              </li>
-              <li class="sidebar-li py-2">
-                <a href="/" class="c-brand hover-c-brand-light:hover line-height-5 font-size-4">Какви са доказателствата</a>
-              </li>
-              <li class="sidebar-li py-2">
-                <a href="/" class="c-brand hover-c-brand-light:hover line-height-5 font-size-4">Какви са доказателствата</a>
-              </li>
-              <li class="sidebar-li py-2">
-                <a href="/" class="c-brand hover-c-brand-light:hover line-height-5 font-size-4">Какви са доказателствата</a>
-              </li>
-              </ul>
-          </div>
-          <div class="block relative bg-#f0f4ef px-8 py-6">
-            <h3 class="font-size-4.3">Преследване в Китай</h3>
-            <ul class="sidebar-second-ul flex flex-col">
-              <li class="sidebar-second-li py-2">
-                <a href="/" class="c-brand hover-c-brand-light:hover line-height-5 font-size-4">Какви са доказателствата</a>
-              </li>
-              <li class="sidebar-second-li py-2">
-                <a href="/" class="c-brand hover-c-brand-light:hover line-height-5 font-size-4">Какви са доказателствата</a>
-              </li>
-              <li class="sidebar-second-li py-2">
-                <a href="/" class="c-brand hover-c-brand-light:hover line-height-5 font-size-4">Какви са доказателствата</a>
-              </li>
-              <li class="sidebar-second-li py-2">
-                <a href="/" class="c-brand hover-c-brand-light:hover line-height-5 font-size-4">Какви са доказателствата</a>
-              </li>
-              <li class="sidebar-second-li py-2">
-                <a href="/" class="c-brand hover-c-brand-light:hover line-height-5 font-size-4">Какви са доказателствата</a>
-              </li>
-              <li class="sidebar-second-li py-2">
-                <a href="/" class="c-brand hover-c-brand-light:hover line-height-5 font-size-4">Какви са доказателствата</a>
-              </li>
-              </ul>
+        <div class="mt-0 pt-0 lg-block hidden w-33% mt-12 mr-6">
+          <div style="position: -webkit-sticky; position: sticky; top:100px;">  
+            <div class="first-block-arrow-element block relative bg-brand px-11 py-6">
+              <a href="/"><div class="whitespace-nowrap c-paper font-600 py-2 font-size-4">Какво е Фалун Дафа</div></a>
+              <a href="/"><div class="whitespace-nowrap c-paper font-600 py-2 font-size-4">Защо е преследван</div></a>
+              <a href="/"><div class="whitespace-nowrap c-paper font-600 py-2 font-size-4">Какви са доказателствата</div></a>
+            </div>
+            <div class="second-block-arrow-element block relative bg-#e9e9e9 px-5 py-6">
+              <h3 class="font-size-4.3 ml-1.8">Историята на Фалун Дафа</h3>
+              <ul class="sidebar-ul flex flex-col">
+                <li class="sidebar-li py-2">
+                  <a href="/" class="c-brand hover-c-brand-light:hover line-height-5 font-size-4">Какви са доказателствата</a>
+                </li>
+                <li class="sidebar-li py-2">
+                  <a href="/" class="c-brand hover-c-brand-light:hover line-height-5 font-size-4">Какви са доказателствата</a>
+                </li>
+                <li class="sidebar-li py-2">
+                  <a href="/" class="c-brand hover-c-brand-light:hover line-height-5 font-size-4">Какви са доказателствата</a>
+                </li>
+                <li class="sidebar-li py-2">
+                  <a href="/" class="c-brand hover-c-brand-light:hover line-height-5 font-size-4">Какви са доказателствата</a>
+                </li>
+                <li class="sidebar-li py-2">
+                  <a href="/" class="c-brand hover-c-brand-light:hover line-height-5 font-size-4">Какви са доказателствата</a>
+                </li>
+                <li class="sidebar-li py-2">
+                  <a href="/" class="c-brand hover-c-brand-light:hover line-height-5 font-size-4">Какви са доказателствата</a>
+                </li>
+                </ul>
+            </div>
+            <div class="block relative bg-#f0f4ef px-8 py-6">
+              <h3 class="font-size-4.3">Преследване в Китай</h3>
+              <ul class="sidebar-second-ul flex flex-col">
+                <li class="sidebar-second-li py-2">
+                  <a href="/" class="c-brand hover-c-brand-light:hover line-height-5 font-size-4">Какви са доказателствата</a>
+                </li>
+                <li class="sidebar-second-li py-2">
+                  <a href="/" class="c-brand hover-c-brand-light:hover line-height-5 font-size-4">Какви са доказателствата</a>
+                </li>
+                <li class="sidebar-second-li py-2">
+                  <a href="/" class="c-brand hover-c-brand-light:hover line-height-5 font-size-4">Какви са доказателствата</a>
+                </li>
+                <li class="sidebar-second-li py-2">
+                  <a href="/" class="c-brand hover-c-brand-light:hover line-height-5 font-size-4">Какви са доказателствата</a>
+                </li>
+                <li class="sidebar-second-li py-2">
+                  <a href="/" class="c-brand hover-c-brand-light:hover line-height-5 font-size-4">Какви са доказателствата</a>
+                </li>
+                <li class="sidebar-second-li py-2">
+                  <a href="/" class="c-brand hover-c-brand-light:hover line-height-5 font-size-4">Какви са доказателствата</a>
+                </li>
+                </ul>
+            </div>
           </div>
         </div>
       </div>
@@ -113,7 +115,7 @@ function Slideshow() {
 
       <div class="mySlides fade" style={{ display: currentSlide() === 1 ? 'block' : 'none' }}>
         <div class="numbertext">2 / 3</div>
-        <img src="\assets\FDI-1__what-is-falun-gong__1280px-1-640x360.jpg" style="width:100%" alt="Slide 2" />
+        <img src="\assets\WhatisFalunGong__v1.3-1140x490.png" style="width:100%" alt="Slide 2" />
       </div>
 
       <div class="mySlides fade" style={{ display: currentSlide() === 2 ? 'block' : 'none' }}>

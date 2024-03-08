@@ -5,6 +5,10 @@ a {
   text-decoration: none;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 /* Reset */
 body {
   margin: 0 auto;
@@ -28,8 +32,9 @@ body.page-is-transitioning #page-content {
 .top-bar-meniitem {
   letter-spacing: 0.5px;
   font-family: "Open Sans", sans-serif;
-  margin-bottom: -30px;
+  margin-bottom: -31px;
 }
+
 
 
 

@@ -55,7 +55,7 @@ function Topbar(props: { children: JSX.Element }) {
   return (
     <div
       id="sidebar"
-      class="flex lg-py-6 lg-h-9 h-20 position-sticky top-0 border-b-2 bg-brand flex-justify-between flex-items-center z-9999">
+      class="flex lg-py-6 lg-h-20 h-20 position-sticky -top-0.1 border-b-2 border-t-1 bg-brand flex-justify-between flex-items-center z-9999">
       {props.children}
     </div>
   );
@@ -82,22 +82,36 @@ function Logo() {
   return (
     <div class="flex items-center justify-center md-pl-4 pl-0">
       <a href="/">
-        <img src="/assets/logo.png" class="lg-w-34 w-30 pl-8"/>
+        <img src="/assets/logo.png" class="lg-w-42 w-40 pl-8"/>
       </a>
     </div>
   );
 }
 
 function HamburgerMenu() {
-  const [open,setOpen] = createSignal(false);
+  const [open, setOpen] = createSignal(false);
+
+  const handleClick = () => {
+    setOpen(!open());
+  };
+
   return (
-    <button class="bg-transparent cursor-pointer border-style-none lg-hidden" onClick={() => setOpen(true)}>
+    <button class="bg-transparent cursor-pointer border-style-none lg-hidden" onClick={handleClick}>
       <HamburgerMenuIcon class="w-10 h-10 color-brand-inv hover-color-brand-light"/>
-       <Show when={open()}>
-        <div class="fixed w-screen h-screen bg-pink left-0 top-0" onClick={() => setOpen(false)}/>
+      <Show when={open()}>
+        <div class="fixed w-screen h-screen bg-brand left-0 top-19.6 px-10">
+          <div class="py-15 text-left">
+            <div class="py-5 b-b-solid b-b border-brand-light"><a href="/WhatIsFalunDafa" class="c-paper font-size-6 font-500" style="font-family: Open Sans, sans-serif; letter-spacing: 0.6px;">Какво е Фалун Дафа</a></div>
+            <div class="py-5 b-b-solid b-b border-brand-light"><a href="/" class="c-paper font-size-6 font-500" style="font-family: Open Sans, sans-serif; letter-spacing: 0.6px;">Защо е преследван</a></div>
+            <div class="py-5 b-b-solid b-b border-brand-light"><a href="/" class="c-paper font-size-6 font-500" style="font-family: Open Sans, sans-serif; letter-spacing: 0.6px;">Отнемане на органи</a></div>
+            <div class="py-5 b-b-solid b-b border-brand-light"><a href="/" class="c-paper font-size-6 font-500" style="font-family: Open Sans, sans-serif; letter-spacing: 0.6px;">По света</a></div>
+            <div class="py-5 b-b-solid b-b border-brand-light"><a href="/" class="c-paper font-size-6 font-500" style="font-family: Open Sans, sans-serif; letter-spacing: 0.6px;">В България</a></div>
+            <div class="py-5 b-b-solid b-b border-brand-light"><a href="/" class="c-paper font-size-6 font-500" style="font-family: Open Sans, sans-serif; letter-spacing: 0.6px;">Видеа</a></div>
+          </div>
+        </div>
       </Show>
     </button>
-  )
+  );
 }
 
 function MainFooter(props: { children: JSX.Element }) {
