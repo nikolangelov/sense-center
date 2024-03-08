@@ -18,7 +18,7 @@ export default function LayoutDefault(props: { children?: JSX.Element }) {
       <Topbar>
         <Logo />
         <div class="flex whitespace-nowrap flex-nowrap flex-justify-end flex-items-end font-semibold gap-1 xl-gap-7xl flex-content-center flex-items-center">
-          <MenuItem href="/">Какво е Фалун Дафа</MenuItem>
+          <MenuItem href="kakvo-e-falun-dafa">Какво е Фалун Дафа</MenuItem>
           <MenuItem href="/">Защо е преследван</MenuItem>
           <MenuItem href="/">Отнемане на органи</MenuItem>
           <MenuItem href="/">По света</MenuItem>
@@ -30,7 +30,7 @@ export default function LayoutDefault(props: { children?: JSX.Element }) {
       <Content>{props.children}</Content>
       <MainFooter>
         <MainFooterSocialIcons></MainFooterSocialIcons>
-        <MainFooterMenuItem href="/">Какво е Фалун Дафа</MainFooterMenuItem>
+        <MainFooterMenuItem href="/kakvo-e-falun-dafa">Какво е Фалун Дафа</MainFooterMenuItem>
         <MainFooterMenuItem href="/">Защо е преследван</MainFooterMenuItem>
         <MainFooterMenuItem href="/">Отнемане на органи</MainFooterMenuItem>
         <MainFooterMenuItem href="/">По света</MainFooterMenuItem>
