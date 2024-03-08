@@ -1,7 +1,7 @@
-import { createMemo } from "solid-js";
+import {createMemo, JSX} from "solid-js";
 import { usePageContext } from "vike-solid/usePageContext";
 
-export function Link(props: { href: string; children: string }) {
+export function Link(props: { href: string, newTab: boolean, children: JSX.Element }) {
   const pageContext = usePageContext();
   const isActive = createMemo(() =>
     props.href === "/"
