@@ -1,4 +1,5 @@
 import RiArrowRightSLine from '~icons/ri/arrow-right-s-line';
+import RiArrowLeftSLine from '~icons/ri/arrow-left-s-line';
 
 export default function Page() {
   return (
@@ -10,8 +11,8 @@ export default function Page() {
             <div class="md-px-15 px-0 md-pt-20 pt-5">
               <h1 class="pb-8 color-font-primary md-font-size-10 font-size-7.5">Какво е Фалун Дафа</h1>
               <h2 class="pb-8 color-font-primary">Упражненията на Фалун Дафа</h2>
-              <div class="text-body pb-13 line-height-6 font-size-4.2 color-font-primary">Фалун Гонг е древен китайски духовен метод,, произхождащ от будистката традиция. Произнася се "Фа-луун Гонг" и се състои от морални принципи, медитация и четири плавни упражнения, представляващи уникален и високо ефективен способ за подобряване на здравето и повишаване на енергийните нива.</div>
-              <Slideshow></Slideshow>
+              <div class="text-body pb-13 line-height-6 font-size-4.2 color-font-primary">Фалун Гонг е древен китайски духовен метод,, произхождащ от будистката традиция. Произнася се "Фа-луун Гонг" и се състои от морални принципи, медитация и четири плавни упражнения, представляващи уникален и високо ефективен способ за подобряване на здравето и повишаване на енергийните нива.</div>              
+              <MyComponent></MyComponent>
               <div class="text-body pt-13 pb-12 line-height-6 font-size-4.2 color-font-primary">Фалун Гонг е древен китайски духовен метод,, произхождащ от будистката традиция. Произнася се "Фа-луун Гонг" и се състои от морални принципи, медитация и четири плавни упражнения, представляващи уникален и високо ефективен способ за подобряване на здравето и повишаване на енергийните нива.</div>
               
               <h2 class="pb-6 color-font-primary">Философията на Фалун Дафа</h2>
@@ -31,8 +32,8 @@ export default function Page() {
                     <img class="ha w-full v-middle" src="/assets/WhatisFalunGong__v1.3_2ndC.png"/>
                   </div>
                   <div class="flex w-sm bg-brand position-relative v-middle">
-                    <div class="md-top-42% sm-top-39% top-18% sm-left-6 md-left-9 left-3 md-w-80% w-60% c-paper position-absolute sm-font-size-5 font-size-4 md-font-600 font-500" style="letter-spacing:0.3px;">Защо е преследван</div>
-                    <div class="position-absolute right-2 sm-top-26% md-top-24% top-17%"><RiArrowRightSLine class='block w-full h-full sm-font-size-13 md-font-size-15 font-size-10 c-paper hover-c-brand-light:hover'/></div>
+                    <div class="text-in-read-more-bottom-button md-top-41% sm-top-39% top-18% sm-left-6 md-left-9 left-4 md-w-80% w-60% c-paper position-absolute sm-font-size-5 font-size-4 md-font-600 font-500" style="letter-spacing:0.3px;">Защо е преследван</div>
+                    <div class="arrow-in-read-more-bottom-button position-absolute right-2 sm-top-26% md-top-24% top-8%"><RiArrowRightSLine class='block w-full h-full sm-font-size-13 md-font-size-15 font-size-12 c-#81a8b3 hover-c-paper:hover'/></div>
                   </div>
                 </div>
               </a>
@@ -103,11 +104,11 @@ function Slideshow() {
   const totalSlides = 3; // Assuming 3 slides in total
 
   const nextSlide = () => {
-    setCurrentSlide((prev) => Math.min(prev + 1, totalSlides - 1));
+    setCurrentSlide((prev) => (prev + 1) % totalSlides);
   };
 
   const prevSlide = () => {
-    setCurrentSlide((prev) => Math.max(prev - 1, 0));
+    setCurrentSlide((prev) => (prev - 1 + totalSlides)% totalSlides);
   };
 
   return (
@@ -135,4 +136,34 @@ function Slideshow() {
   );
 }
 
+
+
+
+
+import "solid-slider/slider.css";
+import { Slider, createSlider, SliderButton, SliderProvider } from "solid-slider";
+
+const MyComponent = () => {
+const options = { duration: 1000 };
+const [slider, { current, next, prev, moveTo }] = createSlider(options);
+  return (
+    <SliderProvider>
+      <div class="max-w-800px position-relative">
+      <Slider options={{ loop: true }}>
+        <img src="\assets\WhatisFalunGong__v1.3-1140x490.png" class="slider-slide w-full"/>
+        <img src="\assets\FDI-1__what-is-falun-gong__1280px-1-640x360.jpg" class="slider-slide w-full"/>
+        <img src="\assets\WhatisFalunGong__v1.3-1140x490.png" class="slider-slide w-full"/>
+      </Slider>
+      <SliderButton class="cursor-pointer position-absolute top-45% -left-4 bg-transparent b-none" prev><RiArrowLeftSLine class="font-size-14 c-paper hover-c-brand-light:hover"/></SliderButton>
+      <SliderButton class="cursor-pointer position-absolute top-45% -right-4 bg-transparent b-none" next><RiArrowRightSLine class="font-size-14 c-paper hover-c-brand-light:hover"/></SliderButton>
+      <div class="flex flex-justify-center">
+        <div class={"flex w-3 h-3 rd-50% m-1 " + (current() === 0 ? "bg-brand-dark" : "bg-brand")}></div>
+        <div class={"flex w-3 h-3 rd-50% m-1 " + (current() === 1 ? "bg-brand-dark" : "bg-brand")}></div>
+        <div class={"flex w-3 h-3 rd-50% m-1 " + (current() === 2 ? "bg-brand-dark" : "bg-brand")}></div>
+        Current Slide: {current() + 1}
+      </div>
+      </div>
+    </SliderProvider>
+  );
+};
 
