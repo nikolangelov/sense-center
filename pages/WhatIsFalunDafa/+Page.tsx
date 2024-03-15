@@ -97,6 +97,9 @@ export default function Page() {
 }
 
 
+
+
+
 import { createSignal } from "solid-js";
 
 function Slideshow() {
@@ -108,30 +111,37 @@ function Slideshow() {
   };
 
   const prevSlide = () => {
-    setCurrentSlide((prev) => (prev - 1 + totalSlides)% totalSlides);
+    setCurrentSlide((prev) => (prev - 1 + totalSlides) % totalSlides);
+  };
+
+  const goToSlide = (index: number) => {
+    setCurrentSlide(index);
   };
 
   return (
     <div class="slideshow-container">
       <div class="slides-wrapper" style={{ transform: `translateX(-${currentSlide() * 100}%)` }}>
         <div class="mySlides fade">
-          <div class="numbertext">1 / 3</div>
           <img src="\assets\FDI-1__what-is-falun-gong__1280px-1-640x360.jpg" style="width:100%" alt="Slide 1" />
         </div>
 
         <div class="mySlides fade">
-          <div class="numbertext">2 / 3</div>
           <img src="\assets\WhatisFalunGong__v1.3-1140x490.png" style="width:100%" alt="Slide 2" />
         </div>
 
         <div class="mySlides fade">
-          <div class="numbertext">3 / 3</div>
           <img src="\assets\FDI-1__what-is-falun-gong__1280px-1-640x360.jpg" style="width:100%" alt="Slide 3" />
         </div>
       </div>
 
       <a class="prev" onClick={prevSlide}>&#10094;</a>
       <a class="next" onClick={nextSlide}>&#10095;</a>
+
+      <div class="dots">
+        {Array.from({ length: totalSlides }, (_, index) => (
+          <span class={`dot ${currentSlide() === index ? 'active' : ''}`} onClick={() => goToSlide(index)}></span>
+        ))}
+      </div>
     </div>
   );
 }

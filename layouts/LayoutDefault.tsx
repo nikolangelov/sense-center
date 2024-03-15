@@ -19,7 +19,7 @@ export default function LayoutDefault(props: { children?: JSX.Element }) {
       <Topbar>
         <Logo />
         <div class="flex whitespace-nowrap flex-nowrap flex-justify-end flex-items-end font-semibold gap-7 xl-gap-9xl md-pr-12 pr-6 flex-content-center flex-items-center">
-          <MenuItem href="/kakvo-e-falun-dafa">Какво е Фалун Дафа</MenuItem>
+          <MenuItem href="/WhatIsFalunDafa">Какво е Фалун Дафа</MenuItem>
           <MenuItem href="/">Защо е преследван</MenuItem>
           <MenuItem href="/">Отнемане на органи</MenuItem>
           <MenuItem href="/">По света</MenuItem>
