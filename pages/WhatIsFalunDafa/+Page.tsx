@@ -9,21 +9,21 @@ export default function Page() {
         <div class="md-flex">
           <div class="content">
             <div class="md-px-15 px-0 md-pt-20 pt-5">
-              <h1 class="pb-8 color-font-primary md-font-size-10 font-size-7.5">Какво е Фалун Дафа</h1>
-              <h2 class="pb-8 color-font-primary">Упражненията на Фалун Дафа</h2>
-              <div class="text-body pb-13 line-height-6 font-size-4.2 color-font-primary">Фалун Гонг е древен китайски духовен метод,, произхождащ от будистката традиция. Произнася се "Фа-луун Гонг" и се състои от морални принципи, медитация и четири плавни упражнения, представляващи уникален и високо ефективен способ за подобряване на здравето и повишаване на енергийните нива.</div>              
+              <h1 class="pb-8 color-paper-inv md-font-size-10 font-size-7.5">Какво е Фалун Дафа</h1>
+              <h2 class="pb-8 color-paper-inv">Упражненията на Фалун Дафа</h2>
+              <div class="text-body pb-13 line-height-6 font-size-4.2 color-paper-inv">Фалун Гонг е древен китайски духовен метод,, произхождащ от будистката традиция. Произнася се "Фа-луун Гонг" и се състои от морални принципи, медитация и четири плавни упражнения, представляващи уникален и високо ефективен способ за подобряване на здравето и повишаване на енергийните нива.</div>              
               <MyComponent></MyComponent>
-              <div class="text-body pt-13 pb-12 line-height-6 font-size-4.2 color-font-primary">Фалун Гонг е древен китайски духовен метод,, произхождащ от будистката традиция. Произнася се "Фа-луун Гонг" и се състои от морални принципи, медитация и четири плавни упражнения, представляващи уникален и високо ефективен способ за подобряване на здравето и повишаване на енергийните нива.</div>
+              <div class="text-body pt-13 pb-12 line-height-6 font-size-4.2 color-paper-inv">Фалун Гонг е древен китайски духовен метод,, произхождащ от будистката традиция. Произнася се "Фа-луун Гонг" и се състои от морални принципи, медитация и четири плавни упражнения, представляващи уникален и високо ефективен способ за подобряване на здравето и повишаване на енергийните нива.</div>
               
-              <h2 class="pb-6 color-font-primary">Философията на Фалун Дафа</h2>
-              <div class="text-body pb-13 line-height-6 font-size-4.2 color-font-primary">Фалун Гонг е древен китайски духовен метод,, произхождащ от будистката традиция. Произнася се "Фа-луун Гонг" и се състои от морални принципи, медитация и четири плавни упражнения, представляващи уникален и високо ефективен способ за подобряване на здравето и повишаване на енергийните нива.</div>
+              <h2 class="pb-6 color-paper-inv">Философията на Фалун Дафа</h2>
+              <div class="text-body pb-13 line-height-6 font-size-4.2 color-paper-inv">Фалун Гонг е древен китайски духовен метод,, произхождащ от будистката традиция. Произнася се "Фа-луун Гонг" и се състои от морални принципи, медитация и четири плавни упражнения, представляващи уникален и високо ефективен способ за подобряване на здравето и повишаване на енергийните нива.</div>
               <Slideshow></Slideshow>
-              <div class="text-body pt-13 pb-12 line-height-6 font-size-4.2 color-font-primary">Фалун Гонг е древен китайски духовен метод,, произхождащ от будистката традиция. Произнася се "Фа-луун Гонг" и се състои от морални принципи, медитация и четири плавни упражнения, представляващи уникален и високо ефективен способ за подобряване на здравето и повишаване на енергийните нива.</div>
+              <div class="text-body pt-13 pb-12 line-height-6 font-size-4.2 color-paper-inv">Фалун Гонг е древен китайски духовен метод,, произхождащ от будистката традиция. Произнася се "Фа-луун Гонг" и се състои от морални принципи, медитация и четири плавни упражнения, представляващи уникален и високо ефективен способ за подобряване на здравето и повишаване на енергийните нива.</div>
               
-              <h2 class="pb-6 color-font-primary">Ползите от Фалун Дафа</h2>
-              <div class="text-body pb-13 line-height-6 font-size-4.2 color-font-primary">Фалун Гонг е древен китайски духовен метод,, произхождащ от будистката традиция. Произнася се "Фа-луун Гонг" и се състои от морални принципи, медитация и четири плавни упражнения, представляващи уникален и високо ефективен способ за подобряване на здравето и повишаване на енергийните нива.</div>
+              <h2 class="pb-6 color-paper-inv">Ползите от Фалун Дафа</h2>
+              <div class="text-body pb-13 line-height-6 font-size-4.2 color-paper-inv">Фалун Гонг е древен китайски духовен метод,, произхождащ от будистката традиция. Произнася се "Фа-луун Гонг" и се състои от морални принципи, медитация и четири плавни упражнения, представляващи уникален и високо ефективен способ за подобряване на здравето и повишаване на енергийните нива.</div>
               <Slideshow></Slideshow>
-              <div class="text-body py-13 line-height-6 font-size-4.2 color-font-primary">Фалун Гонг е древен китайски духовен метод,, произхождащ от будистката традиция. Произнася се "Фа-луун Гонг" и се състои от морални принципи, медитация и четири плавни упражнения, представляващи уникален и високо ефективен способ за подобряване на здравето и повишаване на енергийните нива.</div>
+              <div class="text-body py-13 line-height-6 font-size-4.2 color-paper-inv">Фалун Гонг е древен китайски духовен метод,, произхождащ от будистката традиция. Произнася се "Фа-луун Гонг" и се състои от морални принципи, медитация и четири плавни упражнения, представляващи уникален и високо ефективен способ за подобряване на здравето и повишаване на енергийните нива.</div>
               
               <h3 class="uppercase m-0 pb-1 font-size-4 font-500 c-brand lg-mt-12 mt-3">Прочетете повече</h3>
               <a class="block md-w-85% w-full" href="/">
@@ -164,12 +164,12 @@ const [slider, { current, next, prev, moveTo }] = createSlider(options);
         <img src="\assets\FDI-1__what-is-falun-gong__1280px-1-640x360.jpg" class="slider-slide w-full"/>
         <img src="\assets\WhatisFalunGong__v1.3-1140x490.png" class="slider-slide w-full"/>
       </Slider>
-      <SliderButton class="cursor-pointer position-absolute top-45% -left-4 bg-transparent b-none" prev><RiArrowLeftSLine class="font-size-14 c-paper hover-c-brand-light:hover"/></SliderButton>
-      <SliderButton class="cursor-pointer position-absolute top-45% -right-4 bg-transparent b-none" next><RiArrowRightSLine class="font-size-14 c-paper hover-c-brand-light:hover"/></SliderButton>
+      <SliderButton class="cursor-pointer position-absolute top-41% left-0 bg-paper-inv bg-op-50 b-rd-bl-1.5 b-rd-tl-1.5 b-none px-0 py-1.5" prev><RiArrowLeftSLine class="-ml-1 font-size-10 c-paper hover-c-brand-light:hover transition-colors"/></SliderButton>
+      <SliderButton class="cursor-pointer position-absolute top-41% right-0 bg-paper-inv bg-op-50 b-rd-br-1.5 b-rd-tr-1.5 b-none px-0 py-1.5" next><RiArrowRightSLine class="-mr-1 font-size-10 c-paper hover-c-brand-light:hover transition-colors"/></SliderButton>
       <div class="flex flex-justify-center">
-        <div class={"flex w-3 h-3 rd-50% m-1 " + (current() === 0 ? "bg-brand-dark" : "bg-brand")}></div>
-        <div class={"flex w-3 h-3 rd-50% m-1 " + (current() === 1 ? "bg-brand-dark" : "bg-brand")}></div>
-        <div class={"flex w-3 h-3 rd-50% m-1 " + (current() === 2 ? "bg-brand-dark" : "bg-brand")}></div>
+        <div class={"flex w-4 h-4 rd-50% mx-2 mt-4 " + (current() === 0 ? "bg-brand-dark" : "bg-brand")}></div>
+        <div class={"flex w-4 h-4 rd-50% mx-2 mt-4 " + (current() === 1 ? "bg-brand-dark" : "bg-brand")}></div>
+        <div class={"flex w-4 h-4 rd-50% mx-2 mt-4 " + (current() === 2 ? "bg-brand-dark" : "bg-brand")}></div>
         Current Slide: {current() + 1}
       </div>
       </div>
