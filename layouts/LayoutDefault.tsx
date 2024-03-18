@@ -10,7 +10,7 @@ import TwitterXLineIcon from '~icons/ri/twitter-x-line';
 import MdiKeyboardArrowUp from '~icons/mdi/keyboard-arrow-up';
 
 function MenuItem(props: {href:string, children: JSX.Element }) {
-return <a href={props.href} class="hidden font-ui lg-flex top-bar-meniitem h-12 c-paper text-center font-size-4 xl-font-size-4.8 uppercase">{props.children}</a>
+return <a href={props.href} class="hidden font-ui lg-flex top-bar-meniitem h-11.5 c-paper text-center font-size-4 xl-font-size-4.8 uppercase">{props.children}</a>
 }
 
 export default function LayoutDefault(props: { children?: JSX.Element }) {
@@ -18,12 +18,12 @@ export default function LayoutDefault(props: { children?: JSX.Element }) {
     <div class="flex flex-col">
       <Topbar>
         <Logo />
-        <div class="flex whitespace-nowrap flex-nowrap flex-justify-end flex-items-end font-semibold gap-7 xl-gap-9xl md-pr-12 pr-6 flex-content-center flex-items-center">
+        <div class="flex whitespace-nowrap flex-nowrap flex-justify-end flex-items-end font-semibold gap-5 xl-gap-9xl md-pr-12 pr-6 flex-content-center flex-items-center">
           <MenuItem href="/WhatIsFalunDafa">Какво е Фалун Дафа</MenuItem>
           <MenuItem href="/">Защо е преследван</MenuItem>
           <MenuItem href="/">Отнемане на органи</MenuItem>
           <MenuItem href="/">По света</MenuItem>
-          <MenuItem href="/">В България</MenuItem>
+          <MenuItem href="/Falun-Dafa-v-Bulgaria">В България</MenuItem>
           <MenuItem href="/">Видеа</MenuItem>
           <HamburgerMenu/>
         </div>
@@ -42,9 +42,9 @@ export default function LayoutDefault(props: { children?: JSX.Element }) {
       <BottomFooter>
         <div class="flex flex-row">
           <BottomFooterMenuItem href="/">Политика за поверителност</BottomFooterMenuItem>
-          <div class="flex c-paper lg-font-size-5 md-font-size-5 font-size-5 lg-py-1.5 md-py-1 pt-3.5 lg-px-15 md-px-4 pr-3"> │ </div>
+          <div class="flex c-paper lg-font-size-5 md-font-size-5 font-size-5 lg-py-1.5 md-py-1 pt-2 lg-px-15 md-px-4 px-4"> │ </div>
           <BottomFooterMenuItem href="/">За нас</BottomFooterMenuItem>
-          <div class="flex c-paper lg-font-size-5 font-size-5 md-font-size-5 lg-py-1.5 md-py-1 pt-3.5 lg-px-15 md-px-4 pl-3"> │ </div>
+          <div class="flex c-paper lg-font-size-5 font-size-5 md-font-size-5 lg-py-1.5 md-py-1 pt-2 lg-px-15 md-px-4 px-4"> │ </div>
           <BottomFooterMenuItem href="/">Условия за ползване</BottomFooterMenuItem>
         </div>
         <p class="c-paper text-center lg-font-size-3.5 md-font-size-3 font-size-3 font-400 lg-py-0 py-2" style="font-family: Open Sans, sans-serif;">Copyright &copy; 2000-2024 - Фалун Дафа информационен център - Всички права запазени.</p>

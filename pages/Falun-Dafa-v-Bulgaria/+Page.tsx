@@ -9,22 +9,33 @@ export default function Page() {
         <div class="md-flex">
           <div class="content">
             <div class="md-px-15 px-0 md-pt-20 pt-5">
-              <h1 class="pb-8 color-paper-inv md-font-size-10 font-size-7.5">Какво е Фалун Дафа</h1>
-              <h2 class="pb-8 color-paper-inv">Упражненията на Фалун Дафа</h2>
+              <h1 class="pb-8 color-paper-inv md-font-size-10 font-size-7.5">Фалун Дафа в България</h1>
+              <h2 class="pb-8 color-paper-inv">Къде се практикува</h2>
               <div class="text-body pb-13 line-height-6 font-size-4.2 color-paper-inv">Фалун Гонг е древен китайски духовен метод,, произхождащ от будистката традиция. Произнася се "Фа-луун Гонг" и се състои от морални принципи, медитация и четири плавни упражнения, представляващи уникален и високо ефективен способ за подобряване на здравето и повишаване на енергийните нива.</div>              
               <MyComponent></MyComponent>
               <div class="text-body pt-13 pb-12 line-height-6 font-size-4.2 color-paper-inv">Фалун Гонг е древен китайски духовен метод,, произхождащ от будистката традиция. Произнася се "Фа-луун Гонг" и се състои от морални принципи, медитация и четири плавни упражнения, представляващи уникален и високо ефективен способ за подобряване на здравето и повишаване на енергийните нива.</div>
               
-              <h2 class="pb-6 color-paper-inv">Философията на Фалун Дафа</h2>
+              <h2 class="pb-6 color-paper-inv">Литература на български</h2>
               <div class="text-body pb-13 line-height-6 font-size-4.2 color-paper-inv">Фалун Гонг е древен китайски духовен метод,, произхождащ от будистката традиция. Произнася се "Фа-луун Гонг" и се състои от морални принципи, медитация и четири плавни упражнения, представляващи уникален и високо ефективен способ за подобряване на здравето и повишаване на енергийните нива.</div>
-              <Slideshow></Slideshow>
+              <MyComponent></MyComponent>
               <div class="text-body pt-13 pb-12 line-height-6 font-size-4.2 color-paper-inv">Фалун Гонг е древен китайски духовен метод,, произхождащ от будистката традиция. Произнася се "Фа-луун Гонг" и се състои от морални принципи, медитация и четири плавни упражнения, представляващи уникален и високо ефективен способ за подобряване на здравето и повишаване на енергийните нива.</div>
               
-              <h2 class="pb-6 color-paper-inv">Ползите от Фалун Дафа</h2>
+              <h2 class="pb-6 color-paper-inv">Подкрепа от правителството</h2>
               <div class="text-body pb-13 line-height-6 font-size-4.2 color-paper-inv">Фалун Гонг е древен китайски духовен метод,, произхождащ от будистката традиция. Произнася се "Фа-луун Гонг" и се състои от морални принципи, медитация и четири плавни упражнения, представляващи уникален и високо ефективен способ за подобряване на здравето и повишаване на енергийните нива.</div>
-              <Slideshow></Slideshow>
+              <MyComponent></MyComponent>
               <div class="text-body py-13 line-height-6 font-size-4.2 color-paper-inv">Фалун Гонг е древен китайски духовен метод,, произхождащ от будистката традиция. Произнася се "Фа-луун Гонг" и се състои от морални принципи, медитация и четири плавни упражнения, представляващи уникален и високо ефективен способ за подобряване на здравето и повишаване на енергийните нива.</div>
-              
+              <h2 class="pb-6 color-paper-inv">Значими новини от България</h2>
+              <div class="block b-solid b-2 b-brand">
+                <a class="flex" href="/">
+                  <img class="w-xs" src="/assets/FDI-1__what-is-falun-gong__1280px-1-640x360.jpg"/>
+                    <div>
+                      <h3 class="c-paper-inv">Заглавие на новина</h3>
+                      <div class="c-paper-inv">Текст на новина</div>
+                    </div>
+                </a>
+              </div>
+
+
               <h3 class="uppercase m-0 pb-1 font-size-4 font-500 c-brand lg-mt-12 mt-3">Прочетете повече</h3>
               <a class="block md-w-85% w-full" href="/">
                 <div class="flex">
@@ -96,60 +107,6 @@ export default function Page() {
   );
 }
 
-
-
-
-
-import { createSignal } from "solid-js";
-
-function Slideshow() {
-  const [currentSlide, setCurrentSlide] = createSignal(0);
-  const totalSlides = 3; // Assuming 3 slides in total
-
-  const nextSlide = () => {
-    setCurrentSlide((prev) => (prev + 1) % totalSlides);
-  };
-
-  const prevSlide = () => {
-    setCurrentSlide((prev) => (prev - 1 + totalSlides) % totalSlides);
-  };
-
-  const goToSlide = (index: number) => {
-    setCurrentSlide(index);
-  };
-
-  return (
-    <div class="slideshow-container">
-      <div class="slides-wrapper" style={{ transform: `translateX(-${currentSlide() * 100}%)` }}>
-        <div class="mySlides fade">
-          <img src="\assets\FDI-1__what-is-falun-gong__1280px-1-640x360.jpg" style="width:100%" alt="Slide 1" />
-        </div>
-
-        <div class="mySlides fade">
-          <img src="\assets\WhatisFalunGong__v1.3-1140x490.png" style="width:100%" alt="Slide 2" />
-        </div>
-
-        <div class="mySlides fade">
-          <img src="\assets\FDI-1__what-is-falun-gong__1280px-1-640x360.jpg" style="width:100%" alt="Slide 3" />
-        </div>
-      </div>
-
-      <a class="prev" onClick={prevSlide}>&#10094;</a>
-      <a class="next" onClick={nextSlide}>&#10095;</a>
-
-      <div class="dots">
-        {Array.from({ length: totalSlides }, (_, index) => (
-          <span class={`dot ${currentSlide() === index ? 'active' : ''}`} onClick={() => goToSlide(index)}></span>
-        ))}
-      </div>
-    </div>
-  );
-}
-
-
-
-
-
 import "solid-slider/slider.css";
 import { Slider, createSlider, SliderButton, SliderProvider } from "solid-slider";
 
@@ -176,4 +133,3 @@ const [slider, { current, next, prev, moveTo }] = createSlider(options);
     </SliderProvider>
   );
 };
-

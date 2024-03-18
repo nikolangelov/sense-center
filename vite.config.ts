@@ -1,6 +1,7 @@
 import { defineConfig } from "vite"
-import solid from "vite-plugin-solid"
-import { ssr as vikePlugin } from "vike/plugin"
+import vike from "vike/plugin";
+import vikeSolid from "vike-solid/vite";
+
 import { fileURLToPath, URL } from "node:url"
 import Icons from "unplugin-icons/vite"
 import UnoCSS from 'unocss/vite'
@@ -31,7 +32,8 @@ export default defineConfig({
 				}
 			}
 		}),
-		solid({ ssr: true }),
+		vike({prerender: true}),
+		vikeSolid(),
 		// @ts-ignore
 		// only https://icon-sets.iconify.design/material-symbols/
 		// and https://icon-sets.iconify.design/cib/
