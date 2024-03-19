@@ -8,6 +8,8 @@ import YoutubeIcon from '~icons/ri/youtube-fill';
 import InstagramIcon from '~icons/mdi/instagram';
 import TwitterXLineIcon from '~icons/ri/twitter-x-line';
 import MdiKeyboardArrowUp from '~icons/mdi/keyboard-arrow-up';
+import RiCloseFill from '~icons/ri/close-fill';
+import MdiMagnify from '~icons/mdi/magnify';
 
 function MenuItem(props: {href:string, children: JSX.Element }) {
 return <a href={props.href} class="hidden font-ui lg-flex top-bar-meniitem h-11.5 c-paper text-center font-size-4 xl-font-size-4.8 uppercase">{props.children}</a>
@@ -31,13 +33,19 @@ export default function LayoutDefault(props: { children?: JSX.Element }) {
       <Content>{props.children}</Content>
       <BackToTopArrow></BackToTopArrow>
       <MainFooter>
-        <MainFooterSocialIcons></MainFooterSocialIcons>
-        <MainFooterMenuItem href="/kakvo-e-falun-dafa">Какво е Фалун Дафа</MainFooterMenuItem>
-        <MainFooterMenuItem href="/">Защо е преследван</MainFooterMenuItem>
-        <MainFooterMenuItem href="/">Отнемане на органи</MainFooterMenuItem>
-        <MainFooterMenuItem href="/">По света</MainFooterMenuItem>
-        <MainFooterMenuItem href="/">В България</MainFooterMenuItem>
-        <MainFooterMenuItem href="/">Видеа</MainFooterMenuItem>
+        <div class="flex justify-center flex-justify-between gap-7xl w-80%">
+          <div>
+            <SearchBar></SearchBar>
+          </div>
+          <MainFooterSocialIcons></MainFooterSocialIcons>
+          <DropdownMenu></DropdownMenu>
+        </div>
+            <MainFooterMenuItem href="/kakvo-e-falun-dafa">Какво е Фалун Дафа</MainFooterMenuItem>
+            <MainFooterMenuItem href="/">Защо е преследван</MainFooterMenuItem>
+            <MainFooterMenuItem href="/">Отнемане на органи</MainFooterMenuItem>
+            <MainFooterMenuItem href="/">По света</MainFooterMenuItem>
+            <MainFooterMenuItem href="/">В България</MainFooterMenuItem>
+            <MainFooterMenuItem href="/">Видеа</MainFooterMenuItem>
       </MainFooter>
       <BottomFooter>
         <div class="flex flex-row">
@@ -214,3 +222,49 @@ function BackToTopArrow() {
     </div>
   );
 }
+
+function DropdownMenu(props: { children: JSX.Element }) {
+  return (
+    <div class="dropdown flex flex-items-center position-relative inline-block">
+      <div class="c-paper font-size-4.2 b-none cursor-pointer">Езици</div>
+      <div class="dropdown-content hidden position-absolute bg-paper-border z-1 min-w-100px mt-55">
+      <a class="block c-paper-inv hover-bg-brand-light:hover pb-1.5 pl-2 font-600 pt-2.5" rel="noopener" target="_blank" href="https://faluninfo.net">English</a>
+      <a class="block c-paper-inv hover-bg-brand-light:hover py-1.5 pl-2 font-600" rel="noopener" target="_blank" href="https://fr.faluninfo.net">Français</a>
+      <a class="block c-paper-inv hover-bg-brand-light:hover py-1.5 pl-2 font-600" rel="noopener" target="_blank" href="https://il.faluninfo.net">עִברִית</a>
+      <a class="block c-paper-inv hover-bg-brand-light:hover py-1.5 pl-2 font-600" rel="noopener" target="_blank" href="https://pl.faluninfo.net">Polska</a>
+      <a class="block c-paper-inv hover-bg-brand-light:hover py-1.5 pl-2 font-600" rel="noopener" target="_blank" href="https://es.faluninfo.net">Español</a>
+      <a class="block c-paper-inv hover-bg-brand-light:hover pt-1.5 pl-2 font-600 pb-2.5" rel="noopener" target="_blank" href="https://jp.faluninfo.net">日本語</a>
+      </div>
+    </div>
+  )
+}
+
+function SearchBar(props: any) {
+  const [isSearchVisible, setIsSearchVisible] = createSignal(false);
+
+  const toggleSearch = () => {
+    setIsSearchVisible(!isSearchVisible());
+  };
+
+  return (
+    <div class="flex flex-items-center position-absolute">
+      {!isSearchVisible() && (
+        <MdiMagnify class="c-paper cursor-pointer" onClick={toggleSearch} />
+      )}
+      {isSearchVisible() && (
+        <>
+          <RiCloseFill class="c-paper cursor-pointer" onClick={toggleSearch} />
+          <input
+            type="text"
+            class="h-6 b-solid b-1 b-paper"
+            placeholder="Потърси..."/>
+          <button
+            type="submit"
+            class="w-16 h-6 b-solid b-1 b-paper c-paper font-size-3 font-700 bg-paper-inv"
+            name="submit"> GO </button>
+        </>
+      )}
+    </div>
+  );
+}
+  

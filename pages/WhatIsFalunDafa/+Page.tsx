@@ -10,17 +10,17 @@ export default function Page() {
           <div class="content">
             <div class="md-px-15 px-0 md-pt-20 pt-5">
               <h1 class="pb-8 color-paper-inv md-font-size-10 font-size-7.5">Какво е Фалун Дафа</h1>
-              <h2 class="pb-8 color-paper-inv">Упражненията на Фалун Дафа</h2>
+              <h2 id="h2_exercises" class="pb-8 color-paper-inv">Упражненията на Фалун Дафа</h2>
               <div class="text-body pb-13 line-height-6 font-size-4.2 color-paper-inv">Фалун Гонг е древен китайски духовен метод,, произхождащ от будистката традиция. Произнася се "Фа-луун Гонг" и се състои от морални принципи, медитация и четири плавни упражнения, представляващи уникален и високо ефективен способ за подобряване на здравето и повишаване на енергийните нива.</div>              
               <MyComponent></MyComponent>
               <div class="text-body pt-13 pb-12 line-height-6 font-size-4.2 color-paper-inv">Фалун Гонг е древен китайски духовен метод,, произхождащ от будистката традиция. Произнася се "Фа-луун Гонг" и се състои от морални принципи, медитация и четири плавни упражнения, представляващи уникален и високо ефективен способ за подобряване на здравето и повишаване на енергийните нива.</div>
               
-              <h2 class="pb-6 color-paper-inv">Философията на Фалун Дафа</h2>
+              <h2 id="h2_philosophy" class="pb-6 color-paper-inv">Философията на Фалун Дафа</h2>
               <div class="text-body pb-13 line-height-6 font-size-4.2 color-paper-inv">Фалун Гонг е древен китайски духовен метод,, произхождащ от будистката традиция. Произнася се "Фа-луун Гонг" и се състои от морални принципи, медитация и четири плавни упражнения, представляващи уникален и високо ефективен способ за подобряване на здравето и повишаване на енергийните нива.</div>
               <Slideshow></Slideshow>
               <div class="text-body pt-13 pb-12 line-height-6 font-size-4.2 color-paper-inv">Фалун Гонг е древен китайски духовен метод,, произхождащ от будистката традиция. Произнася се "Фа-луун Гонг" и се състои от морални принципи, медитация и четири плавни упражнения, представляващи уникален и високо ефективен способ за подобряване на здравето и повишаване на енергийните нива.</div>
               
-              <h2 class="pb-6 color-paper-inv">Ползите от Фалун Дафа</h2>
+              <h2 id="h2_benefits" class="pb-6 color-paper-inv">Ползите от Фалун Дафа</h2>
               <div class="text-body pb-13 line-height-6 font-size-4.2 color-paper-inv">Фалун Гонг е древен китайски духовен метод,, произхождащ от будистката традиция. Произнася се "Фа-луун Гонг" и се състои от морални принципи, медитация и четири плавни упражнения, представляващи уникален и високо ефективен способ за подобряване на здравето и повишаване на енергийните нива.</div>
               <Slideshow></Slideshow>
               <div class="text-body py-13 line-height-6 font-size-4.2 color-paper-inv">Фалун Гонг е древен китайски духовен метод,, произхождащ от будистката традиция. Произнася се "Фа-луун Гонг" и се състои от морални принципи, медитация и четири плавни упражнения, представляващи уникален и високо ефективен способ за подобряване на здравето и повишаване на енергийните нива.</div>
@@ -43,48 +43,39 @@ export default function Page() {
 
           <div class="mt-0 pt-0 lg-block hidden w-33% mt-12 mr-6">
             <div style="position: -webkit-sticky; position: sticky; top:100px;">  
-              <div class="first-block-arrow-element block relative bg-brand px-11 py-6">
-                <a href="/"><div class="whitespace-nowrap c-paper font-600 py-1.5 font-size-4">Какво е Фалун Дафа</div></a>
-                <a href="/"><div class="whitespace-nowrap c-paper font-600 py-1.5 font-size-4">Защо е преследван</div></a>
-                <a href="/"><div class="whitespace-nowrap c-paper font-600 py-1.5 font-size-4">Какви са доказателствата</div></a>
+              <div class="first-block-arrow-element block relative bg-brand px-9 py-6">
+                <h3 class="font-size-4.3 ml-1 c-paper whitespace-nowrap my-2">Фалун Дафа в България</h3>
               </div>
-              <div class="second-block-arrow-element block relative bg-#e9e9e9 px-5 py-6">
-                <h3 class="font-size-4.3 ml-1.8">Историята на Фалун Дафа</h3>
+              <div class="second-block-arrow-element block relative bg-#e9e9e9 px-4 py-4">
                 <ul class="sidebar-ul flex flex-col">
                   <li class="sidebar-li py-1.5">
-                    <a href="/" class="c-brand hover-c-brand-light:hover line-height-5 font-size-4 font-500">Какви са доказателствата</a>
+                    <a href="#h2_exercises" class="c-brand hover-c-brand-light:hover line-height-6 font-size-3.7 font-500">Упражненията на Фалун Дафа</a>
                   </li>
                   <li class="sidebar-li py-1.5">
-                    <a href="/" class="c-brand hover-c-brand-light:hover line-height-5 font-size-4 font-500">Какви са доказателствата</a>
+                    <a href="#h2_philosophy" class="c-brand hover-c-brand-light:hover line-height-6 font-size-3.7 font-500">Философията на Фалун Дафа</a>
                   </li>
                   <li class="sidebar-li py-1.5">
-                    <a href="/" class="c-brand hover-c-brand-light:hover line-height-5 font-size-4 font-500">Какви са доказателствата</a>
-                  </li>
-                  <li class="sidebar-li py-1.5">
-                    <a href="/" class="c-brand hover-c-brand-light:hover line-height-5 font-size-4 font-500">Какви са доказателствата</a>
-                  </li>
-                  <li class="sidebar-li py-1.5">
-                    <a href="/" class="c-brand hover-c-brand-light:hover line-height-5 font-size-4 font-500">Какви са доказателствата</a>
+                    <a href="#h2_benefits" class="c-brand hover-c-brand-light:hover line-height-6 font-size-3.7 font-500">Ползите от Фалун Дафа</a>
                   </li>
                   </ul>
               </div>
-              <div class="block relative bg-#f0f4ef px-8 py-6">
+              <div class="block relative bg-#f0f4ef px-7 py-6">
                 <h3 class="font-size-4.3">Преследване в Китай</h3>
                 <ul class="sidebar-second-ul flex flex-col">
                   <li class="sidebar-second-li py-1.5">
-                    <a href="/" class="c-brand hover-c-brand-light:hover line-height-5 font-size-4 font-500">Какви са доказателствата</a>
+                    <a href="/" class="c-brand hover-c-brand-light:hover line-height-5 font-size-3.7 font-500">Какви са доказателствата</a>
                   </li>
                   <li class="sidebar-second-li py-1.5">
-                    <a href="/" class="c-brand hover-c-brand-light:hover line-height-5 font-size-4 font-500">Какви са доказателствата</a>
+                    <a href="/" class="c-brand hover-c-brand-light:hover line-height-5 font-size-3.7 font-500">Какви са доказателствата</a>
                   </li>
                   <li class="sidebar-second-li py-1.5">
-                    <a href="/" class="c-brand hover-c-brand-light:hover line-height-5 font-size-4 font-500">Какви са доказателствата</a>
+                    <a href="/" class="c-brand hover-c-brand-light:hover line-height-5 font-size-3.7 font-500">Какви са доказателствата</a>
                   </li>
                   <li class="sidebar-second-li py-1.5">
-                    <a href="/" class="c-brand hover-c-brand-light:hover line-height-5 font-size-4 font-500">Какви са доказателствата</a>
+                    <a href="/" class="c-brand hover-c-brand-light:hover line-height-5 font-size-3.7 font-500">Какви са доказателствата</a>
                   </li>
                   <li class="sidebar-second-li py-1.5">
-                    <a href="/" class="c-brand hover-c-brand-light:hover line-height-5 font-size-4 font-500">Какви са доказателствата</a>
+                    <a href="/" class="c-brand hover-c-brand-light:hover line-height-5 font-size-3.7 font-500">Какви са доказателствата</a>
                   </li>
                   </ul>
               </div>
