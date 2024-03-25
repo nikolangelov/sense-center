@@ -1,5 +1,6 @@
 import RiArrowRightSLine from '~icons/ri/arrow-right-s-line';
 import RiArrowLeftSLine from '~icons/ri/arrow-left-s-line';
+import MdiAccountEyeOutline from '~icons/mdi/account-eye-outline';
 
 export default function Page() {
   return (
@@ -25,12 +26,20 @@ export default function Page() {
               <MyComponent></MyComponent>
               <div class="text-body py-13 line-height-6 font-size-4.2 color-paper-inv">Фалун Гонг е древен китайски духовен метод,, произхождащ от будистката традиция. Произнася се "Фа-луун Гонг" и се състои от морални принципи, медитация и четири плавни упражнения, представляващи уникален и високо ефективен способ за подобряване на здравето и повишаване на енергийните нива.</div>
               <h2 class="pb-6 color-paper-inv">Значими новини от България</h2>
-              <div class="block b-solid b-2 b-brand">
-                <a class="flex" href="/">
+              <div class="block">
+                <a class="flex b-solid b-1 b-paper-border p-3" href="/" style="box-shadow: 0 1px 6px #00000029;">
                   <img class="w-xs" src="/assets/FDI-1__what-is-falun-gong__1280px-1-640x360.jpg"/>
-                    <div>
-                      <h3 class="c-paper-inv">Заглавие на новина</h3>
-                      <div class="c-paper-inv">Текст на новина</div>
+                    <div class="w-sm">
+                      <h3 class="pl-5 c-paper-inv font-size-6.5 font-600 my-2 line-height-6.3">Ню Йорк Таймс, след години на успокояване на ККП, сега планира атака срещу Шен Юн</h3>
+                      <div class="pl-5 c-gray-6 font-size-3.3 line-height-4">С дълга история на омаловажаване или игнориране на сериозни нарушения на човешките права в Китай, The New York Times сега се насочва към китайските дисиденти в Съединените щати.</div>
+                      <div class="flex pt-1 flex-items-center">
+                        <div class="pl-5 c-gray-5 font-size-2.7">25.03.2023</div>
+                        <div class="pl-5 c-gray-5 font-size-2.7">7 мин четене</div>
+                        <div class="flex pl-5 flex-items-center">
+                          <MdiAccountEyeOutline class="c-gray-5"/>
+                          <div class="c-gray-5 font-size-2.7">178</div>
+                        </div>
+                      </div>
                     </div>
                 </a>
               </div>
