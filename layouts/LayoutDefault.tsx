@@ -12,7 +12,7 @@ import MdiMagnify from '~icons/mdi/magnify';
 import RiCloseFill from '~icons/ri/close-fill';
 
 function MenuItem(props: {href:string, children: JSX.Element }) {
-return <a href={props.href} class="hidden font-ui lg-flex top-bar-meniitem h-11.5 c-paper text-center font-size-4 xl-font-size-4.8 uppercase">{props.children}</a>
+return <a href={props.href} class="hidden font-ui lg-flex top-bar-meniitem h-11.5 c-paper text-center font-size-4 xl-font-size-4 uppercase">{props.children}</a>
 }
 
 export default function LayoutDefault(props: { children?: JSX.Element }) {
@@ -20,7 +20,7 @@ export default function LayoutDefault(props: { children?: JSX.Element }) {
     <div class="flex flex-col">
       <Topbar>
         <Logo />
-        <div class="flex whitespace-nowrap flex-nowrap flex-justify-end flex-items-end font-semibold gap-5 xl-gap-9xl md-pr-12 pr-6 flex-content-center flex-items-center">
+        <div class="flex whitespace-nowrap flex-nowrap flex-justify-end flex-items-end font-semibold gap-5 xl-gap-4xl md-pr-10 md-pl-10 pr-6 flex-content-center flex-items-center">
           <MenuItem href="/WhatIsFalunDafa">Какво е Фалун Дафа</MenuItem>
           <MenuItem href="/">Защо е преследван</MenuItem>
           <MenuItem href="/">Отнемане на органи</MenuItem>
@@ -264,22 +264,28 @@ function SearchBar(props: any) {
   };
 
   return (
-    <div class="flex flex-items-center max-w-1440px">
-      <MdiMagnify class={`c-paper-inv cursor-default hover-color-brand-light ml-30 ${isSearchVisible() ? 'opacity-0' : ''}`} onClick={toggleSearch} />
+    <div class="flex justify-center flex-items-center max-w-1440px">
+      <MdiMagnify class={`c-paper-inv cursor-pointer hover-color-brand-light ml-30 ${isSearchVisible() ? 'opacity-0' : ''}`} onClick={toggleSearch} />
       {isSearchVisible() && (
-        <div class="fixed top-20 left-0 w-full bg-paper-border p-4 z-10000 flex justify-center max-w-1440px">
+        <div class="fixed top-20 left-0 w-full bg-paper-border h-40 p-4 z-10000 flex justify-center flex-items-center">
           <RiCloseFill class="c-paper-inv cursor-pointer hover-color-brand-light mt-0.6 mr-2" onClick={toggleSearch} />
-          <input
-            type="text"
-            class="h-6 b-solid b-2 b-paper bg-paper"
-            placeholder="Потърси..."
-          />
-          <button
-            type="submit"
-            class="w-16 h-6 b-solid b-2 b-paper c-paper font-size-3 font-700 bg-paper-inv cursor-pointer hover-bg-brand-light"
-            name="submit"
-          >GO
-          </button>
+          
+        <form action="" class="flex flex-items-center w-150 h-15 b-solid b-2 b-paper bg-transparent b-rounded-36 justify-between">
+            <MdiMagnify class="c-paper-inv mx-5"/>
+            <input
+              type="search"
+              class="b-none focus-b-none:focus bg-transparent w-140 h-10"
+              name="search"
+              placeholder=""
+              pattern=".*\S.*" required
+            />
+            <button
+              type="submit"
+              class="w-16 h-6 b-solid b-2 b-paper c-paper font-size-3 font-700 bg-paper-inv cursor-pointer hover-bg-brand-light"
+              name="submit"
+            >GO
+            </button>
+          </form>
         </div>
       )}
     </div>
