@@ -33,7 +33,12 @@ export default function LayoutDefault(props: { children?: JSX.Element }) {
       <Content>{props.children}</Content>
       <BackToTopArrow></BackToTopArrow>
       <MainFooter>
-        <div class="flex flex-col gap-12 my-10">
+        <div class="flex flex-col gap-14 my-10">
+        <div class="flex justify-between">
+            <LogoInFooter/>
+            <MainFooterSocialIcons></MainFooterSocialIcons>
+            <SearchBar></SearchBar>
+          </div>
           <div class="flex flex-row gap-5 flex-wrap line-height-0 flex-items-center">
             <MainFooterMenuItem href="/kakvo-e-falun-dafa">Какво е Фалун Дафа</MainFooterMenuItem>
             <div class="flex c-paper-inv lg-font-size-5 font-size-5 md-font-size-5 lg-py-1.5 md-py-1 pt-1 px-0"> | </div>
@@ -47,48 +52,44 @@ export default function LayoutDefault(props: { children?: JSX.Element }) {
             <div class="flex c-paper-inv lg-font-size-5 font-size-5 md-font-size-5 lg-py-1.5 md-py-1 pt-1 px-0"> | </div>
             <MainFooterMenuItem href="/">Видеа</MainFooterMenuItem>
           </div>
-          <div class="flex justify-between">
-            <LogoInFooter/>
-            <MainFooterSocialIcons></MainFooterSocialIcons>
-            <SearchBar></SearchBar>
-          </div>
-          <div class="flex flex-row justify-center">
-            <MainFooterMenuItem href="/">Политика за поверителност</MainFooterMenuItem>
-            <div class="flex c-paper-inv lg-font-size-5 md-font-size-5 font-size-5 lg-py-1 md-py-1 md-pt-2 pt-3 lg-px-5 md-px-4 pl-3 pr-4"> | </div>
-            <MainFooterMenuItem href="/">За нас</MainFooterMenuItem>
-            <div class="flex c-paper-inv lg-font-size-5 font-size-5 md-font-size-5 lg-py-1 md-py-1 md-pt-2 pt-3 lg-px-5 md-px-4 pl-4 pr-3"> | </div>
-            <MainFooterMenuItem href="/">Условия за ползване</MainFooterMenuItem>
-          </div>
         </div>
       </MainFooter>
       <BottomFooter>
-        <div class="flex pt-2 pb-2 flex-wrap justify-center">
-          <a class="block c-paper py-2 pl-2 font-normal lg-font-size-3.5 md-font-size-3.5 font-size-3.7 hover-color-brand:hover" rel="noopener" target="_blank" href="https://faluninfo.net">English</a>
-          <div class="flex c-paper lg-font-size-5 font-size-5 md-font-size-5 lg-py-1.5 md-py-1 pt-1 lg-px-5 md-px-4 px-2.5"> | </div>
-          <a class="block c-paper py-2 pl-2 font-normal lg-font-size-3.5 md-font-size-3.5 font-size-3.7 hover-color-brand:hover" rel="noopener" target="_blank" href="https://fr.faluninfo.net">Français</a>
-          <div class="flex c-paper lg-font-size-5 font-size-5 md-font-size-5 lg-py-1.5 md-py-1 pt-1 lg-px-5 md-px-4 px-2.5"> | </div>
-          <a class="block c-paper py-2 pl-2 font-normal lg-font-size-3.5 md-font-size-3.5 font-size-3.7 hover-color-brand:hover" rel="noopener" target="_blank" href="https://il.faluninfo.net">עִברִית</a>
-          <div class="flex c-paper lg-font-size-5 font-size-5 md-font-size-5 lg-py-1.5 md-py-1 pt-1 lg-px-5 md-px-4 px-2.5"> | </div>
-          <a class="block c-paper py-2 pl-2 font-normal lg-font-size-3.5 md-font-size-3.5 font-size-3.7 hover-color-brand:hover" rel="noopener" target="_blank" href="https://pl.faluninfo.net">Polska</a>
-          <div class="flex c-paper lg-font-size-5 font-size-5 md-font-size-5 lg-py-1.5 md-py-1 pt-1 lg-px-5 md-px-4 px-2.5"> | </div>
-          <a class="block c-paper py-2 pl-2 font-normal lg-font-size-3.5 md-font-size-3.5 font-size-3.7 hover-color-brand:hover" rel="noopener" target="_blank" href="https://es.faluninfo.net">Español</a>
-          <div class="flex c-paper lg-font-size-5 font-size-5 md-font-size-5 lg-py-1.5 md-py-1 pt-1 lg-px-5 md-px-4 px-2.5"> | </div>
-          <a class="block c-paper py-1.5 pl-2 font-normal lg-font-size-3.5 md-font-size-3.5 font-size-3.7 hover-color-brand:hover" rel="noopener" target="_blank" href="https://jp.faluninfo.net">日本語</a>
+        <div class="flex pt-2 -mb-4 flex-wrap justify-center">
+          <a class="block c-gray-3 py-2 pl-2 font-normal lg-font-size-3.5 md-font-size-3.5 font-size-3.7 hover-color-brand:hover" rel="noopener" target="_blank" href="https://faluninfo.net">English</a>
+          <div class="flex c-gray-3 lg-font-size-5 font-size-5 md-font-size-5 lg-py-1.5 md-py-1 pt-1 lg-px-5 md-px-4 px-2.5"> | </div>
+          <a class="block c-gray-3 py-2 pl-2 font-normal lg-font-size-3.5 md-font-size-3.5 font-size-3.7 hover-color-brand:hover" rel="noopener" target="_blank" href="https://fr.faluninfo.net">Français</a>
+          <div class="flex c-gray-3 lg-font-size-5 font-size-5 md-font-size-5 lg-py-1.5 md-py-1 pt-1 lg-px-5 md-px-4 px-2.5"> | </div>
+          <a class="block c-gray-3 py-2 pl-2 font-normal lg-font-size-3.5 md-font-size-3.5 font-size-3.7 hover-color-brand:hover" rel="noopener" target="_blank" href="https://il.faluninfo.net">עִברִית</a>
+          <div class="flex c-gray-3 lg-font-size-5 font-size-5 md-font-size-5 lg-py-1.5 md-py-1 pt-1 lg-px-5 md-px-4 px-2.5"> | </div>
+          <a class="block c-gray-3 py-2 pl-2 font-normal lg-font-size-3.5 md-font-size-3.5 font-size-3.7 hover-color-brand:hover" rel="noopener" target="_blank" href="https://pl.faluninfo.net">Polska</a>
+          <div class="flex c-gray-3 lg-font-size-5 font-size-5 md-font-size-5 lg-py-1.5 md-py-1 pt-1 lg-px-5 md-px-4 px-2.5"> | </div>
+          <a class="block c-gray-3 py-2 pl-2 font-normal lg-font-size-3.5 md-font-size-3.5 font-size-3.7 hover-color-brand:hover" rel="noopener" target="_blank" href="https://es.faluninfo.net">Español</a>
+          <div class="flex c-gray-3 lg-font-size-5 font-size-5 md-font-size-5 lg-py-1.5 md-py-1 pt-1 lg-px-5 md-px-4 px-2.5"> | </div>
+          <a class="block c-gray-3 py-1.5 pl-2 font-normal lg-font-size-3.5 md-font-size-3.5 font-size-3.7 hover-color-brand:hover" rel="noopener" target="_blank" href="https://jp.faluninfo.net">日本語</a>
         </div>
         <div class="flex pb-1 flex-wrap justify-center">
-          <a class="block c-paper py-2 pl-2 font-normal lg-font-size-3.5 md-font-size-3.5 font-size-3.7 hover-color-brand:hover" rel="noopener" target="_blank" href="https://faluninfo.net">Italian</a>
-          <div class="flex c-paper lg-font-size-5 font-size-5 md-font-size-5 lg-py-1.5 md-py-1 pt-1 lg-px-5 md-px-4 px-2.5"> | </div>
-          <a class="block c-paper py-2 pl-2 font-normal lg-font-size-3.5 md-font-size-3.5 font-size-3.7 hover-color-brand:hover" rel="noopener" target="_blank" href="https://fr.faluninfo.net">Swedish</a>
-          <div class="flex c-paper lg-font-size-5 font-size-5 md-font-size-5 lg-py-1.5 md-py-1 pt-1 lg-px-5 md-px-4 px-2.5"> | </div>
-          <a class="block c-paper py-2 pl-2 font-normal lg-font-size-3.5 md-font-size-3.5 font-size-3.7 hover-color-brand:hover" rel="noopener" target="_blank" href="https://il.faluninfo.net">Macedonian</a>
-          <div class="flex c-paper lg-font-size-5 font-size-5 md-font-size-5 lg-py-1.5 md-py-1 pt-1 lg-px-5 md-px-4 px-2.5"> | </div>
-          <a class="block c-paper py-2 pl-2 font-normal lg-font-size-3.5 md-font-size-3.5 font-size-3.7 hover-color-brand:hover" rel="noopener" target="_blank" href="https://pl.faluninfo.net">Greek</a>
-          <div class="flex c-paper lg-font-size-5 font-size-5 md-font-size-5 lg-py-1.5 md-py-1 pt-1 lg-px-5 md-px-4 px-2.5"> | </div>
-          <a class="block c-paper py-2 pl-2 font-normal lg-font-size-3.5 md-font-size-3.5 font-size-3.7 hover-color-brand:hover" rel="noopener" target="_blank" href="https://es.faluninfo.net">Turkish</a>
-          <div class="flex c-paper lg-font-size-5 font-size-5 md-font-size-5 lg-py-1.5 md-py-1 pt-1 lg-px-5 md-px-4 px-2.5"> | </div>
-          <a class="block c-paper py-1.5 pl-2 font-normal lg-font-size-3.5 md-font-size-3.5 font-size-3.7 hover-color-brand:hover" rel="noopener" target="_blank" href="https://jp.faluninfo.net">Korean</a>
+          <a class="block c-gray-3 py-2 pl-2 font-normal lg-font-size-3.5 md-font-size-3.5 font-size-3.7 hover-color-brand:hover" rel="noopener" target="_blank" href="https://faluninfo.net">Italian</a>
+          <div class="flex c-gray-3 lg-font-size-5 font-size-5 md-font-size-5 lg-py-1.5 md-py-1 pt-1 lg-px-5 md-px-4 px-2.5"> | </div>
+          <a class="block c-gray-3 py-2 pl-2 font-normal lg-font-size-3.5 md-font-size-3.5 font-size-3.7 hover-color-brand:hover" rel="noopener" target="_blank" href="https://fr.faluninfo.net">Swedish</a>
+          <div class="flex c-gray-3 lg-font-size-5 font-size-5 md-font-size-5 lg-py-1.5 md-py-1 pt-1 lg-px-5 md-px-4 px-2.5"> | </div>
+          <a class="block c-gray-3 py-2 pl-2 font-normal lg-font-size-3.5 md-font-size-3.5 font-size-3.7 hover-color-brand:hover" rel="noopener" target="_blank" href="https://il.faluninfo.net">Macedonian</a>
+          <div class="flex c-gray-3 lg-font-size-5 font-size-5 md-font-size-5 lg-py-1.5 md-py-1 pt-1 lg-px-5 md-px-4 px-2.5"> | </div>
+          <a class="block c-gray-3 py-2 pl-2 font-normal lg-font-size-3.5 md-font-size-3.5 font-size-3.7 hover-color-brand:hover" rel="noopener" target="_blank" href="https://pl.faluninfo.net">Greek</a>
+          <div class="flex c-gray-3 lg-font-size-5 font-size-5 md-font-size-5 lg-py-1.5 md-py-1 pt-1 lg-px-5 md-px-4 px-2.5"> | </div>
+          <a class="block c-gray-3 py-2 pl-2 font-normal lg-font-size-3.5 md-font-size-3.5 font-size-3.7 hover-color-brand:hover" rel="noopener" target="_blank" href="https://es.faluninfo.net">Turkish</a>
+          <div class="flex c-gray-3 lg-font-size-5 font-size-5 md-font-size-5 lg-py-1.5 md-py-1 pt-1 lg-px-5 md-px-4 px-2.5"> | </div>
+          <a class="block c-gray-3 py-1.5 pl-2 font-normal lg-font-size-3.5 md-font-size-3.5 font-size-3.7 hover-color-brand:hover" rel="noopener" target="_blank" href="https://jp.faluninfo.net">Korean</a>
         </div>
-        <p class="c-paper text-center lg-font-size-3.5 md-font-size-3 font-size-3.5 font-400 line-height-6 mt-1.5">Copyright &copy; 2000-2024 - Фалун Дафа информационен център - Всички права запазени.</p>
+        <hr class="w-85% h-0.4 bg-gray-6 my-4 b-none"></hr>
+        <div class="flex flex-row justify-center">
+            <BottomFooterMenuItem href="/">Политика за поверителност</BottomFooterMenuItem>
+            <div class="flex c-paper lg-font-size-5 md-font-size-5 font-size-5 lg-py-1 md-py-1 md-pt-2 pt-3 lg-px-5 md-px-4 pl-3 pr-4"> | </div>
+            <BottomFooterMenuItem href="/">За нас</BottomFooterMenuItem>
+            <div class="flex c-paper lg-font-size-5 font-size-5 md-font-size-5 lg-py-1 md-py-1 md-pt-2 pt-3 lg-px-5 md-px-4 pl-4 pr-3"> | </div>
+            <BottomFooterMenuItem href="/">Условия за ползване</BottomFooterMenuItem>
+        </div>
+        <p class="c-gray-3 text-center lg-font-size-3.5 md-font-size-3 font-size-3.5 font-400 line-height-6 -mt-2">Copyright &copy; 2000-2024 - Фалун Дафа информационен център - Всички права запазени.</p>
       </BottomFooter>
     </div>
   );
@@ -199,14 +200,14 @@ function MainFooterSocialIcons() {
 function BottomFooter(props: { children: JSX.Element }) {
   return (
     <div
-      class="flex flex-col bg-#00152b py-5 flex-shrink-0 flex-justify-between flex-items-center">
+      class="flex flex-col gap-3 bg-#00152b py-9 flex-shrink-0 flex-justify-between flex-items-center">
       {props.children}
     </div>
   );
 }
 
 function BottomFooterMenuItem(props: {href:string, children: JSX.Element }) {
-  return <a href={props.href} class="flex c-paper text-center font-normal lg-font-size-3.5 md-font-size-3.5 font-size-3.7 py-1.5 hover-color-brand:hover line-height-5">{props.children}</a>
+  return <a href={props.href} class="flex c-gray-3 text-center font-normal lg-font-size-3.5 md-font-size-3.5 font-size-3.7 py-1.5 hover-color-brand:hover line-height-5">{props.children}</a>
 }
 
 function BackToTopButton(props: { onClick: JSX.EventHandlerUnion<HTMLButtonElement, MouseEvent> | undefined; children: number | boolean | Node | JSX.ArrayElement | (string & {}) | null | undefined; }) {
@@ -264,26 +265,26 @@ function SearchBar(props: any) {
   };
 
   return (
-    <div class="flex justify-center flex-items-center max-w-1440px">
+    <div class="">
       <MdiMagnify class={`c-paper-inv cursor-pointer hover-color-brand-light ml-30 ${isSearchVisible() ? 'opacity-0' : ''}`} onClick={toggleSearch} />
       {isSearchVisible() && (
-        <div class="fixed top-20 left-0 w-full bg-paper-border h-40 p-4 z-10000 flex justify-center flex-items-center">
-          <RiCloseFill class="c-paper-inv cursor-pointer hover-color-brand-light mt-0.6 mr-2" onClick={toggleSearch} />
+        <div class="fixed w-full op-95 top-20 left-0 bg-gray-3 h-40 p-4 z-1000 flex justify-center flex-items-center">
+          <RiCloseFill class="c-paper-inv cursor-pointer hover-color-brand-light mt-0.6 mr-2 font-size-6" onClick={toggleSearch} />
           
-        <form action="" class="flex flex-items-center w-150 h-15 b-solid b-2 b-paper bg-transparent b-rounded-36 justify-between">
-            <MdiMagnify class="c-paper-inv mx-5"/>
+        <form action="" class="flex flex-items-center w-150 h-15 b-solid b-3 b-paper bg-transparent b-rounded-4 justify-between">
+            <MdiMagnify class="c-paper-inv mx-5 font-size-6"/>
             <input
               type="search"
-              class="b-none focus-b-none:focus bg-transparent w-140 h-10"
+              class="b-none focus-b-none focus-outline-none bg-transparent w-140 h-12"
               name="search"
               placeholder=""
               pattern=".*\S.*" required
             />
             <button
               type="submit"
-              class="w-16 h-6 b-solid b-2 b-paper c-paper font-size-3 font-700 bg-paper-inv cursor-pointer hover-bg-brand-light"
+              class="w-20 h-14.8 b-3 b-paper border-solid border-r-none c-paper-inv font-size-4 bg-transparent cursor-pointer hover-color-brand-light" style="	border-radius: 0 1rem 1rem 0 ;              "
               name="submit"
-            >GO
+            >Търси
             </button>
           </form>
         </div>
