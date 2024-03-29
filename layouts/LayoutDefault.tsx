@@ -267,31 +267,33 @@ function SearchBar(props: any) {
   return (
     <div class="">
       <MdiMagnify class={`c-paper-inv cursor-pointer hover-color-brand-light ml-30 ${isSearchVisible() ? 'opacity-0' : ''}`} onClick={toggleSearch} />
-      {isSearchVisible() && (
-        <div class="fixed w-full op-95 top-20 left-0 bg-gray-3 h-40 p-4 z-1000 flex justify-center flex-items-center">
+      <div class={`transition-all fixed top-20 left-0 w-full z-50 flex justify-center ${isSearchVisible() ? '' : 'pointer-events-none'}`}>
+        <div class={`bg-paper-border h-30 px-100.4 z-50 flex justify-center items-center transition-all ease-in-out duration-300 ${isSearchVisible() ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-full'}`}>
           <RiCloseFill class="c-paper-inv cursor-pointer hover-color-brand-light mt-0.6 mr-2 font-size-6" onClick={toggleSearch} />
           
-        <form action="" class="flex flex-items-center w-150 h-15 b-solid b-3 b-paper bg-transparent b-rounded-4 justify-between">
-            <MdiMagnify class="c-paper-inv mx-5 font-size-6"/>
+          <form action="" class="flex items-center w-150 h-12 border-solid border-2 border-paper bg-transparent rounded-4 justify-between">
             <input
               type="search"
-              class="b-none focus-b-none focus-outline-none bg-transparent w-140 h-12"
+              class="border-none focus:border-none focus:outline-none bg-transparent w-140 h-12 ml-5"
               name="search"
               placeholder=""
-              pattern=".*\S.*" required
+              pattern=".*\S.*"
+              required
             />
             <button
               type="submit"
-              class="w-20 h-14.8 b-3 b-paper border-solid border-r-none c-paper-inv font-size-4 bg-transparent cursor-pointer hover-color-brand-light" style="	border-radius: 0 1rem 1rem 0 ;              "
+              class="w-13 h-12 border-2 border-paper border-solid border-r-none c-paper-inv font-size-4.5 bg-transparent cursor-pointer hover-color-brand-light rounded-r-4 flex justify-center flex-items-center"
               name="submit"
-            >Търси
+            >
+              <MdiMagnify class=""/>
             </button>
           </form>
         </div>
-      )}
+      </div>
     </div>
   );
 }
+
 
 
 
