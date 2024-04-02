@@ -49,7 +49,7 @@ export default function Page() {
         </section>
         <a href="/"><img class="max-w-full" src="/assets/FDinfo-HumanityArticle__v2.png"></img></a>
         <a href="/"><img class="max-w-full block mla mra md-mt-30 md-mb-18 mt-20 mb-10" src="/assets/ShenYunZuoPin- Orange-Desktop-ZaDimo.png"></img></a>
-      </div>
+      </div>      
     </>
   );
 }
