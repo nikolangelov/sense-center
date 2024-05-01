@@ -1,5 +1,6 @@
 /* Links */
 @import url('https://fonts.cdnfonts.com/css/mona-sans');
+@import url('https://fonts.cdnfonts.com/css/georgia');
 
 a {
   text-decoration: none;
@@ -12,7 +13,7 @@ a {
 /* Reset */
 body {
   margin: 0 auto;
-  max-width: 1440px;
+  max-width: 1000px;
 }
 
 .page-view {
@@ -25,196 +26,28 @@ body.page-is-transitioning #page-content {
   opacity: 0;
 }
 
-.top-bar-meniitem:hover {
-  border-bottom: 5px solid #00a4db;
-} 
-
-.top-bar-meniitem {
-  letter-spacing: 0.5px;
-  font-family: "Open Sans", sans-serif;
-  margin-bottom: -33px;
-}
-
-@media screen and (max-width:639px) and (min-width:420px) {
-  .text-in-read-more-bottom-button {
-  top: 39%;
-  left: 20px;
-  font-size: 16px;
-  width: 72%;
-  }
-}
-
-@media screen and (max-width:639px) and (min-width:515px) {
-  .arrow-in-read-more-bottom-button {
-  top: 26%;
-  right: 0px;
-  }
-}
-
-@media screen and (max-width:515px) and (min-width:420px) {
-  .arrow-in-read-more-bottom-button {
-  top: 18%;
-  }
-}
-
 div {
+  font-family: 'Georgia', sans-serif;
+  color: #07111c;
+  letter-spacing: -0.01rem;
+  word-spacing: -0.03rem;
+}
+
+h1, h2, h3, h4 {
   font-family: 'Mona-Sans', sans-serif;
+  color: #07111c;
 }
 
-
-
-
-
-
-/* CSS for slide transition effect */
-.slides-wrapper {
-  display: flex;
-  transition: transform 0.5s ease;
+img {
+  max-width:800px;
+  border-radius:10px;
 }
 
-.mySlides {
-  flex: 0 0 100%;
-}
-
-.fade {
-  opacity: 0;
-  transition: opacity 0.5s ease;
-}
-
-.mySlides.fade {
-  opacity: 1;
-}
-
-/* CSS for Slideshow */
-.slideshow-container {
-  position: relative;
-  max-width: 800px;
-  margin: auto;
-  overflow: hidden;
-}
-
-
-.mySlides img {
+.divider-shadow:after {
+  content: '';
+  display: block;
+  margin: -25px auto 0;
   width: 100%;
-  height: auto;
-}
-
-.prev, .next {
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  width: auto;
-  padding: 16px;
-  color: white;
-  font-weight: bold;
-  font-size: 24px;
-  transition: 0.3s ease;
-  background-color: rgba(0, 0, 0, 0.5);
-  border: none;
-  border-radius: 0 3px 3px 0;
-  z-index: 1000;
-}
-
-.prev {
-  left: 0;
-  border-radius: 3px 0 0 3px;
-}
-
-.next {
-  right: 0;
-}
-
-.prev:hover, .next:hover {
-  background-color: rgba(0, 0, 0, 0.8);
-}
-
-.dot-container {
-  text-align: center;
-  margin-top: 20px;
-}
-
-.dot {
-  cursor: pointer;
-  height: 15px;
-  width: 15px;
-  margin: 0 8px;
-  background-color: #bbb;
-  border-radius: 50%;
-  display: inline-block;
-}
-
-.active, .dot:hover {
-  background-color: #717171;
-}
-
-
-
-
-
-
-.sidebar-ul {
-  margin-left: 10px;
-  list-style-type: none;
-  counter-reset: li;
-}
-
-.sidebar-li{
-  display: list-item;
-}
-
-.sidebar-li:before {
-  counter-increment: li;
-  content: counter(li,decimal-leading-zero) " | ";
-  color: #989898;
-  display: inline-block;
-  width: 2em;
-  margin-left: -2.6em;
-}
-
-.sidebar-second-ul {
-  list-style-type: circle;
-  margin-left: -1.5em;
-}
-
-.first-block-arrow-element:after {
-  content: "";
-    position: absolute;
-    border-top: 8px solid;
-    left: 43%;
-    bottom: -5%;
-    border-left: 18px solid transparent;
-    border-right: 18px solid transparent;
-    border-top-color: #005c88;
-    z-index: 998!important;
-}
-
-.second-block-arrow-element:after {
-  content: "";
-    position: absolute;
-    border-top: 8px solid;
-    left: 43%;
-    bottom: -2%;
-    border-left: 18px solid transparent;
-    border-right: 18px solid transparent;
-    border-top-color: #e9e9e9;
-    z-index: 998!important;
-}
-
-
-
-
-
-.back-to-top-arrow {
-  opacity: 0;
-  transition: opacity 0.3s ease-in-out;
-}
-
-.back-to-top-arrow.visible {
-  opacity: 0.8;
-}
-
-
-.text-body {
-  font-family: "Open Sans", sans-serif;
+  height: 25px;
+  box-shadow: 5px 5px 0px #1A6142;
 }

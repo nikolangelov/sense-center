@@ -126,7 +126,7 @@ function Logo() {
   return (
     <div class="flex items-center justify-center md-pl-4 pl-0">
       <a href="/">
-        <img src="/assets/logo.png" class="lg-w-42 w-40 pl-8"/>
+        <img src="/assets/FCC_2024_png.png" class="lg-w-42 w-40 pl-8"/>
       </a>
     </div>
   );
