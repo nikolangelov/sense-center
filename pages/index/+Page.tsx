@@ -1,12 +1,46 @@
-function FeaturedBlock (props: {text:string,image:string,url:string}) {
+//*function FeaturedBlock (props: {text:string,image:string,url:string}) {
+  //*return (
+    //*<div class="flex flex-col lg-w-30% sm-w-65% w-95% b-solid b-1 b-paper-border md-mb-30 mb-20 pb-8 hover-b-gray-3:hover cursor-pointer" style="box-shadow: 0 0 10px #dadada;">
+      //*<img class="" src={props.image}></img>
+      //*<div class="pt-20px px-25px lg-font-size-4.2 md-font-size-5 font-size-4.5 line-height-7 md-line-height-8 lg-line-height-25px color-paper-inv typography-body lg-pb-8 lg-my-2 md-my-5 my-5 text-justify">{props.text}</div>
+      //*<a href={props.url} class="text-center typography-ui lg-font-size-4.3 md-font-size-7 font-size-5.5 font-100 color-paper-link hover-color-paper-link-hover uppercase lg-my-0 md-my-5 my-5" style="letter-spacing: .75px;">Прочетете повече</a>
+    //*</div>
+  //*);
+//*}
+
+import RiArrowRightSLine from '~icons/ri/arrow-right-s-line';
+import RiArrowLeftSLine from '~icons/ri/arrow-left-s-line';
+import "solid-slider/slider.css";
+import { Slider, createSlider, SliderButton, SliderProvider } from "solid-slider";
+
+const GalerrySlider = () => {
+const options = { duration: 1000 };
+const [slider, { current, next, prev, moveTo }] = createSlider(options);
   return (
-    <div class="flex flex-col lg-w-30% sm-w-65% w-95% b-solid b-1 b-paper-border md-mb-30 mb-20 pb-8 hover-b-gray-3:hover cursor-pointer" style="box-shadow: 0 0 10px #dadada;">
-      <img class="" src={props.image}></img>
-      <div class="pt-20px px-25px lg-font-size-4.2 md-font-size-5 font-size-4.5 line-height-7 md-line-height-8 lg-line-height-25px color-paper-inv typography-body lg-pb-8 lg-my-2 md-my-5 my-5 text-justify">{props.text}</div>
-      <a href={props.url} class="text-center typography-ui lg-font-size-4.3 md-font-size-7 font-size-5.5 font-100 color-paper-link hover-color-paper-link-hover uppercase lg-my-0 md-my-5 my-5" style="letter-spacing: .75px;">Прочетете повече</a>
-    </div>
+    <SliderProvider>
+      <div class="max-w-1000px m-auto position-relative">
+      <Slider options={{ loop: true }}>
+        <img src="assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" class="image-in-slider important-max-w-30% important-min-w-30%"/>
+        <img src="assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" class="image-in-slider important-max-w-30% important-min-w-30%"/>
+        <img src="assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" class="image-in-slider important-max-w-30% important-min-w-30%"/>
+		<img src="assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" class="image-in-slider important-max-w-30% important-min-w-30%"/>
+        <img src="assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" class="image-in-slider important-max-w-30% important-min-w-30%"/>
+        <img src="assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" class="image-in-slider important-max-w-30% important-min-w-30%"/>
+      </Slider>
+      <SliderButton class="cursor-pointer position-absolute top-41% left-0 bg-paper-inv bg-op-50 b-rd-bl-1 b-rd-tl-1 b-none px-0 py-1.5" prev><RiArrowLeftSLine class="-ml-1 font-size-10 c-paper hover-c-brand-light:hover transition-colors"/></SliderButton>
+      <SliderButton class="cursor-pointer position-absolute top-41% right-0 bg-paper-inv bg-op-50 b-rd-br-1 b-rd-tr-1 b-none px-0 py-1.5" next><RiArrowRightSLine class="-mr-1 font-size-10 c-paper hover-c-brand-light:hover transition-colors"/></SliderButton>
+      <div class="flex flex-justify-center">
+        <div class={"flex w-3 h-3 rd-50% mx-2 mt-4 " + (current() === 0 ? "bg-brand-dark" : "bg-brand")}></div>
+        <div class={"flex w-3 h-3 rd-50% mx-2 mt-4 " + (current() === 1 ? "bg-brand-dark" : "bg-brand")}></div>
+        <div class={"flex w-3 h-3 rd-50% mx-2 mt-4 " + (current() === 2 ? "bg-brand-dark" : "bg-brand")}></div>
+		<div class={"flex w-3 h-3 rd-50% mx-2 mt-4 " + (current() === 3 ? "bg-brand-dark" : "bg-brand")}></div>
+        <div class={"flex w-3 h-3 rd-50% mx-2 mt-4 " + (current() === 4 ? "bg-brand-dark" : "bg-brand")}></div>
+        <div class={"flex w-3 h-3 rd-50% mx-2 mt-4 " + (current() === 5 ? "bg-brand-dark" : "bg-brand")}></div>
+      </div>
+      </div>
+    </SliderProvider>
   );
-}
+};
 
 function FleurDivider () {
 	return (
@@ -21,39 +55,41 @@ export default function Page() {
   return (
     <>
       <div class="flex flex-justify-center"><img class="b-rd-3 my-20" src="assets\Професионално почистване на заведения.jpg" alt="" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 30%);"/></div>
-		<h1 class="font-size-16 font-800 mb-12 line-height-18" style="letter-spacing:-0.10rem;">Fine Carpet Cleaning London</h1>
+		<h1>Fine Carpet Cleaning London</h1>
 		<div class="mt-20 py-8 px-14 b-rd-3 bg-paper line-height-8 text-justify font-size-4.4" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 18%);">Fine Carpet Cleaning London is a carpet cleaning company which operates in all London boroughs. We provide a variety of commercial and domestic carpet cleaning services, tailoring to our client’s needs.</div>
 
 		<FleurDivider></FleurDivider>
 
-		<h2 class="font-size-12 font-800 my-20 line-height-14" style="letter-spacing:-0.10rem;">Our main cleaning services</h2>
-		<div class="p-7 bg-paper mt-7 mb-3 b-rd-3 flex flex-justify-center" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 18%);"><a href="/"><img class="mt-3 mx-auto block w-650px" src="assets\Професионално почистване на заведения.jpg" alt="" />
-		<h3 class="mx-auto mt-10 mb-3 text-center font-size-9">Professional carpet cleaning services</h3></a></div>
+		<h2>Our main cleaning services</h2>
+		<div class="p-7 bg-paper b-rd-3 flex flex-justify-center" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 18%);"><a href="/"><img class="mt-3 mx-auto block w-650px" src="assets\Професионално почистване на заведения.jpg" alt="" />
+		<h3 class="mx-auto mt-16 mb-9 text-center font-size-9">Professional carpet cleaning services</h3></a></div>
 
-		<div class="main-services-homepage-box"><a href="/"><img class="main-services-images" src="assets\Професионално почистване на заведения.jpg" alt="" />
-		<h3 class="main-services-h3">Professional upholstery cleaning services</h3></a></div>
+		<div class="p-7 bg-paper mt-20 b-rd-3 flex flex-justify-center" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 18%);"><a href="/"><img class="mt-3 mx-auto block w-650px" src="assets\Професионално почистване на заведения.jpg" alt="" />
+		<h3 class="mx-auto mt-16 mb-9 text-center font-size-9">Professional upholstery cleaning services</h3></a></div>
 
-		<div class="main-services-homepage-box"><a href="/"><img class="main-services-images" src="assets\Професионално почистване на заведения.jpg" alt="" />
-		<h3 class="main-services-h3">Professional rug cleaning services</h3></a></div>
+		<div class="p-7 bg-paper mt-20 b-rd-3 flex flex-justify-center" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 18%);"><a href="/"><img class="mt-3 mx-auto block w-650px" src="assets\Професионално почистване на заведения.jpg" alt="" />
+		<h3 class="mx-auto mt-16 mb-9 text-center font-size-9">Professional rug cleaning services</h3></a></div>
 
 		<FleurDivider></FleurDivider>
 
 		<h2>Equipment and products we use</h2>
-		<img class="main-services-images" src="assets\Професионално почистване на заведения.jpg" alt="" />
-		<div class="bodytext">
 
-		<p class="new-homepage-paragraphs">We at Fine Carpet Cleaning London have gathered years of expertise through taking care of our client’s carpets, rugs and upholstery and always look for new ways to improve. By upgrading our equipment, cleaning products and knowledge at every opportunity, we have been able to get to the level we are at today.</p>
+		<GalerrySlider></GalerrySlider>
 
-		<p class="new-homepage-paragraphs">The factors that enable us to stand out of the crowd are:</p>
+		<div class="mt-20 py-8 px-14 bg-paper b-rd-3" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 18%);">
+
+		<p>We at Fine Carpet Cleaning London have gathered years of expertise through taking care of our client’s carpets, rugs and upholstery and always look for new ways to improve. By upgrading our equipment, cleaning products and knowledge at every opportunity, we have been able to get to the level we are at today.</p>
+
+		<p>The factors that enable us to stand out of the crowd are:</p>
 		<ul>
-			<li class="green-dot-listed-item">
-		<p class="listed-items">We use professional carpet cleaning equipment from the best brands available in the UK – <a class="green-link" href="/" target="_blank" rel="noopener">“Mytee”</a> and <a class="green-link" href="/" target="_blank" rel="noopener">“Airflex”</a>. Additionally, our team’s engineer has made significant improvements to the machines to enhance their performance.</p>
+			<li class="ml--5 color-paper-link">
+		<p class="color-paper-inv">We use professional carpet cleaning equipment from the best brands available in the UK – <a class="color-paper-link hover-color-paper-link-hover:hover" href="/" target="_blank" rel="noopener">“Mytee”</a> and <a class="color-paper-link hover-color-paper-link-hover:hover" href="/" target="_blank" rel="noopener">“Airflex”</a>. Additionally, our team’s engineer has made significant improvements to the machines to enhance their performance.</p>
 		</li>
-			<li class="green-dot-listed-item">
-		<p class="listed-items">Moreover, we use a high-filtration twin-motor vacuum cleaner, which we consider to be the best available. This vacuum cleaner is purpose-built for professional carpet cleaning, with one motor vigorously agitating the carpet while the other effectively suctions away any loose dirt, dry soil, and dust.</p>
+			<li class="ml--5 color-paper-link">
+		<p class="color-paper-inv">Moreover, we use a high-filtration twin-motor vacuum cleaner, which we consider to be the best available. This vacuum cleaner is purpose-built for professional carpet cleaning, with one motor vigorously agitating the carpet while the other effectively suctions away any loose dirt, dry soil, and dust.</p>
 		</li>
-			<li class="green-dot-listed-item">
-		<p class="listed-items">We use over 20 high-quality cleaning products from the best brands on the UK and US market. Among those brands are "Alltec," "Prochem," "Chemspec," "Solution World of Clean," and "TMF." We have used and tested almost all detergents available on the market and have selected the ones that are most effective in removing dirt, dust, stains and bacteria. We choose with which ones to treat your carpets, rugs or upholstery, based on the stain, level of soiling and type of fabric.</p>
+			<li class="ml--5 color-paper-link">
+		<p class="color-paper-inv">We use over 20 high-quality cleaning products from the best brands on the UK and US market. Among those brands are "Alltec," "Prochem," "Chemspec," "Solution World of Clean," and "TMF." We have used and tested almost all detergents available on the market and have selected the ones that are most effective in removing dirt, dust, stains and bacteria. We choose with which ones to treat your carpets, rugs or upholstery, based on the stain, level of soiling and type of fabric.</p>
 		</li>
 		</ul>
 		</div>
@@ -61,87 +97,96 @@ export default function Page() {
 		<FleurDivider></FleurDivider>
 
 		<h2>Fine Carpet Cleaning London Accreditations</h2>
-		<h3 class="accreditations-h3-homepage">Fine Carpet Cleaning London is a qualified member of <a class="green-link" href="/" target="_blank" rel="noopener">"NCCA"</a> (National Carpet Cleaners Association)</h3>
-		<img class="main-services-images" src="assets\Професионално почистване на заведения.jpg" alt="" />
-		<div class="bodytext">
+		<h3 class="mt-25 mb-15">Fine Carpet Cleaning London is a qualified member of <a class="color-paper-link hover-color-paper-link-hover:hover" href="/" target="_blank" rel="noopener">"NCCA"</a> (National Carpet Cleaners Association)</h3>
+		
+		<GalerrySlider></GalerrySlider>
 
-		<p class="new-homepage-paragraphs">“NCCA” is one of the most respected and authoritative associations for training carpet cleaners. It was founded in 1968 and is devoted entirely to the cleaning, maintenance and restoration of carpets.</p>
+		<div class="mt-20 py-8 px-14 bg-paper b-rd-3" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 18%);">
 
-		<p class="new-homepage-paragraphs">The main objective of the association is to provide certificates of professionalism and high standards to partner companies that have passed a special test for practical knowledge and skills. This ensures the quality of the certified companies services.</p>
+		<p>“NCCA” is one of the most respected and authoritative associations for training carpet cleaners. It was founded in 1968 and is devoted entirely to the cleaning, maintenance and restoration of carpets.</p>
+
+		<p>The main objective of the association is to provide certificates of professionalism and high standards to partner companies that have passed a special test for practical knowledge and skills. This ensures the quality of the certified companies services.</p>
 
 		</div>
-		<h3 class="accreditations-h3-homepage">Fine Carpet Cleaning London is listed on <a class="green-link" href="/" target="_blank" rel="noopener">“Checkatrade"</a></h3>
-		<img class="main-services-images" src="assets\Професионално почистване на заведения.jpg" alt="" />
-		<div class="bodytext">
+		<h3 class="mt-25 mb-15">Fine Carpet Cleaning London is listed on <a class="color-paper-link hover-color-paper-link-hover:hover" href="/" target="_blank" rel="noopener">“Checkatrade"</a></h3>
+		
+		<GalerrySlider></GalerrySlider>
 
-		<p class="new-homepage-paragraphs">“Checkatradе” is an organisation founded in 1998 to help consumers in the UK to find their specialist in a particular area, such as quality carpet cleaning. The main goal of the organisation is the collection of all quality companies in one place covering high standards, transparency in customer service and prices.</p>
+		<div class="mt-20 py-8 px-14 bg-paper b-rd-3" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 18%);">
 
-		<p class="new-homepage-paragraphs">In order to be accredited by “Checkatrade”, Fine Carpet Cleaning London had to pass a detailed inspection covering more than 20 aspects, such as:</p>
+		<p>“Checkatradе” is an organisation founded in 1998 to help consumers in the UK to find their specialist in a particular area, such as quality carpet cleaning. The main goal of the organisation is the collection of all quality companies in one place covering high standards, transparency in customer service and prices.</p>
+
+		<p>In order to be accredited by “Checkatrade”, Fine Carpet Cleaning London had to pass a detailed inspection covering more than 20 aspects, such as:</p>
 
 		<ul>
-			<li class="green-dot-listed-item">
-		<p class="listed-items">ID.</p>
+			<li class="ml--5 color-paper-link">
+		<p class="color-paper-inv">ID.</p>
 		</li>
-			<li class="green-dot-listed-item">
-		<p class="listed-items">Reviews.</p>
+			<li class="ml--5 color-paper-link">
+		<p class="color-paper-inv">Reviews.</p>
 		</li>
-			<li class="green-dot-listed-item">
-		<p class="listed-items">Insurance.</p>
+			<li class="ml--5 color-paper-link">
+		<p class="color-paper-inv">Insurance.</p>
 		</li>
-			<li class="green-dot-listed-item">
-		<p class="listed-items">Qualifications.</p>
+			<li class="ml--5 color-paper-link">
+		<p class="color-paper-inv">Qualifications.</p>
 		</li>
-			<li class="green-dot-listed-item">
-		<p class="listed-items">Membership in professional organisations.</p>
+			<li class="ml--5 color-paper-link">
+		<p class="color-paper-inv">Membership in professional organisations.</p>
 		</li>
-			<li class="green-dot-listed-item">
-		<p class="listed-items">And many more.</p>
+			<li class="ml--5 color-paper-link">
+		<p class="color-paper-inv">And many more.</p>
 		</li>
 		</ul>
 
 		<p class="new-homepage-paragraphs">After creating a listing on the “Checkatrade” website, each company is then permanently monitored based on user feedback posted on the organisation’s website.</p>
 
 		</div>
-		<h3 class="accreditations-h3-homepage">Fine Carpet Cleaning London staff members are trained and certified</h3>
+		<h3 class="mt-25 mb-15">Fine Carpet Cleaning London staff members are trained and certified</h3>
 
-		<div class="bodytext">
+		<div class="mt-20 py-8 px-14 bg-paper b-rd-3" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 18%);">
 
-		<p class="new-homepage-paragraphs">On one hand our ambition is to fully satisfy the customers needs to the best of our capabilities. On the other hand the company culture of Fine Carpet Cleaning London strongly encourages constant striving for excellence. These two reasons combined lead to the result that our staff members successfully completed a number of specialised professional courses like:</p>
+		<p>On one hand our ambition is to fully satisfy the customers needs to the best of our capabilities. On the other hand the company culture of Fine Carpet Cleaning London strongly encourages constant striving for excellence. These two reasons combined lead to the result that our staff members successfully completed a number of specialised professional courses like:</p>
 
 		<ul>
-			<li class="green-dot-listed-item">
-				<p class="listed-items">Professional carpet and upholstery cleaning;</p>
+			<li class="ml--5 color-paper-link">
+				<p class="color-paper-inv">Professional carpet and upholstery cleaning;</p>
 			</li>
-			<li class="green-dot-listed-item">
-				<p class="listed-items">Advanced spot and stain treatment and removal;</p>
+			<li class="ml--5 color-paper-link">
+				<p class="color-paper-inv">Advanced spot and stain treatment and removal;</p>
 			</li>
-			<li class="green-dot-listed-item">
-				<p class="listed-items">And more.</p>
+			<li class="ml--5 color-paper-link">
+				<p class="color-paper-inv">And more.</p>
 			</li>
 		</ul>
-		<p class="new-homepage-paragraphs">Оur goal is to be prepared for any situation, no matter how challenging it is, and leave nothing to chance.</p>
+		<p>Оur goal is to be prepared for any situation, no matter how challenging it is, and leave nothing to chance.</p>
 		</div>
 
 		<FleurDivider></FleurDivider>
 
 		<h2>Results from our services in Fine Carpet Cleaning London</h2>
 
-		<img class="main-services-images" src="assets\Професионално почистване на заведения.jpg" alt="" />
-		<img class="main-services-images" src="assets\Професионално почистване на заведения.jpg" alt="" />
+		<GalerrySlider></GalerrySlider>
+
+		<video class="max-w-1000px mt-30 b-rd-3" controls="controls" muted>
+			<div class="vertical-top max-w-full font-size-4 color-paper-inv block"><a class="color-paper-inv block" href="https://www.youtube.com/watch?v=zedTK_cCobY" target="_blank" rel="noopener">Professioanl Carpet Cleaning London - Fine Carpet Cleaning</a></div>
+        	<source src="assets/Professional Carpet Cleaning London - Fine Carpet Cleaning (1).mp4" type="video/mp4" />
+        </video>
 
 		<FleurDivider></FleurDivider>
 
 		<h2>Reviews for our services</h2>
 
-		<img class="main-services-images" src="assets\Професионално почистване на заведения.jpg" alt="" />
+		<GalerrySlider></GalerrySlider>
 
 		<FleurDivider></FleurDivider>
 
 		<h2>Areas we cover</h2>
 
-		<img class="main-services-images" src="assets\Професионално почистване на заведения.jpg" alt="" />
+		<a href="assets/map2.png">
+			<img class="" src="assets/map2.png" alt="" />
+		</a>
 
-		<a href="/"><img class="ares-we-cover-image-map-homepage" src="" alt="" /></a>
 		<p class="text-after-areaswecover-and-workinghours">*Fine Carpet Cleaning London operates in all of London. The map below shows all of the London postcodes we cover.
 		**Transport surcharge may apply for all other post codes.</p>
 

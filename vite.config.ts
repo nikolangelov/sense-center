@@ -20,14 +20,14 @@ export default defineConfig({
 			theme:
 			 {
 				colors: {
-					brand: "#005c88",
+					brand: "#1A6142",
 					"brand-light": "#007faf",
 					"brand-dark": "#00254b",
 					"brand-inv": "#eee",
 					"paper": "#fff",
-					"paper-inv": "#212529",
-					"paper-link": "#005c88",
-					"paper-link-hover": "#007faf",
+					"paper-inv": "#07111c",
+					"paper-link": "#268c5f",
+					"paper-link-hover": "#56B665",
 					"paper-border": "#e7e7e7",
 				}
 			}
