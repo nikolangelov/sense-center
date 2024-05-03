@@ -13,6 +13,7 @@ a {
 /* Reset */
 body {
   margin: 0 auto;
+  background-color: #f7f7f7;
 }
 
 #page-content {
@@ -29,7 +30,24 @@ body.page-is-transitioning #page-content {
   opacity: 0;
 }
 
-div {
+li {
+  color: #268c5f;
+  font-size: 1.5rem !important;
+}
+
+
+.expanded .hidden-questions-and-answers {
+    display: block;
+}
+.hidden-questions-and-answers {
+    display: none;
+}
+
+.tpl3 .to-be-expanded .read-more-toggle-button {
+  display: block;
+}
+
+div, p {
   font-family: 'Georgia', sans-serif;
   color: #07111c;
   letter-spacing: -0.01rem;

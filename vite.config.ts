@@ -21,6 +21,11 @@ export default defineConfig({
 			 {
 				colors: {
 					brand: "#1A6142",
+					"brand-action": "#edb339",
+					"brand-action-hover": "#ebbc59",
+					"brand-second-action": "#228057",
+					"brand-second-action-hover": "#01874c",
+
 					"brand-light": "#007faf",
 					"brand-dark": "#00254b",
 					"brand-inv": "#eee",

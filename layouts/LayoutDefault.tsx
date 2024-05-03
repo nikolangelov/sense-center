@@ -99,7 +99,7 @@ function Topbar(props: { children: JSX.Element }) {
   return (
     <div
       id="sidebar"
-      class="flex lg-py-6 lg-h-20 h-20 position-sticky -top-0.1 border-b-2 border-t-1 bg-brand flex-justify-between flex-items-center z-9999">
+      class="flex lg-py-6 lg-h-20 h-20 position-sticky -top-0.1 border-b-2 border-t-1 bg-brand flex-justify-between flex-items-center z-9998">
       {props.children}
     </div>
   );
