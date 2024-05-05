@@ -25,14 +25,14 @@ export default defineConfig({
 					"brand-action-hover": "#ebbc59",
 					"brand-second-action": "#228057",
 					"brand-second-action-hover": "#01874c",
+					"paper-link": "#56B665",
+					"paper-link-hover": "#268c5f",
 
 					"brand-light": "#007faf",
 					"brand-dark": "#00254b",
 					"brand-inv": "#eee",
 					"paper": "#fff",
 					"paper-inv": "#07111c",
-					"paper-link": "#268c5f",
-					"paper-link-hover": "#56B665",
 					"paper-border": "#e7e7e7",
 				}
 			}

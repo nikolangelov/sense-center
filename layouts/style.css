@@ -1,6 +1,7 @@
 /* Links */
 @import url('https://fonts.cdnfonts.com/css/mona-sans');
 @import url('https://fonts.cdnfonts.com/css/georgia');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
 a {
   text-decoration: none;
@@ -37,13 +38,14 @@ li {
 
 
 .expanded .hidden-questions-and-answers {
-    display: block;
-}
-.hidden-questions-and-answers {
-    display: none;
+  display: block;
 }
 
-.tpl3 .to-be-expanded .read-more-toggle-button {
+.hidden-questions-and-answers {
+  display: none;
+}
+
+.to-be-expanded .read-more-toggle-button {
   display: block;
 }
 
@@ -80,8 +82,9 @@ h2 {
 }
 
 h3 {
-  font-size: 2.2rem;
-  line-height: 3rem;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.7rem;
+  line-height: 2.5rem;
   font-weight: 800;
 }
 

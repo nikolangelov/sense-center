@@ -318,7 +318,7 @@ export default function Page() {
 			<li class="ml-5">
 		<p class="listed-items">If your carpets get stained frequently.</p>
 
-		<p class="ml--5 new-homepage-paragraphs">You can reach out to us if you seek expert advice or if you want to book a <a class="green-link" href="/" target="_blank" rel="noopener">professional carpet cleaning service</a>.</p></li>
+		<p class="ml--5 new-homepage-paragraphs">You can reach out to us if you seek expert advice or if you want to book a <a class="color-paper-link hover-color-paper-link-hover:hover" href="/" target="_blank" rel="noopener">professional carpet cleaning service</a>.</p></li>
 			<li class="ml-5">
 		<h3>How much will a professional carpet cleaning cost?</h3>
 		<p class="ml--5 new-homepage-paragraphs">The price of carpet cleaning depends on several factors. The most significant among them are:</p></li>
@@ -334,7 +334,7 @@ export default function Page() {
 			<li class="ml-5">
 		<p class="listed-items">The ease of access to them.</p>
 
-		<p class="ml--5 new-homepage-paragraphs">For more specific pricing details regarding the carpet cleaning we offer, you can check out our <a class="green-link" href="/" target="_blank" rel="noopener">price list</a></p></li>
+		<p class="ml--5 new-homepage-paragraphs">For more specific pricing details regarding the carpet cleaning we offer, you can check out our <a class="color-paper-link hover-color-paper-link-hover:hover" href="/" target="_blank" rel="noopener">price list</a></p></li>
 			<li class="ml-5">
 		<h3>How fast will the carpet get dry after a cleaning service?</h3>
 		<p class="ml--5 new-homepage-paragraphs">The drying time of a carpet is determined by various factors. Among them are:</p></li>
@@ -356,44 +356,46 @@ export default function Page() {
 		</ul>
 		</div>
 
-		<div class="read-more-click-to-expand-1 to-be-expanded p-4 pr-14 bg-paper b-rd-3 flex flex-justify-center" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 18%);"><div>
-		<button class="read-more-toggle-button my-6 mx-auto uppercase b-none b-rd-1 py-3 px-7 bg-paper hover-bg-#f7f7f7:hover font-600 font-size-5" style="letter-spacing: 0.02rem; box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 10%);" onclick="toggleExpand(1)">Read more</button></div>
+		<div class="read-more-click-to-expand-1 to-be-expanded p-4 pr-14 mt--20 bg-paper b-rd-3 flex flex-justify-center" style="box-shadow: 0px 20px 20px 1px rgb(84 89 95 / 18%);">
+		<div>
+			<button class="read-more-toggle-button my-6 mx-auto uppercase b-none b-rd-1 py-3 px-7 bg-paper hover-bg-#f7f7f7:hover font-600 font-size-5 whitespace-nowrap" style="letter-spacing: 0.02rem; box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 10%);" onclick="toggleExpand(1)">Read more</button>
+		</div>
 		<ul class="hidden-questions-and-answers">
-			<li class="ml--6 hide-if-not-expanded">
+			<li class="ml-5 hide-if-not-expanded">
 		<h3>How long will the carpet cleaning service take?</h3>
 		<p class="ml--5 new-homepage-paragraphs">The duration of our carpet cleaning service depends on the following factors:</p>
 		</li>
-			<li class="ml--6 hide-if-not-expanded">
+			<li class="ml-5 hide-if-not-expanded">
 		<p class="listed-items">Carpet's level of soiling;</p>
 		</li>
-			<li class="ml--6 hide-if-not-expanded">
+			<li class="ml-5 hide-if-not-expanded">
 		<p class="listed-items">What cleaning methods will be used on the carpet;</p>
 		</li>
-			<li class="ml--6 hide-if-not-expanded">
+			<li class="ml-5 hide-if-not-expanded">
 		<p class="listed-items">Whether any stain removal treatments are required.</p>
 		<p class="ml--5 new-homepage-paragraphs">On average, it typically ranges from 20 to 60 minutes per room.</p>
 		</li>
-			<li class="ml--6 hide-if-not-expanded">
+			<li class="ml-5 hide-if-not-expanded">
 		<h3>Will carpet cleaning remove the stains on my carpet?</h3>
 		<p class="ml--5 new-homepage-paragraphs">In summary, yes, professional carpet cleaning is very effective in removing stubborn stains, dirt, grime, bacteria, dust mites, allergens, mould, pet dander, and odours. However, some particularly tough stains, especially very old or improperly treated ones, can present challenges for complete removal, even with professional assistance.</p>
 
 		<p class="ml--5 new-homepage-paragraphs">Thankfully, our extensive experience and high-quality equipment at Fine Carpet Cleaning London have led to our high-rates in successful stain removal. Nevertheless, we cannot guarantee the complete removal of every stain. We will thoroughly assess the stain and let you know during the quotation process whether or not the stain can be successfully eliminated.</p></li>
-			<li class="ml--6 hide-if-not-expanded">
+			<li class="ml-5 hide-if-not-expanded">
 		<h3>Are you able to give me a carpet cleaning quote over the phone or do you need to visit my property?</h3>
 		<p class="ml--5 new-homepage-paragraphs">Yes, we can provide you with a cost estimate over the phone without the necessity of an in-person visit. For commercial properties, a site visit may be necessary. You have the option to get a carpet cleaning quote online as well.</p></li>
-			<li class="ml--6 hide-if-not-expanded">
+			<li class="ml-5 hide-if-not-expanded">
 		<h3>How soon can I expect a carpet cleaner to visit me?</h3>
 		<p class="ml--5 new-homepage-paragraphs">We will make every effort to schedule your appointment as soon as possible. Typically, our schedule is booked up to three days in advance, although occasional exceptions may be possible.</p></li>
-			<li class="ml--6 hide-if-not-expanded">
+			<li class="ml-5 hide-if-not-expanded">
 		<h3>What payment methods do you accept?</h3>
 		<p class="ml--5 new-homepage-paragraphs">We accept payment via debit/credit cards, bank transfers, as well as cash, directly to our team.</p></li>
-			<li class="ml--6 hide-if-not-expanded">
+			<li class="ml-5 hide-if-not-expanded">
 		<h3>Can you provide me with an invoice for the carpet cleaning services?</h3>
 		<p class="ml--5 new-homepage-paragraphs">Yes, we will provide you with a receipt via email.</p></li>
-			<li class="ml--6 hide-if-not-expanded">
+			<li class="ml-5 hide-if-not-expanded">
 		<h3>Are you insured?</h3>
 		<p class="ml--5 new-homepage-paragraphs">Yes, we are fully insured.</p></li>
-			<li class="ml--6 hide-if-not-expanded">
+			<li class="ml-5 hide-if-not-expanded">
 		<h3>What happens if your cleaner damages anything while performing carpet cleaning at my property?</h3>
 		<p class="ml--5 new-homepage-paragraphs">We are fully insured and if an accident happens we are fully covered.</p></li>
 		</ul>
@@ -405,24 +407,28 @@ export default function Page() {
 			<button class="outline-none bg-brand-action hover-bg-brand-action-hover:hover font-size-6 font-600 w-200px h-60px c-paper flex flex-items-center flex-justify-center relative b-solid b-rd-3 b-4 b-brand-action hover-b-brand-action-hover:hover whitespace-normal line-height-6 word-spacing-0.5 py-9" style="box-shadow: 0 0 0 3px rgba(255, 255, 255, .7) inset; letter-spacing: 0.05rem;"><a class="c-paper font-size-5">GET A QUOTE</a></button>
 			<button class="outline-none bg-brand-second-action hover-bg-brand-second-action-hover:hover font-size-6 font-600 w-200px h-60px c-paper flex flex-items-center flex-justify-center relative b-solid b-rd-3 b-4 b-brand-second-action hover-b-brand-second-action-hover:hover whitespace-normal line-height-6 word-spacing-0.5 py-9" style="box-shadow: 0 0 0 3px rgba(255, 255, 255, .7) inset; letter-spacing: 0.05rem;"><a class="c-paper font-size-5">PRICES</a></button>
 		</div>
+
+		<a href="/"><img class="max-w-full block mla mra md-mt-30 md-mb-18 mt-20 mb-10" src="/assets/ShenYunZuoPin- Orange-Desktop-ZaDimo.png"></img></a>
+
     </>
   );
 }
 
 
 
-function toggleExpand(index: string | number){
+function toggleExpand(index: string) {
+    const parsedIndex = parseInt(index); // Ensure index is parsed as a number
+    var readMore = document.querySelector('.read-more-click-to-expand-' + parsedIndex);
+    if (readMore) {
+        readMore.classList.add('expanded');
+        readMore.classList.remove('to-be-expanded');
+        readMore.classList.add('last-expanded');
+    }
+    readMore = document.querySelector('.read-more-click-to-expand-' + (parsedIndex + 1));
+    if (readMore) readMore.classList.add('to-be-expanded');
+    readMore = document.querySelector('.read-more-click-to-expand-' + (parsedIndex - 1));
+    if (readMore) readMore.classList.remove('last-expanded');
+    readMore = document.querySelector('.first-faq-section');
+    if (readMore) readMore.classList.remove('last-expanded');
+}
 
-	var readMore = document.querySelector('.read-more-click-to-expand-'+index);
-	if (readMore){
-	  readMore.classList.add('expanded');
-		readMore.classList.remove('to-be-expanded');
-		readMore.classList.add('last-expanded');}
-	readMore = document.querySelector('.read-more-click-to-expand-'+(index+1));
-	if (readMore)readMore.classList.add('to-be-expanded');
-	readMore = document.querySelector('.read-more-click-to-expand-'+(index-1));
-	if (readMore)readMore.classList.remove('last-expanded');
-	readMore = document.querySelector('.first-faq-section');
-	if (readMore)readMore.classList.remove('last-expanded');
-	}
-  
