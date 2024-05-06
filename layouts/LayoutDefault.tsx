@@ -12,7 +12,7 @@ import MdiMagnify from '~icons/mdi/magnify';
 import RiCloseFill from '~icons/ri/close-fill';
 
 function MenuItem(props: {href:string, children: JSX.Element }) {
-return <a href={props.href} class="hidden font-ui lg-flex top-bar-meniitem h-11.5 c-paper text-center font-size-4 xl-font-size-4 uppercase">{props.children}</a>
+return <a href={props.href} class="hidden font-ui lg-flex c-paper-inv text-center font-size-4 xl-font-size-4 uppercase font-sans">{props.children}</a>
 }
 
 export default function LayoutDefault(props: { children?: JSX.Element }) {
@@ -20,14 +20,17 @@ export default function LayoutDefault(props: { children?: JSX.Element }) {
     <div class="flex flex-col">
       <Topbar>
         <Logo />
-        <div class="flex whitespace-nowrap flex-nowrap flex-justify-end flex-items-end font-semibold gap-5 xl-gap-4xl md-pr-10 md-pl-10 pr-6 flex-content-center flex-items-center">
-          <MenuItem href="/WhatIsFalunDafa">Какво е Фалун Дафа</MenuItem>
-          <MenuItem href="/">Защо е преследван</MenuItem>
-          <MenuItem href="/">Отнемане на органи</MenuItem>
-          <MenuItem href="/">По света</MenuItem>
-          <MenuItem href="/Falun-Dafa-v-Bulgaria">В България</MenuItem>
-          <MenuItem href="/">Видеа</MenuItem>
+        <div class="">
+        <div class="flex whitespace-nowrap flex-nowrap flex-justify-end flex-items-end font-semibold gap-5 xl-gap-5xl md-pr-10 md-pl-10 pr-6 flex-content-center flex-items-center">
+          <MenuItem href="/WhatIsFalunDafa">Services</MenuItem>
+          <MenuItem href="/">Prices</MenuItem>
+          <MenuItem href="/">Reviews</MenuItem>
+          <MenuItem href="/">About us</MenuItem>
+          <MenuItem href="/Falun-Dafa-v-Bulgaria">Areas we cover</MenuItem>
+          <MenuItem href="/">Contact us</MenuItem>
+          <MenuItem href="/">Feedback</MenuItem>
           <HamburgerMenu/>
+        </div>
         </div>
       </Topbar>
       <Content>{props.children}</Content>
@@ -126,7 +129,7 @@ function Logo() {
   return (
     <div class="flex items-center justify-center md-pl-4 pl-0">
       <a href="/">
-        <img src="/assets/FCC_2024_png.png" class="lg-w-42 w-40 pl-8"/>
+        <img src="/assets/FCC_2024_png.png" class="lg-w-22 w-20 ml-10 mt-7"/>
       </a>
     </div>
   );
