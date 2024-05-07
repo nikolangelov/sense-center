@@ -21,23 +21,20 @@ const [slider, { current, next, prev, moveTo }] = createSlider(options);
   return (
     <SliderProvider>
       <div class="max-w-1000px m-auto position-relative">
-      <Slider options={{ loop: true }}>
-        <img src="assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" class="image-in-slider important-max-w-30% important-min-w-30%"/>
-        <img src="assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" class="image-in-slider important-max-w-30% important-min-w-30%"/>
-        <img src="assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" class="image-in-slider important-max-w-30% important-min-w-30%"/>
-		<img src="assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" class="image-in-slider important-max-w-30% important-min-w-30%"/>
-        <img src="assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" class="image-in-slider important-max-w-30% important-min-w-30%"/>
-        <img src="assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" class="image-in-slider important-max-w-30% important-min-w-30%"/>
-      </Slider>
+		<Slider options={{ loop: true }}>
+			<img src="assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" class="image-in-slider important-max-w-30% important-min-w-30% mx-4"/>
+			<img src="assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" class="image-in-slider important-max-w-30% important-min-w-30% mx-4"/>
+			<img src="assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" class="image-in-slider important-max-w-30% important-min-w-30% mx-4"/>
+			<img src="assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" class="image-in-slider important-max-w-30% important-min-w-30% mx-4"/>
+			<img src="assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" class="image-in-slider important-max-w-30% important-min-w-30% mx-4"/>
+			<img src="assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" class="image-in-slider important-max-w-30% important-min-w-30% mx-4"/>
+		</Slider>
       <SliderButton class="cursor-pointer position-absolute top-41% left-0 bg-paper-inv bg-op-50 b-rd-bl-1 b-rd-tl-1 b-none px-0 py-1.5" prev><RiArrowLeftSLine class="-ml-1 font-size-10 c-paper hover-c-brand-light:hover transition-colors"/></SliderButton>
       <SliderButton class="cursor-pointer position-absolute top-41% right-0 bg-paper-inv bg-op-50 b-rd-br-1 b-rd-tr-1 b-none px-0 py-1.5" next><RiArrowRightSLine class="-mr-1 font-size-10 c-paper hover-c-brand-light:hover transition-colors"/></SliderButton>
       <div class="flex flex-justify-center">
         <div class={"flex w-3 h-3 rd-50% mx-2 mt-4 " + (current() === 0 ? "bg-brand-dark" : "bg-brand")}></div>
         <div class={"flex w-3 h-3 rd-50% mx-2 mt-4 " + (current() === 1 ? "bg-brand-dark" : "bg-brand")}></div>
         <div class={"flex w-3 h-3 rd-50% mx-2 mt-4 " + (current() === 2 ? "bg-brand-dark" : "bg-brand")}></div>
-		<div class={"flex w-3 h-3 rd-50% mx-2 mt-4 " + (current() === 3 ? "bg-brand-dark" : "bg-brand")}></div>
-        <div class={"flex w-3 h-3 rd-50% mx-2 mt-4 " + (current() === 4 ? "bg-brand-dark" : "bg-brand")}></div>
-        <div class={"flex w-3 h-3 rd-50% mx-2 mt-4 " + (current() === 5 ? "bg-brand-dark" : "bg-brand")}></div>
       </div>
       </div>
     </SliderProvider>
@@ -84,13 +81,13 @@ export default function Page() {
 		<FleurDivider></FleurDivider>
 
 		<h2>Our main cleaning services</h2>
-		<div class="p-7 bg-paper b-rd-3 flex flex-justify-center" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 18%);"><a href="/"><img class="mt-3 mx-auto block w-650px" src="assets\Професионално почистване на заведения.jpg" alt="" />
+		<div class="p-6 pt-12 bg-paper b-rd-3 flex flex-justify-center" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 18%);"><a href="/"><img class="mt-3 mx-auto block w-650px" src="assets\Професионално почистване на заведения.jpg" alt="" />
 		<h3 class="mx-auto mt-16 mb-9 text-center font-size-9">Professional carpet cleaning services</h3></a></div>
 
-		<div class="p-7 bg-paper mt-20 b-rd-3 flex flex-justify-center" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 18%);"><a href="/"><img class="mt-3 mx-auto block w-650px" src="assets\Професионално почистване на заведения.jpg" alt="" />
+		<div class="p-6 pt-12 bg-paper mt-20 b-rd-3 flex flex-justify-center" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 18%);"><a href="/"><img class="mt-3 mx-auto block w-650px" src="assets\Професионално почистване на заведения.jpg" alt="" />
 		<h3 class="mx-auto mt-16 mb-9 text-center font-size-9">Professional upholstery cleaning services</h3></a></div>
 
-		<div class="p-7 bg-paper mt-20 b-rd-3 flex flex-justify-center" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 18%);"><a href="/"><img class="mt-3 mx-auto block w-650px" src="assets\Професионално почистване на заведения.jpg" alt="" />
+		<div class="p-6 pt-12 bg-paper mt-20 b-rd-3 flex flex-justify-center" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 18%);"><a href="/"><img class="mt-3 mx-auto block w-650px" src="assets\Професионално почистване на заведения.jpg" alt="" />
 		<h3 class="mx-auto mt-16 mb-9 text-center font-size-9">Professional rug cleaning services</h3></a></div>
 
 		<FleurDivider></FleurDivider>
