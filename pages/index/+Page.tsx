@@ -22,12 +22,12 @@ const [slider, { current, next, prev, moveTo }] = createSlider(options);
     <SliderProvider>
       <div class="max-w-1000px m-auto position-relative">
 		<Slider options={{ loop: true }}>
-			<img src="assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" class="image-in-slider important-max-w-30% important-min-w-30% mx-4"/>
-			<img src="assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" class="image-in-slider important-max-w-30% important-min-w-30% mx-4"/>
-			<img src="assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" class="image-in-slider important-max-w-30% important-min-w-30% mx-4"/>
-			<img src="assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" class="image-in-slider important-max-w-30% important-min-w-30% mx-4"/>
-			<img src="assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" class="image-in-slider important-max-w-30% important-min-w-30% mx-4"/>
-			<img src="assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" class="image-in-slider important-max-w-30% important-min-w-30% mx-4"/>
+			<img src="assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" class=""/>
+			<img src="assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" class=""/>
+			<img src="assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" class=""/>
+			<img src="assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" class=""/>
+			<img src="assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" class=""/>
+			<img src="assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" class=""/>
 		</Slider>
       <SliderButton class="cursor-pointer position-absolute top-41% left-0 bg-paper-inv bg-op-50 b-rd-bl-1 b-rd-tl-1 b-none px-0 py-1.5" prev><RiArrowLeftSLine class="-ml-1 font-size-10 c-paper hover-c-brand-light:hover transition-colors"/></SliderButton>
       <SliderButton class="cursor-pointer position-absolute top-41% right-0 bg-paper-inv bg-op-50 b-rd-br-1 b-rd-tr-1 b-none px-0 py-1.5" next><RiArrowRightSLine class="-mr-1 font-size-10 c-paper hover-c-brand-light:hover transition-colors"/></SliderButton>

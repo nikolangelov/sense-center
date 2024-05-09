@@ -6,7 +6,6 @@ import { fileURLToPath, URL } from "node:url"
 import Icons from "unplugin-icons/vite"
 import UnoCSS from 'unocss/vite'
 
-
 const isProduction = process.env.NODE_ENV === "production"
 
 export default defineConfig({
@@ -21,6 +20,7 @@ export default defineConfig({
 			 {
 				colors: {
 					brand: "#1A6142",
+					"brand-dark": "#09321d",
 					"brand-action": "#edb339",
 					"brand-action-hover": "#ebbc59",
 					"brand-second-action": "#228057",
@@ -29,11 +29,13 @@ export default defineConfig({
 					"paper-link-hover": "#268c5f",
 
 					"brand-light": "#007faf",
-					"brand-dark": "#00254b",
 					"brand-inv": "#eee",
 					"paper": "#fff",
 					"paper-inv": "#07111c",
 					"paper-border": "#e7e7e7",
+				},
+				fonts: {
+					letter: "font-family:'Roboto', sans-serif;"
 				}
 			}
 		}),

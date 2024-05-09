@@ -3,13 +3,10 @@ import "./style.css";
 import { createEffect, JSX, onCleanup } from "solid-js";
 import { createSignal,Show } from "solid-js";
 import HamburgerMenuIcon from '~icons/mdi/hamburger-menu';
-import FacebookIcon from '~icons/mdi/facebook';
-import YoutubeIcon from '~icons/ri/youtube-fill';
-import InstagramIcon from '~icons/mdi/instagram';
-import TwitterXLineIcon from '~icons/ri/twitter-x-line';
 import MdiKeyboardArrowUp from '~icons/mdi/keyboard-arrow-up';
-import MdiMagnify from '~icons/mdi/magnify';
-import RiCloseFill from '~icons/ri/close-fill';
+import RiPhoneFill from '~icons/ri/phone-fill';
+import MdiClock from '~icons/mdi/clock';
+import MdiEmail from '~icons/mdi/email';
 
 function MenuItem(props: {href:string, children: JSX.Element }) {
 return <a href={props.href} class="hidden font-ui lg-flex c-paper-inv text-center font-size-4 xl-font-size-3.5 uppercase font-sans hover-c-paper-link-hover:hover tracking-wide">{props.children}</a>
@@ -20,7 +17,7 @@ export default function LayoutDefault(props: { children?: JSX.Element }) {
     <div class="flex flex-col">
       <Topbar>
         <Logo />
-        <button class="whitespace-nowrap md-ml-10 font-serif uppercase font-500 c-paper overflow-hidden relative bg-paper b-double b-rd-1 b-4 b-transparent h-13 w-35 cursor-pointer font-size-3.5 tracking-wide" style="background-origin: border-box; background-clip: padding-box, border-box; box-shadow: 0 0 0 2.5px rgba(255, 255, 255, 1) inset; background-image: linear-gradient(90deg, rgb(13, 46, 41) 0%, rgb(26, 135, 94) 50%), radial-gradient(circle at left top, rgb(13, 46, 41), rgb(26, 135, 94));">Get a quote</button>
+        <button class="get-a-quote-button whitespace-nowrap md-ml-10 font-serif uppercase font-500 c-paper overflow-hidden relative bg-paper b-double b-rd-1 b-4 b-transparent h-13 w-35 cursor-pointer font-size-3.5 tracking-wide" style="background-origin: border-box; background-clip: padding-box, border-box; box-shadow: 0 0 0 2.5px rgba(255, 255, 255, 1) inset; background-image: linear-gradient(90deg, rgb(13, 46, 41) 0%, rgb(26, 135, 94) 50%), radial-gradient(circle at left top, rgb(13, 46, 41), rgb(26, 135, 94));">Get a quote</button>
         <div class="flex whitespace-nowrap flex-nowrap flex-justify-end flex-items-end font-semibold gap-5 xl-gap-5xl md-pr-10 md-pl-10 pr-6 flex-content-center flex-items-center">
           <MenuItem href="/WhatIsFalunDafa">Services</MenuItem>
           <MenuItem href="/">Prices</MenuItem>
@@ -35,28 +32,48 @@ export default function LayoutDefault(props: { children?: JSX.Element }) {
       <Content>{props.children}</Content>
       <BackToTopArrow></BackToTopArrow>
       <MainFooter>
-        <div class="flex flex-col gap-14 my-10">
-        <div class="flex justify-between">
-            <LogoInFooter/>
-            <MainFooterSocialIcons></MainFooterSocialIcons>
-          </div>
-          <div class="flex flex-row gap-5 flex-wrap line-height-0 flex-items-center">
-            <MainFooterMenuItem href="/kakvo-e-falun-dafa">Какво е Фалун Дафа</MainFooterMenuItem>
-            <div class="flex c-paper-inv lg-font-size-5 font-size-5 md-font-size-5 lg-py-1.5 md-py-1 pt-1 px-0"> | </div>
-            <MainFooterMenuItem href="/">Защо е преследван</MainFooterMenuItem>
-            <div class="flex c-paper-inv lg-font-size-5 font-size-5 md-font-size-5 lg-py-1.5 md-py-1 pt-1 px-0"> | </div>
-            <MainFooterMenuItem href="/">Отнемане на органи</MainFooterMenuItem>
-            <div class="flex c-paper-inv lg-font-size-5 font-size-5 md-font-size-5 lg-py-1.5 md-py-1 pt-1 px-0"> | </div>
-            <MainFooterMenuItem href="/">По света</MainFooterMenuItem>
-            <div class="flex c-paper-inv lg-font-size-5 font-size-5 md-font-size-5 lg-py-1.5 md-py-1 pt-1 px-0"> | </div>
-            <MainFooterMenuItem href="/">В България</MainFooterMenuItem>
-            <div class="flex c-paper-inv lg-font-size-5 font-size-5 md-font-size-5 lg-py-1.5 md-py-1 pt-1 px-0"> | </div>
-            <MainFooterMenuItem href="/">Видеа</MainFooterMenuItem>
-          </div>
-        </div>
+
+            <div class="flex flex-col gap-5 flex-wrap line-height-0 my-5">
+              <h3 class="font-size-4.5 uppercase font-letter tracking-widest mt-0 mb-2 c-paper font-600">Contacts</h3>
+              <div class="flex flex-items-center gap-2">
+                <RiPhoneFill class="w-10 h-10 c-paper"/>
+                <div class="flex flex-col line-height-none">
+                  <MainFooterMenuItem href="/">07874 333 356</MainFooterMenuItem>
+                  <MainFooterMenuItem href="/">02036 370 033</MainFooterMenuItem>
+                </div>
+              </div>
+              <div class="flex flex-items-center gap-2">
+                <MdiEmail class="w-10 h-10 c-paper"/>
+                <MainFooterMenuItem href="/">office@finecarpetcleaning.co.uk</MainFooterMenuItem>
+              </div>
+              <div class="flex flex-items-center gap-2">
+                <MdiClock class="w-10 h-10 c-paper"/>
+                <div class="flex flex-col line-height-none">
+                  <div class="c-#9fcdb0 hover-color-paper:hover font-normal lg-font-size-4 md-font-size-4 font-size-4.5 lg-py-1 md-py-2 py-1 font-sans">Monday - Sunday</div>
+                  <MainFooterMenuItem href="/">8:00 - 19:00</MainFooterMenuItem>
+                </div>
+              </div>
+            </div>
+            <div class="flex flex-col gap-5 flex-wrap line-height-0 my-5">
+              <h3 class="font-size-4.5 uppercase font-letter tracking-widest mt-0 mb-2 c-paper font-600">Our most popular services</h3>
+              <MainFooterMenuItem href="/kakvo-e-falun-dafa">Carpet Cleaning London</MainFooterMenuItem>
+              <MainFooterMenuItem href="/">Rug Cleaning</MainFooterMenuItem>
+              <MainFooterMenuItem href="/">Upholstery Cleaning London</MainFooterMenuItem>
+              <MainFooterMenuItem href="/">Steam Carpet Cleaning London</MainFooterMenuItem>
+              <MainFooterMenuItem href="/">Carpet Stain Removal</MainFooterMenuItem>
+              <MainFooterMenuItem href="/">Antiviral sanitisation</MainFooterMenuItem>
+              <MainFooterMenuItem href="/">Coronavirus Disinfection</MainFooterMenuItem>
+            </div>
+            <div class="flex flex-col gap-5 flex-wrap line-height-0 my-5">
+              <h3 class="font-size-4.5 uppercase font-letter tracking-widest mt-0 mb-2 c-paper font-600">Menu</h3>
+              <MainFooterMenuItem href="/">Home</MainFooterMenuItem>
+              <MainFooterMenuItem href="/">Prices</MainFooterMenuItem>
+              <MainFooterMenuItem href="/">Areas we cover</MainFooterMenuItem>
+            </div>
+
       </MainFooter>
       <BottomFooter>
-        <p class="c-gray-3 text-center lg-font-size-3.5 md-font-size-3 font-size-3.5 font-400 line-height-6 font-sans">Copyright &copy; 2024 Fine Carpet Cleaning London</p>
+        <p class="text-center lg-font-size-4 md-font-size-3 font-size-3.7 font-400 line-height-6 font-sans">Copyright &copy; 2024 Fine Carpet Cleaning London</p>
       </BottomFooter>
     </div>
   );
@@ -128,53 +145,23 @@ function HamburgerMenu() {
 function MainFooter(props: { children: JSX.Element }) {
   return (
     <div
-      class="flex justify-center bg-paper-border lg-p-4 p-6 md-p-5 flex-shrink-0 flex-items-center">
+      class="flex flex-justify-evenly bg-brand-dark lg-p-10 p-6 md-p-5 flex-shrink-0 flex-items-start flex-wrap">
       {props.children}
     </div>
   );
 }
 
 function MainFooterMenuItem(props: {href:string, children: JSX.Element }) {
-  return <a href={props.href} class="flex c-paper-inv text-center font-medium lg-font-size-4.2 md-font-size-4 font-size-4.5 lg-py-1 md-py-2 py-1 hover-color-paper-link-hover:hover">{props.children}</a>
+  return <a href={props.href} class="c-#9fcdb0 hover-color-paper:hover font-normal lg-font-size-4 md-font-size-4 font-size-4.5 lg-py-1 md-py-2 py-1 font-sans">{props.children}</a>
   }
-
-function FooterSocialIcon(props: { children: JSX.Element, url: string }) {
-  return <a class="flex flex-items-center justify-between color-paper-inv hover-color-brand-light lg-w-10 lg-h-10 md-w-10 md-h-10 w-10 h-10" href={props.url}>
-    {props.children}
-  </a>
-}
-
-function MainFooterSocialIcons() {
-  return (
-    <div class="flex items-center gap-lg"
-    >
-      <FooterSocialIcon url='/'>
-        <FacebookIcon class='w-95% h-95%'/>
-      </FooterSocialIcon>
-      <FooterSocialIcon url='/'>
-        <YoutubeIcon class='w-full h-full'/>
-      </FooterSocialIcon>
-      <FooterSocialIcon url='/'>
-        <InstagramIcon class='w-90% h-90%'/>
-      </FooterSocialIcon>
-      <FooterSocialIcon url='/'>
-        <TwitterXLineIcon class='w-80% h-80%'/>
-      </FooterSocialIcon>
-    </div>
-  );
-}
 
 function BottomFooter(props: { children: JSX.Element }) {
   return (
     <div
-      class="flex flex-col gap-3 bg-#00152b py-9 flex-shrink-0 flex-justify-between flex-items-center">
+      class="flex bg-#d6d6d6 py-1 flex-shrink-0 flex-justify-center flex-items-center">
       {props.children}
     </div>
   );
-}
-
-function BottomFooterMenuItem(props: {href:string, children: JSX.Element }) {
-  return <a href={props.href} class="flex c-gray-3 text-center font-normal lg-font-size-3.5 md-font-size-3.5 font-size-3.7 py-1.5 hover-color-brand:hover line-height-5">{props.children}</a>
 }
 
 function BackToTopButton(props: { onClick: JSX.EventHandlerUnion<HTMLButtonElement, MouseEvent> | undefined; children: number | boolean | Node | JSX.ArrayElement | (string & {}) | null | undefined; }) {
