@@ -36,19 +36,6 @@ li {
   font-size: 1.5rem !important;
 }
 
-
-.expanded .hidden-questions-and-answers {
-  display: block;
-}
-
-.hidden-questions-and-answers {
-  display: none;
-}
-
-.to-be-expanded .read-more-toggle-button {
-  display: block;
-}
-
 div, p {
   font-family: 'Georgia', sans-serif;
   color: #07111c;
@@ -93,6 +80,18 @@ img {
   border-radius:10px;
 }
 
+/*.expanded .hidden-questions-and-answers {
+  display: block;
+}
+
+.hidden-questions-and-answers {
+  display: none;
+}
+
+.to-be-expanded .read-more-toggle-button {
+  display: block;
+}*/
+
 .divider-shadow:after {
   content: '';
   display: block;
@@ -127,56 +126,31 @@ img {
 .get-a-quote-button:hover {
   border: 1px solid;
   box-shadow: inset 0 0 30px rgba(255, 255, 255, .5), 0 0 30px rgba(255, 255, 255, .2);
-  text-shadow: 1px 1px 2px #8397a1; 
+  text-shadow: 1px 1px 2px #edb339; 
 }  
 
-
-.slider-wrapper {
-  position: relative;
-}
-
-.slider-slide {
-  display: flex;
-}
-
-.slider-image {
-  width: 33.33%; /* Display three images per slide */
-}
-
-.slider-dots {
+ol li:before {
+  display:flex;
+  justify-content:center;
+  align-items: center;
+  align-content: center;
+  font-size: 18px;
+  border-radius: 10px;
+  color: #fff;
+  content: counter(ordered);
+  counter-increment: ordered;
+  font-weight: 600;
+  margin-left: -63px;
+  margin-top: 2px;
+  padding-left:2px;
+  padding-bottom:4px;
+  width: 29px;  
+  height: 27px;
   position: absolute;
-  bottom: 10px;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-}
-
-.slider-dot {
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  background-color: #ccc;
-  margin: 0 5px;
-  cursor: pointer;
-}
-
-.slider-dot.active {
-  background-color: #333;
-}
-
-.slider-prev,
-.slider-next {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  font-size: 24px;
-  cursor: pointer;
-}
-
-.slider-prev {
-  left: 10px;
-}
-
-.slider-next {
-  right: 10px;
+  box-shadow: 0 0 0 1.5px rgba(255, 255, 255, 1) inset;
+  border: 3px double transparent;
+  border-radius: 10px;
+  background-image: linear-gradient(90deg, rgb(13, 46, 41) 0%, rgb(26, 135, 94) 70%), radial-gradient(circle at left top, rgb(13, 46, 41), rgb(26, 135, 94));
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
 }

@@ -1,117 +1,498 @@
 import RiArrowRightSLine from '~icons/ri/arrow-right-s-line';
 import RiArrowLeftSLine from '~icons/ri/arrow-left-s-line';
-import MdiAccountEyeOutline from '~icons/mdi/account-eye-outline';
+import RiCloseFill from '~icons/ri/close-fill';
+import "solid-slider/slider.css";
+import { createSignal, Show } from 'solid-js';
+
+const GalerrySlider = () => {
+const options = { duration: 1000 };
+const [slider, { current, next, prev, moveTo }] = createSlider(options);
+  return (
+    <SliderProvider>
+      <div class="max-w-1000px m-auto position-relative">
+		<Slider options={{ loop: true }}>
+			<img src="assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" class=""/>
+			<img src="assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" class=""/>
+			<img src="assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" class=""/>
+			<img src="assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" class=""/>
+			<img src="assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" class=""/>
+			<img src="assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" class=""/>
+		</Slider>
+      <SliderButton class="cursor-pointer position-absolute top-41% left-0 bg-paper-inv bg-op-50 b-rd-bl-1 b-rd-tl-1 b-none px-0 py-1.5" prev><RiArrowLeftSLine class="-ml-1 font-size-10 c-paper hover-c-brand-light:hover transition-colors"/></SliderButton>
+      <SliderButton class="cursor-pointer position-absolute top-41% right-0 bg-paper-inv bg-op-50 b-rd-br-1 b-rd-tr-1 b-none px-0 py-1.5" next><RiArrowRightSLine class="-mr-1 font-size-10 c-paper hover-c-brand-light:hover transition-colors"/></SliderButton>
+      <div class="flex flex-justify-center">
+        <div class={"flex w-3 h-3 rd-50% mx-2 mt-4 " + (current() === 0 ? "bg-brand-dark" : "bg-brand")}></div>
+        <div class={"flex w-3 h-3 rd-50% mx-2 mt-4 " + (current() === 1 ? "bg-brand-dark" : "bg-brand")}></div>
+        <div class={"flex w-3 h-3 rd-50% mx-2 mt-4 " + (current() === 2 ? "bg-brand-dark" : "bg-brand")}></div>
+      </div>
+      </div>
+    </SliderProvider>
+  );
+};
+
+function FleurDivider () {
+	return (
+		<div class="m-auto my-36 position-relative w-80%">
+			<div class="divider-shadow overflow-hidden h-0.5 after-block::after after-w-full::after after-h-6::after after-mx-auto::after after-mt--6::after"></div>
+			<div class="w-11 h-11 position-absolute position-bottom--6 left-47% bg-#f7f7f7"><img class="position-absolute max-w-7 mx-1.8" src="assets/output-onlinepngtools.png" /></div>
+		</div>
+	);
+}
 
 export default function Page() {
   return (
     <>
-    <div class="content max-w-1440px">
-        <img src="/assets/WhatisFalunGong__v1.3-1140x490.png" class="-mt-5 w-full -mx-20px -mt-5" style="width: calc(100% + 40px);"/>
-        <div class="md-flex">
-          <div class="content">
-            <div class="md-px-15 px-0 md-pt-20 pt-5">
-              <h1 class="pb-8 color-paper-inv md-font-size-10 font-size-7.5">Фалун Дафа в България</h1>
-              <h2 class="pb-8 color-paper-inv">Къде се практикува</h2>
-              <div class="text-body pb-13 line-height-6 font-size-4.2 color-paper-inv">Фалун Гонг е древен китайски духовен метод,, произхождащ от будистката традиция. Произнася се "Фа-луун Гонг" и се състои от морални принципи, медитация и четири плавни упражнения, представляващи уникален и високо ефективен способ за подобряване на здравето и повишаване на енергийните нива.</div>              
-              <MyComponent></MyComponent>
-              <div class="text-body pt-13 pb-12 line-height-6 font-size-4.2 color-paper-inv">Фалун Гонг е древен китайски духовен метод,, произхождащ от будистката традиция. Произнася се "Фа-луун Гонг" и се състои от морални принципи, медитация и четири плавни упражнения, представляващи уникален и високо ефективен способ за подобряване на здравето и повишаване на енергийните нива.</div>
-              
-              <h2 class="pb-6 color-paper-inv">Литература на български</h2>
-              <div class="text-body pb-13 line-height-6 font-size-4.2 color-paper-inv">Фалун Гонг е древен китайски духовен метод,, произхождащ от будистката традиция. Произнася се "Фа-луун Гонг" и се състои от морални принципи, медитация и четири плавни упражнения, представляващи уникален и високо ефективен способ за подобряване на здравето и повишаване на енергийните нива.</div>
-              <MyComponent></MyComponent>
-              <div class="text-body pt-13 pb-12 line-height-6 font-size-4.2 color-paper-inv">Фалун Гонг е древен китайски духовен метод,, произхождащ от будистката традиция. Произнася се "Фа-луун Гонг" и се състои от морални принципи, медитация и четири плавни упражнения, представляващи уникален и високо ефективен способ за подобряване на здравето и повишаване на енергийните нива.</div>
-              
-              <h2 class="pb-6 color-paper-inv">Подкрепа от правителството</h2>
-              <div class="text-body pb-13 line-height-6 font-size-4.2 color-paper-inv">Фалун Гонг е древен китайски духовен метод,, произхождащ от будистката традиция. Произнася се "Фа-луун Гонг" и се състои от морални принципи, медитация и четири плавни упражнения, представляващи уникален и високо ефективен способ за подобряване на здравето и повишаване на енергийните нива.</div>
-              <MyComponent></MyComponent>
-              <div class="text-body py-13 line-height-6 font-size-4.2 color-paper-inv">Фалун Гонг е древен китайски духовен метод,, произхождащ от будистката традиция. Произнася се "Фа-луун Гонг" и се състои от морални принципи, медитация и четири плавни упражнения, представляващи уникален и високо ефективен способ за подобряване на здравето и повишаване на енергийните нива.</div>
-              <h2 class="pb-6 color-paper-inv">Значими новини от България</h2>
-              <div class="block pb-15">
-                <a class="flex b-solid b-1 b-paper-border p-4" href="/" style="box-shadow: 0 1px 6px #00000029;">
-                  <img class="w-xs" src="/assets/FDI-1__what-is-falun-gong__1280px-1-640x360.jpg"/>
-                    <div class="">
-                      <h3 class="pl-5 c-paper-inv font-size-6.3 font-600 my-3 line-height-6.2">Ню Йорк Таймс, след години на успокояване на ККП, сега планира атака срещу Шен Юн</h3>
-                      <div class="pl-5 c-gray-6 font-size-3.3 line-height-4">С дълга история на омаловажаване или игнориране на сериозни нарушения на човешките права в Китай, The New York Times сега се насочва към китайските дисиденти в Съединените щати.</div>
-                      <div class="flex mt-3 flex-items-center">
-                        <div class="pl-5 c-gray-5 font-size-2.7">25.03.2023</div>
-                        <div class="pl-5 c-gray-5 font-size-2.7">7 мин четене</div>
-                        <div class="flex pl-5 flex-items-center">
-                          <MdiAccountEyeOutline class="c-gray-5"/>
-                          <div class="c-gray-5 font-size-2.7">178</div>
-                        </div>
-                      </div>
-                    </div>
-                </a>
-              </div>
+      <h1 class="mt-17">Professional carpet cleaning services</h1>
+      <div class="flex flex-justify-center"><img class="b-rd-3 mt-10" src="assets\Професионално почистване на заведения.jpg" alt="" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 30%);"/></div>
+      
+      <FleurDivider></FleurDivider>
+      
+      <h2>Why to use professional carpet cleaning services</h2>
+      <div class="mt-20 py-8 px-14 bg-paper b-rd-3" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 18%);">
+      <h3>Benefits</h3>
+      <p>Fine Carpet Cleaning London offers a variety of professional carpet cleaning services. The use of these types of services has the following benefits:</p>
 
+      <ul>
+        <li class="ml--5">
+      <p>It is significantly cheaper to do regular maintenance than buying a new carpet.</p>
+      </li>
+        <li class="ml--5">
+      <p>It will prolong the life of your carpet.</p>
+      </li>
+        <li class="ml--5">
+      <p>It will maintain the look of your carpet.</p>
+      </li>
+        <li class="ml--5">
+      <p>It will maintain the hygiene of your carpet (which brings you health benefits).</p>
+      </li>
+      </ul>
+      <h3>Booking process</h3>
+      <p>The usual process of booking our professional carpet cleaning services in London:</p>
 
-              <h3 class="uppercase m-0 pb-1 font-size-4 font-500 c-brand lg-mt-12 mt-3">Прочетете повече</h3>
-              <a class="block md-w-85% w-full" href="/">
-                <div class="flex">
-                  <div class="w-60 bg-brand">
-                    <img class="ha w-full v-middle" src="/assets/WhatisFalunGong__v1.3_2ndC.png"/>
-                  </div>
-                  <div class="flex w-sm bg-brand position-relative v-middle">
-                    <div class="text-in-read-more-bottom-button md-top-41% sm-top-39% top-18% sm-left-6 md-left-9 left-4 md-w-80% w-60% c-paper position-absolute sm-font-size-5 font-size-4 md-font-600 font-500" style="letter-spacing:0.3px;">Защо е преследван</div>
-                    <div class="arrow-in-read-more-bottom-button position-absolute right-2 sm-top-26% md-top-24% top-8%"><RiArrowRightSLine class='block w-full h-full sm-font-size-13 md-font-size-15 font-size-12 c-#81a8b3 hover-c-paper:hover'/></div>
-                  </div>
-                </div>
-              </a>
-              <a href="/"><img class="max-w-full block mla mra md-mt-30 md-mb-18 mt-20 mb-10" src="/assets/ShenYunZuoPin- Orange-Desktop-ZaDimo.png"></img></a>
-            </div>
-          </div>
+      <ul>
+        <li class="ml--5">
+      <p>You contact us.</p>
+      </li>
+        <li class="ml--5">
+      <p>We advise you which services will be best for you, based on your situation.</p>
+      </li>
+        <li class="ml--5">
+      <p>We give you a carpet cleaning quote.</p>
+      </li>
+        <li class="ml--5">
+      <p>If you are satisfied with our terms we schedule an appointment for you.</p>
+      </li>
+        <li class="ml--5">
+      <p>One of our technicians will visit your property and will clean your carpets.</p>
+      </li>
+      </ul>
+      <h3>What do we offer</h3>
+      <p>The professional carpet cleaning services that we offer are:</p>
 
-          <div class="mt-0 pt-0 lg-block hidden w-33% mt-12 mr-6">
-            <div style="position: -webkit-sticky; position: sticky; top:100px;">  
-              <div class="first-block-arrow-element block relative bg-brand px-11 py-6">
-                <a href="/"><div class="whitespace-nowrap c-paper font-600 py-1.5 font-size-4">Какво е Фалун Дафа</div></a>
-                <a href="/"><div class="whitespace-nowrap c-paper font-600 py-1.5 font-size-4">Защо е преследван</div></a>
-                <a href="/"><div class="whitespace-nowrap c-paper font-600 py-1.5 font-size-4">Какви са доказателствата</div></a>
-              </div>
-              <div class="second-block-arrow-element block relative bg-#e9e9e9 px-5 py-6">
-                <h3 class="font-size-4.3 ml-1.8">Историята на Фалун Дафа</h3>
-                <ul class="sidebar-ul flex flex-col">
-                  <li class="sidebar-li py-1.5">
-                    <a href="/" class="c-brand hover-c-brand-light:hover line-height-5 font-size-4 font-500">Какви са доказателствата</a>
-                  </li>
-                  <li class="sidebar-li py-1.5">
-                    <a href="/" class="c-brand hover-c-brand-light:hover line-height-5 font-size-4 font-500">Какви са доказателствата</a>
-                  </li>
-                  <li class="sidebar-li py-1.5">
-                    <a href="/" class="c-brand hover-c-brand-light:hover line-height-5 font-size-4 font-500">Какви са доказателствата</a>
-                  </li>
-                  <li class="sidebar-li py-1.5">
-                    <a href="/" class="c-brand hover-c-brand-light:hover line-height-5 font-size-4 font-500">Какви са доказателствата</a>
-                  </li>
-                  <li class="sidebar-li py-1.5">
-                    <a href="/" class="c-brand hover-c-brand-light:hover line-height-5 font-size-4 font-500">Какви са доказателствата</a>
-                  </li>
-                  </ul>
-              </div>
-              <div class="block relative bg-#f0f4ef px-8 py-6">
-                <h3 class="font-size-4.3">Преследване в Китай</h3>
-                <ul class="sidebar-second-ul flex flex-col">
-                  <li class="sidebar-second-li py-1.5">
-                    <a href="/" class="c-brand hover-c-brand-light:hover line-height-5 font-size-4 font-500">Какви са доказателствата</a>
-                  </li>
-                  <li class="sidebar-second-li py-1.5">
-                    <a href="/" class="c-brand hover-c-brand-light:hover line-height-5 font-size-4 font-500">Какви са доказателствата</a>
-                  </li>
-                  <li class="sidebar-second-li py-1.5">
-                    <a href="/" class="c-brand hover-c-brand-light:hover line-height-5 font-size-4 font-500">Какви са доказателствата</a>
-                  </li>
-                  <li class="sidebar-second-li py-1.5">
-                    <a href="/" class="c-brand hover-c-brand-light:hover line-height-5 font-size-4 font-500">Какви са доказателствата</a>
-                  </li>
-                  <li class="sidebar-second-li py-1.5">
-                    <a href="/" class="c-brand hover-c-brand-light:hover line-height-5 font-size-4 font-500">Какви са доказателствата</a>
-                  </li>
-                  </ul>
-              </div>
-            </div>
-          </div>
-        </div>
+      <ul>
+        <li class="ml--5"><a class="color-paper-link-hover hover-color-paper-link:hover font-size-17.5px line-height-8 word-spacing--0.12 tracking--0.04" href="/">Professional carpet steam cleaning services</a></li>
+        <li class="ml--5"><a class="color-paper-link-hover hover-color-paper-link:hover font-size-17.5px line-height-8 word-spacing--0.12 tracking--0.04" href="/">Dry carpet cleaning services</a></li>
+        <li class="ml--5"><a class="color-paper-link-hover hover-color-paper-link:hover font-size-17.5px line-height-8 word-spacing--0.12 tracking--0.04" href="/">Eco-friendly carpet cleaning services</a></li>
+        <li class="ml--5"><a class="color-paper-link-hover hover-color-paper-link:hover font-size-17.5px line-height-8 word-spacing--0.12 tracking--0.04" href="/">Fast dry carpet cleaning services</a></li>
+      </ul>
       </div>
+
+      <FleurDivider></FleurDivider>
+
+      <h2>Equipment and products we use</h2>
+      <div class="mt-20 py-8 px-14 bg-paper b-rd-3" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 18%);">
+      <ol style="counter-reset: ordered; list-style: none;">
+        <li class="ml--5">
+      <h3 class="ml--5">Highly-efficient machines.</h3>
+      <p class="ml--5">The machines we use have been chosen after a process of uncompromising selection. First, we tested all major brands available on the UK market. Second, we selected the most effective ones among them - <a class="color-paper-link hover-color-paper-link-hover:hover" href="/" target="_blank" rel="noopener">“Mytee”</a> (leading US manufacturer) and <a class="color-paper-link hover-color-paper-link-hover:hover" href="/" target="_blank" rel="noopener">“Airflex”</a> (top UK manufacturer). Third, our engineer further improved them in order to maximise their performance.</p>
+      </li>
+        <li class="ml--5">
+      <h3 class="ml--5">Powerful vacuum cleaners.</h3>
+      <p class="ml--5">We use a high-filtration twin motor vacuum cleaner, which we believe is the best one on the market. It is designed for high-performance expert carpet cleaning. One of the twin-motors pounds at the carpet while the other one sucks out any loose dirt, dry soil and dust.</p>
+      </li>
+        <li class="ml--5">
+      <h3 class="ml--5">Carefully selected cleaning products.</h3>
+      <p class="ml--5">In regard to cleaning products, we are using more than 20 different detergents, because we know that every situation requires an individual approach. We have tested almost all detergents available on the market and chose those giving the best results. Among them are products of the brands “Alltec”, “Prochem”, “Chemspec”, “Solution World of Clean”,“TMF” etc.</p>
+      </li>
+      </ol>
+      </div>
+
+      <FleurDivider></FleurDivider>
+
+      <h2>Pictures from our professional carpet cleaning services</h2>
+      <div class="img_container"><a title="coronavirus desinfection" href="https://finecarpetcleaning.co.uk/wp-content/uploads/2020/04/steam1-scaled.jpg"><img class="alignnone size-thumbnail" title="coronavirus desinfection" src="https://finecarpetcleaning.co.uk/wp-content/uploads/2020/04/steam1-640x400.jpg" alt="coronavirus desinfection" /></a>
+      <a title="coronavirus desinfection" href="https://finecarpetcleaning.co.uk/wp-content/uploads/2020/04/steam5-scaled.jpg"><img class="alignnone size-thumbnail galleryPics" title="coronavirus desinfection" src="https://finecarpetcleaning.co.uk/wp-content/uploads/2020/04/steam5-150x150.jpg" alt="coronavirus desinfection" /></a><a title="stains gone after cleaned carpet" href="https://finecarpetcleaning.co.uk/wp-content/uploads/2019/11/Carpet_Cleaning.jpg"><img class="alignnone galleryPics" style="margin: 0 2px 0 2px;" title="stains gone after cleaned carpet" src="https://finecarpetcleaning.co.uk/wp-content/uploads/2019/11/Carpet_Cleaning-150x150.jpg" alt="stains gone after cleaned carpet" /></a><a class="more_imgs" style="width: 32%;" title="Carpet cleaning compare before and after" href="https://finecarpetcleaning.co.uk/wp-content/uploads/2019/11/Carpet_Steam_Cleaning.jpg"><span id="number">+3</span><img class="alignnone galleryPics" style="filter: brightness(50%);" src="https://finecarpetcleaning.co.uk/wp-content/uploads/2019/11/Carpet_Steam_Cleaning-150x150.jpg" alt="Carpet cleaning compare before and after " /></a>
+      <a style="display: none;" title="restored carpet to new condition" href="https://finecarpetcleaning.co.uk/wp-content/uploads/2019/11/dcsd.jpg"><img class="alignnone" title="restored carpet to new condition" src="https://finecarpetcleaning.co.uk/wp-content/uploads/2019/11/dcsd-150x150.jpg" alt="restored carpet to new condition" width="150" height="150" /></a><a style="display: none;" title="Carpet cleaning compare before and after" href="https://finecarpetcleaning.co.uk/wp-content/uploads/2019/11/Deep_Carpet_Cleaning.jpg"><img class="alignnone" src="https://finecarpetcleaning.co.uk/wp-content/uploads/2019/11/Deep_Carpet_Cleaning-150x150.jpg" alt="Carpet cleaning compare before and after " width="150" height="150" /></a></div>
+      
+      <FleurDivider></FleurDivider>
+
+      <h2>Video from our professional carpet cleaning services</h2>
+
+      <video class="max-w-1000px mt-30 b-rd-3" controls="controls" muted>
+			<div class="vertical-top max-w-full font-size-4 color-paper-inv block"><a class="color-paper-inv block" href="https://www.youtube.com/watch?v=zedTK_cCobY" target="_blank" rel="noopener">Professioanl Carpet Cleaning London - Fine Carpet Cleaning</a></div>
+        	<source src="assets/Professional Carpet Cleaning London - Fine Carpet Cleaning (1).mp4" type="video/mp4" />
+        </video>
+
+        <FleurDivider></FleurDivider>
+
+      <h2>Prices of professional carpet cleaning services</h2>
+      <table class="w-full m-auto font-sans">
+      <thead>
+      <tr class="h-20">
+      <td class="c-paper bg-#2e5c47 font-size-7 pl-5 b-rd-lt-3"><strong>Room type</strong></td>
+      <td class="c-paper bg-#2e5c47 font-size-7 pl-5 b-rd-rt-3"><strong>Price</strong></td>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+      <td class="bg-paper pl-5 py-2 font-500">Single Bedroom</td>
+      <td class="bg-paper pl-5 py-2 font-500">from £31.00</td>
+      </tr>
+      <tr>
+      <td class="bg-paper pl-5 py-2 font-500">Double Bedroom</td>
+      <td class="bg-paper pl-5 py-2 font-500">from £35.00</td>
+      </tr>
+      <tr>
+      <td class="bg-paper pl-5 py-2 font-500">Master Bedroom</td>
+      <td class="bg-paper pl-5 py-2 font-500">from £40.00</td>
+      </tr>
+      <tr>
+      <td class="bg-paper pl-5 py-2 font-500">Living Room</td>
+      <td class="bg-paper pl-5 py-2 font-500">from £43.00</td>
+      </tr>
+      <tr>
+      <td class="bg-paper pl-5 py-2 font-500">Through Lounge</td>
+      <td class="bg-paper pl-5 py-2 font-500">from £69.00</td>
+      </tr>
+      <tr>
+      <td class="bg-paper pl-5 py-2 font-500">Hallway</td>
+      <td class="bg-paper pl-5 py-2 font-500">from £21.00</td>
+      </tr>
+      <tr>
+      <td class="bg-paper pl-5 py-2 font-500">Flight of Stairs</td>
+      <td class="bg-paper pl-5 py-2 font-500">from £34.00</td>
+      </tr>
+      <tr>
+      <td class="bg-paper pl-5 py-2 font-500">Landing</td>
+      <td class="bg-paper pl-5 py-2 font-500">from £15.00</td>
+      </tr>
+      <tr>
+      <td class="bg-paper pl-5 py-2 font-500">Bathroom</td>
+      <td class="bg-paper pl-5 py-2 font-500">from £6.00</td>
+      </tr>
+      <tr>
+      <td class="bg-paper pl-5 py-2 font-500">Small rug</td>
+      <td class="bg-paper pl-5 py-2 font-500">from £14.00</td>
+      </tr>
+      <tr>
+      <td class="bg-paper pl-5 py-2 font-500">Medium rug</td>
+      <td class="bg-paper pl-5 py-2 font-500">from £20.00</td>
+      </tr>
+      <tr>
+      <td class="bg-paper pl-5 py-2 font-500">Large rug</td>
+      <td class="bg-paper pl-5 py-2 font-500">from £31.00</td>
+      </tr>
+      <tr>
+      <td class="b-rd-lb-3 b-rd-rb-3 bg-#2e5c47" colspan="3"><p class="font-size-4 pl-5 my-2 c-paper">*All prices depend on the quantity of the order, degree of contamination and access.
+      <br/>**Final price after contacting us.</p></td>
+      </tr>
+      </tbody>
+      </table>
+
+      <button class="outline-none bg-brand-second-action hover-bg-brand-second-action-hover:hover font-size-6 font-600 w-200px h-60px c-paper flex flex-items-center flex-justify-center relative b-solid b-rd-3 b-4 b-brand-second-action hover-b-brand-second-action-hover:hover whitespace-normal line-height-6 word-spacing-0.5 py-9 my-20 mx-auto" style="box-shadow: 0 0 0 3px rgba(255, 255, 255, .9) inset; letter-spacing: 0.05rem;"><a class="c-paper font-size-5">GET A QUOTE</a></button>
+      
+      <FleurDivider></FleurDivider>
+
+      <h2>Frequently ordered together</h2>
+
+      <GalerrySlider></GalerrySlider>
+
+      <FleurDivider></FleurDivider>
+
+      <h2>Our carpet cleaning specialist’s advices</h2>
+      <div class="mt-20 py-8 px-14 bg-paper b-rd-3" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 18%);">
+      <ol style="counter-reset: ordered; list-style: none;">
+        <li class="ml--5">
+      <h3 class="ml--5">Use a stain protector.</h3>
+      <p class="ml--5">Our carpet cleaning specialist advises you to always add stain protector to your carpet and upholstery if you can afford it. It saves a lot of money from professional stain removal services. Why? Because it guards the fabric against penetration of liquids that lead to lasting stains and permanent damage to the carpet and upholstery. <a class="green-link" href="/" target="_blank" rel="noopener">Learn more about the benefits of using stain protection services.</a></p>
+      </li>
+        <li class="ml--5">
+      <h3 class="ml--5">Use a professional stain removal service.</h3>
+      <p class="ml--5">Our carpet cleaning specialist advises that if your carpet or upholstery has been stained, it is in your best interest to search for a professional stain removal company. The reason is that in the process of self-cleaning or leaving the stain to dry, the fibres might be damaged and the stain is very likely to not entirely come off ever. The attempt to clean the stain yourself will very likely seal off the stain, rather than remove it. This will then make it harder or even impossible for a professional carpet cleaning company to remove it. Thus, a <a class="green-link" href="/" target="_blank" rel="noopener">professional stain removal service</a> booked today from an expert carpet cleaning company can rescue your carpet or upholstery that is worth thousands.</p>
+      </li>
+        <li class="ml--5">
+      <h3 class="ml--5">Take informed decisions.</h3>
+      <p class="ml--5">Our carpet cleaning specialist advises you to check out <a class="green-link" href="/" target="_blank" rel="noopener">our other services that we offer.</a> By familiarising yourself with all of our services, you can make informed decisions about what else you may need. This allows you to remember any particular services you may have forgotten about or discover new services that you didn't even know existed.</p>
+      </li>
+        <li class="ml--5">
+      <h3 class="ml--5">Combine different services.</h3>
+      <p class="ml--5">It’s in your best interest to combine different services rather than having them performed separately. Why? Because this will save you a significant amount of money. The reason is that the initial professional carpet cleaning cost is high and you will have to pay some extra money for every visit of our technicians (due to time and cost of travel, parking, carrying of heavy machinery etc.). So once you pay the initial cost adding extra services is significantly cheaper.</p>
+      </li>
+        <li class="ml--5">
+      <h3 class="ml--5">Enjoy health benefits.</h3>
+      <p class="ml--5">Your rug, carpet floor covering and upholstery are some of those items that accumulate lots of dust, microorganisms and particles of dirt that are potential causes for health problems. They might provoke different reactions, skin problems and allergies and the risk is getting higher if they are not taken care of. So depending on the amount of traffic that you have on your rugs, carpets and upholstery, our carpet cleaning specialist advises you to consider using professional carpet cleaning services in London once a year. In case the traffic is really, really heavy it is in your best interest to do it more frequently.</p>
+      </li>
+      </ol>
+      </div>
+      
+      <FleurDivider></FleurDivider>
+
+      <h2>Reviews from our professional carpet cleaning</h2>
+
+      <GalerrySlider></GalerrySlider>
+
+      <FleurDivider></FleurDivider>
+
+      <h2>FAQ regarding our carpet cleaning services</h2>
+      <div class="bodytext first-faq-section last-expanded">
+      <ul>
+        <li class="green-dot-listed-item">
+      <h3>Do you have a cancellation fee?</h3>
+      Yes, if you cancel on the day of the cleaning you will lose your deposit.</li>
+        <li class="green-dot-listed-item">
+      <h3>Do I need to pay for congestion/parking charges?</h3>
+      Yes, the client is requested to arrange suitable parking space for our vehicles within close proximity of the property and to cover any parking/congestion expenses if applicable.</li>
+        <li class="green-dot-listed-item">
+      <h3>Do carpet cleaning services move furniture?</h3>
+      We would appreciate it if you would move small, fragile or valuable items of furniture for insurance reasons, such as lamps and ornaments. If you can, please put them well out of the way before we arrive in an area that is not going to be disturbed by cleaning. We would like to have floors free from any obstructions. We will help with moving other light furniture such as chairs, armchairs and tables, during the cleaning and put them back in place. If heavy furniture has to be moved (such as sofas, beds, wardrobes, cupboards etc.) we will charge you extra.The reason is that this will require additional time and effort by our technician and he will receive an additional reward for it. Our goal is the whole process to be as stress-free for you as possible.</li>
+        <li class="green-dot-listed-item">
+      <h3>What if I live on the 4th floor or higher and I have no lift?</h3>
+      Since our equipment is very heavy (50kg+), when our technician has to carry it by hand we charge extra for every additional floor. The reason is that this will usually take a lot of time and our technicians tire faster, therefore that day they can not do as much work as they usually do.</li>
+        <li class="green-dot-listed-item">
+      <h3>Are you insured?</h3>
+      Yes, we are fully insured.</li>
+      </ul>
+      </div>
+
+      <div class="read-more-click-to-expand-1 to-be-expanded">
+      <button class="read-more-toggle-button my-6 mx-auto uppercase b-none b-rd-1 py-3 px-7 bg-paper hover-bg-#f7f7f7:hover font-600 font-size-5 whitespace-nowrap" style="letter-spacing: 0.02rem; box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 10%);" onclick="toggleExpand(1)">Read more</button>
+
+      <ul class="hidden-questions-and-answers">
+        <li class="hide-if-not-expanded">
+      <h3>What happens if your cleaner damages anything while performing professional carpet cleaning services?</h3>
+      We are fully insured and if an accident happens we have full coverage.</li>
+        <li class="hide-if-not-expanded">
+      <h3>How long does the process of professional carpet cleaning service take?</h3>
+      The professional carpet cleaning process depends on how soiled the carpet is and if it needs any stain removal treatments. It takes from 20 to 60 minutes per room.</li>
+        <li class="hide-if-not-expanded">
+      <h3>How long does it take for the carpet to get dry?</h3>
+      It depends on many factors like the type of the carpet, how dirty it is, how thick the pile is and if it needs a stain removal service or not.
+
+      Wool carpets absorb more water and dry slowly, between 10 and 12 hours. If the carpet is very dirty and we have to treat the carpet several times, the drying time might be even longer.
+
+      Synthetic carpets dry faster, between 7 and 10 hours, and the above is still valid (it depends on how dirty it is and the number of required treatments).</li>
+        <li class="hide-if-not-expanded">
+      <h3>Do you guarantee that after cleaning my carpet all stains will be removed?</h3>
+      No, because there are factors involved which are out of our control. Among these factors are:</li>
+        <li class="hide-if-not-expanded">
+      <p class="listed-items">How old are the stains?</p>
+      </li>
+        <li class="hide-if-not-expanded">
+      <p class="listed-items">What is the polluting agent that caused the stains?</p>
+      </li>
+        <li class="hide-if-not-expanded">
+      <p class="listed-items">What is the carpet made of?</p>
+      </li>
+        <li class="hide-if-not-expanded">
+      <p class="listed-items">Have the stains been treated improperly in the past?</p>
+      </li>
+        <li class="hide-if-not-expanded">
+      <p class="hide-text-if-not-expanded">Nevertheless, we can guarantee that we will do our best in order to eliminate all of the stains on your carpet. This includes:</p>
+      </li>
+        <li class="hide-if-not-expanded">
+      <p class="listed-items">The use of high-end cleaning equipment;</p>
+      </li>
+        <li class="hide-if-not-expanded">
+      <p class="listed-items">The use of top-notch specially selected detergents;</p>
+      </li>
+        <li class="hide-if-not-expanded">
+      <p class="listed-items">Individual approach according to the different types of carpets and polluting agents;</p>
+      </li>
+        <li class="hide-if-not-expanded">
+      <h3>How soon can I expect a cleaner to visit me?</h3>
+      We will try to get you an appointment as soon as possible. Usually, we are fully booked for 3 days ahead, but sometimes there are exceptions.</li>
+        <li class="hide-if-not-expanded">
+      <h3>Can you give me a carpet cleaning quote over the phone or do you need to visit my property?</h3>
+      Yes, we can give you an estimate over the phone, there is no need for us to visit your property. Commercial properties however may require a site visit. You can also get a carpet cleaning quote online.</li>
+        <li class="hide-if-not-expanded">
+      <h3>What payment methods do you accept for your professional carpet cleaning service?</h3>
+      We accept debit/credit cards, and cash payments directly to our team.</li>
+        <li class="hide-if-not-expanded">
+      <h3>Can you provide me with an invoice for your professional carpet cleaning services?</h3>
+      Yes, we will either send you a receipt via email.</li>
+        <li class="hide-if-not-expanded">
+      <h3>Are you qualified?</h3>
+      Yes, we are qualified and fully trained members of NCCA (National Carpet Cleaners Association) – the UK’s recognised industry qualification.</li>
+        <li class="hide-if-not-expanded">
+      <h3>How long have you been in the carpet cleaning business?</h3>
+      We have been operating since 2012. We have years of experience dealing with residential and commercial customers and various types of carpets, rugs, upholstery and stains. Through the years we have been striving to improve our services by:</li>
+        <li class="hide-if-not-expanded">
+      <p class="listed-items">Upgrading our machines with better ones;</p>
+      </li>
+        <li class="hide-if-not-expanded">
+      <p class="listed-items">Frequently testing and selecting new detergents;</p>
+      </li>
+        <li class="hide-if-not-expanded">
+      <p class="listed-items">Always searching to improve our expertise by attending professional courses.</p>
+      </li>
+      </ul>
+      </div>
+
+      <div class="read-more-click-to-expand-2">
+      <button class="read-more-toggle-button my-6 mx-auto uppercase b-none b-rd-1 py-3 px-7 bg-paper hover-bg-#f7f7f7:hover font-600 font-size-5 whitespace-nowrap" style="letter-spacing: 0.02rem; box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 10%);" onclick="toggleExpand(2)">Read more</button>
+
+      <ul class="hidden-questions-and-answers">
+        <li class="hide-if-not-expanded">
+      <h3>Can you give me a discount?</h3>
+      Based on the fact that we provide high-quality carpet cleaning services, by using the best machinery and over 20 different top-notch detergents, our carpet cleaning prices are already the most competitive and the best on the market. In order to get the best price we advise you to check out our price calculator. Then you will find out that combining all the services you need at once will be cheaper than having them performed separately. The reason is that the initial cost is high and you will have to pay extra for every single visit of the technician since there are factors in place like time of travel, parking, loading and unloading of heavy machinery etc.</li>
+        <li class="hide-if-not-expanded">
+      <h3>How often should a carpet be professionally cleaned?</h3>
+      Deep cleaning depends mainly on factors like how fast the carpet soils. On average, a carpet should be cleaned at 12-month intervals. However, if you have pets, children, high traffic on the carpet, a smoking habit or if you stain it a lot we recommend using an expert carpet cleaning in London more often. You can contact us to get the best professional carpet cleaning service in London or to seek expert advice.</li>
+        <li class="hide-if-not-expanded">
+      <h3>How much does a professional carpet cleaning cost?</h3>
+      The cost of professional carpet cleaning depends on the quantity and size of the carpets, how soiled they are, the type of the carpets and how easy the access to the carpets is. For more detailed information check out our <a class="servicelink" href="/">carpet cleaning price list</a>.</li>
+        <li class="hide-if-not-expanded">
+      <h3>Do you offer cheap carpet cleaning?</h3>
+      The truth is that we, from “Fine Carpet Cleaning” Ltd., do not offer cheap carpet cleaning. The reason is that we want to ensure high-quality of our carpet cleaning services which involves higher expenses for us.</li>
+        <li class="hide-if-not-expanded">
+      <h3>Do you think that your company is doing the best carpet cleaning in London?</h3>
+      We, from “Fine Carpet Cleaning” Ltd., believe that we are bound to be among the best carpet cleaning companies in London. The reason is that we strongly believe in the principle “No loss, no gain” and try to follow it when doing business. When we combine this with another principle that we try to follow - “think about others first” - this guarantees strive for constant improvement and delivery of better and better results. All of the above gives us confidence that we definitely have a chance in the foreseeable future to offer the best carpet cleaning in London.</li>
+        <li class="hide-if-not-expanded">
+      <h3>Do you offer stairs carpet cleaning services?</h3>
+      Yes, we do. You can check the prices for stairs carpet cleaning services in our <a class="servicelink" href="/">price list</a> or alternatively you can use our price calculator. If you need more details regarding our stairs carpet cleaning services feel free to <a class="servicelink" href="/">contact us</a>.</li>
+        <li class="hide-if-not-expanded">
+      <h3>Do you offer luxury carpet cleaning in London?</h3>
+      Yes, we do. But as luxury carpet cleaning in London is a high-end service, which deserves an individual approach to every client, you need to contact us in order to obtain more information about it.</li>
+        <li class="hide-if-not-expanded">
+      <h3>Do you offer carpet cleaning and deodorising service?</h3>
+      Yes, we do offer carpet cleaning and deodorising service. Our company culture is to provide the best service we are capable of. That’s why we have put the extra effort required to deodorise your carpets in our basic offer for you. Therefore when you book our professional carpet cleaning services you don’t have to ask specifically for carpet deodorising service as it is already included.</li>
+      </ul>
+      </div>
+
+      <div class="read-more-click-to-expand-3">
+      <button class="read-more-toggle-button my-6 mx-auto uppercase b-none b-rd-1 py-3 px-7 bg-paper hover-bg-#f7f7f7:hover font-600 font-size-5 whitespace-nowrap" style="letter-spacing: 0.02rem; box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 10%);" onclick="toggleExpand(3)">Read more</button>
+
+      <ul class="hidden-questions-and-answers">
+        <li class="hide-if-not-expanded">
+      <h3>Do you offer carpet odour removal services?</h3>
+      Yes, we do. On one hand the carpet odour removal service requires extra time and effort which is fair to be rewarded. On the other hand we strongly believe that our customers deserve the finest of our potential. This is the reason why we incorporated the carpet odour removal service in our base offer for you (which means that you don’t have to ask specifically for it).</li>
+        <li class="hide-if-not-expanded">
+      <h3>Do you offer berber carpet cleaning service?</h3>
+      Yes, we offer berber carpet cleaning service. If you need more information about this service you have to <a class="servicelink" href="/">contact us</a>.</li>
+        <li class="hide-if-not-expanded">
+      <h3>Does carpet cleaning remove scotchgard?</h3>
+      Yes, indeed, carpet cleaning services do remove Scotchgard and it should be applied again afterwards. Stain protection wears out even from walking, so according to the room and the amount of traffic the carpet receives the Scotchgard protection will last between six months and a year and a half.</li>
+        <li class="hide-if-not-expanded">
+      <h3>Does carpet cleaning remove dents?</h3>
+      No, the regular professional carpet cleaning does not remove dents. Removing dents requires the use of special equipment and it is a completely different service from carpet cleaning. We at “Fine Carpet Cleaning” Ltd. do have the required equipment and we offer <a class="servicelink" href="/">carpet dent removal service</a>.</li>
+        <li class="hide-if-not-expanded">
+      <h3>Will cleaning a carpet make it fluffy again?</h3>
+      The short answer is “it depends''.
+
+      In respect of the fluffiness the carpets can be segregated in two categories:</li>
+        <li class="hide-if-not-expanded">
+      <p class="listed-items">Those that are just not fluffy by design;</p>
+      </li>
+        <li class="hide-if-not-expanded">
+      <p class="listed-items">Carpets that used to be fluffy but now they are not (due to various reasons).</p>
+      </li>
+        <li class="hide-if-not-expanded">
+      <p class="hide-text-if-not-expanded">If your carpet belongs to the first category the question of restoring its fluffiness is not applicable.</p>
+      <p class="hide-text-if-not-expanded">If your carpet belongs to the second category, we are able to offer a solution. We can restore the fluffiness of such a carpet by using a special machine called CRB (counter-rotating brush). It’s fair to know that the use of this machine requires extra effort and therefore is charged extra.</p>
+      <p class="hide-text-if-not-expanded">In case you are not sure in which category your carpet belongs to, feel free to contact us for advice.</p>
+      <p class="hide-text-if-not-expanded">As restoring the fluffiness of a carpet is a very niche thing to do, you need to ask specifically for it when you reach out to us.</p>
+      </li>
+        <li class="hide-if-not-expanded">
+      <h3>Can professional carpet cleaning remove stains?</h3>
+      Professional carpet washing service is indeed successful in removing stains from your carpet. With years of experience and some of the best equipment in the industry, we have high rates of success in stain removal. Unfortunately, we cannot guarantee that we will be able to remove every stain. The reason is that the stain might be harder to remove if it has been improperly treated previously or if it has been left to completely dry out. However, we will let you know in advance whether we believe we can get a stain out or not.</li>
+        <li class="hide-if-not-expanded">
+      <h3>Does professional carpet cleaning lift the pile?</h3>
+      Yes, it does. Although it is not permanent, quality carpet cleaning services can help lift piles by removing dirt and debris and restoring the fibres to their original state. The regular use of professional carpet washing services helps to maintain carpets’ appearance, comfort, and durability. Hot water extraction lifts the pile because the final stage of the hot water extraction process is applying an extreme vacuum to the carpet to extract the water that has been flushed through the fibres to clean them. During that process, the pile will be raised.</li>
+        <li class="hide-if-not-expanded">
+      <h3>Does carpet cleaning ruin carpets?</h3>
+      No, expert carpet cleaning in London will not ruin the carpet. Despite common belief, you cannot clean your carpets too frequently, and steam cleaning them often will not dry them out or break the carpet fibres. What will damage your carpets or rugs, however, is routine cleaning with improper methods, as well as products and chemicals being used that are not tried-and-true. Some companies offer cheap carpet cleaning service and in order to provide such a low price, they might decide to decrease the quality of the service or the quality of the products they use for cleaning. But if the chemicals used for the cleaning are safe, like ours in “Fine Carpet Cleaning” Ltd., then you should not worry that this might cause any damage to your carpets.
+
+      While improper cleaning can damage your carpets, frequent hot water extraction will not. A good steam cleaning can extend the lifespan of your carpets. Here are a few benefits of the regular use of steam cleaning and other carpet cleaning services:</li>
+        <li class="hide-if-not-expanded">
+      <p class="listed-items">Carpet cleaning makes your carpet healthier;</p>
+      </li>
+        <li class="hide-if-not-expanded">
+      <p class="listed-items">Steam cleaning keeps the carpet hygienic;</p>
+      </li>
+        <li class="hide-if-not-expanded">
+      <p class="listed-items">Cleaning helps carpet fibres maintain their shape;</p>
+      </li>
+        <li class="hide-if-not-expanded">
+      <p class="listed-items">Cleaning maintains the carpet warranty;</p>
+      </li>
+        <li class="hide-if-not-expanded">
+      <p class="listed-items">Steam cleaning restores the colour of carpets.</p>
+      </li>
+        <li class="hide-if-not-expanded">
+      <p class="hide-text-if-not-expanded">Routine cleaning has many benefits for your carpet. In addition to making your house beautiful, regular affordable carpet cleaning like the one we offer helps extend the lifespan of one of your home’s most valuable assets.</p>
+      <p class="hide-text-if-not-expanded">However, in special cases like synthetic rugs and carpets from acrylic or nylon, we do not recommend steam cleaning, but dry cleaning, as the heat and steam will damage the carpet.</p>
+      <p class="hide-text-if-not-expanded">If you are not sure what type of cleaning method is most appropriate for your carpet, feel free to contact us to get professional advice.</p>
+      </li>
+      </ul>
+      </div>
+
+
+      <div class="read-more-click-to-expand-4">
+      <button class="read-more-toggle-button my-6 mx-auto uppercase b-none b-rd-1 py-3 px-7 bg-paper hover-bg-#f7f7f7:hover font-600 font-size-5 whitespace-nowrap" style="letter-spacing: 0.02rem; box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 10%);" onclick="toggleExpand(4)">Read more</button>
+      <ul class="hidden-questions-and-answers">
+        <li class="hide-if-not-expanded">
+      <h3>Is it possible to book carpet cleaning online?</h3>
+      Yes, you can easily book a carpet cleaning service online through <a class="servicelink" href="/">our contact page</a>.
+
+      If you have any questions please do not hesitate to contact our operators at any time directly on our phone numbers or leave a callback request, so that they can call you at a convenient time.</li>
+        <li class="hide-if-not-expanded">
+      <h3>Can carpet cleaning cause allergies?</h3>
+      Any cleaning process can stir up particles and aggravate allergy symptoms. Having a professional carpet cleaning agency clean for you can reduce increased exposure to particulates.
+
+      Carpet cleaning is important for allergy sufferers for several reasons. First, carpets can trap dust, pollen, and other allergens that can trigger an allergic reaction. Second, carpets can also harbour pet dander, mould, and other allergens that can be a nightmare for allergy sufferers. Carpets that are not regularly cleaned can become breeding grounds for dust mites, which are tiny creatures that thrive in warm, humid environments and can cause serious allergic reactions in some people.
+
+      Anti-allergy carpet cleaning, at a minimum, requires some sort of steam or chemical agent to loosen and remove debris from deep within the carpet fibres. Steam cleaning, also known as the hot water extraction method, has been proven to reduce allergens in carpets. However, the primary issue with steam cleaning is that it can be a problem when not done properly. For example, if someone doesn’t properly remove all the water from the carpet after cleaning, there could be issues related to moisture. Some allergy sufferers claim that wet-cleaning methods could cause issues since dust mites and moulds thrive in humid and warm conditions, but that happens if it takes a long time for the carpet to get dry. Our steam carpet cleaning will leave the carpets completely dry in 7-14 hours (depending on the type of carpet and the degree of pollution).
+
+      People who suffer from allergies should therefore make sure to have their carpets cleaned on a regular basis, preferably by companies that professionally clean carpets. Carpet cleaning companies like “Fine Carpet Cleaning” Ltd. use special machines and solutions that can effectively remove allergens much better than regular carpet cleaning. Vacuuming regularly is also important, as it can help to remove allergens from the carpet.</li>
+        <li class="hide-if-not-expanded">
+      <h3>Can professional carpet cleaning remove coffee stains?</h3>
+      Yes, quality carpet cleaning services can definitely remove coffee stains. In cases like stains from coffee with sugar, the carpet will have a growth of certain microbial activities. Some cleaning methods that a professional carpet cleaning company provides, such as steam carpet cleaning, effectively kill all those germs along with removing 100% of the coffee stain.</li>
+        <li class="hide-if-not-expanded">
+      <h3>Is it worth getting carpets professionally cleaned?</h3>
+      Yes, without a doubt having your carpets cleaned by a carpet cleaning agency can have a massive impact on the look and the cleanliness of your house and also helps to eliminate dirt, germ buildup and bacteria such as E. coli, Salmonella and many others.
+
+      There are many reasons why you should get a carpet cleaning in London at least once a year, such as prolonging the life of your carpet, health benefits and maintaining the look of your carpet or rug.</li>
+        <li class="hide-if-not-expanded">
+      <h3>What is professional carpet cleaning?</h3>
+      Professional carpet cleaning is performed by experts using special products and professional equipment and offers special carpet washing services (such as steam cleaning). By hiring professionals, the carpet also dries as quickly as possible after cleaning, thanks to the quality of the equipment used.
+
+      By having an affordable carpet cleaning like the one we provide, you are ensuring that your carpets are going to receive state-of-the-art cleaning techniques and quality cleaning solutions with thorough drying. “DIY” carpet cleaning almost always leaves out the crucial drying techniques that can help prevent the growth of mould or mildew.
+
+      Professional carpet cleaners are well-qualified in their field and know exactly which products to use on different types of carpets. The cleaning technician will also be able to clean your carpet without damaging its fibres, so your carpet looks as new without losing any of its thickness. The fibres won’t be damaged in the process either.</li>
+        <li class="hide-if-not-expanded">
+      <h3>Does professional carpet cleaning really work?</h3>
+      Yes, professional carpet cleaning definitely works, thanks to the experience, equipment, products and methods provided by professional carpet cleaning companies. Such carpet cleaning companies like “Fine Carpet Cleaning Ltd.” will provide quality carpet cleaning services and will be very effective in removing tough stains, odours and germ buildup, which cannot be eliminated with regular cleaning.</li>
+        <li class="hide-if-not-expanded">
+      <h3>What to do if my carpet is still dirty after a professional cleaning?</h3>
+      Some stains, like very old stains or ones that have been treated improperly, are very hard to eliminate, even with professional help. With years of experience and some of the best equipment in the industry, we have high rates of success at stain removal. Unfortunately, we cannot guarantee that we will be able to remove every stain, however, we will let you know whether we believe we can get a stain out when giving you our quotation.</li>
+        <li class="hide-if-not-expanded">
+      <h3>Does carpet cleaning kill bacteria?</h3>
+      A professional carpet cleaning service from carpet cleaning companies can kill bacteria and other illness-causing germs that may be lurking in your carpet and rugs.</li>
+        <li class="hide-if-not-expanded">
+      <h3>Does carpet cleaning kill bed bugs?</h3>
+      Yes, since the special equipment used for steam cleaning can kill bed bugs due to the high temperature it produces. As with carpets, it is usually difficult to kill bed bugs in beds, mattresses and other furnishings without professional help. That’s why it is a good idea to hire a good carpet cleaning company to steam clean these items. Repeat the procedure after a week to be sure the next generation of insects is also eliminated.</li>
+      </ul>
+      </div>
+
+      <FleurDivider></FleurDivider>
+
+      <div class="m-10% mb-3% flex flex-wrap flex-justify-center gap-15">
+      <button class="outline-none bg-brand-second-action hover-bg-brand-second-action-hover:hover font-size-6 font-600 w-200px h-60px c-paper flex flex-items-center flex-justify-center relative b-solid b-rd-3 b-4 b-brand-second-action hover-b-brand-second-action-hover:hover whitespace-normal line-height-6 word-spacing-0.5 py-9" style="box-shadow: 0 0 0 3px rgba(255, 255, 255, .9) inset; letter-spacing: 0.05rem;"><a class="c-paper font-size-5">SERVICES</a></button>
+			<button class="outline-none bg-brand-action hover-bg-brand-action-hover:hover font-size-6 font-600 w-200px h-60px c-paper flex flex-items-center flex-justify-center relative b-solid b-rd-3 b-4 b-brand-action hover-b-brand-action-hover:hover whitespace-normal line-height-6 word-spacing-0.5 py-9" style="box-shadow: 0 0 0 3px rgba(255, 255, 255, .9) inset; letter-spacing: 0.05rem;"><a class="c-paper font-size-5">GET A QUOTE</a></button>
+		  </div>
+
+		  <a href="/"><img class="max-w-full block mla mra md-mt-30 md-mb-18 mt-20 mb-10" src="/assets/ShenYunZuoPin- Orange-Desktop-ZaDimo.png"></img></a>
+
     </>
   );
 }
