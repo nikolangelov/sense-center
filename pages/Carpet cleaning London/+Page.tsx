@@ -120,13 +120,15 @@ export default function Page() {
       <FleurDivider></FleurDivider>
 
       <h2>Pictures from our professional carpet cleaning services</h2>
-      <div class="img_container">
+      <div class="img_container flex flex-col">
         <a title="coronavirus desinfection" href="https://finecarpetcleaning.co.uk/wp-content/uploads/2020/04/steam1-scaled.jpg"><img class="alignnone size-thumbnail" title="coronavirus desinfection" src="https://finecarpetcleaning.co.uk/wp-content/uploads/2020/04/steam1-640x400.jpg" alt="coronavirus desinfection" /></a>
+        <div class="">
         <a title="coronavirus desinfection" href="https://finecarpetcleaning.co.uk/wp-content/uploads/2020/04/steam5-scaled.jpg"><img class="alignnone size-thumbnail galleryPics" title="coronavirus desinfection" src="https://finecarpetcleaning.co.uk/wp-content/uploads/2020/04/steam5-150x150.jpg" alt="coronavirus desinfection" /></a>
         <a title="stains gone after cleaned carpet" href="https://finecarpetcleaning.co.uk/wp-content/uploads/2019/11/Carpet_Cleaning.jpg"><img class="alignnone galleryPics" style="margin: 0 2px 0 2px;" title="stains gone after cleaned carpet" src="https://finecarpetcleaning.co.uk/wp-content/uploads/2019/11/Carpet_Cleaning-150x150.jpg" alt="stains gone after cleaned carpet" /></a>
         <a class="more_imgs" style="width: 32%;" title="Carpet cleaning compare before and after" href="https://finecarpetcleaning.co.uk/wp-content/uploads/2019/11/Carpet_Steam_Cleaning.jpg"><span id="number">+3</span><img class="alignnone galleryPics" style="filter: brightness(50%);" src="https://finecarpetcleaning.co.uk/wp-content/uploads/2019/11/Carpet_Steam_Cleaning-150x150.jpg" alt="Carpet cleaning compare before and after " /></a>
         <a style="display: none;" title="restored carpet to new condition" href="https://finecarpetcleaning.co.uk/wp-content/uploads/2019/11/dcsd.jpg"><img class="alignnone" title="restored carpet to new condition" src="https://finecarpetcleaning.co.uk/wp-content/uploads/2019/11/dcsd-150x150.jpg" alt="restored carpet to new condition" width="150" height="150" /></a>
         <a style="display: none;" title="Carpet cleaning compare before and after" href="https://finecarpetcleaning.co.uk/wp-content/uploads/2019/11/Deep_Carpet_Cleaning.jpg"><img class="alignnone" src="https://finecarpetcleaning.co.uk/wp-content/uploads/2019/11/Deep_Carpet_Cleaning-150x150.jpg" alt="Carpet cleaning compare before and after " width="150" height="150" /></a>
+        </div>
       </div>
       
       <FleurDivider></FleurDivider>
