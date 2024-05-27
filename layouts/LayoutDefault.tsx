@@ -49,8 +49,8 @@ export default function LayoutDefault(props: { children?: JSX.Element }) {
               <div class="flex flex-items-center gap-2">
                 <MdiClock class="w-10 h-10 c-paper"/>
                 <div class="flex flex-col line-height-none">
-                  <div class="c-#9fcdb0 hover-color-paper:hover font-normal lg-font-size-4 md-font-size-4 font-size-4.5 lg-py-1 md-py-2 py-1 font-sans">Monday - Sunday</div>
-                  <MainFooterMenuItem href="/">8:00 - 19:00</MainFooterMenuItem>
+                  <div class="c-paper font-normal lg-font-size-4 md-font-size-4 font-size-4.5 font-sans">Monday - Sunday</div>
+                  <div class="c-paper font-normal lg-font-size-4 md-font-size-4 font-size-4.5 font-sans">9:00 - 18:00</div>
                 </div>
               </div>
             </div>

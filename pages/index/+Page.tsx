@@ -13,7 +13,18 @@ import RiArrowLeftSLine from '~icons/ri/arrow-left-s-line';
 import RiCloseFill from '~icons/ri/close-fill';
 import "solid-slider/slider.css";
 import { Slider, createSlider, SliderButton, SliderProvider } from "solid-slider";
-import { createSignal, Show } from 'solid-js';
+import { Component, createSignal, Show } from 'solid-js';
+
+
+
+
+
+
+
+
+	
+
+
 
 const GalerrySlider = () => {
 const options = { duration: 1000 };
@@ -95,6 +106,7 @@ export default function Page() {
 		<h2>Equipment and products we use</h2>
 
 		<GalerrySlider></GalerrySlider>
+
 
 		<div class="mt-20 py-8 px-14 bg-paper b-rd-3" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 18%);">
 
