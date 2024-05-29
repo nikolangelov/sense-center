@@ -15,17 +15,6 @@ import "solid-slider/slider.css";
 import { Slider, createSlider, SliderButton, SliderProvider } from "solid-slider";
 import { Component, createSignal, Show } from 'solid-js';
 
-
-
-
-
-
-
-
-	
-
-
-
 const GalerrySlider = () => {
 const options = { duration: 1000 };
 const [slider, { current, next, prev, moveTo }] = createSlider(options);

@@ -30,6 +30,92 @@ const [slider, { current, next, prev, moveTo }] = createSlider(options);
   );
 };
 
+
+
+
+
+
+
+
+function FullScreenImageGallerySecond(props: {src:string, alt:string, class:string }) {
+	const [open, setOpen] = createSignal(false);
+  
+	const handleClick = () => {
+	  setOpen(!open());
+	};
+  
+  const options = { duration: 1000 };
+  const [slider, { current, next, prev, moveTo }] = createSlider(options);
+
+	return (
+	  <div class="relative">
+
+
+      <SliderProvider>
+        <div class="max-w-1000px m-auto position-relative">
+        <Slider options={{ loop: true }}>
+          <div class="img_container flex flex-col">
+
+            <img src="/assets/Професионално почистване на заведения.jpg" alt="" class="cursor-pointer max-w-full max-h-full block m-auto"/>      
+
+            <div class="flex flex-gap-1 mt-1">
+              <img src="/assets/Професионално почистване на заведения.jpg" alt="" class="cursor-pointer max-w-100% max-h-100% block m-auto" onClick={handleClick}/>      
+              <img src="/assets/Професионално почистване на заведения.jpg" alt="" class="cursor-pointer max-w-100% max-h-100% block m-auto" onClick={handleClick}/>      
+              <div class="flex flex-justify-center flex-items-center"><span class="z-1 c-paper font-size-12 position-absolute">+3</span><img src="/assets/Професионално почистване на заведения.jpg" alt="" class="cursor-pointer max-w-100% max-h-100% block m-auto filter-brightness-40" onClick={handleClick}/></div>      
+              <img src="/assets/Професионално почистване на заведения.jpg" alt="" class="hidden" onClick={handleClick}/>      
+              <img src="/assets/Професионално почистване на заведения.jpg" alt="" class="hidden" onClick={handleClick}/>      
+            </div>
+          </div>
+        </Slider>
+        <Show when={open()}>
+              <div class="fixed top-0 left-0 w-screen h-screen flex justify-center items-center bg-black bg-opacity-85 z-9999" onClick={handleClick}>
+              <RiCloseFill class="z-2 w-16 h-16 absolute top-0 right-0 mr-8 mt-8 p-2 text-white bg-transparent color-paper cursor-pointer hover-color-brand:hover"/>
+              <img src={props.src} alt={props.alt} class="filter-brightness-100 max-w-100% max-h-100%"/>
+              </div>
+        </Show>
+        <SliderButton class="cursor-pointer position-absolute top-41% left-0 bg-paper-inv bg-op-50 b-rd-bl-1 b-rd-tl-1 b-none px-0 py-1.5" prev><RiArrowLeftSLine class="-ml-1 font-size-10 c-paper hover-c-brand-light:hover transition-colors"/></SliderButton>
+        <SliderButton class="cursor-pointer position-absolute top-41% right-0 bg-paper-inv bg-op-50 b-rd-br-1 b-rd-tr-1 b-none px-0 py-1.5" next><RiArrowRightSLine class="-mr-1 font-size-10 c-paper hover-c-brand-light:hover transition-colors"/></SliderButton>
+        </div>
+      </SliderProvider>
+	  </div>
+	);
+}
+
+
+
+
+
+
+
+
+
+function FullScreenImageGallery(props: {src:string, alt:string, class:string }) {
+	const [open, setOpen] = createSignal(false);
+  
+	const handleClick = () => {
+	  setOpen(!open());
+	};
+  
+  const options = { duration: 1000 };
+  const [slider, { current, next, prev, moveTo }] = createSlider(options);
+
+	return (
+	  <div class="relative">
+      <Slider options={{ loop: true }}>
+        <img class={props.class} src={props.src} alt={props.alt} onClick={handleClick}/>
+        <Show when={open()}>
+          <div class="fixed top-0 left-0 w-screen h-screen flex justify-center items-center bg-black bg-opacity-85 z-9999" onClick={handleClick}>
+          <RiCloseFill class="z-2 w-16 h-16 absolute top-0 right-0 mr-8 mt-8 p-2 text-white bg-transparent color-paper cursor-pointer hover-color-brand:hover"/>
+          <img src={props.src} alt={props.alt} class="filter-brightness-100 max-w-100% max-h-100%"/>
+          <SliderButton class="cursor-pointer position-absolute top-41% left-0 bg-paper-inv bg-op-50 b-rd-bl-1 b-rd-tl-1 b-none px-0 py-1.5" prev><RiArrowLeftSLine class="-ml-1 font-size-10 c-paper hover-c-brand-light:hover transition-colors"/></SliderButton>
+          <SliderButton class="cursor-pointer position-absolute top-41% right-0 bg-paper-inv bg-op-50 b-rd-br-1 b-rd-tr-1 b-none px-0 py-1.5" next><RiArrowRightSLine class="-mr-1 font-size-10 c-paper hover-c-brand-light:hover transition-colors"/></SliderButton>
+          </div>
+        </Show>
+      </Slider>
+	  </div>
+	);
+}
+
 function FleurDivider () {
 	return (
 		<div class="m-auto my-36 position-relative w-80%">
@@ -120,22 +206,27 @@ export default function Page() {
       <FleurDivider></FleurDivider>
 
       <h2>Pictures from our professional carpet cleaning services</h2>
+
       <div class="img_container flex flex-col">
-        <a title="coronavirus desinfection" href="https://finecarpetcleaning.co.uk/wp-content/uploads/2020/04/steam1-scaled.jpg"><img class="alignnone size-thumbnail"src="https://finecarpetcleaning.co.uk/wp-content/uploads/2020/04/steam1-640x400.jpg" alt="" /></a>
-        <div class="flex gap-5">
-        <a href="https://finecarpetcleaning.co.uk/wp-content/uploads/2020/04/steam5-scaled.jpg"><img class=""  src="https://finecarpetcleaning.co.uk/wp-content/uploads/2020/04/steam5-150x150.jpg" alt="" /></a>
-        <a href="https://finecarpetcleaning.co.uk/wp-content/uploads/2019/11/Carpet_Cleaning.jpg"><img class="" style="margin: 0 2px 0 2px;" title="stains gone after cleaned carpet" src="https://finecarpetcleaning.co.uk/wp-content/uploads/2019/11/Carpet_Cleaning-150x150.jpg" alt=""/></a>
-        <a href="https://finecarpetcleaning.co.uk/wp-content/uploads/2019/11/Carpet_Steam_Cleaning.jpg"><span class="z-1 c-paper font-size-8 position-absolute my-12 mx-12">+3</span><img class="" style="filter: brightness(50%);" src="https://finecarpetcleaning.co.uk/wp-content/uploads/2019/11/Carpet_Steam_Cleaning-150x150.jpg" alt="" /></a>
-        <a href="https://finecarpetcleaning.co.uk/wp-content/uploads/2019/11/dcsd.jpg"><img class="hidden" src="https://finecarpetcleaning.co.uk/wp-content/uploads/2019/11/dcsd-150x150.jpg" alt="" width="150" height="150" /></a>
-        <a href="https://finecarpetcleaning.co.uk/wp-content/uploads/2019/11/Deep_Carpet_Cleaning.jpg"><img class="hidden" src="https://finecarpetcleaning.co.uk/wp-content/uploads/2019/11/Deep_Carpet_Cleaning-150x150.jpg" alt="" width="150" height="150" /></a>
+
+        <FullScreenImageGallery src="/assets/Професионално почистване на заведения.jpg" alt="" class="cursor-pointer max-w-full max-h-full block m-auto"></FullScreenImageGallery>      
+
+        <div class="flex flex-gap-1 mt-1">
+          <FullScreenImageGallery src="/assets/Професионално почистване на заведения.jpg" alt="" class="cursor-pointer max-w-100% max-h-100% block m-auto"></FullScreenImageGallery>      
+          <FullScreenImageGallery src="/assets/Професионално почистване на заведения.jpg" alt="" class="cursor-pointer max-w-100% max-h-100% block m-auto"></FullScreenImageGallery>      
+          <div class="flex flex-justify-center flex-items-center"><span class="z-1 c-paper font-size-12 position-absolute">+3</span><FullScreenImageGallery src="/assets/Професионално почистване на заведения.jpg" alt="" class="cursor-pointer max-w-100% max-h-100% block m-auto filter-brightness-40"></FullScreenImageGallery></div>      
+          <FullScreenImageGallery src="/assets/Професионално почистване на заведения.jpg" alt="" class="hidden"></FullScreenImageGallery>      
+          <FullScreenImageGallery src="/assets/Професионално почистване на заведения.jpg" alt="" class="hidden"></FullScreenImageGallery>      
         </div>
       </div>
+
+      <FullScreenImageGallerySecond></FullScreenImageGallerySecond>
       
       <FleurDivider></FleurDivider>
 
       <h2>Video from our professional carpet cleaning services</h2>
 
-      <video class="max-w-1000px mt-30 b-rd-3" controls="controls" muted>
+      <video class="max-w-1000px mt-10 b-rd-3" controls="controls" muted>
 			<div class="vertical-top max-w-full font-size-4 color-paper-inv block"><a class="color-paper-inv block" href="https://www.youtube.com/watch?v=zedTK_cCobY" target="_blank" rel="noopener">Professioanl Carpet Cleaning London - Fine Carpet Cleaning</a></div>
         	<source src="assets/Professional Carpet Cleaning London - Fine Carpet Cleaning (1).mp4" type="video/mp4" />
         </video>
