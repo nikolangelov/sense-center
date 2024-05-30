@@ -107,14 +107,19 @@ function FullScreenImageGallery(props: {src:string, alt:string, class:string }) 
           <div class="fixed top-0 left-0 w-screen h-screen flex justify-center items-center bg-black bg-opacity-85 z-9999" onClick={handleClick}>
           <RiCloseFill class="z-2 w-16 h-16 absolute top-0 right-0 mr-8 mt-8 p-2 text-white bg-transparent color-paper cursor-pointer hover-color-brand:hover"/>
           <img src={props.src} alt={props.alt} class="filter-brightness-100 max-w-100% max-h-100%"/>
-          <SliderButton class="cursor-pointer position-absolute top-41% left-0 bg-paper-inv bg-op-50 b-rd-bl-1 b-rd-tl-1 b-none px-0 py-1.5" prev><RiArrowLeftSLine class="-ml-1 font-size-10 c-paper hover-c-brand-light:hover transition-colors"/></SliderButton>
-          <SliderButton class="cursor-pointer position-absolute top-41% right-0 bg-paper-inv bg-op-50 b-rd-br-1 b-rd-tr-1 b-none px-0 py-1.5" next><RiArrowRightSLine class="-mr-1 font-size-10 c-paper hover-c-brand-light:hover transition-colors"/></SliderButton>
+          <SliderButton class="cursor-pointer position-absolute top-45% left-50 bg-paper-inv bg-op-50 b-rd-bl-1 b-rd-tl-1 b-none px-2 py-1.5" prev><RiArrowLeftSLine class="-ml-1 font-size-10 c-paper hover-c-brand:hover transition-colors"/></SliderButton>
+          <SliderButton class="cursor-pointer position-absolute top-45% right-50 bg-paper-inv bg-op-50 b-rd-br-1 b-rd-tr-1 b-none px-2 py-1.5" next><RiArrowRightSLine class="-mr-1 font-size-10 c-paper hover-c-brand:hover transition-colors"/></SliderButton>
           </div>
         </Show>
       </Slider>
 	  </div>
 	);
 }
+
+
+
+
+
 
 function FleurDivider () {
 	return (
@@ -219,8 +224,6 @@ export default function Page() {
           <FullScreenImageGallery src="/assets/Професионално почистване на заведения.jpg" alt="" class="hidden"></FullScreenImageGallery>      
         </div>
       </div>
-
-      <FullScreenImageGallerySecond></FullScreenImageGallerySecond>
       
       <FleurDivider></FleurDivider>
 
@@ -312,15 +315,15 @@ export default function Page() {
       <ol style="counter-reset: ordered; list-style: none;">
         <li class="ml--5">
       <h3 class="ml--5">Use a stain protector.</h3>
-      <p class="ml--5">Our carpet cleaning specialist advises you to always add stain protector to your carpet and upholstery if you can afford it. It saves a lot of money from professional stain removal services. Why? Because it guards the fabric against penetration of liquids that lead to lasting stains and permanent damage to the carpet and upholstery. <a class="green-link" href="/" target="_blank" rel="noopener">Learn more about the benefits of using stain protection services.</a></p>
+      <p class="ml--5">Our carpet cleaning specialist advises you to always add stain protector to your carpet and upholstery if you can afford it. It saves a lot of money from professional stain removal services. Why? Because it guards the fabric against penetration of liquids that lead to lasting stains and permanent damage to the carpet and upholstery. <a class="color-paper-link hover-color-paper-link-hover:hover" href="/" target="_blank" rel="noopener">Learn more about the benefits of using stain protection services.</a></p>
       </li>
         <li class="ml--5">
       <h3 class="ml--5">Use a professional stain removal service.</h3>
-      <p class="ml--5">Our carpet cleaning specialist advises that if your carpet or upholstery has been stained, it is in your best interest to search for a professional stain removal company. The reason is that in the process of self-cleaning or leaving the stain to dry, the fibres might be damaged and the stain is very likely to not entirely come off ever. The attempt to clean the stain yourself will very likely seal off the stain, rather than remove it. This will then make it harder or even impossible for a professional carpet cleaning company to remove it. Thus, a <a class="green-link" href="/" target="_blank" rel="noopener">professional stain removal service</a> booked today from an expert carpet cleaning company can rescue your carpet or upholstery that is worth thousands.</p>
+      <p class="ml--5">Our carpet cleaning specialist advises that if your carpet or upholstery has been stained, it is in your best interest to search for a professional stain removal company. The reason is that in the process of self-cleaning or leaving the stain to dry, the fibres might be damaged and the stain is very likely to not entirely come off ever. The attempt to clean the stain yourself will very likely seal off the stain, rather than remove it. This will then make it harder or even impossible for a professional carpet cleaning company to remove it. Thus, a <a class="color-paper-link hover-color-paper-link-hover:hover" href="/" target="_blank" rel="noopener">professional stain removal service</a> booked today from an expert carpet cleaning company can rescue your carpet or upholstery that is worth thousands.</p>
       </li>
         <li class="ml--5">
       <h3 class="ml--5">Take informed decisions.</h3>
-      <p class="ml--5">Our carpet cleaning specialist advises you to check out <a class="green-link" href="/" target="_blank" rel="noopener">our other services that we offer.</a> By familiarising yourself with all of our services, you can make informed decisions about what else you may need. This allows you to remember any particular services you may have forgotten about or discover new services that you didn't even know existed.</p>
+      <p class="ml--5">Our carpet cleaning specialist advises you to check out <a class="color-paper-link hover-color-paper-link-hover:hover" href="/" target="_blank" rel="noopener">our other services that we offer.</a> By familiarising yourself with all of our services, you can make informed decisions about what else you may need. This allows you to remember any particular services you may have forgotten about or discover new services that you didn't even know existed.</p>
       </li>
         <li class="ml--5">
       <h3 class="ml--5">Combine different services.</h3>

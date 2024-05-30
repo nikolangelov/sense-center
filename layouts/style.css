@@ -144,8 +144,8 @@ ol li:before {
   margin-top: 2px;
   padding-left:2px;
   padding-bottom:4px;
-  width: 29px;  
-  height: 27px;
+  width: 27px;  
+  height: 25px;
   position: absolute;
   box-shadow: 0 0 0 1.5px rgba(255, 255, 255, 1) inset;
   border: 3px double transparent;
