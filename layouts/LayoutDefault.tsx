@@ -20,7 +20,7 @@ export default function LayoutDefault(props: { children?: JSX.Element }) {
         <button class="get-a-quote-button whitespace-nowrap md-ml-10 font-serif uppercase font-500 c-paper overflow-hidden relative bg-paper b-double b-rd-1 b-4 b-transparent h-13 w-35 cursor-pointer font-size-3.5 tracking-wide" style="background-origin: border-box; background-clip: padding-box, border-box; box-shadow: 0 0 0 2.5px rgba(255, 255, 255, 1) inset; background-image: linear-gradient(90deg, rgb(13, 46, 41) 0%, rgb(26, 135, 94) 50%), radial-gradient(circle at left top, rgb(13, 46, 41), rgb(26, 135, 94));">Get a quote</button>
         <div class="flex whitespace-nowrap flex-nowrap flex-justify-end flex-items-end font-semibold gap-5 xl-gap-5xl md-pr-10 md-pl-10 pr-6 flex-content-center flex-items-center">
           <MenuItem href="/Carpet cleaning London">Services</MenuItem>
-          <MenuItem href="/">Prices</MenuItem>
+          <MenuItem href="/Prices">Prices</MenuItem>
           <MenuItem href="/">Reviews</MenuItem>
           <MenuItem href="/">About us</MenuItem>
           <MenuItem href="/Falun-Dafa-v-Bulgaria">Areas we cover</MenuItem>

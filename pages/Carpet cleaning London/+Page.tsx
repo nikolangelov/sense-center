@@ -3,6 +3,7 @@ import RiArrowLeftSLine from '~icons/ri/arrow-left-s-line';
 import RiCloseFill from '~icons/ri/close-fill';
 import "solid-slider/slider.css";
 import { createSignal, Show } from 'solid-js';
+import RiYoutubeFill from '~icons/ri/youtube-fill';
 
 const GalerrySlider = () => {
 const options = { duration: 1000 };
@@ -119,6 +120,54 @@ function FullScreenImageGallery(props: {src:string, alt:string, class:string }) 
 
 
 
+const VideoPlayer = () => {
+  const [isStarted, setIsStarted] = createSignal(false);
+  let videoRef;
+
+  const startVideo = () => {
+    videoRef.play();
+    setIsStarted(true);
+  };
+
+  return (
+    <div class="flex flex-justify-center flex-items-center">
+      {!isStarted() && (
+        <button
+          class="z-1 c-paper font-size-12 position-absolute"
+          onClick={startVideo}
+          style={{
+            background: "none",
+            border: "none",
+            cursor: "pointer",
+          }}
+        >
+          <RiYoutubeFill class="c-#ff0000 w-20 h-20" />
+        </button>
+      )}
+      <video
+        ref={(el) => (videoRef = el)}
+        class="max-w-1000px mt-10 b-rd-3"
+        controls
+        muted
+      >
+        <div class="vertical-top max-w-full font-size-4 color-paper-inv block">
+          <a
+            class="color-paper-inv block"
+            href="https://www.youtube.com/watch?v=zedTK_cCobY"
+            target="_blank"
+            rel="noopener"
+          >
+            Professional Carpet Cleaning London - Fine Carpet Cleaning
+          </a>
+        </div>
+        <source
+          src="assets/Professional Carpet Cleaning London - Fine Carpet Cleaning (1).mp4"
+          type="video/mp4"
+        />
+      </video>
+    </div>
+  );
+};
 
 
 function FleurDivider () {
@@ -229,12 +278,9 @@ export default function Page() {
 
       <h2>Video from our professional carpet cleaning services</h2>
 
-      <video class="max-w-1000px mt-10 b-rd-3" controls="controls" muted>
-			<div class="vertical-top max-w-full font-size-4 color-paper-inv block"><a class="color-paper-inv block" href="https://www.youtube.com/watch?v=zedTK_cCobY" target="_blank" rel="noopener">Professioanl Carpet Cleaning London - Fine Carpet Cleaning</a></div>
-        	<source src="assets/Professional Carpet Cleaning London - Fine Carpet Cleaning (1).mp4" type="video/mp4" />
-        </video>
+      <VideoPlayer></VideoPlayer>
 
-        <FleurDivider></FleurDivider>
+      <FleurDivider></FleurDivider>
 
       <h2>Prices of professional carpet cleaning services</h2>
       <table class="w-full m-auto font-sans">
