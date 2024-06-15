@@ -15,7 +15,7 @@ function FleurDivider () {
 	);
 }
 
-function PriceTable(props: { class:string, children: JSX.Element }) {
+function PriceTable(props: { class:string, children?: JSX.Element }) {
 
 	return (
 		
@@ -42,1323 +42,1372 @@ function PriceTable(props: { class:string, children: JSX.Element }) {
 export default function Page() {
   return (
     <>
-      <h1 class="mt-17">Prices of our cleaning services</h1>
+    	<h1 class="mt-17">Prices of our cleaning services</h1>
       
-      
-<h2>Carpet cleaning</h2>
+		<h2>Carpet cleaning</h2>
 
-<PriceTable>
-	<tr>
+		<PriceTable>
+			<tr>
+				<td class="bg-paper pl-5 py-2 font-500">Single Bedroom</td>
+				<td class="bg-paper pl-5 py-2 font-500">from £31.00</td>
+			</tr>
+			<tr>
+				<td class="bg-paper pl-5 py-2 font-500">Double Bedroom</td>
+				<td class="bg-paper pl-5 py-2 font-500">from £35.00</td>
+			</tr>
+			<tr>
+				<td class="bg-paper pl-5 py-2 font-500">Master Bedroom</td>
+				<td class="bg-paper pl-5 py-2 font-500">from £40.00</td>
+			</tr>
+			<tr>
+				<td class="bg-paper pl-5 py-2 font-500">Living Room</td>
+				<td class="bg-paper pl-5 py-2 font-500">from £43.00</td>
+			</tr>
+			<tr>
+				<td class="bg-paper pl-5 py-2 font-500">Through Lounge</td>
+				<td class="bg-paper pl-5 py-2 font-500">from £69.00</td>
+			</tr>
+			<tr>
+				<td class="bg-paper pl-5 py-2 font-500">Hallway</td>
+				<td class="bg-paper pl-5 py-2 font-500">from £21.00</td>
+			</tr>
+			<tr>
+				<td class="bg-paper pl-5 py-2 font-500">Flight of Stairs</td>
+				<td class="bg-paper pl-5 py-2 font-500">from £34.00</td>
+			</tr>
+			<tr>
+				<td class="bg-paper pl-5 py-2 font-500">Landing</td>
+				<td class="bg-paper pl-5 py-2 font-500">from £15.00</td>
+			</tr>
+			<tr>
+				<td class="bg-paper pl-5 py-2 font-500">Bathroom</td>
+				<td class="bg-paper pl-5 py-2 font-500">from £6.00</td>
+			</tr>
+			<tr>
+				<td class="bg-paper pl-5 py-2 font-500">Small rug</td>
+				<td class="bg-paper pl-5 py-2 font-500">from £14.00</td>
+			</tr>
+			<tr>
+				<td class="bg-paper pl-5 py-2 font-500">Medium rug</td>
+				<td class="bg-paper pl-5 py-2 font-500">from £20.00</td>
+			</tr>
+			<tr>
+				<td class="bg-paper pl-5 py-2 font-500">Large rug</td>
+				<td class="bg-paper pl-5 py-2 font-500">from £31.00</td>
+			</tr>
+		</PriceTable>
+
+		<div class="m-10%  mt-12% flex flex-wrap flex-justify-center">
+			<button class="outline-none bg-brand-action hover-bg-brand-action-hover:hover font-size-6 font-600 w-200px h-60px c-paper flex flex-items-center flex-justify-center relative b-solid b-rd-3 b-4 b-brand-action hover-b-brand-action-hover:hover whitespace-normal line-height-6 word-spacing-0.5 py-9" style="box-shadow: 0 0 0 3px rgba(255, 255, 255, .9) inset; letter-spacing: 0.05rem;"><a href="/" class="c-paper font-size-5">GO TO SERVICE</a></button>
+		</div>
+
+		<FleurDivider></FleurDivider>
+
+		<h2>Carpet steam cleaning</h2>
+
+		<PriceTable>
+			<tr>
+				<td class="bg-paper pl-5 py-2 font-500">Single Bedroom</td>
+				<td class="bg-paper pl-5 py-2 font-500">from £31.00</td>
+			</tr>
+			<tr>
+				<td class="bg-paper pl-5 py-2 font-500">Double Bedroom</td>
+				<td class="bg-paper pl-5 py-2 font-500">from £35.00</td>
+			</tr>
+			<tr>
+				<td class="bg-paper pl-5 py-2 font-500">Master Bedroom</td>
+				<td class="bg-paper pl-5 py-2 font-500">from £40.00</td>
+			</tr>
+			<tr>
+				<td class="bg-paper pl-5 py-2 font-500">Living Room</td>
+				<td class="bg-paper pl-5 py-2 font-500">from £43.00</td>
+			</tr>
+			<tr>
+				<td class="bg-paper pl-5 py-2 font-500">Through Lounge</td>
+				<td class="bg-paper pl-5 py-2 font-500">from £69.00</td>
+			</tr>
+			<tr>
+				<td class="bg-paper pl-5 py-2 font-500">Hallway</td>
+				<td class="bg-paper pl-5 py-2 font-500">from £21.00</td>
+			</tr>
+			<tr>
+				<td class="bg-paper pl-5 py-2 font-500">Flight of Stairs</td>
+				<td class="bg-paper pl-5 py-2 font-500">from £34.00</td>
+			</tr>
+			<tr>
+				<td class="bg-paper pl-5 py-2 font-500">Landing</td>
+				<td class="bg-paper pl-5 py-2 font-500">from £15.00</td>
+			</tr>
+			<tr>
+				<td class="bg-paper pl-5 py-2 font-500">Bathroom</td>
+				<td class="bg-paper pl-5 py-2 font-500">from £6.00</td>
+			</tr>
+			<tr>
+				<td class="bg-paper pl-5 py-2 font-500">Small rug</td>
+				<td class="bg-paper pl-5 py-2 font-500">from £14.00</td>
+			</tr>
+			<tr>
+				<td class="bg-paper pl-5 py-2 font-500">Medium rug</td>
+				<td class="bg-paper pl-5 py-2 font-500">from £20.00</td>
+			</tr>
+			<tr>
+				<td class="bg-paper pl-5 py-2 font-500">Large rug</td>
+				<td class="bg-paper pl-5 py-2 font-500">from £31.00</td>
+			</tr>
+		</PriceTable>
+
+		<div class="m-10%  mt-12% flex flex-wrap flex-justify-center">
+		<button class="outline-none bg-brand-action hover-bg-brand-action-hover:hover font-size-6 font-600 w-200px h-60px c-paper flex flex-items-center flex-justify-center relative b-solid b-rd-3 b-4 b-brand-action hover-b-brand-action-hover:hover whitespace-normal line-height-6 word-spacing-0.5 py-9" style="box-shadow: 0 0 0 3px rgba(255, 255, 255, .9) inset; letter-spacing: 0.05rem;"><a href="/" class="c-paper font-size-5">GO TO SERVICE</a></button>
+		</div>
+
+		<FleurDivider></FleurDivider>
+
+		<h2>Dry carpet cleaning</h2>
+
+		<PriceTable>
+		<tr>
 		<td class="bg-paper pl-5 py-2 font-500">Single Bedroom</td>
 		<td class="bg-paper pl-5 py-2 font-500">from £31.00</td>
-	</tr>
-	<tr>
+		</tr>
+		<tr>
 		<td class="bg-paper pl-5 py-2 font-500">Double Bedroom</td>
 		<td class="bg-paper pl-5 py-2 font-500">from £35.00</td>
-	</tr>
-	<tr>
+		</tr>
+		<tr>
 		<td class="bg-paper pl-5 py-2 font-500">Master Bedroom</td>
 		<td class="bg-paper pl-5 py-2 font-500">from £40.00</td>
-	</tr>
-	<tr>
+		</tr>
+		<tr>
 		<td class="bg-paper pl-5 py-2 font-500">Living Room</td>
 		<td class="bg-paper pl-5 py-2 font-500">from £43.00</td>
-	</tr>
-	<tr>
+		</tr>
+		<tr>
 		<td class="bg-paper pl-5 py-2 font-500">Through Lounge</td>
 		<td class="bg-paper pl-5 py-2 font-500">from £69.00</td>
-	</tr>
-	<tr>
+		</tr>
+		<tr>
 		<td class="bg-paper pl-5 py-2 font-500">Hallway</td>
 		<td class="bg-paper pl-5 py-2 font-500">from £21.00</td>
-	</tr>
-	<tr>
+		</tr>
+		<tr>
 		<td class="bg-paper pl-5 py-2 font-500">Flight of Stairs</td>
 		<td class="bg-paper pl-5 py-2 font-500">from £34.00</td>
-	</tr>
-	<tr>
+		</tr>
+		<tr>
 		<td class="bg-paper pl-5 py-2 font-500">Landing</td>
 		<td class="bg-paper pl-5 py-2 font-500">from £15.00</td>
-	</tr>
-	<tr>
+		</tr>
+		<tr>
 		<td class="bg-paper pl-5 py-2 font-500">Bathroom</td>
 		<td class="bg-paper pl-5 py-2 font-500">from £6.00</td>
-	</tr>
-	<tr>
+		</tr>
+		<tr>
 		<td class="bg-paper pl-5 py-2 font-500">Small rug</td>
 		<td class="bg-paper pl-5 py-2 font-500">from £14.00</td>
-	</tr>
-	<tr>
+		</tr>
+		<tr>
 		<td class="bg-paper pl-5 py-2 font-500">Medium rug</td>
 		<td class="bg-paper pl-5 py-2 font-500">from £20.00</td>
-	</tr>
-	<tr>
+		</tr>
+		<tr>
 		<td class="bg-paper pl-5 py-2 font-500">Large rug</td>
 		<td class="bg-paper pl-5 py-2 font-500">from £31.00</td>
-	</tr>
-</PriceTable>
+		</tr>
+		</PriceTable>
 
+		<div class="m-10%  mt-12% flex flex-wrap flex-justify-center">
+		<button class="outline-none bg-brand-action hover-bg-brand-action-hover:hover font-size-6 font-600 w-200px h-60px c-paper flex flex-items-center flex-justify-center relative b-solid b-rd-3 b-4 b-brand-action hover-b-brand-action-hover:hover whitespace-normal line-height-6 word-spacing-0.5 py-9" style="box-shadow: 0 0 0 3px rgba(255, 255, 255, .9) inset; letter-spacing: 0.05rem;"><a href="/" class="c-paper font-size-5">GO TO SERVICE</a></button>
+		</div>
 
-<button class="greenbutton"><a href="/">GO TO SERVICE</a></button>
+		<FleurDivider></FleurDivider>
 
-<FleurDivider></FleurDivider>
+		<h2>Eco-friendly carpet cleaning</h2>
 
-<h2>Carpet steam cleaning</h2>
-
-<PriceTable>
-	<tr>
+		<PriceTable>
+		<tr>
 		<td class="bg-paper pl-5 py-2 font-500">Single Bedroom</td>
 		<td class="bg-paper pl-5 py-2 font-500">from £31.00</td>
-	</tr>
-	<tr>
+		</tr>
+		<tr>
 		<td class="bg-paper pl-5 py-2 font-500">Double Bedroom</td>
 		<td class="bg-paper pl-5 py-2 font-500">from £35.00</td>
-	</tr>
-	<tr>
+		</tr>
+		<tr>
 		<td class="bg-paper pl-5 py-2 font-500">Master Bedroom</td>
 		<td class="bg-paper pl-5 py-2 font-500">from £40.00</td>
-	</tr>
-	<tr>
+		</tr>
+		<tr>
 		<td class="bg-paper pl-5 py-2 font-500">Living Room</td>
 		<td class="bg-paper pl-5 py-2 font-500">from £43.00</td>
-	</tr>
-	<tr>
+		</tr>
+		<tr>
 		<td class="bg-paper pl-5 py-2 font-500">Through Lounge</td>
 		<td class="bg-paper pl-5 py-2 font-500">from £69.00</td>
-	</tr>
-	<tr>
+		</tr>
+		<tr>
 		<td class="bg-paper pl-5 py-2 font-500">Hallway</td>
 		<td class="bg-paper pl-5 py-2 font-500">from £21.00</td>
-	</tr>
-	<tr>
+		</tr>
+		<tr>
 		<td class="bg-paper pl-5 py-2 font-500">Flight of Stairs</td>
 		<td class="bg-paper pl-5 py-2 font-500">from £34.00</td>
-	</tr>
-	<tr>
+		</tr>
+		<tr>
 		<td class="bg-paper pl-5 py-2 font-500">Landing</td>
 		<td class="bg-paper pl-5 py-2 font-500">from £15.00</td>
-	</tr>
-	<tr>
+		</tr>
+		<tr>
 		<td class="bg-paper pl-5 py-2 font-500">Bathroom</td>
 		<td class="bg-paper pl-5 py-2 font-500">from £6.00</td>
-	</tr>
-	<tr>
+		</tr>
+		<tr>
 		<td class="bg-paper pl-5 py-2 font-500">Small rug</td>
 		<td class="bg-paper pl-5 py-2 font-500">from £14.00</td>
-	</tr>
-	<tr>
+		</tr>
+		<tr>
 		<td class="bg-paper pl-5 py-2 font-500">Medium rug</td>
 		<td class="bg-paper pl-5 py-2 font-500">from £20.00</td>
-	</tr>
-	<tr>
+		</tr>
+		<tr>
 		<td class="bg-paper pl-5 py-2 font-500">Large rug</td>
 		<td class="bg-paper pl-5 py-2 font-500">from £31.00</td>
-	</tr>
-</PriceTable>
-
-<button class="greenbutton"><a href="/">GO TO SERVICE</a></button>
-
-<FleurDivider></FleurDivider>
-
-<h2>Dry carpet cleaning</h2>
-
-<PriceTable>
-<tr>
-<td class="bg-paper pl-5 py-2 font-500">Single Bedroom</td>
-<td class="bg-paper pl-5 py-2 font-500">from £31.00</td>
-</tr>
-<tr>
-<td class="bg-paper pl-5 py-2 font-500">Double Bedroom</td>
-<td class="bg-paper pl-5 py-2 font-500">from £35.00</td>
-</tr>
-<tr>
-<td class="bg-paper pl-5 py-2 font-500">Master Bedroom</td>
-<td class="bg-paper pl-5 py-2 font-500">from £40.00</td>
-</tr>
-<tr>
-<td class="bg-paper pl-5 py-2 font-500">Living Room</td>
-<td class="bg-paper pl-5 py-2 font-500">from £43.00</td>
-</tr>
-<tr>
-<td class="bg-paper pl-5 py-2 font-500">Through Lounge</td>
-<td class="bg-paper pl-5 py-2 font-500">from £69.00</td>
-</tr>
-<tr>
-<td class="bg-paper pl-5 py-2 font-500">Hallway</td>
-<td class="bg-paper pl-5 py-2 font-500">from £21.00</td>
-</tr>
-<tr>
-<td class="bg-paper pl-5 py-2 font-500">Flight of Stairs</td>
-<td class="bg-paper pl-5 py-2 font-500">from £34.00</td>
-</tr>
-<tr>
-<td class="bg-paper pl-5 py-2 font-500">Landing</td>
-<td class="bg-paper pl-5 py-2 font-500">from £15.00</td>
-</tr>
-<tr>
-<td class="bg-paper pl-5 py-2 font-500">Bathroom</td>
-<td class="bg-paper pl-5 py-2 font-500">from £6.00</td>
-</tr>
-<tr>
-<td class="bg-paper pl-5 py-2 font-500">Small rug</td>
-<td class="bg-paper pl-5 py-2 font-500">from £14.00</td>
-</tr>
-<tr>
-<td class="bg-paper pl-5 py-2 font-500">Medium rug</td>
-<td class="bg-paper pl-5 py-2 font-500">from £20.00</td>
-</tr>
-<tr>
-<td class="bg-paper pl-5 py-2 font-500">Large rug</td>
-<td class="bg-paper pl-5 py-2 font-500">from £31.00</td>
-</tr>
-</PriceTable>
-
-<button class="greenbutton"><a href="/">GO TO SERVICE</a></button>
-
-<FleurDivider></FleurDivider>
-
-<h2>Eco-friendly carpet cleaning</h2>
-
-<PriceTable>
-<tr>
-<td class="bg-paper pl-5 py-2 font-500">Single Bedroom</td>
-<td class="bg-paper pl-5 py-2 font-500">from £31.00</td>
-</tr>
-<tr>
-<td class="bg-paper pl-5 py-2 font-500">Double Bedroom</td>
-<td class="bg-paper pl-5 py-2 font-500">from £35.00</td>
-</tr>
-<tr>
-<td class="bg-paper pl-5 py-2 font-500">Master Bedroom</td>
-<td class="bg-paper pl-5 py-2 font-500">from £40.00</td>
-</tr>
-<tr>
-<td class="bg-paper pl-5 py-2 font-500">Living Room</td>
-<td class="bg-paper pl-5 py-2 font-500">from £43.00</td>
-</tr>
-<tr>
-<td class="bg-paper pl-5 py-2 font-500">Through Lounge</td>
-<td class="bg-paper pl-5 py-2 font-500">from £69.00</td>
-</tr>
-<tr>
-<td class="bg-paper pl-5 py-2 font-500">Hallway</td>
-<td class="bg-paper pl-5 py-2 font-500">from £21.00</td>
-</tr>
-<tr>
-<td class="bg-paper pl-5 py-2 font-500">Flight of Stairs</td>
-<td class="bg-paper pl-5 py-2 font-500">from £34.00</td>
-</tr>
-<tr>
-<td class="bg-paper pl-5 py-2 font-500">Landing</td>
-<td class="bg-paper pl-5 py-2 font-500">from £15.00</td>
-</tr>
-<tr>
-<td class="bg-paper pl-5 py-2 font-500">Bathroom</td>
-<td class="bg-paper pl-5 py-2 font-500">from £6.00</td>
-</tr>
-<tr>
-<td class="bg-paper pl-5 py-2 font-500">Small rug</td>
-<td class="bg-paper pl-5 py-2 font-500">from £14.00</td>
-</tr>
-<tr>
-<td class="bg-paper pl-5 py-2 font-500">Medium rug</td>
-<td class="bg-paper pl-5 py-2 font-500">from £20.00</td>
-</tr>
-<tr>
-<td class="bg-paper pl-5 py-2 font-500">Large rug</td>
-<td class="bg-paper pl-5 py-2 font-500">from £31.00</td>
-</tr>
-</PriceTable>
-
-<button class="greenbutton"><a href="/">GO TO SERVICE</a></button>
-
-<FleurDivider></FleurDivider>
-
-<h2>Same day carpet cleaning</h2>
-
-<PriceTable>
-<tr>
-<td class="bg-paper pl-5 py-2 font-500">Single Bedroom</td>
-<td class="bg-paper pl-5 py-2 font-500">from £31.00</td>
-</tr>
-<tr>
-<td class="bg-paper pl-5 py-2 font-500">Double Bedroom</td>
-<td class="bg-paper pl-5 py-2 font-500">from £35.00</td>
-</tr>
-<tr>
-<td class="bg-paper pl-5 py-2 font-500">Master Bedroom</td>
-<td class="bg-paper pl-5 py-2 font-500">from £40.00</td>
-</tr>
-<tr>
-<td class="bg-paper pl-5 py-2 font-500">Living Room</td>
-<td class="bg-paper pl-5 py-2 font-500">from £43.00</td>
-</tr>
-<tr>
-<td class="bg-paper pl-5 py-2 font-500">Through Lounge</td>
-<td class="bg-paper pl-5 py-2 font-500">from £69.00</td>
-</tr>
-<tr>
-<td class="bg-paper pl-5 py-2 font-500">Hallway</td>
-<td class="bg-paper pl-5 py-2 font-500">from £21.00</td>
-</tr>
-<tr>
-<td class="bg-paper pl-5 py-2 font-500">Flight of Stairs</td>
-<td class="bg-paper pl-5 py-2 font-500">from £34.00</td>
-</tr>
-<tr>
-<td class="bg-paper pl-5 py-2 font-500">Landing</td>
-<td class="bg-paper pl-5 py-2 font-500">from £15.00</td>
-</tr>
-<tr>
-<td class="bg-paper pl-5 py-2 font-500">Bathroom</td>
-<td class="bg-paper pl-5 py-2 font-500">from £6.00</td>
-</tr>
-<tr>
-<td class="bg-paper pl-5 py-2 font-500">Small rug</td>
-<td class="bg-paper pl-5 py-2 font-500">from £14.00</td>
-</tr>
-<tr>
-<td class="bg-paper pl-5 py-2 font-500">Medium rug</td>
-<td class="bg-paper pl-5 py-2 font-500">from £20.00</td>
-</tr>
-<tr>
-<td class="bg-paper pl-5 py-2 font-500">Large rug</td>
-<td class="bg-paper pl-5 py-2 font-500">from £31.00</td>
-</tr>
-</PriceTable>
-
-<button class="greenbutton"><a href="/">GO TO SERVICE</a></button>
-
-<FleurDivider></FleurDivider>
-
-<h2>Fast dry carpet cleaning</h2>
-
-<PriceTable>
-<tr>
-<td class="bg-paper pl-5 py-2 font-500">Single Bedroom</td>
-<td class="bg-paper pl-5 py-2 font-500">from £31.00</td>
-</tr>
-<tr>
-<td class="bg-paper pl-5 py-2 font-500">Double Bedroom</td>
-<td class="bg-paper pl-5 py-2 font-500">from £35.00</td>
-</tr>
-<tr>
-<td class="bg-paper pl-5 py-2 font-500">Master Bedroom</td>
-<td class="bg-paper pl-5 py-2 font-500">from £40.00</td>
-</tr>
-<tr>
-<td class="bg-paper pl-5 py-2 font-500">Living Room</td>
-<td class="bg-paper pl-5 py-2 font-500">from £43.00</td>
-</tr>
-<tr>
-<td class="bg-paper pl-5 py-2 font-500">Through Lounge</td>
-<td class="bg-paper pl-5 py-2 font-500">from £69.00</td>
-</tr>
-<tr>
-<td class="bg-paper pl-5 py-2 font-500">Hallway</td>
-<td class="bg-paper pl-5 py-2 font-500">from £21.00</td>
-</tr>
-<tr>
-<td class="bg-paper pl-5 py-2 font-500">Flight of Stairs</td>
-<td class="bg-paper pl-5 py-2 font-500">from £34.00</td>
-</tr>
-<tr>
-<td class="bg-paper pl-5 py-2 font-500">Landing</td>
-<td class="bg-paper pl-5 py-2 font-500">from £15.00</td>
-</tr>
-<tr>
-<td class="bg-paper pl-5 py-2 font-500">Bathroom</td>
-<td class="bg-paper pl-5 py-2 font-500">from £6.00</td>
-</tr>
-<tr>
-<td class="bg-paper pl-5 py-2 font-500">Small rug</td>
-<td class="bg-paper pl-5 py-2 font-500">from £14.00</td>
-</tr>
-<tr>
-<td class="bg-paper pl-5 py-2 font-500">Medium rug</td>
-<td class="bg-paper pl-5 py-2 font-500">from £20.00</td>
-</tr>
-<tr>
-<td class="bg-paper pl-5 py-2 font-500">Large rug</td>
-<td class="bg-paper pl-5 py-2 font-500">from £31.00</td>
-</tr>
-</PriceTable>
-
-<button class="greenbutton"><a href="/">GO TO SERVICE</a></button>
-
-<FleurDivider></FleurDivider>
-
-<h2>Carpet stain removal</h2>
-
-<PriceTable>
-<tr>
-<td class="bg-paper pl-5 py-2 font-500">Single Bedroom</td>
-<td class="bg-paper pl-5 py-2 font-500">from £31.00</td>
-</tr>
-<tr>
-<td class="bg-paper pl-5 py-2 font-500">Double Bedroom</td>
-<td class="bg-paper pl-5 py-2 font-500">from £35.00</td>
-</tr>
-<tr>
-<td class="bg-paper pl-5 py-2 font-500">Master Bedroom</td>
-<td class="bg-paper pl-5 py-2 font-500">from £40.00</td>
-</tr>
-<tr>
-<td class="bg-paper pl-5 py-2 font-500">Living Room</td>
-<td class="bg-paper pl-5 py-2 font-500">from £43.00</td>
-</tr>
-<tr>
-<td class="bg-paper pl-5 py-2 font-500">Through Lounge</td>
-<td class="bg-paper pl-5 py-2 font-500">from £69.00</td>
-</tr>
-<tr>
-<td class="bg-paper pl-5 py-2 font-500">Hallway</td>
-<td class="bg-paper pl-5 py-2 font-500">from £21.00</td>
-</tr>
-<tr>
-<td class="bg-paper pl-5 py-2 font-500">Flight of Stairs</td>
-<td class="bg-paper pl-5 py-2 font-500">from £34.00</td>
-</tr>
-<tr>
-<td class="bg-paper pl-5 py-2 font-500">Landing</td>
-<td class="bg-paper pl-5 py-2 font-500">from £15.00</td>
-</tr>
-<tr>
-<td class="bg-paper pl-5 py-2 font-500">Bathroom</td>
-<td class="bg-paper pl-5 py-2 font-500">from £6.00</td>
-</tr>
-<tr>
-<td class="bg-paper pl-5 py-2 font-500">Small rug</td>
-<td class="bg-paper pl-5 py-2 font-500">from £14.00</td>
-</tr>
-<tr>
-<td class="bg-paper pl-5 py-2 font-500">Medium rug</td>
-<td class="bg-paper pl-5 py-2 font-500">from £20.00</td>
-</tr>
-<tr>
-<td class="bg-paper pl-5 py-2 font-500">Large rug</td>
-<td class="bg-paper pl-5 py-2 font-500">from £31.00</td>
-</tr>
-</PriceTable>
-
-<button class="greenbutton"><a href="/">GO TO SERVICE</a></button>
-
-<FleurDivider></FleurDivider>
-
-<h2>Carpet stain protection</h2>
-
-<PriceTable>
-<tr>
-<td class="bg-paper pl-5 py-2 font-500">Single Bedroom</td>
-<td class="bg-paper pl-5 py-2 font-500">from £31.00</td>
-</tr>
-<tr>
-<td class="bg-paper pl-5 py-2 font-500">Double Bedroom</td>
-<td class="bg-paper pl-5 py-2 font-500">from £35.00</td>
-</tr>
-<tr>
-<td class="bg-paper pl-5 py-2 font-500">Master Bedroom</td>
-<td class="bg-paper pl-5 py-2 font-500">from £40.00</td>
-</tr>
-<tr>
-<td class="bg-paper pl-5 py-2 font-500">Living Room</td>
-<td class="bg-paper pl-5 py-2 font-500">from £43.00</td>
-</tr>
-<tr>
-<td class="bg-paper pl-5 py-2 font-500">Through Lounge</td>
-<td class="bg-paper pl-5 py-2 font-500">from £69.00</td>
-</tr>
-<tr>
-<td class="bg-paper pl-5 py-2 font-500">Hallway</td>
-<td class="bg-paper pl-5 py-2 font-500">from £21.00</td>
-</tr>
-<tr>
-<td class="bg-paper pl-5 py-2 font-500">Flight of Stairs</td>
-<td class="bg-paper pl-5 py-2 font-500">from £34.00</td>
-</tr>
-<tr>
-<td class="bg-paper pl-5 py-2 font-500">Landing</td>
-<td class="bg-paper pl-5 py-2 font-500">from £15.00</td>
-</tr>
-<tr>
-<td class="bg-paper pl-5 py-2 font-500">Bathroom</td>
-<td class="bg-paper pl-5 py-2 font-500">from £6.00</td>
-</tr>
-<tr>
-<td class="bg-paper pl-5 py-2 font-500">Small rug</td>
-<td class="bg-paper pl-5 py-2 font-500">from £14.00</td>
-</tr>
-<tr>
-<td class="bg-paper pl-5 py-2 font-500">Medium rug</td>
-<td class="bg-paper pl-5 py-2 font-500">from £20.00</td>
-</tr>
-<tr>
-<td class="bg-paper pl-5 py-2 font-500">Large rug</td>
-<td class="bg-paper pl-5 py-2 font-500">from £31.00</td>
-</tr>
-</PriceTable>
-
-<button class="greenbutton"><a href="/">GO TO SERVICE</a></button>
-
-<FleurDivider></FleurDivider>
-
-<h2>Commercial carpet cleaning</h2>
-
-<PriceTable>
-<tr>
-<td class="bg-paper pl-5 py-2 font-500">Single Bedroom</td>
-<td class="bg-paper pl-5 py-2 font-500">from £31.00</td>
-</tr>
-<tr>
-<td class="bg-paper pl-5 py-2 font-500">Double Bedroom</td>
-<td class="bg-paper pl-5 py-2 font-500">from £35.00</td>
-</tr>
-<tr>
-<td class="bg-paper pl-5 py-2 font-500">Master Bedroom</td>
-<td class="bg-paper pl-5 py-2 font-500">from £40.00</td>
-</tr>
-<tr>
-<td class="bg-paper pl-5 py-2 font-500">Living Room</td>
-<td class="bg-paper pl-5 py-2 font-500">from £43.00</td>
-</tr>
-<tr>
-<td class="bg-paper pl-5 py-2 font-500">Through Lounge</td>
-<td class="bg-paper pl-5 py-2 font-500">from £69.00</td>
-</tr>
-<tr>
-<td class="bg-paper pl-5 py-2 font-500">Hallway</td>
-<td class="bg-paper pl-5 py-2 font-500">from £21.00</td>
-</tr>
-<tr>
-<td class="bg-paper pl-5 py-2 font-500">Flight of Stairs</td>
-<td class="bg-paper pl-5 py-2 font-500">from £34.00</td>
-</tr>
-<tr>
-<td class="bg-paper pl-5 py-2 font-500">Landing</td>
-<td class="bg-paper pl-5 py-2 font-500">from £15.00</td>
-</tr>
-<tr>
-<td class="bg-paper pl-5 py-2 font-500">Bathroom</td>
-<td class="bg-paper pl-5 py-2 font-500">from £6.00</td>
-</tr>
-<tr>
-<td class="bg-paper pl-5 py-2 font-500">Small rug</td>
-<td class="bg-paper pl-5 py-2 font-500">from £14.00</td>
-</tr>
-<tr>
-<td class="bg-paper pl-5 py-2 font-500">Medium rug</td>
-<td class="bg-paper pl-5 py-2 font-500">from £20.00</td>
-</tr>
-<tr>
-<td class="bg-paper pl-5 py-2 font-500">Large rug</td>
-<td class="bg-paper pl-5 py-2 font-500">from £31.00</td>
-</tr>
-</PriceTable>
-
-<button class="greenbutton"><a href="/">GO TO SERVICE</a></button>
-
-<FleurDivider></FleurDivider>
-
-<h2>Residential carpet cleaning</h2>
-
-<PriceTable>
-<tr>
-<td class="bg-paper pl-5 py-2 font-500">Single Bedroom</td>
-<td class="bg-paper pl-5 py-2 font-500">from £31.00</td>
-</tr>
-<tr>
-<td class="bg-paper pl-5 py-2 font-500">Double Bedroom</td>
-<td class="bg-paper pl-5 py-2 font-500">from £35.00</td>
-</tr>
-<tr>
-<td class="bg-paper pl-5 py-2 font-500">Master Bedroom</td>
-<td class="bg-paper pl-5 py-2 font-500">from £40.00</td>
-</tr>
-<tr>
-<td class="bg-paper pl-5 py-2 font-500">Living Room</td>
-<td class="bg-paper pl-5 py-2 font-500">from £43.00</td>
-</tr>
-<tr>
-<td class="bg-paper pl-5 py-2 font-500">Through Lounge</td>
-<td class="bg-paper pl-5 py-2 font-500">from £69.00</td>
-</tr>
-<tr>
-<td class="bg-paper pl-5 py-2 font-500">Hallway</td>
-<td class="bg-paper pl-5 py-2 font-500">from £21.00</td>
-</tr>
-<tr>
-<td class="bg-paper pl-5 py-2 font-500">Flight of Stairs</td>
-<td class="bg-paper pl-5 py-2 font-500">from £34.00</td>
-</tr>
-<tr>
-<td class="bg-paper pl-5 py-2 font-500">Landing</td>
-<td class="bg-paper pl-5 py-2 font-500">from £15.00</td>
-</tr>
-<tr>
-<td class="bg-paper pl-5 py-2 font-500">Bathroom</td>
-<td class="bg-paper pl-5 py-2 font-500">from £6.00</td>
-</tr>
-<tr>
-<td class="bg-paper pl-5 py-2 font-500">Small rug</td>
-<td class="bg-paper pl-5 py-2 font-500">from £14.00</td>
-</tr>
-<tr>
-<td class="bg-paper pl-5 py-2 font-500">Medium rug</td>
-<td class="bg-paper pl-5 py-2 font-500">from £20.00</td>
-</tr>
-<tr>
-<td class="bg-paper pl-5 py-2 font-500">Large rug</td>
-<td class="bg-paper pl-5 py-2 font-500">from £31.00</td>
-</tr>
-</PriceTable>
-
-<button class="greenbutton"><a href="/">GO TO SERVICE</a></button>
-
-<FleurDivider></FleurDivider>
-
-<h2>Office carpet cleaning</h2>
-
-<PriceTable>
-<tr>
-<td class="bg-paper pl-5 py-2 font-500">Single Bedroom</td>
-<td class="bg-paper pl-5 py-2 font-500">from £31.00</td>
-</tr>
-<tr>
-<td class="bg-paper pl-5 py-2 font-500">Double Bedroom</td>
-<td class="bg-paper pl-5 py-2 font-500">from £35.00</td>
-</tr>
-<tr>
-<td class="bg-paper pl-5 py-2 font-500">Master Bedroom</td>
-<td class="bg-paper pl-5 py-2 font-500">from £40.00</td>
-</tr>
-<tr>
-<td class="bg-paper pl-5 py-2 font-500">Living Room</td>
-<td class="bg-paper pl-5 py-2 font-500">from £43.00</td>
-</tr>
-<tr>
-<td class="bg-paper pl-5 py-2 font-500">Through Lounge</td>
-<td class="bg-paper pl-5 py-2 font-500">from £69.00</td>
-</tr>
-<tr>
-<td class="bg-paper pl-5 py-2 font-500">Hallway</td>
-<td class="bg-paper pl-5 py-2 font-500">from £21.00</td>
-</tr>
-<tr>
-<td class="bg-paper pl-5 py-2 font-500">Flight of Stairs</td>
-<td class="bg-paper pl-5 py-2 font-500">from £34.00</td>
-</tr>
-<tr>
-<td class="bg-paper pl-5 py-2 font-500">Landing</td>
-<td class="bg-paper pl-5 py-2 font-500">from £15.00</td>
-</tr>
-<tr>
-<td class="bg-paper pl-5 py-2 font-500">Bathroom</td>
-<td class="bg-paper pl-5 py-2 font-500">from £6.00</td>
-</tr>
-<tr>
-<td class="bg-paper pl-5 py-2 font-500">Small rug</td>
-<td class="bg-paper pl-5 py-2 font-500">from £14.00</td>
-</tr>
-<tr>
-<td class="bg-paper pl-5 py-2 font-500">Medium rug</td>
-<td class="bg-paper pl-5 py-2 font-500">from £20.00</td>
-</tr>
-<tr>
-<td class="bg-paper pl-5 py-2 font-500">Large rug</td>
-<td class="bg-paper pl-5 py-2 font-500">from £31.00</td>
-</tr>
-</PriceTable>
-
-<button class="greenbutton"><a href="/">GO TO SERVICE</a></button>
-
-<FleurDivider></FleurDivider>
-
-<h2>Sofa cleaning</h2>
-
-<PriceTable>
-<tr>
-<td class="bg-paper pl-5 py-2 font-500">Single Bedroom</td>
-<td class="bg-paper pl-5 py-2 font-500">from £31.00</td>
-</tr>
-<tr>
-<td class="bg-paper pl-5 py-2 font-500">Double Bedroom</td>
-<td class="bg-paper pl-5 py-2 font-500">from £35.00</td>
-</tr>
-<tr>
-<td class="bg-paper pl-5 py-2 font-500">Master Bedroom</td>
-<td class="bg-paper pl-5 py-2 font-500">from £40.00</td>
-</tr>
-<tr>
-<td class="bg-paper pl-5 py-2 font-500">Living Room</td>
-<td class="bg-paper pl-5 py-2 font-500">from £43.00</td>
-</tr>
-<tr>
-<td class="bg-paper pl-5 py-2 font-500">Through Lounge</td>
-<td class="bg-paper pl-5 py-2 font-500">from £69.00</td>
-</tr>
-<tr>
-<td class="bg-paper pl-5 py-2 font-500">Hallway</td>
-<td class="bg-paper pl-5 py-2 font-500">from £21.00</td>
-</tr>
-<tr>
-<td class="bg-paper pl-5 py-2 font-500">Flight of Stairs</td>
-<td class="bg-paper pl-5 py-2 font-500">from £34.00</td>
-</tr>
-<tr>
-<td class="bg-paper pl-5 py-2 font-500">Landing</td>
-<td class="bg-paper pl-5 py-2 font-500">from £15.00</td>
-</tr>
-<tr>
-<td class="bg-paper pl-5 py-2 font-500">Bathroom</td>
-<td class="bg-paper pl-5 py-2 font-500">from £6.00</td>
-</tr>
-<tr>
-<td class="bg-paper pl-5 py-2 font-500">Small rug</td>
-<td class="bg-paper pl-5 py-2 font-500">from £14.00</td>
-</tr>
-<tr>
-<td class="bg-paper pl-5 py-2 font-500">Medium rug</td>
-<td class="bg-paper pl-5 py-2 font-500">from £20.00</td>
-</tr>
-<tr>
-<td class="bg-paper pl-5 py-2 font-500">Large rug</td>
-<td class="bg-paper pl-5 py-2 font-500">from £31.00</td>
-</tr>
-</PriceTable>
-
-<button class="greenbutton"><a href="/">GO TO SERVICE</a></button>
-
-<FleurDivider></FleurDivider>
-
-<h2>Leather sofa cleaning</h2>
-
-<PriceTable>
-<tr>
-<td class="bg-paper pl-5 py-2 font-500">Single Bedroom</td>
-<td class="bg-paper pl-5 py-2 font-500">from £31.00</td>
-</tr>
-<tr>
-<td class="bg-paper pl-5 py-2 font-500">Double Bedroom</td>
-<td class="bg-paper pl-5 py-2 font-500">from £35.00</td>
-</tr>
-<tr>
-<td class="bg-paper pl-5 py-2 font-500">Master Bedroom</td>
-<td class="bg-paper pl-5 py-2 font-500">from £40.00</td>
-</tr>
-<tr>
-<td class="bg-paper pl-5 py-2 font-500">Living Room</td>
-<td class="bg-paper pl-5 py-2 font-500">from £43.00</td>
-</tr>
-<tr>
-<td class="bg-paper pl-5 py-2 font-500">Through Lounge</td>
-<td class="bg-paper pl-5 py-2 font-500">from £69.00</td>
-</tr>
-<tr>
-<td class="bg-paper pl-5 py-2 font-500">Hallway</td>
-<td class="bg-paper pl-5 py-2 font-500">from £21.00</td>
-</tr>
-<tr>
-<td class="bg-paper pl-5 py-2 font-500">Flight of Stairs</td>
-<td class="bg-paper pl-5 py-2 font-500">from £34.00</td>
-</tr>
-<tr>
-<td class="bg-paper pl-5 py-2 font-500">Landing</td>
-<td class="bg-paper pl-5 py-2 font-500">from £15.00</td>
-</tr>
-<tr>
-<td class="bg-paper pl-5 py-2 font-500">Bathroom</td>
-<td class="bg-paper pl-5 py-2 font-500">from £6.00</td>
-</tr>
-<tr>
-<td class="bg-paper pl-5 py-2 font-500">Small rug</td>
-<td class="bg-paper pl-5 py-2 font-500">from £14.00</td>
-</tr>
-<tr>
-<td class="bg-paper pl-5 py-2 font-500">Medium rug</td>
-<td class="bg-paper pl-5 py-2 font-500">from £20.00</td>
-</tr>
-<tr>
-<td class="bg-paper pl-5 py-2 font-500">Large rug</td>
-<td class="bg-paper pl-5 py-2 font-500">from £31.00</td>
-</tr>
-</PriceTable>
-
-<button class="greenbutton"><a href="/">GO TO SERVICE</a></button>
-
-<FleurDivider></FleurDivider>
-
-<h2>Furniture cleaning</h2>
-
-<PriceTable>
-<tr>
-<td class="bg-paper pl-5 py-2 font-500">Single Bedroom</td>
-<td class="bg-paper pl-5 py-2 font-500">from £31.00</td>
-</tr>
-<tr>
-<td class="bg-paper pl-5 py-2 font-500">Double Bedroom</td>
-<td class="bg-paper pl-5 py-2 font-500">from £35.00</td>
-</tr>
-<tr>
-<td class="bg-paper pl-5 py-2 font-500">Master Bedroom</td>
-<td class="bg-paper pl-5 py-2 font-500">from £40.00</td>
-</tr>
-<tr>
-<td class="bg-paper pl-5 py-2 font-500">Living Room</td>
-<td class="bg-paper pl-5 py-2 font-500">from £43.00</td>
-</tr>
-<tr>
-<td class="bg-paper pl-5 py-2 font-500">Through Lounge</td>
-<td class="bg-paper pl-5 py-2 font-500">from £69.00</td>
-</tr>
-<tr>
-<td class="bg-paper pl-5 py-2 font-500">Hallway</td>
-<td class="bg-paper pl-5 py-2 font-500">from £21.00</td>
-</tr>
-<tr>
-<td class="bg-paper pl-5 py-2 font-500">Flight of Stairs</td>
-<td class="bg-paper pl-5 py-2 font-500">from £34.00</td>
-</tr>
-<tr>
-<td class="bg-paper pl-5 py-2 font-500">Landing</td>
-<td class="bg-paper pl-5 py-2 font-500">from £15.00</td>
-</tr>
-<tr>
-<td class="bg-paper pl-5 py-2 font-500">Bathroom</td>
-<td class="bg-paper pl-5 py-2 font-500">from £6.00</td>
-</tr>
-<tr>
-<td class="bg-paper pl-5 py-2 font-500">Small rug</td>
-<td class="bg-paper pl-5 py-2 font-500">from £14.00</td>
-</tr>
-<tr>
-<td class="bg-paper pl-5 py-2 font-500">Medium rug</td>
-<td class="bg-paper pl-5 py-2 font-500">from £20.00</td>
-</tr>
-<tr>
-<td class="bg-paper pl-5 py-2 font-500">Large rug</td>
-<td class="bg-paper pl-5 py-2 font-500">from £31.00</td>
-</tr>
-</PriceTable>
-
-<button class="greenbutton"><a href="/">GO TO SERVICE</a></button>
-
-<FleurDivider></FleurDivider>
-
-<h2>Mattress cleaning</h2>
-
-<PriceTable>
-<tr>
-<td class="bg-paper pl-5 py-2 font-500">Single Bedroom</td>
-<td class="bg-paper pl-5 py-2 font-500">from £31.00</td>
-</tr>
-<tr>
-<td class="bg-paper pl-5 py-2 font-500">Double Bedroom</td>
-<td class="bg-paper pl-5 py-2 font-500">from £35.00</td>
-</tr>
-<tr>
-<td class="bg-paper pl-5 py-2 font-500">Master Bedroom</td>
-<td class="bg-paper pl-5 py-2 font-500">from £40.00</td>
-</tr>
-<tr>
-<td class="bg-paper pl-5 py-2 font-500">Living Room</td>
-<td class="bg-paper pl-5 py-2 font-500">from £43.00</td>
-</tr>
-<tr>
-<td class="bg-paper pl-5 py-2 font-500">Through Lounge</td>
-<td class="bg-paper pl-5 py-2 font-500">from £69.00</td>
-</tr>
-<tr>
-<td class="bg-paper pl-5 py-2 font-500">Hallway</td>
-<td class="bg-paper pl-5 py-2 font-500">from £21.00</td>
-</tr>
-<tr>
-<td class="bg-paper pl-5 py-2 font-500">Flight of Stairs</td>
-<td class="bg-paper pl-5 py-2 font-500">from £34.00</td>
-</tr>
-<tr>
-<td class="bg-paper pl-5 py-2 font-500">Landing</td>
-<td class="bg-paper pl-5 py-2 font-500">from £15.00</td>
-</tr>
-<tr>
-<td class="bg-paper pl-5 py-2 font-500">Bathroom</td>
-<td class="bg-paper pl-5 py-2 font-500">from £6.00</td>
-</tr>
-<tr>
-<td class="bg-paper pl-5 py-2 font-500">Small rug</td>
-<td class="bg-paper pl-5 py-2 font-500">from £14.00</td>
-</tr>
-<tr>
-<td class="bg-paper pl-5 py-2 font-500">Medium rug</td>
-<td class="bg-paper pl-5 py-2 font-500">from £20.00</td>
-</tr>
-<tr>
-<td class="bg-paper pl-5 py-2 font-500">Large rug</td>
-<td class="bg-paper pl-5 py-2 font-500">from £31.00</td>
-</tr>
-</PriceTable>
-
-<button class="greenbutton"><a href="/">GO TO SERVICE</a></button>
-
-<FleurDivider></FleurDivider>
-
-<h2>Pillow cleaning</h2>
-
-<PriceTable>
-<tr>
-<td class="bg-paper pl-5 py-2 font-500">Single Bedroom</td>
-<td class="bg-paper pl-5 py-2 font-500">from £31.00</td>
-</tr>
-<tr>
-<td class="bg-paper pl-5 py-2 font-500">Double Bedroom</td>
-<td class="bg-paper pl-5 py-2 font-500">from £35.00</td>
-</tr>
-<tr>
-<td class="bg-paper pl-5 py-2 font-500">Master Bedroom</td>
-<td class="bg-paper pl-5 py-2 font-500">from £40.00</td>
-</tr>
-<tr>
-<td class="bg-paper pl-5 py-2 font-500">Living Room</td>
-<td class="bg-paper pl-5 py-2 font-500">from £43.00</td>
-</tr>
-<tr>
-<td class="bg-paper pl-5 py-2 font-500">Through Lounge</td>
-<td class="bg-paper pl-5 py-2 font-500">from £69.00</td>
-</tr>
-<tr>
-<td class="bg-paper pl-5 py-2 font-500">Hallway</td>
-<td class="bg-paper pl-5 py-2 font-500">from £21.00</td>
-</tr>
-<tr>
-<td class="bg-paper pl-5 py-2 font-500">Flight of Stairs</td>
-<td class="bg-paper pl-5 py-2 font-500">from £34.00</td>
-</tr>
-<tr>
-<td class="bg-paper pl-5 py-2 font-500">Landing</td>
-<td class="bg-paper pl-5 py-2 font-500">from £15.00</td>
-</tr>
-<tr>
-<td class="bg-paper pl-5 py-2 font-500">Bathroom</td>
-<td class="bg-paper pl-5 py-2 font-500">from £6.00</td>
-</tr>
-<tr>
-<td class="bg-paper pl-5 py-2 font-500">Small rug</td>
-<td class="bg-paper pl-5 py-2 font-500">from £14.00</td>
-</tr>
-<tr>
-<td class="bg-paper pl-5 py-2 font-500">Medium rug</td>
-<td class="bg-paper pl-5 py-2 font-500">from £20.00</td>
-</tr>
-<tr>
-<td class="bg-paper pl-5 py-2 font-500">Large rug</td>
-<td class="bg-paper pl-5 py-2 font-500">from £31.00</td>
-</tr>
-</PriceTable>
-
-<button class="greenbutton"><a href="/">GO TO SERVICE</a></button>
-
-<FleurDivider></FleurDivider>
-
-<h2>Upholstery stain removal</h2>
-
-<PriceTable>
-<tr>
-<td class="bg-paper pl-5 py-2 font-500">Single Bedroom</td>
-<td class="bg-paper pl-5 py-2 font-500">from £31.00</td>
-</tr>
-<tr>
-<td class="bg-paper pl-5 py-2 font-500">Double Bedroom</td>
-<td class="bg-paper pl-5 py-2 font-500">from £35.00</td>
-</tr>
-<tr>
-<td class="bg-paper pl-5 py-2 font-500">Master Bedroom</td>
-<td class="bg-paper pl-5 py-2 font-500">from £40.00</td>
-</tr>
-<tr>
-<td class="bg-paper pl-5 py-2 font-500">Living Room</td>
-<td class="bg-paper pl-5 py-2 font-500">from £43.00</td>
-</tr>
-<tr>
-<td class="bg-paper pl-5 py-2 font-500">Through Lounge</td>
-<td class="bg-paper pl-5 py-2 font-500">from £69.00</td>
-</tr>
-<tr>
-<td class="bg-paper pl-5 py-2 font-500">Hallway</td>
-<td class="bg-paper pl-5 py-2 font-500">from £21.00</td>
-</tr>
-<tr>
-<td class="bg-paper pl-5 py-2 font-500">Flight of Stairs</td>
-<td class="bg-paper pl-5 py-2 font-500">from £34.00</td>
-</tr>
-<tr>
-<td class="bg-paper pl-5 py-2 font-500">Landing</td>
-<td class="bg-paper pl-5 py-2 font-500">from £15.00</td>
-</tr>
-<tr>
-<td class="bg-paper pl-5 py-2 font-500">Bathroom</td>
-<td class="bg-paper pl-5 py-2 font-500">from £6.00</td>
-</tr>
-<tr>
-<td class="bg-paper pl-5 py-2 font-500">Small rug</td>
-<td class="bg-paper pl-5 py-2 font-500">from £14.00</td>
-</tr>
-<tr>
-<td class="bg-paper pl-5 py-2 font-500">Medium rug</td>
-<td class="bg-paper pl-5 py-2 font-500">from £20.00</td>
-</tr>
-<tr>
-<td class="bg-paper pl-5 py-2 font-500">Large rug</td>
-<td class="bg-paper pl-5 py-2 font-500">from £31.00</td>
-</tr>
-</PriceTable>
-
-<button class="greenbutton"><a href="/">GO TO SERVICE</a></button>
-
-<FleurDivider></FleurDivider>
-
-<h2>Upholstery stain protection</h2>
-
-<PriceTable>
-<tr>
-<td class="bg-paper pl-5 py-2 font-500">Single Bedroom</td>
-<td class="bg-paper pl-5 py-2 font-500">from £31.00</td>
-</tr>
-<tr>
-<td class="bg-paper pl-5 py-2 font-500">Double Bedroom</td>
-<td class="bg-paper pl-5 py-2 font-500">from £35.00</td>
-</tr>
-<tr>
-<td class="bg-paper pl-5 py-2 font-500">Master Bedroom</td>
-<td class="bg-paper pl-5 py-2 font-500">from £40.00</td>
-</tr>
-<tr>
-<td class="bg-paper pl-5 py-2 font-500">Living Room</td>
-<td class="bg-paper pl-5 py-2 font-500">from £43.00</td>
-</tr>
-<tr>
-<td class="bg-paper pl-5 py-2 font-500">Through Lounge</td>
-<td class="bg-paper pl-5 py-2 font-500">from £69.00</td>
-</tr>
-<tr>
-<td class="bg-paper pl-5 py-2 font-500">Hallway</td>
-<td class="bg-paper pl-5 py-2 font-500">from £21.00</td>
-</tr>
-<tr>
-<td class="bg-paper pl-5 py-2 font-500">Flight of Stairs</td>
-<td class="bg-paper pl-5 py-2 font-500">from £34.00</td>
-</tr>
-<tr>
-<td class="bg-paper pl-5 py-2 font-500">Landing</td>
-<td class="bg-paper pl-5 py-2 font-500">from £15.00</td>
-</tr>
-<tr>
-<td class="bg-paper pl-5 py-2 font-500">Bathroom</td>
-<td class="bg-paper pl-5 py-2 font-500">from £6.00</td>
-</tr>
-<tr>
-<td class="bg-paper pl-5 py-2 font-500">Small rug</td>
-<td class="bg-paper pl-5 py-2 font-500">from £14.00</td>
-</tr>
-<tr>
-<td class="bg-paper pl-5 py-2 font-500">Medium rug</td>
-<td class="bg-paper pl-5 py-2 font-500">from £20.00</td>
-</tr>
-<tr>
-<td class="bg-paper pl-5 py-2 font-500">Large rug</td>
-<td class="bg-paper pl-5 py-2 font-500">from £31.00</td>
-</tr>
-</PriceTable>
-
-<button class="greenbutton"><a href="/">GO TO SERVICE</a></button>
-
-<FleurDivider></FleurDivider>
-
-<h2>Rug steam cleaning</h2>
-
-<PriceTable>
-<tr>
-<td class="bg-paper pl-5 py-2 font-500">Single Bedroom</td>
-<td class="bg-paper pl-5 py-2 font-500">from £31.00</td>
-</tr>
-<tr>
-<td class="bg-paper pl-5 py-2 font-500">Double Bedroom</td>
-<td class="bg-paper pl-5 py-2 font-500">from £35.00</td>
-</tr>
-<tr>
-<td class="bg-paper pl-5 py-2 font-500">Master Bedroom</td>
-<td class="bg-paper pl-5 py-2 font-500">from £40.00</td>
-</tr>
-<tr>
-<td class="bg-paper pl-5 py-2 font-500">Living Room</td>
-<td class="bg-paper pl-5 py-2 font-500">from £43.00</td>
-</tr>
-<tr>
-<td class="bg-paper pl-5 py-2 font-500">Through Lounge</td>
-<td class="bg-paper pl-5 py-2 font-500">from £69.00</td>
-</tr>
-<tr>
-<td class="bg-paper pl-5 py-2 font-500">Hallway</td>
-<td class="bg-paper pl-5 py-2 font-500">from £21.00</td>
-</tr>
-<tr>
-<td class="bg-paper pl-5 py-2 font-500">Flight of Stairs</td>
-<td class="bg-paper pl-5 py-2 font-500">from £34.00</td>
-</tr>
-<tr>
-<td class="bg-paper pl-5 py-2 font-500">Landing</td>
-<td class="bg-paper pl-5 py-2 font-500">from £15.00</td>
-</tr>
-<tr>
-<td class="bg-paper pl-5 py-2 font-500">Bathroom</td>
-<td class="bg-paper pl-5 py-2 font-500">from £6.00</td>
-</tr>
-<tr>
-<td class="bg-paper pl-5 py-2 font-500">Small rug</td>
-<td class="bg-paper pl-5 py-2 font-500">from £14.00</td>
-</tr>
-<tr>
-<td class="bg-paper pl-5 py-2 font-500">Medium rug</td>
-<td class="bg-paper pl-5 py-2 font-500">from £20.00</td>
-</tr>
-<tr>
-<td class="bg-paper pl-5 py-2 font-500">Large rug</td>
-<td class="bg-paper pl-5 py-2 font-500">from £31.00</td>
-</tr>
-</PriceTable>
-
-<button class="greenbutton"><a href="/">GO TO SERVICE</a></button>
-
-<FleurDivider></FleurDivider>
-
-<h2>Dry rug cleaning</h2>
-
-<PriceTable>
-<tr>
-<td class="bg-paper pl-5 py-2 font-500">Single Bedroom</td>
-<td class="bg-paper pl-5 py-2 font-500">from £31.00</td>
-</tr>
-<tr>
-<td class="bg-paper pl-5 py-2 font-500">Double Bedroom</td>
-<td class="bg-paper pl-5 py-2 font-500">from £35.00</td>
-</tr>
-<tr>
-<td class="bg-paper pl-5 py-2 font-500">Master Bedroom</td>
-<td class="bg-paper pl-5 py-2 font-500">from £40.00</td>
-</tr>
-<tr>
-<td class="bg-paper pl-5 py-2 font-500">Living Room</td>
-<td class="bg-paper pl-5 py-2 font-500">from £43.00</td>
-</tr>
-<tr>
-<td class="bg-paper pl-5 py-2 font-500">Through Lounge</td>
-<td class="bg-paper pl-5 py-2 font-500">from £69.00</td>
-</tr>
-<tr>
-<td class="bg-paper pl-5 py-2 font-500">Hallway</td>
-<td class="bg-paper pl-5 py-2 font-500">from £21.00</td>
-</tr>
-<tr>
-<td class="bg-paper pl-5 py-2 font-500">Flight of Stairs</td>
-<td class="bg-paper pl-5 py-2 font-500">from £34.00</td>
-</tr>
-<tr>
-<td class="bg-paper pl-5 py-2 font-500">Landing</td>
-<td class="bg-paper pl-5 py-2 font-500">from £15.00</td>
-</tr>
-<tr>
-<td class="bg-paper pl-5 py-2 font-500">Bathroom</td>
-<td class="bg-paper pl-5 py-2 font-500">from £6.00</td>
-</tr>
-<tr>
-<td class="bg-paper pl-5 py-2 font-500">Small rug</td>
-<td class="bg-paper pl-5 py-2 font-500">from £14.00</td>
-</tr>
-<tr>
-<td class="bg-paper pl-5 py-2 font-500">Medium rug</td>
-<td class="bg-paper pl-5 py-2 font-500">from £20.00</td>
-</tr>
-<tr>
-<td class="bg-paper pl-5 py-2 font-500">Large rug</td>
-<td class="bg-paper pl-5 py-2 font-500">from £31.00</td>
-</tr>
-</PriceTable>
-
-<button class="greenbutton"><a href="/">GO TO SERVICE</a></button>
-
-<FleurDivider></FleurDivider>
-
-<h2>Rug stain removal</h2>
-
-<PriceTable>
-<tr>
-<td class="bg-paper pl-5 py-2 font-500">Single Bedroom</td>
-<td class="bg-paper pl-5 py-2 font-500">from £31.00</td>
-</tr>
-<tr>
-<td class="bg-paper pl-5 py-2 font-500">Double Bedroom</td>
-<td class="bg-paper pl-5 py-2 font-500">from £35.00</td>
-</tr>
-<tr>
-<td class="bg-paper pl-5 py-2 font-500">Master Bedroom</td>
-<td class="bg-paper pl-5 py-2 font-500">from £40.00</td>
-</tr>
-<tr>
-<td class="bg-paper pl-5 py-2 font-500">Living Room</td>
-<td class="bg-paper pl-5 py-2 font-500">from £43.00</td>
-</tr>
-<tr>
-<td class="bg-paper pl-5 py-2 font-500">Through Lounge</td>
-<td class="bg-paper pl-5 py-2 font-500">from £69.00</td>
-</tr>
-<tr>
-<td class="bg-paper pl-5 py-2 font-500">Hallway</td>
-<td class="bg-paper pl-5 py-2 font-500">from £21.00</td>
-</tr>
-<tr>
-<td class="bg-paper pl-5 py-2 font-500">Flight of Stairs</td>
-<td class="bg-paper pl-5 py-2 font-500">from £34.00</td>
-</tr>
-<tr>
-<td class="bg-paper pl-5 py-2 font-500">Landing</td>
-<td class="bg-paper pl-5 py-2 font-500">from £15.00</td>
-</tr>
-<tr>
-<td class="bg-paper pl-5 py-2 font-500">Bathroom</td>
-<td class="bg-paper pl-5 py-2 font-500">from £6.00</td>
-</tr>
-<tr>
-<td class="bg-paper pl-5 py-2 font-500">Small rug</td>
-<td class="bg-paper pl-5 py-2 font-500">from £14.00</td>
-</tr>
-<tr>
-<td class="bg-paper pl-5 py-2 font-500">Medium rug</td>
-<td class="bg-paper pl-5 py-2 font-500">from £20.00</td>
-</tr>
-<tr>
-<td class="bg-paper pl-5 py-2 font-500">Large rug</td>
-<td class="bg-paper pl-5 py-2 font-500">from £31.00</td>
-</tr>
-</PriceTable>
-
-<button class="greenbutton"><a href="/">GO TO SERVICE</a></button>
-
-<FleurDivider></FleurDivider>
-
-<h2>Rug stain protection</h2>
-
-<PriceTable>
-<tr>
-<td class="bg-paper pl-5 py-2 font-500">Single Bedroom</td>
-<td class="bg-paper pl-5 py-2 font-500">from £31.00</td>
-</tr>
-<tr>
-<td class="bg-paper pl-5 py-2 font-500">Double Bedroom</td>
-<td class="bg-paper pl-5 py-2 font-500">from £35.00</td>
-</tr>
-<tr>
-<td class="bg-paper pl-5 py-2 font-500">Master Bedroom</td>
-<td class="bg-paper pl-5 py-2 font-500">from £40.00</td>
-</tr>
-<tr>
-<td class="bg-paper pl-5 py-2 font-500">Living Room</td>
-<td class="bg-paper pl-5 py-2 font-500">from £43.00</td>
-</tr>
-<tr>
-<td class="bg-paper pl-5 py-2 font-500">Through Lounge</td>
-<td class="bg-paper pl-5 py-2 font-500">from £69.00</td>
-</tr>
-<tr>
-<td class="bg-paper pl-5 py-2 font-500">Hallway</td>
-<td class="bg-paper pl-5 py-2 font-500">from £21.00</td>
-</tr>
-<tr>
-<td class="bg-paper pl-5 py-2 font-500">Flight of Stairs</td>
-<td class="bg-paper pl-5 py-2 font-500">from £34.00</td>
-</tr>
-<tr>
-<td class="bg-paper pl-5 py-2 font-500">Landing</td>
-<td class="bg-paper pl-5 py-2 font-500">from £15.00</td>
-</tr>
-<tr>
-<td class="bg-paper pl-5 py-2 font-500">Bathroom</td>
-<td class="bg-paper pl-5 py-2 font-500">from £6.00</td>
-</tr>
-<tr>
-<td class="bg-paper pl-5 py-2 font-500">Small rug</td>
-<td class="bg-paper pl-5 py-2 font-500">from £14.00</td>
-</tr>
-<tr>
-<td class="bg-paper pl-5 py-2 font-500">Medium rug</td>
-<td class="bg-paper pl-5 py-2 font-500">from £20.00</td>
-</tr>
-<tr>
-<td class="bg-paper pl-5 py-2 font-500">Large rug</td>
-<td class="bg-paper pl-5 py-2 font-500">from £31.00</td>
-</tr>
-</PriceTable>
-
-<button class="greenbutton"><a href="/">GO TO SERVICE</a></button>
-
-<FleurDivider></FleurDivider>
-
-<h2>Antiviral sanitisation</h2>
-
-<PriceTable>
-<tr>
-<td class="bg-paper pl-5 py-2 font-500">Single Bedroom</td>
-<td class="bg-paper pl-5 py-2 font-500">from £31.00</td>
-</tr>
-<tr>
-<td class="bg-paper pl-5 py-2 font-500">Double Bedroom</td>
-<td class="bg-paper pl-5 py-2 font-500">from £35.00</td>
-</tr>
-<tr>
-<td class="bg-paper pl-5 py-2 font-500">Master Bedroom</td>
-<td class="bg-paper pl-5 py-2 font-500">from £40.00</td>
-</tr>
-<tr>
-<td class="bg-paper pl-5 py-2 font-500">Living Room</td>
-<td class="bg-paper pl-5 py-2 font-500">from £43.00</td>
-</tr>
-<tr>
-<td class="bg-paper pl-5 py-2 font-500">Through Lounge</td>
-<td class="bg-paper pl-5 py-2 font-500">from £69.00</td>
-</tr>
-<tr>
-<td class="bg-paper pl-5 py-2 font-500">Hallway</td>
-<td class="bg-paper pl-5 py-2 font-500">from £21.00</td>
-</tr>
-<tr>
-<td class="bg-paper pl-5 py-2 font-500">Flight of Stairs</td>
-<td class="bg-paper pl-5 py-2 font-500">from £34.00</td>
-</tr>
-<tr>
-<td class="bg-paper pl-5 py-2 font-500">Landing</td>
-<td class="bg-paper pl-5 py-2 font-500">from £15.00</td>
-</tr>
-<tr>
-<td class="bg-paper pl-5 py-2 font-500">Bathroom</td>
-<td class="bg-paper pl-5 py-2 font-500">from £6.00</td>
-</tr>
-<tr>
-<td class="bg-paper pl-5 py-2 font-500">Small rug</td>
-<td class="bg-paper pl-5 py-2 font-500">from £14.00</td>
-</tr>
-<tr>
-<td class="bg-paper pl-5 py-2 font-500">Medium rug</td>
-<td class="bg-paper pl-5 py-2 font-500">from £20.00</td>
-</tr>
-<tr>
-<td class="bg-paper pl-5 py-2 font-500">Large rug</td>
-<td class="bg-paper pl-5 py-2 font-500">from £31.00</td>
-</tr>
-</PriceTable>
-
-<button class="greenbutton"><a href="/">GO TO SERVICE</a></button>
-
-<FleurDivider></FleurDivider>
-
-<div class="buttoncontainer"><button class="greenbutton"><a>SERVICES</a></button>
-<button class="otherbutton"><a>GET A QUOTE</a></button></div>
+		</tr>
+		</PriceTable>
+
+		<div class="m-10%  mt-12% flex flex-wrap flex-justify-center">
+		<button class="outline-none bg-brand-action hover-bg-brand-action-hover:hover font-size-6 font-600 w-200px h-60px c-paper flex flex-items-center flex-justify-center relative b-solid b-rd-3 b-4 b-brand-action hover-b-brand-action-hover:hover whitespace-normal line-height-6 word-spacing-0.5 py-9" style="box-shadow: 0 0 0 3px rgba(255, 255, 255, .9) inset; letter-spacing: 0.05rem;"><a href="/" class="c-paper font-size-5">GO TO SERVICE</a></button>
+		</div>
+
+		<FleurDivider></FleurDivider>
+
+		<h2>Same day carpet cleaning</h2>
+
+		<PriceTable>
+		<tr>
+		<td class="bg-paper pl-5 py-2 font-500">Single Bedroom</td>
+		<td class="bg-paper pl-5 py-2 font-500">from £31.00</td>
+		</tr>
+		<tr>
+		<td class="bg-paper pl-5 py-2 font-500">Double Bedroom</td>
+		<td class="bg-paper pl-5 py-2 font-500">from £35.00</td>
+		</tr>
+		<tr>
+		<td class="bg-paper pl-5 py-2 font-500">Master Bedroom</td>
+		<td class="bg-paper pl-5 py-2 font-500">from £40.00</td>
+		</tr>
+		<tr>
+		<td class="bg-paper pl-5 py-2 font-500">Living Room</td>
+		<td class="bg-paper pl-5 py-2 font-500">from £43.00</td>
+		</tr>
+		<tr>
+		<td class="bg-paper pl-5 py-2 font-500">Through Lounge</td>
+		<td class="bg-paper pl-5 py-2 font-500">from £69.00</td>
+		</tr>
+		<tr>
+		<td class="bg-paper pl-5 py-2 font-500">Hallway</td>
+		<td class="bg-paper pl-5 py-2 font-500">from £21.00</td>
+		</tr>
+		<tr>
+		<td class="bg-paper pl-5 py-2 font-500">Flight of Stairs</td>
+		<td class="bg-paper pl-5 py-2 font-500">from £34.00</td>
+		</tr>
+		<tr>
+		<td class="bg-paper pl-5 py-2 font-500">Landing</td>
+		<td class="bg-paper pl-5 py-2 font-500">from £15.00</td>
+		</tr>
+		<tr>
+		<td class="bg-paper pl-5 py-2 font-500">Bathroom</td>
+		<td class="bg-paper pl-5 py-2 font-500">from £6.00</td>
+		</tr>
+		<tr>
+		<td class="bg-paper pl-5 py-2 font-500">Small rug</td>
+		<td class="bg-paper pl-5 py-2 font-500">from £14.00</td>
+		</tr>
+		<tr>
+		<td class="bg-paper pl-5 py-2 font-500">Medium rug</td>
+		<td class="bg-paper pl-5 py-2 font-500">from £20.00</td>
+		</tr>
+		<tr>
+		<td class="bg-paper pl-5 py-2 font-500">Large rug</td>
+		<td class="bg-paper pl-5 py-2 font-500">from £31.00</td>
+		</tr>
+		</PriceTable>
+
+		<div class="m-10%  mt-12% flex flex-wrap flex-justify-center">
+		<button class="outline-none bg-brand-action hover-bg-brand-action-hover:hover font-size-6 font-600 w-200px h-60px c-paper flex flex-items-center flex-justify-center relative b-solid b-rd-3 b-4 b-brand-action hover-b-brand-action-hover:hover whitespace-normal line-height-6 word-spacing-0.5 py-9" style="box-shadow: 0 0 0 3px rgba(255, 255, 255, .9) inset; letter-spacing: 0.05rem;"><a href="/" class="c-paper font-size-5">GO TO SERVICE</a></button>
+		</div>
+
+		<FleurDivider></FleurDivider>
+
+		<h2>Fast dry carpet cleaning</h2>
+
+		<PriceTable>
+		<tr>
+		<td class="bg-paper pl-5 py-2 font-500">Single Bedroom</td>
+		<td class="bg-paper pl-5 py-2 font-500">from £31.00</td>
+		</tr>
+		<tr>
+		<td class="bg-paper pl-5 py-2 font-500">Double Bedroom</td>
+		<td class="bg-paper pl-5 py-2 font-500">from £35.00</td>
+		</tr>
+		<tr>
+		<td class="bg-paper pl-5 py-2 font-500">Master Bedroom</td>
+		<td class="bg-paper pl-5 py-2 font-500">from £40.00</td>
+		</tr>
+		<tr>
+		<td class="bg-paper pl-5 py-2 font-500">Living Room</td>
+		<td class="bg-paper pl-5 py-2 font-500">from £43.00</td>
+		</tr>
+		<tr>
+		<td class="bg-paper pl-5 py-2 font-500">Through Lounge</td>
+		<td class="bg-paper pl-5 py-2 font-500">from £69.00</td>
+		</tr>
+		<tr>
+		<td class="bg-paper pl-5 py-2 font-500">Hallway</td>
+		<td class="bg-paper pl-5 py-2 font-500">from £21.00</td>
+		</tr>
+		<tr>
+		<td class="bg-paper pl-5 py-2 font-500">Flight of Stairs</td>
+		<td class="bg-paper pl-5 py-2 font-500">from £34.00</td>
+		</tr>
+		<tr>
+		<td class="bg-paper pl-5 py-2 font-500">Landing</td>
+		<td class="bg-paper pl-5 py-2 font-500">from £15.00</td>
+		</tr>
+		<tr>
+		<td class="bg-paper pl-5 py-2 font-500">Bathroom</td>
+		<td class="bg-paper pl-5 py-2 font-500">from £6.00</td>
+		</tr>
+		<tr>
+		<td class="bg-paper pl-5 py-2 font-500">Small rug</td>
+		<td class="bg-paper pl-5 py-2 font-500">from £14.00</td>
+		</tr>
+		<tr>
+		<td class="bg-paper pl-5 py-2 font-500">Medium rug</td>
+		<td class="bg-paper pl-5 py-2 font-500">from £20.00</td>
+		</tr>
+		<tr>
+		<td class="bg-paper pl-5 py-2 font-500">Large rug</td>
+		<td class="bg-paper pl-5 py-2 font-500">from £31.00</td>
+		</tr>
+		</PriceTable>
+
+		<div class="m-10%  mt-12% flex flex-wrap flex-justify-center">
+		<button class="outline-none bg-brand-action hover-bg-brand-action-hover:hover font-size-6 font-600 w-200px h-60px c-paper flex flex-items-center flex-justify-center relative b-solid b-rd-3 b-4 b-brand-action hover-b-brand-action-hover:hover whitespace-normal line-height-6 word-spacing-0.5 py-9" style="box-shadow: 0 0 0 3px rgba(255, 255, 255, .9) inset; letter-spacing: 0.05rem;"><a href="/" class="c-paper font-size-5">GO TO SERVICE</a></button>
+		</div>
+
+		<FleurDivider></FleurDivider>
+
+		<h2>Carpet stain removal</h2>
+
+		<PriceTable>
+		<tr>
+		<td class="bg-paper pl-5 py-2 font-500">Single Bedroom</td>
+		<td class="bg-paper pl-5 py-2 font-500">from £31.00</td>
+		</tr>
+		<tr>
+		<td class="bg-paper pl-5 py-2 font-500">Double Bedroom</td>
+		<td class="bg-paper pl-5 py-2 font-500">from £35.00</td>
+		</tr>
+		<tr>
+		<td class="bg-paper pl-5 py-2 font-500">Master Bedroom</td>
+		<td class="bg-paper pl-5 py-2 font-500">from £40.00</td>
+		</tr>
+		<tr>
+		<td class="bg-paper pl-5 py-2 font-500">Living Room</td>
+		<td class="bg-paper pl-5 py-2 font-500">from £43.00</td>
+		</tr>
+		<tr>
+		<td class="bg-paper pl-5 py-2 font-500">Through Lounge</td>
+		<td class="bg-paper pl-5 py-2 font-500">from £69.00</td>
+		</tr>
+		<tr>
+		<td class="bg-paper pl-5 py-2 font-500">Hallway</td>
+		<td class="bg-paper pl-5 py-2 font-500">from £21.00</td>
+		</tr>
+		<tr>
+		<td class="bg-paper pl-5 py-2 font-500">Flight of Stairs</td>
+		<td class="bg-paper pl-5 py-2 font-500">from £34.00</td>
+		</tr>
+		<tr>
+		<td class="bg-paper pl-5 py-2 font-500">Landing</td>
+		<td class="bg-paper pl-5 py-2 font-500">from £15.00</td>
+		</tr>
+		<tr>
+		<td class="bg-paper pl-5 py-2 font-500">Bathroom</td>
+		<td class="bg-paper pl-5 py-2 font-500">from £6.00</td>
+		</tr>
+		<tr>
+		<td class="bg-paper pl-5 py-2 font-500">Small rug</td>
+		<td class="bg-paper pl-5 py-2 font-500">from £14.00</td>
+		</tr>
+		<tr>
+		<td class="bg-paper pl-5 py-2 font-500">Medium rug</td>
+		<td class="bg-paper pl-5 py-2 font-500">from £20.00</td>
+		</tr>
+		<tr>
+		<td class="bg-paper pl-5 py-2 font-500">Large rug</td>
+		<td class="bg-paper pl-5 py-2 font-500">from £31.00</td>
+		</tr>
+		</PriceTable>
+
+		<div class="m-10%  mt-12% flex flex-wrap flex-justify-center">
+		<button class="outline-none bg-brand-action hover-bg-brand-action-hover:hover font-size-6 font-600 w-200px h-60px c-paper flex flex-items-center flex-justify-center relative b-solid b-rd-3 b-4 b-brand-action hover-b-brand-action-hover:hover whitespace-normal line-height-6 word-spacing-0.5 py-9" style="box-shadow: 0 0 0 3px rgba(255, 255, 255, .9) inset; letter-spacing: 0.05rem;"><a href="/" class="c-paper font-size-5">GO TO SERVICE</a></button>
+		</div>
+
+		<FleurDivider></FleurDivider>
+
+		<h2>Carpet stain protection</h2>
+
+		<PriceTable>
+		<tr>
+		<td class="bg-paper pl-5 py-2 font-500">Single Bedroom</td>
+		<td class="bg-paper pl-5 py-2 font-500">from £31.00</td>
+		</tr>
+		<tr>
+		<td class="bg-paper pl-5 py-2 font-500">Double Bedroom</td>
+		<td class="bg-paper pl-5 py-2 font-500">from £35.00</td>
+		</tr>
+		<tr>
+		<td class="bg-paper pl-5 py-2 font-500">Master Bedroom</td>
+		<td class="bg-paper pl-5 py-2 font-500">from £40.00</td>
+		</tr>
+		<tr>
+		<td class="bg-paper pl-5 py-2 font-500">Living Room</td>
+		<td class="bg-paper pl-5 py-2 font-500">from £43.00</td>
+		</tr>
+		<tr>
+		<td class="bg-paper pl-5 py-2 font-500">Through Lounge</td>
+		<td class="bg-paper pl-5 py-2 font-500">from £69.00</td>
+		</tr>
+		<tr>
+		<td class="bg-paper pl-5 py-2 font-500">Hallway</td>
+		<td class="bg-paper pl-5 py-2 font-500">from £21.00</td>
+		</tr>
+		<tr>
+		<td class="bg-paper pl-5 py-2 font-500">Flight of Stairs</td>
+		<td class="bg-paper pl-5 py-2 font-500">from £34.00</td>
+		</tr>
+		<tr>
+		<td class="bg-paper pl-5 py-2 font-500">Landing</td>
+		<td class="bg-paper pl-5 py-2 font-500">from £15.00</td>
+		</tr>
+		<tr>
+		<td class="bg-paper pl-5 py-2 font-500">Bathroom</td>
+		<td class="bg-paper pl-5 py-2 font-500">from £6.00</td>
+		</tr>
+		<tr>
+		<td class="bg-paper pl-5 py-2 font-500">Small rug</td>
+		<td class="bg-paper pl-5 py-2 font-500">from £14.00</td>
+		</tr>
+		<tr>
+		<td class="bg-paper pl-5 py-2 font-500">Medium rug</td>
+		<td class="bg-paper pl-5 py-2 font-500">from £20.00</td>
+		</tr>
+		<tr>
+		<td class="bg-paper pl-5 py-2 font-500">Large rug</td>
+		<td class="bg-paper pl-5 py-2 font-500">from £31.00</td>
+		</tr>
+		</PriceTable>
+
+		<div class="m-10%  mt-12% flex flex-wrap flex-justify-center">
+		<button class="outline-none bg-brand-action hover-bg-brand-action-hover:hover font-size-6 font-600 w-200px h-60px c-paper flex flex-items-center flex-justify-center relative b-solid b-rd-3 b-4 b-brand-action hover-b-brand-action-hover:hover whitespace-normal line-height-6 word-spacing-0.5 py-9" style="box-shadow: 0 0 0 3px rgba(255, 255, 255, .9) inset; letter-spacing: 0.05rem;"><a href="/" class="c-paper font-size-5">GO TO SERVICE</a></button>
+		</div>
+
+		<FleurDivider></FleurDivider>
+
+		<h2>Commercial carpet cleaning</h2>
+
+		<PriceTable>
+		<tr>
+		<td class="bg-paper pl-5 py-2 font-500">Single Bedroom</td>
+		<td class="bg-paper pl-5 py-2 font-500">from £31.00</td>
+		</tr>
+		<tr>
+		<td class="bg-paper pl-5 py-2 font-500">Double Bedroom</td>
+		<td class="bg-paper pl-5 py-2 font-500">from £35.00</td>
+		</tr>
+		<tr>
+		<td class="bg-paper pl-5 py-2 font-500">Master Bedroom</td>
+		<td class="bg-paper pl-5 py-2 font-500">from £40.00</td>
+		</tr>
+		<tr>
+		<td class="bg-paper pl-5 py-2 font-500">Living Room</td>
+		<td class="bg-paper pl-5 py-2 font-500">from £43.00</td>
+		</tr>
+		<tr>
+		<td class="bg-paper pl-5 py-2 font-500">Through Lounge</td>
+		<td class="bg-paper pl-5 py-2 font-500">from £69.00</td>
+		</tr>
+		<tr>
+		<td class="bg-paper pl-5 py-2 font-500">Hallway</td>
+		<td class="bg-paper pl-5 py-2 font-500">from £21.00</td>
+		</tr>
+		<tr>
+		<td class="bg-paper pl-5 py-2 font-500">Flight of Stairs</td>
+		<td class="bg-paper pl-5 py-2 font-500">from £34.00</td>
+		</tr>
+		<tr>
+		<td class="bg-paper pl-5 py-2 font-500">Landing</td>
+		<td class="bg-paper pl-5 py-2 font-500">from £15.00</td>
+		</tr>
+		<tr>
+		<td class="bg-paper pl-5 py-2 font-500">Bathroom</td>
+		<td class="bg-paper pl-5 py-2 font-500">from £6.00</td>
+		</tr>
+		<tr>
+		<td class="bg-paper pl-5 py-2 font-500">Small rug</td>
+		<td class="bg-paper pl-5 py-2 font-500">from £14.00</td>
+		</tr>
+		<tr>
+		<td class="bg-paper pl-5 py-2 font-500">Medium rug</td>
+		<td class="bg-paper pl-5 py-2 font-500">from £20.00</td>
+		</tr>
+		<tr>
+		<td class="bg-paper pl-5 py-2 font-500">Large rug</td>
+		<td class="bg-paper pl-5 py-2 font-500">from £31.00</td>
+		</tr>
+		</PriceTable>
+
+		<div class="m-10%  mt-12% flex flex-wrap flex-justify-center">
+		<button class="outline-none bg-brand-action hover-bg-brand-action-hover:hover font-size-6 font-600 w-200px h-60px c-paper flex flex-items-center flex-justify-center relative b-solid b-rd-3 b-4 b-brand-action hover-b-brand-action-hover:hover whitespace-normal line-height-6 word-spacing-0.5 py-9" style="box-shadow: 0 0 0 3px rgba(255, 255, 255, .9) inset; letter-spacing: 0.05rem;"><a href="/" class="c-paper font-size-5">GO TO SERVICE</a></button>
+		</div>
+
+		<FleurDivider></FleurDivider>
+
+		<h2>Residential carpet cleaning</h2>
+
+		<PriceTable>
+		<tr>
+		<td class="bg-paper pl-5 py-2 font-500">Single Bedroom</td>
+		<td class="bg-paper pl-5 py-2 font-500">from £31.00</td>
+		</tr>
+		<tr>
+		<td class="bg-paper pl-5 py-2 font-500">Double Bedroom</td>
+		<td class="bg-paper pl-5 py-2 font-500">from £35.00</td>
+		</tr>
+		<tr>
+		<td class="bg-paper pl-5 py-2 font-500">Master Bedroom</td>
+		<td class="bg-paper pl-5 py-2 font-500">from £40.00</td>
+		</tr>
+		<tr>
+		<td class="bg-paper pl-5 py-2 font-500">Living Room</td>
+		<td class="bg-paper pl-5 py-2 font-500">from £43.00</td>
+		</tr>
+		<tr>
+		<td class="bg-paper pl-5 py-2 font-500">Through Lounge</td>
+		<td class="bg-paper pl-5 py-2 font-500">from £69.00</td>
+		</tr>
+		<tr>
+		<td class="bg-paper pl-5 py-2 font-500">Hallway</td>
+		<td class="bg-paper pl-5 py-2 font-500">from £21.00</td>
+		</tr>
+		<tr>
+		<td class="bg-paper pl-5 py-2 font-500">Flight of Stairs</td>
+		<td class="bg-paper pl-5 py-2 font-500">from £34.00</td>
+		</tr>
+		<tr>
+		<td class="bg-paper pl-5 py-2 font-500">Landing</td>
+		<td class="bg-paper pl-5 py-2 font-500">from £15.00</td>
+		</tr>
+		<tr>
+		<td class="bg-paper pl-5 py-2 font-500">Bathroom</td>
+		<td class="bg-paper pl-5 py-2 font-500">from £6.00</td>
+		</tr>
+		<tr>
+		<td class="bg-paper pl-5 py-2 font-500">Small rug</td>
+		<td class="bg-paper pl-5 py-2 font-500">from £14.00</td>
+		</tr>
+		<tr>
+		<td class="bg-paper pl-5 py-2 font-500">Medium rug</td>
+		<td class="bg-paper pl-5 py-2 font-500">from £20.00</td>
+		</tr>
+		<tr>
+		<td class="bg-paper pl-5 py-2 font-500">Large rug</td>
+		<td class="bg-paper pl-5 py-2 font-500">from £31.00</td>
+		</tr>
+		</PriceTable>
+
+		<div class="m-10%  mt-12% flex flex-wrap flex-justify-center">
+		<button class="outline-none bg-brand-action hover-bg-brand-action-hover:hover font-size-6 font-600 w-200px h-60px c-paper flex flex-items-center flex-justify-center relative b-solid b-rd-3 b-4 b-brand-action hover-b-brand-action-hover:hover whitespace-normal line-height-6 word-spacing-0.5 py-9" style="box-shadow: 0 0 0 3px rgba(255, 255, 255, .9) inset; letter-spacing: 0.05rem;"><a href="/" class="c-paper font-size-5">GO TO SERVICE</a></button>
+		</div>
+
+		<FleurDivider></FleurDivider>
+
+		<h2>Office carpet cleaning</h2>
+
+		<PriceTable>
+		<tr>
+		<td class="bg-paper pl-5 py-2 font-500">Single Bedroom</td>
+		<td class="bg-paper pl-5 py-2 font-500">from £31.00</td>
+		</tr>
+		<tr>
+		<td class="bg-paper pl-5 py-2 font-500">Double Bedroom</td>
+		<td class="bg-paper pl-5 py-2 font-500">from £35.00</td>
+		</tr>
+		<tr>
+		<td class="bg-paper pl-5 py-2 font-500">Master Bedroom</td>
+		<td class="bg-paper pl-5 py-2 font-500">from £40.00</td>
+		</tr>
+		<tr>
+		<td class="bg-paper pl-5 py-2 font-500">Living Room</td>
+		<td class="bg-paper pl-5 py-2 font-500">from £43.00</td>
+		</tr>
+		<tr>
+		<td class="bg-paper pl-5 py-2 font-500">Through Lounge</td>
+		<td class="bg-paper pl-5 py-2 font-500">from £69.00</td>
+		</tr>
+		<tr>
+		<td class="bg-paper pl-5 py-2 font-500">Hallway</td>
+		<td class="bg-paper pl-5 py-2 font-500">from £21.00</td>
+		</tr>
+		<tr>
+		<td class="bg-paper pl-5 py-2 font-500">Flight of Stairs</td>
+		<td class="bg-paper pl-5 py-2 font-500">from £34.00</td>
+		</tr>
+		<tr>
+		<td class="bg-paper pl-5 py-2 font-500">Landing</td>
+		<td class="bg-paper pl-5 py-2 font-500">from £15.00</td>
+		</tr>
+		<tr>
+		<td class="bg-paper pl-5 py-2 font-500">Bathroom</td>
+		<td class="bg-paper pl-5 py-2 font-500">from £6.00</td>
+		</tr>
+		<tr>
+		<td class="bg-paper pl-5 py-2 font-500">Small rug</td>
+		<td class="bg-paper pl-5 py-2 font-500">from £14.00</td>
+		</tr>
+		<tr>
+		<td class="bg-paper pl-5 py-2 font-500">Medium rug</td>
+		<td class="bg-paper pl-5 py-2 font-500">from £20.00</td>
+		</tr>
+		<tr>
+		<td class="bg-paper pl-5 py-2 font-500">Large rug</td>
+		<td class="bg-paper pl-5 py-2 font-500">from £31.00</td>
+		</tr>
+		</PriceTable>
+
+		<div class="m-10%  mt-12% flex flex-wrap flex-justify-center">
+		<button class="outline-none bg-brand-action hover-bg-brand-action-hover:hover font-size-6 font-600 w-200px h-60px c-paper flex flex-items-center flex-justify-center relative b-solid b-rd-3 b-4 b-brand-action hover-b-brand-action-hover:hover whitespace-normal line-height-6 word-spacing-0.5 py-9" style="box-shadow: 0 0 0 3px rgba(255, 255, 255, .9) inset; letter-spacing: 0.05rem;"><a href="/" class="c-paper font-size-5">GO TO SERVICE</a></button>
+		</div>
+
+		<FleurDivider></FleurDivider>
+
+		<h2>Sofa cleaning</h2>
+
+		<PriceTable>
+		<tr>
+		<td class="bg-paper pl-5 py-2 font-500">Single Bedroom</td>
+		<td class="bg-paper pl-5 py-2 font-500">from £31.00</td>
+		</tr>
+		<tr>
+		<td class="bg-paper pl-5 py-2 font-500">Double Bedroom</td>
+		<td class="bg-paper pl-5 py-2 font-500">from £35.00</td>
+		</tr>
+		<tr>
+		<td class="bg-paper pl-5 py-2 font-500">Master Bedroom</td>
+		<td class="bg-paper pl-5 py-2 font-500">from £40.00</td>
+		</tr>
+		<tr>
+		<td class="bg-paper pl-5 py-2 font-500">Living Room</td>
+		<td class="bg-paper pl-5 py-2 font-500">from £43.00</td>
+		</tr>
+		<tr>
+		<td class="bg-paper pl-5 py-2 font-500">Through Lounge</td>
+		<td class="bg-paper pl-5 py-2 font-500">from £69.00</td>
+		</tr>
+		<tr>
+		<td class="bg-paper pl-5 py-2 font-500">Hallway</td>
+		<td class="bg-paper pl-5 py-2 font-500">from £21.00</td>
+		</tr>
+		<tr>
+		<td class="bg-paper pl-5 py-2 font-500">Flight of Stairs</td>
+		<td class="bg-paper pl-5 py-2 font-500">from £34.00</td>
+		</tr>
+		<tr>
+		<td class="bg-paper pl-5 py-2 font-500">Landing</td>
+		<td class="bg-paper pl-5 py-2 font-500">from £15.00</td>
+		</tr>
+		<tr>
+		<td class="bg-paper pl-5 py-2 font-500">Bathroom</td>
+		<td class="bg-paper pl-5 py-2 font-500">from £6.00</td>
+		</tr>
+		<tr>
+		<td class="bg-paper pl-5 py-2 font-500">Small rug</td>
+		<td class="bg-paper pl-5 py-2 font-500">from £14.00</td>
+		</tr>
+		<tr>
+		<td class="bg-paper pl-5 py-2 font-500">Medium rug</td>
+		<td class="bg-paper pl-5 py-2 font-500">from £20.00</td>
+		</tr>
+		<tr>
+		<td class="bg-paper pl-5 py-2 font-500">Large rug</td>
+		<td class="bg-paper pl-5 py-2 font-500">from £31.00</td>
+		</tr>
+		</PriceTable>
+
+		<div class="m-10%  mt-12% flex flex-wrap flex-justify-center">
+		<button class="outline-none bg-brand-action hover-bg-brand-action-hover:hover font-size-6 font-600 w-200px h-60px c-paper flex flex-items-center flex-justify-center relative b-solid b-rd-3 b-4 b-brand-action hover-b-brand-action-hover:hover whitespace-normal line-height-6 word-spacing-0.5 py-9" style="box-shadow: 0 0 0 3px rgba(255, 255, 255, .9) inset; letter-spacing: 0.05rem;"><a href="/" class="c-paper font-size-5">GO TO SERVICE</a></button>
+		</div>
+
+		<FleurDivider></FleurDivider>
+
+		<h2>Leather sofa cleaning</h2>
+
+		<PriceTable>
+		<tr>
+		<td class="bg-paper pl-5 py-2 font-500">Single Bedroom</td>
+		<td class="bg-paper pl-5 py-2 font-500">from £31.00</td>
+		</tr>
+		<tr>
+		<td class="bg-paper pl-5 py-2 font-500">Double Bedroom</td>
+		<td class="bg-paper pl-5 py-2 font-500">from £35.00</td>
+		</tr>
+		<tr>
+		<td class="bg-paper pl-5 py-2 font-500">Master Bedroom</td>
+		<td class="bg-paper pl-5 py-2 font-500">from £40.00</td>
+		</tr>
+		<tr>
+		<td class="bg-paper pl-5 py-2 font-500">Living Room</td>
+		<td class="bg-paper pl-5 py-2 font-500">from £43.00</td>
+		</tr>
+		<tr>
+		<td class="bg-paper pl-5 py-2 font-500">Through Lounge</td>
+		<td class="bg-paper pl-5 py-2 font-500">from £69.00</td>
+		</tr>
+		<tr>
+		<td class="bg-paper pl-5 py-2 font-500">Hallway</td>
+		<td class="bg-paper pl-5 py-2 font-500">from £21.00</td>
+		</tr>
+		<tr>
+		<td class="bg-paper pl-5 py-2 font-500">Flight of Stairs</td>
+		<td class="bg-paper pl-5 py-2 font-500">from £34.00</td>
+		</tr>
+		<tr>
+		<td class="bg-paper pl-5 py-2 font-500">Landing</td>
+		<td class="bg-paper pl-5 py-2 font-500">from £15.00</td>
+		</tr>
+		<tr>
+		<td class="bg-paper pl-5 py-2 font-500">Bathroom</td>
+		<td class="bg-paper pl-5 py-2 font-500">from £6.00</td>
+		</tr>
+		<tr>
+		<td class="bg-paper pl-5 py-2 font-500">Small rug</td>
+		<td class="bg-paper pl-5 py-2 font-500">from £14.00</td>
+		</tr>
+		<tr>
+		<td class="bg-paper pl-5 py-2 font-500">Medium rug</td>
+		<td class="bg-paper pl-5 py-2 font-500">from £20.00</td>
+		</tr>
+		<tr>
+		<td class="bg-paper pl-5 py-2 font-500">Large rug</td>
+		<td class="bg-paper pl-5 py-2 font-500">from £31.00</td>
+		</tr>
+		</PriceTable>
+
+		<div class="m-10%  mt-12% flex flex-wrap flex-justify-center">
+		<button class="outline-none bg-brand-action hover-bg-brand-action-hover:hover font-size-6 font-600 w-200px h-60px c-paper flex flex-items-center flex-justify-center relative b-solid b-rd-3 b-4 b-brand-action hover-b-brand-action-hover:hover whitespace-normal line-height-6 word-spacing-0.5 py-9" style="box-shadow: 0 0 0 3px rgba(255, 255, 255, .9) inset; letter-spacing: 0.05rem;"><a href="/" class="c-paper font-size-5">GO TO SERVICE</a></button>
+		</div>
+
+		<FleurDivider></FleurDivider>
+
+		<h2>Furniture cleaning</h2>
+
+		<PriceTable>
+		<tr>
+		<td class="bg-paper pl-5 py-2 font-500">Single Bedroom</td>
+		<td class="bg-paper pl-5 py-2 font-500">from £31.00</td>
+		</tr>
+		<tr>
+		<td class="bg-paper pl-5 py-2 font-500">Double Bedroom</td>
+		<td class="bg-paper pl-5 py-2 font-500">from £35.00</td>
+		</tr>
+		<tr>
+		<td class="bg-paper pl-5 py-2 font-500">Master Bedroom</td>
+		<td class="bg-paper pl-5 py-2 font-500">from £40.00</td>
+		</tr>
+		<tr>
+		<td class="bg-paper pl-5 py-2 font-500">Living Room</td>
+		<td class="bg-paper pl-5 py-2 font-500">from £43.00</td>
+		</tr>
+		<tr>
+		<td class="bg-paper pl-5 py-2 font-500">Through Lounge</td>
+		<td class="bg-paper pl-5 py-2 font-500">from £69.00</td>
+		</tr>
+		<tr>
+		<td class="bg-paper pl-5 py-2 font-500">Hallway</td>
+		<td class="bg-paper pl-5 py-2 font-500">from £21.00</td>
+		</tr>
+		<tr>
+		<td class="bg-paper pl-5 py-2 font-500">Flight of Stairs</td>
+		<td class="bg-paper pl-5 py-2 font-500">from £34.00</td>
+		</tr>
+		<tr>
+		<td class="bg-paper pl-5 py-2 font-500">Landing</td>
+		<td class="bg-paper pl-5 py-2 font-500">from £15.00</td>
+		</tr>
+		<tr>
+		<td class="bg-paper pl-5 py-2 font-500">Bathroom</td>
+		<td class="bg-paper pl-5 py-2 font-500">from £6.00</td>
+		</tr>
+		<tr>
+		<td class="bg-paper pl-5 py-2 font-500">Small rug</td>
+		<td class="bg-paper pl-5 py-2 font-500">from £14.00</td>
+		</tr>
+		<tr>
+		<td class="bg-paper pl-5 py-2 font-500">Medium rug</td>
+		<td class="bg-paper pl-5 py-2 font-500">from £20.00</td>
+		</tr>
+		<tr>
+		<td class="bg-paper pl-5 py-2 font-500">Large rug</td>
+		<td class="bg-paper pl-5 py-2 font-500">from £31.00</td>
+		</tr>
+		</PriceTable>
+
+		<div class="m-10%  mt-12% flex flex-wrap flex-justify-center">
+		<button class="outline-none bg-brand-action hover-bg-brand-action-hover:hover font-size-6 font-600 w-200px h-60px c-paper flex flex-items-center flex-justify-center relative b-solid b-rd-3 b-4 b-brand-action hover-b-brand-action-hover:hover whitespace-normal line-height-6 word-spacing-0.5 py-9" style="box-shadow: 0 0 0 3px rgba(255, 255, 255, .9) inset; letter-spacing: 0.05rem;"><a href="/" class="c-paper font-size-5">GO TO SERVICE</a></button>
+		</div>
+
+		<FleurDivider></FleurDivider>
+
+		<h2>Mattress cleaning</h2>
+
+		<PriceTable>
+		<tr>
+		<td class="bg-paper pl-5 py-2 font-500">Single Bedroom</td>
+		<td class="bg-paper pl-5 py-2 font-500">from £31.00</td>
+		</tr>
+		<tr>
+		<td class="bg-paper pl-5 py-2 font-500">Double Bedroom</td>
+		<td class="bg-paper pl-5 py-2 font-500">from £35.00</td>
+		</tr>
+		<tr>
+		<td class="bg-paper pl-5 py-2 font-500">Master Bedroom</td>
+		<td class="bg-paper pl-5 py-2 font-500">from £40.00</td>
+		</tr>
+		<tr>
+		<td class="bg-paper pl-5 py-2 font-500">Living Room</td>
+		<td class="bg-paper pl-5 py-2 font-500">from £43.00</td>
+		</tr>
+		<tr>
+		<td class="bg-paper pl-5 py-2 font-500">Through Lounge</td>
+		<td class="bg-paper pl-5 py-2 font-500">from £69.00</td>
+		</tr>
+		<tr>
+		<td class="bg-paper pl-5 py-2 font-500">Hallway</td>
+		<td class="bg-paper pl-5 py-2 font-500">from £21.00</td>
+		</tr>
+		<tr>
+		<td class="bg-paper pl-5 py-2 font-500">Flight of Stairs</td>
+		<td class="bg-paper pl-5 py-2 font-500">from £34.00</td>
+		</tr>
+		<tr>
+		<td class="bg-paper pl-5 py-2 font-500">Landing</td>
+		<td class="bg-paper pl-5 py-2 font-500">from £15.00</td>
+		</tr>
+		<tr>
+		<td class="bg-paper pl-5 py-2 font-500">Bathroom</td>
+		<td class="bg-paper pl-5 py-2 font-500">from £6.00</td>
+		</tr>
+		<tr>
+		<td class="bg-paper pl-5 py-2 font-500">Small rug</td>
+		<td class="bg-paper pl-5 py-2 font-500">from £14.00</td>
+		</tr>
+		<tr>
+		<td class="bg-paper pl-5 py-2 font-500">Medium rug</td>
+		<td class="bg-paper pl-5 py-2 font-500">from £20.00</td>
+		</tr>
+		<tr>
+		<td class="bg-paper pl-5 py-2 font-500">Large rug</td>
+		<td class="bg-paper pl-5 py-2 font-500">from £31.00</td>
+		</tr>
+		</PriceTable>
+
+		<div class="m-10%  mt-12% flex flex-wrap flex-justify-center">
+		<button class="outline-none bg-brand-action hover-bg-brand-action-hover:hover font-size-6 font-600 w-200px h-60px c-paper flex flex-items-center flex-justify-center relative b-solid b-rd-3 b-4 b-brand-action hover-b-brand-action-hover:hover whitespace-normal line-height-6 word-spacing-0.5 py-9" style="box-shadow: 0 0 0 3px rgba(255, 255, 255, .9) inset; letter-spacing: 0.05rem;"><a href="/" class="c-paper font-size-5">GO TO SERVICE</a></button>
+		</div>
+
+		<FleurDivider></FleurDivider>
+
+		<h2>Pillow cleaning</h2>
+
+		<PriceTable>
+		<tr>
+		<td class="bg-paper pl-5 py-2 font-500">Single Bedroom</td>
+		<td class="bg-paper pl-5 py-2 font-500">from £31.00</td>
+		</tr>
+		<tr>
+		<td class="bg-paper pl-5 py-2 font-500">Double Bedroom</td>
+		<td class="bg-paper pl-5 py-2 font-500">from £35.00</td>
+		</tr>
+		<tr>
+		<td class="bg-paper pl-5 py-2 font-500">Master Bedroom</td>
+		<td class="bg-paper pl-5 py-2 font-500">from £40.00</td>
+		</tr>
+		<tr>
+		<td class="bg-paper pl-5 py-2 font-500">Living Room</td>
+		<td class="bg-paper pl-5 py-2 font-500">from £43.00</td>
+		</tr>
+		<tr>
+		<td class="bg-paper pl-5 py-2 font-500">Through Lounge</td>
+		<td class="bg-paper pl-5 py-2 font-500">from £69.00</td>
+		</tr>
+		<tr>
+		<td class="bg-paper pl-5 py-2 font-500">Hallway</td>
+		<td class="bg-paper pl-5 py-2 font-500">from £21.00</td>
+		</tr>
+		<tr>
+		<td class="bg-paper pl-5 py-2 font-500">Flight of Stairs</td>
+		<td class="bg-paper pl-5 py-2 font-500">from £34.00</td>
+		</tr>
+		<tr>
+		<td class="bg-paper pl-5 py-2 font-500">Landing</td>
+		<td class="bg-paper pl-5 py-2 font-500">from £15.00</td>
+		</tr>
+		<tr>
+		<td class="bg-paper pl-5 py-2 font-500">Bathroom</td>
+		<td class="bg-paper pl-5 py-2 font-500">from £6.00</td>
+		</tr>
+		<tr>
+		<td class="bg-paper pl-5 py-2 font-500">Small rug</td>
+		<td class="bg-paper pl-5 py-2 font-500">from £14.00</td>
+		</tr>
+		<tr>
+		<td class="bg-paper pl-5 py-2 font-500">Medium rug</td>
+		<td class="bg-paper pl-5 py-2 font-500">from £20.00</td>
+		</tr>
+		<tr>
+		<td class="bg-paper pl-5 py-2 font-500">Large rug</td>
+		<td class="bg-paper pl-5 py-2 font-500">from £31.00</td>
+		</tr>
+		</PriceTable>
+
+		<div class="m-10%  mt-12% flex flex-wrap flex-justify-center">
+		<button class="outline-none bg-brand-action hover-bg-brand-action-hover:hover font-size-6 font-600 w-200px h-60px c-paper flex flex-items-center flex-justify-center relative b-solid b-rd-3 b-4 b-brand-action hover-b-brand-action-hover:hover whitespace-normal line-height-6 word-spacing-0.5 py-9" style="box-shadow: 0 0 0 3px rgba(255, 255, 255, .9) inset; letter-spacing: 0.05rem;"><a href="/" class="c-paper font-size-5">GO TO SERVICE</a></button>
+		</div>
+
+		<FleurDivider></FleurDivider>
+
+		<h2>Upholstery stain removal</h2>
+
+		<PriceTable>
+		<tr>
+		<td class="bg-paper pl-5 py-2 font-500">Single Bedroom</td>
+		<td class="bg-paper pl-5 py-2 font-500">from £31.00</td>
+		</tr>
+		<tr>
+		<td class="bg-paper pl-5 py-2 font-500">Double Bedroom</td>
+		<td class="bg-paper pl-5 py-2 font-500">from £35.00</td>
+		</tr>
+		<tr>
+		<td class="bg-paper pl-5 py-2 font-500">Master Bedroom</td>
+		<td class="bg-paper pl-5 py-2 font-500">from £40.00</td>
+		</tr>
+		<tr>
+		<td class="bg-paper pl-5 py-2 font-500">Living Room</td>
+		<td class="bg-paper pl-5 py-2 font-500">from £43.00</td>
+		</tr>
+		<tr>
+		<td class="bg-paper pl-5 py-2 font-500">Through Lounge</td>
+		<td class="bg-paper pl-5 py-2 font-500">from £69.00</td>
+		</tr>
+		<tr>
+		<td class="bg-paper pl-5 py-2 font-500">Hallway</td>
+		<td class="bg-paper pl-5 py-2 font-500">from £21.00</td>
+		</tr>
+		<tr>
+		<td class="bg-paper pl-5 py-2 font-500">Flight of Stairs</td>
+		<td class="bg-paper pl-5 py-2 font-500">from £34.00</td>
+		</tr>
+		<tr>
+		<td class="bg-paper pl-5 py-2 font-500">Landing</td>
+		<td class="bg-paper pl-5 py-2 font-500">from £15.00</td>
+		</tr>
+		<tr>
+		<td class="bg-paper pl-5 py-2 font-500">Bathroom</td>
+		<td class="bg-paper pl-5 py-2 font-500">from £6.00</td>
+		</tr>
+		<tr>
+		<td class="bg-paper pl-5 py-2 font-500">Small rug</td>
+		<td class="bg-paper pl-5 py-2 font-500">from £14.00</td>
+		</tr>
+		<tr>
+		<td class="bg-paper pl-5 py-2 font-500">Medium rug</td>
+		<td class="bg-paper pl-5 py-2 font-500">from £20.00</td>
+		</tr>
+		<tr>
+		<td class="bg-paper pl-5 py-2 font-500">Large rug</td>
+		<td class="bg-paper pl-5 py-2 font-500">from £31.00</td>
+		</tr>
+		</PriceTable>
+
+		<div class="m-10%  mt-12% flex flex-wrap flex-justify-center">
+		<button class="outline-none bg-brand-action hover-bg-brand-action-hover:hover font-size-6 font-600 w-200px h-60px c-paper flex flex-items-center flex-justify-center relative b-solid b-rd-3 b-4 b-brand-action hover-b-brand-action-hover:hover whitespace-normal line-height-6 word-spacing-0.5 py-9" style="box-shadow: 0 0 0 3px rgba(255, 255, 255, .9) inset; letter-spacing: 0.05rem;"><a href="/" class="c-paper font-size-5">GO TO SERVICE</a></button>
+		</div>
+
+		<FleurDivider></FleurDivider>
+
+		<h2>Upholstery stain protection</h2>
+
+		<PriceTable>
+		<tr>
+		<td class="bg-paper pl-5 py-2 font-500">Single Bedroom</td>
+		<td class="bg-paper pl-5 py-2 font-500">from £31.00</td>
+		</tr>
+		<tr>
+		<td class="bg-paper pl-5 py-2 font-500">Double Bedroom</td>
+		<td class="bg-paper pl-5 py-2 font-500">from £35.00</td>
+		</tr>
+		<tr>
+		<td class="bg-paper pl-5 py-2 font-500">Master Bedroom</td>
+		<td class="bg-paper pl-5 py-2 font-500">from £40.00</td>
+		</tr>
+		<tr>
+		<td class="bg-paper pl-5 py-2 font-500">Living Room</td>
+		<td class="bg-paper pl-5 py-2 font-500">from £43.00</td>
+		</tr>
+		<tr>
+		<td class="bg-paper pl-5 py-2 font-500">Through Lounge</td>
+		<td class="bg-paper pl-5 py-2 font-500">from £69.00</td>
+		</tr>
+		<tr>
+		<td class="bg-paper pl-5 py-2 font-500">Hallway</td>
+		<td class="bg-paper pl-5 py-2 font-500">from £21.00</td>
+		</tr>
+		<tr>
+		<td class="bg-paper pl-5 py-2 font-500">Flight of Stairs</td>
+		<td class="bg-paper pl-5 py-2 font-500">from £34.00</td>
+		</tr>
+		<tr>
+		<td class="bg-paper pl-5 py-2 font-500">Landing</td>
+		<td class="bg-paper pl-5 py-2 font-500">from £15.00</td>
+		</tr>
+		<tr>
+		<td class="bg-paper pl-5 py-2 font-500">Bathroom</td>
+		<td class="bg-paper pl-5 py-2 font-500">from £6.00</td>
+		</tr>
+		<tr>
+		<td class="bg-paper pl-5 py-2 font-500">Small rug</td>
+		<td class="bg-paper pl-5 py-2 font-500">from £14.00</td>
+		</tr>
+		<tr>
+		<td class="bg-paper pl-5 py-2 font-500">Medium rug</td>
+		<td class="bg-paper pl-5 py-2 font-500">from £20.00</td>
+		</tr>
+		<tr>
+		<td class="bg-paper pl-5 py-2 font-500">Large rug</td>
+		<td class="bg-paper pl-5 py-2 font-500">from £31.00</td>
+		</tr>
+		</PriceTable>
+
+		<div class="m-10%  mt-12% flex flex-wrap flex-justify-center">
+		<button class="outline-none bg-brand-action hover-bg-brand-action-hover:hover font-size-6 font-600 w-200px h-60px c-paper flex flex-items-center flex-justify-center relative b-solid b-rd-3 b-4 b-brand-action hover-b-brand-action-hover:hover whitespace-normal line-height-6 word-spacing-0.5 py-9" style="box-shadow: 0 0 0 3px rgba(255, 255, 255, .9) inset; letter-spacing: 0.05rem;"><a href="/" class="c-paper font-size-5">GO TO SERVICE</a></button>
+		</div>
+
+		<FleurDivider></FleurDivider>
+
+		<h2>Rug steam cleaning</h2>
+
+		<PriceTable>
+		<tr>
+		<td class="bg-paper pl-5 py-2 font-500">Single Bedroom</td>
+		<td class="bg-paper pl-5 py-2 font-500">from £31.00</td>
+		</tr>
+		<tr>
+		<td class="bg-paper pl-5 py-2 font-500">Double Bedroom</td>
+		<td class="bg-paper pl-5 py-2 font-500">from £35.00</td>
+		</tr>
+		<tr>
+		<td class="bg-paper pl-5 py-2 font-500">Master Bedroom</td>
+		<td class="bg-paper pl-5 py-2 font-500">from £40.00</td>
+		</tr>
+		<tr>
+		<td class="bg-paper pl-5 py-2 font-500">Living Room</td>
+		<td class="bg-paper pl-5 py-2 font-500">from £43.00</td>
+		</tr>
+		<tr>
+		<td class="bg-paper pl-5 py-2 font-500">Through Lounge</td>
+		<td class="bg-paper pl-5 py-2 font-500">from £69.00</td>
+		</tr>
+		<tr>
+		<td class="bg-paper pl-5 py-2 font-500">Hallway</td>
+		<td class="bg-paper pl-5 py-2 font-500">from £21.00</td>
+		</tr>
+		<tr>
+		<td class="bg-paper pl-5 py-2 font-500">Flight of Stairs</td>
+		<td class="bg-paper pl-5 py-2 font-500">from £34.00</td>
+		</tr>
+		<tr>
+		<td class="bg-paper pl-5 py-2 font-500">Landing</td>
+		<td class="bg-paper pl-5 py-2 font-500">from £15.00</td>
+		</tr>
+		<tr>
+		<td class="bg-paper pl-5 py-2 font-500">Bathroom</td>
+		<td class="bg-paper pl-5 py-2 font-500">from £6.00</td>
+		</tr>
+		<tr>
+		<td class="bg-paper pl-5 py-2 font-500">Small rug</td>
+		<td class="bg-paper pl-5 py-2 font-500">from £14.00</td>
+		</tr>
+		<tr>
+		<td class="bg-paper pl-5 py-2 font-500">Medium rug</td>
+		<td class="bg-paper pl-5 py-2 font-500">from £20.00</td>
+		</tr>
+		<tr>
+		<td class="bg-paper pl-5 py-2 font-500">Large rug</td>
+		<td class="bg-paper pl-5 py-2 font-500">from £31.00</td>
+		</tr>
+		</PriceTable>
+
+		<div class="m-10%  mt-12% flex flex-wrap flex-justify-center">
+		<button class="outline-none bg-brand-action hover-bg-brand-action-hover:hover font-size-6 font-600 w-200px h-60px c-paper flex flex-items-center flex-justify-center relative b-solid b-rd-3 b-4 b-brand-action hover-b-brand-action-hover:hover whitespace-normal line-height-6 word-spacing-0.5 py-9" style="box-shadow: 0 0 0 3px rgba(255, 255, 255, .9) inset; letter-spacing: 0.05rem;"><a href="/" class="c-paper font-size-5">GO TO SERVICE</a></button>
+		</div>
+
+		<FleurDivider></FleurDivider>
+
+		<h2>Dry rug cleaning</h2>
+
+		<PriceTable>
+		<tr>
+		<td class="bg-paper pl-5 py-2 font-500">Single Bedroom</td>
+		<td class="bg-paper pl-5 py-2 font-500">from £31.00</td>
+		</tr>
+		<tr>
+		<td class="bg-paper pl-5 py-2 font-500">Double Bedroom</td>
+		<td class="bg-paper pl-5 py-2 font-500">from £35.00</td>
+		</tr>
+		<tr>
+		<td class="bg-paper pl-5 py-2 font-500">Master Bedroom</td>
+		<td class="bg-paper pl-5 py-2 font-500">from £40.00</td>
+		</tr>
+		<tr>
+		<td class="bg-paper pl-5 py-2 font-500">Living Room</td>
+		<td class="bg-paper pl-5 py-2 font-500">from £43.00</td>
+		</tr>
+		<tr>
+		<td class="bg-paper pl-5 py-2 font-500">Through Lounge</td>
+		<td class="bg-paper pl-5 py-2 font-500">from £69.00</td>
+		</tr>
+		<tr>
+		<td class="bg-paper pl-5 py-2 font-500">Hallway</td>
+		<td class="bg-paper pl-5 py-2 font-500">from £21.00</td>
+		</tr>
+		<tr>
+		<td class="bg-paper pl-5 py-2 font-500">Flight of Stairs</td>
+		<td class="bg-paper pl-5 py-2 font-500">from £34.00</td>
+		</tr>
+		<tr>
+		<td class="bg-paper pl-5 py-2 font-500">Landing</td>
+		<td class="bg-paper pl-5 py-2 font-500">from £15.00</td>
+		</tr>
+		<tr>
+		<td class="bg-paper pl-5 py-2 font-500">Bathroom</td>
+		<td class="bg-paper pl-5 py-2 font-500">from £6.00</td>
+		</tr>
+		<tr>
+		<td class="bg-paper pl-5 py-2 font-500">Small rug</td>
+		<td class="bg-paper pl-5 py-2 font-500">from £14.00</td>
+		</tr>
+		<tr>
+		<td class="bg-paper pl-5 py-2 font-500">Medium rug</td>
+		<td class="bg-paper pl-5 py-2 font-500">from £20.00</td>
+		</tr>
+		<tr>
+		<td class="bg-paper pl-5 py-2 font-500">Large rug</td>
+		<td class="bg-paper pl-5 py-2 font-500">from £31.00</td>
+		</tr>
+		</PriceTable>
+
+		<div class="m-10%  mt-12% flex flex-wrap flex-justify-center">
+		<button class="outline-none bg-brand-action hover-bg-brand-action-hover:hover font-size-6 font-600 w-200px h-60px c-paper flex flex-items-center flex-justify-center relative b-solid b-rd-3 b-4 b-brand-action hover-b-brand-action-hover:hover whitespace-normal line-height-6 word-spacing-0.5 py-9" style="box-shadow: 0 0 0 3px rgba(255, 255, 255, .9) inset; letter-spacing: 0.05rem;"><a href="/" class="c-paper font-size-5">GO TO SERVICE</a></button>
+		</div>
+
+		<FleurDivider></FleurDivider>
+
+		<h2>Rug stain removal</h2>
+
+		<PriceTable>
+		<tr>
+		<td class="bg-paper pl-5 py-2 font-500">Single Bedroom</td>
+		<td class="bg-paper pl-5 py-2 font-500">from £31.00</td>
+		</tr>
+		<tr>
+		<td class="bg-paper pl-5 py-2 font-500">Double Bedroom</td>
+		<td class="bg-paper pl-5 py-2 font-500">from £35.00</td>
+		</tr>
+		<tr>
+		<td class="bg-paper pl-5 py-2 font-500">Master Bedroom</td>
+		<td class="bg-paper pl-5 py-2 font-500">from £40.00</td>
+		</tr>
+		<tr>
+		<td class="bg-paper pl-5 py-2 font-500">Living Room</td>
+		<td class="bg-paper pl-5 py-2 font-500">from £43.00</td>
+		</tr>
+		<tr>
+		<td class="bg-paper pl-5 py-2 font-500">Through Lounge</td>
+		<td class="bg-paper pl-5 py-2 font-500">from £69.00</td>
+		</tr>
+		<tr>
+		<td class="bg-paper pl-5 py-2 font-500">Hallway</td>
+		<td class="bg-paper pl-5 py-2 font-500">from £21.00</td>
+		</tr>
+		<tr>
+		<td class="bg-paper pl-5 py-2 font-500">Flight of Stairs</td>
+		<td class="bg-paper pl-5 py-2 font-500">from £34.00</td>
+		</tr>
+		<tr>
+		<td class="bg-paper pl-5 py-2 font-500">Landing</td>
+		<td class="bg-paper pl-5 py-2 font-500">from £15.00</td>
+		</tr>
+		<tr>
+		<td class="bg-paper pl-5 py-2 font-500">Bathroom</td>
+		<td class="bg-paper pl-5 py-2 font-500">from £6.00</td>
+		</tr>
+		<tr>
+		<td class="bg-paper pl-5 py-2 font-500">Small rug</td>
+		<td class="bg-paper pl-5 py-2 font-500">from £14.00</td>
+		</tr>
+		<tr>
+		<td class="bg-paper pl-5 py-2 font-500">Medium rug</td>
+		<td class="bg-paper pl-5 py-2 font-500">from £20.00</td>
+		</tr>
+		<tr>
+		<td class="bg-paper pl-5 py-2 font-500">Large rug</td>
+		<td class="bg-paper pl-5 py-2 font-500">from £31.00</td>
+		</tr>
+		</PriceTable>
+
+		<div class="m-10%  mt-12% flex flex-wrap flex-justify-center">
+		<button class="outline-none bg-brand-action hover-bg-brand-action-hover:hover font-size-6 font-600 w-200px h-60px c-paper flex flex-items-center flex-justify-center relative b-solid b-rd-3 b-4 b-brand-action hover-b-brand-action-hover:hover whitespace-normal line-height-6 word-spacing-0.5 py-9" style="box-shadow: 0 0 0 3px rgba(255, 255, 255, .9) inset; letter-spacing: 0.05rem;"><a href="/" class="c-paper font-size-5">GO TO SERVICE</a></button>
+		</div>
+
+		<FleurDivider></FleurDivider>
+
+		<h2>Rug stain protection</h2>
+
+		<PriceTable>
+		<tr>
+		<td class="bg-paper pl-5 py-2 font-500">Single Bedroom</td>
+		<td class="bg-paper pl-5 py-2 font-500">from £31.00</td>
+		</tr>
+		<tr>
+		<td class="bg-paper pl-5 py-2 font-500">Double Bedroom</td>
+		<td class="bg-paper pl-5 py-2 font-500">from £35.00</td>
+		</tr>
+		<tr>
+		<td class="bg-paper pl-5 py-2 font-500">Master Bedroom</td>
+		<td class="bg-paper pl-5 py-2 font-500">from £40.00</td>
+		</tr>
+		<tr>
+		<td class="bg-paper pl-5 py-2 font-500">Living Room</td>
+		<td class="bg-paper pl-5 py-2 font-500">from £43.00</td>
+		</tr>
+		<tr>
+		<td class="bg-paper pl-5 py-2 font-500">Through Lounge</td>
+		<td class="bg-paper pl-5 py-2 font-500">from £69.00</td>
+		</tr>
+		<tr>
+		<td class="bg-paper pl-5 py-2 font-500">Hallway</td>
+		<td class="bg-paper pl-5 py-2 font-500">from £21.00</td>
+		</tr>
+		<tr>
+		<td class="bg-paper pl-5 py-2 font-500">Flight of Stairs</td>
+		<td class="bg-paper pl-5 py-2 font-500">from £34.00</td>
+		</tr>
+		<tr>
+		<td class="bg-paper pl-5 py-2 font-500">Landing</td>
+		<td class="bg-paper pl-5 py-2 font-500">from £15.00</td>
+		</tr>
+		<tr>
+		<td class="bg-paper pl-5 py-2 font-500">Bathroom</td>
+		<td class="bg-paper pl-5 py-2 font-500">from £6.00</td>
+		</tr>
+		<tr>
+		<td class="bg-paper pl-5 py-2 font-500">Small rug</td>
+		<td class="bg-paper pl-5 py-2 font-500">from £14.00</td>
+		</tr>
+		<tr>
+		<td class="bg-paper pl-5 py-2 font-500">Medium rug</td>
+		<td class="bg-paper pl-5 py-2 font-500">from £20.00</td>
+		</tr>
+		<tr>
+		<td class="bg-paper pl-5 py-2 font-500">Large rug</td>
+		<td class="bg-paper pl-5 py-2 font-500">from £31.00</td>
+		</tr>
+		</PriceTable>
+
+		<div class="m-10%  mt-12% flex flex-wrap flex-justify-center">
+		<button class="outline-none bg-brand-action hover-bg-brand-action-hover:hover font-size-6 font-600 w-200px h-60px c-paper flex flex-items-center flex-justify-center relative b-solid b-rd-3 b-4 b-brand-action hover-b-brand-action-hover:hover whitespace-normal line-height-6 word-spacing-0.5 py-9" style="box-shadow: 0 0 0 3px rgba(255, 255, 255, .9) inset; letter-spacing: 0.05rem;"><a href="/" class="c-paper font-size-5">GO TO SERVICE</a></button>
+		</div>
+
+		<FleurDivider></FleurDivider>
+
+		<h2>Antiviral sanitisation</h2>
+
+		<PriceTable>
+		<tr>
+		<td class="bg-paper pl-5 py-2 font-500">Single Bedroom</td>
+		<td class="bg-paper pl-5 py-2 font-500">from £31.00</td>
+		</tr>
+		<tr>
+		<td class="bg-paper pl-5 py-2 font-500">Double Bedroom</td>
+		<td class="bg-paper pl-5 py-2 font-500">from £35.00</td>
+		</tr>
+		<tr>
+		<td class="bg-paper pl-5 py-2 font-500">Master Bedroom</td>
+		<td class="bg-paper pl-5 py-2 font-500">from £40.00</td>
+		</tr>
+		<tr>
+		<td class="bg-paper pl-5 py-2 font-500">Living Room</td>
+		<td class="bg-paper pl-5 py-2 font-500">from £43.00</td>
+		</tr>
+		<tr>
+		<td class="bg-paper pl-5 py-2 font-500">Through Lounge</td>
+		<td class="bg-paper pl-5 py-2 font-500">from £69.00</td>
+		</tr>
+		<tr>
+		<td class="bg-paper pl-5 py-2 font-500">Hallway</td>
+		<td class="bg-paper pl-5 py-2 font-500">from £21.00</td>
+		</tr>
+		<tr>
+		<td class="bg-paper pl-5 py-2 font-500">Flight of Stairs</td>
+		<td class="bg-paper pl-5 py-2 font-500">from £34.00</td>
+		</tr>
+		<tr>
+		<td class="bg-paper pl-5 py-2 font-500">Landing</td>
+		<td class="bg-paper pl-5 py-2 font-500">from £15.00</td>
+		</tr>
+		<tr>
+		<td class="bg-paper pl-5 py-2 font-500">Bathroom</td>
+		<td class="bg-paper pl-5 py-2 font-500">from £6.00</td>
+		</tr>
+		<tr>
+		<td class="bg-paper pl-5 py-2 font-500">Small rug</td>
+		<td class="bg-paper pl-5 py-2 font-500">from £14.00</td>
+		</tr>
+		<tr>
+		<td class="bg-paper pl-5 py-2 font-500">Medium rug</td>
+		<td class="bg-paper pl-5 py-2 font-500">from £20.00</td>
+		</tr>
+		<tr>
+		<td class="bg-paper pl-5 py-2 font-500">Large rug</td>
+		<td class="bg-paper pl-5 py-2 font-500">from £31.00</td>
+		</tr>
+	</PriceTable>
+
+	<div class="m-10%  mt-12% flex flex-wrap flex-justify-center">
+		<button class="outline-none bg-brand-action hover-bg-brand-action-hover:hover font-size-6 font-600 w-200px h-60px c-paper flex flex-items-center flex-justify-center relative b-solid b-rd-3 b-4 b-brand-action hover-b-brand-action-hover:hover whitespace-normal line-height-6 word-spacing-0.5 py-9" style="box-shadow: 0 0 0 3px rgba(255, 255, 255, .9) inset; letter-spacing: 0.05rem;"><a href="/" class="c-paper font-size-5">GO TO SERVICE</a></button>
+	</div>
+
+	<FleurDivider></FleurDivider>
+
+	<div class="m-10% mb-3% flex flex-wrap flex-justify-center gap-15">
+		<button class="outline-none bg-brand-second-action hover-bg-brand-second-action-hover:hover font-size-6 font-600 w-200px h-60px c-paper flex flex-items-center flex-justify-center relative b-solid b-rd-3 b-4 b-brand-second-action hover-b-brand-second-action-hover:hover whitespace-normal line-height-6 word-spacing-0.5 py-9" style="box-shadow: 0 0 0 3px rgba(255, 255, 255, .9) inset; letter-spacing: 0.05rem;"><a class="c-paper font-size-5">SERVICES</a></button>
+		<button class="outline-none bg-brand-action hover-bg-brand-action-hover:hover font-size-6 font-600 w-200px h-60px c-paper flex flex-items-center flex-justify-center relative b-solid b-rd-3 b-4 b-brand-action hover-b-brand-action-hover:hover whitespace-normal line-height-6 word-spacing-0.5 py-9" style="box-shadow: 0 0 0 3px rgba(255, 255, 255, .9) inset; letter-spacing: 0.05rem;"><a class="c-paper font-size-5">GET A QUOTE</a></button>
+	</div>
+
+	<a href="/"><img class="max-w-full block mla mra md-mt-30 md-mb-18 mt-20 mb-10" src="/assets/ShenYunZuoPin- Orange-Desktop-ZaDimo.png"></img></a>
+
     </>
   );
 }
