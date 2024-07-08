@@ -56,7 +56,7 @@ h1 {
   font-size: 4rem;
   line-height: 4.5rem;
   margin: 3rem 0;
-  letter-spacing: -0.17rem;
+  letter-spacing: -0.1rem;
   font-weight: 800;
 }
 
@@ -64,7 +64,7 @@ h2 {
   font-weight: 800;
   font-size: 3.1rem;
   margin: 80px 0px;
-  letter-spacing: -0.1rem;
+  letter-spacing: -0.02rem;
   line-height: 3.5rem;
 }
 
@@ -73,6 +73,7 @@ h3 {
   font-size: 1.7rem;
   line-height: 2.5rem;
   font-weight: 800;
+  letter-spacing: 0.5px;
 }
 
 img {
@@ -153,4 +154,25 @@ ol li:before {
   background-image: linear-gradient(90deg, rgb(13, 46, 41) 0%, rgb(26, 135, 94) 70%), radial-gradient(circle at left top, rgb(13, 46, 41), rgb(26, 135, 94));
   background-origin: border-box;
   background-clip: padding-box, border-box;
+}
+
+.hidden-questions-and-answers {
+	display: none;
+	margin-top:-60px;
+	box-shadow:0px 20px 20px 1px rgb(84 89 95 / 18%);
+	padding: 1rem 3.5rem 2.5rem 3.5rem ;
+	background: #ffff;
+	border-radius: 0px 0px 10px 10px;
+}
+
+.hidden-questions-and-answers:after {
+	display:none;
+}
+
+.expanded .hidden-questions-and-answers {
+	display: block;
+}
+
+.hidden-questions-and-answers {
+	display: none;
 }
