@@ -104,7 +104,7 @@ function FullScreenImageGallery(props: {src:string, alt:string, class:string }) 
 
 const VideoPlayer = () => {
   const [isStarted, setIsStarted] = createSignal(false);
-  let videoRef;
+  let videoRef: HTMLVideoElement;
 
   const startVideo = () => {
     videoRef.play();
@@ -393,7 +393,7 @@ export default function Page() {
       </div>
 
       <div class="read-more-click-to-expand-1 to-be-expanded mt-20 py-8 px-10 bg-paper b-rd-3" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 18%);">
-      <button class="read-more-toggle-button my-6 mx-auto uppercase b-none b-rd-1 py-3 px-7 bg-paper hover-bg-#f7f7f7:hover font-600 font-size-5 whitespace-nowrap" style="letter-spacing: 0.02rem; box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 10%);" onclick="toggleExpand(1)">Read more</button>
+      <button class="read-more-toggle-button my-6 mx-auto uppercase b-none b-rd-1 py-3 px-7 bg-paper hover-bg-#f7f7f7:hover font-600 font-size-5 whitespace-nowrap" style="letter-spacing: 0.02rem; box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 10%);" onClick="toggleExpand(1)">Read more</button>
 
       <ul class="hidden-questions-and-answers">
         <li class="hide-if-not-expanded">
@@ -467,7 +467,7 @@ export default function Page() {
       </div>
 
       <div class="read-more-click-to-expand-2 mt-20 py-8 px-10 bg-paper b-rd-3" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 18%);">
-      <button class="read-more-toggle-button my-6 mx-auto uppercase b-none b-rd-1 py-3 px-7 bg-paper hover-bg-#f7f7f7:hover font-600 font-size-5 whitespace-nowrap" style="letter-spacing: 0.02rem; box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 10%);" onclick="toggleExpand(2)">Read more</button>
+      <button class="read-more-toggle-button my-6 mx-auto uppercase b-none b-rd-1 py-3 px-7 bg-paper hover-bg-#f7f7f7:hover font-600 font-size-5 whitespace-nowrap" style="letter-spacing: 0.02rem; box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 10%);" onClick="toggleExpand(2)">Read more</button>
 
       <ul class="hidden-questions-and-answers">
         <li class="hide-if-not-expanded">
@@ -498,7 +498,7 @@ export default function Page() {
       </div>
 
       <div class="read-more-click-to-expand-3 mt-20 py-8 px-10 bg-paper b-rd-3" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 18%);">
-      <button class="read-more-toggle-button my-6 mx-auto uppercase b-none b-rd-1 py-3 px-7 bg-paper hover-bg-#f7f7f7:hover font-600 font-size-5 whitespace-nowrap" style="letter-spacing: 0.02rem; box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 10%);" onclick="toggleExpand(3)">Read more</button>
+      <button class="read-more-toggle-button my-6 mx-auto uppercase b-none b-rd-1 py-3 px-7 bg-paper hover-bg-#f7f7f7:hover font-600 font-size-5 whitespace-nowrap" style="letter-spacing: 0.02rem; box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 10%);" onClick="toggleExpand(3)">Read more</button>
 
       <ul class="hidden-questions-and-answers">
         <li class="hide-if-not-expanded">
@@ -566,7 +566,7 @@ export default function Page() {
 
 
       <div class="read-more-click-to-expand-4 mt-20 py-8 px-10 bg-paper b-rd-3" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 18%);">
-      <button class="read-more-toggle-button my-6 mx-auto uppercase b-none b-rd-1 py-3 px-7 bg-paper hover-bg-#f7f7f7:hover font-600 font-size-5 whitespace-nowrap" style="letter-spacing: 0.02rem; box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 10%);" onclick="toggleExpand(4)">Read more</button>
+      <button class="read-more-toggle-button my-6 mx-auto uppercase b-none b-rd-1 py-3 px-7 bg-paper hover-bg-#f7f7f7:hover font-600 font-size-5 whitespace-nowrap" style="letter-spacing: 0.02rem; box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 10%);" onClick="toggleExpand(4)">Read more</button>
       <ul class="hidden-questions-and-answers">
         <li class="hide-if-not-expanded">
       <h3>Is it possible to book carpet cleaning online?</h3>

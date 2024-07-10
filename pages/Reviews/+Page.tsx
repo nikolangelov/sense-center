@@ -1,6 +1,5 @@
 import "solid-slider/slider.css";
 import { createSignal, Show } from 'solid-js';
-import { JSX } from 'solid-js/jsx-runtime';
 import range from "lodash/range"
 
 function FleurDivider () {
@@ -757,16 +756,6 @@ export default function Page() {
         date="September 2021"
         stars={5}
         hrefGoogleReview="https://maps.app.goo.gl/aGJwRnPuUjGgZ44e7"
-        filterStars={filterStars()}
-      />
-
-      <StarReview      
-        src="/assets/profile-pics-reviews/unnamed-23.png"
-        reviewText="Fine carpet cleaning did a great job cleaning the carpets in my house. They were reasonably priced and very professional throughout. I highly recommend them."
-        name="Sandra Ebeledike"
-        date="August 2021"
-        stars={5}
-        hrefGoogleReview="https://g.co/kgs/6pSvf2H"
         filterStars={filterStars()}
       />
 

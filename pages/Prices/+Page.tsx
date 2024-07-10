@@ -1,10 +1,5 @@
-import RiArrowRightSLine from '~icons/ri/arrow-right-s-line';
-import RiArrowLeftSLine from '~icons/ri/arrow-left-s-line';
-import RiCloseFill from '~icons/ri/close-fill';
 import "solid-slider/slider.css";
-import { createSignal, Show } from 'solid-js';
-import RiYoutubeFill from '~icons/ri/youtube-fill';
-
+import { JSX } from 'solid-js/jsx-runtime';
 
 function FleurDivider () {
 	return (
@@ -15,7 +10,7 @@ function FleurDivider () {
 	);
 }
 
-function PriceTable(props: { class:string, children?: JSX.Element }) {
+function PriceTable(props: {class: string, children: JSX.Element }) {
 
 	return (
 		
