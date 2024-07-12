@@ -31,7 +31,7 @@ const [slider, { current, next, prev, moveTo }] = createSlider(options);
   );
 };
 
-function FullScreenImageGallerySecond(props: {src:string, alt:string, class:string }) {
+function FullScreenImageGallerySecond(props: {src:string, alt:string}) {
 	const [open, setOpen] = createSignal(false);
   
 	const handleClick = () => {
@@ -242,7 +242,11 @@ export default function Page() {
 
       <h2>Pictures from our professional carpet cleaning services</h2>
 
-      <div class="img_container flex flex-col">
+      <div class="flex flex-col">
+
+      <FullScreenImageGallerySecond src="/assets/Почистване на филтри на кухненски аспирации на заведения.jpg" alt=""></FullScreenImageGallerySecond>
+
+      <FleurDivider></FleurDivider>
 
         <FullScreenImageGallery src="/assets/Професионално почистване на заведения.jpg" alt="" class="cursor-pointer max-w-full max-h-full block m-auto"></FullScreenImageGallery>      
 
