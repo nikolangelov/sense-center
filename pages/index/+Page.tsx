@@ -1,26 +1,16 @@
-//*function FeaturedBlock (props: {text:string,image:string,url:string}) {
-  //*return (
-    //*<div class="flex flex-col lg-w-30% sm-w-65% w-95% b-solid b-1 b-paper-border md-mb-30 mb-20 pb-8 hover-b-gray-3:hover cursor-pointer" style="box-shadow: 0 0 10px #dadada;">
-      //*<img class="" src={props.image}></img>
-      //*<div class="pt-20px px-25px lg-font-size-4.2 md-font-size-5 font-size-4.5 line-height-7 md-line-height-8 lg-line-height-25px color-paper-inv typography-body lg-pb-8 lg-my-2 md-my-5 my-5 text-justify">{props.text}</div>
-      //*<a href={props.url} class="text-center typography-ui lg-font-size-4.3 md-font-size-7 font-size-5.5 font-100 color-paper-link hover-color-paper-link-hover uppercase lg-my-0 md-my-5 my-5" style="letter-spacing: .75px;">Прочетете повече</a>
-    //*</div>
-  //*);
-//*}
-
 import RiArrowRightSLine from '~icons/ri/arrow-right-s-line';
 import RiArrowLeftSLine from '~icons/ri/arrow-left-s-line';
 import RiCloseFill from '~icons/ri/close-fill';
 import "solid-slider/slider.css";
 import { Slider, createSlider, SliderButton, SliderProvider } from "solid-slider";
-import { Component, createSignal, Show } from 'solid-js';
+import { createSignal, Show } from 'solid-js';
 
 const GalerrySlider = () => {
 const options = { duration: 1000 };
 const [slider, { current, next, prev, moveTo }] = createSlider(options);
   return (
     <SliderProvider>
-      <div class="max-w-1000px m-auto position-relative">
+      <div class="carousel max-w-1000px m-auto position-relative">
 		<Slider options={{ loop: true }}>
 			<img src="assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" class=""/>
 			<img src="assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" class=""/>
@@ -69,23 +59,6 @@ function FullScreenImageGallery() {
 	  </div>
 	);
   }
-
-  function toggleExpand(index: string) {
-    const parsedIndex = parseInt(index); // Ensure index is parsed as a number
-    var readMore = document.querySelector('.read-more-click-to-expand-' + parsedIndex);
-    if (readMore) {
-        readMore.classList.add('expanded');
-        readMore.classList.remove('to-be-expanded');
-        readMore.classList.add('last-expanded');
-    }
-    readMore = document.querySelector('.read-more-click-to-expand-' + (parsedIndex + 1));
-    if (readMore) readMore.classList.add('to-be-expanded');
-    readMore = document.querySelector('.read-more-click-to-expand-' + (parsedIndex - 1));
-    if (readMore) readMore.classList.remove('last-expanded');
-    readMore = document.querySelector('.first-faq-section');
-    if (readMore) readMore.classList.remove('last-expanded');
-}
-
 
 export default function Page() {
   return (
@@ -230,13 +203,13 @@ export default function Page() {
 
 		<h2>Working hours</h2>
 		<table class="w-full m-auto font-sans">
-		<thead>
+		<thead style="box-shadow: 0px 20px 20px 1px rgb(84 89 95 / 10%);">
 		<tr class="h-20">
 		<td class="c-paper bg-#2e5c47 font-size-7 pl-5 b-rd-lt-3"><strong>Day</strong></td>
 		<td class="c-paper bg-#2e5c47 font-size-7 pl-5 b-rd-rt-3"><strong>Time</strong></td>
 		</tr>
 		</thead>
-		<tbody>
+		<tbody style="box-shadow: 0px 20px 20px 1px rgb(84 89 95 / 10%);">
 		<tr>
 		<td class="bg-paper pl-5 py-2 font-500">Monday</td>
 		<td class="bg-paper pl-5 py-2 font-500">9:00 - 18:00</td>
@@ -266,7 +239,7 @@ export default function Page() {
 		<td class="bg-paper pl-5 py-2 font-500">9:00 - 18:00</td>
 		</tr>
 		<tr>
-		<td class="b-rd-lb-3 b-rd-rb-3 bg-#2e5c47" colspan="3"><p class="font-size-4 pl-5 my-2 c-paper">*We also offer performing services out of working hours and at night, which will be included in the final price.</p></td>
+		<td class="b-rd-lb-3 b-rd-rb-3 bg-#2e5c47 outline-color" colspan="3" style="box-shadow: 0px 20px 20px 1px rgb(247 247 247/ 100%);"><p class="font-size-4 pl-5 my-2 c-paper">*We also offer performing services out of working hours and at night, which will be included in the final price.</p></td>
 		</tr>
 		</tbody>
 		</table>
@@ -274,7 +247,7 @@ export default function Page() {
 		<FleurDivider></FleurDivider>
 
 		<h2>Frequently asked questions</h2>
-		<div class="first-faq-section last-expanded p-4 pr-14 bg-paper b-rd-3 flex flex-justify-center" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 18%);">
+		<div class="last-expanded p-4 pr-14 bg-paper b-rd-3 flex flex-justify-center" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 18%);">
 		<ul>
 			<li class="ml-5">
 		<h3>How long have you been in the carpet cleaning business?</h3>
@@ -371,9 +344,11 @@ export default function Page() {
 		</ul>
 		</div>
 
-		<div class="read-more-click-to-expand-1 to-be-expanded p-4 pr-14 mt--20 bg-paper b-rd-3 flex flex-justify-center" style="box-shadow: 0px 20px 20px 1px rgb(84 89 95 / 18%);">
+		<script src="FAQButtonsSnippet.js"></script>
+
+		<div class="read-more-click-to-expand-1 to-be-expanded">
 		<div>
-			<button class="read-more-toggle-button my-6 mx-auto uppercase b-none b-rd-1 py-3 px-7 bg-paper hover-bg-#f7f7f7:hover font-600 font-size-5 whitespace-nowrap" style="letter-spacing: 0.02rem; box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 10%);" onclick="toggleExpand(1)">Read more</button>
+			<button class="read-more-toggle-button mt-16 mb-8 mx-auto uppercase b-none b-rd-1 py-4 px-7 bg-paper hover-bg-#f7f7f7:hover font-600 font-size-5 whitespace-nowrap" style="letter-spacing: 0.02rem; box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 10%);" onClick="toggleExpand(1)">Read more</button>
 		</div>
 		<ul class="hidden-questions-and-answers">
 			<li class="ml-5 hide-if-not-expanded">
@@ -424,6 +399,7 @@ export default function Page() {
 		</div>
 
 		<a href="/"><img class="max-w-full block mla mra md-mt-30 md-mb-18 mt-20 mb-10" src="/assets/ShenYunZuoPin- Orange-Desktop-ZaDimo.png"></img></a>
+
 
     </>
   );

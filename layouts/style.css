@@ -81,18 +81,6 @@ img {
   border-radius:10px;
 }
 
-/*.expanded .hidden-questions-and-answers {
-  display: block;
-}
-
-.hidden-questions-and-answers {
-  display: none;
-}
-
-.to-be-expanded .read-more-toggle-button {
-  display: block;
-}*/
-
 .divider-shadow:after {
   content: '';
   display: block;
@@ -156,6 +144,32 @@ ol li:before {
   background-clip: padding-box, border-box;
 }
 
+.to-be-expanded .read-more-toggle-button {
+	display:block;
+}
+
+.read-more-toggle-button {
+	display:none;
+}
+
+.hidden-questions-and-answers {
+	display: none;
+}
+
+.hidden-questions-and-answers:after {
+	display:none;
+}
+
+.last-expanded:not(.read-more-click-to-expand-4) .hidden-questions-and-answers:after {
+  content: "";
+  position: absolute;
+  z-index: 1;
+}
+
+.expanded .hidden-questions-and-answers {
+	display: block;
+}
+
 .hidden-questions-and-answers {
 	display: none;
 	margin-top:-60px;
@@ -169,10 +183,26 @@ ol li:before {
 	display:none;
 }
 
-.expanded .hidden-questions-and-answers {
-	display: block;
+.last-expanded:not(.read-more-click-to-expand-4) .hidden-questions-and-answers:after {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  bottom: 0;
+  left: 0;
+  pointer-events: none;
+  background-image: linear-gradient(to bottom, rgba(255,255,255,0), rgba(255,255,255, 1) 100%);
+  width: 100%;
+  height: 20em;
+  border-radius: 10px;
 }
 
-.hidden-questions-and-answers {
-	display: none;
+
+
+.dropdown:hover .dropdown-content {
+  display: flex;
+}
+
+.facebook-like-gallery .keen-slider {
+  width: 100%;
+  height: 100%;
 }

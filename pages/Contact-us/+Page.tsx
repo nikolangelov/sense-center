@@ -127,13 +127,13 @@ export default function Page() {
       <h2>Working hours</h2>
 
       <table class="w-full m-auto font-sans">
-      <thead>
+      <thead style="box-shadow: 0px 20px 20px 1px rgb(84 89 95 / 10%);">
       <tr class="h-20">
       <td class="c-paper bg-#2e5c47 font-size-7 pl-5 b-rd-lt-3"><strong>Day</strong></td>
       <td class="c-paper bg-#2e5c47 font-size-7 pl-5 b-rd-rt-3"><strong>Time</strong></td>
       </tr>
       </thead>
-      <tbody>
+      <tbody style="box-shadow: 0px 20px 20px 1px rgb(84 89 95 / 10%);">
       <tr>
       <td class="bg-paper pl-5 py-2 font-500">Monday</td>
       <td class="bg-paper pl-5 py-2 font-500">from 9:00 - 18:00</td>
@@ -163,7 +163,7 @@ export default function Page() {
       <td class="bg-paper pl-5 py-2 font-500">from 9:00 - 18:00</td>
       </tr>
       <tr>
-      <td class="b-rd-lb-3 b-rd-rb-3 bg-#2e5c47 h-6" colspan="3"><p class="font-size-4 pl-5 my-2 c-paper">*We also offer performing services out of working hours and at night, which will be included in the final price.</p></td>
+      <td class="b-rd-lb-3 b-rd-rb-3 bg-#2e5c47 h-6" colspan="3" style="box-shadow: 0px 20px 20px 1px rgb(247 247 247/ 100%);"><p class="font-size-4 pl-5 my-2 c-paper">*We also offer performing services out of working hours and at night, which will be included in the final price.</p></td>
       </tr>
       </tbody>
       </table>

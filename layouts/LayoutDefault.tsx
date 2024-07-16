@@ -9,7 +9,11 @@ import MdiClock from '~icons/mdi/clock';
 import MdiEmail from '~icons/mdi/email';
 
 function MenuItem(props: {href:string, children: JSX.Element }) {
-return <a href={props.href} class="hidden font-ui lg-flex c-paper-inv text-center font-size-4 xl-font-size-3.5 uppercase font-sans hover-c-paper-link-hover:hover tracking-wide">{props.children}</a>
+  return <a href={props.href} class="dropdown hidden font-ui lg-flex c-paper-inv text-center font-size-4 xl-font-size-3.5 uppercase font-sans hover-c-paper-link-hover:hover tracking-wide">{props.children}</a>
+}
+
+function DropdownMenuItem(props: {href:string, children: JSX.Element, src: string }) {
+  return <a href={props.href} class="hidden flex flex-justify-center flex-items-center"><div class="flex-col flex-justify-center flex-items-center w-30 h-32 mt-3 mb-3"><img class="w-20 h-20 block mx-auto b-rd-100%" src={props.src}/><p class="font-size-3 whitespace-normal mx-auto c-paper-inv text-center whitespace-normal uppercase font-sans hover-c-paper-link-hover:hover tracking-wide font-700 line-height-normal">{props.children}</p></div></a>
 }
 
 export default function LayoutDefault(props: { children?: JSX.Element }) {
@@ -20,12 +24,73 @@ export default function LayoutDefault(props: { children?: JSX.Element }) {
         <button class="get-a-quote-button whitespace-nowrap md-ml-10 font-serif uppercase font-500 c-paper overflow-hidden relative bg-paper b-double b-rd-1 b-4 b-transparent h-13 w-35 cursor-pointer font-size-3.5 tracking-wide" style="background-origin: border-box; background-clip: padding-box, border-box; box-shadow: 0 0 0 2.5px rgba(255, 255, 255, 1) inset; background-image: linear-gradient(90deg, rgb(13, 46, 41) 0%, rgb(26, 135, 94) 50%), radial-gradient(circle at left top, rgb(13, 46, 41), rgb(26, 135, 94));">Get a quote</button>
         <div class="flex whitespace-nowrap flex-nowrap flex-justify-end flex-items-end font-semibold gap-5 xl-gap-5xl md-pr-10 md-pl-10 pr-6 flex-content-center flex-items-center">
           <MenuItem href="/Carpet-cleaning-London">Services</MenuItem>
+          <div class="dropdown">
+            <MenuItem href="/All-services">Services</MenuItem>
+              <div class="dropdown-content top-22 w-full flex-justify-center left-0 flex-row hidden gap-15 absolute bg-paper z-1 m-0 py-4 px-6 flex-wrap" style="box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);">
+              <div class="flex flex-col flex-justify-center">
+                <h3 class="whitespace-normal text-center">Carpet cleaning services</h3>
+                <div class="dropdown-content flex-row flex-wrap hidden flex-items-center flex-content-center">
+                  <DropdownMenuItem href="/" src="/assets/Професионално почистване на заведения.jpg">Carpet steam cleaning</DropdownMenuItem>
+                  <DropdownMenuItem href="/" src="/assets/Професионално почистване на заведения.jpg">Dry carpet cleaning</DropdownMenuItem>
+                  <DropdownMenuItem href="/" src="/assets/Професионално почистване на заведения.jpg">Eco-friendly carpet cleaning</DropdownMenuItem>
+                </div>
+                <div class="dropdown-content flex-row flex-wrap hidden flex-items-center flex-content-center">
+                  <DropdownMenuItem href="/" src="/assets/Професионално почистване на заведения.jpg">Same day carpet cleaning</DropdownMenuItem>
+                  <DropdownMenuItem href="/" src="/assets/Професионално почистване на заведения.jpg">Fast dry carpet cleaning</DropdownMenuItem>
+                  <DropdownMenuItem href="/" src="/assets/Професионално почистване на заведения.jpg">Carpet stain removal</DropdownMenuItem>
+                </div>
+                <div class="dropdown-content flex-row flex-wrap hidden flex-items-center flex-content-center">
+                  <DropdownMenuItem href="/" src="/assets/Професионално почистване на заведения.jpg">Carpet stain protection</DropdownMenuItem>
+                  <DropdownMenuItem href="/" src="/assets/Професионално почистване на заведения.jpg">Commercial carpet cleaning</DropdownMenuItem>
+                  <DropdownMenuItem href="/" src="/assets/Професионално почистване на заведения.jpg">Residential carpet cleaning</DropdownMenuItem>
+                </div>
+                <div class="dropdown-content flex-row flex-wrap hidden flex-items-center flex-content-center flex-justify-center">
+                  <DropdownMenuItem href="/" src="/assets/Професионално почистване на заведения.jpg">Office carpet cleaning</DropdownMenuItem>
+                </div>
+                </div>
+                <div class="flex flex-col flex-wrap">
+                <h3 class="whitespace-normal text-center">Upholstery cleaning services</h3>
+                  <div class="dropdown-content flex-row flex-wrap hidden flex-items-center flex-content-center">
+                    <DropdownMenuItem href="/" src="/assets/Професионално почистване на заведения.jpg">Carpet stain protection</DropdownMenuItem>
+                    <DropdownMenuItem href="/" src="/assets/Професионално почистване на заведения.jpg">Commercial carpet cleaning</DropdownMenuItem>
+                    <DropdownMenuItem href="/" src="/assets/Професионално почистване на заведения.jpg">Residential carpet cleaning</DropdownMenuItem>
+                  </div>
+                  <div class="dropdown-content flex-row flex-wrap hidden flex-items-center flex-content-center">
+                    <DropdownMenuItem href="/" src="/assets/Професионално почистване на заведения.jpg">Carpet stain protection</DropdownMenuItem>
+                    <DropdownMenuItem href="/" src="/assets/Професионално почистване на заведения.jpg">Commercial carpet cleaning</DropdownMenuItem>
+                    <DropdownMenuItem href="/" src="/assets/Професионално почистване на заведения.jpg">Residential carpet cleaning</DropdownMenuItem>
+                  </div>
+                  <div class="dropdown-content flex-row flex-wrap hidden flex-items-center flex-content-center flex-justify-center">
+                    <DropdownMenuItem href="/" src="/assets/Професионално почистване на заведения.jpg">Carpet stain protection</DropdownMenuItem>
+                  </div>
+                </div>
+                <div class="flex flex-col">
+                  <div class="flex flex-col flex-wrap">
+                  <h3 class="whitespace-normal text-center">Rug cleaning services</h3>
+                  <div class="dropdown-content flex-row flex-wrap hidden flex-items-center flex-content-center">
+                      <DropdownMenuItem href="/" src="/assets/Професионално почистване на заведения.jpg">Carpet stain protection</DropdownMenuItem>
+                      <DropdownMenuItem href="/" src="/assets/Професионално почистване на заведения.jpg">Commercial carpet cleaning</DropdownMenuItem>
+                      <DropdownMenuItem href="/" src="/assets/Професионално почистване на заведения.jpg">Residential carpet cleaning</DropdownMenuItem>
+                    </div>
+                    <div class="dropdown-content flex-row flex-wrap hidden flex-items-center flex-content-center flex-justify-center">
+                      <DropdownMenuItem href="/" src="/assets/Професионално почистване на заведения.jpg">Office carpet cleaning</DropdownMenuItem>
+                    </div>
+                  </div>
+                </div>
+                <div class="flex flex-col flex-wrap">
+                <h3 class="whitespace-normal text-center">Other cleaning services</h3>
+                  <div class="dropdown-content flex-row flex-wrap hidden flex-items-center flex-content-center flex-justify-center">
+                    <DropdownMenuItem href="/" src="/assets/Професионално почистване на заведения.jpg">Office carpet cleaning</DropdownMenuItem>
+                  </div>
+                </div>
+            </div> 
+          </div>
           <MenuItem href="/Prices">Prices</MenuItem>
           <MenuItem href="/Reviews">Reviews</MenuItem>
           <MenuItem href="/About-us">About us</MenuItem>
           <MenuItem href="/Areas-we-cover">Areas we cover</MenuItem>
           <MenuItem href="/Contact-us">Contact us</MenuItem>
-          <MenuItem href="/">Feedback</MenuItem>
+          <MenuItem href="/Feedback">Feedback</MenuItem>
           <HamburgerMenu/>
         </div>
       </Topbar>
