@@ -4,28 +4,29 @@ import RiCloseFill from '~icons/ri/close-fill';
 import "solid-slider/slider.css";
 import { Slider, createSlider, SliderButton, SliderProvider } from "solid-slider";
 import { createSignal, Show } from 'solid-js';
+import RiYoutubeFill from '~icons/ri/youtube-fill';
 
 const GalerrySlider = () => {
-const options = { duration: 1000 };
-const [slider, { current, next, prev, moveTo }] = createSlider(options);
+  const options = { duration: 1000 };
+  const [slider, { current, next, prev, moveTo }] = createSlider(options);
   return (
     <SliderProvider>
-      <div class="carousel max-w-1000px m-auto position-relative">
-		<Slider options={{ loop: true }}>
-			<img src="assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" class=""/>
-			<img src="assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" class=""/>
-			<img src="assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" class=""/>
-			<img src="assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" class=""/>
-			<img src="assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" class=""/>
-			<img src="assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" class=""/>
-		</Slider>
-      <SliderButton class="cursor-pointer position-absolute top-41% left-0 bg-paper-inv bg-op-50 b-rd-bl-1 b-rd-tl-1 b-none px-0 py-1.5" prev><RiArrowLeftSLine class="-ml-1 font-size-10 c-paper hover-c-brand-light:hover transition-colors"/></SliderButton>
-      <SliderButton class="cursor-pointer position-absolute top-41% right-0 bg-paper-inv bg-op-50 b-rd-br-1 b-rd-tr-1 b-none px-0 py-1.5" next><RiArrowRightSLine class="-mr-1 font-size-10 c-paper hover-c-brand-light:hover transition-colors"/></SliderButton>
-      <div class="flex flex-justify-center">
-        <div class={"flex w-3 h-3 rd-50% mx-2 mt-4 " + (current() === 0 ? "bg-brand-dark" : "bg-brand")}></div>
-        <div class={"flex w-3 h-3 rd-50% mx-2 mt-4 " + (current() === 1 ? "bg-brand-dark" : "bg-brand")}></div>
-        <div class={"flex w-3 h-3 rd-50% mx-2 mt-4 " + (current() === 2 ? "bg-brand-dark" : "bg-brand")}></div>
-      </div>
+      <div class="max-w-1000px m-auto position-relative">
+        <Slider options={{ loop: true, slides: { perView: 3, spacing: 10 } }}>
+          <img src="assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" class="" />
+          <img src="assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" class="" />
+          <img src="assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" class="" />
+          <img src="assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" class="" />
+          <img src="assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" class="" />
+          <img src="assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" class="" />
+        </Slider>
+        <SliderButton class="cursor-pointer position-absolute top-41% left-0 bg-paper-inv bg-op-50 b-rd-bl-1 b-rd-tl-1 b-none px-0 py-1.5" prev><RiArrowLeftSLine class="-ml-1 font-size-10 c-paper hover-c-brand-light:hover transition-colors" /></SliderButton>
+        <SliderButton class="cursor-pointer position-absolute top-41% right-0 bg-paper-inv bg-op-50 b-rd-br-1 b-rd-tr-1 b-none px-0 py-1.5" next><RiArrowRightSLine class="-mr-1 font-size-10 c-paper hover-c-brand-light:hover transition-colors" /></SliderButton>
+        <div class="flex flex-justify-center">
+          <div class={"flex w-3 h-3 rd-50% mx-2 mt-4 " + (current() === 0 ? "bg-brand-dark" : "bg-brand")}></div>
+          <div class={"flex w-3 h-3 rd-50% mx-2 mt-4 " + (current() === 1 ? "bg-brand-dark" : "bg-brand")}></div>
+          <div class={"flex w-3 h-3 rd-50% mx-2 mt-4 " + (current() === 2 ? "bg-brand-dark" : "bg-brand")}></div>
+        </div>
       </div>
     </SliderProvider>
   );
@@ -33,12 +34,56 @@ const [slider, { current, next, prev, moveTo }] = createSlider(options);
 
 function FleurDivider () {
 	return (
-		<div class="m-auto my-36 position-relative w-80%">
+		<div class="m-auto my-30 md-my-36 position-relative w-80%">
 			<div class="divider-shadow overflow-hidden h-0.5 after-block::after after-w-full::after after-h-6::after after-mx-auto::after after-mt--6::after"></div>
 			<div class="w-11 h-11 position-absolute position-bottom--6 left-47% bg-#f7f7f7"><img class="position-absolute max-w-7 mx-1.8" src="assets/output-onlinepngtools.png" /></div>
 		</div>
 	);
 }
+
+const VideoPlayer = () => {
+	const [isStarted, setIsStarted] = createSignal(false);
+	let videoRef: HTMLVideoElement;
+  
+	const startVideo = () => {
+	  videoRef.play();
+	  setIsStarted(true);
+	};
+  
+	return (
+	  <div class="flex flex-justify-center flex-items-center">
+		{!isStarted() && (
+		  <button
+			class="z-1 c-paper font-size-12 position-absolute cursor-pointer b-none bg-transparent"
+			onClick={startVideo}
+		  >
+			<RiYoutubeFill class="c-#ff0000 md-w-20 mt-5 md-mt-0 md-h-20 w-15 h-15" />
+		  </button>
+		)}
+		<video
+		  ref={(el) => (videoRef = el)}
+		  class="mt-10 b-rd-3" style="width: 100%; width: -moz-available; width: -webkit-fill-available; width: fill-available;"
+		  controls
+		  muted
+		>
+		  <div class="vertical-top max-w-full font-size-4 color-paper-inv block">
+			<a
+			  class="color-paper-inv block"
+			  href="https://www.youtube.com/watch?v=zedTK_cCobY"
+			  target="_blank"
+			  rel="noopener"
+			>
+			  Professional Carpet Cleaning London - Fine Carpet Cleaning
+			</a>
+		  </div>
+		  <source
+			src="assets/Professional Carpet Cleaning London - Fine Carpet Cleaning (1).mp4"
+			type="video/mp4"
+		  />
+		</video>
+	  </div>
+	);
+  };
 
 function FullScreenImageGallery() {
 	const [open, setOpen] = createSignal(false);
@@ -49,7 +94,7 @@ function FullScreenImageGallery() {
   
 	return (
 	  <div class="relative">
-		<img class="cursor-pointer max-w-80% max-h-80% block m-auto" src="assets/map2.png" alt="" onClick={handleClick}/>
+		<img class="cursor-pointer max-w-full md-max-w-80% md-max-h-80% block m-auto" src="assets/map2.png" alt="" onClick={handleClick}/>
 		<Show when={open()}>
 		  <div class="fixed top-0 left-0 w-screen h-screen flex justify-center items-center bg-black bg-opacity-85 z-9999" onClick={handleClick}>
 			<RiCloseFill class="w-16 h-16 absolute top-0 right-0 mr-20 mt-14 p-2 text-white bg-transparent color-paper cursor-pointer hover-color-brand:hover"/>
@@ -63,30 +108,30 @@ function FullScreenImageGallery() {
 export default function Page() {
   return (
     <>
-      <div class="flex flex-justify-center"><img class="b-rd-3 my-20" src="assets\Професионално почистване на заведения.jpg" alt="" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 30%);"/></div>
+      <div class="flex flex-justify-center"><img class="b-rd-3 md-my-20 my-10" src="assets\Професионално почистване на заведения.jpg" alt="" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 30%); width: -moz-available; width: -webkit-fill-available; width: fill-available;"/></div>
 		<h1>Fine Carpet Cleaning London</h1>
-		<div class="mt-20 py-8 px-14 b-rd-3 bg-paper line-height-8 text-justify font-size-4.4" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 18%);">Fine Carpet Cleaning London is a carpet cleaning company which operates in all London boroughs. We provide a variety of commercial and domestic carpet cleaning services, tailoring to our client’s needs.</div>
+		<div class="mt-20 py-8 px-8 md-px-14 b-rd-3 bg-paper line-height-8 text-justify font-size-4.4" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 18%);">Fine Carpet Cleaning London is a carpet cleaning company which operates in all London boroughs. We provide a variety of commercial and domestic carpet cleaning services, tailoring to our client’s needs.</div>
 
-		<FleurDivider></FleurDivider>
+		<FleurDivider/>
 
-		<h2>Our main cleaning services</h2>
-		<div class="p-6 pt-12 bg-paper b-rd-3 flex flex-justify-center" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 18%);"><a href="/"><img class="mt-3 mx-auto block w-650px" src="assets\Професионално почистване на заведения.jpg" alt="" />
-		<h3 class="mx-auto mt-16 mb-9 text-center font-size-9">Professional carpet cleaning services</h3></a></div>
+		<h2 class="mb-15 md-mb-20">Our main cleaning services</h2>
+		<div class="p-6 pt-12 bg-paper b-rd-3 flex flex-justify-center" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 18%);"><a href="/"><img class="md-mt-3 mt--6 mx-auto block md-w-650px w-330px" src="assets\Професионално почистване на заведения.jpg" alt="" />
+		<h3 class="mx-auto md-mt-16 md-mb-9 mb-4 text-center font-size-9">Professional carpet cleaning services</h3></a></div>
 
-		<div class="p-6 pt-12 bg-paper mt-20 b-rd-3 flex flex-justify-center" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 18%);"><a href="/"><img class="mt-3 mx-auto block w-650px" src="assets\Професионално почистване на заведения.jpg" alt="" />
-		<h3 class="mx-auto mt-16 mb-9 text-center font-size-9">Professional upholstery cleaning services</h3></a></div>
+		<div class="p-6 pt-12 bg-paper mt-20 b-rd-3 flex flex-justify-center" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 18%);"><a href="/"><img class="md-mt-3 mt--6 mx-auto block md-w-650px w-330px" src="assets\Професионално почистване на заведения.jpg" alt="" />
+		<h3 class="mx-auto md-mt-16 md-mb-9 mb-4 text-center font-size-9">Professional upholstery cleaning services</h3></a></div>
 
-		<div class="p-6 pt-12 bg-paper mt-20 b-rd-3 flex flex-justify-center" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 18%);"><a href="/"><img class="mt-3 mx-auto block w-650px" src="assets\Професионално почистване на заведения.jpg" alt="" />
-		<h3 class="mx-auto mt-16 mb-9 text-center font-size-9">Professional rug cleaning services</h3></a></div>
+		<div class="p-6 pt-12 bg-paper mt-20 b-rd-3 flex flex-justify-center" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 18%);"><a href="/"><img class="md-mt-3 mt--6 mx-auto block md-w-650px w-330px" src="assets\Професионално почистване на заведения.jpg" alt="" />
+		<h3 class="mx-auto md-mt-16 md-mb-9 mb-4 text-center font-size-9">Professional rug cleaning services</h3></a></div>
 
-		<FleurDivider></FleurDivider>
+		<FleurDivider/>
 
 		<h2>Equipment and products we use</h2>
 
-		<GalerrySlider></GalerrySlider>
+		<GalerrySlider/>
 
 
-		<div class="mt-20 py-8 px-14 bg-paper b-rd-3" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 18%);">
+		<div class="mt-20 py-8 px-8 md-px-14 bg-paper b-rd-3" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 18%);">
 
 		<p>We at Fine Carpet Cleaning London have gathered years of expertise through taking care of our client’s carpets, rugs and upholstery and always look for new ways to improve. By upgrading our equipment, cleaning products and knowledge at every opportunity, we have been able to get to the level we are at today.</p>
 
@@ -104,14 +149,14 @@ export default function Page() {
 		</ul>
 		</div>
 
-		<FleurDivider></FleurDivider>
+		<FleurDivider/>
 
-		<h2>Fine Carpet Cleaning London Accreditations</h2>
+		<h2 class="mb--5 md-mb-0">Fine Carpet Cleaning London Accreditations</h2>
 		<h3 class="mt-25 mb-15">Fine Carpet Cleaning London is a qualified member of <a class="color-paper-link hover-color-paper-link-hover:hover" href="/" target="_blank" rel="noopener">"NCCA"</a> (National Carpet Cleaners Association)</h3>
 		
-		<GalerrySlider></GalerrySlider>
+		<GalerrySlider/>
 
-		<div class="mt-20 py-8 px-14 bg-paper b-rd-3" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 18%);">
+		<div class="mt-20 py-8 px-8 md-px-14 bg-paper b-rd-3" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 18%);">
 
 		<p>“NCCA” is one of the most respected and authoritative associations for training carpet cleaners. It was founded in 1968 and is devoted entirely to the cleaning, maintenance and restoration of carpets.</p>
 
@@ -121,9 +166,9 @@ export default function Page() {
 		
 		<h3 class="mt-25 mb-15">Fine Carpet Cleaning London is listed on <a class="color-paper-link hover-color-paper-link-hover:hover" href="/" target="_blank" rel="noopener">“Checkatrade"</a></h3>
 		
-		<GalerrySlider></GalerrySlider>
+		<GalerrySlider/>
 
-		<div class="mt-20 py-8 px-14 bg-paper b-rd-3" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 18%);">
+		<div class="mt-20 py-8 px-8 md-px-14 bg-paper b-rd-3" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 18%);">
 
 		<p>“Checkatradе” is an organisation founded in 1998 to help consumers in the UK to find their specialist in a particular area, such as quality carpet cleaning. The main goal of the organisation is the collection of all quality companies in one place covering high standards, transparency in customer service and prices.</p>
 
@@ -153,9 +198,9 @@ export default function Page() {
 		<p>After creating a listing on the “Checkatrade” website, each company is then permanently monitored based on user feedback posted on the organisation’s website.</p>
 
 		</div>
-		<h3 class="mt-25 mb-15">Fine Carpet Cleaning London staff members are trained and certified</h3>
+		<h3 class="mt-25 md-mb-15 mb--5">Fine Carpet Cleaning London staff members are trained and certified</h3>
 
-		<div class="mt-20 py-8 px-14 bg-paper b-rd-3" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 18%);">
+		<div class="mt-20 py-8 px-8 md-px-14 bg-paper b-rd-3" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 18%);">
 
 		<p>On one hand our ambition is to fully satisfy the customers needs to the best of our capabilities. On the other hand the company culture of Fine Carpet Cleaning London strongly encourages constant striving for excellence. These two reasons combined lead to the result that our staff members successfully completed a number of specialised professional courses like:</p>
 
@@ -173,33 +218,30 @@ export default function Page() {
 		<p>Оur goal is to be prepared for any situation, no matter how challenging it is, and leave nothing to chance.</p>
 		</div>
 
-		<FleurDivider></FleurDivider>
+		<FleurDivider/>
 
 		<h2>Results from our services in Fine Carpet Cleaning London</h2>
 
-		<GalerrySlider></GalerrySlider>
+		<GalerrySlider/>
+		
+		<VideoPlayer/>
 
-		<video class="max-w-1000px mt-30 b-rd-3" controls="controls" muted>
-			<div class="vertical-top max-w-full font-size-4 color-paper-inv block"><a class="color-paper-inv block" href="https://www.youtube.com/watch?v=zedTK_cCobY" target="_blank" rel="noopener">Professioanl Carpet Cleaning London - Fine Carpet Cleaning</a></div>
-        	<source src="assets/Professional Carpet Cleaning London - Fine Carpet Cleaning (1).mp4" type="video/mp4" />
-        </video>
-
-		<FleurDivider></FleurDivider>
+		<FleurDivider/>
 
 		<h2>Reviews for our services</h2>
 
-		<GalerrySlider></GalerrySlider>
+		<GalerrySlider/>
 
-		<FleurDivider></FleurDivider>
+		<FleurDivider/>
 
-		<h2>Areas we cover</h2>
+		<h2 class="mb-10 md-mb-20">Areas we cover</h2>
 
-		<FullScreenImageGallery></FullScreenImageGallery>
+		<FullScreenImageGallery/>
 
-		<p class="max-w-80% font-size-4 line-height-6 m-auto">*Fine Carpet Cleaning London operates in all of London. The map below shows all of the London postcodes we cover.
+		<p class="md-max-w-80% font-size-4 line-height-5.5 md-line-height-6 m-auto mt-5 ">*Fine Carpet Cleaning London operates in all of London. The map below shows all of the London postcodes we cover.
 		**Transport surcharge may apply for all other post codes.</p>
 
-		<FleurDivider></FleurDivider>
+		<FleurDivider/>
 
 		<h2>Working hours</h2>
 		<table class="w-full m-auto font-sans">
@@ -239,7 +281,7 @@ export default function Page() {
 		<td class="bg-paper pl-5 py-2 font-500">9:00 - 18:00</td>
 		</tr>
 		<tr>
-		<td class="b-rd-lb-3 b-rd-rb-3 bg-#2e5c47 outline-color" colspan="3" style="box-shadow: 0px 20px 20px 1px rgb(247 247 247/ 100%);"><p class="font-size-4 pl-5 my-2 c-paper">*We also offer performing services out of working hours and at night, which will be included in the final price.</p></td>
+		<td class="b-rd-lb-3 b-rd-rb-3 bg-#2e5c47 outline-color" colspan="3" style="box-shadow: 0px 20px 20px 1px rgb(247 247 247/ 100%);"><p class="font-size-3.5 md-font-size-4 px-5 md-my-7 c-paper md-line-height-0 line-height-6 word-spacing-0.5">*We also offer performing services out of working hours and at night, which will be included in the final price.</p></td>
 		</tr>
 		</tbody>
 		</table>
@@ -247,7 +289,7 @@ export default function Page() {
 		<FleurDivider></FleurDivider>
 
 		<h2>Frequently asked questions</h2>
-		<div class="last-expanded p-4 pr-14 bg-paper b-rd-3 flex flex-justify-center" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 18%);">
+		<div class="last-expanded pr-8 md-p-4 md-pr-14 bg-paper b-rd-3 flex flex-justify-center" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 18%);">
 		<ul>
 			<li class="ml-5">
 		<h3>How long have you been in the carpet cleaning business?</h3>
@@ -393,7 +435,7 @@ export default function Page() {
 
 		<FleurDivider></FleurDivider>
 
-		<div class="m-10% mb-3% flex flex-wrap flex-justify-center gap-15">
+		<div class="m-10% mb-3% flex flex-wrap flex-justify-center md-gap-15 gap-10">
 			<button class="cursor-pointer outline-none bg-brand-action hover-bg-brand-action-hover:hover font-size-6 font-600 w-200px h-60px c-paper flex flex-items-center flex-justify-center relative b-solid b-rd-3 b-4 b-brand-action hover-b-brand-action-hover:hover whitespace-normal line-height-6 word-spacing-0.5 py-9" style="box-shadow: 0 0 0 3px rgba(255, 255, 255, .9) inset; letter-spacing: 0.05rem;"><a class="c-paper font-size-5">GET A QUOTE</a></button>
 			<button class="cursor-pointer outline-none bg-brand-second-action hover-bg-brand-second-action-hover:hover font-size-6 font-600 w-200px h-60px c-paper flex flex-items-center flex-justify-center relative b-solid b-rd-3 b-4 b-brand-second-action hover-b-brand-second-action-hover:hover whitespace-normal line-height-6 word-spacing-0.5 py-9" style="box-shadow: 0 0 0 3px rgba(255, 255, 255, .9) inset; letter-spacing: 0.05rem;"><a class="c-paper font-size-5">PRICES</a></button>
 		</div>

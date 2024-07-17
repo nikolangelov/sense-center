@@ -62,7 +62,7 @@ h1 {
 
 h2 {
   font-weight: 800;
-  font-size: 3.1rem;
+  font-size: 2.8rem;
   margin: 80px 0px;
   letter-spacing: -0.02rem;
   line-height: 3.5rem;
@@ -129,12 +129,12 @@ ol li:before {
   content: counter(ordered);
   counter-increment: ordered;
   font-weight: 600;
-  margin-left: -63px;
+  margin-left: -60px;
   margin-top: 2px;
   padding-left:2px;
   padding-bottom:4px;
-  width: 27px;  
-  height: 25px;
+  width: 25px;  
+  height: 24px;
   position: absolute;
   box-shadow: 0 0 0 1.5px rgba(255, 255, 255, 1) inset;
   border: 3px double transparent;

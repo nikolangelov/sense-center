@@ -9,7 +9,7 @@ import MdiClock from '~icons/mdi/clock';
 import MdiEmail from '~icons/mdi/email';
 
 function MenuItem(props: {href:string, children: JSX.Element }) {
-  return <a href={props.href} class="dropdown hidden font-ui lg-flex c-paper-inv text-center font-size-4 xl-font-size-3.5 uppercase font-sans hover-c-paper-link-hover:hover tracking-wide">{props.children}</a>
+  return <a href={props.href} class="py-6 dropdown hidden font-ui lg-flex c-paper-inv text-center font-size-4 xl-font-size-3.5 uppercase font-sans hover-c-paper-link-hover:hover tracking-wide">{props.children}</a>
 }
 
 function DropdownMenuItem(props: {href:string, children: JSX.Element, src: string }) {
@@ -26,7 +26,7 @@ export default function LayoutDefault(props: { children?: JSX.Element }) {
           <MenuItem href="/Carpet-cleaning-London">Services</MenuItem>
           <div class="dropdown">
             <MenuItem href="/All-services">Services</MenuItem>
-              <div class="dropdown-content top-22 w-full flex-justify-center left-0 flex-row hidden gap-15 absolute bg-paper z-1 m-0 py-4 px-6 flex-wrap" style="box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);">
+              <div class="dropdown-content top-20.1 w-full flex-justify-center left-0 flex-row hidden gap-15 absolute bg-paper z-1 m-0 py-4 px-6 flex-wrap" style="box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);">
               <div class="flex flex-col flex-justify-center">
                 <h3 class="whitespace-normal text-center">Carpet cleaning services</h3>
                 <div class="dropdown-content flex-row flex-wrap hidden flex-items-center flex-content-center">
@@ -76,12 +76,12 @@ export default function LayoutDefault(props: { children?: JSX.Element }) {
                       <DropdownMenuItem href="/" src="/assets/Професионално почистване на заведения.jpg">Office carpet cleaning</DropdownMenuItem>
                     </div>
                   </div>
-                </div>
                 <div class="flex flex-col flex-wrap">
                 <h3 class="whitespace-normal text-center">Other cleaning services</h3>
                   <div class="dropdown-content flex-row flex-wrap hidden flex-items-center flex-content-center flex-justify-center">
                     <DropdownMenuItem href="/" src="/assets/Професионално почистване на заведения.jpg">Office carpet cleaning</DropdownMenuItem>
                   </div>
+                </div>
                 </div>
             </div> 
           </div>
@@ -173,7 +173,7 @@ function Content(props: { children: JSX.Element }) {
 
 function Logo() {
   return (
-    <div class="flex items-center justify-center md-pl-4 pl-0">
+    <div class="flex items-center justify-center md-pl-4 pl-0 z-99">
       <a href="/">
         <img src="/assets/FCC_2024_png.png" class="lg-w-22 w-20 ml-10 mt-7"/>
       </a>
