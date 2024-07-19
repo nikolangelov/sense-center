@@ -4,7 +4,7 @@ import range from "lodash/range"
 
 function FleurDivider () {
 	return (
-		<div class="m-auto my-36 position-relative w-80%">
+		<div class="m-auto my-30 md-my-36 position-relative w-80%">
 			<div class="divider-shadow overflow-hidden h-0.5 after-block::after after-w-full::after after-h-6::after after-mx-auto::after after-mt--6::after"></div>
 			<div class="w-11 h-11 position-absolute position-bottom--6 left-47% bg-#f7f7f7"><img class="position-absolute max-w-7 mx-1.8" src="assets/output-onlinepngtools.png" /></div>
 		</div>
@@ -13,7 +13,7 @@ function FleurDivider () {
 
 function ButtonsFilterReviews({setFilter}:{setFilter:(rating:number | undefined) => void }) {
   return (
-    <div class="flex flex-justify-between flex-wrap">
+    <div class="flex flex-justify-center md-flex-justify-between flex-wrap">
       <div class="flex flex-col flex-justify-center gap-0">
         <p class="font-size-16 m-b-7 m-t-0 m-x-auto" style="font-family:'Roboto'">4.8</p>
         <div>
@@ -24,7 +24,7 @@ function ButtonsFilterReviews({setFilter}:{setFilter:(rating:number | undefined)
         <p class="font-400 m-b-0 m-t-1 m-x-auto" style="font-family:'Roboto'">119 reviews</p>
       </div>
 
-      <div class="w-80%">
+      <div class="w-100% md-w-80%">
         {[undefined, 5, 4, 3, 2, 1].map(rating => (
           <div class="flex flex-items-center my-2 flex-nowrap">
             <button
@@ -37,7 +37,7 @@ function ButtonsFilterReviews({setFilter}:{setFilter:(rating:number | undefined)
             {rating !== undefined && (
               <>
                 <div class="b-rd-3 h-4 bg-gray-3 w-80% overflow-hidden whitespace-nowrap m-r-2">
-                  <div class="b-rd-3 h-4 bg-#ffbe22" style={{ width: getWidth(rating) }}></div>
+                  <div class="b-rd-3 h-4 bg-#ffbe22" style={{ width: getWidth(rating)}}></div>
                 </div>
                 <div class="number-of-reviews-in-new-rvs">({getReviewCount(rating)})</div>
               </>
@@ -86,7 +86,7 @@ function getReviewCount(rating: number) {
 function StarReview(props: {src: string; filterStars: number | undefined; stars: number; hrefGoogleReview: string; name:string; date:string; reviewText:string; }) {
   return (
     <Show when={props.filterStars===undefined || props.filterStars===props.stars}>
-      <table class="m-y-25 5-stars w-70% m-auto border-style-solid b-gray-2" style="border-width: 1px 0px 1px 0px;">
+      <table class="m-y-25 5-stars w-90% md-w-70% m-auto border-style-solid b-gray-2" style="border-width: 1px 0px 1px 0px;">
         <tbody>
           <tr>
             <td class="top-row-of-new-google-review flex flex-justify-between flex-items-center">
@@ -126,7 +126,8 @@ export default function Page() {
       <h1>What our clients say about us</h1>
 
       <ButtonsFilterReviews
-        setFilter={setFilterStars}/>
+        setFilter={setFilterStars}
+      />
 
       <StarReview
         src="/assets/profile-pics-reviews/unnamed90.png"
@@ -1427,13 +1428,10 @@ export default function Page() {
         filterStars={filterStars()}
       />
 
-      <div class="m-10% mb-3% flex flex-wrap flex-justify-center gap-15">
+      <div class="m-10% mb-3% flex flex-wrap flex-justify-center md-gap-15 gap-10">
         <button class="cursor-pointer outline-none bg-brand-second-action hover-bg-brand-second-action-hover:hover font-size-6 font-600 w-200px h-60px c-paper flex flex-items-center flex-justify-center relative b-solid b-rd-3 b-4 b-brand-second-action hover-b-brand-second-action-hover:hover whitespace-normal line-height-6 word-spacing-0.5 py-9" style="box-shadow: 0 0 0 3px rgba(255, 255, 255, .9) inset; letter-spacing: 0.05rem;"><a class="c-paper font-size-5">SERVICES</a></button>
         <button class="cursor-pointer outline-none bg-brand-action hover-bg-brand-action-hover:hover font-size-6 font-600 w-200px h-60px c-paper flex flex-items-center flex-justify-center relative b-solid b-rd-3 b-4 b-brand-action hover-b-brand-action-hover:hover whitespace-normal line-height-6 word-spacing-0.5 py-9" style="box-shadow: 0 0 0 3px rgba(255, 255, 255, .9) inset; letter-spacing: 0.05rem;"><a class="c-paper font-size-5">GET A QUOTE</a></button>
       </div>
-
-      <a href="/"><img class="max-w-full block mla mra md-mt-30 md-mb-18 mt-20 mb-10" src="/assets/ShenYunZuoPin- Orange-Desktop-ZaDimo.png"></img></a>
-
     </>
   );
 }

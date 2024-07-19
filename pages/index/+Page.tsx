@@ -6,12 +6,12 @@ import { Slider, createSlider, SliderButton, SliderProvider } from "solid-slider
 import { createSignal, Show } from 'solid-js';
 import RiYoutubeFill from '~icons/ri/youtube-fill';
 
-const GalerrySlider = () => {
+const GalerrySliderDesktop = () => {
   const options = { duration: 1000 };
   const [slider, { current, next, prev, moveTo }] = createSlider(options);
   return (
     <SliderProvider>
-      <div class="max-w-1000px m-auto position-relative">
+      <div class="max-w-1000px m-auto position-relative hidden md-block">
         <Slider options={{ loop: true, slides: { perView: 3, spacing: 10 } }}>
           <img src="assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" class="" />
           <img src="assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" class="" />
@@ -31,6 +31,32 @@ const GalerrySlider = () => {
     </SliderProvider>
   );
 };
+
+const GalerrySliderMobile = () => {
+	const options = { duration: 1000 };
+	const [slider, { current, next, prev, moveTo }] = createSlider(options);
+	return (
+	  <SliderProvider>
+		<div class="max-w-1000px m-auto position-relative md-hidden block">
+		  <Slider options={{ loop: true }}>
+			<img src="assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" class="" />
+			<img src="assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" class="" />
+			<img src="assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" class="" />
+			<img src="assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" class="" />
+			<img src="assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" class="" />
+			<img src="assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" class="" />
+		  </Slider>
+		  <SliderButton class="cursor-pointer position-absolute top-41% left-0 bg-paper-inv bg-op-50 b-rd-bl-1 b-rd-tl-1 b-none px-0 py-1.5" prev><RiArrowLeftSLine class="-ml-1 font-size-10 c-paper hover-c-brand-light:hover transition-colors" /></SliderButton>
+		  <SliderButton class="cursor-pointer position-absolute top-41% right-0 bg-paper-inv bg-op-50 b-rd-br-1 b-rd-tr-1 b-none px-0 py-1.5" next><RiArrowRightSLine class="-mr-1 font-size-10 c-paper hover-c-brand-light:hover transition-colors" /></SliderButton>
+		  <div class="flex flex-justify-center">
+			<div class={"flex w-3 h-3 rd-50% mx-2 mt-4 " + (current() === 0 ? "bg-brand-dark" : "bg-brand")}></div>
+			<div class={"flex w-3 h-3 rd-50% mx-2 mt-4 " + (current() === 1 ? "bg-brand-dark" : "bg-brand")}></div>
+			<div class={"flex w-3 h-3 rd-50% mx-2 mt-4 " + (current() === 2 ? "bg-brand-dark" : "bg-brand")}></div>
+		  </div>
+		</div>
+	  </SliderProvider>
+	);
+  };
 
 function FleurDivider () {
 	return (
@@ -109,7 +135,7 @@ export default function Page() {
   return (
     <>
       <div class="flex flex-justify-center"><img class="b-rd-3 md-my-20 my-10" src="assets\Професионално почистване на заведения.jpg" alt="" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 30%); width: -moz-available; width: -webkit-fill-available; width: fill-available;"/></div>
-		<h1>Fine Carpet Cleaning London</h1>
+		<h1 class="font-size-14 md-font-size-16 md-line-height-18 line-height-16">Fine Carpet Cleaning London</h1>
 		<div class="mt-20 py-8 px-8 md-px-14 b-rd-3 bg-paper line-height-8 text-justify font-size-4.4" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 18%);">Fine Carpet Cleaning London is a carpet cleaning company which operates in all London boroughs. We provide a variety of commercial and domestic carpet cleaning services, tailoring to our client’s needs.</div>
 
 		<FleurDivider/>
@@ -128,8 +154,8 @@ export default function Page() {
 
 		<h2>Equipment and products we use</h2>
 
-		<GalerrySlider/>
-
+		<GalerrySliderDesktop/>
+		<GalerrySliderMobile/>
 
 		<div class="mt-20 py-8 px-8 md-px-14 bg-paper b-rd-3" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 18%);">
 
@@ -154,7 +180,8 @@ export default function Page() {
 		<h2 class="mb--5 md-mb-0">Fine Carpet Cleaning London Accreditations</h2>
 		<h3 class="mt-25 mb-15">Fine Carpet Cleaning London is a qualified member of <a class="color-paper-link hover-color-paper-link-hover:hover" href="/" target="_blank" rel="noopener">"NCCA"</a> (National Carpet Cleaners Association)</h3>
 		
-		<GalerrySlider/>
+		<GalerrySliderDesktop/>
+		<GalerrySliderMobile/>
 
 		<div class="mt-20 py-8 px-8 md-px-14 bg-paper b-rd-3" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 18%);">
 
@@ -166,7 +193,8 @@ export default function Page() {
 		
 		<h3 class="mt-25 mb-15">Fine Carpet Cleaning London is listed on <a class="color-paper-link hover-color-paper-link-hover:hover" href="/" target="_blank" rel="noopener">“Checkatrade"</a></h3>
 		
-		<GalerrySlider/>
+		<GalerrySliderDesktop/>
+		<GalerrySliderMobile/>
 
 		<div class="mt-20 py-8 px-8 md-px-14 bg-paper b-rd-3" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 18%);">
 
@@ -222,15 +250,17 @@ export default function Page() {
 
 		<h2>Results from our services in Fine Carpet Cleaning London</h2>
 
-		<GalerrySlider/>
-		
+		<GalerrySliderDesktop/>
+		<GalerrySliderMobile/>
+
 		<VideoPlayer/>
 
 		<FleurDivider/>
 
 		<h2>Reviews for our services</h2>
 
-		<GalerrySlider/>
+		<GalerrySliderDesktop/>
+		<GalerrySliderMobile/>
 
 		<FleurDivider/>
 
@@ -238,7 +268,7 @@ export default function Page() {
 
 		<FullScreenImageGallery/>
 
-		<p class="md-max-w-80% font-size-4 line-height-5.5 md-line-height-6 m-auto mt-5 ">*Fine Carpet Cleaning London operates in all of London. The map below shows all of the London postcodes we cover.
+		<p class="md-max-w-80% font-size-4 line-height-5.5 md-line-height-6 m-auto mt-5 ">*Fine Carpet Cleaning London operates in all of London. The map below shows all of the London postcodes we cover.<br></br>
 		**Transport surcharge may apply for all other post codes.</p>
 
 		<FleurDivider/>
@@ -439,10 +469,6 @@ export default function Page() {
 			<button class="cursor-pointer outline-none bg-brand-action hover-bg-brand-action-hover:hover font-size-6 font-600 w-200px h-60px c-paper flex flex-items-center flex-justify-center relative b-solid b-rd-3 b-4 b-brand-action hover-b-brand-action-hover:hover whitespace-normal line-height-6 word-spacing-0.5 py-9" style="box-shadow: 0 0 0 3px rgba(255, 255, 255, .9) inset; letter-spacing: 0.05rem;"><a class="c-paper font-size-5">GET A QUOTE</a></button>
 			<button class="cursor-pointer outline-none bg-brand-second-action hover-bg-brand-second-action-hover:hover font-size-6 font-600 w-200px h-60px c-paper flex flex-items-center flex-justify-center relative b-solid b-rd-3 b-4 b-brand-second-action hover-b-brand-second-action-hover:hover whitespace-normal line-height-6 word-spacing-0.5 py-9" style="box-shadow: 0 0 0 3px rgba(255, 255, 255, .9) inset; letter-spacing: 0.05rem;"><a class="c-paper font-size-5">PRICES</a></button>
 		</div>
-
-		<a href="/"><img class="max-w-full block mla mra md-mt-30 md-mb-18 mt-20 mb-10" src="/assets/ShenYunZuoPin- Orange-Desktop-ZaDimo.png"></img></a>
-
-
     </>
   );
 }

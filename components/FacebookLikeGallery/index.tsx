@@ -13,7 +13,7 @@ export function FacebookLikeGallery(props: { imgs: { src: string, alt: string }[
             <img src={props.imgs[1].src} alt={props.imgs[1].alt} class="cursor-pointer w-33% flex m-auto" onClick={() => setOpen(true)} />
             <img src={props.imgs[2].src} alt={props.imgs[2].alt} class="cursor-pointer w-33% flex m-auto" onClick={() => setOpen(true)} />
             <div class="flex flex-justify-center flex-items-center w-33%">
-                <span class="z-1 c-paper font-size-12 absolute pointer-events-none">+{props.imgs.length - 3}</span>
+                <span class="z-1 c-paper font-size-8 md-font-size-12 absolute pointer-events-none font-sans">+{props.imgs.length - 3}</span>
                 <img src={props.imgs[3].src} alt={props.imgs[3].alt} class="w-full cursor-pointer flex m-auto filter-brightness-40" onClick={() => setOpen(true)} />
             </div>
         </div>

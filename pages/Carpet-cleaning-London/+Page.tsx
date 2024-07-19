@@ -1,6 +1,5 @@
 import RiArrowRightSLine from '~icons/ri/arrow-right-s-line';
 import RiArrowLeftSLine from '~icons/ri/arrow-left-s-line';
-import RiCloseFill from '~icons/ri/close-fill';
 import "solid-slider/slider.css";
 import { createSignal, Show } from 'solid-js';
 import RiYoutubeFill from '~icons/ri/youtube-fill';
@@ -8,13 +7,39 @@ import { FacebookLikeGallery } from '../../components/FacebookLikeGallery';
 import { createSlider, Slider, SliderButton, SliderProvider } from 'solid-slider';
 import { RotatingBanners } from '../../components/RotatingBanners';
 
-const GalerrySlider = () => {
+const GalerrySliderDesktop = () => {
   const options = { duration: 1000 };
   const [slider, { current, next, prev, moveTo }] = createSlider(options);
   return (
     <SliderProvider>
-      <div class="max-w-1000px m-auto position-relative">
+      <div class="max-w-1000px m-auto position-relative hidden md-block">
         <Slider options={{ loop: true, slides: { perView: 3, spacing: 10 } }}>
+          <img src="assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" class="" />
+          <img src="assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" class="" />
+          <img src="assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" class="" />
+          <img src="assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" class="" />
+          <img src="assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" class="" />
+          <img src="assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" class="" />
+        </Slider>
+        <SliderButton class="cursor-pointer position-absolute top-41% left-0 bg-paper-inv bg-op-50 b-rd-bl-1 b-rd-tl-1 b-none px-0 py-1.5" prev><RiArrowLeftSLine class="-ml-1 font-size-10 c-paper hover-c-brand-light:hover transition-colors" /></SliderButton>
+        <SliderButton class="cursor-pointer position-absolute top-41% right-0 bg-paper-inv bg-op-50 b-rd-br-1 b-rd-tr-1 b-none px-0 py-1.5" next><RiArrowRightSLine class="-mr-1 font-size-10 c-paper hover-c-brand-light:hover transition-colors" /></SliderButton>
+        <div class="flex flex-justify-center">
+          <div class={"flex w-3 h-3 rd-50% mx-2 mt-4 " + (current() === 0 ? "bg-brand-dark" : "bg-brand")}></div>
+          <div class={"flex w-3 h-3 rd-50% mx-2 mt-4 " + (current() === 1 ? "bg-brand-dark" : "bg-brand")}></div>
+          <div class={"flex w-3 h-3 rd-50% mx-2 mt-4 " + (current() === 2 ? "bg-brand-dark" : "bg-brand")}></div>
+        </div>
+      </div>
+    </SliderProvider>
+  );
+};
+
+const GalerrySliderMobile = () => {
+  const options = { duration: 1000 };
+  const [slider, { current, next, prev, moveTo }] = createSlider(options);
+  return (
+    <SliderProvider>
+      <div class="max-w-1000px m-auto position-relative md-hidden block">
+        <Slider options={{ loop: true }}>
           <img src="assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" class="" />
           <img src="assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" class="" />
           <img src="assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" class="" />
@@ -90,8 +115,8 @@ function FleurDivider() {
 export default function Page() {
   return (
     <>
-      <h1 class="mt-17">Professional carpet cleaning services</h1>
-      <div class="flex flex-justify-center"><img class="b-rd-3 mt-10 max-w-full" src="assets\Професионално почистване на заведения.jpg" alt="" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 30%);" /></div>
+      <h1 class="mt-17 font-size-14 md-font-size-16 md-line-height-18 line-height-16">Professional carpet cleaning services</h1>
+      <div class="flex flex-justify-center"><img class="b-rd-3 md-mt-10 mt-5 max-w-full" src="assets\Професионално почистване на заведения.jpg" alt="" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 30%);" /></div>
 
       <FleurDivider></FleurDivider>
 
@@ -259,7 +284,8 @@ export default function Page() {
 
       <h2>Frequently ordered together</h2>
 
-      <GalerrySlider></GalerrySlider>
+      <GalerrySliderDesktop />
+      <GalerrySliderMobile />
 
       <FleurDivider></FleurDivider>
 
@@ -293,7 +319,8 @@ export default function Page() {
 
       <h2>Reviews from our professional carpet cleaning</h2>
 
-      <GalerrySlider></GalerrySlider>
+      <GalerrySliderDesktop />
+      <GalerrySliderMobile />
 
       <FleurDivider></FleurDivider>
 
@@ -563,6 +590,7 @@ export default function Page() {
           { src: "https://finecarpetcleaning.co.uk/wp-content/uploads/2024/01/EpochTimes-Gradient-Desktop-Ready950-250.png", alt: "", url: "" },
         ]}
       />
+
     </>
   );
 }
