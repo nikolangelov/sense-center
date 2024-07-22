@@ -14,11 +14,119 @@ import MdiPlaceOutline from '~icons/mdi/place-outline';
 import MdiEmailEditOutline from '~icons/mdi/email-edit-outline';
 import MdiPhoneOutline from '~icons/mdi/phone-outline';
 import MdiCommentAccountOutline from '~icons/mdi/comment-account-outline';
-import { Button, Dropdown } from "solid-bootstrap-core";
+import { Button, ButtonProps, Dropdown, DropdownToggleProps } from "solid-bootstrap-core";
 import RiCloseFill from '~icons/ri/close-fill';
 import RiArrowDownSLine from '~icons/ri/arrow-down-s-line';
 
 
+
+
+const MyDropdown = () => {
+  const [isDropdownOpen, setDropdownOpen] = createSignal(false);
+
+  const handleToggle = (isOpen: any) => {
+    setDropdownOpen(isOpen);
+  };
+
+  return (
+    <div class="dropdown-menu show w-full overflow-y-auto max-h-600px sticky">
+      <Dropdown onToggle={handleToggle}>
+        <Dropdown.Toggle as="div">
+          {(props) => (
+            <button {...props} class="b-none outline-none bg-transparent w-full">
+              <div class="flex flex-justify-evenly w-full">
+                <div class="py-5 flex flex-content-center flex-justify-between w-full">
+                  <a
+                    href="/Carpet-cleaning-London"
+                    class="w-full flex flex-nowrap c-paper-inv hover-c-brand:hover font-size-5 font-500"
+                    style="font-family: Open Sans, sans-serif; letter-spacing: 0.6px;"
+                  >
+                    <MdiVacuum class="mr-3 hover-c-brand-second-action:hover" />Services
+                  </a>
+                  <RiArrowDownSLine class="w-10 h-auto" />
+                </div>
+              </div>
+            </button>
+          )}
+        </Dropdown.Toggle>
+        <Dropdown.Menu flip offset={[0, 4]}>
+          {(menuProps, meta) => (
+            <div
+              {...menuProps}
+              class="dropdown-menu show w-full  max-h-1000px"
+              style={{
+                transition: 'visibility 500ms, opacity 500ms',
+                visibility: meta.show ? 'visible' : 'hidden',
+                opacity: meta.show ? '1' : '0',
+                ...menuProps.style,
+              }}
+            >
+              <div class="left-0 w-full my-3 flex flex-nowrap c-paper-inv hover-c-brand:hover font-size-4.5 font-500" style="font-family: Open Sans, sans-serif; letter-spacing: 0.6px;">Carpet steam cleaning</div>
+              <div class="left-0 w-full my-3 flex flex-nowrap c-paper-inv hover-c-brand:hover font-size-4.5 font-500" style="font-family: Open Sans, sans-serif; letter-spacing: 0.6px;">Dry carpet cleaning</div>
+              <div class="left-0 w-full my-3 flex flex-nowrap c-paper-inv hover-c-brand:hover font-size-4.5 font-500" style="font-family: Open Sans, sans-serif; letter-spacing: 0.6px;">Eco-friendly carpet cleaning</div>
+              <div class="left-0 w-full my-3 flex flex-nowrap c-paper-inv hover-c-brand:hover font-size-4.5 font-500" style="font-family: Open Sans, sans-serif; letter-spacing: 0.6px;">Same day carpet cleaning</div>
+              <div class="left-0 w-full my-3 flex flex-nowrap c-paper-inv hover-c-brand:hover font-size-4.5 font-500" style="font-family: Open Sans, sans-serif; letter-spacing: 0.6px;">Fast dry carpet cleaning</div>
+              <div class="left-0 w-full my-3 flex flex-nowrap c-paper-inv hover-c-brand:hover font-size-4.5 font-500" style="font-family: Open Sans, sans-serif; letter-spacing: 0.6px;">Carpet stain removal</div>
+              <div class="left-0 w-full my-3 flex flex-nowrap c-paper-inv hover-c-brand:hover font-size-4.5 font-500" style="font-family: Open Sans, sans-serif; letter-spacing: 0.6px;">Carpet stain protection</div>
+              <div class="left-0 w-full my-3 flex flex-nowrap c-paper-inv hover-c-brand:hover font-size-4.5 font-500" style="font-family: Open Sans, sans-serif; letter-spacing: 0.6px;">Commercial carpet cleaning</div>
+              <div class="left-0 w-full my-3 flex flex-nowrap c-paper-inv hover-c-brand:hover font-size-4.5 font-500" style="font-family: Open Sans, sans-serif; letter-spacing: 0.6px;">Residential carpet cleaning</div>
+              <div class="left-0 w-full my-3 flex flex-nowrap c-paper-inv hover-c-brand:hover font-size-4.5 font-500" style="font-family: Open Sans, sans-serif; letter-spacing: 0.6px;">Office carpet cleaning</div>
+              <div class="left-0 w-full my-3 flex flex-nowrap c-paper-inv hover-c-brand:hover font-size-4.5 font-500" style="font-family: Open Sans, sans-serif; letter-spacing: 0.6px;">Sofa cleaning</div>
+              <div class="left-0 w-full my-3 flex flex-nowrap c-paper-inv hover-c-brand:hover font-size-4.5 font-500" style="font-family: Open Sans, sans-serif; letter-spacing: 0.6px;">Leather sofa cleaning</div>
+              <div class="left-0 w-full my-3 flex flex-nowrap c-paper-inv hover-c-brand:hover font-size-4.5 font-500" style="font-family: Open Sans, sans-serif; letter-spacing: 0.6px;">Furniture cleaning</div>
+              <div class="left-0 w-full my-3 flex flex-nowrap c-paper-inv hover-c-brand:hover font-size-4.5 font-500" style="font-family: Open Sans, sans-serif; letter-spacing: 0.6px;">Mattress cleaning</div>
+              <div class="left-0 w-full my-3 flex flex-nowrap c-paper-inv hover-c-brand:hover font-size-4.5 font-500" style="font-family: Open Sans, sans-serif; letter-spacing: 0.6px;">Pillow cleaning</div>
+              <div class="left-0 w-full my-3 flex flex-nowrap c-paper-inv hover-c-brand:hover font-size-4.5 font-500" style="font-family: Open Sans, sans-serif; letter-spacing: 0.6px;">Upholstery stain removal</div>
+              <div class="left-0 w-full my-3 flex flex-nowrap c-paper-inv hover-c-brand:hover font-size-4.5 font-500" style="font-family: Open Sans, sans-serif; letter-spacing: 0.6px;">Upholstery stain protection</div>
+              <div class="left-0 w-full my-3 flex flex-nowrap c-paper-inv hover-c-brand:hover font-size-4.5 font-500" style="font-family: Open Sans, sans-serif; letter-spacing: 0.6px;">Rug steam cleaning</div>
+              <div class="left-0 w-full my-3 flex flex-nowrap c-paper-inv hover-c-brand:hover font-size-4.5 font-500" style="font-family: Open Sans, sans-serif; letter-spacing: 0.6px;">Dry rug cleaning</div>
+              <div class="left-0 w-full my-3 flex flex-nowrap c-paper-inv hover-c-brand:hover font-size-4.5 font-500" style="font-family: Open Sans, sans-serif; letter-spacing: 0.6px;">Rug stain removal</div>
+              <div class="left-0 w-full my-3 flex flex-nowrap c-paper-inv hover-c-brand:hover font-size-4.5 font-500" style="font-family: Open Sans, sans-serif; letter-spacing: 0.6px;">Rug stain protection</div>
+              <div class="left-0 w-full my-3 flex flex-nowrap c-paper-inv hover-c-brand:hover font-size-4.5 font-500" style="font-family: Open Sans, sans-serif; letter-spacing: 0.6px;">Antiviral sanitisation</div>
+              <hr class="b-none bg-brand-second-action h-1px my-0"></hr>
+            </div>
+          )}
+        </Dropdown.Menu>
+
+        <hr class="b-none bg-brand-second-action h-1px my-0"></hr>
+        <div
+          class={`py-5 b-b-solid b-b border-brand-second-action transition-all duration-500 ${isDropdownOpen() ? 'mt-245' : 'mt-0'
+            }`}
+        >
+          <a href="/Prices" class="flex flex-nowrap c-paper-inv hover-c-brand:hover font-size-5 font-500" style="font-family: Open Sans, sans-serif; letter-spacing: 0.6px;">
+            <RiMoneyPoundCircleLine class="mr-3" />Prices
+          </a>
+        </div>
+
+        <div class="py-5 b-b-solid b-b border-brand-second-action">
+          <a href="/Reviews" class="flex flex-nowrap c-paper-inv hover-c-brand:hover font-size-5 font-500" style="font-family: Open Sans, sans-serif; letter-spacing: 0.6px;">
+            <MdiCommentAccountOutline class="mr-3" />Reviews
+          </a>
+        </div>
+        <div class="py-5 b-b-solid b-b border-brand-second-action">
+          <a href="/About-us" class="flex flex-nowrap c-paper-inv hover-c-brand:hover font-size-5 font-500" style="font-family: Open Sans, sans-serif; letter-spacing: 0.6px;">
+            <MdiAccountGroupOutline class="mr-3" />About us
+          </a>
+        </div>
+        <div class="py-5 b-b-solid b-b border-brand-second-action">
+          <a href="/Areas-we-cover" class="flex flex-nowrap c-paper-inv hover-c-brand:hover font-size-5 font-500" style="font-family: Open Sans, sans-serif; letter-spacing: 0.6px;">
+            <MdiPlaceOutline class="mr-3" />Areas we cover
+          </a>
+        </div>
+        <div class="py-5 b-b-solid b-b border-brand-second-action">
+          <a href="/Contact-us" class="flex flex-nowrap c-paper-inv hover-c-brand:hover font-size-5 font-500" style="font-family: Open Sans, sans-serif; letter-spacing: 0.6px;">
+            <MdiPhoneOutline class="mr-3" />Contact us
+          </a>
+        </div>
+        <div class="py-5 b-b-solid b-b border-brand-second-action">
+          <a href="/Feedback" class="flex flex-nowrap c-paper-inv hover-c-brand:hover font-size-5 font-500" style="font-family: Open Sans, sans-serif; letter-spacing: 0.6px;">
+            <MdiEmailEditOutline class="mr-3" />Feedback
+          </a>
+        </div>
+      </Dropdown>
+    </div>
+  );
+};
 
 function MenuItem(props: { href: string, children: JSX.Element }) {
   return <a href={props.href} class="py-6 dropdown hidden font-ui lg-flex c-paper-inv text-center font-size-3.5 uppercase font-sans hover-c-paper-link-hover:hover tracking-wide">{props.children}</a>
@@ -162,7 +270,7 @@ function Topbar(props: { children: JSX.Element }) {
   return (
     <div
       id="sidebar"
-      class="flex lg-py-6 lg-h-20 h-20 position-sticky top-0 border-b-2 border-t-1 bg-#f7f7f7 flex-justify-between lg-flex-justify-center flex-items-center z-9998" style="box-shadow: 0 0px 10px 0 rgba(50, 50, 50, 0.5);">
+      class="flex sticky lg-py-6 lg-h-20 h-20 position-sticky top-0 border-b-2 border-t-1 bg-#f7f7f7 flex-justify-between lg-flex-justify-center flex-items-center z-9998" style="box-shadow: 0 0px 10px 0 rgba(50, 50, 50, 0.5);">
       {props.children}
     </div>
   );
@@ -212,74 +320,10 @@ function HamburgerMenu() {
         <HamburgerMenuIcon class="w-10 h-10 color-brand hover-color-brand-second-action" />
       </button>
       <Show when={open()}>
-        <div class="fixed w-screen h-screen bg-#f7f7f7 left-0 top-19.6 px-10">
+        <div class="fixed w-screen h-3000px bg-#f7f7f7 left-0 top-19.6 px-10">
           <div class="py-15 text-left">
             <RiCloseFill class="w-13 h-13 absolute top-0 right-0 mr-9 mt-2 p-2 text-white bg-transparent color-brand cursor-pointer hover-color-brand:hover" onClick={handleClose} />
-            <Dropdown>
-              <Dropdown.Toggle>
-                {(props) => (
-                  <Button {...props} class="b-none outline-none bg-transparent w-full">
-                    <div class="flex flex-justify-evenly w-full">
-                      <div class="py-5 b-b-solid b-b border-brand-second-action flex flex-content-center flex-justify-between w-full">
-                        <a href="/Carpet-cleaning-London" class="w-full flex flex-nowrap c-paper-inv hover-c-brand:hover font-size-5.5 font-500" style="font-family: Open Sans, sans-serif; letter-spacing: 0.6px;">
-                          <MdiVacuum class="mr-3 hover-c-brand-second-action:hover" />Services
-                        </a>
-                        <RiArrowDownSLine class="w-10 h-auto" />
-                      </div>
-                    </div>
-                  </Button>
-                )}
-              </Dropdown.Toggle>
-              <Dropdown.Menu flip offset={[0, 4]}>
-                {(menuProps, meta) => (
-                  <div
-                    {...menuProps}
-                    class="dropdown-menu show"
-                    style={{
-                      transition: "visibility 500ms, opacity 500ms",
-                      visibility: meta.show ? "visible" : "hidden",
-                      opacity: meta.show ? "1" : "0",
-                      ...menuProps.style
-                    }}
-                  >
-                    <div class="left-0">Hey there</div>
-                  </div>
-                )}
-              </Dropdown.Menu>
-            </Dropdown>
-
-            
-
-            <div class="py-5 b-b-solid b-b border-brand-second-action">
-              <a href="/Prices" class="flex flex-nowrap c-paper-inv hover-c-brand:hover font-size-5.5 font-500" style="font-family: Open Sans, sans-serif; letter-spacing: 0.6px;">
-                <RiMoneyPoundCircleLine class="mr-3" />Prices
-              </a>
-            </div>
-            <div class="py-5 b-b-solid b-b border-brand-second-action">
-              <a href="/Reviews" class="flex flex-nowrap c-paper-inv hover-c-brand:hover font-size-5.5 font-500" style="font-family: Open Sans, sans-serif; letter-spacing: 0.6px;">
-                <MdiCommentAccountOutline class="mr-3" />Reviews
-              </a>
-            </div>
-            <div class="py-5 b-b-solid b-b border-brand-second-action">
-              <a href="/About-us" class="flex flex-nowrap c-paper-inv hover-c-brand:hover font-size-5.5 font-500" style="font-family: Open Sans, sans-serif; letter-spacing: 0.6px;">
-                <MdiAccountGroupOutline class="mr-3" />About us
-              </a>
-            </div>
-            <div class="py-5 b-b-solid b-b border-brand-second-action">
-              <a href="/Areas-we-cover" class="flex flex-nowrap c-paper-inv hover-c-brand:hover font-size-5.5 font-500" style="font-family: Open Sans, sans-serif; letter-spacing: 0.6px;">
-                <MdiPlaceOutline class="mr-3" />Areas we cover
-              </a>
-            </div>
-            <div class="py-5 b-b-solid b-b border-brand-second-action">
-              <a href="/Contact-us" class="flex flex-nowrap c-paper-inv hover-c-brand:hover font-size-5.5 font-500" style="font-family: Open Sans, sans-serif; letter-spacing: 0.6px;">
-                <MdiPhoneOutline class="mr-3" />Contact us
-              </a>
-            </div>
-            <div class="py-5 b-b-solid b-b border-brand-second-action">
-              <a href="/Feedback" class="flex flex-nowrap c-paper-inv hover-c-brand:hover font-size-5.5 font-500" style="font-family: Open Sans, sans-serif; letter-spacing: 0.6px;">
-                <MdiEmailEditOutline class="mr-3" />Feedback
-              </a>
-            </div>
+            <MyDropdown />
           </div>
         </div>
       </Show>
@@ -291,7 +335,7 @@ function HamburgerMenu() {
 function MainFooter(props: { children: JSX.Element }) {
   return (
     <div
-      class="flex flex-justify-evenly bg-brand-dark lg-p-10 p-6 md-p-5 flex-shrink-0 flex-items-start flex-wrap">
+      class="flex flex-justify-start md-flex-justify-evenly bg-brand-dark lg-p-10 p-6 md-p-5 flex-shrink-0 flex-items-start flex-wrap">
       {props.children}
     </div>
   );

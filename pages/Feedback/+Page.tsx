@@ -19,58 +19,19 @@ export default function Page() {
           
           <p>
             <span class="" data-name="your-name">
-              <input class="bg-gray-1 b-none w-full p-3 b-rd-1 c-paper-inv font-serif font-size-4" style="box-shadow: 0 1px 2px rgba(0, 0, 0, .12) inset;" aria-required="true" aria-invalid="false" placeholder="Name:" value="" type="text" name="your-name"/>
+              <input class="bg-gray-1 b-none w-full p-3 b-rd-1 c-paper-inv font-serif font-size-4" style="box-shadow: 0 1px 2px rgba(0, 0, 0, .12) inset;" aria-required="true" aria-invalid="false" placeholder="Name:" value="" type="text" name="your-name" required/>
             </span>
           </p>
 
           <p>
             <span class="" data-name="your-email">
-              <input class="bg-gray-1 b-none w-full p-3 b-rd-1 c-paper-inv font-serif font-size-4" style="box-shadow: 0 1px 2px rgba(0, 0, 0, .12) inset;" aria-required="true" aria-invalid="false" placeholder="E-mail:" value="" type="email" name="your-email"/>
+              <input class="bg-gray-1 b-none w-full p-3 b-rd-1 c-paper-inv font-serif font-size-4" style="box-shadow: 0 1px 2px rgba(0, 0, 0, .12) inset;" aria-required="true" aria-invalid="false" placeholder="E-mail:" value="" type="email" name="your-email" required/>
             </span>
           </p>
-
-          <p>
-            <span class="" data-name="post-code">
-              <input class="bg-gray-1 b-none w-full p-3 b-rd-1 c-paper-inv font-serif font-size-4" style="box-shadow: 0 1px 2px rgba(0, 0, 0, .12) inset;" aria-invalid="false" placeholder="Post code" value="" type="text" name="post-code"/>
-            </span>
-          </p>
-
-          <p>
-            <span class="" data-name="your-phone">
-              <input class="bg-gray-1 b-none w-full p-3 b-rd-1 c-paper-inv font-serif font-size-4" style="box-shadow: 0 1px 2px rgba(0, 0, 0, .12) inset;" aria-invalid="false" placeholder="Phone:" value="" type="text" name="your-phone"/>
-            </span>
-          </p>
-
-          <h4 class="mb-2">Choose Service Required</h4>
-          <span data-name="menu-490">
-            <select class="bg-gray-1 b-none w-full p-3 b-rd-1 c-gray-5 font-serif font-size-4" style="box-shadow: 0 1px 2px rgba(0, 0, 0, .12) inset;" aria-required="true" aria-invalid="false" name="menu-490">
-              <option value="Carpet cleaning">Carpet cleaning</option>
-              <option value="Rug cleaning">Rug cleaning</option>
-              <option value="Upholstery cleaning">Upholstery cleaning</option>
-              <option value="Steam cleaning">Steam cleaning</option>
-              <option value="Stain removal">Stain removal</option>
-              <option value="Corona Virus Disinfection">Corona Virus Disinfection</option>
-            </select>
-          </span>
-
-          <h4 class="mb-2">How did you find us</h4>
-          <span data-name="menu-238">
-            <select class="bg-gray-1 b-none w-full p-3 b-rd-1 c-gray-5 font-serif font-size-4" style="box-shadow: 0 1px 2px rgba(0, 0, 0, .12) inset;" aria-invalid="false" name="menu-238">
-              <option value="Google">Google</option>
-              <option value="Gumtree">Gumtree</option>
-              <option value="Yahoo">Yahoo</option>
-              <option value="Bing">Bing</option>
-              <option value="Facebook">Facebook</option>
-              <option value="Twitter">Twitter</option>
-              <option value="Fine Carpet Cleaning vehicle">Fine Carpet Cleaning vehicle</option>
-              <option value="Recommendation">Recommendation</option>
-              <option value="I've used Fine Carpet Cleaning before">I've used Fine Carpet Cleaning before</option>
-            </select>
-          </span>
 
           <p>
             <span data-name="your-message">
-              <textarea cols="40" rows="10" class="bg-gray-1 b-none w-full p-3 b-rd-1 c-paper-inv font-serif font-size-4" style="box-shadow: 0 1px 2px rgba(0, 0, 0, .12) inset;" aria-invalid="false" placeholder="Message:" name="your-message">
+              <textarea cols="40" rows="10" class="bg-gray-1 b-none w-full p-3 b-rd-1 c-paper-inv font-serif font-size-4" style="box-shadow: 0 1px 2px rgba(0, 0, 0, .12) inset;" aria-required="true" aria-invalid="false" placeholder="Message:" name="your-message" required>
               </textarea>
             </span>
           </p>

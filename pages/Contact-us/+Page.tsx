@@ -76,6 +76,56 @@ export default function Page() {
             </span>
           </p>
 
+          <h4 class="mb-2 mt-8">Service required</h4>
+          <span class="flex gap-50" data-name="your-phone">
+            <div class="flex flex-col">
+              <div>
+                <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike" />
+                <label for="vehicle1"> Carpet cleaning</label>
+              </div>
+              <div>
+                <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike" />
+                <label for="vehicle1"> Rug cleaning</label>
+              </div>
+              <div>
+                <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike" />
+                <label for="vehicle1"> Sofa cleaning</label>
+              </div>
+              <div>
+                <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike" />
+                <label for="vehicle1"> Mattress cleaning</label>
+              </div>
+              <div>
+                <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike" />
+                <label for="vehicle1"> Leather sofa cleaning</label>
+              </div>
+            </div>
+
+            <div class="flex flex-col">
+              <div>
+                <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike" />
+                <label for="vehicle1"> Pillow cleaning</label>
+              </div>
+              <div>
+                <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike" />
+                <label for="vehicle1"> Stain removal cleaning</label>
+              </div>
+              <div>
+                <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike" />
+                <label for="vehicle1"> Stain protection cleaning</label>
+              </div>
+              <div>
+                <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike" />
+                <label for="vehicle1"> Antiviral sanitisation service</label>
+              </div>
+              <div>
+                <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike" />
+                <label for="vehicle1"> Other</label>
+              </div>
+            </div>
+          </span>
+
+
           <h4 class="mb-2">Choose Service Required</h4>
           <span data-name="menu-490">
             <select class="bg-gray-1 b-none w-full p-3 b-rd-1 c-gray-5 font-serif font-size-4" style="box-shadow: 0 1px 2px rgba(0, 0, 0, .12) inset;" aria-required="true" aria-invalid="false" name="menu-490">
@@ -111,7 +161,11 @@ export default function Page() {
           </p>
 
           <p>
-            <input class="cursor-pointer py-4 px-10 bg-brand b-none c-paper b-rd-2 w-full uppercase font-800 font-size-5" style="letter-spacing: 1px;" type="submit" value="send" />
+            Photos (Optional)
+          </p>
+
+          <p>
+            <input class="cursor-pointer py-4 px-10 bg-brand b-none c-paper b-rd-2 w-full uppercase font-800 font-size-5" style="letter-spacing: 1px;" type="submit" value="Request a quote" />
             <span class="">
             </span>
           </p>
