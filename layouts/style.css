@@ -62,7 +62,7 @@ h1 {
 
 h2 {
   font-weight: 800;
-  font-size: 2.8rem;
+  font-size: 2.5rem;
   margin: 80px 0px;
   letter-spacing: -0.02rem;
   line-height: 3.5rem;
@@ -196,8 +196,6 @@ ol li:before {
   border-radius: 10px;
 }
 
-
-
 .dropdown:hover .dropdown-content {
   display: flex;
 }
@@ -207,17 +205,17 @@ ol li:before {
   height: 100%;
 }
 
-.mt-8 {
-  margin-top: 2rem; /* Adjust this value as needed */
-}
-.mt-0 {
-  margin-top: 0;
-}
-.transition-all {
-  transition: all 0.5s ease;
-}
-.separator {
-  height: 1px;
-  background-color: #ddd;
-  margin: 8px 0;
+input[type=file]::file-selector-button {
+  border: 2px solid #1A6142;
+  border-radius: .2em;
+  background-color: #fff;
+  letter-spacing: 0.5px;
+  font-weight: 700;
+  font-size: 15px;
+  text-transform: uppercase;
+  color:#1A6142;
+  font-family: "Roboto", sans-serif;
+  cursor: pointer;
+  margin-right: 20px;
+  padding: 10px 20px;
 }

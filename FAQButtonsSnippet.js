@@ -1,3 +1,5 @@
+
+
 function toggleExpand(index){
 
     var readMore = document.querySelector('.read-more-click-to-expand-'+index);

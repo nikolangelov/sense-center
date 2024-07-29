@@ -18,42 +18,50 @@ import { Button, ButtonProps, Dropdown, DropdownToggleProps } from "solid-bootst
 import RiCloseFill from '~icons/ri/close-fill';
 import RiArrowDownSLine from '~icons/ri/arrow-down-s-line';
 
-
-
+function DropownMenuLink(props: { href: string | undefined; children: number | boolean | Node | JSX.ArrayElement | (string & {}) | null | undefined; }) {
+  return (
+    <a href={props.href}>
+      <div class="left-0 w-full my-3 flex flex-nowrap c-paper-inv hover-c-brand:hover font-size-4.5 font-500" style="font-family: Open Sans, sans-serif; letter-spacing: 0.6px;">
+        {props.children}
+      </div>
+    </a>
+  );
+}
 
 const MyDropdown = () => {
   const [isDropdownOpen, setDropdownOpen] = createSignal(false);
 
-  const handleToggle = (isOpen: any) => {
-    setDropdownOpen(isOpen);
+  const handleArrowClick = (e: { stopPropagation: () => void; }) => {
+    e.stopPropagation();
+    setDropdownOpen(!isDropdownOpen());
   };
 
   return (
     <div class="dropdown-menu show w-full overflow-y-auto max-h-600px sticky">
-      <Dropdown onToggle={handleToggle}>
-        <Dropdown.Toggle as="div">
+      <Dropdown show={isDropdownOpen()}>
+        <Dropdown.Toggle>
           {(props) => (
-            <button {...props} class="b-none outline-none bg-transparent w-full">
+            <div {...props} class="b-none outline-none bg-transparent w-full">
               <div class="flex flex-justify-evenly w-full">
                 <div class="py-5 flex flex-content-center flex-justify-between w-full">
                   <a
-                    href="/Carpet-cleaning-London"
+                    href="/services"
                     class="w-full flex flex-nowrap c-paper-inv hover-c-brand:hover font-size-5 font-500"
                     style="font-family: Open Sans, sans-serif; letter-spacing: 0.6px;"
                   >
                     <MdiVacuum class="mr-3 hover-c-brand-second-action:hover" />Services
                   </a>
-                  <RiArrowDownSLine class="w-10 h-auto" />
+                  <RiArrowDownSLine class="w-10 h-auto cursor-pointer" onClick={handleArrowClick} />
                 </div>
               </div>
-            </button>
+            </div>
           )}
         </Dropdown.Toggle>
         <Dropdown.Menu flip offset={[0, 4]}>
           {(menuProps, meta) => (
             <div
               {...menuProps}
-              class="dropdown-menu show w-full  max-h-1000px"
+              class="dropdown-menu show w-full max-h-1000px"
               style={{
                 transition: 'visibility 500ms, opacity 500ms',
                 visibility: meta.show ? 'visible' : 'hidden',
@@ -61,37 +69,35 @@ const MyDropdown = () => {
                 ...menuProps.style,
               }}
             >
-              <div class="left-0 w-full my-3 flex flex-nowrap c-paper-inv hover-c-brand:hover font-size-4.5 font-500" style="font-family: Open Sans, sans-serif; letter-spacing: 0.6px;">Carpet steam cleaning</div>
-              <div class="left-0 w-full my-3 flex flex-nowrap c-paper-inv hover-c-brand:hover font-size-4.5 font-500" style="font-family: Open Sans, sans-serif; letter-spacing: 0.6px;">Dry carpet cleaning</div>
-              <div class="left-0 w-full my-3 flex flex-nowrap c-paper-inv hover-c-brand:hover font-size-4.5 font-500" style="font-family: Open Sans, sans-serif; letter-spacing: 0.6px;">Eco-friendly carpet cleaning</div>
-              <div class="left-0 w-full my-3 flex flex-nowrap c-paper-inv hover-c-brand:hover font-size-4.5 font-500" style="font-family: Open Sans, sans-serif; letter-spacing: 0.6px;">Same day carpet cleaning</div>
-              <div class="left-0 w-full my-3 flex flex-nowrap c-paper-inv hover-c-brand:hover font-size-4.5 font-500" style="font-family: Open Sans, sans-serif; letter-spacing: 0.6px;">Fast dry carpet cleaning</div>
-              <div class="left-0 w-full my-3 flex flex-nowrap c-paper-inv hover-c-brand:hover font-size-4.5 font-500" style="font-family: Open Sans, sans-serif; letter-spacing: 0.6px;">Carpet stain removal</div>
-              <div class="left-0 w-full my-3 flex flex-nowrap c-paper-inv hover-c-brand:hover font-size-4.5 font-500" style="font-family: Open Sans, sans-serif; letter-spacing: 0.6px;">Carpet stain protection</div>
-              <div class="left-0 w-full my-3 flex flex-nowrap c-paper-inv hover-c-brand:hover font-size-4.5 font-500" style="font-family: Open Sans, sans-serif; letter-spacing: 0.6px;">Commercial carpet cleaning</div>
-              <div class="left-0 w-full my-3 flex flex-nowrap c-paper-inv hover-c-brand:hover font-size-4.5 font-500" style="font-family: Open Sans, sans-serif; letter-spacing: 0.6px;">Residential carpet cleaning</div>
-              <div class="left-0 w-full my-3 flex flex-nowrap c-paper-inv hover-c-brand:hover font-size-4.5 font-500" style="font-family: Open Sans, sans-serif; letter-spacing: 0.6px;">Office carpet cleaning</div>
-              <div class="left-0 w-full my-3 flex flex-nowrap c-paper-inv hover-c-brand:hover font-size-4.5 font-500" style="font-family: Open Sans, sans-serif; letter-spacing: 0.6px;">Sofa cleaning</div>
-              <div class="left-0 w-full my-3 flex flex-nowrap c-paper-inv hover-c-brand:hover font-size-4.5 font-500" style="font-family: Open Sans, sans-serif; letter-spacing: 0.6px;">Leather sofa cleaning</div>
-              <div class="left-0 w-full my-3 flex flex-nowrap c-paper-inv hover-c-brand:hover font-size-4.5 font-500" style="font-family: Open Sans, sans-serif; letter-spacing: 0.6px;">Furniture cleaning</div>
-              <div class="left-0 w-full my-3 flex flex-nowrap c-paper-inv hover-c-brand:hover font-size-4.5 font-500" style="font-family: Open Sans, sans-serif; letter-spacing: 0.6px;">Mattress cleaning</div>
-              <div class="left-0 w-full my-3 flex flex-nowrap c-paper-inv hover-c-brand:hover font-size-4.5 font-500" style="font-family: Open Sans, sans-serif; letter-spacing: 0.6px;">Pillow cleaning</div>
-              <div class="left-0 w-full my-3 flex flex-nowrap c-paper-inv hover-c-brand:hover font-size-4.5 font-500" style="font-family: Open Sans, sans-serif; letter-spacing: 0.6px;">Upholstery stain removal</div>
-              <div class="left-0 w-full my-3 flex flex-nowrap c-paper-inv hover-c-brand:hover font-size-4.5 font-500" style="font-family: Open Sans, sans-serif; letter-spacing: 0.6px;">Upholstery stain protection</div>
-              <div class="left-0 w-full my-3 flex flex-nowrap c-paper-inv hover-c-brand:hover font-size-4.5 font-500" style="font-family: Open Sans, sans-serif; letter-spacing: 0.6px;">Rug steam cleaning</div>
-              <div class="left-0 w-full my-3 flex flex-nowrap c-paper-inv hover-c-brand:hover font-size-4.5 font-500" style="font-family: Open Sans, sans-serif; letter-spacing: 0.6px;">Dry rug cleaning</div>
-              <div class="left-0 w-full my-3 flex flex-nowrap c-paper-inv hover-c-brand:hover font-size-4.5 font-500" style="font-family: Open Sans, sans-serif; letter-spacing: 0.6px;">Rug stain removal</div>
-              <div class="left-0 w-full my-3 flex flex-nowrap c-paper-inv hover-c-brand:hover font-size-4.5 font-500" style="font-family: Open Sans, sans-serif; letter-spacing: 0.6px;">Rug stain protection</div>
-              <div class="left-0 w-full my-3 flex flex-nowrap c-paper-inv hover-c-brand:hover font-size-4.5 font-500" style="font-family: Open Sans, sans-serif; letter-spacing: 0.6px;">Antiviral sanitisation</div>
+              <DropownMenuLink href="//steam">Carpet steam cleaning</DropownMenuLink>
+              <DropownMenuLink href="/dry">Dry carpet cleaning</DropownMenuLink>
+              <DropownMenuLink href="/">Eco-friendly carpet cleaning</DropownMenuLink>
+              <DropownMenuLink href="/same-day">Same day carpet cleaning</DropownMenuLink>
+              <DropownMenuLink href="/">Fast dry carpet cleaning</DropownMenuLink>
+              <DropownMenuLink href="/">Carpet stain removal</DropownMenuLink>
+              <DropownMenuLink href="/">Carpet stain protection</DropownMenuLink>
+              <DropownMenuLink href="/">Commercial carpet cleaning</DropownMenuLink>
+              <DropownMenuLink href="/">Residential carpet cleaning</DropownMenuLink>
+              <DropownMenuLink href="/">Office carpet cleaning</DropownMenuLink>
+              <DropownMenuLink href="/">Sofa cleaning</DropownMenuLink>
+              <DropownMenuLink href="/">Leather sofa cleaning</DropownMenuLink>
+              <DropownMenuLink href="/">Furniture cleaning</DropownMenuLink>
+              <DropownMenuLink href="/">Mattress cleaning</DropownMenuLink>
+              <DropownMenuLink href="/">Pillow cleaning</DropownMenuLink>
+              <DropownMenuLink href="/">Upholstery stain removal</DropownMenuLink>
+              <DropownMenuLink href="/">Upholstery stain protection</DropownMenuLink>
+              <DropownMenuLink href="/">Rug steam cleaning</DropownMenuLink>
+              <DropownMenuLink href="/">Dry rug cleaning</DropownMenuLink>
+              <DropownMenuLink href="/">Rug stain removal</DropownMenuLink>
+              <DropownMenuLink href="/">Rug stain protection</DropownMenuLink>
+              <DropownMenuLink href="/">Antiviral sanitisation</DropownMenuLink>
               <hr class="b-none bg-brand-second-action h-1px my-0"></hr>
             </div>
           )}
         </Dropdown.Menu>
-
         <hr class="b-none bg-brand-second-action h-1px my-0"></hr>
         <div
-          class={`py-5 b-b-solid b-b border-brand-second-action transition-all duration-500 ${isDropdownOpen() ? 'mt-245' : 'mt-0'
-            }`}
+          class={`py-5 b-b-solid b-b border-brand-second-action transition-all duration-500 ${isDropdownOpen() ? 'mt-245' : 'mt-0'}`}
         >
           <a href="/Prices" class="flex flex-nowrap c-paper-inv hover-c-brand:hover font-size-5 font-500" style="font-family: Open Sans, sans-serif; letter-spacing: 0.6px;">
             <RiMoneyPoundCircleLine class="mr-3" />Prices
@@ -143,21 +149,20 @@ export default function LayoutDefault(props: { children?: JSX.Element }) {
 
       <Topbar>
         <Logo />
-        <button class="get-a-quote-button whitespace-nowrap md-ml-2 xl-ml-10 font-serif uppercase font-500 c-paper overflow-hidden relative bg-paper b-double b-rd-1 b-4 b-transparent h-13 w-35 cursor-pointer font-size-3.5 tracking-wide" style="min-width: fit-content; background-origin: border-box; background-clip: padding-box, border-box; box-shadow: 0 0 0 2.5px rgba(255, 255, 255, 1) inset; background-image: linear-gradient(90deg, rgb(13, 46, 41) 0%, rgb(26, 135, 94) 50%), radial-gradient(circle at left top, rgb(13, 46, 41), rgb(26, 135, 94));">Get a quote</button>
+        <button class="get-a-quote-button whitespace-nowrap md-ml-2 xl-ml-10 font-serif uppercase font-500 c-paper overflow-hidden relative bg-paper b-double b-rd-1 b-4 b-transparent h-13 w-45 cursor-pointer font-size-3.5 tracking-wide" style="min-width: fit-content; background-origin: border-box; background-clip: padding-box, border-box; box-shadow: 0 0 0 2.5px rgba(255, 255, 255, 1) inset; background-image: linear-gradient(90deg, rgb(13, 46, 41) 0%, rgb(26, 135, 94) 50%), radial-gradient(circle at left top, rgb(13, 46, 41), rgb(26, 135, 94));">Request a quote</button>
         <div class="flex whitespace-nowrap flex-nowrap flex-justify-end flex-items-end font-semibold gap-5 xl-gap-5xl md-pr-10 md-pl-5 xl-pl-10 pr-6 flex-content-center flex-items-center">
-          <MenuItem href="/Carpet-cleaning-London">Services</MenuItem>
           <div class="dropdown">
-            <MenuItem href="/All-services">Services</MenuItem>
-            <div class="dropdown-content top-20.1 w-full flex-justify-center left-0 flex-row hidden gap-15 absolute bg-paper z-1 m-0 py-4 px-6 flex-wrap" style="box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);">
+            <MenuItem href="/services">Services</MenuItem>
+            <div class="dropdown-content top-19.7 w-full flex-justify-center left-0 flex-row hidden gap-15 absolute bg-paper z-1 m-0 py-4 px-6 flex-wrap" style="box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);">
               <div class="flex flex-col flex-justify-center">
-                <h3 class="whitespace-normal text-center">Carpet cleaning services</h3>
+                <a href="/professional-carpet-cleaning-services"><h3 class="whitespace-normal text-center hover-c-brand:hover">Carpet cleaning services</h3></a>
                 <div class="dropdown-content flex-row flex-wrap hidden flex-items-center flex-content-center">
-                  <DropdownMenuItem href="/" src="/assets/Професионално почистване на заведения.jpg">Carpet steam cleaning</DropdownMenuItem>
-                  <DropdownMenuItem href="/" src="/assets/Професионално почистване на заведения.jpg">Dry carpet cleaning</DropdownMenuItem>
+                  <DropdownMenuItem href="/steam" src="/assets/Професионално почистване на заведения.jpg">Carpet steam cleaning</DropdownMenuItem>
+                  <DropdownMenuItem href="/dry" src="/assets/Професионално почистване на заведения.jpg">Dry carpet cleaning</DropdownMenuItem>
                   <DropdownMenuItem href="/" src="/assets/Професионално почистване на заведения.jpg">Eco-friendly carpet cleaning</DropdownMenuItem>
                 </div>
                 <div class="dropdown-content flex-row flex-wrap hidden flex-items-center flex-content-center">
-                  <DropdownMenuItem href="/" src="/assets/Професионално почистване на заведения.jpg">Same day carpet cleaning</DropdownMenuItem>
+                  <DropdownMenuItem href="/same-day" src="/assets/Професионално почистване на заведения.jpg">Same day carpet cleaning</DropdownMenuItem>
                   <DropdownMenuItem href="/" src="/assets/Професионално почистване на заведения.jpg">Fast dry carpet cleaning</DropdownMenuItem>
                   <DropdownMenuItem href="/" src="/assets/Професионално почистване на заведения.jpg">Carpet stain removal</DropdownMenuItem>
                 </div>
@@ -171,7 +176,7 @@ export default function LayoutDefault(props: { children?: JSX.Element }) {
                 </div>
               </div>
               <div class="flex flex-col flex-wrap">
-                <h3 class="whitespace-normal text-center">Upholstery cleaning services</h3>
+              <a href="/professional-carpet-cleaning-services"><h3 class="whitespace-normal text-center hover-c-brand:hover">Upholstery cleaning services</h3></a>
                 <div class="dropdown-content flex-row flex-wrap hidden flex-items-center flex-content-center">
                   <DropdownMenuItem href="/" src="/assets/Професионално почистване на заведения.jpg">Carpet stain protection</DropdownMenuItem>
                   <DropdownMenuItem href="/" src="/assets/Професионално почистване на заведения.jpg">Commercial carpet cleaning</DropdownMenuItem>
@@ -188,7 +193,7 @@ export default function LayoutDefault(props: { children?: JSX.Element }) {
               </div>
               <div class="flex flex-col">
                 <div class="flex flex-col flex-wrap">
-                  <h3 class="whitespace-normal text-center">Rug cleaning services</h3>
+                <a href="/professional-carpet-cleaning-services"><h3 class="whitespace-normal text-center hover-c-brand:hover">Rug cleaning services</h3></a>
                   <div class="dropdown-content flex-row flex-wrap hidden flex-items-center flex-content-center">
                     <DropdownMenuItem href="/" src="/assets/Професионално почистване на заведения.jpg">Carpet stain protection</DropdownMenuItem>
                     <DropdownMenuItem href="/" src="/assets/Професионално почистване на заведения.jpg">Commercial carpet cleaning</DropdownMenuItem>
@@ -199,7 +204,7 @@ export default function LayoutDefault(props: { children?: JSX.Element }) {
                   </div>
                 </div>
                 <div class="flex flex-col flex-wrap">
-                  <h3 class="whitespace-normal text-center">Other cleaning services</h3>
+                <a href="/professional-carpet-cleaning-services"><h3 class="whitespace-normal text-center hover-c-brand:hover">Other cleaning services</h3></a>
                   <div class="dropdown-content flex-row flex-wrap hidden flex-items-center flex-content-center flex-justify-center">
                     <DropdownMenuItem href="/" src="/assets/Професионално почистване на заведения.jpg">Office carpet cleaning</DropdownMenuItem>
                   </div>
@@ -297,7 +302,7 @@ function Logo() {
   return (
     <div class="flex items-center justify-center md-pl-4 pl-0 z-99">
       <a href="/">
-        <img src="/assets/FCC_2024_png.png" class="lg-w-22 w-20 ml-10 mt-7" />
+        <img src="/assets/FCC_2024_png.png" class="lg-w-22 w-20 md-ml-10 ml-3 mt-7" />
       </a>
     </div>
   );
@@ -306,23 +311,35 @@ function Logo() {
 function HamburgerMenu() {
   const [open, setOpen] = createSignal(false);
 
-  const handleOpen = () => {
-    setOpen(true);
-  };
-
-  const handleClose = () => {
-    setOpen(false);
+  const handleToggle = () => {
+    setOpen(!open());
   };
 
   return (
     <div class="flex flex-content-center flex-justify-between">
-      <button class="bg-transparent cursor-pointer border-style-none lg-hidden" onClick={handleOpen}>
-        <HamburgerMenuIcon class="w-10 h-10 color-brand hover-color-brand-second-action" />
+      <button class="bg-transparent cursor-pointer border-style-none lg-hidden" onClick={handleToggle} style="position: relative;">
+        <HamburgerMenuIcon
+          class="w-10 h-10 color-brand hover-color-brand-second-action"
+          style={{
+            opacity: open() ? 0 : 1,
+            transform: open() ? "rotate(90deg)" : "rotate(0deg)",
+            transition: "opacity 0.3s, transform 0.3s",
+            position: "relative",
+          }}
+        />
+        <RiCloseFill
+          class="w-10 h-10 color-brand hover-color-brand-second-action right-8"
+          style={{
+            opacity: open() ? 1 : 0,
+            transform: open() ? "rotate(0deg)" : "rotate(90deg)",
+            transition: "opacity 0.3s, transform 0.3s",
+            position: "fixed",
+          }}
+        />
       </button>
       <Show when={open()}>
         <div class="fixed w-screen h-3000px bg-#f7f7f7 left-0 top-19.6 px-10">
           <div class="py-15 text-left">
-            <RiCloseFill class="w-13 h-13 absolute top-0 right-0 mr-9 mt-2 p-2 text-white bg-transparent color-brand cursor-pointer hover-color-brand:hover" onClick={handleClose} />
             <MyDropdown />
           </div>
         </div>
@@ -357,7 +374,7 @@ function BottomFooter(props: { children: JSX.Element }) {
 function BackToTopButton(props: { onClick: JSX.EventHandlerUnion<HTMLButtonElement, MouseEvent> | undefined; children: number | boolean | Node | JSX.ArrayElement | (string & {}) | null | undefined; }) {
   return (
     <button
-      class="flex items-center justify-between cursor-pointer b-none color-brand-inv bg-brand-light hover-bg-brand w-10 h-10"
+      class="flex items-center justify-between cursor-pointer b-none color-paper bg-brand-second-action hover-bg-brand w-10 h-10"
       onClick={props.onClick}
     >
       {props.children}
@@ -400,19 +417,3 @@ function BackToTopArrow() {
     </div>
   );
 }
-
-
-
-
-
-
-function LogoInFooter() {
-  return (
-    <div class="flex items-center justify-center">
-      <a href="/">
-        <img src="/assets/FCC_2024_png.png" class="lg-w-22 w-20" />
-      </a>
-    </div>
-  );
-}
-
