@@ -69,14 +69,14 @@ const MyDropdown = () => {
                 ...menuProps.style,
               }}
             >
-              <DropownMenuLink href="//steam">Carpet steam cleaning</DropownMenuLink>
-              <DropownMenuLink href="/dry">Dry carpet cleaning</DropownMenuLink>
+              <DropownMenuLink href="/professional-carpet-cleaning-services/steam">Carpet steam cleaning</DropownMenuLink>
+              <DropownMenuLink href="/professional-carpet-cleaning-services/dry">Dry carpet cleaning</DropownMenuLink>
               <DropownMenuLink href="/">Eco-friendly carpet cleaning</DropownMenuLink>
-              <DropownMenuLink href="/same-day">Same day carpet cleaning</DropownMenuLink>
-              <DropownMenuLink href="/">Fast dry carpet cleaning</DropownMenuLink>
+              <DropownMenuLink href="/professional-carpet-cleaning-services/same-day">Same day carpet cleaning</DropownMenuLink>
+              <DropownMenuLink href="/professional-carpet-cleaning-services/fast-dry">Fast dry carpet cleaning</DropownMenuLink>
               <DropownMenuLink href="/">Carpet stain removal</DropownMenuLink>
               <DropownMenuLink href="/">Carpet stain protection</DropownMenuLink>
-              <DropownMenuLink href="/">Commercial carpet cleaning</DropownMenuLink>
+              <DropownMenuLink href="/professional-carpet-cleaning-services/commercial">Commercial carpet cleaning</DropownMenuLink>
               <DropownMenuLink href="/">Residential carpet cleaning</DropownMenuLink>
               <DropownMenuLink href="/">Office carpet cleaning</DropownMenuLink>
               <DropownMenuLink href="/">Sofa cleaning</DropownMenuLink>
@@ -157,18 +157,18 @@ export default function LayoutDefault(props: { children?: JSX.Element }) {
               <div class="flex flex-col flex-justify-center">
                 <a href="/professional-carpet-cleaning-services"><h3 class="whitespace-normal text-center hover-c-brand:hover">Carpet cleaning services</h3></a>
                 <div class="dropdown-content flex-row flex-wrap hidden flex-items-center flex-content-center">
-                  <DropdownMenuItem href="/steam" src="/assets/Професионално почистване на заведения.jpg">Carpet steam cleaning</DropdownMenuItem>
-                  <DropdownMenuItem href="/dry" src="/assets/Професионално почистване на заведения.jpg">Dry carpet cleaning</DropdownMenuItem>
+                  <DropdownMenuItem href="/professional-carpet-cleaning-services/steam" src="/assets/Професионално почистване на заведения.jpg">Carpet steam cleaning</DropdownMenuItem>
+                  <DropdownMenuItem href="/professional-carpet-cleaning-services/dry" src="/assets/Професионално почистване на заведения.jpg">Dry carpet cleaning</DropdownMenuItem>
                   <DropdownMenuItem href="/" src="/assets/Професионално почистване на заведения.jpg">Eco-friendly carpet cleaning</DropdownMenuItem>
                 </div>
                 <div class="dropdown-content flex-row flex-wrap hidden flex-items-center flex-content-center">
-                  <DropdownMenuItem href="/same-day" src="/assets/Професионално почистване на заведения.jpg">Same day carpet cleaning</DropdownMenuItem>
-                  <DropdownMenuItem href="/" src="/assets/Професионално почистване на заведения.jpg">Fast dry carpet cleaning</DropdownMenuItem>
+                  <DropdownMenuItem href="/professional-carpet-cleaning-services/same-day" src="/assets/Професионално почистване на заведения.jpg">Same day carpet cleaning</DropdownMenuItem>
+                  <DropdownMenuItem href="/professional-carpet-cleaning-services/fast-dry" src="/assets/Професионално почистване на заведения.jpg">Fast dry carpet cleaning</DropdownMenuItem>
                   <DropdownMenuItem href="/" src="/assets/Професионално почистване на заведения.jpg">Carpet stain removal</DropdownMenuItem>
                 </div>
                 <div class="dropdown-content flex-row flex-wrap hidden flex-items-center flex-content-center">
                   <DropdownMenuItem href="/" src="/assets/Професионално почистване на заведения.jpg">Carpet stain protection</DropdownMenuItem>
-                  <DropdownMenuItem href="/" src="/assets/Професионално почистване на заведения.jpg">Commercial carpet cleaning</DropdownMenuItem>
+                  <DropdownMenuItem href="/professional-carpet-cleaning-services/commercial" src="/assets/Професионално почистване на заведения.jpg">Commercial carpet cleaning</DropdownMenuItem>
                   <DropdownMenuItem href="/" src="/assets/Професионално почистване на заведения.jpg">Residential carpet cleaning</DropdownMenuItem>
                 </div>
                 <div class="dropdown-content flex-row flex-wrap hidden flex-items-center flex-content-center flex-justify-center">

@@ -3,9 +3,9 @@ import RiArrowLeftSLine from '~icons/ri/arrow-left-s-line';
 import "solid-slider/slider.css";
 import { Component, createSignal, Show } from 'solid-js';
 import RiYoutubeFill from '~icons/ri/youtube-fill';
-import { FacebookLikeGallery } from '../../components/FacebookLikeGallery';
+import { FacebookLikeGallery } from '../../../components/FacebookLikeGallery';
 import { createSlider, Slider, SliderButton, SliderProvider } from 'solid-slider';
-import { RotatingBanners } from '../../components/RotatingBanners';
+import { RotatingBanners } from '../../../components/RotatingBanners';
 
 const GalerrySliderDesktop = () => {
   const options = { duration: 1000 };
@@ -14,12 +14,12 @@ const GalerrySliderDesktop = () => {
     <SliderProvider>
       <div class="max-w-1000px m-auto position-relative hidden md-block">
         <Slider options={{ loop: true, slides: { perView: 3, spacing: 10 } }}>
-          <img src="assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" class="" />
-          <img src="assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" class="" />
-          <img src="assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" class="" />
-          <img src="assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" class="" />
-          <img src="assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" class="" />
-          <img src="assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" class="" />
+          <img src="/assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" class="" />
+          <img src="/assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" class="" />
+          <img src="/assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" class="" />
+          <img src="/assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" class="" />
+          <img src="/assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" class="" />
+          <img src="/assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" class="" />
         </Slider>
         <SliderButton class="cursor-pointer position-absolute top-41% left-0 bg-paper-inv bg-op-50 b-rd-bl-1 b-rd-tl-1 b-none px-0 py-1.5" prev><RiArrowLeftSLine class="-ml-1 font-size-10 c-paper hover-c-brand-light:hover transition-colors" /></SliderButton>
         <SliderButton class="cursor-pointer position-absolute top-41% right-0 bg-paper-inv bg-op-50 b-rd-br-1 b-rd-tr-1 b-none px-0 py-1.5" next><RiArrowRightSLine class="-mr-1 font-size-10 c-paper hover-c-brand-light:hover transition-colors" /></SliderButton>
@@ -35,12 +35,12 @@ const GalerrySliderMobile = () => {
     <SliderProvider>
       <div class="max-w-1000px m-auto position-relative md-hidden block">
         <Slider options={{ loop: true }}>
-          <img src="assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" class="" />
-          <img src="assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" class="" />
-          <img src="assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" class="" />
-          <img src="assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" class="" />
-          <img src="assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" class="" />
-          <img src="assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" class="" />
+          <img src="/assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" class="" />
+          <img src="/assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" class="" />
+          <img src="/assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" class="" />
+          <img src="/assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" class="" />
+          <img src="/assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" class="" />
+          <img src="/assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" class="" />
         </Slider>
         <SliderButton class="cursor-pointer position-absolute top-41% left-0 bg-paper-inv bg-op-50 b-rd-bl-1 b-rd-tl-1 b-none px-0 py-1.5" prev><RiArrowLeftSLine class="-ml-1 font-size-10 c-paper hover-c-brand-light:hover transition-colors" /></SliderButton>
         <SliderButton class="cursor-pointer position-absolute top-41% right-0 bg-paper-inv bg-op-50 b-rd-br-1 b-rd-tr-1 b-none px-0 py-1.5" next><RiArrowRightSLine class="-mr-1 font-size-10 c-paper hover-c-brand-light:hover transition-colors" /></SliderButton>
@@ -85,7 +85,7 @@ const VideoPlayer = () => {
           </a>
         </div>
         <source
-          src="assets/Professional Carpet Cleaning London - Fine Carpet Cleaning (1).mp4"
+          src="/assets/Professional Carpet Cleaning London - Fine Carpet Cleaning (1).mp4"
           type="video/mp4"
         />
       </video>
@@ -97,7 +97,7 @@ function FleurDivider() {
   return (
     <div class="m-auto my-30 md-my-36 position-relative w-80%">
       <div class="divider-shadow overflow-hidden h-0.5 after-block::after after-w-full::after after-h-6::after after-mx-auto::after after-mt--6::after"></div>
-      <div class="w-11 h-11 position-absolute position-bottom--6 left-47% bg-#f7f7f7"><img class="position-absolute max-w-7 mx-1.8" src="assets/output-onlinepngtools.png" /></div>
+      <div class="w-11 h-11 position-absolute position-bottom--6 left-47% bg-#f7f7f7"><img class="position-absolute max-w-7 mx-1.8" src="/assets/output-onlinepngtools.png" /></div>
     </div>
   );
 }
@@ -106,13 +106,13 @@ export default function Page() {
   return (
     <>
       <h1 class="mt-10 md-mt-17 font-size-12.5 md-font-size-16 md-line-height-18 line-height-16">Dry carpet cleaning services</h1>
-      <div class="flex flex-justify-center"><img class="b-rd-3 md-mt-10 mt-2 max-w-full" src="assets\Професионално почистване на заведения.jpg" alt="" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 30%);" /></div>
+      <div class="flex flex-justify-center"><img class="b-rd-3 md-mt-10 mt-2 max-w-full" src="/assets\Професионално почистване на заведения.jpg" alt="" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 30%);" /></div>
 
       <FleurDivider></FleurDivider>
 
       <h2 class="line-height-12 md-line-height-14">What to expect from our dry carpet cleaning services</h2>
       <div class="mt-20 py-8 px-8 md-px-14 bg-paper b-rd-3" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 18%);">
-        <h3>Benefits</h3>
+        <h3>Benefits:</h3>
         <p>We at “Fine Carpet Cleaning” Ltd are offering dry carpet cleaning services. These services are used for cleaning finer, more delicate, and natural carpets, rugs, and upholstery, which are very vulnerable to water damage. This cleaning method is essentially carpet cleaning without water and it is safe for babies, pets and allergy sufferers.</p>
         <p>The benefits of using dry carpet cleaning services are:</p>
 
@@ -205,7 +205,7 @@ export default function Page() {
           </li>
           <li class="ml--5">
             <h3 class="ml--5 font-size-6 md-font-size-7">Thoughtfully chosen cleaning products.</h3>
-            <p class="ml--5">To ensure exceptional results in our dry pro carpet cleaning, we have extensively tested which cleaning product gives the best results and have selected the most efficient one - the “Envirodri” (изходящ линк към “https://envirodri.com/”) dry carpet cleaning powder. This cleaning product is eco-clean and has been designed to attract and absorb dirt and soiling from all carpet types. It is then vacuumed away to leave behind cleaner, fresher and newer looking carpets.</p>
+            <p class="ml--5">To ensure exceptional results in our dry pro carpet cleaning, we have extensively tested which cleaning product gives the best results and have selected the most efficient one - the <a class="color-paper-link hover-color-paper-link-hover:hover" href="https://envirodri.com/">“Envirodri”</a> dry carpet cleaning powder. This cleaning product is eco-clean and has been designed to attract and absorb dirt and soiling from all carpet types. It is then vacuumed away to leave behind cleaner, fresher and newer looking carpets.</p>
             <p class="ml--5">With our cutting-edge cleaning equipment and premium products, we guarantee a top-quality carpet dry cleaning service.</p>
           </li>
         </ol>
@@ -314,7 +314,7 @@ export default function Page() {
 
       <FleurDivider></FleurDivider>
 
-      <h2 class="line-height-12 md-line-height-14">Our dry carpet cleaning services specialists advises</h2>
+      <h2 class="line-height-12 md-line-height-14">Our dry carpet cleaning services specialist advises:</h2>
       <div class="mt-20 py-8 px-12 md-px-14 bg-paper b-rd-3" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 18%);">
         <ol style="counter-reset: ordered; list-style: none;">
           <li class="ml--5">

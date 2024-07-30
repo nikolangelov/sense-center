@@ -6,7 +6,7 @@ function FleurDivider() {
   return (
     <div class="m-auto my-30 md-my-36 position-relative w-80%">
       <div class="divider-shadow overflow-hidden h-0.5 after-block::after after-w-full::after after-h-6::after after-mx-auto::after after-mt--6::after"></div>
-      <div class="w-11 h-11 position-absolute position-bottom--6 left-47% bg-#f7f7f7"><img class="position-absolute max-w-7 mx-1.8" src="assets/output-onlinepngtools.png" /></div>
+      <div class="w-11 h-11 position-absolute position-bottom--6 left-47% bg-#f7f7f7"><img class="position-absolute max-w-7 mx-1.8" src="/assets/output-onlinepngtools.png" /></div>
     </div>
   );
 }
@@ -20,11 +20,11 @@ function FullScreenImageGallery() {
 
   return (
     <div class="relative">
-      <img class="cursor-pointer max-w-full md-max-w-80% md-max-h-80% block m-auto" src="assets/map2.png" alt="" onClick={handleClick} />
+      <img class="cursor-pointer max-w-full md-max-w-80% md-max-h-80% block m-auto" src="/assets/map2.png" alt="" onClick={handleClick} />
       <Show when={open()}>
         <div class="fixed top-0 left-0 w-screen h-screen flex justify-center items-center bg-black bg-opacity-85 z-9999" onClick={handleClick}>
           <RiCloseFill class="w-16 h-16 absolute top-0 right-0 mr-20 mt-14 p-2 text-white bg-transparent color-paper cursor-pointer hover-color-brand:hover" />
-          <img src="assets/map2.png" alt="" class="max-w-full max-h-full" />
+          <img src="/assets/map2.png" alt="" class="max-w-full max-h-full" />
         </div>
       </Show>
     </div>

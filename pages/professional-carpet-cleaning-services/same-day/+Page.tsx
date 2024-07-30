@@ -111,7 +111,7 @@ export default function Page() {
 
       <h2 class="line-height-12 md-line-height-14">Why to use same day carpet cleaning services</h2>
       <div class="mt-20 py-8 px-8 md-px-14 bg-paper b-rd-3" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 18%);">
-        <h3>Benefits</h3>
+        <h3>Benefits:</h3>
         <p>At Fine Carpet Cleaning London, we know that accidents happen, and you may need your carpets cleaned immediately. We offer the perfect option for people who do not have time to schedule everything. Same day carpet cleaning allows you to book an appointment for later the same day. Using this type of service has the following benefits:</p>
 
         <ul>
@@ -284,7 +284,7 @@ export default function Page() {
 
       <FleurDivider></FleurDivider>
 
-      <h2 class="line-height-12 md-line-height-14">Our carpet cleaning specialists advices</h2>
+      <h2 class="line-height-12 md-line-height-14">Our carpet cleaning specialist advises:</h2>
       <div class="mt-20 py-8 px-12 md-px-14 bg-paper b-rd-3" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 18%);">
         <ol style="counter-reset: ordered; list-style: none;">
           <li class="ml--5">
