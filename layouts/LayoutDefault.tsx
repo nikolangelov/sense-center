@@ -1,6 +1,6 @@
 import 'uno.css'
 import "./style.css";
-import { createEffect, JSX, onCleanup } from "solid-js";
+import {children, createEffect, JSX, onCleanup} from "solid-js";
 import { createSignal, Show } from "solid-js";
 import HamburgerMenuIcon from '~icons/mdi/hamburger-menu';
 import MdiKeyboardArrowUp from '~icons/mdi/keyboard-arrow-up';
@@ -143,8 +143,8 @@ function DropdownMenuItem(props: { href: string, children: JSX.Element, src: str
 }
 
 export default function LayoutDefault(props: { children?: JSX.Element }) {
+  const childrenMemo = children(() => props.children)
   return (
-
     <div class="flex flex-col">
 
       <Topbar>
@@ -221,7 +221,7 @@ export default function LayoutDefault(props: { children?: JSX.Element }) {
           <HamburgerMenu />
         </div>
       </Topbar>
-      <Content>{props.children}</Content>
+      <Content>{childrenMemo()}</Content>
       <BackToTopArrow></BackToTopArrow>
       <MainFooter>
 

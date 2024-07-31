@@ -1,169 +1,12 @@
 import RiArrowRightSLine from '~icons/ri/arrow-right-s-line';
 import RiArrowLeftSLine from '~icons/ri/arrow-left-s-line';
 import "solid-slider/slider.css";
-import {Component, createSignal, Show} from 'solid-js';
+import {createSignal} from 'solid-js';
 import RiYoutubeFill from '~icons/ri/youtube-fill';
 import {FacebookLikeGallery} from '../../components/FacebookLikeGallery';
 import {createSlider, Slider, SliderButton, SliderProvider} from 'solid-slider';
 import {RotatingBanners} from '../../components/RotatingBanners';
-import {FaqCollapse} from '../../components/FAQ'
-
-function Page1() {
-    return <FaqCollapse
-        pages={[
-            <ul>
-                <li>
-                    <h3>What happens if your cleaner damages anything while performing professional carpet cleaning
-                        services?</h3>
-                    <p class="ml--5">We are fully insured and if an accident happens we have full coverage.</p></li>
-                <li>
-                    <h3>How long does the process of professional carpet cleaning service take?</h3>
-                    <p class="ml--5">The professional carpet cleaning process depends on how soiled the carpet is and if
-                        it needs any stain removal treatments. It takes from 20 to 60 minutes per room.</p></li>
-                <li>
-                    <h3>How long does it take for the carpet to get dry?</h3>
-                    <p class="ml--5">It depends on many factors like the type of the carpet, how dirty it is, how thick
-                        the pile is and if it needs a stain removal service or not.</p>
-
-                    <p class="ml--5">Wool carpets absorb more water and dry slowly, between 10 and 12 hours. If the
-                        carpet is very dirty and we have to treat the carpet several times, the drying time might be
-                        even longer.</p>
-
-                    <p class="ml--5">Synthetic carpets dry faster, between 7 and 10 hours, and the above is still valid
-                        (it depends on how dirty it is and the number of required treatments).</p></li>
-                <li>
-                    <h3>Do you guarantee that after cleaning my carpet all stains will be removed?</h3>
-                    <p class="ml--5">No, because there are factors involved which are out of our control. Among these
-                        factors are:</p></li>
-                <li>
-                    <p>How old are the stains?</p>
-                </li>
-                <li>
-                    <p>What is the polluting agent that caused the stains?</p>
-                </li>
-                <li>
-                    <p>What is the carpet made of?</p>
-                </li>
-                <li>
-                    <p>Have the stains been treated improperly in the past?</p>
-                </li>
-                <li>
-                    <p>Nevertheless, we can guarantee that we will do our best in order to eliminate all of the stains
-                        on your carpet. This includes:</p>
-                </li>
-                <li>
-                    <p>The use of high-end cleaning equipment;</p>
-                </li>
-                <li>
-                    <p>The use of top-notch specially selected detergents;</p>
-                </li>
-                <li>
-                    <p>Individual approach according to the different types of carpets and polluting agents.</p>
-                </li>
-                <li>
-                    <h3>How soon can I expect a cleaner to visit me?</h3>
-                    <p class="ml--5">We will try to get you an appointment as soon as possible. Usually, we are fully
-                        booked for 3 days ahead, but sometimes there are exceptions.</p></li>
-                <li>
-                    <h3>Can you give me a carpet cleaning quote over the phone or do you need to visit my property?</h3>
-                    <p class="ml--5">Yes, we can give you an estimate over the phone, there is no need for us to visit
-                        your property. Commercial properties however may require a site visit. You can also get a carpet
-                        cleaning quote online.</p></li>
-                <li>
-                    <h3>What payment methods do you accept for your professional carpet cleaning service?</h3>
-                    <p class="ml--5">We accept debit/credit cards, bank transfer, and cash payments directly to our
-                        team.</p></li>
-                <li>
-                    <h3>Can you provide me with an invoice for your professional carpet cleaning services?</h3>
-                    <p class="ml--5">Yes, we will send you a receipt via email.</p></li>
-                <li>
-                    <h3>Are you qualified?</h3>
-                    <p class="ml--5">Yes, we are qualified and fully trained members of <a
-                        class="color-paper-link hover-color-paper-link-hover:hover" href="/" target="_blank"
-                        rel="noopener">NCCA (National Carpet Cleaners Association)</a> – the UK’s recognised industry
-                        qualification.</p></li>
-                <li>
-                    <h3>How long have you been in the carpet cleaning business?</h3>
-                    <p class="ml--5">We have been operating since 2012. We have years of experience dealing with
-                        residential and commercial customers and various types of carpets, rugs, upholstery and stains.
-                        Through the years we have been striving to improve our services by:</p></li>
-                <li>
-                    <p>Upgrading our machines with better ones;</p>
-                </li>
-                <li>
-                    <p>Frequently testing and selecting new detergents;</p>
-                </li>
-                <li>
-                    <p>Always searching to improve our expertise by attending professional courses.</p>
-                </li>
-            </ul>,
-
-            <ul>
-                <li>
-                    <h3>Can you give me a discount?</h3>
-                    <p class="ml--5">Based on the fact that we provide high-quality carpet cleaning services, by using
-                        the best machinery and over 20 different top-notch detergents, our carpet cleaning prices are
-                        already the most competitive and the best on the market. In order to get the best price we
-                        advise you to check out our price calculator. Then you will find out that combining all the
-                        services you need at once will be cheaper than having them performed separately. The reason is
-                        that the initial cost is high and you will have to pay extra for every single visit of the
-                        technician since there are factors in place like time of travel, parking, loading and unloading
-                        of heavy machinery etc.</p></li>
-                <li>
-                    <h3>How often should a carpet be professionally cleaned?</h3>
-                    <p class="ml--5">Deep cleaning depends mainly on factors like how fast the carpet soils. On average,
-                        a carpet should be cleaned at 12-month intervals. However, if you have pets, children, high
-                        traffic on the carpet, a smoking habit or if you stain it a lot we recommend using an expert
-                        carpet cleaning in London more often. You can contact us to get the best professional carpet
-                        cleaning service in London or to seek expert advice.</p></li>
-                <li>
-                    <h3>How much does a professional carpet cleaning cost?</h3>
-                    <p class="ml--5">The cost of professional carpet cleaning depends on the quantity and size of the
-                        carpets, how soiled they are, the type of the carpets and how easy the access to the carpets is.
-                        For more detailed information check out <a
-                            class="color-paper-link hover-color-paper-link-hover:hover" href="/" target="_blank"
-                            rel="noopener">carpet cleaning price list</a>.</p></li>
-                <li>
-                    <h3>Do you offer cheap carpet cleaning?</h3>
-                    <p class="ml--5">The truth is that we, from Fine Carpet Cleaning London, do not offer cheap carpet
-                        cleaning. The reason is that we want to ensure high-quality of our carpet cleaning services
-                        which involves higher expenses for us.</p></li>
-                <li>
-                    <h3>Do you think that your company is doing the best carpet cleaning in London?</h3>
-                    <p class="ml--5">We, from Fine Carpet Cleaning London, believe that we are bound to be among the
-                        best carpet cleaning companies in London. The reason is that we strongly believe in the
-                        principle “No loss, no gain” and try to follow it when doing business. When we combine this with
-                        another principle that we try to follow - “think about others first” - this guarantees strive
-                        for constant improvement and delivery of better and better results. All of the above gives us
-                        confidence that we definitely have a chance in the foreseeable future to offer the best carpet
-                        cleaning in London.</p></li>
-                <li>
-                    <h3>Do you offer stairs carpet cleaning services?</h3>
-                    <p class="ml--5">Yes, we do. You can check the prices for stairs carpet cleaning services in our <a
-                        class="color-paper-link hover-color-paper-link-hover:hover" href="/" target="_blank"
-                        rel="noopener">price list</a> or alternatively you can use our price calculator. If you need
-                        more details regarding our stairs carpet cleaning services feel free to <a
-                            class="color-paper-link hover-color-paper-link-hover:hover" href="/" target="_blank"
-                            rel="noopener">contact us</a>.</p></li>
-                <li>
-                    <h3>Do you offer luxury carpet cleaning in London?</h3>
-                    <p class="ml--5">Yes, we do. But as luxury carpet cleaning in London is a high-end service, which
-                        deserves an individual approach to every client, you need to contact us in order to obtain more
-                        information about it.</p></li>
-                <li>
-                    <h3>Do you offer carpet cleaning and deodorising service?</h3>
-                    <p class="ml--5">Yes, we do offer carpet cleaning and deodorising service. Our company culture is to
-                        provide the best service we are capable of. That’s why we have put the extra effort required to
-                        deodorise your carpets in our basic offer for you. </p>
-                    <p class="ml--5">We recommend when you book our professional carpet cleaning services to notify us
-                        in advance that you would like to add deodorising service. Because of the strong smell and
-                        allergic people, we do not deodorise all carpets. We perform the service at the request of the
-                        client, and it is free of charge.</p></li>
-            </ul>,
-        ]}
-    />
-}
-
+import {createCollapsable} from "../../components/Collapsable";
 
 const GalerrySliderDesktop = () => {
     const options = {duration: 1000};
@@ -192,7 +35,7 @@ const GalerrySliderDesktop = () => {
     );
 };
 
-const GalerrySliderMobile = () => {
+const GallerySliderMobile = () => {
     const options = {duration: 1000};
     const [slider, {current, next, prev, moveTo}] = createSlider(options);
     return (
@@ -275,8 +118,451 @@ function FleurDivider() {
     );
 }
 
-export default function Page() {
-    const [shown, setShown] = createSignal(0)
+export default function FaqSection() {
+    const {Container, Entry} = createCollapsable()
+    return <Container>
+        <Entry>
+            <ul>
+                <li>
+                    <h3>What happens if your cleaner damages anything while performing professional carpet cleaning
+                        services?</h3>
+                    <p class="ml--5">We are fully insured and if an accident happens we have full coverage.</p>
+                </li>
+                <li>
+                    <h3>How long does the process of professional carpet cleaning service take?</h3>
+                    <p class="ml--5">The professional carpet cleaning process depends on how soiled the carpet
+                        is
+                        and if it needs any stain removal treatments. It takes from 20 to 60 minutes per room.</p>
+                </li>
+                <li>
+                    <h3>How long does it take for the carpet to get dry?</h3>
+                    <p class="ml--5">It depends on many factors like the type of the carpet, how dirty it is,
+                        how
+                        thick the pile is and if it needs a stain removal service or not.</p>
+
+                    <p class="ml--5">Wool carpets absorb more water and dry slowly, between 10 and 12 hours. If
+                        the
+                        carpet is very dirty and we have to treat the carpet several times, the drying time might be
+                        even longer.</p>
+
+                    <p class="ml--5">Synthetic carpets dry faster, between 7 and 10 hours, and the above is
+                        still
+                        valid (it depends on how dirty it is and the number of required treatments).</p></li>
+                <li>
+                    <h3>Do you guarantee that after cleaning my carpet all stains will be removed?</h3>
+                    <p class="ml--5">No, because there are factors involved which are out of our control. Among
+                        these factors are:</p></li>
+                <li>
+                    <p>How old are the stains?</p>
+                </li>
+                <li>
+                    <p>What is the polluting agent that caused the stains?</p>
+                </li>
+                <li>
+                    <p>What is the carpet made of?</p>
+                </li>
+                <li>
+                    <p>Have the stains been treated improperly in the past?</p>
+                </li>
+                <li>
+                    <p>Nevertheless, we can guarantee that we will do our best in order to eliminate all of the
+                        stains on your carpet. This includes:</p>
+                </li>
+                <li>
+                    <p>The use of high-end cleaning equipment;</p>
+                </li>
+                <li>
+                    <p>The use of top-notch specially selected detergents;</p>
+                </li>
+                <li>
+                    <p>Individual approach according to the different types of carpets and polluting agents.</p>
+                </li>
+                <li>
+                    <h3>How soon can I expect a cleaner to visit me?</h3>
+                    <p class="ml--5">We will try to get you an appointment as soon as possible. Usually, we are
+                        fully booked for 3 days ahead, but sometimes there are exceptions.</p></li>
+                <li>
+                    <h3>Can you give me a carpet cleaning quote over the phone or do you need to visit my
+                        property?</h3>
+                    <p class="ml--5">Yes, we can give you an estimate over the phone, there is no need for us to
+                        visit your property. Commercial properties however may require a site visit. You can also
+                        get a carpet cleaning quote online.</p></li>
+                <li>
+                    <h3>What payment methods do you accept for your professional carpet cleaning service?</h3>
+                    <p class="ml--5">We accept debit/credit cards, bank transfer, and cash payments directly to
+                        our
+                        team.</p></li>
+                <li>
+                    <h3>Can you provide me with an invoice for your professional carpet cleaning services?</h3>
+                    <p class="ml--5">Yes, we will send you a receipt via email.</p></li>
+                <li>
+                    <h3>Are you qualified?</h3>
+                    <p class="ml--5">Yes, we are qualified and fully trained members of <a
+                        class="color-paper-link hover-color-paper-link-hover:hover" href="/" target="_blank"
+                        rel="noopener">NCCA (National Carpet Cleaners Association)</a> – the UK’s recognised
+                        industry qualification.</p></li>
+                <li>
+                    <h3>How long have you been in the carpet cleaning business?</h3>
+                    <p class="ml--5">We have been operating since 2012. We have years of experience dealing with
+                        residential and commercial customers and various types of carpets, rugs, upholstery and
+                        stains. Through the years we have been striving to improve our services by:</p></li>
+                <li>
+                    <p>Upgrading our machines with better ones;</p>
+                </li>
+                <li>
+                    <p>Frequently testing and selecting new detergents;</p>
+                </li>
+                <li>
+                    <p>Always searching to improve our expertise by attending professional courses.</p>
+                </li>
+            </ul>
+        </Entry>
+        <Entry>
+            <ul>
+                <li>
+                    <h3>Can you give me a discount?</h3>
+                    <p class="ml--5">Based on the fact that we provide high-quality carpet cleaning services, by
+                        using the best machinery and over 20 different top-notch detergents, our carpet cleaning
+                        prices are already the most competitive and the best on the market. In order to get the best
+                        price we advise you to check out our price calculator. Then you will find out that combining
+                        all the services you need at once will be cheaper than having them performed separately. The
+                        reason is that the initial cost is high and you will have to pay extra for every single
+                        visit of the technician since there are factors in place like time of travel, parking,
+                        loading and unloading of heavy machinery etc.</p>
+                </li>
+                <li>
+                    <h3>How often should a carpet be professionally cleaned?</h3>
+                    <p class="ml--5">Deep cleaning depends mainly on factors like how fast the carpet soils. On
+                        average, a carpet should be cleaned at 12-month intervals. However, if you have pets,
+                        children, high traffic on the carpet, a smoking habit or if you stain it a lot we recommend
+                        using an expert carpet cleaning in London more often. You can contact us to get the best
+                        professional carpet cleaning service in London or to seek expert advice.</p></li>
+                <li>
+                    <h3>How much does a professional carpet cleaning cost?</h3>
+                    <p class="ml--5">The cost of professional carpet cleaning depends on the quantity and size
+                        of
+                        the carpets, how soiled they are, the type of the carpets and how easy the access to the
+                        carpets is. For more detailed information check out <a
+                            class="color-paper-link hover-color-paper-link-hover:hover" href="/" target="_blank"
+                            rel="noopener">carpet cleaning price list</a>.</p>
+                </li>
+                <li>
+                    <h3>Do you offer cheap carpet cleaning?</h3>
+                    <p class="ml--5">The truth is that we, from Fine Carpet Cleaning London, do not offer cheap
+                        carpet cleaning. The reason is that we want to ensure high-quality of our carpet cleaning
+                        services which involves higher expenses for us.</p>
+                </li>
+                <li>
+                    <h3>Do you think that your company is doing the best carpet cleaning in London?</h3>
+                    <p class="ml--5">We, from Fine Carpet Cleaning London, believe that we are bound to be among
+                        the
+                        best carpet cleaning companies in London. The reason is that we strongly believe in the
+                        principle “No loss, no gain” and try to follow it when doing business. When we combine this
+                        with another principle that we try to follow - “think about others first” - this guarantees
+                        strive for constant improvement and delivery of better and better results. All of the above
+                        gives us confidence that we definitely have a chance in the foreseeable future to offer the
+                        best carpet cleaning in London.</p>
+                </li>
+                <li>
+                    <h3>Do you offer stairs carpet cleaning services?</h3>
+                    <p class="ml--5">Yes, we do. You can check the prices for stairs carpet cleaning services in
+                        our <a class="color-paper-link hover-color-paper-link-hover:hover" href="/"
+                               target="_blank"
+                               rel="noopener">price list</a> or alternatively you can use our price calculator. If
+                        you need more details regarding our stairs carpet cleaning services feel free to <a
+                            class="color-paper-link hover-color-paper-link-hover:hover" href="/" target="_blank"
+                            rel="noopener">contact us</a>.</p>
+                </li>
+                <li>
+                    <h3>Do you offer luxury carpet cleaning in London?</h3>
+                    <p class="ml--5">Yes, we do. But as luxury carpet cleaning in London is a high-end service,
+                        which deserves an individual approach to every client, you need to contact us in order to
+                        obtain more information about it.</p>
+                </li>
+                <li>
+                    <h3>Do you offer carpet cleaning and deodorising service?</h3>
+                    <p class="ml--5">Yes, we do offer carpet cleaning and deodorising service. Our company
+                        culture
+                        is to provide the best service we are capable of. That’s why we have put the extra effort
+                        required to deodorise your carpets in our basic offer for you. </p>
+                    <p class="ml--5">We recommend when you book our professional carpet cleaning services to
+                        notify
+                        us in advance that you would like to add deodorising service. Because of the strong smell
+                        and allergic people, we do not deodorise all carpets. We perform the service at the request
+                        of the client, and it is free of charge.</p>
+                </li>
+            </ul>
+        </Entry>
+        <Entry>
+            <ul>
+                <li>
+                    <h3>Do you offer carpet odour removal services?</h3>
+                    <p class="ml--5">Yes, we offer carpet odour removal service. Each additional service will
+                        cost
+                        you a small extra charge because we pay over time to the cleaning staff. We advise you to
+                        add carpet odour removal service to your cleaning appointment if you wish when booking. The
+                        additional services discussed at the time of cleaning will slow down the work of the
+                        technicians and they will not be able to keep to the work schedule. We cannot guarantee that
+                        the odour will be 100% removed.
+                    </p>
+                </li>
+                <li>
+                    <h3>Do you offer berber carpet cleaning service?</h3>
+                    <p class="ml--5">Yes, we offer berber carpet cleaning service. If you need more information
+                        about this service you have to <a
+                            class="color-paper-link hover-color-paper-link-hover:hover" href="/" target="_blank"
+                            rel="noopener">contact us</a>.
+                    </p>
+                </li>
+                <li>
+                    <h3>Does carpet cleaning remove scotchgard?</h3>
+                    <p class="ml--5">Yes, indeed, carpet cleaning services do remove Scotchgard and it should be
+                        applied again afterwards. Stain protection wears out even from walking, so according to the
+                        room and the amount of traffic the carpet receives the Scotchgard protection will last
+                        between six months and a year and a half.
+                    </p>
+                </li>
+                <li>
+                    <h3>Does carpet cleaning remove dents?</h3>
+                    <p class="ml--5">No, the regular professional carpet cleaning does not remove dents.
+                        Removing
+                        dents requires the use of special equipment and it is a completely different service from
+                        carpet cleaning. We at Fine Carpet Cleaning London do have the required equipment and we
+                        offer <a class="color-paper-link hover-color-paper-link-hover:hover" href="/"
+                                 target="_blank" rel="noopener">carpet dent removal service</a>.
+                    </p>
+                </li>
+                <li>
+                    <h3>Will cleaning a carpet make it fluffy again?</h3>
+                    <p class="ml--5">The short answer is "it depends".</p>
+                    <p class="ml--5">In respect of the fluffiness the carpets can be segregated in two
+                        categories:
+                    </p>
+                </li>
+                <li>
+                    <p>Those that are just not fluffy by design;</p>
+                </li>
+                <li>
+                    <p>Carpets that used to be fluffy but now they are not (due to various reasons).</p>
+                </li>
+                <li>
+                    <p>If your carpet belongs to the first category the question of restoring its fluffiness is not
+                        applicable.</p>
+                    <p class="hide-text-if-not-expanded ml--5">If your carpet belongs to the second category, we
+                        are
+                        able to offer a solution. We can restore the fluffiness of such a carpet by using a special
+                        machine called CRB (counter-rotating brush). It’s fair to know that the use of this machine
+                        requires extra effort and therefore is charged extra.</p>
+                    <p class="hide-text-if-not-expanded ml--5">In case you are not sure in which category your
+                        carpet belongs to, feel free to contact us for advice.</p>
+                    <p class="hide-text-if-not-expanded ml--5">As restoring the fluffiness of a carpet is a very
+                        niche thing to do, you need to ask specifically for it when you reach out to us.</p>
+                </li>
+                <li>
+                    <h3>Can professional carpet cleaning remove stains?</h3>
+                    <p class="ml--5">Professional carpet washing service is indeed successful in removing stains
+                        from your carpet. With years of experience and some of the best equipment in the industry,
+                        we have high rates of success in stain removal. Unfortunately, we cannot guarantee that we
+                        will be able to remove every stain. The reason is that the stain might be harder to remove
+                        if it has been improperly treated previously or if it has been left to completely dry out.
+                        However, we will let you know in advance whether we believe we can get a stain out or
+                        not.
+                    </p>
+                </li>
+                <li>
+                    <h3>Does professional carpet cleaning lift the pile?</h3>
+                    <p class="ml--5">Yes, it does. Although it is not permanent, quality carpet cleaning
+                        services
+                        can help lift piles by removing dirt and debris and restoring the fibres to their original
+                        state. The regular use of professional carpet washing services helps to maintain carpets’
+                        appearance, comfort, and durability. Hot water extraction lifts the pile because the final
+                        stage of the hot water extraction process is applying an extreme vacuum to the carpet to
+                        extract the water that has been flushed through the fibres to clean them. During that
+                        process, the pile will be raised.</p>
+                    <p class="ml--5">In case your carpet is extremely matted we will have to use a special
+                        machine
+                        called CRB (counter-rotating brush) in order to be able to lift the pile. It’s fair to know
+                        that the use of this machine requires extra effort and therefore is charged extra.
+                    </p>
+                </li>
+                <li>
+                    <h3>Does carpet cleaning ruin carpets?</h3>
+                    <p class="ml--5">No, expert carpet cleaning in London will not ruin the carpet. Despite
+                        common
+                        belief, you cannot clean your carpets too frequently, and steam cleaning them often will not
+                        dry them out or break the carpet fibres. What will damage your carpets or rugs, however, is
+                        routine cleaning with improper methods, as well as products and chemicals being used that
+                        are not tried-and-true. Some companies offer cheap carpet cleaning services and in order to
+                        provide such a low price, they might decide to decrease the quality of the service or the
+                        quality of the products they use for cleaning. But if the chemicals used for the cleaning
+                        are safe, like ours in Fine Carpet Cleaning London, then you should not worry that this
+                        might cause any damage to your carpets.</p>
+
+                    <p class="ml--5">While improper cleaning can damage your carpets, frequent hot water
+                        extraction
+                        will not. A good steam cleaning can extend the lifespan of your carpets. Here are a few
+                        benefits of the regular use of steam cleaning and other carpet cleaning services:
+                    </p>
+                </li>
+                <li>
+                    <p>Carpet cleaning makes your carpet healthier.</p>
+                </li>
+                <li>
+                    <p>Steam cleaning keeps the carpet hygienic.</p>
+                </li>
+                <li>
+                    <p>Cleaning helps carpet fibres maintain their shape.</p>
+                </li>
+                <li>
+                    <p>Cleaning maintains the carpet warranty.</p>
+                </li>
+                <li>
+                    <p>Steam cleaning restores the colour of carpets.</p>
+                </li>
+                <li>
+                    <p>Routine cleaning has many benefits for your carpet. In addition to making your house
+                        beautiful, regular affordable carpet cleaning like the one we offer helps extend the
+                        lifespan of one of your home’s most valuable assets.</p>
+                    <p class="hide-text-if-not-expanded ml--5">However, in special cases when the carpet is made
+                        of
+                        natural fibres ( such as sisal, jute, seagrass etc.) we do not recommend steam cleaning, but
+                        dry cleaning, as the heat and steam will damage the carpet.</p>
+                    <p class="hide-text-if-not-expanded ml--5">If you are not sure what type of cleaning method
+                        is
+                        most appropriate for your carpet, feel free to contact us to get professional advice.</p>
+                </li>
+            </ul>
+        </Entry>
+        <Entry>
+            <ul>
+                <li>
+                    <h3>Is it possible to book carpet cleaning online?</h3>
+                    <p class="ml--5">Yes, you can easily book a carpet cleaning service online through <a
+                        class="color-paper-link hover-color-paper-link-hover:hover" href="/" target="_blank"
+                        rel="noopener">our contact page</a>.</p>
+
+                    <p class="ml--5">If you have any questions please do not hesitate to contact our operators
+                        at
+                        any time directly on our phone numbers or leave a callback request, so that they can call
+                        you at a convenient time.</p></li>
+                <li>
+                    <h3>Can carpet cleaning cause allergies?</h3>
+                    <p class="ml--5">Any cleaning process can stir up particles and aggravate allergy symptoms.
+                        Having a professional carpet cleaning agency clean for you can reduce increased exposure to
+                        particulates.</p>
+
+                    <p class="ml--5">Carpet cleaning is important for allergy sufferers for several reasons.
+                        First,
+                        carpets can trap dust, pollen, and other allergens that can trigger an allergic reaction.
+                        Second, carpets can also harbour pet dander, mould, and other allergens that can be a
+                        nightmare for allergy sufferers. Carpets that are not regularly cleaned can become breeding
+                        grounds for dust mites, which are tiny creatures that thrive in warm, humid environments and
+                        can cause serious allergic reactions in some people.</p>
+
+                    <p class="ml--5">Anti-allergy carpet cleaning, at a minimum, requires some sort of steam or
+                        chemical agent to loosen and remove debris from deep within the carpet fibres. Steam
+                        cleaning, also known as the hot water extraction method, has been proven to reduce allergens
+                        in carpets. However, the primary issue with steam cleaning is that it can be a problem when
+                        not done properly. For example, if someone doesn’t properly remove all the water from the
+                        carpet after cleaning, there could be issues related to moisture. Some allergy sufferers
+                        claim that wet-cleaning methods could cause issues since dust mites and moulds thrive in
+                        humid and warm conditions, but that happens if it takes a long time for the carpet to get
+                        dry. Our steam carpet cleaning will leave the carpets completely dry in 7-14 hours
+                        (depending on the type of carpet and the degree of pollution).</p>
+
+                    <p class="ml--5">People who suffer from allergies should therefore make sure to have their
+                        carpets cleaned on a regular basis, preferably by companies that professionally clean
+                        carpets. Carpet cleaning companies like Fine Carpet Cleaning London use special machines and
+                        solutions that can effectively remove allergens much better than regular carpet cleaning.
+                        Vacuuming regularly is also important, as it can help to remove allergens from the
+                        carpet.</p></li>
+                <li>
+                    <h3>Can professional carpet cleaning remove coffee stains?</h3>
+                    <p class="ml--5">Yes, quality carpet cleaning services can definitely remove coffee stains.
+                        In
+                        cases like stains from coffee with sugar, the carpet will have a growth of certain microbial
+                        activities. Some cleaning methods that a professional carpet cleaning company provides, such
+                        as steam carpet cleaning, effectively kill all those germs along with removing 100% of the
+                        coffee stain.</p>
+
+                    <p class="ml--5">Unfortunately, we cannot guarantee that we will be able to remove every
+                        coffee
+                        stain. The reason is that the coffee stain might be harder to remove if it has been
+                        improperly treated previously or if it has been left to completely dry out. However, we will
+                        let you know in advance whether we believe we can get a coffee stain out or not.</p></li>
+                <li>
+                    <h3>Is it worth getting carpets professionally cleaned?</h3>
+                    <p class="ml--5">Yes, without a doubt having your carpets cleaned by a carpet cleaning
+                        agency
+                        can have a massive impact on the look and the cleanliness of your house and also helps to
+                        eliminate dirt, germ buildup and bacteria such as E. coli, Salmonella and many others.</p>
+
+                    <p class="ml--5">There are many reasons why you should get a carpet cleaning in London at
+                        least
+                        once a year, such as prolonging the life of your carpet, health benefits and maintaining the
+                        look of your carpet or rug.</p></li>
+                <li>
+                    <h3>What is professional carpet cleaning?</h3>
+                    <p class="ml--5">Professional carpet cleaning is performed by experts using special products
+                        and
+                        professional equipment and offers special carpet washing services (such as steam cleaning).
+                        By hiring professionals, the carpet also dries as quickly as possible after cleaning, thanks
+                        to the quality of the equipment used.</p>
+
+                    <p class="ml--5">By having an affordable carpet cleaning like the one we provide, you are
+                        ensuring that your carpets are going to receive state-of-the-art cleaning techniques and
+                        quality cleaning solutions with thorough drying. “DIY” carpet cleaning almost always leaves
+                        out the crucial drying techniques that can help prevent the growth of mould or mildew. </p>
+
+                    <p class="ml--5">Professional carpet cleaners are well-qualified in their field and know
+                        exactly
+                        which products to use on different types of carpets. The cleaning technician will also be
+                        able to clean your carpet without damaging its fibres, so your carpet looks as new without
+                        losing any of its thickness. The fibres won’t be damaged in the process either.</p></li>
+                <li>
+                    <h3>Does professional carpet cleaning really work?</h3>
+                    <p class="ml--5">Yes, professional carpet cleaning definitely works, thanks to the
+                        experience,
+                        equipment, products and methods provided by professional carpet cleaning companies. Such
+                        carpet cleaning companies like Fine Carpet Cleaning London will provide quality carpet
+                        cleaning services and will be very effective in removing tough stains, odours and germ
+                        buildup, which cannot be eliminated with regular cleaning.</p></li>
+                <li>
+                    <h3>What to do if my carpet is still dirty after a professional cleaning?</h3>
+                    <p class="ml--5">Some stains, like very old stains or ones that have been treated
+                        improperly,
+                        are very hard to eliminate, even with professional help. With years of experience and some
+                        of the best equipment in the industry, we have high rates of success at stain removal.
+                        Unfortunately, we cannot guarantee that we will be able to remove every stain, however, we
+                        will let you know whether we believe we can get a stain out when giving you our
+                        quotation.</p></li>
+                <li>
+                    <h3>Does carpet cleaning kill bacteria?</h3>
+                    <p class="ml--5">A professional carpet cleaning service from carpet cleaning companies can
+                        kill
+                        bacteria and other illness-causing germs that may be lurking in your carpet and rugs.</p>
+                </li>
+                <li>
+                    <h3>Does carpet cleaning kill bed bugs?</h3>
+                    <p class="ml--5">The short answer is yes, because the special equipment used for steam
+                        cleaning
+                        can kill bed bugs due to the high temperature it produces. However if your carpet is
+                        infested with bed bugs, hiring a good carpet cleaning company to steam clean your carpets
+                        does not guarantee their complete extinction. The reason is that it’s very likely that the
+                        bed bugs do not reside only in the carpet but also in beds, mattresses, other furnishings
+                        and so on.</p>
+
+                    <p class="ml--5">In case you have bed bug infestation in your property we highly recommend
+                        you
+                        to call a pest control company first. Once they perform a complete disinfestation of your
+                        property you are good to go with a professional carpet cleaning service.</p></li>
+            </ul>
+        </Entry>
+    </Container>
+}
+
+export function Page2() {
+
     return (
         <>
             <h1 class="mt-10 md-mt-17 font-size-12.5 md-font-size-16 md-line-height-18 line-height-16">Professional
@@ -501,7 +787,7 @@ export default function Page() {
             <h2 class="line-height-12 md-line-height-14">Frequently ordered together</h2>
 
             <GalerrySliderDesktop/>
-            <GalerrySliderMobile/>
+            <GallerySliderMobile/>
 
             <FleurDivider></FleurDivider>
 
@@ -568,7 +854,7 @@ export default function Page() {
             <h2 class="line-height-12 md-line-height-14">Reviews from our professional carpet cleaning</h2>
 
             <GalerrySliderDesktop/>
-            <GalerrySliderMobile/>
+            <GallerySliderMobile/>
 
             <FleurDivider></FleurDivider>
 
@@ -608,411 +894,7 @@ export default function Page() {
                 </ul>
             </div>
 
-            <FaqCollapse pages={[
-                <ul>
-                    <li>
-                        <h3>What happens if your cleaner damages anything while performing professional carpet cleaning
-                            services?</h3>
-                        <p class="ml--5">We are fully insured and if an accident happens we have full coverage.</p></li>
-                    <li>
-                        <h3>How long does the process of professional carpet cleaning service take?</h3>
-                        <p class="ml--5">The professional carpet cleaning process depends on how soiled the carpet is
-                            and if it needs any stain removal treatments. It takes from 20 to 60 minutes per room.</p>
-                    </li>
-                    <li>
-                        <h3>How long does it take for the carpet to get dry?</h3>
-                        <p class="ml--5">It depends on many factors like the type of the carpet, how dirty it is, how
-                            thick the pile is and if it needs a stain removal service or not.</p>
-
-                        <p class="ml--5">Wool carpets absorb more water and dry slowly, between 10 and 12 hours. If the
-                            carpet is very dirty and we have to treat the carpet several times, the drying time might be
-                            even longer.</p>
-
-                        <p class="ml--5">Synthetic carpets dry faster, between 7 and 10 hours, and the above is still
-                            valid (it depends on how dirty it is and the number of required treatments).</p></li>
-                    <li>
-                        <h3>Do you guarantee that after cleaning my carpet all stains will be removed?</h3>
-                        <p class="ml--5">No, because there are factors involved which are out of our control. Among
-                            these factors are:</p></li>
-                    <li>
-                        <p>How old are the stains?</p>
-                    </li>
-                    <li>
-                        <p>What is the polluting agent that caused the stains?</p>
-                    </li>
-                    <li>
-                        <p>What is the carpet made of?</p>
-                    </li>
-                    <li>
-                        <p>Have the stains been treated improperly in the past?</p>
-                    </li>
-                    <li>
-                        <p>Nevertheless, we can guarantee that we will do our best in order to eliminate all of the
-                            stains on your carpet. This includes:</p>
-                    </li>
-                    <li>
-                        <p>The use of high-end cleaning equipment;</p>
-                    </li>
-                    <li>
-                        <p>The use of top-notch specially selected detergents;</p>
-                    </li>
-                    <li>
-                        <p>Individual approach according to the different types of carpets and polluting agents.</p>
-                    </li>
-                    <li>
-                        <h3>How soon can I expect a cleaner to visit me?</h3>
-                        <p class="ml--5">We will try to get you an appointment as soon as possible. Usually, we are
-                            fully booked for 3 days ahead, but sometimes there are exceptions.</p></li>
-                    <li>
-                        <h3>Can you give me a carpet cleaning quote over the phone or do you need to visit my
-                            property?</h3>
-                        <p class="ml--5">Yes, we can give you an estimate over the phone, there is no need for us to
-                            visit your property. Commercial properties however may require a site visit. You can also
-                            get a carpet cleaning quote online.</p></li>
-                    <li>
-                        <h3>What payment methods do you accept for your professional carpet cleaning service?</h3>
-                        <p class="ml--5">We accept debit/credit cards, bank transfer, and cash payments directly to our
-                            team.</p></li>
-                    <li>
-                        <h3>Can you provide me with an invoice for your professional carpet cleaning services?</h3>
-                        <p class="ml--5">Yes, we will send you a receipt via email.</p></li>
-                    <li>
-                        <h3>Are you qualified?</h3>
-                        <p class="ml--5">Yes, we are qualified and fully trained members of <a
-                            class="color-paper-link hover-color-paper-link-hover:hover" href="/" target="_blank"
-                            rel="noopener">NCCA (National Carpet Cleaners Association)</a> – the UK’s recognised
-                            industry qualification.</p></li>
-                    <li>
-                        <h3>How long have you been in the carpet cleaning business?</h3>
-                        <p class="ml--5">We have been operating since 2012. We have years of experience dealing with
-                            residential and commercial customers and various types of carpets, rugs, upholstery and
-                            stains. Through the years we have been striving to improve our services by:</p></li>
-                    <li>
-                        <p>Upgrading our machines with better ones;</p>
-                    </li>
-                    <li>
-                        <p>Frequently testing and selecting new detergents;</p>
-                    </li>
-                    <li>
-                        <p>Always searching to improve our expertise by attending professional courses.</p>
-                    </li>
-                </ul>,
-                <ul>
-                    <li>
-                        <h3>Can you give me a discount?</h3>
-                        <p class="ml--5">Based on the fact that we provide high-quality carpet cleaning services, by
-                            using the best machinery and over 20 different top-notch detergents, our carpet cleaning
-                            prices are already the most competitive and the best on the market. In order to get the best
-                            price we advise you to check out our price calculator. Then you will find out that combining
-                            all the services you need at once will be cheaper than having them performed separately. The
-                            reason is that the initial cost is high and you will have to pay extra for every single
-                            visit of the technician since there are factors in place like time of travel, parking,
-                            loading and unloading of heavy machinery etc.</p>
-                    </li>
-                    <li>
-                        <h3>How often should a carpet be professionally cleaned?</h3>
-                        <p class="ml--5">Deep cleaning depends mainly on factors like how fast the carpet soils. On
-                            average, a carpet should be cleaned at 12-month intervals. However, if you have pets,
-                            children, high traffic on the carpet, a smoking habit or if you stain it a lot we recommend
-                            using an expert carpet cleaning in London more often. You can contact us to get the best
-                            professional carpet cleaning service in London or to seek expert advice.</p></li>
-                    <li>
-                        <h3>How much does a professional carpet cleaning cost?</h3>
-                        <p class="ml--5">The cost of professional carpet cleaning depends on the quantity and size of
-                            the carpets, how soiled they are, the type of the carpets and how easy the access to the
-                            carpets is. For more detailed information check out <a
-                                class="color-paper-link hover-color-paper-link-hover:hover" href="/" target="_blank"
-                                rel="noopener">carpet cleaning price list</a>.</p>
-                    </li>
-                    <li>
-                        <h3>Do you offer cheap carpet cleaning?</h3>
-                        <p class="ml--5">The truth is that we, from Fine Carpet Cleaning London, do not offer cheap
-                            carpet cleaning. The reason is that we want to ensure high-quality of our carpet cleaning
-                            services which involves higher expenses for us.</p>
-                    </li>
-                    <li>
-                        <h3>Do you think that your company is doing the best carpet cleaning in London?</h3>
-                        <p class="ml--5">We, from Fine Carpet Cleaning London, believe that we are bound to be among the
-                            best carpet cleaning companies in London. The reason is that we strongly believe in the
-                            principle “No loss, no gain” and try to follow it when doing business. When we combine this
-                            with another principle that we try to follow - “think about others first” - this guarantees
-                            strive for constant improvement and delivery of better and better results. All of the above
-                            gives us confidence that we definitely have a chance in the foreseeable future to offer the
-                            best carpet cleaning in London.</p>
-                    </li>
-                    <li>
-                        <h3>Do you offer stairs carpet cleaning services?</h3>
-                        <p class="ml--5">Yes, we do. You can check the prices for stairs carpet cleaning services in
-                            our <a class="color-paper-link hover-color-paper-link-hover:hover" href="/" target="_blank"
-                                   rel="noopener">price list</a> or alternatively you can use our price calculator. If
-                            you need more details regarding our stairs carpet cleaning services feel free to <a
-                                class="color-paper-link hover-color-paper-link-hover:hover" href="/" target="_blank"
-                                rel="noopener">contact us</a>.</p>
-                    </li>
-                    <li>
-                        <h3>Do you offer luxury carpet cleaning in London?</h3>
-                        <p class="ml--5">Yes, we do. But as luxury carpet cleaning in London is a high-end service,
-                            which deserves an individual approach to every client, you need to contact us in order to
-                            obtain more information about it.</p>
-                    </li>
-                    <li>
-                        <h3>Do you offer carpet cleaning and deodorising service?</h3>
-                        <p class="ml--5">Yes, we do offer carpet cleaning and deodorising service. Our company culture
-                            is to provide the best service we are capable of. That’s why we have put the extra effort
-                            required to deodorise your carpets in our basic offer for you. </p>
-                        <p class="ml--5">We recommend when you book our professional carpet cleaning services to notify
-                            us in advance that you would like to add deodorising service. Because of the strong smell
-                            and allergic people, we do not deodorise all carpets. We perform the service at the request
-                            of the client, and it is free of charge.</p>
-                    </li>
-                </ul>
-            ]}/>
-
-            <div class="read-more-click-to-expand-3">
-                <ul>
-                    <li>
-                        <h3>Do you offer carpet odour removal services?</h3>
-                        <p class="ml--5">Yes, we offer carpet odour removal service. Each additional service will cost
-                            you a small extra charge because we pay over time to the cleaning staff. We advise you to
-                            add carpet odour removal service to your cleaning appointment if you wish when booking. The
-                            additional services discussed at the time of cleaning will slow down the work of the
-                            technicians and they will not be able to keep to the work schedule. We cannot guarantee that
-                            the odour will be 100% removed.
-                        </p>
-                    </li>
-                    <li>
-                        <h3>Do you offer berber carpet cleaning service?</h3>
-                        <p class="ml--5">Yes, we offer berber carpet cleaning service. If you need more information
-                            about this service you have to <a
-                                class="color-paper-link hover-color-paper-link-hover:hover" href="/" target="_blank"
-                                rel="noopener">contact us</a>.
-                        </p>
-                    </li>
-                    <li>
-                        <h3>Does carpet cleaning remove scotchgard?</h3>
-                        <p class="ml--5">Yes, indeed, carpet cleaning services do remove Scotchgard and it should be
-                            applied again afterwards. Stain protection wears out even from walking, so according to the
-                            room and the amount of traffic the carpet receives the Scotchgard protection will last
-                            between six months and a year and a half.
-                        </p>
-                    </li>
-                    <li>
-                        <h3>Does carpet cleaning remove dents?</h3>
-                        <p class="ml--5">No, the regular professional carpet cleaning does not remove dents. Removing
-                            dents requires the use of special equipment and it is a completely different service from
-                            carpet cleaning. We at Fine Carpet Cleaning London do have the required equipment and we
-                            offer <a class="color-paper-link hover-color-paper-link-hover:hover" href="/"
-                                     target="_blank" rel="noopener">carpet dent removal service</a>.
-                        </p>
-                    </li>
-                    <li>
-                        <h3>Will cleaning a carpet make it fluffy again?</h3>
-                        <p class="ml--5">The short answer is "it depends".</p>
-                        <p class="ml--5">In respect of the fluffiness the carpets can be segregated in two
-                            categories:
-                        </p>
-                    </li>
-                    <li>
-                        <p>Those that are just not fluffy by design;</p>
-                    </li>
-                    <li>
-                        <p>Carpets that used to be fluffy but now they are not (due to various reasons).</p>
-                    </li>
-                    <li>
-                        <p>If your carpet belongs to the first category the question of restoring its fluffiness is not
-                            applicable.</p>
-                        <p class="hide-text-if-not-expanded ml--5">If your carpet belongs to the second category, we are
-                            able to offer a solution. We can restore the fluffiness of such a carpet by using a special
-                            machine called CRB (counter-rotating brush). It’s fair to know that the use of this machine
-                            requires extra effort and therefore is charged extra.</p>
-                        <p class="hide-text-if-not-expanded ml--5">In case you are not sure in which category your
-                            carpet belongs to, feel free to contact us for advice.</p>
-                        <p class="hide-text-if-not-expanded ml--5">As restoring the fluffiness of a carpet is a very
-                            niche thing to do, you need to ask specifically for it when you reach out to us.</p>
-                    </li>
-                    <li>
-                        <h3>Can professional carpet cleaning remove stains?</h3>
-                        <p class="ml--5">Professional carpet washing service is indeed successful in removing stains
-                            from your carpet. With years of experience and some of the best equipment in the industry,
-                            we have high rates of success in stain removal. Unfortunately, we cannot guarantee that we
-                            will be able to remove every stain. The reason is that the stain might be harder to remove
-                            if it has been improperly treated previously or if it has been left to completely dry out.
-                            However, we will let you know in advance whether we believe we can get a stain out or
-                            not.
-                        </p>
-                    </li>
-                    <li>
-                        <h3>Does professional carpet cleaning lift the pile?</h3>
-                        <p class="ml--5">Yes, it does. Although it is not permanent, quality carpet cleaning services
-                            can help lift piles by removing dirt and debris and restoring the fibres to their original
-                            state. The regular use of professional carpet washing services helps to maintain carpets’
-                            appearance, comfort, and durability. Hot water extraction lifts the pile because the final
-                            stage of the hot water extraction process is applying an extreme vacuum to the carpet to
-                            extract the water that has been flushed through the fibres to clean them. During that
-                            process, the pile will be raised.</p>
-                        <p class="ml--5">In case your carpet is extremely matted we will have to use a special machine
-                            called CRB (counter-rotating brush) in order to be able to lift the pile. It’s fair to know
-                            that the use of this machine requires extra effort and therefore is charged extra.
-                        </p>
-                    </li>
-                    <li>
-                        <h3>Does carpet cleaning ruin carpets?</h3>
-                        <p class="ml--5">No, expert carpet cleaning in London will not ruin the carpet. Despite common
-                            belief, you cannot clean your carpets too frequently, and steam cleaning them often will not
-                            dry them out or break the carpet fibres. What will damage your carpets or rugs, however, is
-                            routine cleaning with improper methods, as well as products and chemicals being used that
-                            are not tried-and-true. Some companies offer cheap carpet cleaning services and in order to
-                            provide such a low price, they might decide to decrease the quality of the service or the
-                            quality of the products they use for cleaning. But if the chemicals used for the cleaning
-                            are safe, like ours in Fine Carpet Cleaning London, then you should not worry that this
-                            might cause any damage to your carpets.</p>
-
-                        <p class="ml--5">While improper cleaning can damage your carpets, frequent hot water extraction
-                            will not. A good steam cleaning can extend the lifespan of your carpets. Here are a few
-                            benefits of the regular use of steam cleaning and other carpet cleaning services:
-                        </p>
-                    </li>
-                    <li>
-                        <p>Carpet cleaning makes your carpet healthier.</p>
-                    </li>
-                    <li>
-                        <p>Steam cleaning keeps the carpet hygienic.</p>
-                    </li>
-                    <li>
-                        <p>Cleaning helps carpet fibres maintain their shape.</p>
-                    </li>
-                    <li>
-                        <p>Cleaning maintains the carpet warranty.</p>
-                    </li>
-                    <li>
-                        <p>Steam cleaning restores the colour of carpets.</p>
-                    </li>
-                    <li>
-                        <p>Routine cleaning has many benefits for your carpet. In addition to making your house
-                            beautiful, regular affordable carpet cleaning like the one we offer helps extend the
-                            lifespan of one of your home’s most valuable assets.</p>
-                        <p class="hide-text-if-not-expanded ml--5">However, in special cases when the carpet is made of
-                            natural fibres ( such as sisal, jute, seagrass etc.) we do not recommend steam cleaning, but
-                            dry cleaning, as the heat and steam will damage the carpet.</p>
-                        <p class="hide-text-if-not-expanded ml--5">If you are not sure what type of cleaning method is
-                            most appropriate for your carpet, feel free to contact us to get professional advice.</p>
-                    </li>
-                </ul>
-            </div>
-
-
-            <div class="read-more-click-to-expand-4">
-                <ul>
-                    <li>
-                        <h3>Is it possible to book carpet cleaning online?</h3>
-                        <p class="ml--5">Yes, you can easily book a carpet cleaning service online through <a
-                            class="color-paper-link hover-color-paper-link-hover:hover" href="/" target="_blank"
-                            rel="noopener">our contact page</a>.</p>
-
-                        <p class="ml--5">If you have any questions please do not hesitate to contact our operators at
-                            any time directly on our phone numbers or leave a callback request, so that they can call
-                            you at a convenient time.</p></li>
-                    <li>
-                        <h3>Can carpet cleaning cause allergies?</h3>
-                        <p class="ml--5">Any cleaning process can stir up particles and aggravate allergy symptoms.
-                            Having a professional carpet cleaning agency clean for you can reduce increased exposure to
-                            particulates.</p>
-
-                        <p class="ml--5">Carpet cleaning is important for allergy sufferers for several reasons. First,
-                            carpets can trap dust, pollen, and other allergens that can trigger an allergic reaction.
-                            Second, carpets can also harbour pet dander, mould, and other allergens that can be a
-                            nightmare for allergy sufferers. Carpets that are not regularly cleaned can become breeding
-                            grounds for dust mites, which are tiny creatures that thrive in warm, humid environments and
-                            can cause serious allergic reactions in some people.</p>
-
-                        <p class="ml--5">Anti-allergy carpet cleaning, at a minimum, requires some sort of steam or
-                            chemical agent to loosen and remove debris from deep within the carpet fibres. Steam
-                            cleaning, also known as the hot water extraction method, has been proven to reduce allergens
-                            in carpets. However, the primary issue with steam cleaning is that it can be a problem when
-                            not done properly. For example, if someone doesn’t properly remove all the water from the
-                            carpet after cleaning, there could be issues related to moisture. Some allergy sufferers
-                            claim that wet-cleaning methods could cause issues since dust mites and moulds thrive in
-                            humid and warm conditions, but that happens if it takes a long time for the carpet to get
-                            dry. Our steam carpet cleaning will leave the carpets completely dry in 7-14 hours
-                            (depending on the type of carpet and the degree of pollution).</p>
-
-                        <p class="ml--5">People who suffer from allergies should therefore make sure to have their
-                            carpets cleaned on a regular basis, preferably by companies that professionally clean
-                            carpets. Carpet cleaning companies like Fine Carpet Cleaning London use special machines and
-                            solutions that can effectively remove allergens much better than regular carpet cleaning.
-                            Vacuuming regularly is also important, as it can help to remove allergens from the
-                            carpet.</p></li>
-                    <li>
-                        <h3>Can professional carpet cleaning remove coffee stains?</h3>
-                        <p class="ml--5">Yes, quality carpet cleaning services can definitely remove coffee stains. In
-                            cases like stains from coffee with sugar, the carpet will have a growth of certain microbial
-                            activities. Some cleaning methods that a professional carpet cleaning company provides, such
-                            as steam carpet cleaning, effectively kill all those germs along with removing 100% of the
-                            coffee stain.</p>
-
-                        <p class="ml--5">Unfortunately, we cannot guarantee that we will be able to remove every coffee
-                            stain. The reason is that the coffee stain might be harder to remove if it has been
-                            improperly treated previously or if it has been left to completely dry out. However, we will
-                            let you know in advance whether we believe we can get a coffee stain out or not.</p></li>
-                    <li>
-                        <h3>Is it worth getting carpets professionally cleaned?</h3>
-                        <p class="ml--5">Yes, without a doubt having your carpets cleaned by a carpet cleaning agency
-                            can have a massive impact on the look and the cleanliness of your house and also helps to
-                            eliminate dirt, germ buildup and bacteria such as E. coli, Salmonella and many others.</p>
-
-                        <p class="ml--5">There are many reasons why you should get a carpet cleaning in London at least
-                            once a year, such as prolonging the life of your carpet, health benefits and maintaining the
-                            look of your carpet or rug.</p></li>
-                    <li>
-                        <h3>What is professional carpet cleaning?</h3>
-                        <p class="ml--5">Professional carpet cleaning is performed by experts using special products and
-                            professional equipment and offers special carpet washing services (such as steam cleaning).
-                            By hiring professionals, the carpet also dries as quickly as possible after cleaning, thanks
-                            to the quality of the equipment used.</p>
-
-                        <p class="ml--5">By having an affordable carpet cleaning like the one we provide, you are
-                            ensuring that your carpets are going to receive state-of-the-art cleaning techniques and
-                            quality cleaning solutions with thorough drying. “DIY” carpet cleaning almost always leaves
-                            out the crucial drying techniques that can help prevent the growth of mould or mildew. </p>
-
-                        <p class="ml--5">Professional carpet cleaners are well-qualified in their field and know exactly
-                            which products to use on different types of carpets. The cleaning technician will also be
-                            able to clean your carpet without damaging its fibres, so your carpet looks as new without
-                            losing any of its thickness. The fibres won’t be damaged in the process either.</p></li>
-                    <li>
-                        <h3>Does professional carpet cleaning really work?</h3>
-                        <p class="ml--5">Yes, professional carpet cleaning definitely works, thanks to the experience,
-                            equipment, products and methods provided by professional carpet cleaning companies. Such
-                            carpet cleaning companies like Fine Carpet Cleaning London will provide quality carpet
-                            cleaning services and will be very effective in removing tough stains, odours and germ
-                            buildup, which cannot be eliminated with regular cleaning.</p></li>
-                    <li>
-                        <h3>What to do if my carpet is still dirty after a professional cleaning?</h3>
-                        <p class="ml--5">Some stains, like very old stains or ones that have been treated improperly,
-                            are very hard to eliminate, even with professional help. With years of experience and some
-                            of the best equipment in the industry, we have high rates of success at stain removal.
-                            Unfortunately, we cannot guarantee that we will be able to remove every stain, however, we
-                            will let you know whether we believe we can get a stain out when giving you our
-                            quotation.</p></li>
-                    <li>
-                        <h3>Does carpet cleaning kill bacteria?</h3>
-                        <p class="ml--5">A professional carpet cleaning service from carpet cleaning companies can kill
-                            bacteria and other illness-causing germs that may be lurking in your carpet and rugs.</p>
-                    </li>
-                    <li>
-                        <h3>Does carpet cleaning kill bed bugs?</h3>
-                        <p class="ml--5">The short answer is yes, because the special equipment used for steam cleaning
-                            can kill bed bugs due to the high temperature it produces. However if your carpet is
-                            infested with bed bugs, hiring a good carpet cleaning company to steam clean your carpets
-                            does not guarantee their complete extinction. The reason is that it’s very likely that the
-                            bed bugs do not reside only in the carpet but also in beds, mattresses, other furnishings
-                            and so on.</p>
-
-                        <p class="ml--5">In case you have bed bug infestation in your property we highly recommend you
-                            to call a pest control company first. Once they perform a complete disinfestation of your
-                            property you are good to go with a professional carpet cleaning service.</p></li>
-                </ul>
-            </div>
+            <FaqSection/>
 
             <FleurDivider></FleurDivider>
 
@@ -1082,31 +964,3 @@ export default function Page() {
         </>
     );
 }
-
-    function FaqToggle
-()
-{
-    throw new Error
-    (
-    'Function not implemented.');
-}
-
-
-    function setExpandedIndex
-(
-    _arg0: any)
-{
-    throw new Error
-    (
-    'Function not implemented.');
-}
-
-    function toggleExpand
-(
-    _i: any)
-{
-    throw new Error
-    (
-    'Function not implemented.');
-}
-

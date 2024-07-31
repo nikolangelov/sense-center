@@ -376,8 +376,8 @@ export default function Page() {
         </ul>
       </div>
 
-      <div class="read-more-click-to-expand-1 to-be-expanded">
-        <button class="read-more-toggle-button my-6 mx-auto uppercase b-none b-rd-1 py-3 px-7 bg-paper hover-bg-#f7f7f7:hover font-600 font-size-5 whitespace-nowrap" style="letter-spacing: 0.02rem; box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 10%);" onClick="toggleExpand(1)">Read more</button>
+      <div>
+        <button class="read-more-toggle-button my-6 mx-auto uppercase b-none b-rd-1 py-3 px-7 bg-paper hover-bg-#f7f7f7:hover font-600 font-size-5 whitespace-nowrap" style="letter-spacing: 0.02rem; box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 10%);">Read more</button>
 
         <ul>
           <li>
@@ -453,8 +453,8 @@ export default function Page() {
             <h3>What is dry carpet cleaning?</h3>
             <p class="ml--5">Dry carpet cleaning is a carpet cleaning method that doesn't require the use of a significant amount of water. Instead of water-based cleaning solutions, it typically involves the use of specialised dry cleaning compounds or powders.</p></li>
 
-          <div class="read-more-click-to-expand-2">
-            <button class="read-more-toggle-button my-6 mx-auto uppercase b-none b-rd-1 py-3 px-7 bg-paper hover-bg-#f7f7f7:hover font-600 font-size-5 whitespace-nowrap" style="letter-spacing: 0.02rem; box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 10%);" onClick="toggleExpand(2)">Read more</button>
+          <div>
+            <button class="read-more-toggle-button my-6 mx-auto uppercase b-none b-rd-1 py-3 px-7 bg-paper hover-bg-#f7f7f7:hover font-600 font-size-5 whitespace-nowrap" style="letter-spacing: 0.02rem; box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 10%);">Read more</button>
 
             <ul>
               <li>

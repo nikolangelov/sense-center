@@ -428,11 +428,9 @@ export default function Page() {
 				</ul>
 			</div>
 
-			<script src="FAQButtonsSnippet.js"></script>
-
-			<div class="read-more-click-to-expand-1 to-be-expanded">
+			<div>
 				<div>
-					<button class="read-more-toggle-button mt-16 mb-8 mx-auto uppercase b-none b-rd-1 py-4 px-7 bg-paper hover-bg-#f7f7f7:hover font-600 font-size-5 whitespace-nowrap" style="letter-spacing: 0.02rem; box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 10%);" onClick="toggleExpand(1)">Read more</button>
+					<button class="read-more-toggle-button mt-16 mb-8 mx-auto uppercase b-none b-rd-1 py-4 px-7 bg-paper hover-bg-#f7f7f7:hover font-600 font-size-5 whitespace-nowrap" style="letter-spacing: 0.02rem; box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 10%);">Read more</button>
 				</div>
 				<ul>
 					<li class="ml-5 hide-if-not-expanded">
