@@ -14,12 +14,12 @@ const GalerrySliderDesktop = () => {
     <SliderProvider>
       <div class="max-w-1000px m-auto position-relative hidden md-block">
         <Slider options={{ loop: true, slides: { perView: 3, spacing: 10 } }}>
-          <img src="/assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" class="" />
-          <img src="/assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" class="" />
-          <img src="/assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" class="" />
-          <img src="/assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" class="" />
-          <img src="/assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" class="" />
-          <img src="/assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" class="" />
+          <img src="/assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" />
+          <img src="/assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" />
+          <img src="/assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" />
+          <img src="/assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" />
+          <img src="/assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" />
+          <img src="/assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" />
         </Slider>
         <SliderButton class="cursor-pointer position-absolute top-41% left-0 bg-paper-inv bg-op-50 b-rd-bl-1 b-rd-tl-1 b-none px-0 py-1.5" prev><RiArrowLeftSLine class="-ml-1 font-size-10 c-paper hover-c-brand-light:hover transition-colors" /></SliderButton>
         <SliderButton class="cursor-pointer position-absolute top-41% right-0 bg-paper-inv bg-op-50 b-rd-br-1 b-rd-tr-1 b-none px-0 py-1.5" next><RiArrowRightSLine class="-mr-1 font-size-10 c-paper hover-c-brand-light:hover transition-colors" /></SliderButton>
@@ -35,12 +35,12 @@ const GalerrySliderMobile = () => {
     <SliderProvider>
       <div class="max-w-1000px m-auto position-relative md-hidden block">
         <Slider options={{ loop: true }}>
-          <img src="/assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" class="" />
-          <img src="/assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" class="" />
-          <img src="/assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" class="" />
-          <img src="/assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" class="" />
-          <img src="/assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" class="" />
-          <img src="/assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" class="" />
+          <img src="/assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" />
+          <img src="/assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" />
+          <img src="/assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" />
+          <img src="/assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" />
+          <img src="/assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" />
+          <img src="/assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" />
         </Slider>
         <SliderButton class="cursor-pointer position-absolute top-41% left-0 bg-paper-inv bg-op-50 b-rd-bl-1 b-rd-tl-1 b-none px-0 py-1.5" prev><RiArrowLeftSLine class="-ml-1 font-size-10 c-paper hover-c-brand-light:hover transition-colors" /></SliderButton>
         <SliderButton class="cursor-pointer position-absolute top-41% right-0 bg-paper-inv bg-op-50 b-rd-br-1 b-rd-tr-1 b-none px-0 py-1.5" next><RiArrowRightSLine class="-mr-1 font-size-10 c-paper hover-c-brand-light:hover transition-colors" /></SliderButton>
@@ -380,198 +380,198 @@ export default function Page() {
       <div class="read-more-click-to-expand-1 to-be-expanded">
         <button class="read-more-toggle-button my-6 mx-auto uppercase b-none b-rd-1 py-3 px-7 bg-paper hover-bg-#f7f7f7:hover font-600 font-size-5 whitespace-nowrap" style="letter-spacing: 0.02rem; box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 10%);" onClick="toggleExpand(1)">Read more</button>
 
-        <ul class="hidden-questions-and-answers">
-          <li class="hide-if-not-expanded">
+        <ul>
+          <li>
             <h3>What happens if your cleaner damages anything while performing commercial carpet cleaning services?</h3>
             <p class="ml--5">We want to assure you that we have comprehensive insurance coverage, so in the event of an accident, you are fully protected.</p></li>
-          <li class="hide-if-not-expanded">
+          <li>
             <h3>How long does the process of carpet cleaning for commercial buildings take?</h3>
             <p class="ml--5">The duration of the carpet cleaning for commercial buildings depends mainly on:</p></li>
-          <li class="hide-if-not-expanded">
-            <p class="listed-items">The commercial carpet cleaning method that will be used on the carpet, rug or upholstery;</p>
+          <li>
+            <p>The commercial carpet cleaning method that will be used on the carpet, rug or upholstery;</p>
           </li>
-          <li class="hide-if-not-expanded">
-            <p class="listed-items">How dirty the carpet is;</p>
+          <li>
+            <p>How dirty the carpet is;</p>
           </li>
-          <li class="hide-if-not-expanded">
-            <p class="listed-items">The size and quantities of the carpets;</p>
+          <li>
+            <p>The size and quantities of the carpets;</p>
           </li>
-          <li class="hide-if-not-expanded">
-            <p class="listed-items">If it needs any stain removal treatments;</p>
+          <li>
+            <p>If it needs any stain removal treatments;</p>
           </li>
-          <li class="hide-if-not-expanded">
-            <p class="listed-items">What kind of stains it has.</p>
+          <li>
+            <p>What kind of stains it has.</p>
           </li>
-          <li class="hide-if-not-expanded">
+          <li>
             <h3>How long does it take for the carpet to get completely dry after a hotel carpet cleaning is performed?</h3>
             <p class="ml--5">It depends on the carpet and the cleaning method used. For instance, if the <a class="color-paper-link hover-color-paper-link-hover:hover" href="/professional-carpet-cleaning-services/steam">steam cleaning</a> method is used, the approximate time for the carpet to get dry is 7 to 9 hours. If the carpet is cleaned through a <a class="color-paper-link hover-color-paper-link-hover:hover" href="/professional-carpet-cleaning-services/dry">dry cleaning</a> method, it will be dry immediately after the cleaning process has ended, or little after that.</p></li>
-          <li class="hide-if-not-expanded">
+          <li>
             <h3>Do you guarantee that after cleaning my carpet all stains will be removed?</h3>
             <p class="ml--5">Unfortunately, we are unable to guarantee, as several uncontrollable factors come into play. These factors include:</p></li>
-          <li class="hide-if-not-expanded">
-            <p class="listed-items">The age of the stains;</p>
+          <li>
+            <p>The age of the stains;</p>
           </li>
-          <li class="hide-if-not-expanded">
-            <p class="listed-items">The nature of the substance that caused the stains;</p>
+          <li>
+            <p>The nature of the substance that caused the stains;</p>
           </li>
-          <li class="hide-if-not-expanded">
-            <p class="listed-items">The carpet's type and fabric;</p>
+          <li>
+            <p>The carpet's type and fabric;</p>
           </li>
-          <li class="hide-if-not-expanded">
-            <p class="listed-items">Any prior attempts to remove the stains.</p>
+          <li>
+            <p>Any prior attempts to remove the stains.</p>
           </li>
-          <li class="hide-if-not-expanded">
-            <p class="hide-text-if-not-expanded">Nevertheless, we are dedicated to exerting our utmost effort to eliminate all stains from your carpet. Our methodology includes:</p>
+          <li>
+            <p>Nevertheless, we are dedicated to exerting our utmost effort to eliminate all stains from your carpet. Our methodology includes:</p>
           </li>
-          <li class="hide-if-not-expanded">
-            <p class="listed-items">Using state-of-the-art cleaning equipment;</p>
+          <li>
+            <p>Using state-of-the-art cleaning equipment;</p>
           </li>
-          <li class="hide-if-not-expanded">
-            <p class="listed-items">Utilising carefully selected premium detergents;</p>
+          <li>
+            <p>Utilising carefully selected premium detergents;</p>
           </li>
-          <li class="hide-if-not-expanded">
-            <p class="listed-items">Tailoring our approach to the specific type of carpet and the stain's origin to achieve the best possible results.</p>
+          <li>
+            <p>Tailoring our approach to the specific type of carpet and the stain's origin to achieve the best possible results.</p>
           </li>
-          <li class="hide-if-not-expanded">
+          <li>
             <h3>How soon will a cleaner visit me?</h3>
             <p class="ml--5">We'll make every effort to schedule an appointment for you as promptly as we can. Typically, our bookings are full for up to three days in advance, although occasional exceptions may occur.</p></li>
-          <li class="hide-if-not-expanded">
+          <li>
             <h3>Can you give me a quote over the phone or do you need to visit my commercial property?</h3>
             <p class="ml--5">For a quote about any kind of commercial carpet cleaning, we do require that we come for a viewing in person. This is due to the fact that a quote over the phone without such a viewing will be very hard to estimate and in most cases, the final price will not be precise. The booked viewing and the commercial carpet cleaning process will be performed to your advantage and according to your busy schedule.</p></li>
-          <li class="hide-if-not-expanded">
+          <li>
             <h3>What payment methods do you accept for commercial carpet cleaning in London?</h3>
             <p class="ml--5">We accept debit/credit cards, bank transfers and cash payments handed to our team.</p></li>
-          <li class="hide-if-not-expanded">
+          <li>
             <h3>Can you send me an invoice for the carpet cleaning for commercial buildings?</h3>
             <p class="ml--5">Yes, we will send you a receipt via email, or via any means that are convenient to you.</p></li>
-          <li class="hide-if-not-expanded">
+          <li>
             <h3>Are you qualified?</h3>
             <p class="ml--5">Yes, we are qualified and fully trained by the NCCA (National Carpet Cleaners Association) – the UK’s recognised industry qualification, and by Checkatrade.</p></li>
-          <li class="hide-if-not-expanded">
+          <li>
             <h3>How long have you been in the professional commercial carpet cleaning business?</h3>
             <p class="ml--5">Since 2012, we have been active in the carpet cleaning rental property industry, serving both commercial and residential clients. Over the years, we have encountered a wide array of carpets, rugs, upholstery, and various types of stains, accumulating valuable experience. Our commitment to excellence has driven us to enhance our services through the following means:</p></li>
-          <li class="hide-if-not-expanded">
-            <p class="listed-items">Continuously upgrading our equipment and machinery with superior alternatives whenever they become available;</p>
+          <li>
+            <p>Continuously upgrading our equipment and machinery with superior alternatives whenever they become available;</p>
           </li>
-          <li class="hide-if-not-expanded">
-            <p class="listed-items">Consistently evaluating and improving our cleaning products to ensure the highest quality of service;</p>
+          <li>
+            <p>Consistently evaluating and improving our cleaning products to ensure the highest quality of service;</p>
           </li>
-          <li class="hide-if-not-expanded">
-            <p class="listed-items">Dedication to expanding our knowledge and skills through ongoing professional courses and training, always seeking to enhance our expertise and competence.</p>
+          <li>
+            <p>Dedication to expanding our knowledge and skills through ongoing professional courses and training, always seeking to enhance our expertise and competence.</p>
           </li>
-          <li class="hide-if-not-expanded">
+          <li>
             <h3>Can you give me a discount for the commercial carpet cleaning services?</h3>
             <p class="ml--5">Our commercial carpet cleaning services stand out for their top-quality results, thanks to our use of the most effective equipment and over 20 premium cleaning products. Not only are our commercial carpet cleaning prices highly competitive, but they are also some of the most attractive in the market. Bundling all the services you require proves to be more cost-effective compared to individual service visits. This is because of the initial high cost and additional charges for each technician visit, factoring in travel time, parking, and the handling of heavy equipment during loading and unloading.</p></li>
-          <li class="hide-if-not-expanded">
+          <li>
             <h3>How much is commercial carpet cleaning per square foot?</h3>
             <p class="ml--5">You can check out our price table above, but in short, our commercial carpet cleaning prices per square foot are:</p></li>
-          <li class="hide-if-not-expanded">
-            <p class="listed-items">from 0 to 2153ft² (200m²) - £2.20;</p>
+          <li>
+            <p>from 0 to 2153ft² (200m²) - £2.20;</p>
           </li>
-          <li class="hide-if-not-expanded">
-            <p class="listed-items">from 2153ft² (200m²) to 10764ft² (1000m²) - £2.00.</p>
+          <li>
+            <p>from 2153ft² (200m²) to 10764ft² (1000m²) - £2.00.</p>
           </li>
-          <li class="hide-if-not-expanded">
+          <li>
             <h3>How much does commercial carpet cleaning cost?</h3>
             <p class="ml--5">Our minimum charge is £65.00. Per square metre, we charge £2.20 from 0 to 200m² and £2.00 – from 200 to 1000m².</p></li>
-          <li class="hide-if-not-expanded">
+          <li>
             <h3>How often do hotels clean carpets?</h3>
             <p class="ml--5">The frequency with which hotels book commercial carpet cleaning services depends on a number of factors. We advise that hotels clean their carpets, rugs and upholstery on a regular basis, typically every 3-6 months. This is desirable for both the health and safety of guests, as well as the overall appearance of the hotel.</p>
             <p class="ml--5">Here are some of the factors that can affect the frequency of hotel carpet cleaning services:</p>
           </li>
-          <li class="hide-if-not-expanded">
-            <p class="listed-items">Type and fabric of the carpet: Some carpets, such as wool carpets, are more delicate than others and require more frequent cleaning.</p>
+          <li>
+            <p>Type and fabric of the carpet: Some carpets, such as wool carpets, are more delicate than others and require more frequent cleaning.</p>
           </li>
-          <li class="hide-if-not-expanded">
-            <p class="listed-items">Level of traffic: Carpets in high-traffic areas, such as hallways and lobbies, may need to be cleaned more often than carpets in low-traffic areas.</p>
+          <li>
+            <p>Level of traffic: Carpets in high-traffic areas, such as hallways and lobbies, may need to be cleaned more often than carpets in low-traffic areas.</p>
           </li>
-          <li class="hide-if-not-expanded">
-            <p class="listed-items">Hotel's cleaning schedule: Some hotels have a more rigorous cleaning schedule than others do.</p>
+          <li>
+            <p>Hotel's cleaning schedule: Some hotels have a more rigorous cleaning schedule than others do.</p>
           </li>
           <p class="ml--5">In addition to regular cleaning, hotels may also spot-clean carpets as needed. This is typically done to remove small stains or spills.</p>
 
           <div class="read-more-click-to-expand-2">
             <button class="read-more-toggle-button my-6 mx-auto uppercase b-none b-rd-1 py-3 px-7 bg-paper hover-bg-#f7f7f7:hover font-600 font-size-5 whitespace-nowrap" style="letter-spacing: 0.02rem; box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 10%);" onClick="toggleExpand(2)">Read more</button>
 
-            <ul class="hidden-questions-and-answers">
-              <li class="hide-if-not-expanded">
+            <ul>
+              <li>
                 <h3>What is the best method for commercial carpet cleaning?</h3>
                 <p class="ml--5">Some of the most popular commercial carpet cleaning methods are:</p></li>
-              <li class="hide-if-not-expanded">
-                <p class="listed-items">Hot water extraction, otherwise known as <a class="color-paper-link hover-color-paper-link-hover:hover" href="/professional-carpet-cleaning-services/steam">steam cleaning</a>, is easily the most common professional carpet cleaning technique. Steam cleaning uses hot water at high pressure to penetrate into carpet fibres, breaking down the dirt and bacteria stored deep within.</p>
+              <li>
+                <p>Hot water extraction, otherwise known as <a class="color-paper-link hover-color-paper-link-hover:hover" href="/professional-carpet-cleaning-services/steam">steam cleaning</a>, is easily the most common professional carpet cleaning technique. Steam cleaning uses hot water at high pressure to penetrate into carpet fibres, breaking down the dirt and bacteria stored deep within.</p>
               </li>
-              <li class="hide-if-not-expanded">
-                <p class="listed-items"><a class="color-paper-link hover-color-paper-link-hover:hover" href="/professional-carpet-cleaning-services/dry">Dry carpet cleaning</a> is used for cleaning finer and more delicate carpets, rugs and upholstery, vulnerable to water damage. This cleaning method is suitable for all types of carpets and it is a significantly faster cleaning method because of its little to no drying time. It is also a great solution for cleaning big facilities without the luxury of off-time.</p>
+              <li>
+                <p><a class="color-paper-link hover-color-paper-link-hover:hover" href="/professional-carpet-cleaning-services/dry">Dry carpet cleaning</a> is used for cleaning finer and more delicate carpets, rugs and upholstery, vulnerable to water damage. This cleaning method is suitable for all types of carpets and it is a significantly faster cleaning method because of its little to no drying time. It is also a great solution for cleaning big facilities without the luxury of off-time.</p>
               </li>
               <p class="ml--5">If you are having trouble deciding which industrial carpet cleaning services are best for you, feel free to contact us to get professional advice.</p>
-              <li class="hide-if-not-expanded">
+              <li>
                 <h3>What is commercial carpet cleaning?</h3>
                 <p class="ml--5">Commercial carpet cleaning refers to professional cleaning by a commercial carpet cleaning company in commercial or business settings such as offices, retail stores, hotels and other commercial establishments. We at “Fine Carpet Cleaning” are also specialised in restaurant carpet cleaning and pub carpet cleaning. Such industrial carpet cleaning services are typically more extensive and intensive than residential carpet cleaning due to the higher volume of foot traffic and the potential for more significant soil and stains in commercial spaces.</p></li>
-              <li class="hide-if-not-expanded">
+              <li>
                 <h3>How often should a commercial carpet be cleaned?</h3>
                 <p class="ml--5">The frequency of commercial carpet cleaning can vary based on several factors, including:</p></li>
-              <li class="hide-if-not-expanded">
-                <p class="listed-items">The type of commercial facility;</p>
+              <li>
+                <p>The type of commercial facility;</p>
               </li>
-              <li class="hide-if-not-expanded">
-                <p class="listed-items">The level of foot traffic the carpets receive;</p>
+              <li>
+                <p>The level of foot traffic the carpets receive;</p>
               </li>
-              <li class="hide-if-not-expanded">
-                <p class="listed-items">The specific needs of the business;</p>
+              <li>
+                <p>The specific needs of the business;</p>
               </li>
-              <li class="hide-if-not-expanded">
-                <p class="listed-items">Does the place have doormat;</p>
+              <li>
+                <p>Does the place have doormat;</p>
               </li>
-              <li class="hide-if-not-expanded">
-                <p class="listed-items">On which floor is the place located (usually the first floor is dirtier because you directly enter the room from outside).</p>
+              <li>
+                <p>On which floor is the place located (usually the first floor is dirtier because you directly enter the room from outside).</p>
               </li>
               <p>Cleanliness depends on these factors, so have them in mind when you are thinking about carpet cleaning. On average we recommend commercial carpet cleaning in London every 6 months.</p>
-              <li class="hide-if-not-expanded">
+              <li>
                 <h3>How do you clean hotel carpet?</h3>
                 <p class="ml--5">Cleaning hotel carpets is a crucial part of maintaining a clean and welcoming environment for your guests. The cleaning process typically involves a combination of regular maintenance and periodic deep cleaning. Here are the steps involved in cleaning hotel carpets:</p></li>
-              <li class="hide-if-not-expanded">
-                <p class="listed-items">It's advisable to hire a professional carpet cleaning service with experience in hotel environments. They have the expertise and equipment to deep clean and restore the carpet effectively.</p>
+              <li>
+                <p>It's advisable to hire a professional carpet cleaning service with experience in hotel environments. They have the expertise and equipment to deep clean and restore the carpet effectively.</p>
               </li>
-              <li class="hide-if-not-expanded">
-                <p class="hide-text-if-not-expanded">Stubborn stains may require specialised stain-removal techniques or products. Trained professionals can address these effectively. Check out our <a class="color-paper-link hover-color-paper-link-hover:hover" href="/">stain removal</a> page to learn more.</p>
+              <li>
+                <p>Stubborn stains may require specialised stain-removal techniques or products. Trained professionals can address these effectively. Check out our <a class="color-paper-link hover-color-paper-link-hover:hover" href="/">stain removal</a> page to learn more.</p>
               </li>
-              <li class="hide-if-not-expanded">
-                <p class="listed-items">Consider applying a <a class="color-paper-link hover-color-paper-link-hover:hover" href="/">stain protector</a> after cleaning to help repel spills and stains, extending the time between cleanings.</p>
+              <li>
+                <p>Consider applying a <a class="color-paper-link hover-color-paper-link-hover:hover" href="/">stain protector</a> after cleaning to help repel spills and stains, extending the time between cleanings.</p>
               </li>
               <p>Regular maintenance and professional cleaning from an industrial carpet cleaning company that specialises in offering hotel carpet cleaning services are essential for preserving the appearance and longevity of the carpets, rugs or upholstery in your hotel. Keeping carpets clean and fresh contributes to the overall guest experience and helps maintain a positive image for your establishment.</p>
-              <li class="hide-if-not-expanded">
+              <li>
                 <h3>What do hotels use to remove stains?</h3>
                 <p class="ml--5">Many hotels use hotel carpet cleaning services that are equipped with the expertise and equipment to handle a wide range of stains effectively. These services can provide deep cleaning for carpets, upholstery, and other surfaces.</p>
                 <p class="ml--5">It's important to note that the choice of stain removal method or product depends on the type of stain, the fabric or material involved, and the hotel's specific protocols. Booking industrial carpet cleaning services, like the ones we offer at “Fine Carpet Cleaning” Ltd., will ensure that your hotel’s carpets, rugs and upholstery are correctly taken care of. That is thanks to our business carpet cleaning expertise, professional equipment and carefully selected cleaning products.</p></li>
-              <li class="hide-if-not-expanded">
+              <li>
                 <h3>What are your commercial carpet cleaning rates?</h3>
                 <p class="ml--5">The carpet cleaning rates for commercial cleaning are determined by several variables, including:</p></li>
-              <li class="hide-if-not-expanded">
-                <p class="hide-text-if-not-expanded">The number and dimensions of the carpets;</p>
+              <li>
+                <p>The number and dimensions of the carpets;</p>
               </li>
-              <li class="hide-if-not-expanded">
-                <p class="listed-items">The degree of soiling;</p>
+              <li>
+                <p>The degree of soiling;</p>
               </li>
-              <li class="hide-if-not-expanded">
-                <p class="listed-items">The type of carpets;</p>
+              <li>
+                <p>The type of carpets;</p>
               </li>
-              <li class="hide-if-not-expanded">
-                <p class="listed-items">The accessibility of the carpets.</p>
+              <li>
+                <p>The accessibility of the carpets.</p>
               </li>
               <p>To learn more about our commercial carpet cleaning rates, check out our commercial carpet cleaning prices.</p>
-              <li class="hide-if-not-expanded">
+              <li>
                 <h3>Do you offer industrial carpet cleaning services?</h3>
                 <p class="ml--5">We at “Fine Carpet Cleaning” Ltd. are specialised in cleaning commercial carpets and perform in all boroughs in London. Wherever you want your carpets, rugs or upholstery to be cleaned by a commercial carpet cleaning company, you can rely on us to happily arrive at that destination.</p></li>
-              <li class="hide-if-not-expanded">
+              <li>
                 <h3>Are the cleaning machines loud? Will they interrupt the work process?</h3>
                 <p class="ml--5">Yes, the machines are noisy, but commercial carpet cleaning is designed to be efficient, fast and minimise downtime for your business. Our powerful equipment and experienced technicians ensure that cleaning is completed quickly, usually within a few hours, depending on the size and condition of the area. In addition, we offer flexible scheduling options, including after-hours and weekend appointments, to further minimise disruption to your daily operations.</p></li>
-              <li class="hide-if-not-expanded">
+              <li>
                 <h3>Will our staff disrupt the work of your specialists?</h3>
                 <p class="ml--5">Our team is trained to work efficiently and discreetly to minimise any interference with your staff and daily operations. We understand the importance of maintaining a productive work environment, so in order to ensure the good work of your team and our specialists, we advise you to book at a time when there are no people in the office in order not to interrupt each other's work. We can schedule carpet cleaning outside of your regular working hours, including evenings and weekends, to avoid disrupting your business activities.</p></li>
-              <li class="hide-if-not-expanded">
+              <li>
                 <h3>Can you also carry out carpet cleaning outside business hours?</h3>
                 <p class="ml--5">Yes, we can also carry out commercial carpet cleaning outside regular working hours. We know that it's important to minimise disruption to your business. That's why we offer flexible schedules that include evenings, weekends, and even early mornings. Our mission is to satisfy your specific needs and to ensure that your carpets are cleaned at a time that is most convenient for you so that your business can continue to run without interruption. Contact us to discuss your preferred time, and we will create a cleaning schedule that fits your routine.</p></li>
-              <li class="hide-if-not-expanded">
+              <li>
                 <h3>Do you also clean at weekends?</h3>
                 <p class="ml--5">Yes, we also clean at weekends. The optimal time for commercial carpet cleaning is when no one is at work so as not to disturb the work of your staff. The only thing we need is a person who can tell us where the electricity and water connections are. There is no extra charge for weekend cleaning, so you can book whenever it is convenient for you.</p></li>
             </ul>

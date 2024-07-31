@@ -19,12 +19,12 @@ const GalerrySliderDesktop = () => {
     <SliderProvider>
       <div class="max-w-1000px m-auto position-relative hidden md-block">
         <Slider options={{ loop: true, slides: { perView: 3, spacing: 10 } }}>
-          <img src="/assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" class="" />
-          <img src="/assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" class="" />
-          <img src="/assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" class="" />
-          <img src="/assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" class="" />
-          <img src="/assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" class="" />
-          <img src="/assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" class="" />
+          <img src="/assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" />
+          <img src="/assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" />
+          <img src="/assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" />
+          <img src="/assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" />
+          <img src="/assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" />
+          <img src="/assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" />
         </Slider>
         <SliderButton class="cursor-pointer position-absolute top-41% left-0 bg-paper-inv bg-op-50 b-rd-bl-1 b-rd-tl-1 b-none px-0 py-1.5" prev><RiArrowLeftSLine class="-ml-1 font-size-10 c-paper hover-c-brand-light:hover transition-colors" /></SliderButton>
         <SliderButton class="cursor-pointer position-absolute top-41% right-0 bg-paper-inv bg-op-50 b-rd-br-1 b-rd-tr-1 b-none px-0 py-1.5" next><RiArrowRightSLine class="-mr-1 font-size-10 c-paper hover-c-brand-light:hover transition-colors" /></SliderButton>
@@ -45,12 +45,12 @@ const GalerrySliderMobile = () => {
     <SliderProvider>
       <div class="max-w-1000px m-auto position-relative md-hidden block">
         <Slider options={{ loop: true }}>
-          <img src="/assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" class="" />
-          <img src="/assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" class="" />
-          <img src="/assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" class="" />
-          <img src="/assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" class="" />
-          <img src="/assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" class="" />
-          <img src="/assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" class="" />
+          <img src="/assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" />
+          <img src="/assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" />
+          <img src="/assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" />
+          <img src="/assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" />
+          <img src="/assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" />
+          <img src="/assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" />
         </Slider>
         <SliderButton class="cursor-pointer position-absolute top-41% left-0 bg-paper-inv bg-op-50 b-rd-bl-1 b-rd-tl-1 b-none px-0 py-1.5" prev><RiArrowLeftSLine class="-ml-1 font-size-10 c-paper hover-c-brand-light:hover transition-colors" /></SliderButton>
         <SliderButton class="cursor-pointer position-absolute top-41% right-0 bg-paper-inv bg-op-50 b-rd-br-1 b-rd-tr-1 b-none px-0 py-1.5" next><RiArrowRightSLine class="-mr-1 font-size-10 c-paper hover-c-brand-light:hover transition-colors" /></SliderButton>
@@ -76,16 +76,16 @@ export default function Page() {
 
       <div class="mt-20 py-8 px-8 md-px-14 b-rd-3 bg-paper line-height-8 text-justify font-size-4.4" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 18%);">
 
-        <p class="">“Fine Carpet Cleaning'' London is a London-based carpet cleaning company which has been in the industry since 2012. It was founded with the commitment to grant our customers the expected quality of carpet cleaning services. Today we are pleased to have our reputation as a trusted and excellent performing agency.</p>
+        <p>“Fine Carpet Cleaning'' London is a London-based carpet cleaning company which has been in the industry since 2012. It was founded with the commitment to grant our customers the expected quality of carpet cleaning services. Today we are pleased to have our reputation as a trusted and excellent performing agency.</p>
 
         <p>In our company, we follow the philosophy of always thinking about our clients first. We don’t just do cleaning jobs – we strive to be the most reliable and quality carpet cleaning company. Our core value is customer satisfaction and to provide the best possible services.</p>
 
         <p>We have years of experience dealing with residential and commercial customers and various types of carpets, rugs, upholstery and stains. Through the years we have been striving to improve our services by:</p>
 
         <ul>
-          <li class="ml--5"><p class="listed-items">Always using the most top-graded equipment and machinery;</p></li>
-          <li class="ml--5"><p class="listed-items">Regularly testing and selecting new cleaning products;</p></li>
-          <li class="ml--5"><p class="listed-items">Improving our expertise at every opportunity by going through professional courses and special training.</p></li>
+          <li class="ml--5"><p>Always using the most top-graded equipment and machinery;</p></li>
+          <li class="ml--5"><p>Regularly testing and selecting new cleaning products;</p></li>
+          <li class="ml--5"><p>Improving our expertise at every opportunity by going through professional courses and special training.</p></li>
         </ul>
 
       </div>

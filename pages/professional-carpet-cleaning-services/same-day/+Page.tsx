@@ -13,12 +13,12 @@ const GalerrySliderDesktop = () => {
     <SliderProvider>
       <div class="max-w-1000px m-auto position-relative hidden md-block">
         <Slider options={{ loop: true, slides: { perView: 3, spacing: 10 } }}>
-          <img src="/assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" class="" />
-          <img src="/assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" class="" />
-          <img src="/assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" class="" />
-          <img src="/assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" class="" />
-          <img src="/assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" class="" />
-          <img src="/assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" class="" />
+          <img src="/assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" />
+          <img src="/assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" />
+          <img src="/assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" />
+          <img src="/assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" />
+          <img src="/assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" />
+          <img src="/assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" />
         </Slider>
         <SliderButton class="cursor-pointer position-absolute top-41% left-0 bg-paper-inv bg-op-50 b-rd-bl-1 b-rd-tl-1 b-none px-0 py-1.5" prev><RiArrowLeftSLine class="-ml-1 font-size-10 c-paper hover-c-brand-light:hover transition-colors" /></SliderButton>
         <SliderButton class="cursor-pointer position-absolute top-41% right-0 bg-paper-inv bg-op-50 b-rd-br-1 b-rd-tr-1 b-none px-0 py-1.5" next><RiArrowRightSLine class="-mr-1 font-size-10 c-paper hover-c-brand-light:hover transition-colors" /></SliderButton>
@@ -34,12 +34,12 @@ const GalerrySliderMobile = () => {
     <SliderProvider>
       <div class="max-w-1000px m-auto position-relative md-hidden block">
         <Slider options={{ loop: true }}>
-          <img src="/assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" class="" />
-          <img src="/assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" class="" />
-          <img src="/assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" class="" />
-          <img src="/assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" class="" />
-          <img src="/assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" class="" />
-          <img src="/assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" class="" />
+          <img src="/assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" />
+          <img src="/assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" />
+          <img src="/assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" />
+          <img src="/assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" />
+          <img src="/assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" />
+          <img src="/assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" />
         </Slider>
         <SliderButton class="cursor-pointer position-absolute top-41% left-0 bg-paper-inv bg-op-50 b-rd-bl-1 b-rd-tl-1 b-none px-0 py-1.5" prev><RiArrowLeftSLine class="-ml-1 font-size-10 c-paper hover-c-brand-light:hover transition-colors" /></SliderButton>
         <SliderButton class="cursor-pointer position-absolute top-41% right-0 bg-paper-inv bg-op-50 b-rd-br-1 b-rd-tr-1 b-none px-0 py-1.5" next><RiArrowRightSLine class="-mr-1 font-size-10 c-paper hover-c-brand-light:hover transition-colors" /></SliderButton>
@@ -348,67 +348,67 @@ export default function Page() {
       <div class="read-more-click-to-expand-1 to-be-expanded">
         <button class="read-more-toggle-button my-6 mx-auto uppercase b-none b-rd-1 py-3 px-7 bg-paper hover-bg-#f7f7f7:hover font-600 font-size-5 whitespace-nowrap" style="letter-spacing: 0.02rem; box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 10%);" onClick="toggleExpand(1)">Read more</button>
 
-        <ul class="hidden-questions-and-answers">
-          <li class="hide-if-not-expanded">
+        <ul>
+          <li>
             <h3>What happens if your cleaner damages anything while performing same day carpet cleaning services?</h3>
             <p class="ml--5">We have full coverage, so don’t worry if an accident happens, we have full coverage.</p></li>
-          <li class="hide-if-not-expanded">
+          <li>
             <h3>How long does the process of a same day carpet cleaning service take?</h3>
             <p class="ml--5">The same day carpet cleaning process is determined by how filthy the carpet is and if it requires stain removal treatments.Usually, it takes from 20 to 60 minutes per room.</p></li>
-          <li class="hide-if-not-expanded">
+          <li>
             <h3>How long does it take for the carpet to get dry?</h3>
             <p class="ml--5">It can be affected by a variety of elements, including the type of carpet, what condition it is in, the thickness of the pile, and whether or not it requires stain removal services.</p>
 
             <p class="ml--5">Wool carpets retain more water and dry slower, often between 10 and 12 hours. If the carpet is really dirty and needs to be treated several times, the drying period may be significantly longer.</p>
 
             <p class="ml--5">Synthetic carpets dry faster, between 7 and 10 hours, and the above is still valid (it depends on how dirty it is and the number of required treatments).</p></li>
-          <li class="hide-if-not-expanded">
+          <li>
             <h3>Do you guarantee that after cleaning my carpet, all stains will be removed?</h3>
             <p class="ml--5">No, since there are elements involved that are beyond our control. Among these aspects are:</p></li>
-          <li class="hide-if-not-expanded">
-            <p class="listed-items">How old are the stains?</p>
+          <li>
+            <p>How old are the stains?</p>
           </li>
-          <li class="hide-if-not-expanded">
-            <p class="listed-items">What polluting agent created the stains?</p>
+          <li>
+            <p>What polluting agent created the stains?</p>
           </li>
-          <li class="hide-if-not-expanded">
-            <p class="listed-items">What's the carpet composed of?</p>
+          <li>
+            <p>What's the carpet composed of?</p>
           </li>
-          <li class="hide-if-not-expanded">
-            <p class="listed-items">Have the stains not been properly treated in the past?</p>
+          <li>
+            <p>Have the stains not been properly treated in the past?</p>
           </li>
-          <li class="hide-if-not-expanded">
-            <p class="hide-text-if-not-expanded">Nonetheless, we promise that we will try our best to remove all of the stains from your carpet. This includes:</p>
+          <li>
+            <p>Nonetheless, we promise that we will try our best to remove all of the stains from your carpet. This includes:</p>
           </li>
-          <li class="hide-if-not-expanded">
-            <p class="listed-items">The usage of high-quality cleaning equipment;</p>
+          <li>
+            <p>The usage of high-quality cleaning equipment;</p>
           </li>
-          <li class="hide-if-not-expanded">
-            <p class="listed-items">The use of effective and eco-friendly detergents.</p>
+          <li>
+            <p>The use of effective and eco-friendly detergents.</p>
           </li>
-          <li class="hide-if-not-expanded">
+          <li>
             <h3>How soon can I expect a cleaner to visit me?</h3>
             <p class="ml--5">We will attempt to schedule your appointment as soon as possible. We are usually completely booked three days in advance, although there are occasional exceptions. 
             <br></br>
             However, if you are in a hurry, we suggest you use the same day carpet cleaning that we offer. Call us, and we will send you professionals as soon as possible.</p></li>
-          <li class="hide-if-not-expanded">
+          <li>
             <h3>What is next day carpet cleaning?</h3>
             <p class="ml--5">Next day carpet cleaning is an excellent option for situations where accidents happen and you need your carpets right away. We offer carpet cleaning in London, which can be on the same day, the following day, or whenever it is convenient for you. It is a good choice in case of unexpected spills or stains, preparing for guests, or moving out. If you need routine cleaning, we suggest you choose from some of our cleaning services in London and schedule a standard appointment.</p></li>
-          <li class="hide-if-not-expanded">
+          <li>
             <h3>Can I schedule carpet cleaning today?</h3>
             <p class="ml--5">Absolutely! We offer emergency carpet cleaning services. Contact us as soon as the stain appears. Tell us more details about the carpet situation, and we will discuss the potential solutions to your problem. Hurry up to check availability and book your appointment.</p></li>
-          <li class="hide-if-not-expanded">
+          <li>
             <h3>I spilled coffee on the white, fluffy carpet. Is it possible to send me a technician for this morning carpet cleaning?</h3>
             <p class="ml--5">Yes, usually it is possible. We offer same day carpet cleaning service for cases like this. You have to just make sure to contact us in order to check our availability.
             <br></br>
             Contact us online or by phone, and we will make an appointment at the most convenient time for you. Booking a carpet cleaning company like us is simple and convenient, resulting in an efficient and quick experience.</p></li>
-          <li class="hide-if-not-expanded">
+          <li>
             <h3>Do you offer any kind of instant carpet cleaning service?</h3>
             <p class="ml--5">We cannot clean your carpet instantly. But yes, we do offer instant carpet cleaning services. While availability depends on our current timetable, we try to respond to urgent requests. Please contact us as soon as possible to discuss your urgent needs, and we will do our best to give you a fast and effective service.</p></li>
-          <li class="hide-if-not-expanded">
+          <li>
             <h3>Can you provide last minute carpet cleaning services on short notice?</h3>
             <p class="ml--5">For sure, we are people as well, and we know that unexpected situations arise. The availability of our urgent carpet cleaning depends on the scheduling program. But don’t worry,  we provide flexible scheduling choices and a dedicated customer support team that responds quickly and prioritises emergencies. Your happiness is our first priority, and we are dedicated to providing rapid and efficient service to satisfy your needs. No matter what happens, contact us, and we will find a solution together.</p></li>
-          <li class="hide-if-not-expanded">
+          <li>
             <h3>What is the price of carpet cleaning in London?</h3>
             <p class="ml--5">The London carpet cleaning price varies depending on the size of the area, the type of carpet, and special cleaning procedures. Pricing can be affected by factors such as dirt level, stain type, and carpet material. Please contact us for further information and an exact estimate of your carpet cleaning needs. Our staff will offer you an accurate price based on your individual needs, providing pricing transparency and clarity.</p></li>
         </ul>

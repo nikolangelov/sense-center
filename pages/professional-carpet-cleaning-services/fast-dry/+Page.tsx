@@ -14,12 +14,12 @@ const GalerrySliderDesktop = () => {
     <SliderProvider>
       <div class="max-w-1000px m-auto position-relative hidden md-block">
         <Slider options={{ loop: true, slides: { perView: 3, spacing: 10 } }}>
-          <img src="/assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" class="" />
-          <img src="/assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" class="" />
-          <img src="/assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" class="" />
-          <img src="/assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" class="" />
-          <img src="/assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" class="" />
-          <img src="/assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" class="" />
+          <img src="/assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" />
+          <img src="/assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" />
+          <img src="/assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" />
+          <img src="/assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" />
+          <img src="/assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" />
+          <img src="/assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" />
         </Slider>
         <SliderButton class="cursor-pointer position-absolute top-41% left-0 bg-paper-inv bg-op-50 b-rd-bl-1 b-rd-tl-1 b-none px-0 py-1.5" prev><RiArrowLeftSLine class="-ml-1 font-size-10 c-paper hover-c-brand-light:hover transition-colors" /></SliderButton>
         <SliderButton class="cursor-pointer position-absolute top-41% right-0 bg-paper-inv bg-op-50 b-rd-br-1 b-rd-tr-1 b-none px-0 py-1.5" next><RiArrowRightSLine class="-mr-1 font-size-10 c-paper hover-c-brand-light:hover transition-colors" /></SliderButton>
@@ -35,12 +35,12 @@ const GalerrySliderMobile = () => {
     <SliderProvider>
       <div class="max-w-1000px m-auto position-relative md-hidden block">
         <Slider options={{ loop: true }}>
-          <img src="/assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" class="" />
-          <img src="/assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" class="" />
-          <img src="/assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" class="" />
-          <img src="/assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" class="" />
-          <img src="/assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" class="" />
-          <img src="/assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" class="" />
+          <img src="/assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" />
+          <img src="/assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" />
+          <img src="/assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" />
+          <img src="/assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" />
+          <img src="/assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" />
+          <img src="/assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" />
         </Slider>
         <SliderButton class="cursor-pointer position-absolute top-41% left-0 bg-paper-inv bg-op-50 b-rd-bl-1 b-rd-tl-1 b-none px-0 py-1.5" prev><RiArrowLeftSLine class="-ml-1 font-size-10 c-paper hover-c-brand-light:hover transition-colors" /></SliderButton>
         <SliderButton class="cursor-pointer position-absolute top-41% right-0 bg-paper-inv bg-op-50 b-rd-br-1 b-rd-tr-1 b-none px-0 py-1.5" next><RiArrowRightSLine class="-mr-1 font-size-10 c-paper hover-c-brand-light:hover transition-colors" /></SliderButton>
@@ -409,61 +409,61 @@ export default function Page() {
       <div class="read-more-click-to-expand-1 to-be-expanded">
         <button class="read-more-toggle-button my-6 mx-auto uppercase b-none b-rd-1 py-3 px-7 bg-paper hover-bg-#f7f7f7:hover font-600 font-size-5 whitespace-nowrap" style="letter-spacing: 0.02rem; box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 10%);" onClick="toggleExpand(1)">Read more</button>
 
-        <ul class="hidden-questions-and-answers">
-          <li class="hide-if-not-expanded">
+        <ul>
+          <li>
             <h3>What happens if your cleaner damages anything while performing fast dry carpet cleaning services?</h3>
             <p class="ml--5">We have complete coverage in the event of an accident because we are fully insured.</p></li>
-          <li class="hide-if-not-expanded">
+          <li>
             <h3>How long does the process of fast dry carpet cleaning service take?</h3>
             <p class="ml--5">The fast dry carpet cleaning procedure depends on the level of dirtiness of the carpet and whether it requires any treatments for removing stains. It can range from 20 to 60 minutes for each room.</p></li>
-          <li class="hide-if-not-expanded">
+          <li>
             <h3>How long does it take for the carpet to get dry?</h3>
             <p class="ml--5">The drying time varies based on several elements such as the carpet's material, its level of dirtiness, the thickness of its fibres, and whether it requires a service for removing stains.</p>
             <p class="ml--5">Carpets made of wool soak up more moisture and take a longer time to dry, typically between 10 to 12 hours. Should the carpet be excessively soiled and necessitate multiple treatments, the drying period could extend further.</p>
             <p class="ml--5">Carpets made of synthetic materials dry more quickly, usually taking 7 to 10 hours and this remains true regardless of the carpet's condition and the number of treatments needed.</p>
           </li>
-          <li class="hide-if-not-expanded">
+          <li>
             <h3>Do you guarantee that after cleaning my carpet all stains will be removed?</h3>
             <p class="ml--5">No, because there are factors that are beyond our influence. These elements include:</p></li>
-          <li class="hide-if-not-expanded">
-            <p class="listed-items">When did the stains appear?</p>
+          <li>
+            <p>When did the stains appear?</p>
           </li>
-          <li class="hide-if-not-expanded">
-            <p class="listed-items">Which polluting agent is responsible for the stains?</p>
+          <li>
+            <p>Which polluting agent is responsible for the stains?</p>
           </li>
-          <li class="hide-if-not-expanded">
-            <p class="listed-items">What is the carpet material?</p>
+          <li>
+            <p>What is the carpet material?</p>
           </li>
-          <li class="hide-if-not-expanded">
-            <p class="listed-items">Have the stains already been improperly treated?</p>
+          <li>
+            <p>Have the stains already been improperly treated?</p>
           </li>
           <p class="ml--5">However, we can assure you that we will make every effort to remove any stain from your carpet.</p>
           <p class="ml--5">This involves:</p>
-          <li class="hide-if-not-expanded">
-            <p class="hide-text-if-not-expanded">The use of  top-tier cleaning equipment;</p>
+          <li>
+            <p>The use of  top-tier cleaning equipment;</p>
           </li>
-          <li class="hide-if-not-expanded">
-            <p class="listed-items">The use of effective and sustainable non-toxic cleaning solutions;</p>
+          <li>
+            <p>The use of effective and sustainable non-toxic cleaning solutions;</p>
           </li>
-          <li class="hide-if-not-expanded">
-            <p class="listed-items">Personalised strategy based on the kind of carpet and pollutants.</p>
+          <li>
+            <p>Personalised strategy based on the kind of carpet and pollutants.</p>
           </li>
 
-          <li class="hide-if-not-expanded">
+          <li>
             <h3>How to dry carpet quickly after cleaning?</h3>
             <p class="ml--5">Quick dry carpet cleaning aims to leave your carpet as dry as possible.</p>
             <p class="ml--5">However, if your carpet still has some moisture, here are some tips that will help you.</p>
             <p class="ml--5">Firstly, solutions with no equipment:</p></li>
-          <li class="hide-if-not-expanded">
-            <p class="listed-items">If the room is filled with many windows, there's no need to worry. Simply open them and allow the air to circulate. Make sure to open interior doors. In this way, you will allow humid air to escape and encourage air circulation in your home.</p>
+          <li>
+            <p>If the room is filled with many windows, there's no need to worry. Simply open them and allow the air to circulate. Make sure to open interior doors. In this way, you will allow humid air to escape and encourage air circulation in your home.</p>
           </li>
-          <li class="hide-if-not-expanded">
-            <p class="listed-items">Another way is to use a fan or dehumidifier in order to speed up the process.</p>
+          <li>
+            <p>Another way is to use a fan or dehumidifier in order to speed up the process.</p>
           </li>
           <li>
             <p class="ml--5">The fastest method is to use a combination of windows and a fan or dehumidifier as well to create cross-ventilation and speed up the drying process.</p>
           </li>
-          <li class="hide-if-not-expanded">
+          <li>
             <h3>What is the fastest way to dry carpet?</h3>
             <p class="ml--5">Do not worry about wet carpet, we take care of all steps of the drying process.
               <br></br>
@@ -471,73 +471,73 @@ export default function Page() {
               <br></br>
               We use an air moving floor fan to make sure your carpet remains clean and as good as new after a professional cleaning.
             </p></li>
-          <li class="hide-if-not-expanded">
+          <li>
             <h3>What is quick dry carpet cleaning?</h3>
             <p class="ml--5">The moisture left after the traditional carpet cleaning method creates an ideal environment for bacteria, mould, and mildew because of the large amount of water that is used. However, fast dry carpet cleaning reduces the risk of spreading germs all over the place. It is also known as very low-moisture cleaning. This technology is gaining popularity due to its quicker drying time, safer biodegradable cleaning options, and its ability to preserve the fibres of the carpet, unlike steam or hot water extraction methods. Quick dry carpet cleaning uses specialised equipment and techniques to achieve the desired results. The finishing touch of cleaning is to avoid the long drying of the carpet. For this purpose, we use a carpet turbo dryer, which significantly shortens the time.</p></li>
-          <li class="hide-if-not-expanded">
+          <li>
             <h3>Is it OK to let water dry on carpet?</h3>
             <p class="ml--5">No, it is not OK. It is important to make sure your carpet is dry after some type of professional cleaning. If you don't properly dry your carpet after cleaning it, the damp and dark environment creates the perfect conditions for unwanted growth. Mildew, moulds, and other tiny organisms can start to multiply and spread in these moist areas.</p></li>
-          <li class="hide-if-not-expanded">
+          <li>
             <h3>Does carpet dry better with heat or cold?</h3>
             <p class="ml--5">Both of them can help with drying, but there are some things you should know:</p></li>
-          <li class="hide-if-not-expanded">
-            <p class="listed-items">The cold air drying takes a lot longer because the water does not vanish so fast in cold temperatures.</p>
+          <li>
+            <p>The cold air drying takes a lot longer because the water does not vanish so fast in cold temperatures.</p>
           </li>
-          <li class="hide-if-not-expanded">
-            <p class="listed-items">It is possible for the cold air to cause damage, such as more brittle and stiffer fibres.</p>
+          <li>
+            <p>It is possible for the cold air to cause damage, such as more brittle and stiffer fibres.</p>
           </li>
-          <li class="hide-if-not-expanded">
-            <p class="listed-items">The best carpet drying temperature is around 22–24 °C.</p>
+          <li>
+            <p>The best carpet drying temperature is around 22–24 °C.</p>
           </li>
           <li><p class="ml--5">We suggest letting a professional service clean your carpet in the next cleaning session, so you do not have to take care of drying your carpet. The perfect option for this is rapid dry carpet cleaning, after which you can enjoy your brand new looking carpet.</p></li>
-          <li class="hide-if-not-expanded">
+          <li>
             <h3>Should I use hot air to dry the carpet?</h3>
             <p class="ml--5">Using hot air to dry your carpet after cleaning can speed drying times and reduce the risk of mould and mildew, but the hot air can cause potential damage to the carpet’s fibres. So, we do not recommend using hot air in order to protect your carpet and ensure effective drying.</p></li>
-          <li class="hide-if-not-expanded">
+          <li>
             <h3>Should you open windows to dry carpet?</h3>
             <p class="ml--5">Yes. We advise you to open the windows and doors. This can help to circulate fresh air throughout the carpeted room, helping it dry faster because the air flow will speed up the process. Allowing sunlight to stream through the curtains and blinds can further accelerate the process.</p></li>
-          <li class="hide-if-not-expanded">
+          <li>
             <h3>Will a fan help carpet dry faster?</h3>
             <p class="ml--5">Yes, it helps, especially when the weather outside is humid and you cannot open the window. The fan creates an appropriate funnel of air. Once there is a funnel of air blowing over the carpet, it starts to dry out the carpet quickly. The last step of our fast dry carpet cleaning includes a drying procedure with a hard floor dryer in order to speed up the process.</p></li>
-          <li class="hide-if-not-expanded">
+          <li>
             <h3>Will a dehumidifier dry a wet carpet?</h3>
             <p class="ml--5">For sure, it will help. In case there is still humidity left after the fast dry carpet cleaning service, the dehumidifier is a faithful assistant in the fight against mould and mildew. It will absorb the moisture from the air and will also help to reduce potentially musty odours developing in your home. We suggest using a dehumidifier as an important step in keeping your home healthy and free of germs.</p></li>
 
           <div class="read-more-click-to-expand-2">
             <button class="read-more-toggle-button my-6 mx-auto uppercase b-none b-rd-1 py-3 px-7 bg-paper hover-bg-#f7f7f7:hover font-600 font-size-5 whitespace-nowrap" style="letter-spacing: 0.02rem; box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 10%);" onClick="toggleExpand(2)">Read more</button>
 
-            <ul class="hidden-questions-and-answers">
-              <li class="hide-if-not-expanded">
+            <ul>
+              <li>
                 <h3>What temperature dries carpet faster?</h3>
                 <p class="ml--5">The temperature at which a carpet dries faster depends on several factors, including the type of carpet, the level of humidity in the room, and the airflow. In general, warmer temperatures can help dry carpets more quickly than cooler temperatures. We advise you to keep the temperature in the room around 22–24 degrees.</p></li>
-              <li class="hide-if-not-expanded">
+              <li>
                 <h3>How long does it take to air dry a carpet?</h3>
                 <p class="ml--5">Usually, the steam-cleaned carpets can take 12-24 hours to dry completely, depending on factors like humidity and ventilation. However, quick dry carpet cleaning has a significant advantage in drying time, with carpets typically drying within 1-2 hours because of the small amount of liquid used.</p></li>
-              <li class="hide-if-not-expanded">
+              <li>
                 <h3>How do you dry carpet in the winter?</h3>
                 <p class="ml--5">As we say, the drying period of a carpet is no more than 2 hours because of the fans which circulate the air and decrease time. So, we suggest trying our rapid dry carpet cleaning in the winter as it offers shorter drying times. It allows you to resume using your carpets within 1–2 hours, enjoying your time at home without any hassle.</p></li>
-              <li class="hide-if-not-expanded">
+              <li>
                 <h3>How do you dehumidify wet carpet?</h3>
                 <p class="ml--5">After fast dry carpet cleaning service, you can expect a clean and dry carpet. We use a Dri-Pod carpet and hard floor drier. It directs air across the floor in all directions to boost evaporation and quickly remove surface moisture.</p>
                 <p class="ml--5">If, after the procedure, you still think there is some moisture left, you can activate a dehumidifier.</p>
                 <p class="ml--5">Following the instant dry carpet cleaning, there should be no moisture left. However, if you suspect there might still be some moisture present, you can activate a dehumidifier. It will significantly help by extracting moisture from your entire house, including your carpets.</p></li>
-              <li class="hide-if-not-expanded">
+              <li>
                 <h3>Does heat or air dry carpet faster?</h3>
                 <p class="ml--5">Both heat and air can play a role in drying carpets after cleaning, but their effectiveness depends on factors like humidity, airflow, and carpet type.</p>
                 <p class="ml--5">Heat helps evaporate moisture more quickly. However, excessive heat can potentially damage some carpet fibres, so we do not recommend it.</p>
                 <p class="ml--5">Proper air movement is essential for quick dry carpet cleaning. We use powerful air blowers to encourage swift drying by generating concentrated, straight air currents. Experience the change our speedy dry carpet cleaning can bring about and witness the transformation of your home into a cleaner, healthier, and more welcoming environment. Schedule your visit today and let us handle everything else!</p></li>
 
-              <li class="hide-if-not-expanded">
+              <li>
                 <h3>How do you dry a large wet carpet?</h3>
                 <p class="ml--5">We suggest you follow these steps in order to dry your large wet carpet:</p></li>
-              <li class="hide-if-not-expanded">
-                <p class="listed-items">Firstly, make sure to extract the water by placing absorbent towels on the carpet. This will help soak up the remaining water.</p>
+              <li>
+                <p>Firstly, make sure to extract the water by placing absorbent towels on the carpet. This will help soak up the remaining water.</p>
               </li>
-              <li class="hide-if-not-expanded">
-                <p class="listed-items">If there is not much water, you can put a fan or dehumidifier in the room to help with air circulation. It is good to check from time to time how it is going and to relocate the fan/dehumidifier. If you do not have any of this equipment, you can open the windows and doors so that air flows into the room.</p>
+              <li>
+                <p>If there is not much water, you can put a fan or dehumidifier in the room to help with air circulation. It is good to check from time to time how it is going and to relocate the fan/dehumidifier. If you do not have any of this equipment, you can open the windows and doors so that air flows into the room.</p>
               </li>
-              <li class="hide-if-not-expanded">
-                <p class="listed-items">If there is still too much water, it may be necessary to seek the assistance of a professional instead of attempting to manage the issue alone.</p>
+              <li>
+                <p>If there is still too much water, it may be necessary to seek the assistance of a professional instead of attempting to manage the issue alone.</p>
               </li>
               <li><p class="ml--5"><strong>When thinking about your upcoming carpet cleaning appointment, think about the many advantages of fast dry carpet cleaning service. It provides a mix of effectiveness, health advantages, and eco-friendly aspects that are hard to beat.</strong></p></li>
             </ul>

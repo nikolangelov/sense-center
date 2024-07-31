@@ -14,7 +14,7 @@ function PriceTable(props: { class: string, children: HTMLElement | any }) {
 
 	return (
 
-		<div class="">
+		<div>
 
 			<table class="w-full m-auto font-sans">
 				<thead style="box-shadow: 0px 20px 20px 1px rgb(84 89 95 / 10%);">

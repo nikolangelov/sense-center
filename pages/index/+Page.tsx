@@ -13,12 +13,12 @@ const GalerrySliderDesktop = () => {
 		<SliderProvider>
 			<div class="max-w-1000px m-auto position-relative hidden md-block">
 				<Slider options={{ loop: true, slides: { perView: 3, spacing: 10 } }}>
-					<img src="/assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" class="" />
-					<img src="/assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" class="" />
-					<img src="/assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" class="" />
-					<img src="/assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" class="" />
-					<img src="/assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" class="" />
-					<img src="/assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" class="" />
+					<img src="/assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" />
+					<img src="/assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" />
+					<img src="/assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" />
+					<img src="/assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" />
+					<img src="/assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" />
+					<img src="/assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" />
 				</Slider>
 				<SliderButton class="cursor-pointer position-absolute top-41% left-0 bg-paper-inv bg-op-50 b-rd-bl-1 b-rd-tl-1 b-none px-0 py-1.5" prev><RiArrowLeftSLine class="-ml-1 font-size-10 c-paper hover-c-brand-light:hover transition-colors" /></SliderButton>
 				<SliderButton class="cursor-pointer position-absolute top-41% right-0 bg-paper-inv bg-op-50 b-rd-br-1 b-rd-tr-1 b-none px-0 py-1.5" next><RiArrowRightSLine class="-mr-1 font-size-10 c-paper hover-c-brand-light:hover transition-colors" /></SliderButton>
@@ -39,12 +39,12 @@ const GalerrySliderMobile = () => {
 		<SliderProvider>
 			<div class="max-w-1000px m-auto position-relative md-hidden block">
 				<Slider options={{ loop: true }}>
-					<img src="/assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" class="" />
-					<img src="/assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" class="" />
-					<img src="/assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" class="" />
-					<img src="/assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" class="" />
-					<img src="/assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" class="" />
-					<img src="/assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" class="" />
+					<img src="/assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" />
+					<img src="/assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" />
+					<img src="/assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" />
+					<img src="/assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" />
+					<img src="/assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" />
+					<img src="/assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" />
 				</Slider>
 				<SliderButton class="cursor-pointer position-absolute top-41% left-0 bg-paper-inv bg-op-50 b-rd-bl-1 b-rd-tl-1 b-none px-0 py-1.5" prev><RiArrowLeftSLine class="-ml-1 font-size-10 c-paper hover-c-brand-light:hover transition-colors" /></SliderButton>
 				<SliderButton class="cursor-pointer position-absolute top-41% right-0 bg-paper-inv bg-op-50 b-rd-br-1 b-rd-tr-1 b-none px-0 py-1.5" next><RiArrowRightSLine class="-mr-1 font-size-10 c-paper hover-c-brand-light:hover transition-colors" /></SliderButton>
@@ -337,90 +337,90 @@ export default function Page() {
 						<h3>How long have you been in the carpet cleaning business?</h3>
 						<p class="ml--5 new-homepage-paragraphs">Fine Carpet Cleaning London has been involved in the carpet cleaning industry since 2012. We serve both commercial and residential clients and over the years we've cleaned all kinds of carpets, rugs, upholstery, and stains. Through these experiences, we've acquired valuable knowledge and expertise. Our commitment to delivering top-notch service has driven us to improve our services in the following ways:</p></li>
 					<li class="ml-5">
-						<p class="listed-items">We continually update and upgrade our equipment, ensuring that we utilise the latest and most effective technologies available.</p>
+						<p>We continually update and upgrade our equipment, ensuring that we utilise the latest and most effective technologies available.</p>
 					</li>
 					<li class="ml-5">
-						<p class="listed-items">We regularly evaluate and improve our cleaning products, staying current with industry advancements to provide the best results.</p>
+						<p>We regularly evaluate and improve our cleaning products, staying current with industry advancements to provide the best results.</p>
 					</li>
 					<li class="ml-5">
-						<p class="listed-items">We are dedicated to enhancing our expertise and skills by actively participating in additional professional courses and training programs. Our goal is to maintain a high level of competence and stay at the forefront of carpet cleaning practices.</p>
+						<p>We are dedicated to enhancing our expertise and skills by actively participating in additional professional courses and training programs. Our goal is to maintain a high level of competence and stay at the forefront of carpet cleaning practices.</p>
 					</li>
 					<li class="ml-5">
 						<h3>When do I need professional carpet cleaning?</h3>
 						<p class="ml--5 new-homepage-paragraphs">In our experience the majority of our clients have sought our carpet cleaning services when:</p></li>
 					<li class="ml-5">
-						<p class="listed-items">Their carpet has had stains which they couldn’t remove by themselves.</p>
+						<p>Their carpet has had stains which they couldn’t remove by themselves.</p>
 					</li>
 					<li class="ml-5">
-						<p class="listed-items">Their carpet has had an unpleasant odour.</p>
+						<p>Their carpet has had an unpleasant odour.</p>
 					</li>
 					<li class="ml-5">
-						<p class="listed-items">Their carpet has been attracting pests, such as spiders or mice.</p>
+						<p>Their carpet has been attracting pests, such as spiders or mice.</p>
 					</li>
 					<li class="ml-5">
-						<p class="listed-items">Their carpet has lost its colour.</p>
+						<p>Their carpet has lost its colour.</p>
 					</li>
 					<li class="ml-5">
-						<p class="listed-items">They started to have allergies or asthma attacks.</p>
+						<p>They started to have allergies or asthma attacks.</p>
 					</li>
 					<li class="ml-5">
-						<p class="listed-items">Their carpet has been visibly dirty.</p>
+						<p>Their carpet has been visibly dirty.</p>
 					</li>
 					<li class="ml-5">
-						<p class="listed-items">They wanted to prolong their carpet’s life.</p>
+						<p>They wanted to prolong their carpet’s life.</p>
 					</li>
 					<li class="ml-5">
-						<p class="listed-items">Or they simply wanted to refresh their carpets.</p>
+						<p>Or they simply wanted to refresh their carpets.</p>
 					</li>
 					<li class="ml-5">
 						<h3>How frequently should a carpet be professionally cleaned?</h3>
 						<p class="ml--5 new-homepage-paragraphs">How often should your carpets be deep cleaned depends on factors such as how fast the carpet becomes soiled. As a general guideline, it is advisable to have your carpet deep cleaned once every 12 months. However, we suggest considering professional carpet cleaning more often than once a year in the following situations:</p></li>
 					<li class="ml-5">
-						<p class="listed-items">If you have pets;</p>
+						<p>If you have pets;</p>
 					</li>
 					<li class="ml-5">
-						<p class="listed-items">If you have children;</p>
+						<p>If you have children;</p>
 					</li>
 					<li class="ml-5">
-						<p class="listed-items">If your carpets are exposed to high foot traffic;</p>
+						<p>If your carpets are exposed to high foot traffic;</p>
 					</li>
 					<li class="ml-5">
-						<p class="listed-items">If your carpets are exposed to indoor smoking;</p>
+						<p>If your carpets are exposed to indoor smoking;</p>
 					</li>
 					<li class="ml-5">
-						<p class="listed-items">If your carpets get stained frequently.</p>
+						<p>If your carpets get stained frequently.</p>
 
 						<p class="ml--5 new-homepage-paragraphs">You can reach out to us if you seek expert advice or if you want to book a <a class="color-paper-link hover-color-paper-link-hover:hover" href="/" target="_blank" rel="noopener">professional carpet cleaning service</a>.</p></li>
 					<li class="ml-5">
 						<h3>How much will a professional carpet cleaning cost?</h3>
 						<p class="ml--5 new-homepage-paragraphs">The price of carpet cleaning depends on several factors. The most significant among them are:</p></li>
 					<li class="ml-5">
-						<p class="listed-items">The number and size of the carpets;</p>
+						<p>The number and size of the carpets;</p>
 					</li>
 					<li class="ml-5">
-						<p class="listed-items">Their level of dirtiness;</p>
+						<p>Their level of dirtiness;</p>
 					</li>
 					<li class="ml-5">
-						<p class="listed-items">The type of carpets;</p>
+						<p>The type of carpets;</p>
 					</li>
 					<li class="ml-5">
-						<p class="listed-items">The ease of access to them.</p>
+						<p>The ease of access to them.</p>
 
 						<p class="ml--5 new-homepage-paragraphs">For more specific pricing details regarding the carpet cleaning we offer, you can check out our <a class="color-paper-link hover-color-paper-link-hover:hover" href="/" target="_blank" rel="noopener">price list</a></p></li>
 					<li class="ml-5">
 						<h3>How fast will the carpet get dry after a cleaning service?</h3>
 						<p class="ml--5 new-homepage-paragraphs">The drying time of a carpet is determined by various factors. Among them are:</p></li>
 					<li class="ml-5">
-						<p class="listed-items">The carpet type;</p>
+						<p>The carpet type;</p>
 					</li>
 					<li class="ml-5">
-						<p class="listed-items">Its level of soiling;</p>
+						<p>Its level of soiling;</p>
 					</li>
 					<li class="ml-5">
-						<p class="listed-items">The thickness of its pile;</p>
+						<p>The thickness of its pile;</p>
 					</li>
 					<li class="ml-5">
-						<p class="listed-items">Whether it requires extra stain removal treatment or not.</p>
+						<p>Whether it requires extra stain removal treatment or not.</p>
 
 						<p class="ml--5 new-homepage-paragraphs">For example wool carpets tend to absorb more water and take longer to dry, typically ranging between 10 and 12 hours. In cases where the carpet is exceptionally dirty and requires multiple treatments, the drying process may extend even further.</p>
 
@@ -434,19 +434,19 @@ export default function Page() {
 				<div>
 					<button class="read-more-toggle-button mt-16 mb-8 mx-auto uppercase b-none b-rd-1 py-4 px-7 bg-paper hover-bg-#f7f7f7:hover font-600 font-size-5 whitespace-nowrap" style="letter-spacing: 0.02rem; box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 10%);" onClick="toggleExpand(1)">Read more</button>
 				</div>
-				<ul class="hidden-questions-and-answers">
+				<ul>
 					<li class="ml-5 hide-if-not-expanded">
 						<h3>How long will the carpet cleaning service take?</h3>
 						<p class="ml--5 new-homepage-paragraphs">The duration of our carpet cleaning service depends on the following factors:</p>
 					</li>
 					<li class="ml-5 hide-if-not-expanded">
-						<p class="listed-items">Carpet's level of soiling;</p>
+						<p>Carpet's level of soiling;</p>
 					</li>
 					<li class="ml-5 hide-if-not-expanded">
-						<p class="listed-items">What cleaning methods will be used on the carpet;</p>
+						<p>What cleaning methods will be used on the carpet;</p>
 					</li>
 					<li class="ml-5 hide-if-not-expanded">
-						<p class="listed-items">Whether any stain removal treatments are required.</p>
+						<p>Whether any stain removal treatments are required.</p>
 						<p class="ml--5 new-homepage-paragraphs">On average, it typically ranges from 20 to 60 minutes per room.</p>
 					</li>
 					<li class="ml-5 hide-if-not-expanded">
