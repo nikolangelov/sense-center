@@ -1,0 +1,525 @@
+import RiArrowRightSLine from '~icons/ri/arrow-right-s-line';
+import RiArrowLeftSLine from '~icons/ri/arrow-left-s-line';
+import "solid-slider/slider.css";
+import { Component, createSignal, Show } from 'solid-js';
+import RiYoutubeFill from '~icons/ri/youtube-fill';
+import { FacebookLikeGallery } from '../../../components/FacebookLikeGallery';
+import { createSlider, Slider, SliderButton, SliderProvider } from 'solid-slider';
+import { RotatingBanners } from '../../../components/RotatingBanners';
+
+const GalerrySliderDesktop = () => {
+  const options = { duration: 1000 };
+  const [slider, { current, next, prev, moveTo }] = createSlider(options);
+  return (
+    <SliderProvider>
+      <div class="max-w-1000px m-auto position-relative hidden md-block">
+        <Slider options={{ loop: true, slides: { perView: 3, spacing: 10 } }}>
+          <img src="/assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" class="" />
+          <img src="/assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" class="" />
+          <img src="/assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" class="" />
+          <img src="/assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" class="" />
+          <img src="/assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" class="" />
+          <img src="/assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" class="" />
+        </Slider>
+        <SliderButton class="cursor-pointer position-absolute top-41% left-0 bg-paper-inv bg-op-50 b-rd-bl-1 b-rd-tl-1 b-none px-0 py-1.5" prev><RiArrowLeftSLine class="-ml-1 font-size-10 c-paper hover-c-brand-light:hover transition-colors" /></SliderButton>
+        <SliderButton class="cursor-pointer position-absolute top-41% right-0 bg-paper-inv bg-op-50 b-rd-br-1 b-rd-tr-1 b-none px-0 py-1.5" next><RiArrowRightSLine class="-mr-1 font-size-10 c-paper hover-c-brand-light:hover transition-colors" /></SliderButton>
+      </div>
+    </SliderProvider>
+  );
+};
+
+const GalerrySliderMobile = () => {
+  const options = { duration: 1000 };
+  const [slider, { current, next, prev, moveTo }] = createSlider(options);
+  return (
+    <SliderProvider>
+      <div class="max-w-1000px m-auto position-relative md-hidden block">
+        <Slider options={{ loop: true }}>
+          <img src="/assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" class="" />
+          <img src="/assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" class="" />
+          <img src="/assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" class="" />
+          <img src="/assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" class="" />
+          <img src="/assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" class="" />
+          <img src="/assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" class="" />
+        </Slider>
+        <SliderButton class="cursor-pointer position-absolute top-41% left-0 bg-paper-inv bg-op-50 b-rd-bl-1 b-rd-tl-1 b-none px-0 py-1.5" prev><RiArrowLeftSLine class="-ml-1 font-size-10 c-paper hover-c-brand-light:hover transition-colors" /></SliderButton>
+        <SliderButton class="cursor-pointer position-absolute top-41% right-0 bg-paper-inv bg-op-50 b-rd-br-1 b-rd-tr-1 b-none px-0 py-1.5" next><RiArrowRightSLine class="-mr-1 font-size-10 c-paper hover-c-brand-light:hover transition-colors" /></SliderButton>
+      </div>
+    </SliderProvider>
+  );
+};
+
+const VideoPlayer = () => {
+  const [isStarted, setIsStarted] = createSignal(false);
+  let videoRef: HTMLVideoElement;
+
+  const startVideo = () => {
+    videoRef.play();
+    setIsStarted(true);
+  };
+
+  return (
+    <div class="flex flex-justify-center flex-items-center">
+      {!isStarted() && (
+        <button
+          class="z-1 c-paper font-size-12 position-absolute cursor-pointer b-none bg-transparent"
+          onClick={startVideo}
+        >
+          <RiYoutubeFill class="c-#ff0000 md-w-20 mt-5 md-mt-0 md-h-20 w-15 h-15" />
+        </button>
+      )}
+      <video
+        ref={(el) => (videoRef = el)}
+        class="mt-10 b-rd-3" style="width: 100%; width: -moz-available; width: -webkit-fill-available; width: fill-available;"
+        controls
+        muted
+      >
+        <div class="vertical-top max-w-full font-size-4 color-paper-inv block">
+          <a
+            class="color-paper-inv block"
+            href="https://www.youtube.com/watch?v=zedTK_cCobY"
+            target="_blank"
+            rel="noopener"
+          >
+            Professional Carpet Cleaning London - Fine Carpet Cleaning
+          </a>
+        </div>
+        <source
+          src="/assets/Professional Carpet Cleaning London - Fine Carpet Cleaning (1).mp4"
+          type="video/mp4"
+        />
+      </video>
+    </div>
+  );
+};
+
+function FleurDivider() {
+  return (
+    <div class="m-auto my-30 md-my-36 position-relative w-80%">
+      <div class="divider-shadow overflow-hidden h-0.5 after-block::after after-w-full::after after-h-6::after after-mx-auto::after after-mt--6::after"></div>
+      <div class="w-11 h-11 position-absolute position-bottom--6 left-47% bg-#f7f7f7"><img class="position-absolute max-w-7 mx-1.8" src="/assets/output-onlinepngtools.png" /></div>
+    </div>
+  );
+}
+
+export default function Page() {
+  return (
+    <>
+      <h1 class="mt-10 md-mt-17 font-size-12.5 md-font-size-16 md-line-height-18 line-height-16">Eco-friendly carpet cleaning services</h1>
+      <div class="flex flex-justify-center"><img class="b-rd-3 md-mt-10 mt-2 max-w-full" src="/assets/Професионално почистване на заведения.jpg" alt="" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 30%);" /></div>
+
+      <FleurDivider></FleurDivider>
+
+      <h2 class="line-height-12 md-line-height-14">What to expect from our eco-friendly carpet cleaning services</h2>
+      <div class="mt-20 py-8 px-8 md-px-14 bg-paper b-rd-3" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 18%);">
+        <h3>Benefits:</h3>
+        <p>“Fine Carpet Cleaning” Ltd. performs eco-friendly carpet cleaning services in all London boroughs. Eco-carpet cleaning is beneficial for the following reasons:</p>
+        <ul>
+          <li class="ml--5">
+            <p>Eco-friendly carpet cleaning eliminates the exposure to harmful chemicals;</p>
+          </li>
+          <li class="ml--5">
+            <p>It is a non chemical carpet cleaning service, therefore beneficial to the health of your family and children;</p>
+          </li>
+          <li class="ml--5">
+            <p>Eco carpet cleaning is effective in cleaning your carpet and extends its life;</p>
+          </li>
+          <li class="ml--5">
+            <p>Eco carpet cleaning helps improve indoor air quality;</p>
+          </li>
+          <li class="ml--5">
+            <p>It is an environmentally friendly carpet cleaning solution.</p>
+          </li>
+        </ul>
+
+        <h3>Simple booking process:</h3>
+        <p>The usual process of booking our eco-friendly carpet cleaning services:</p>
+
+        <ul>
+          <li class="ml--5">
+            <p>You reach out to us.</p>
+          </li>
+          <li class="ml--5">
+            <p>We provide recommendations for the most appropriate services for your situation.</p>
+          </li>
+          <li class="ml--5">
+            <p>After that, you'll receive a quote for the eco-friendly carpet cleaning services.</p>
+          </li>
+          <li class="ml--5">
+            <p>If our terms are agreeable to you, we will set up an appointment at your convenience.</p>
+          </li>
+          <li class="ml--5">
+            <p>One of our skilled technicians will then visit your property to perform the green carpet cleaning.</p>
+          </li>
+        </ul>
+
+        <h3>What do we offer:</h3>
+        <p>Other carpet cleaning services we offer are:</p>
+        <ul>
+          <li class="ml--5"><a class="color-paper-link-hover hover-color-paper-link:hover font-size-17.5px line-height-8 word-spacing--0.12 tracking--0.04" href="/professional-carpet-cleaning-services/steam">Professional carpet steam cleaning services</a></li>
+          <li class="ml--5"><a class="color-paper-link-hover hover-color-paper-link:hover font-size-17.5px line-height-8 word-spacing--0.12 tracking--0.04" href="/professional-carpet-cleaning-services/dry">Dry carpet cleaning services</a></li>
+          <li class="ml--5"><a class="color-paper-link-hover hover-color-paper-link:hover font-size-17.5px line-height-8 word-spacing--0.12 tracking--0.04" href="/professional-carpet-cleaning-services/fast-dry">Fast dry carpet cleaning services</a></li>
+        </ul>
+      </div>
+
+      <FleurDivider></FleurDivider>
+
+      <h2 class="line-height-12 md-line-height-14">Equipment and products we use for our eco-friendly carpet cleaning services</h2>
+      <div class="mt-20 py-8 px-12 md-px-14 bg-paper b-rd-3" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 18%);">
+        <p class="ml--5">At "Fine Carpet Cleaning" Ltd., we employ a range of top-tier cleaning equipment and materials to ensure the highest quality in our eco carpet cleaning in London:</p>
+        <ol style="counter-reset: ordered; list-style: none;">
+          <li class="ml--5">
+            <h3 class="ml--5 font-size-6 md-font-size-7">High-Performance Carpet Cleaning Machines</h3>
+            <p class="ml--5">Our machines are among the most powerful and efficient portable units globally. After rigorous testing of various machine brands in the UK market, we've chosen the best options, including "Mytee," a prominent US manufacturer, and "Airflex," one of the leading UK manufacturers. These machines are further optimised by our in-house engineer to guarantee a perfectly executed eco-clean carpet care.</p>
+          </li>
+          <li class="ml--5">
+            <h3 class="ml--5 font-size-6 md-font-size-7">The Power of Dual Motors</h3>
+            <p class="ml--5">Our environmental carpet cleaning equipment includes a high-filtration twin-motor vacuum cleaner, considered the finest available. This vacuum cleaner is purpose-built for high-performance carpet cleaning in homes. It features two motors: one agitates the carpet, while the other expertly extracts loose dirt, dry soil, and dust.</p>
+          </li>
+          <li class="ml--5">
+            <h3 class="ml--5 font-size-6 md-font-size-7">Tailored Green Cleaning</h3>
+            <p class="ml--5">Our chem-free carpet cleaning product inventory has been carefully selected to ensure the most eco-friendly carpet cleaning in London. The cleaning solution that we use has been thoroughly tested to verify that no hazardous or toxic substances are present.
+              <br></br>
+              The selection process involves thorough testing, and we've handpicked products from names such as "M-Power", "Solution World of Clean", and "TMF". This wide range empowers our technicians to select the most suitable detergents for each situation, considering factors such as:</p>
+            <li class="ml--5">
+              <p>The fabric and type of the carpet;</p>
+            </li>
+            <li class="ml--5">
+              <p>The extent of soiling on the carpet;</p>
+            </li>
+            <li class="ml--5">
+              <p>The nature of stains requiring removal.</p>
+            </li>
+            <p class="ml--5">This approach ensures the provision of the most professional eco-friendly carpet cleaning services.</p>
+          </li>
+        </ol>
+      </div>
+
+      <FleurDivider></FleurDivider>
+
+      <h2 class="line-height-12 md-line-height-14">Pictures from our eco-friendly carpet cleaning services in London</h2>
+
+      <FacebookLikeGallery imgs={[
+        { src: "/assets/Професионално почистване на заведения.jpg", alt: "" },
+        { src: "/assets/Професионално почистване на заведения.jpg", alt: "" },
+        { src: "/assets/Професионално почистване на заведения.jpg", alt: "" },
+        { src: "/assets/Професионално почистване на заведения.jpg", alt: "" },
+        { src: "/assets/Професионално почистване на заведения.jpg", alt: "" },
+        { src: "/assets/Професионално почистване на заведения.jpg", alt: "" },
+        { src: "/assets/Професионално почистване на заведения.jpg", alt: "" },
+      ]} />
+
+      <FleurDivider></FleurDivider>
+
+      <h2 class="line-height-12 md-line-height-14">Video from our eco-friendly cleaning services in London</h2>
+
+      <VideoPlayer></VideoPlayer>
+
+      <FleurDivider></FleurDivider>
+
+      <h2 class="line-height-12 md-line-height-14">Eco-friendly carpet cleaning services prices</h2>
+
+      <div class="my-20 pt-8 pb-6 px-8 md-px-14 b-rd-3 bg-paper line-height-8 text-justify font-size-4.4" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 18%);"><div class="mb--3 font-size-5.5"><strong>Are you pissed off by the pet hair?</strong></div>
+        <br></br>
+        Now you can request pet hair removal as an additional service to the booked cleaning for a small extra charge. Don't forget to request it when booking because telling us at the moment of cleaning causes delays for the technicians and messes up the schedule.<br></br>
+        <strong>Deodorising - Free of charge - just notify us when booking.</strong></div>
+
+      <table class="w-full m-auto font-sans">
+        <thead style="box-shadow: 0px 20px 20px 1px rgb(84 89 95 / 10%);">
+          <tr class="h-20">
+            <td class="c-paper bg-#2e5c47 font-size-7 pl-5 b-rd-lt-3"><strong>Room type</strong></td>
+            <td class="c-paper bg-#2e5c47 font-size-7 pl-5 b-rd-rt-3"><strong>Price</strong></td>
+          </tr>
+        </thead>
+        <tbody style="box-shadow: 0px 20px 20px 1px rgb(84 89 95 / 10%);">
+          <tr>
+            <td class="bg-paper pl-5 py-2 font-500">Single Bedroom</td>
+            <td class="bg-paper pl-5 py-2 font-500">from £31.00</td>
+          </tr>
+          <tr>
+            <td class="bg-paper pl-5 py-2 font-500">Double Bedroom</td>
+            <td class="bg-paper pl-5 py-2 font-500">from £35.00</td>
+          </tr>
+          <tr>
+            <td class="bg-paper pl-5 py-2 font-500">Master Bedroom</td>
+            <td class="bg-paper pl-5 py-2 font-500">from £40.00</td>
+          </tr>
+          <tr>
+            <td class="bg-paper pl-5 py-2 font-500">Living Room</td>
+            <td class="bg-paper pl-5 py-2 font-500">from £43.00</td>
+          </tr>
+          <tr>
+            <td class="bg-paper pl-5 py-2 font-500">Through Lounge</td>
+            <td class="bg-paper pl-5 py-2 font-500">from £69.00</td>
+          </tr>
+          <tr>
+            <td class="bg-paper pl-5 py-2 font-500">Hallway</td>
+            <td class="bg-paper pl-5 py-2 font-500">from £21.00</td>
+          </tr>
+          <tr>
+            <td class="bg-paper pl-5 py-2 font-500">Flight of Stairs</td>
+            <td class="bg-paper pl-5 py-2 font-500">from £34.00</td>
+          </tr>
+          <tr>
+            <td class="bg-paper pl-5 py-2 font-500">Landing</td>
+            <td class="bg-paper pl-5 py-2 font-500">from £15.00</td>
+          </tr>
+          <tr>
+            <td class="bg-paper pl-5 py-2 font-500">Bathroom</td>
+            <td class="bg-paper pl-5 py-2 font-500">from £6.00</td>
+          </tr>
+          <tr>
+            <td class="bg-paper pl-5 py-2 font-500">Small rug</td>
+            <td class="bg-paper pl-5 py-2 font-500">from £14.00</td>
+          </tr>
+          <tr>
+            <td class="bg-paper pl-5 py-2 font-500">Medium rug</td>
+            <td class="bg-paper pl-5 py-2 font-500">from £20.00</td>
+          </tr>
+          <tr>
+            <td class="bg-paper pl-5 py-2 font-500">Large rug</td>
+            <td class="bg-paper pl-5 py-2 font-500">from £31.00</td>
+          </tr>
+          <tr>
+            <td class="b-rd-lb-3 b-rd-rb-3 bg-#2e5c47" colspan="3" style="box-shadow: 0px 20px 20px 1px rgb(247 247 247/ 100%);"><p class="font-size-3.5 md-font-size-4 px-5 md-my-7 c-paper line-height-6 word-spacing-0.5">*All prices depend on the quantity of the order, degree of contamination, access and location.
+              <br></br>**Final price after contacting us.</p></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <button class="outline-none bg-brand-second-action hover-bg-brand-second-action-hover:hover font-size-6 font-600 w-250px h-60px c-paper flex flex-items-center flex-justify-center relative b-solid b-rd-3 b-4 b-brand-second-action hover-b-brand-second-action-hover:hover whitespace-normal line-height-6 word-spacing-0.5 py-9 my-20 mx-auto" style="box-shadow: 0 0 0 3px rgba(255, 255, 255, .9) inset; letter-spacing: 0.05rem;"><a class="c-paper font-size-5">REQUEST A QUOTE</a></button>
+
+      <FleurDivider></FleurDivider>
+
+      <h2 class="line-height-12 md-line-height-14">Frequently ordered together</h2>
+
+      <GalerrySliderDesktop />
+      <GalerrySliderMobile />
+
+      <FleurDivider></FleurDivider>
+
+      <h2 class="line-height-12 md-line-height-14">Our eco-friendly carpet cleaning services specialists advise:</h2>
+      <div class="mt-20 py-8 px-12 md-px-14 bg-paper b-rd-3" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 18%);">
+        <ol style="counter-reset: ordered; list-style: none;">
+          <li class="ml--5">
+            <h3 class="ml--5 font-size-6 md-font-size-7">Proactive protection</h3>
+            <p>Our specialists in natural carpet cleaning recommend <strong>adding a water based stain protector</strong> to your carpet, rug and upholstery, which can lead to substantial savings on professional stain removal services. Explore the benefits of stain protection services <a class="color-paper-link hover-color-paper-link-hover:hover" href="/">here</a>.</p>
+          </li>
+          <li class="ml--5">
+            <h3 class="ml--5 font-size-6 md-font-size-7">Use professional stain removal service</h3>
+            <p class="ml--5">According to our specialist in eco-pro carpet cleaning, it's highly advisable to hire a <strong>stain removal company</strong> for stained carpets or upholstery. Trying to clean stains yourself can lead to fabric damage and make complete stain removal more challenging. Scheduling a professional stain removal service from an experienced natural carpet cleaning company can protect your valuable furnishings.</p>
+          </li>
+          <li class="ml--5">
+            <h3 class="ml--5 font-size-6 md-font-size-7">Explore our list of services</h3>
+            <p class="ml--5">We offer a<a class="color-paper-link hover-color-paper-link-hover:hover" href="/services">wide range of services</a> beyond carpet cleaning, including upholstery and rug cleaning. Our team provides comprehensive solutions, so don't miss the chance to explore the full extent of our expertise and make informed decisions about your cleaning needs.</p>
+          </li>
+          <li class="ml--5">
+            <h3 class="ml--5 font-size-6 md-font-size-7">The advantages of combining eco-friendly cleaning services</h3>
+            <p class="ml--5">Combining multiple cleaning services in one appointment offers several advantages, especially for eco-friendly carpet cleaning. Firstly, it saves time and reduces disruptions, allowing your place to return to normal operations more quickly. Additionally, bundled services come at a lower cost compared to booking each service separately, providing financial savings. Lastly, using an eco-friendly cleaning company ensures that all aspects of the cleaning process adhere to sustainable practices, promoting a healthier workspace and a greener planet.</p>
+          </li>
+          <li class="ml--5">
+            <h3 class="ml--5 font-size-6 md-font-size-7">Discover the importance of regular carpet maintenance</h3>
+            <p class="ml--5">Maintaining clean carpets, carpet floor coverings, and upholstery is crucial for good health. These items can accumulate dust and microorganisms, leading to various health issues. Neglecting their care can result in allergies and skin problems. To prevent these issues, our eco-green carpet cleaning specialist suggests hiring natural carpet cleaning companies, with more frequent cleaning for high-traffic areas.</p>
+          </li>
+        </ol>
+      </div>
+
+      <FleurDivider></FleurDivider>
+
+      <h2 class="line-height-12 md-line-height-14">Reviews for our eco-friendly carpet cleaning services</h2>
+
+      <GalerrySliderDesktop />
+      <GalerrySliderMobile />
+
+      <FleurDivider></FleurDivider>
+
+      <h2 class="line-height-12 md-line-height-14">FAQ regarding our eco-friendly carpet cleaning services</h2>
+      <div class="bodytext first-faq-section last-expanded mt-20 py-8 pl-4 pr-8 md-px-10 bg-paper b-rd-3" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 18%);">
+        <ul>
+          <li class="green-dot-listed-item">
+            <h3>Do you have a cancellation fee for the green carpet cleaning services?</h3>
+            <p class="ml--5">Yes, if you cancel on the day of the enviro green carpet cleaning you will lose your deposit.</p></li>
+          <li class="green-dot-listed-item">
+            <h3>Should I pay for the congestion / parking charge?</h3>
+            <p class="ml--5">Yes, we request that our clients make provisions for suitable parking spaces in close proximity to the property. In cases where parking or congestion charges are incurred, the client is kindly asked to bear the associated costs if possible.</p></li>
+          <li class="green-dot-listed-item">
+            <h3>Do I need to move my furniture before the carpet cleaning eco services?</h3>
+            <p class="ml--5">We kindly request your cooperation in relocating small, delicate, or valuable furniture items, such as lamps and ornaments, before the performance of our natural carpet cleaning services. This is primarily for insurance purposes. If possible, we recommend positioning these items in a secure area that won't be affected during the green carpet cleaning process. We are more than willing to assist in moving other lightweight furniture items, such as chairs, armchairs, and tables during the cleaning. Once the cleaning is completed, we will ensure these items are returned to their original positions. However, if there is a need to move heavy furniture items like sofas, beds, wardrobes, and cupboards, please be aware that an additional charge will be applied. This extra fee accounts for the additional time and effort required by our technician, who will be appropriately compensated. Our primary objective is to ensure a stress-free experience for you throughout the entire ecology carpet cleaning process.</p></li>
+          <li class="green-dot-listed-item">
+            <h3>What if I live on the 4th floor and have no lift?</h3>
+            <p class="ml--5">Due to the substantial weight of our equipment for the bio-clean carpet cleaning, which exceeds 50 kilograms, an additional fee is applied for each additional floor that requires manual transportation. This is necessary because manually carrying the heavy equipment up multiple flights of stairs is a time-consuming task, and it can cause our technicians to fatigue more quickly. Consequently, our overall productivity for the day may be reduced compared to our standard output.</p></li>
+          <li class="green-dot-listed-item">
+            <h3>Are you insured?</h3>
+            <p class="ml--5">Yes, we are fully insured.</p></li>
+        </ul>
+      </div>
+
+      <div class="read-more-click-to-expand-1 to-be-expanded">
+        <button class="read-more-toggle-button my-6 mx-auto uppercase b-none b-rd-1 py-3 px-7 bg-paper hover-bg-#f7f7f7:hover font-600 font-size-5 whitespace-nowrap" style="letter-spacing: 0.02rem; box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 10%);" onClick="toggleExpand(1)">Read more</button>
+
+        <ul class="hidden-questions-and-answers">
+          <li class="hide-if-not-expanded">
+            <h3>What happens if your cleaner damages anything while performing the organic carpet cleaning service?</h3>
+            <p class="ml--5">We are fully insured and if an accident happens in the process of the eco-clean carpet services we are fully covered.</p></li>
+          <li class="hide-if-not-expanded">
+            <h3>How long does the process of eco-organic carpet cleaning take?</h3>
+            <p class="ml--5">The organic carpet cleaning needs more agitation and more manual work than the traditional carpet cleaning. So it takes more time and in some cases may need a second cleaning. We do not guarantee that the stain will be removed, as the sustainable cleaners are not as efficient as the conventional ones.</p>
+            <p class="ml--5">However, the time it takes for the eco pro carpet cleaning process primarily hinges on these factors:</p></li>
+          <li class="ml--5">
+            <p>The level of soiling on the carpet;</p>
+          </li>
+          <li class="ml--5">
+            <p>The size of the carpet;</p>
+          </li>
+          <li class="ml--5">
+            <p>Whether stain removal treatments are necessary.</p>
+          </li>
+          <li class="hide-if-not-expanded">
+            <h3>How long does it take for the carpet to get dry after environmentally friendly carpet cleaning services?</h3>
+            <p class="ml--5">The drying time of the carpet after a carpet cleaning without chemicals varies depending on the carpet type and the cleaning method employed. For instance, when the eco steam carpet cleaning method is utilised, the approximate drying time typically ranges from 7 to 9 hours. On the other hand, if the green dry carpet cleaning method is chosen, the carpet will be dry immediately after the cleaning process or shortly thereafter.</p>
+            <p class="ml--5">If you are having trouble deciding which green carpet cleaning services will best suit you or are searching for an eco carpet cleaning company, you can contact us at any suitable time for you to get expert enviro green carpet cleaning advice.</p></li>
+          <li class="hide-if-not-expanded">
+            <h3>Do you guarantee that after a carpet cleaning no chemicals service all stains will be removed from my carpet?</h3>
+            <p class="ml--5">Unfortunately, we are unable to provide an absolute guarantee due to several factors, which include:</p></li>
+          <li class="hide-if-not-expanded">
+            <p class="listed-items">The age of the stains;</p>
+          </li>
+          <li class="hide-if-not-expanded">
+            <p class="listed-items">The nature of the substances responsible for the stains;</p>
+          </li>
+          <li class="hide-if-not-expanded">
+            <p class="listed-items">The type and fabric of the carpet;</p>
+          </li>
+          <li class="hide-if-not-expanded">
+            <p class="listed-items">Any prior mishandling of the stains.</p>
+          </li>
+          <li class="hide-if-not-expanded">
+            <p class="hide-text-if-not-expanded">Nonetheless, we are dedicated to putting forth our utmost effort to eliminate all stains from your carpet. Our approach includes:</p>
+          </li>
+          <li class="hide-if-not-expanded">
+            <p class="listed-items">Utilising state-of-the-art equipment for our house and carpet cleaning services;</p>
+          </li>
+          <li class="hide-if-not-expanded">
+            <p class="listed-items">Employing a carefully selected range of premium detergents tailored for the job;</p>
+          </li>
+          <li class="hide-if-not-expanded">
+            <p class="listed-items">Customising our approach to chem-free carpet cleaning to suit the specific type of carpet and the staining agent, all in pursuit of achieving the best possible results.</p>
+          </li>
+          <p class="listed-items">However, the organic carpet cleaning needs more agitation and more manual work, and it may need a second cleaning. We do not guarantee that the stain will be removed, as the sustainable cleaners are not as efficient as the traditional ones.</p>
+
+          <li class="hide-if-not-expanded">
+            <h3>How soon can I expect a cleaner to visit me for an eco-friendly carpet cleaning in London?</h3>
+            <p class="ml--5">We will make every effort to schedule a chemical-free carpet cleaning appointment for you as early as possible. Typically, our bookings are fully reserved for up to three days in advance, although there may be occasional exceptions.</p></li>
+          <li class="hide-if-not-expanded">
+            <h3>Can I get a quote over the phone for a natural carpet cleaning or do you need to visit my property?</h3>
+            <p class="ml--5">Yes, we can offer you a phone estimate, and there might be no need for us to perform an on-site visit. Furthermore, you also have the option to obtain an online quote for natural carpet cleaning services.</p></li>
+          <li class="hide-if-not-expanded">
+            <h3>What payment methods do you accept for your eco-organic carpet cleaning?</h3>
+            <p class="ml--5">We accept debit/credit cards, bank transfers and cash payments directly to our team.</p></li>
+          <li class="hide-if-not-expanded">
+            <h3>Can you provide me with an invoice for the eco-clean carpet cleaning?</h3>
+            <p class="ml--5">Yes, we will either send you a receipt via email or via any method of your choice.</p></li>
+          <li class="hide-if-not-expanded">
+            <h3>Are you qualified for eco-clean carpet care?</h3>
+            <p class="ml--5">Yes, we have received full training and are certified as members of “Checkatrade” and of the “NCCA” (National Carpet Cleaners Association), the recognized industry qualification in the UK.</p></li>
+          <li class="hide-if-not-expanded">
+            <h3>How long have you been in the carpet cleaning domestic business?</h3>
+            <p class="ml--5">We have a strong track record in the professional environmentally friendly carpet cleaning industry, spanning back to 2012. Over these years, we've dealt with a wide variety of carpets, rugs, upholstery, and various stains from both commercial and residential clients. This extensive experience has motivated us to consistently improve our environmental carpet cleaning services. We accomplish this through the following means:</p></li>
+          <li class="hide-if-not-expanded">
+            <p class="listed-items">Continuously upgrading our equipment and machinery with superior alternatives as they become available;</p>
+          </li>
+          <li class="hide-if-not-expanded">
+            <p class="listed-items">Regularly testing and enhancing our range of cleaning products;</p>
+          </li>
+          <li class="hide-if-not-expanded">
+            <p class="listed-items">A commitment to expanding our knowledge and expertise by actively participating in additional professional courses and training. Our dedication to excellence has allowed us to refine our eco-carpet cleaning in London throughout the years.</p>
+          </li>
+          <li class="hide-if-not-expanded">
+            <h3>Can you give me a discount for the organic carpet cleaning services?</h3>
+            <p class="ml--5">Our natural carpet cleaning company’s services are widely recognised for their exceptional quality, use of the most efficient equipment, and a selection of over 20 premium cleaning products. Consequently, our healthy carpet cleaning prices stand out not only for their competitiveness but also for their attractiveness within the market. We highly recommend combining all essential services for your specific eco-green carpet cleaning needs. You'll promptly notice that bundling all the services you require is notably more cost-effective compared to having them performed individually. This cost-effectiveness is due to the initial higher eco-clean carpet cost, in addition to the charges related to each technician visit, which factor in elements like travel time, parking, and the handling of heavy equipment during loading and unloading.</p></li>
+          <li class="hide-if-not-expanded">
+            <h3>Are carpet cleaning chemicals safe?</h3>
+            <p class="ml--5">The safety of carpet cleaning chemicals can vary depending on the specific products used. Generally, most carpet cleaning solutions are designed to be safe for use when handled properly, but we advise you to be aware of a few factors, such as:</p></li>
+          <li class="hide-if-not-expanded">
+            <p class="hide-text-if-not-expanded">The chemical composition of the detergents being used;</p>
+          </li>
+          <li class="hide-if-not-expanded">
+            <p class="listed-items">The proper application of the product;</p>
+          </li>
+          <li class="hide-if-not-expanded">
+            <p class="listed-items">If there’s any residue left behind after the cleaning;</p>
+          </li>
+          <li class="hide-if-not-expanded">
+            <p class="listed-items">The environmental impact of the chemicals used.</p>
+          </li>
+          <p class="ml--5">Hiring professional green carpet cleaning companies, such as “Fine Carpet Cleaning” Ltd. will ensure you that your carpets will be handled excellently. Experts are trained in the proper use of cleaning chemicals and utilise advanced equipment that can more effectively remove residues. If you have specific health concerns or sensitivities, we recommend booking eco-friendly carpet cleaning services. This service will provide a quality cleaning of your carpet, as well as a chemical-free carpet cleaning.</p>
+
+          <li class="hide-if-not-expanded">
+            <h3>What is eco-friendly carpet cleaning?</h3>
+            <p class="ml--5">Eco-friendly carpet cleaning, also known as green carpet cleaning, refers to a carpet cleaning process that prioritises environmental sustainability and the safety of humans and pets. This approach involves the use of cleaning methods, products, and equipment that have minimal impact on the environment.</p>
+            <p class="ml--5">The eco-friendly carpet cleaning solution is made entirely of natural plant-based components that come from sustainable sources. It is completely biodegradable and has antibacterial and antiviral qualities due to its unique natural molecular cleansing activity. Imagine thousands of tiny hammers attacking the soiled carpet. When we spray the cleaner, the tiny, invisible particles help break down the soil and the viruses for you. Visible and enhanced benefits will continue even after extraction. We use these cleaners for cleaning carpets and sofas. This cleaning method needs more agitation, more manual work and may need a second cleaning. There is no guarantee that the stain will be removed as they are not as efficient as the traditional ones.</p>
+            <p class="ml--5">When considering carpet cleaning eco-services, it's essential to choose an environmentally friendly carpet cleaning services provider that adheres to these principles and standards to help protect your home, your health, and the environment.</p>
+          </li>
+          <li class="hide-if-not-expanded">
+            <h3>Can you walk on the carpet after a bio-clean carpet cleaning?</h3>
+            <p class="ml--5">It depends on the method used. After an eco steam carpet cleaning, it is recommended that you try to stay off the freshly cleaned carpets until they are dry – about 7-9 hours. If you can not avoid walking over the carpet before it is dry, do it with caution. When from the carpet you step on a hard surface, like tile or hardwood, it can be very slippery.</p>
+            <p class="ml--5">If a green dry carpet cleaning method has been applied, the carpet or rug will be completely dry immediately after or shortly thereafter the eco pro carpet cleaning has ended.</p>
+          </li>
+
+          <div class="read-more-click-to-expand-2">
+            <button class="read-more-toggle-button my-6 mx-auto uppercase b-none b-rd-1 py-3 px-7 bg-paper hover-bg-#f7f7f7:hover font-600 font-size-5 whitespace-nowrap" style="letter-spacing: 0.02rem; box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 10%);" onClick="toggleExpand(2)">Read more</button>
+
+            <ul class="hidden-questions-and-answers">
+              <li class="hide-if-not-expanded">
+                <h3>How often should carpets go through carpet cleaning without chemicals?</h3>
+                <p class="ml--5">Cleaning by green carpet cleaning companies depends mainly on factors like how fast the carpet or rug soils. On average, a carpet should be cleaned at 12-month intervals. However, if you have pets, children or high traffic on the carpet or if it is easily stained, we recommend using no chemicals carpet cleaning services more often than that. You can contact us anytime to get nontoxic carpet cleaning or just to seek professional advice.</p></li>
+              <li class="hide-if-not-expanded">
+                <h3>Does ecology carpet cleaning remove stains?</h3>
+                <p class="ml--5">It depends on the eco-green carpet cleaning method being used. Eco steam carpet cleaning is highly proficient at eradicating deep-seated stains, dirt, and grime. It excels at eliminating bacteria, dust mites, allergens, mould, pet dander, and unpleasant odours. However, it's important to note that particularly stubborn stains, such as those that are very old or have been treated improperly, can present a significant challenge for complete removal, even with professional eco-clean carpet assistance.</p>
+                <p class="ml--5">On the other hand, green dry carpet cleaning is not as effective at stain removal, but it excels at refreshing the carpet's appearance and restoring its colour. This method is typically used for cleaning more delicate and natural carpets and rugs that are susceptible to water damage.</p>
+                <p class="ml--5">While we, at "Fine Carpet Cleaning Ltd.," have achieved impressive success rates in stain removal thanks to our extensive experience and the use of high-quality equipment, we cannot provide an absolute guarantee that every stain can be entirely eliminated. However, we want to assure you that we will assess each stain and provide information on whether we can successfully remove them during the quotation process. Your confidence in stain removal is our priority.</p></li>
+              <li class="hide-if-not-expanded">
+                <h3>How often should carpets go through eco-organic carpet cleaning with pets?</h3>
+                <p class="ml--5">We recommend that pet owners seek eco carpet cleaning in London at least twice per year. If you are not sure whether your carpets, rugs or upholstery should go through green carpet cleaning services feel free to contact us at any suitable for you time to get professional advice.</p></li>
+              <li class="hide-if-not-expanded">
+                <h3>How much does an eco-clean carpet care cost?</h3>
+                <p class="ml--5">The cost to hire an eco carpet cleaning company can vary and depends on several factors, such as:</p></li>
+              <li class="hide-if-not-expanded">
+                <p class="listed-items">The quantity and dimensions of the carpets;</p>
+              </li>
+              <li class="hide-if-not-expanded">
+                <p class="listed-items">The extent of soiling on the carpets;</p>
+              </li>
+              <li class="hide-if-not-expanded">
+                <p class="listed-items">The type of carpets;</p>
+              </li>
+              <li class="hide-if-not-expanded">
+                <p class="listed-items">The accessibility to the carpets;</p>
+              </li>
+              <li class="hide-if-not-expanded">
+                <p class="listed-items">Any additional services required, such as stain removal or stain protection.</p>
+              </li>
+              <p class="listed-items">Any additional services required, such as stain removal or stain protection.</p>
+
+
+              <li class="hide-if-not-expanded">
+                <h3>What is the cost of carpet cleaning a 1 bedroom apartment?</h3>
+                <p class="ml--5">Our carpet cleaning 1-bedroom apartment or carpet cleaning 2-bedroom apartment price depends on a number of factors, so we recommend checking out our <a class="color-paper-link hover-color-paper-link-hover:hover" href="/">full house carpet cleaning prices</a>.</p></li>
+            </ul>
+          </div>
+
+        </ul>
+      </div>
+
+      <FleurDivider></FleurDivider>
+
+      <div class="m-10% mb-3% flex flex-wrap flex-justify-center md-gap-15 gap-10">
+        <button class="cursor-pointer outline-none bg-brand-second-action hover-bg-brand-second-action-hover:hover font-size-6 font-600 w-200px h-60px c-paper flex flex-items-center flex-justify-center relative b-solid b-rd-3 b-4 b-brand-second-action hover-b-brand-second-action-hover:hover whitespace-normal line-height-6 word-spacing-0.5 py-9" style="box-shadow: 0 0 0 3px rgba(255, 255, 255, .9) inset; letter-spacing: 0.05rem;"><a href="/services" class="c-paper font-size-5">SERVICES</a></button>
+        <button class="cursor-pointer outline-none bg-brand-action hover-bg-brand-action-hover:hover font-size-6 font-600 w-200px h-60px c-paper flex flex-items-center flex-justify-center relative b-solid b-rd-3 b-4 b-brand-action hover-b-brand-action-hover:hover whitespace-normal line-height-6 word-spacing-0.5 py-9" style="box-shadow: 0 0 0 3px rgba(255, 255, 255, .9) inset; letter-spacing: 0.05rem;"><a href="/Contact-us" class="c-paper font-size-5">REQUEST A QUOTE</a></button>
+      </div>
+
+
+
+    </>
+  );
+}
