@@ -82,7 +82,7 @@ const MyDropdown = () => {
               <DropownMenuLink href="/">Sofa cleaning</DropownMenuLink>
               <DropownMenuLink href="/">Leather sofa cleaning</DropownMenuLink>
               <DropownMenuLink href="/">Furniture cleaning</DropownMenuLink>
-              <DropownMenuLink href="/">Mattress cleaning</DropownMenuLink>
+              <DropownMenuLink href="/professional-upholstery-cleaning-services/mattress">Mattress cleaning</DropownMenuLink>
               <DropownMenuLink href="/">Pillow cleaning</DropownMenuLink>
               <DropownMenuLink href="/">Upholstery stain removal</DropownMenuLink>
               <DropownMenuLink href="/">Upholstery stain protection</DropownMenuLink>
@@ -176,9 +176,9 @@ export default function LayoutDefault(props: { children?: JSX.Element }) {
                 </div>
               </div>
               <div class="flex flex-col flex-wrap">
-              <a href="/professional-carpet-cleaning-services"><h3 class="whitespace-normal text-center hover-c-brand:hover">Upholstery cleaning services</h3></a>
+              <a href="/professional-upholstery-cleaning-services"><h3 class="whitespace-normal text-center hover-c-brand:hover">Upholstery cleaning services</h3></a>
                 <div class="dropdown-content flex-row flex-wrap hidden flex-items-center flex-content-center">
-                  <DropdownMenuItem href="/" src="/assets/Професионално почистване на заведения.jpg">Carpet stain protection</DropdownMenuItem>
+                  <DropdownMenuItem href="/professional-upholstery-cleaning-services/mattress" src="/assets/Професионално почистване на заведения.jpg">Mattress</DropdownMenuItem>
                   <DropdownMenuItem href="/" src="/assets/Професионално почистване на заведения.jpg">Commercial carpet cleaning</DropdownMenuItem>
                   <DropdownMenuItem href="/" src="/assets/Професионално почистване на заведения.jpg">Residential carpet cleaning</DropdownMenuItem>
                 </div>

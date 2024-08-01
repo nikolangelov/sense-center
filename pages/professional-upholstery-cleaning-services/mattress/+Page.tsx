@@ -6,8 +6,8 @@ import RiYoutubeFill from '~icons/ri/youtube-fill';
 import { FacebookLikeGallery } from '../../../components/FacebookLikeGallery';
 import { createSlider, Slider, SliderButton, SliderProvider } from 'solid-slider';
 import { RotatingBanners } from '../../../components/RotatingBanners';
-import { Typography } from '../../../components/Typography';
 import { createCollapsable } from '../../../components/Collapsable';
+import { Typography } from '../../../components/Typography';
 
 const GalerrySliderDesktop = () => {
   const options = { duration: 1000 };
@@ -236,7 +236,6 @@ export function FaqSection() {
           <p>Hotel's cleaning schedule: Some hotels have a more rigorous cleaning schedule than others do.</p>
         </li>
         <Typography variant="body">In addition to regular cleaning, hotels may also spot-clean carpets as needed. This is typically done to remove small stains or spills.</Typography>
-
       </ul>
     </Entry>
     <Entry>
@@ -272,7 +271,7 @@ export function FaqSection() {
         <li>
           <p>On which floor is the place located (usually the first floor is dirtier because you directly enter the room from outside).</p>
         </li>
-        <p>Cleanliness depends on these factors, so have them in mind when you are thinking about carpet cleaning. On average we recommend commercial carpet cleaning in London every 6 months.</p>
+        <Typography variant="body">Cleanliness depends on these factors, so have them in mind when you are thinking about carpet cleaning. On average we recommend commercial carpet cleaning in London every 6 months.</Typography>
         <li>
           <Typography variant="h3">How do you clean hotel carpet?</Typography>
           <Typography variant="body">Cleaning hotel carpets is a crucial part of maintaining a clean and welcoming environment for your guests. The cleaning process typically involves a combination of regular maintenance and periodic deep cleaning. Here are the steps involved in cleaning hotel carpets:</Typography></li>
@@ -285,7 +284,7 @@ export function FaqSection() {
         <li>
           <p>Consider applying a <a class="color-paper-link hover-color-paper-link-hover:hover" href="/">stain protector</a> after cleaning to help repel spills and stains, extending the time between cleanings.</p>
         </li>
-        <p>Regular maintenance and professional cleaning from an industrial carpet cleaning company that specialises in offering hotel carpet cleaning services are essential for preserving the appearance and longevity of the carpets, rugs or upholstery in your hotel. Keeping carpets clean and fresh contributes to the overall guest experience and helps maintain a positive image for your establishment.</p>
+        <Typography variant="body">Regular maintenance and professional cleaning from an industrial carpet cleaning company that specialises in offering hotel carpet cleaning services are essential for preserving the appearance and longevity of the carpets, rugs or upholstery in your hotel. Keeping carpets clean and fresh contributes to the overall guest experience and helps maintain a positive image for your establishment.</Typography>
         <li>
           <Typography variant="h3">What do hotels use to remove stains?</Typography>
           <Typography variant="body">Many hotels use hotel carpet cleaning services that are equipped with the expertise and equipment to handle a wide range of stains effectively. These services can provide deep cleaning for carpets, upholstery, and other surfaces.</Typography>
@@ -587,7 +586,7 @@ export default function Page() {
 
       <h2 class="line-height-12 md-line-height-14">FAQ regarding our commercial carpet cleaning services</h2>
 
-      <FaqSection/>
+      <FaqSection />
 
       <FleurDivider></FleurDivider>
 
