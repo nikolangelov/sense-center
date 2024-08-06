@@ -1,0 +1,512 @@
+import RiArrowRightSLine from '~icons/ri/arrow-right-s-line';
+import RiArrowLeftSLine from '~icons/ri/arrow-left-s-line';
+import "solid-slider/slider.css";
+import { Component, createSignal, Show } from 'solid-js';
+import RiYoutubeFill from '~icons/ri/youtube-fill';
+import { FacebookLikeGallery } from '../../components/FacebookLikeGallery';
+import { createSlider, Slider, SliderButton, SliderProvider } from 'solid-slider';
+import { RotatingBanners } from '../../components/RotatingBanners';
+import { createCollapsable } from '../../components/Collapsable';
+import { Typography } from '../../components/Typography';
+
+const GalerrySliderDesktop = () => {
+  const options = { duration: 1000 };
+  const [slider, { current, next, prev, moveTo }] = createSlider(options);
+  return (
+    <SliderProvider>
+      <div class="max-w-1000px m-auto position-relative hidden md-block">
+        <Slider options={{ loop: true, slides: { perView: 3, spacing: 10 } }}>
+          <img src="/assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" />
+          <img src="/assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" />
+          <img src="/assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" />
+          <img src="/assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" />
+          <img src="/assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" />
+          <img src="/assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" />
+        </Slider>
+        <SliderButton class="cursor-pointer position-absolute top-41% left-0 bg-paper-inv bg-op-50 b-rd-bl-1 b-rd-tl-1 b-none px-0 py-1.5" prev><RiArrowLeftSLine class="-ml-1 font-size-10 c-paper hover-c-brand-light:hover transition-colors" /></SliderButton>
+        <SliderButton class="cursor-pointer position-absolute top-41% right-0 bg-paper-inv bg-op-50 b-rd-br-1 b-rd-tr-1 b-none px-0 py-1.5" next><RiArrowRightSLine class="-mr-1 font-size-10 c-paper hover-c-brand-light:hover transition-colors" /></SliderButton>
+      </div>
+    </SliderProvider>
+  );
+};
+
+const GalerrySliderMobile = () => {
+  const options = { duration: 1000 };
+  const [slider, { current, next, prev, moveTo }] = createSlider(options);
+  return (
+    <SliderProvider>
+      <div class="max-w-1000px m-auto position-relative md-hidden block">
+        <Slider options={{ loop: true }}>
+          <img src="/assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" />
+          <img src="/assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" />
+          <img src="/assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" />
+          <img src="/assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" />
+          <img src="/assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" />
+          <img src="/assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" />
+        </Slider>
+        <SliderButton class="cursor-pointer position-absolute top-41% left-0 bg-paper-inv bg-op-50 b-rd-bl-1 b-rd-tl-1 b-none px-0 py-1.5" prev><RiArrowLeftSLine class="-ml-1 font-size-10 c-paper hover-c-brand-light:hover transition-colors" /></SliderButton>
+        <SliderButton class="cursor-pointer position-absolute top-41% right-0 bg-paper-inv bg-op-50 b-rd-br-1 b-rd-tr-1 b-none px-0 py-1.5" next><RiArrowRightSLine class="-mr-1 font-size-10 c-paper hover-c-brand-light:hover transition-colors" /></SliderButton>
+      </div>
+    </SliderProvider>
+  );
+};
+
+const VideoPlayer = () => {
+  const [isStarted, setIsStarted] = createSignal(false);
+  let videoRef: HTMLVideoElement;
+
+  const startVideo = () => {
+    videoRef.play();
+    setIsStarted(true);
+  };
+
+  return (
+    <div class="flex flex-justify-center flex-items-center">
+      {!isStarted() && (
+        <button
+          class="z-1 c-paper font-size-12 position-absolute cursor-pointer b-none bg-transparent"
+          onClick={startVideo}
+        >
+          <RiYoutubeFill class="c-#ff0000 md-w-20 mt-5 md-mt-0 md-h-20 w-15 h-15" />
+        </button>
+      )}
+      <video
+        ref={(el) => (videoRef = el)}
+        class="mt-10 b-rd-3" style="width: 100%; width: -moz-available; width: -webkit-fill-available; width: fill-available;"
+        controls
+        muted
+      >
+        <div class="vertical-top max-w-full font-size-4 color-paper-inv block">
+          <a
+            class="color-paper-inv block"
+            href="https://www.youtube.com/watch?v=zedTK_cCobY"
+            target="_blank"
+            rel="noopener"
+          >
+            Professional Carpet Cleaning London - Fine Carpet Cleaning
+          </a>
+        </div>
+        <source
+          src="/assets/Professional Carpet Cleaning London - Fine Carpet Cleaning (1).mp4"
+          type="video/mp4"
+        />
+      </video>
+    </div>
+  );
+};
+
+function FleurDivider() {
+  return (
+    <div class="m-auto my-30 md-my-36 position-relative w-80%">
+      <div class="divider-shadow overflow-hidden h-0.5 after-block::after after-w-full::after after-h-6::after after-mx-auto::after after-mt--6::after"></div>
+      <div class="w-11 h-11 position-absolute position-bottom--6 left-47% bg-#f7f7f7"><img class="position-absolute max-w-7 mx-1.8" src="/assets/output-onlinepngtools.png" /></div>
+    </div>
+  );
+}
+
+export function FaqSection() {
+  const { Container, Entry } = createCollapsable()
+  return <Container>
+    <Entry>
+      <ul>
+        <li>
+          <Typography variant="h3">Will you fee me if I cancel the stain removal in London?</Typography>
+          <Typography variant="body">Yes, there is a cancellation fee; however, it only applies in the event that you cancel on the day of the professional stain removal service. You will lose your deposit in that scenario.</Typography></li>
+        <li>
+          <Typography variant="h3">Should I pay for the congestion/parking charge?</Typography>
+          <Typography variant="body">Yes, we respectfully request that the client provide us with an appropriate parking area close to the property or pay for any costs associated with parking or traffic.</Typography></li>
+        <li>
+          <Typography variant="h3">What if I live on the 4th floor or above and I have no lift?</Typography>
+          <Typography variant="body">Because our equipment weighs more than fifty kilograms, there will be an extra fee for each floor that needs to be transported by hand. This is due to the fact that it frequently takes a long time and may lead our technicians to become fatigued more quickly. This could therefore lower our daily productivity in comparison to our average output.</Typography></li>
+        <li>
+          <Typography variant="h3">Are you insured?</Typography>
+          <Typography variant="body">Yes, our company is completely insured.</Typography></li>
+        <li>
+          <Typography variant="h3">What happens if your technician damages anything?</Typography>
+          <Typography variant="body">We are fully insured and if an accident happens it will be covered by us.</Typography></li>
+      </ul>
+    </Entry>
+    <Entry>
+      <ul>
+        <li>
+          <Typography variant="h3">How long does the process of stain removal London take?</Typography>
+          <Typography variant="body">The duration of the stain removal London process might take anywhere from 5 to 60 minutes, mainly depending on:</Typography></li>
+        <li>
+          <p>The material of the carpet or upholstery that has been stained;</p>
+        </li>
+        <li>
+          <p>What substance caused the stains;</p>
+        </li>
+        <li>
+          <p>When it appears;</p>
+        </li>
+        <li>
+          <p>The quantity and size of the stain;</p>
+        </li>
+        <li>
+          <p>Did someone try to clean it already.</p>
+        </li>
+        <li>
+          <Typography variant="h3">How long does it take for the rug to get dry after a stain removal London?</Typography>
+          <Typography variant="body">Our team will instruct you on the drying time. It depends on the carpet material, the type of stains, and how bad they are. The condition of the stain determines the drying hours, as well as the cleaning and drying.</Typography></li>
+        <li>
+          <Typography variant="h3">Do you guarantee that after stain removal London all stains will be removed?</Typography>
+          <Typography variant="body">We obtain high stain removal success rates because of our vast experience and use of some of the best stain removal technology available. It's important to remember, though, that due to a number of uncontrollable circumstances, we are unable to offer an absolute guarantee. Among these are:</Typography></li>
+        <li>
+          <p>How much time have the stains been there;</p>
+        </li>
+        <li>
+          <p>The kind of materials that caused the stains;</p>
+        </li>
+        <li>
+          <p>The carpet’s or upholstery's kind and material;</p>
+        </li>
+        <li>
+          <p>Any past incorrect treatment of the stains.</p>
+        </li>
+        <Typography variant="body">However, we promise to use every resource at our disposal to get rid of any stains on your belongings. Our process includes:</Typography>
+        <li>
+          <p>Using the greatest cleaning tools available;</p>
+        </li>
+        <li>
+          <p>Using a choice of high-quality detergents that have been carefully chosen;</p>
+        </li>
+        <li>
+          <p>Tailoring our strategy to the particular fabric type and staining agent to guarantee the best results.</p>
+        </li>
+        <li>
+          <Typography variant="h3">How soon can I expect your cleaner to visit me?</Typography>
+          <Typography variant="body">We'll do our best to schedule an appointment for you as quickly as we can. We are usually completely full for the next three days, but occasionally there are openings.</Typography></li>
+        <li>
+          <Typography variant="h3">Can you give me a quote for the pet stain removal service over the phone or do you need a viewing in person?</Typography>
+          <Typography variant="body">Yes, we can give you a quote for the pet stain removal service over the phone, there is no need for us to visit your property. You can also receive a pet stain removal service quote online.</Typography></li>
+        <li>
+          <Typography variant="h3">What payment methods do you accept?</Typography>
+          <Typography variant="body">We accept debit / credit cards, bank transfers and cash payments given directly to our team.</Typography></li>
+        <li>
+          <Typography variant="h3">Can you provide me with an invoice for the pet stain removal service?</Typography>
+          <Typography variant="body">Yes, we will send you a receipt via email.</Typography></li>
+        <li>
+          <Typography variant="h3">Are you qualified for stain removal in London?</Typography>
+          <Typography variant="body">Yes, we meet the requirements to join Checkatrade and the National Carpet Cleaners Association (NCCA), the UK's recognised industry association, and we are fully trained members of both organisations.</Typography></li>
+        <li>
+          <Typography variant="h3">How long have you been in the cleaning business?</Typography>
+          <Typography variant="body">Since 2012, we have been active in the carpet cleaning and stain removal industry. Throughout the years, we've encountered various types of carpets, rugs, upholstery, and stains while performing our services, accumulating valuable experience. Our commitment to being one of the best cleaning and stain removal companies has led us to enhance our performance through the following means:</Typography></li>
+        <li>
+          <p>Regularly assessing and refining our cleaning materials to guarantee the best possible service;</p>
+        </li>
+        <li>
+          <p>Upgrading our machines and equipment with better options as they become available;</p>
+        </li>
+        <li>
+          <p>A commitment to lifelong learning and professional development via training and courses, constantly aiming to improve our proficiency in providing cleaning services.</p>
+        </li>
+        <li>
+          <Typography variant="h3">Can you add a discount to the carpet stain removal cost?</Typography>
+          <Typography variant="body">Using the best tools and a range of high-grade cleaning supplies, our cleaning services are well-known for their outstanding excellence. Our pricing is not only extremely competitive but also among the most appealing on the market, which sets us apart even more. It is highly recommended that you combine the cleaning services that you need in order to get the best deals. When you do this, you'll find that it's less expensive to bundle all of the services you require than to request each one separately. This cost-effectiveness is ascribed to the starting price and extra fees for every cleaning appointment, accounting for things like parking, travel time, and the handling of bulky items when loading and unloading.</Typography></li>
+        <li>
+          <Typography variant="h3">How much does your carpet stain removal cost?</Typography>
+          <Typography variant="body">How much the carpet stain removal costs depends on a number of factors. Some of them are:</Typography></li>
+        <li>
+          <p>The material of the carpet or upholstery that has been stained;</p>
+        </li>
+        <li>
+          <p>What substance caused the stains;</p>
+        </li>
+        <li>
+          <p>The quantity and size of the stain.</p>
+          <Typography variant="body">To learn more, check out our <a class="color-paper-link hover-color-paper-link-hover:hover" href="/">stain removal prices</a>.</Typography>
+        </li>
+        <li>
+          <Typography variant="h3">What stains cannot be removed from carpet?</Typography>
+          <Typography variant="body">Stains that have been left to dry and settle for a long period of time and stains that have been attempted to be cleaned with improper methods and detergents are some cases where the stain will be harder to remove. Curtain substances are harder to eliminate as well, but thanks to our experience and professional equipment we are able to achieve high success in stain removal and carpet care.</Typography>
+        </li>
+      </ul>
+    </Entry>
+    <Entry>
+      <ul>
+        <li>
+          <Typography variant="h3">Is it possible to get rid of old stains?</Typography>
+          <Typography variant="body">Old stains might come out, but we cannot offer any guarantee. Factors like the contents that have caused the stain, the kind of fabric that has been stained or spilled and the period of time that the stain has been left to settle greatly impact the chance of its removal. If you want to receive information for your specific situation, feel free to contact us at any suitable time for you and we will give you a professional estimate on whether your stain or spill can be eliminated.</Typography></li>
+        <li>
+          <Typography variant="h3">Can professional carpet cleaners remove stains?</Typography>
+          <Typography variant="body">Yes, since professionals have undergone special training, booking services from stain removal companies is the most effective choice to remove stains. Due to our powerful equipment, we at “Fine Carpet Cleaning” Ltd. are able to deliver the results you desire within a fraction of time. Unfortunately we cannot guarantee you that all stains will be entirely removed. This is due to the fact that some situations are harder to handle. For example, if a stain has been improperly treated it might settle even deeper into the fibres of your carpet or upholstery. If the stain has been left to dry out completely or if it is a very old stain, its removal will require a lot more attention, which still does not guarantee that it will be entirely removed. We strongly advise to react as quickly as possible if a stain has occurred and to take advantage of services provided by stain removal companies for the best and safest results.</Typography>
+          <Typography variant="body">Our stain removal London services include professional carpet stain removal, sofa stain removal services, mattress stain removal services, rug stain removal services, couch stain removal services, upholstery stain removal London and more.</Typography>
+        </li>
+        <li>
+          <Typography variant="h3">Do all stains eventually come out?</Typography>
+          <Typography variant="body">Most stains can be removed. However, in some cases, stains can become permanent and a lot harder to come out completely. Such cases include improperly addressing the stains and leaving them to set for a long period of time. In these situations, the substance that caused the stains will set deeper into the fabric. We recommend that if stains or spills occur, address them as quickly as possible, advisably with the help of professional stain removal companies for the best and quickest results.</Typography></li>
+        <li>
+          <Typography variant="h3">Do stains become permanent?</Typography>
+          <Typography variant="body">If stains are addressed fast enough, they can be almost entirely eliminated. But if neglected for too long, stains will usually become permanent. Most stains initially stay on the fabric's surface when they come into touch with it and are quite easy to remove. If left to dry out completely, stains will become further sealed into the fibres, making their complete removal a lot harder.</Typography></li>
+        <li>
+          <Typography variant="h3">How do I remove deep stains?</Typography>
+          <Typography variant="body">Deep stains can be easily removed through professional stain removal services. We strongly advise you not to attempt to clean the stain yourself, as such attempts may seal the stain even further, rather than remove it. Our approach includes a pre-survey, so we can establish which cleaning methods and detergents will be best suited for your specific situation.</Typography>
+          <Typography variant="body">Our stain removal London services include professional carpet stain removal, sofa stain removal services, mattress stain removal services, rug stain removal services, couch stain removal services, upholstery stain removal London and more.</Typography>
+        </li>
+        <li>
+          <Typography variant="h3">How much does it cost to get a stain out of carpet?</Typography>
+          <Typography variant="body">How much the carpet stain removal costs depends on a number of factors, including:</Typography></li>
+        <li>
+          <p>The material of the carpet or upholstery that has been stained;</p>
+        </li>
+        <li>
+          <p>What substance caused the stains;</p>
+        </li>
+        <li>
+          <p>The quantity and size of the stain.</p>
+          <Typography variant="body">To learn more, view our <a class="color-paper-link hover-color-paper-link-hover:hover" href="/">stain removal prices</a>.</Typography>
+        </li>
+        <li>
+          <Typography variant="h3">How do professionals clean carpet stains?</Typography>
+          <Typography variant="body">This is made achievable by the knowledge, tools, supplies, and techniques used by experienced stain removal companies. A reputable cleaning business such as "Fine Carpet Cleaning Ltd." provides excellent cleaning services that work especially well on various types of stains. Often, normal cleaning techniques fail to achieve these outcomes. In addition, we provide a customised approach, use only the best cleaning solutions and state-of-the-art commercial appliances, and further safeguard your possessions when providing a professional stain removal service.</Typography>
+          <Typography variant="body">Our stain removal London services include professional carpet stain removal, sofa stain removal services, mattress stain removal services, rug stain removal services, couch stain removal services, upholstery stain removal London and more.</Typography>
+        </li>
+        <li>
+          <Typography variant="h3">Do carpet stains reappear after cleaning?</Typography>
+          <Typography variant="body">Stains that reappear may be a result of left residue within the carpet fibers themselves. In these cases, some of the cleaning agent used in the cleaning process was left behind in the carpet. Even after the carpet dries, the residue will remain. Our professional stain removal services will assure that no residue will be left behind and will make sure to eliminate any stain as much as possible. This is due to our use of high-quality tools and our expertise, helping us make sure that no residue or moisture will be left on your carpet, rug or upholstery.</Typography></li>
+        <li>
+          <Typography variant="h3">Do you perform professional removal of a red wine stain from a beige carpet?</Typography>
+          <Typography variant="body">It is advised to contact our expert carpet cleaners for the professional removal of a red wine stain from your beige carpet. We can restore your carpet after such an unintentional accident and know just how to handle stubborn stains.</Typography>
+          <Typography variant="body">Our expert carpet cleaners have received extensive training and are proficient in their field. Professional removal of a red wine stain from a beige carpet is far more successful when professional-grade equipment is used. We take care to make sure that the stain removal procedure won't harm your carpet by using a tried-and-true method. We cannot give you a guarantee that all stains will be completely removed, due to factors out of our control, but we will use every possible means to get the job done and leave your carpet fresh and clean.</Typography>
+          <Typography variant="body">Apart from professional carpet stain removal, our services include sofa stain removal services, mattress stain removal services, rug stain removal services, couch stain removal services, upholstery stain removal London and more.</Typography></li>
+      </ul>
+    </Entry>
+  </Container>
+}
+
+export default function Page() {
+  return (
+    <>
+      <h1 class="mt-10 md-mt-17 font-size-12.5 md-font-size-16 md-line-height-18 line-height-16">Professional stain removal service</h1>
+      <div class="flex flex-justify-center"><img class="b-rd-3 md-mt-10 mt-2 max-w-full" src="/assets/Професионално почистване на заведения.jpg" alt="" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 30%);" /></div>
+
+      <FleurDivider></FleurDivider>
+
+      <h2 class="line-height-12 md-line-height-14">What to expect from our professional stain removal service</h2>
+      <div class="mt-20 py-8 px-8 md-px-14 bg-paper b-rd-3" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 18%);">
+        <h3>Benefits:</h3>
+        <p>We at “Fine Carpet Cleaning” Ltd. perform professional stain removal services. Our professional stain removal service not only helps improve the appearance of your carpets, rugs and upholstery but also guarantees hygiene and a healthy indoor environment. Our stain removal services successfully eliminate mechanical, biological and other types of contaminants, so you, your family and your guests won't have to worry about being in touch with hazardous substances stuck in the depth of the soft coverings around you.</p>
+
+        <h3>Simple booking process:</h3>
+        <p>The usual process of booking our professional stain removal services:</p>
+
+        <ul>
+          <li class="ml--5">
+            <p>You reach out to us.</p>
+          </li>
+          <li class="ml--5">
+            <p>We provide you with suggestions for cleaning services based on our analysis of your needs.</p>
+          </li>
+          <li class="ml--5">
+            <p>A quote including the rug, upholstery or carpet stain removal cost is sent to you.</p>
+          </li>
+          <li class="ml--5">
+            <p>We schedule an appointment for you to receive the professional stain removal service if our terms satisfy you.</p>
+          </li>
+          <li class="ml--5">
+            <p>The cleaners from our company will come to your place to provide the cleaning service.</p>
+          </li>
+
+        </ul>
+        <h3>What do we offer:</h3>
+        <p>Other professional cleaning services we offer are:</p>
+        <ul>
+          <li class="ml--5"><a class="color-paper-link-hover hover-color-paper-link:hover font-size-17.5px line-height-8 word-spacing--0.12 tracking--0.04" href="/">Carpet cleaning</a></li>
+          <li class="ml--5"><a class="color-paper-link-hover hover-color-paper-link:hover font-size-17.5px line-height-8 word-spacing--0.12 tracking--0.04" href="/">Upholstery cleaning</a></li>
+          <li class="ml--5"><a class="color-paper-link-hover hover-color-paper-link:hover font-size-17.5px line-height-8 word-spacing--0.12 tracking--0.04" href="/">Rug cleaning</a></li>
+          <li class="ml--5"><a class="color-paper-link-hover hover-color-paper-link:hover font-size-17.5px line-height-8 word-spacing--0.12 tracking--0.04" href="/">Stain protection</a></li>
+        </ul>
+      </div>
+
+      <FleurDivider></FleurDivider>
+
+      <h2 class="line-height-12 md-line-height-14">Equipment and products we use for our professional stain removal service</h2>
+      <div class="mt-20 py-8 px-12 md-px-14 bg-paper b-rd-3" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 18%);">
+        <ol style="counter-reset: ordered; list-style: none;">
+          <li class="ml--5">
+            <h3 class="ml--5 font-size-6 md-font-size-7">Highly-efficient extractors</h3>
+            <Typography variant="body">"Fine Carpet Cleaning" Ltd makes use of top-notch cleaning tools and supplies. Our devices are among the most potent, efficient, and sizable portable ones available in the world. After thoroughly evaluating a number of machine brands available in the UK, we have decided to choose "Mytee" and "Airflex" as our professional cleaning tools. Furthermore, these devices are further enhanced by our in-house engineer, who makes substantial modifications to optimise their functionality.</Typography>
+          </li>
+          <li class="ml--5">
+            <h3 class="ml--5 font-size-6 md-font-size-7">Powerful vacuum cleaners</h3>
+            <Typography variant="body">One of the equipment in our arsenal is a twin-motor vacuum cleaner with high filtration that is acknowledged as the best on the market according to our expertise and experience. One of the twin motors pounds at the carpet while the other efficiently sucks out any loose dirt, dry soil, and dust.</Typography>
+          </li>
+          <li class="ml--5">
+            <h3 class="ml--5 font-size-6 md-font-size-7">Thoughtfully chosen cleaning supplies</h3>
+            <Typography variant="body">We use more than 20 different kinds of cleaning supplies from well-known US and UK companies. We have chosen the items that produce the finest outcomes by carefully testing all of the ones that are accessible. Our specialists are equipped with brands like "Alltec," "Prochem," "Chemspec," "Solution World of Clean," and "TMF" to enable them to select the best detergents based on:</Typography>
+          </li>
+        </ol>
+        <ul>
+          <li class="ml--5">
+            <p>The type of material used to make the furniture;</p>
+          </li>
+          <li class="ml--5">
+            <p>The extent of soiling;</p>
+          </li>
+          <li class="ml--5">
+            <p>The particular kind of stains that need to be treated.</p>
+            <Typography variant="body">We are able to provide professional stain removal services of the highest calibre thanks to our training, cleaning tools and premium materials.</Typography>
+          </li>
+        </ul>
+      </div>
+
+      <FleurDivider></FleurDivider>
+
+      <h2 class="line-height-12 md-line-height-14">Pictures from our professional stain removal service</h2>
+
+      <FacebookLikeGallery imgs={[
+        { src: "/assets/Професионално почистване на заведения.jpg", alt: "" },
+        { src: "/assets/Професионално почистване на заведения.jpg", alt: "" },
+        { src: "/assets/Професионално почистване на заведения.jpg", alt: "" },
+        { src: "/assets/Професионално почистване на заведения.jpg", alt: "" },
+        { src: "/assets/Професионално почистване на заведения.jpg", alt: "" },
+        { src: "/assets/Професионално почистване на заведения.jpg", alt: "" },
+        { src: "/assets/Професионално почистване на заведения.jpg", alt: "" },
+      ]} />
+
+      <FleurDivider></FleurDivider>
+
+      <h2 class="line-height-12 md-line-height-14">Video from our professional stain removal service</h2>
+
+      <VideoPlayer></VideoPlayer>
+
+      <FleurDivider></FleurDivider>
+
+      <h2 class="line-height-12 md-line-height-14">Prices of our professional stain removal service</h2>
+
+      <div class="my-20 pt-8 pb-6 px-8 md-px-14 b-rd-3 bg-paper line-height-7.5 md-line-height-8 text-justify font-size-4 md-font-size-4.4"
+        style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 18%);">
+        <div class="mb--3 font-size-5.5"><strong>Are you pissed off by the pet hair?</strong></div>
+        <br></br>
+        Now you can request pet hair removal as an additional service to the booked cleaning for a small extra
+        charge. Don't forget to request it when booking because telling us at the moment of cleaning causes
+        delays for the technicians and messes up the schedule.
+        <br></br>
+        <strong>Deodorising - Free of charge - just notify us when booking.</strong></div>
+
+      <table class="w-full m-auto font-sans">
+        <thead style="box-shadow: 0px 20px 20px 1px rgb(84 89 95 / 10%);">
+          <tr class="h-20">
+            <td class="c-paper bg-#2e5c47 font-size-7 pl-5 b-rd-lt-3"><strong>Room type</strong></td>
+            <td class="c-paper bg-#2e5c47 font-size-7 pl-5 b-rd-rt-3"><strong>Price</strong></td>
+          </tr>
+        </thead>
+        <tbody style="box-shadow: 0px 20px 20px 1px rgb(84 89 95 / 10%);">
+          <tr>
+            <td class="bg-paper pl-5 py-2 font-500">Single Bedroom</td>
+            <td class="bg-paper pl-5 py-2 font-500">from £31.00</td>
+          </tr>
+          <tr>
+            <td class="bg-paper pl-5 py-2 font-500">Double Bedroom</td>
+            <td class="bg-paper pl-5 py-2 font-500">from £35.00</td>
+          </tr>
+          <tr>
+            <td class="bg-paper pl-5 py-2 font-500">Master Bedroom</td>
+            <td class="bg-paper pl-5 py-2 font-500">from £40.00</td>
+          </tr>
+          <tr>
+            <td class="bg-paper pl-5 py-2 font-500">Living Room</td>
+            <td class="bg-paper pl-5 py-2 font-500">from £43.00</td>
+          </tr>
+          <tr>
+            <td class="bg-paper pl-5 py-2 font-500">Through Lounge</td>
+            <td class="bg-paper pl-5 py-2 font-500">from £69.00</td>
+          </tr>
+          <tr>
+            <td class="bg-paper pl-5 py-2 font-500">Hallway</td>
+            <td class="bg-paper pl-5 py-2 font-500">from £21.00</td>
+          </tr>
+          <tr>
+            <td class="bg-paper pl-5 py-2 font-500">Flight of Stairs</td>
+            <td class="bg-paper pl-5 py-2 font-500">from £34.00</td>
+          </tr>
+          <tr>
+            <td class="bg-paper pl-5 py-2 font-500">Landing</td>
+            <td class="bg-paper pl-5 py-2 font-500">from £15.00</td>
+          </tr>
+          <tr>
+            <td class="bg-paper pl-5 py-2 font-500">Bathroom</td>
+            <td class="bg-paper pl-5 py-2 font-500">from £6.00</td>
+          </tr>
+          <tr>
+            <td class="bg-paper pl-5 py-2 font-500">Small rug</td>
+            <td class="bg-paper pl-5 py-2 font-500">from £14.00</td>
+          </tr>
+          <tr>
+            <td class="bg-paper pl-5 py-2 font-500">Medium rug</td>
+            <td class="bg-paper pl-5 py-2 font-500">from £20.00</td>
+          </tr>
+          <tr>
+            <td class="bg-paper pl-5 py-2 font-500">Large rug</td>
+            <td class="bg-paper pl-5 py-2 font-500">from £31.00</td>
+          </tr>
+          <tr>
+            <td class="b-rd-lb-3 b-rd-rb-3 bg-#2e5c47" colspan="3" style="box-shadow: 0px 20px 20px 1px rgb(247 247 247/ 100%);"><p class="font-size-3.5 md-font-size-4 px-5 md-my-7 c-paper line-height-6 word-spacing-0.5">*All prices depend on the quantity of the order, degree of contamination, access and location.
+              <br></br>**Final price after contacting us.</p></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <button class="outline-none bg-brand-second-action hover-bg-brand-second-action-hover:hover font-size-6 font-600 w-250px h-60px c-paper flex flex-items-center flex-justify-center relative b-solid b-rd-3 b-4 b-brand-second-action hover-b-brand-second-action-hover:hover whitespace-normal line-height-6 word-spacing-0.5 py-9 my-20 mx-auto" style="box-shadow: 0 0 0 3px rgba(255, 255, 255, .9) inset; letter-spacing: 0.05rem;"><a class="c-paper font-size-5">REQUEST A QUOTE</a></button>
+
+      <FleurDivider></FleurDivider>
+
+      <h2 class="line-height-12 md-line-height-14">Frequently ordered together</h2>
+
+      <GalerrySliderDesktop />
+      <GalerrySliderMobile />
+
+      <FleurDivider></FleurDivider>
+
+      <h2 class="line-height-12 md-line-height-14">Our professional stain removal service specialists advise:</h2>
+      <div class="mt-20 py-8 px-12 md-px-14 bg-paper b-rd-3" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 18%);">
+        <ol style="counter-reset: ordered; list-style: none;">
+          <li class="ml--5">
+            <h3 class="ml--5 font-size-6 md-font-size-7">Apply a stain protector</h3>
+            <Typography variant="body">When it's possible, our cleaning specialist advises adding a stain protector to your furniture, carpets, and rugs. Stain removal services can be significantly reduced by taking this simple step. We invite you to investigate the advantages of <a class="color-paper-link hover-color-paper-link-hover:hover" href="/">stain protection services</a> if you're interested.</Typography>
+          </li>
+          <li class="ml--5">
+            <h3 class="ml--5 font-size-6 md-font-size-7">Try professional stain removal</h3>
+            <Typography variant="body">In the event that your rug or upholstery has become stained, our specialist advises hiring a professional stain removal service instead of trying to clean it yourself. This is due to the possibility of fabric damage from cleaning or waiting for the stain to settle, which makes total stain removal difficult. Such approaches may actually seal the stain, making it more challenging, if not impossible, for a cleaning professional to remove. As a result, booking a stain removal service(link) may be able to rescue your priceless upholstery or rug, which may be worth a substantial amount of money. We perform professional carpet stain removal, sofa stain removal services, mattress stain removal services, rug stain removal services, couch stain removal services, upholstery stain removal in London, and more.</Typography>
+          </li>
+          <li class="ml--5">
+            <h3 class="ml--5 font-size-6 md-font-size-7">Explore our full range of services</h3>
+            <Typography variant="body">We provide a variety of services, such as upholstery and carpet cleaning and many more. We offer all-inclusive solutions, so don't pass up the chance to learn about the depth of our knowledge and make well-informed choices regarding your cleaning requirements.</Typography>
+          </li>
+          <li class="ml--5">
+            <h3 class="ml--5 font-size-6 md-font-size-7">Bundle and save</h3>
+            <Typography variant="body">For optimal cost efficiency, our skilled carpet steam cleaning service specialists suggest combining multiple services into one appointment. Choosing to have technicians visit separately can result in additional costs such as travel time, parking fees, and the management of heavy equipment during loading and unloading, making individual appointments less financially advantageous.</Typography>
+          </li>
+          <li class="ml--5">
+            <h3 class="ml--5 font-size-6 md-font-size-7">Enjoy health benefits</h3>
+            <Typography variant="body">Knowing the advantages of maintaining clean carpets, rugs, or upholstery for your health is crucial if you possess any of these items. These objects have the potential to gather significant amounts of dust, dirt particles, and bacteria that could cause health problems. Ignoring their needs can make them more susceptible to allergies, skin issues, and other complications. Our expert advises hiring cleaning professionals at least once a year to avoid these problems. We suggest scheduling these procedures even more frequently if you have children, pets, or easily stained furniture.</Typography>
+          </li>
+        </ol>
+      </div>
+
+      <FleurDivider></FleurDivider>
+
+      <h2 class="line-height-12 md-line-height-14">Reviews for our professional stain removal service</h2>
+
+      <GalerrySliderDesktop />
+      <GalerrySliderMobile />
+
+      <FleurDivider></FleurDivider>
+
+      <h2 class="line-height-12 md-line-height-14">FAQ regarding our professional stain removal service</h2>
+
+      <FaqSection />
+
+      <FleurDivider></FleurDivider>
+
+      <div class="m-10% mb-3% flex flex-wrap flex-justify-center md-gap-15 gap-10">
+        <button class="cursor-pointer outline-none bg-brand-second-action hover-bg-brand-second-action-hover:hover font-size-6 font-600 w-200px h-60px c-paper flex flex-items-center flex-justify-center relative b-solid b-rd-3 b-4 b-brand-second-action hover-b-brand-second-action-hover:hover whitespace-normal line-height-6 word-spacing-0.5 py-9" style="box-shadow: 0 0 0 3px rgba(255, 255, 255, .9) inset; letter-spacing: 0.05rem;"><a href="/services" class="c-paper font-size-5">SERVICES</a></button>
+        <button class="cursor-pointer outline-none bg-brand-action hover-bg-brand-action-hover:hover font-size-6 font-600 w-200px h-60px c-paper flex flex-items-center flex-justify-center relative b-solid b-rd-3 b-4 b-brand-action hover-b-brand-action-hover:hover whitespace-normal line-height-6 word-spacing-0.5 py-9" style="box-shadow: 0 0 0 3px rgba(255, 255, 255, .9) inset; letter-spacing: 0.05rem;"><a href="/contact-us" class="c-paper font-size-5">REQUEST A QUOTE</a></button>
+      </div>
+
+
+
+    </>
+  );
+}

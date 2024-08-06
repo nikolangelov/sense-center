@@ -223,7 +223,7 @@ export function FaqSection() {
                         get a carpet cleaning quote online.</Typography></li>
                 <li>
                     <Typography variant="h3">What payment methods do you accept for your professional carpet cleaning service?</Typography>
-                    <Typography variant="body">We accept debit/credit cards, bank transfer, and cash payments directly to
+                    <Typography variant="body">We accept debit / credit cards, bank transfer, and cash payments directly to
                         our
                         team.</Typography></li>
                 <li>
@@ -232,7 +232,7 @@ export function FaqSection() {
                 <li>
                     <Typography variant="h3">Are you qualified?</Typography>
                     <Typography variant="body">Yes, we are qualified and fully trained members of <a
-                        class="color-paper-link hover-color-paper-link-hover:hover" href="/" target="_blank"
+                        class="color-paper-link hover-color-paper-link-hover:hover" href="https://trustedlocalcleaners.ncca.co.uk/listing/fine-carpet-cleaning-ltd/" target="_blank"
                         rel="noopener">NCCA (National Carpet Cleaners Association)</a> – the UK’s recognised
                         industry qualification.</Typography></li>
                 <li>
@@ -277,8 +277,7 @@ export function FaqSection() {
                         of
                         the carpets, how soiled they are, the type of the carpets and how easy the access to the
                         carpets is. For more detailed information check out <a
-                            class="color-paper-link hover-color-paper-link-hover:hover" href="/" target="_blank"
-                            rel="noopener">carpet cleaning price list</a>.</Typography>
+                            class="color-paper-link hover-color-paper-link-hover:hover" href="/prices">carpet cleaning price list</a>.</Typography>
                 </li>
                 <li>
                     <Typography variant="h3">Do you offer cheap carpet cleaning?</Typography>
@@ -300,12 +299,10 @@ export function FaqSection() {
                 <li>
                     <Typography variant="h3">Do you offer stairs carpet cleaning services?</Typography>
                     <Typography variant="body">Yes, we do. You can check the prices for stairs carpet cleaning services in
-                        our <a class="color-paper-link hover-color-paper-link-hover:hover" href="/"
-                            target="_blank"
-                            rel="noopener">price list</a> or alternatively you can use our price calculator. If
+                        our <a class="color-paper-link hover-color-paper-link-hover:hover" href="/prices"
+                        >price list</a> or alternatively you can use our price calculator. If
                         you need more details regarding our stairs carpet cleaning services feel free to <a
-                            class="color-paper-link hover-color-paper-link-hover:hover" href="/" target="_blank"
-                            rel="noopener">contact us</a>.</Typography>
+                            class="color-paper-link hover-color-paper-link-hover:hover" href="/contact-us">contact us</a>.</Typography>
                 </li>
                 <li>
                     <Typography variant="h3">Do you offer luxury carpet cleaning in London?</Typography>
@@ -344,8 +341,7 @@ export function FaqSection() {
                     <Typography variant="h3">Do you offer berber carpet cleaning service?</Typography>
                     <Typography variant="body">Yes, we offer berber carpet cleaning service. If you need more information
                         about this service you have to <a
-                            class="color-paper-link hover-color-paper-link-hover:hover" href="/" target="_blank"
-                            rel="noopener">contact us</a>.
+                            class="color-paper-link hover-color-paper-link-hover:hover" href="/contact-us">contact us</a>.
                     </Typography>
                 </li>
                 <li>
@@ -362,8 +358,7 @@ export function FaqSection() {
                         Removing
                         dents requires the use of special equipment and it is a completely different service from
                         carpet cleaning. We at Fine Carpet Cleaning London do have the required equipment and we
-                        offer <a class="color-paper-link hover-color-paper-link-hover:hover" href="/"
-                            target="_blank" rel="noopener">carpet dent removal service</a>.
+                        offer carpet dent removal service.
                     </Typography>
                 </li>
                 <li>
@@ -382,14 +377,14 @@ export function FaqSection() {
                 <li>
                     <p>If your carpet belongs to the first category the question of restoring its fluffiness is not
                         applicable.</p>
-                    <p class="hide-text-if-not-expanded ml--5">If your carpet belongs to the second category, we
+                    <p class="ml--5">If your carpet belongs to the second category, we
                         are
                         able to offer a solution. We can restore the fluffiness of such a carpet by using a special
                         machine called CRB (counter-rotating brush). It’s fair to know that the use of this machine
                         requires extra effort and therefore is charged extra.</p>
-                    <p class="hide-text-if-not-expanded ml--5">In case you are not sure in which category your
+                    <p class="ml--5">In case you are not sure in which category your
                         carpet belongs to, feel free to contact us for advice.</p>
-                    <p class="hide-text-if-not-expanded ml--5">As restoring the fluffiness of a carpet is a very
+                    <p class="ml--5">As restoring the fluffiness of a carpet is a very
                         niche thing to do, you need to ask specifically for it when you reach out to us.</p>
                 </li>
                 <li>
@@ -457,11 +452,11 @@ export function FaqSection() {
                     <p>Routine cleaning has many benefits for your carpet. In addition to making your house
                         beautiful, regular affordable carpet cleaning like the one we offer helps extend the
                         lifespan of one of your home’s most valuable assets.</p>
-                    <p class="hide-text-if-not-expanded ml--5">However, in special cases when the carpet is made
+                    <p class="ml--5">However, in special cases when the carpet is made
                         of
                         natural fibres ( such as sisal, jute, seagrass etc.) we do not recommend steam cleaning, but
                         dry cleaning, as the heat and steam will damage the carpet.</p>
-                    <p class="hide-text-if-not-expanded ml--5">If you are not sure what type of cleaning method
+                    <p class="ml--5">If you are not sure what type of cleaning method
                         is
                         most appropriate for your carpet, feel free to contact us to get professional advice.</p>
                 </li>
@@ -472,8 +467,7 @@ export function FaqSection() {
                 <li>
                     <Typography variant="h3">Is it possible to book carpet cleaning online?</Typography>
                     <Typography variant="body">Yes, you can easily book a carpet cleaning service online through <a
-                        class="color-paper-link hover-color-paper-link-hover:hover" href="/" target="_blank"
-                        rel="noopener">our contact page</a>.</Typography>
+                        class="color-paper-link hover-color-paper-link-hover:hover" href="/contact-us">our contact page</a>.</Typography>
 
                     <Typography variant="body">If you have any questions please do not hesitate to contact our operators
                         at
@@ -655,16 +649,16 @@ export default function Page() {
                 <ul>
                     <li class="ml--5"><a
                         class="color-paper-link-hover hover-color-paper-link:hover font-size-17.5px line-height-8 word-spacing--0.12 tracking--0.04"
-                        href="/">Professional carpet steam cleaning services</a></li>
+                        href="/professional-carpet-cleaning-services/steam">Professional carpet steam cleaning services</a></li>
                     <li class="ml--5"><a
                         class="color-paper-link-hover hover-color-paper-link:hover font-size-17.5px line-height-8 word-spacing--0.12 tracking--0.04"
-                        href="/">Dry carpet cleaning services</a></li>
+                        href="/professional-carpet-cleaning-services/dry">Dry carpet cleaning services</a></li>
                     <li class="ml--5"><a
                         class="color-paper-link-hover hover-color-paper-link:hover font-size-17.5px line-height-8 word-spacing--0.12 tracking--0.04"
-                        href="/">Eco-friendly carpet cleaning services</a></li>
+                        href="/professional-carpet-cleaning-services/eco-friendly">Eco-friendly carpet cleaning services</a></li>
                     <li class="ml--5"><a
                         class="color-paper-link-hover hover-color-paper-link:hover font-size-17.5px line-height-8 word-spacing--0.12 tracking--0.04"
-                        href="/">Fast dry carpet cleaning services</a></li>
+                        href="/professional-carpet-cleaning-services/fast-dry">Fast dry carpet cleaning services</a></li>
                     <li class="ml--5"><a
                         class="color-paper-link-hover hover-color-paper-link:hover font-size-17.5px line-height-8 word-spacing--0.12 tracking--0.04"
                         href="/services">All of our services</a></li>
@@ -678,27 +672,27 @@ export default function Page() {
                 style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 18%);">
                 <ol style="counter-reset: ordered; list-style: none;">
                     <li class="ml--5">
-                        <h3 class="ml--5 font-size-6 md-font-size-7">Highly-efficient extractors.</h3>
+                        <h3 class="ml--5 font-size-6 md-font-size-7">Highly-efficient extractors</h3>
                         <Typography variant="body">The machines we use have been chosen after a process of uncompromising
                             selection. First, we tested all major brands available on the UK market. Second, we selected
-                            the most effective ones among them - <a
+                            the most effective ones among them - “<a
                                 class="color-paper-link hover-color-paper-link-hover:hover"
                                 href="https://www.mytee.com/products/1003dx-speedster-deluxe-carpet-extractor/"
-                                target="_blank" rel="noopener">“Mytee”</a> (leading US manufacturer) and <a
+                                target="_blank" rel="noopener">Mytee</a>” (leading US manufacturer) and “<a
                                     class="color-paper-link hover-color-paper-link-hover:hover"
                                     href="https://www.clean-smart.co.uk/store/airflex-storm" target="_blank"
-                                    rel="noopener">“Airflex”</a> (top UK manufacturer). Third, our engineer further improved
+                                    rel="noopener">Airflex</a>” (top UK manufacturer). Third, our engineer further improved
                             them in order to maximise their performance.</Typography>
                     </li>
                     <li class="ml--5">
-                        <h3 class="ml--5 font-size-6 md-font-size-7">Powerful vacuum cleaners.</h3>
+                        <h3 class="ml--5 font-size-6 md-font-size-7">Powerful vacuum cleaners</h3>
                         <Typography variant="body">We use a high-filtration twin motor vacuum cleaner, which we believe is the
                             best one on the market. It is designed for high-performance expert carpet cleaning. One of
                             the twin-motors pounds at the carpet while the other one sucks out any loose dirt, dry soil
                             and dust.</Typography>
                     </li>
                     <li class="ml--5">
-                        <h3 class="ml--5 font-size-6 md-font-size-7">Carefully selected cleaning products.</h3>
+                        <h3 class="ml--5 font-size-6 md-font-size-7">Carefully selected cleaning products</h3>
                         <Typography variant="body">In regard to cleaning products, we are using more than 20 different detergents,
                             because we know that every situation requires an individual approach. We have tested almost
                             all detergents available on the market and chose those giving the best results. Among them
@@ -813,8 +807,8 @@ export default function Page() {
 
             <button
                 class="outline-none bg-brand-second-action hover-bg-brand-second-action-hover:hover font-size-6 font-600 w-250px h-60px c-paper flex flex-items-center flex-justify-center relative b-solid b-rd-3 b-4 b-brand-second-action hover-b-brand-second-action-hover:hover whitespace-normal line-height-6 word-spacing-0.5 py-9 my-20 mx-auto"
-                style="box-shadow: 0 0 0 3px rgba(255, 255, 255, .9) inset; letter-spacing: 0.05rem;"><a
-                    class="c-paper font-size-5">REQUEST A QUOTE</a></button>
+                style="box-shadow: 0 0 0 3px rgba(255, 255, 255, .9) inset; letter-spacing: 0.05rem;">
+                <a href="/contact-us" class="c-paper font-size-5">REQUEST A QUOTE</a></button>
 
             <FleurDivider></FleurDivider>
 
@@ -830,16 +824,16 @@ export default function Page() {
                 style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 18%);">
                 <ol style="counter-reset: ordered; list-style: none;">
                     <li class="ml--5">
-                        <h3 class="ml--5 font-size-6 md-font-size-7">Use a stain protector.</h3>
+                        <h3 class="ml--5 font-size-6 md-font-size-7">Use a stain protector</h3>
                         <Typography variant="body">Our carpet cleaning specialist advises you to always add stain protector to
                             your carpet and upholstery if you can afford it. It saves a lot of money from professional
                             stain removal services. Why? Because it guards the fabric against penetration of liquids
                             that lead to lasting stains and permanent damage to the carpet and upholstery. <a
-                                class="color-paper-link hover-color-paper-link-hover:hover" href="/">Learn more about
+                                class="color-paper-link hover-color-paper-link-hover:hover" href="/stain-protection-services">Learn more about
                                 the benefits of using stain protection services.</a></Typography>
                     </li>
                     <li class="ml--5">
-                        <h3 class="ml--5 font-size-6 md-font-size-7">Use a professional stain removal service.</h3>
+                        <h3 class="ml--5 font-size-6 md-font-size-7">Use a professional stain removal service</h3>
                         <Typography variant="body">Our carpet cleaning specialist advises that if your carpet or upholstery has
                             been stained, it is in your best interest to search for a professional stain removal
                             company. The reason is that in the process of self-cleaning or leaving the stain to dry, the
@@ -847,12 +841,12 @@ export default function Page() {
                             attempt to clean the stain yourself will very likely seal off the stain, rather than remove
                             it. This will then make it harder or even impossible for a professional carpet cleaning
                             company to remove it. Thus, a <a class="color-paper-link hover-color-paper-link-hover:hover"
-                                href="/">professional stain removal service</a> booked
+                                href="/professional-stain-removal-services">professional stain removal service</a> booked
                             today from an expert carpet cleaning company can rescue your carpet or upholstery that is
                             worth thousands.</Typography>
                     </li>
                     <li class="ml--5">
-                        <h3 class="ml--5 font-size-6 md-font-size-7">Take informed decisions.</h3>
+                        <h3 class="ml--5 font-size-6 md-font-size-7">Take informed decisions</h3>
                         <Typography variant="body">Our carpet cleaning specialist advises you to check out <a
                             class="color-paper-link hover-color-paper-link-hover:hover" href="/services">the other
                             services we offer.</a> By familiarising yourself with all of our services, you can make
@@ -861,7 +855,7 @@ export default function Page() {
                             existed.</Typography>
                     </li>
                     <li class="ml--5">
-                        <h3 class="ml--5 font-size-6 md-font-size-7">Combine different services.</h3>
+                        <h3 class="ml--5 font-size-6 md-font-size-7">Combine different services</h3>
                         <Typography variant="body">It’s in your best interest to combine different services rather than having
                             them performed separately. Why? Because this will save you a significant amount of money.
                             The reason is that the initial professional carpet cleaning cost is high and you will have
@@ -870,7 +864,7 @@ export default function Page() {
                             services is significantly cheaper.</Typography>
                     </li>
                     <li class="ml--5">
-                        <h3 class="ml--5 font-size-6 md-font-size-7">Enjoy health benefits.</h3>
+                        <h3 class="ml--5 font-size-6 md-font-size-7">Enjoy health benefits</h3>
                         <Typography variant="body">Your rug, carpet floor covering and upholstery are some of those items that
                             accumulate lots of dust, microorganisms and particles of dirt that are potential causes for
                             health problems. They might provoke different reactions, skin problems and allergies and the
@@ -906,7 +900,7 @@ export default function Page() {
                 <button
                     class="cursor-pointer outline-none bg-brand-action hover-bg-brand-action-hover:hover font-size-6 font-600 w-200px h-60px c-paper flex flex-items-center flex-justify-center relative b-solid b-rd-3 b-4 b-brand-action hover-b-brand-action-hover:hover whitespace-normal line-height-6 word-spacing-0.5 py-9"
                     style="box-shadow: 0 0 0 3px rgba(255, 255, 255, .9) inset; letter-spacing: 0.05rem;"><a
-                        href="/Contact-us" class="c-paper font-size-5">REQUEST A QUOTE</a></button>
+                        href="/contact-us" class="c-paper font-size-5">REQUEST A QUOTE</a></button>
             </div>
 
             <RotatingBanners

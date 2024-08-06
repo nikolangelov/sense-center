@@ -5,6 +5,8 @@ import "solid-slider/slider.css";
 import { Slider, createSlider, SliderButton, SliderProvider } from "solid-slider";
 import { createSignal, Show } from 'solid-js';
 import RiYoutubeFill from '~icons/ri/youtube-fill';
+import { createCollapsable } from "../../components/Collapsable";
+import { Typography } from '../../components/Typography';
 
 const GalerrySliderDesktop = () => {
 	const options = { duration: 1000 };
@@ -22,11 +24,6 @@ const GalerrySliderDesktop = () => {
 				</Slider>
 				<SliderButton class="cursor-pointer position-absolute top-41% left-0 bg-paper-inv bg-op-50 b-rd-bl-1 b-rd-tl-1 b-none px-0 py-1.5" prev><RiArrowLeftSLine class="-ml-1 font-size-10 c-paper hover-c-brand-light:hover transition-colors" /></SliderButton>
 				<SliderButton class="cursor-pointer position-absolute top-41% right-0 bg-paper-inv bg-op-50 b-rd-br-1 b-rd-tr-1 b-none px-0 py-1.5" next><RiArrowRightSLine class="-mr-1 font-size-10 c-paper hover-c-brand-light:hover transition-colors" /></SliderButton>
-				<div class="flex flex-justify-center">
-					<div class={"flex w-3 h-3 rd-50% mx-2 mt-4 " + (current() === 0 ? "bg-brand-dark" : "bg-brand")}></div>
-					<div class={"flex w-3 h-3 rd-50% mx-2 mt-4 " + (current() === 1 ? "bg-brand-dark" : "bg-brand")}></div>
-					<div class={"flex w-3 h-3 rd-50% mx-2 mt-4 " + (current() === 2 ? "bg-brand-dark" : "bg-brand")}></div>
-				</div>
 			</div>
 		</SliderProvider>
 	);
@@ -48,11 +45,6 @@ const GalerrySliderMobile = () => {
 				</Slider>
 				<SliderButton class="cursor-pointer position-absolute top-41% left-0 bg-paper-inv bg-op-50 b-rd-bl-1 b-rd-tl-1 b-none px-0 py-1.5" prev><RiArrowLeftSLine class="-ml-1 font-size-10 c-paper hover-c-brand-light:hover transition-colors" /></SliderButton>
 				<SliderButton class="cursor-pointer position-absolute top-41% right-0 bg-paper-inv bg-op-50 b-rd-br-1 b-rd-tr-1 b-none px-0 py-1.5" next><RiArrowRightSLine class="-mr-1 font-size-10 c-paper hover-c-brand-light:hover transition-colors" /></SliderButton>
-				<div class="flex flex-justify-center">
-					<div class={"flex w-3 h-3 rd-50% mx-2 mt-4 " + (current() === 0 ? "bg-brand-dark" : "bg-brand")}></div>
-					<div class={"flex w-3 h-3 rd-50% mx-2 mt-4 " + (current() === 1 ? "bg-brand-dark" : "bg-brand")}></div>
-					<div class={"flex w-3 h-3 rd-50% mx-2 mt-4 " + (current() === 2 ? "bg-brand-dark" : "bg-brand")}></div>
-				</div>
 			</div>
 		</SliderProvider>
 	);
@@ -77,7 +69,7 @@ const VideoPlayer = () => {
 	};
 
 	return (
-		<div class="flex flex-justify-center flex-items-center">
+		<div class="flex flex-justify-center flex-items-center mt-20">
 			{!isStarted() && (
 				<button
 					class="z-1 c-paper font-size-12 position-absolute cursor-pointer b-none bg-transparent"
@@ -131,88 +123,223 @@ function FullScreenImageGallery() {
 	);
 }
 
+export function FaqSection() {
+	const { Container, Entry } = createCollapsable()
+	return <Container>
+		<Entry>
+			<ul>
+				<li>
+					<Typography variant="h3">How long have you been in the carpet cleaning business?</Typography>
+					<Typography variant="body">"Fine Carpet Cleaning" Ltd. has been operating in the carpet cleaning industry since 2012. We serve both commercial and residential clients, and over the years, we've cleaned all kinds of carpets, rugs, upholstery, and stains. Through these experiences, we've acquired valuable knowledge and expertise. Our commitment to delivering top-notch service has driven us to improve our services in the following ways:</Typography></li>
+				<li>
+					<p>We continually update and upgrade our equipment, ensuring that we utilise the latest and most effective technologies available.</p>
+				</li>
+				<li>
+					<p>We regularly evaluate and improve our cleaning products, staying current with industry advancements to provide the best results.</p>
+				</li>
+				<li>
+					<p>We are dedicated to enhancing our expertise and skills by actively participating in additional professional courses and training programs. Our goal is to maintain a high level of competence and stay at the forefront of carpet cleaning practices.</p>
+				</li>
+				<li>
+					<Typography variant="h3">When do you need professional carpet cleaning?</Typography>
+					<Typography variant="body">In our experience, the majority of our clients have sought our carpet cleaning services when:</Typography></li>
+				<li>
+					<p>Their carpet has had stains that they couldn’t remove by themselves;</p>
+				</li>
+				<li>
+					<p>Their carpet has an unpleasant odour;</p>
+				</li>
+				<li>
+					<p>Their carpet has been attracting pests, such as spiders or mice;</p>
+				</li>
+				<li>
+					<p>Their carpet has lost its colour;</p>
+				</li>
+				<li>
+					<p>They started to have allergies or asthma attacks;</p>
+				</li>
+				<li>
+					<p>Their carpet has been visibly dirty;</p>
+				</li>
+				<li>
+					<p>They wanted to prolong their carpet’s life;</p>
+				</li>
+				<li>
+					<p>Or they simply wanted to refresh their carpets.</p>
+				</li>
+				<li>
+					<Typography variant="h3">How frequently should a carpet be professionally cleaned?</Typography>
+					<Typography variant="body">How often your carpets should be deep cleaned depends on factors such as how fast the carpet becomes soiled. As a general guideline, it is advisable to have your carpet deep cleaned once every 12 months. However, we suggest considering professional carpet cleaning more often than once a year in the following situations:</Typography></li>
+				<li>
+					<p>If you have pets;</p>
+				</li>
+				<li>
+					<p>If you have children;</p>
+				</li>
+				<li>
+					<p>If your carpets are exposed to high foot traffic;</p>
+				</li>
+				<li>
+					<p>If your carpets are exposed to indoor smoking;</p>
+				</li>
+				<li>
+					<p>If your carpets get stained frequently.</p>
+					<Typography variant="body">You can reach out to us if you seek expert advice or if you want to book a <a class="color-paper-link hover-color-paper-link-hover:hover" href="/" target="_blank" rel="noopener">professional carpet cleaning service</a>.</Typography></li>
+				<li>
+					<Typography variant="h3">How much will a professional carpet cleaning cost?</Typography>
+					<Typography variant="body">The price of carpet cleaning depends on several factors. The most significant among them are:</Typography></li>
+				<li>
+					<p>The number and size of the carpets;</p>
+				</li>
+				<li>
+					<p>Their level of dirtiness;</p>
+				</li>
+				<li>
+					<p>The type of carpets;</p>
+				</li>
+				<li>
+					<p>The ease of access to them.</p>
+					<Typography variant="body">For more specific pricing details regarding the carpet cleaning we offer, you can check out our <a class="color-paper-link hover-color-paper-link-hover:hover" href="/" target="_blank" rel="noopener">price list</a></Typography></li>
+				<li>
+					<Typography variant="h3">How fast will the carpet get dry after a cleaning service?</Typography>
+					<Typography variant="body">The drying time of a carpet is determined by various factors. Among them are:</Typography></li>
+				<li>
+					<p>The carpet type;</p>
+				</li>
+				<li>
+					<p>Its level of soiling;</p>
+				</li>
+				<li>
+					<p>The thickness of its pile;</p>
+				</li>
+				<li>
+					<p>Whether it requires extra stain removal treatment or not.</p>
+					<Typography variant="body">For example wool carpets tend to absorb more water and take longer to dry, typically ranging between 10 and 12 hours. In cases where the carpet is exceptionally dirty and requires multiple treatments, the drying process may extend even further.</Typography>
+					<Typography variant="body">On the other hand, synthetic carpets tend to dry faster, usually within a span of 7 to 10 hours. Nevertheless, the drying duration still depends on the carpet's level of dirtiness and the necessity for multiple treatments.</Typography></li>
+			</ul>
+		</Entry>
+		<Entry>
+			<ul>
+				<li>
+					<Typography variant="h3">How long will the carpet cleaning service take?</Typography>
+					<Typography variant="body">The duration of our carpet cleaning service depends on the following factors:</Typography>
+				</li>
+				<li>
+					<p>The carpet's level of soiling;</p>
+				</li>
+				<li>
+					<p>The cleaning methods that will be used on the carpet;</p>
+				</li>
+				<li>
+					<p>Whether any stain removal treatments are required.</p>
+					<Typography variant="body">On average, it typically ranges from 20 to 60 minutes per room.</Typography>
+				</li>
+				<li>
+					<Typography variant="h3">Will carpet cleaning remove the stains on my carpet?</Typography>
+					<Typography variant="body"><strong>In summary, yes</strong>, professional carpet cleaning is very effective in removing stubborn stains, dirt, grime, bacteria, dust mites, allergens, mould, pet dander, and odours. However, some particularly tough stains, especially very old or improperly treated ones, can present challenges for complete removal, even with professional assistance.</Typography>
+					<Typography variant="body">Thankfully, our extensive experience and high-quality equipment at "Fine Carpet Cleaning” Ltd. have led to our high-rates of successful stain removal. Nevertheless, we cannot guarantee the complete removal of every stain. We will thoroughly assess the stain and let you know during the quotation process whether or not the stain can be successfully eliminated.</Typography></li>
+				<li>
+					<Typography variant="h3">Are you able to give me a carpet cleaning quote over the phone, or do you need to visit my property?</Typography>
+					<Typography variant="body"><strong>Yes</strong>, we can provide you with a cost estimate over the phone without the necessity of an in-person visit. For commercial properties, a site visit may be necessary. You have the option to get a carpet cleaning quote online as well.</Typography></li>
+				<li>
+					<Typography variant="h3">How soon can I expect a carpet cleaner to visit me?</Typography>
+					<Typography variant="body">We will make every effort to schedule your appointment as soon as possible. Typically, our schedule is booked up to three days in advance, although occasional exceptions may be possible.</Typography></li>
+				<li>
+					<Typography variant="h3">What payment methods do you accept?</Typography>
+					<Typography variant="body">We accept payment via debit/credit cards as well as cash, directly to our team.</Typography></li>
+				<li>
+					<Typography variant="h3">Can you provide me with an invoice for the carpet cleaning services?</Typography>
+					<Typography variant="body">Yes, we will provide you with a receipt via email.</Typography></li>
+				<li>
+					<Typography variant="h3">Are you insured?</Typography>
+					<Typography variant="body">Yes, we are fully insured.</Typography></li>
+				<li>
+					<Typography variant="h3">What happens if your cleaner damages anything while performing carpet cleaning at my property?</Typography>
+					<Typography variant="body">We are fully insured, and if an accident happens, we are fully covered.</Typography></li>
+			</ul>
+		</Entry>
+	</Container>
+}
+
 export default function Page() {
 	return (
 		<>
-			<div class="flex flex-justify-center"><img class="b-rd-3 md-my-20 my-10" src="/assets\Професионално почистване на заведения.jpg" alt="" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 30%); width: -moz-available; width: -webkit-fill-available; width: fill-available;" /></div>
-			<h1 class="font-size-14 md-font-size-16 md-line-height-18 line-height-16">Fine Carpet Cleaning London</h1>
-			<div class="mt-20 py-8 px-8 md-px-14 b-rd-3 bg-paper line-height-8 text-justify font-size-4.4" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 18%);">Fine Carpet Cleaning London is a carpet cleaning company which operates in all London boroughs. We provide a variety of commercial and domestic carpet cleaning services, tailoring to our client’s needs.</div>
+			<div class="flex flex-justify-center"><img class="b-rd-3 md-my-20 my-10" src="/assets/Професионално почистване на заведения.jpg" alt="" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 30%); width: -moz-available; width: -webkit-fill-available; width: fill-available;" /></div>
+			<h1 class="font-size-14 md-font-size-16 md-line-height-18 line-height-16">“Fine Carpet Cleaning” Ltd.</h1>
+			<div class="mt-20 py-8 px-8 md-px-14 b-rd-3 bg-paper line-height-8 text-justify font-size-4.4" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 18%);">“Fine Carpet Cleaning” Ltd. is a carpet cleaning company that operates in all London boroughs. We provide a variety of commercial and domestic carpet cleaning services, tailoring them to our client's needs.</div>
 
 			<FleurDivider />
 
 			<h2 class="mb-15 md-mb-20">Our main cleaning services</h2>
 			<div class="p-6 pt-12 bg-paper b-rd-3 flex flex-justify-center" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 18%);">
-				<a href="/">
-					<img class="md-mt-3 mt--6 mx-auto block md-w-650px xs-w-330px w-270px" src="/assets\Професионално почистване на заведения.jpg" alt="" />
+				<a href="/professional-carpet-cleaning-services">
+					<img class="md-mt-3 mt--6 mx-auto block md-w-650px xs-w-330px w-270px" src="/assets/Професионално почистване на заведения.jpg" alt="" />
 					<h3 class="flex flex-justify-center flex-content-center flex-wrap flex-items-center md-mt-16 md-mb-9 mb-4 text-center font-size-7 md-font-size-9">Professional carpet cleaning services</h3>
 				</a>
 			</div>
 
 			<div class="p-6 pt-12 bg-paper mt-20 b-rd-3 flex flex-justify-center" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 18%);">
-				<a href="/">
-					<img class="md-mt-3 mt--6 mx-auto block md-w-650px xs-w-330px w-270px" src="/assets\Професионално почистване на заведения.jpg" alt="" />
+				<a href="/professional-upholstery-cleaning-services">
+					<img class="md-mt-3 mt--6 mx-auto block md-w-650px xs-w-330px w-270px" src="/assets/Професионално почистване на заведения.jpg" alt="" />
 					<h3 class="flex flex-justify-center flex-content-center flex-wrap flex-items-center md-mt-16 md-mb-9 mb-4 text-center font-size-7 md-font-size-9">Professional upholstery cleaning services</h3>
 				</a>
 			</div>
 
 			<div class="p-6 pt-12 bg-paper mt-20 b-rd-3 flex flex-justify-center" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 18%);">
-				<a href="/">
-					<img class="md-mt-3 mt--6 mx-auto block md-w-650px xs-w-330px w-270px" src="/assets\Професионално почистване на заведения.jpg" alt="" />
+				<a href="/professional-rug-cleaning-services">
+					<img class="md-mt-3 mt--6 mx-auto block md-w-650px xs-w-330px w-270px" src="/assets/Професионално почистване на заведения.jpg" alt="" />
 					<h3 class="flex flex-justify-center flex-content-center flex-wrap flex-items-center md-mt-16 md-mb-9 mb-4 text-center font-size-7 md-font-size-9">Professional rug cleaning services</h3>
 				</a>
 			</div>
 
 			<FleurDivider />
 
-			<h2>Equipment and products we use</h2>
+			<h2>Equipment and products we use in “Fine Carpet Cleaning” Ltd.</h2>
 
 			<GalerrySliderDesktop />
 			<GalerrySliderMobile />
 
 			<div class="mt-20 py-8 px-8 md-px-14 bg-paper b-rd-3" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 18%);">
 
-				<p>We at Fine Carpet Cleaning London have gathered years of expertise through taking care of our client’s carpets, rugs and upholstery and always look for new ways to improve. By upgrading our equipment, cleaning products and knowledge at every opportunity, we have been able to get to the level we are at today.</p>
+				<p>We at “Fine Carpet Cleaning” Ltd. have accumulated years of expertise in caring for our clients’ carpets, rugs, and upholstery. We continuously seek new ways to improve our services by upgrading our equipment, cleaning products, and knowledge at every opportunity. This commitment has enabled us to reach the high level of service we offer today.</p>
 
-				<p>The factors that enable us to stand out of the crowd are:</p>
+				<p>The factors that set us apart from our competitors are:</p>
 				<ul>
 					<li class="ml--5">
-						<p>We use professional carpet cleaning equipment from the best brands available in the UK – <a class="color-paper-link hover-color-paper-link-hover:hover" href="/" target="_blank" rel="noopener">“Mytee”</a> and <a class="color-paper-link hover-color-paper-link-hover:hover" href="/" target="_blank" rel="noopener">“Airflex”</a>. Additionally, our team’s engineer has made significant improvements to the machines to enhance their performance.</p>
+						<p>We use professional carpet cleaning equipment from the best brands available in the UK: “<a class="color-paper-link hover-color-paper-link-hover:hover" href="https://www.mytee.com/products/1003dx-speedster-deluxe-carpet-extractor/" target="_blank" rel="noopener">Mytee</a>” and “<a class="color-paper-link hover-color-paper-link-hover:hover" href="https://www.clean-smart.co.uk/store/airflex-storm" target="_blank" rel="noopener">Airflex</a>”. Additionally, our team’s engineer has made significant improvements to the machines to enhance their performance.</p>
 					</li>
 					<li class="ml--5">
 						<p>Moreover, we use a high-filtration twin-motor vacuum cleaner, which we consider to be the best available. This vacuum cleaner is purpose-built for professional carpet cleaning, with one motor vigorously agitating the carpet while the other effectively suctions away any loose dirt, dry soil, and dust.</p>
 					</li>
 					<li class="ml--5">
-						<p>We use over 20 high-quality cleaning products from the best brands on the UK and US market. Among those brands are "Alltec," "Prochem," "Chemspec," "Solution World of Clean," and "TMF." We have used and tested almost all detergents available on the market and have selected the ones that are most effective in removing dirt, dust, stains and bacteria. We choose with which ones to treat your carpets, rugs or upholstery, based on the stain, level of soiling and type of fabric.</p>
+						<p>We use <strong>over 20 high-quality cleaning products</strong> from the best brands on the UK and US markets. Among those brands are "Alltec," "Prochem," "Chemspec," "Solution World of Clean," and "TMF." We have used and tested almost all the detergents available on the market and have selected the ones that are most effective in removing dirt, dust, stains, and bacteria. We choose which ones to treat your carpets, rugs, or upholstery based on the stain, level of soiling, and type of fabric.</p>
 					</li>
 				</ul>
 			</div>
 
 			<FleurDivider />
 
-			<h2 class="mb--5 md-mb-0">Fine Carpet Cleaning London Accreditations</h2>
-			<h3 class="mt-25 mb-15">Fine Carpet Cleaning London is a qualified member of <a class="color-paper-link hover-color-paper-link-hover:hover" href="/" target="_blank" rel="noopener">"NCCA"</a> (National Carpet Cleaners Association)</h3>
+			<h2 class="mb--5 md-mb-0">“Fine Carpet Cleaning” Ltd. Accreditations</h2>
+			<h3 class="mt-25 mb-15">“Fine Carpet Cleaning” Ltd. is a qualified member of <a class="color-paper-link hover-color-paper-link-hover:hover" href="https://trustedlocalcleaners.ncca.co.uk/listing/fine-carpet-cleaning-ltd/" target="_blank" rel="noopener">"NCCA"</a> (National Carpet Cleaners Association)</h3>
 
 			<GalerrySliderDesktop />
 			<GalerrySliderMobile />
 
 			<div class="mt-20 py-8 px-8 md-px-14 bg-paper b-rd-3" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 18%);">
 
-				<p>“NCCA” is one of the most respected and authoritative associations for training carpet cleaners. It was founded in 1968 and is devoted entirely to the cleaning, maintenance and restoration of carpets.</p>
-
-				<p>The main objective of the association is to provide certificates of professionalism and high standards to partner companies that have passed a special test for practical knowledge and skills. This ensures the quality of the certified companies services.</p>
-
+				<p>“NCCA” is one of the most respected and authoritative associations for training carpet cleaners. Founded in 1968, it is dedicated to the cleaning, maintenance, and restoration of carpets. The main objective of the association is to provide certificates of professionalism and high standards to partner companies that have passed a special test for practical knowledge and skills. This ensures the quality of the certified company’s services.</p>
 			</div>
 
-			<h3 class="mt-25 mb-15">Fine Carpet Cleaning London is listed on <a class="color-paper-link hover-color-paper-link-hover:hover" href="/" target="_blank" rel="noopener">“Checkatrade"</a></h3>
+			<h3 class="mt-25 mb-15">“Fine Carpet Cleaning” Ltd. is listed on “<a class="color-paper-link hover-color-paper-link-hover:hover" href="https://www.checkatrade.com/trades/FineCarpetCleaning" target="_blank" rel="noopener">Checkatrade</a>"</h3>
 
 			<GalerrySliderDesktop />
 			<GalerrySliderMobile />
 
 			<div class="mt-20 py-8 px-8 md-px-14 bg-paper b-rd-3" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 18%);">
 
-				<p>“Checkatradе” is an organisation founded in 1998 to help consumers in the UK to find their specialist in a particular area, such as quality carpet cleaning. The main goal of the organisation is the collection of all quality companies in one place covering high standards, transparency in customer service and prices.</p>
+				<p>“Checkatradе” is an organisation founded in 1998 to help consumers in the UK to find their specialist in a particular area, such as quality carpet cleaning. The main goal of the organisation is the collection of all quality companies in one place, covering high standards, transparency in customer service, and prices.</p>
 
-				<p>In order to be accredited by “Checkatrade”, Fine Carpet Cleaning London had to pass a detailed inspection covering more than 20 aspects, such as:</p>
+				<p>In order to be accredited by “Checkatrade”, “Fine Carpet Cleaning” Ltd. had to pass a detailed inspection covering more than 20 aspects, such as:</p>
 
 				<ul>
 					<li class="ml--5">
@@ -238,11 +365,11 @@ export default function Page() {
 				<p>After creating a listing on the “Checkatrade” website, each company is then permanently monitored based on user feedback posted on the organisation’s website.</p>
 
 			</div>
-			<h3 class="mt-25 md-mb-15 mb--5">Fine Carpet Cleaning London staff members are trained and certified</h3>
+			<h3 class="mt-25 md-mb-15 mb--5">“Fine Carpet Cleaning” Ltd. staff members are trained and certified</h3>
 
 			<div class="mt-20 py-8 px-8 md-px-14 bg-paper b-rd-3" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 18%);">
 
-				<p>On one hand our ambition is to fully satisfy the customers needs to the best of our capabilities. On the other hand the company culture of Fine Carpet Cleaning London strongly encourages constant striving for excellence. These two reasons combined lead to the result that our staff members successfully completed a number of specialised professional courses like:</p>
+				<p>On one hand, our ambition is to fully satisfy the customer’s needs to the best of our capabilities. On the other hand, the company culture of “Fine Carpet Cleaning” Ltd. strongly encourages constant striving for excellence. These two reasons combined led to the result that our staff members successfully completed a number of specialised professional courses, like:</p>
 
 				<ul>
 					<li class="ml--5">
@@ -255,12 +382,12 @@ export default function Page() {
 						<p>And more.</p>
 					</li>
 				</ul>
-				<p>Оur goal is to be prepared for any situation, no matter how challenging it is, and leave nothing to chance.</p>
+				<p>Our goal is to be prepared for any situation, no matter how challenging it is, and leave nothing to chance.</p>
 			</div>
 
 			<FleurDivider />
 
-			<h2>Results from our services in Fine Carpet Cleaning London</h2>
+			<h2>Results from our services in “Fine Carpet Cleaning” Ltd.</h2>
 
 			<GalerrySliderDesktop />
 			<GalerrySliderMobile />
@@ -280,7 +407,7 @@ export default function Page() {
 
 			<FullScreenImageGallery />
 
-			<p class="md-max-w-80% font-size-4 line-height-5.5 md-line-height-6 m-auto mt-5 ">*Fine Carpet Cleaning London operates in all of London. The map below shows all of the London postcodes we cover.<br></br>
+			<p class="md-max-w-80% font-size-4 line-height-5.5 md-line-height-6 m-auto mt-5 ">*”Fine Carpet Cleaning” Ltd. operates in all of London. The map below shows all of the London postcodes we cover.<br></br>
 				**Transport surcharge may apply for all other post codes.</p>
 
 			<FleurDivider />
@@ -331,150 +458,14 @@ export default function Page() {
 			<FleurDivider></FleurDivider>
 
 			<h2>Frequently asked questions</h2>
-			<div class="last-expanded pr-8 md-p-4 md-pr-14 bg-paper b-rd-3 flex flex-justify-center" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 18%);">
-				<ul>
-					<li class="ml-5">
-						<h3>How long have you been in the carpet cleaning business?</h3>
-						<p class="ml--5 new-homepage-paragraphs">Fine Carpet Cleaning London has been involved in the carpet cleaning industry since 2012. We serve both commercial and residential clients and over the years we've cleaned all kinds of carpets, rugs, upholstery, and stains. Through these experiences, we've acquired valuable knowledge and expertise. Our commitment to delivering top-notch service has driven us to improve our services in the following ways:</p></li>
-					<li class="ml-5">
-						<p>We continually update and upgrade our equipment, ensuring that we utilise the latest and most effective technologies available.</p>
-					</li>
-					<li class="ml-5">
-						<p>We regularly evaluate and improve our cleaning products, staying current with industry advancements to provide the best results.</p>
-					</li>
-					<li class="ml-5">
-						<p>We are dedicated to enhancing our expertise and skills by actively participating in additional professional courses and training programs. Our goal is to maintain a high level of competence and stay at the forefront of carpet cleaning practices.</p>
-					</li>
-					<li class="ml-5">
-						<h3>When do I need professional carpet cleaning?</h3>
-						<p class="ml--5 new-homepage-paragraphs">In our experience the majority of our clients have sought our carpet cleaning services when:</p></li>
-					<li class="ml-5">
-						<p>Their carpet has had stains which they couldn’t remove by themselves.</p>
-					</li>
-					<li class="ml-5">
-						<p>Their carpet has had an unpleasant odour.</p>
-					</li>
-					<li class="ml-5">
-						<p>Their carpet has been attracting pests, such as spiders or mice.</p>
-					</li>
-					<li class="ml-5">
-						<p>Their carpet has lost its colour.</p>
-					</li>
-					<li class="ml-5">
-						<p>They started to have allergies or asthma attacks.</p>
-					</li>
-					<li class="ml-5">
-						<p>Their carpet has been visibly dirty.</p>
-					</li>
-					<li class="ml-5">
-						<p>They wanted to prolong their carpet’s life.</p>
-					</li>
-					<li class="ml-5">
-						<p>Or they simply wanted to refresh their carpets.</p>
-					</li>
-					<li class="ml-5">
-						<h3>How frequently should a carpet be professionally cleaned?</h3>
-						<p class="ml--5 new-homepage-paragraphs">How often should your carpets be deep cleaned depends on factors such as how fast the carpet becomes soiled. As a general guideline, it is advisable to have your carpet deep cleaned once every 12 months. However, we suggest considering professional carpet cleaning more often than once a year in the following situations:</p></li>
-					<li class="ml-5">
-						<p>If you have pets;</p>
-					</li>
-					<li class="ml-5">
-						<p>If you have children;</p>
-					</li>
-					<li class="ml-5">
-						<p>If your carpets are exposed to high foot traffic;</p>
-					</li>
-					<li class="ml-5">
-						<p>If your carpets are exposed to indoor smoking;</p>
-					</li>
-					<li class="ml-5">
-						<p>If your carpets get stained frequently.</p>
 
-						<p class="ml--5 new-homepage-paragraphs">You can reach out to us if you seek expert advice or if you want to book a <a class="color-paper-link hover-color-paper-link-hover:hover" href="/" target="_blank" rel="noopener">professional carpet cleaning service</a>.</p></li>
-					<li class="ml-5">
-						<h3>How much will a professional carpet cleaning cost?</h3>
-						<p class="ml--5 new-homepage-paragraphs">The price of carpet cleaning depends on several factors. The most significant among them are:</p></li>
-					<li class="ml-5">
-						<p>The number and size of the carpets;</p>
-					</li>
-					<li class="ml-5">
-						<p>Their level of dirtiness;</p>
-					</li>
-					<li class="ml-5">
-						<p>The type of carpets;</p>
-					</li>
-					<li class="ml-5">
-						<p>The ease of access to them.</p>
-
-						<p class="ml--5 new-homepage-paragraphs">For more specific pricing details regarding the carpet cleaning we offer, you can check out our <a class="color-paper-link hover-color-paper-link-hover:hover" href="/" target="_blank" rel="noopener">price list</a></p></li>
-					<li class="ml-5">
-						<h3>How fast will the carpet get dry after a cleaning service?</h3>
-						<p class="ml--5 new-homepage-paragraphs">The drying time of a carpet is determined by various factors. Among them are:</p></li>
-					<li class="ml-5">
-						<p>The carpet type;</p>
-					</li>
-					<li class="ml-5">
-						<p>Its level of soiling;</p>
-					</li>
-					<li class="ml-5">
-						<p>The thickness of its pile;</p>
-					</li>
-					<li class="ml-5">
-						<p>Whether it requires extra stain removal treatment or not.</p>
-
-						<p class="ml--5 new-homepage-paragraphs">For example wool carpets tend to absorb more water and take longer to dry, typically ranging between 10 and 12 hours. In cases where the carpet is exceptionally dirty and requires multiple treatments, the drying process may extend even further.</p>
-
-						<p class="ml--5 new-homepage-paragraphs">On the other hand, synthetic carpets tend to dry faster, usually within a span of 7 to 10 hours. Nevertheless, the drying duration still depends on the carpet's level of dirtiness and the necessity for multiple treatments.</p></li>
-				</ul>
-			</div>
-
-			<div>
-				<ul>
-					<li class="ml-5 hide-if-not-expanded">
-						<h3>How long will the carpet cleaning service take?</h3>
-						<p class="ml--5 new-homepage-paragraphs">The duration of our carpet cleaning service depends on the following factors:</p>
-					</li>
-					<li class="ml-5 hide-if-not-expanded">
-						<p>Carpet's level of soiling;</p>
-					</li>
-					<li class="ml-5 hide-if-not-expanded">
-						<p>What cleaning methods will be used on the carpet;</p>
-					</li>
-					<li class="ml-5 hide-if-not-expanded">
-						<p>Whether any stain removal treatments are required.</p>
-						<p class="ml--5 new-homepage-paragraphs">On average, it typically ranges from 20 to 60 minutes per room.</p>
-					</li>
-					<li class="ml-5 hide-if-not-expanded">
-						<h3>Will carpet cleaning remove the stains on my carpet?</h3>
-						<p class="ml--5 new-homepage-paragraphs">In summary, yes, professional carpet cleaning is very effective in removing stubborn stains, dirt, grime, bacteria, dust mites, allergens, mould, pet dander, and odours. However, some particularly tough stains, especially very old or improperly treated ones, can present challenges for complete removal, even with professional assistance.</p>
-
-						<p class="ml--5 new-homepage-paragraphs">Thankfully, our extensive experience and high-quality equipment at Fine Carpet Cleaning London have led to our high-rates in successful stain removal. Nevertheless, we cannot guarantee the complete removal of every stain. We will thoroughly assess the stain and let you know during the quotation process whether or not the stain can be successfully eliminated.</p></li>
-					<li class="ml-5 hide-if-not-expanded">
-						<h3>Are you able to give me a carpet cleaning quote over the phone or do you need to visit my property?</h3>
-						<p class="ml--5 new-homepage-paragraphs">Yes, we can provide you with a cost estimate over the phone without the necessity of an in-person visit. For commercial properties, a site visit may be necessary. You have the option to get a carpet cleaning quote online as well.</p></li>
-					<li class="ml-5 hide-if-not-expanded">
-						<h3>How soon can I expect a carpet cleaner to visit me?</h3>
-						<p class="ml--5 new-homepage-paragraphs">We will make every effort to schedule your appointment as soon as possible. Typically, our schedule is booked up to three days in advance, although occasional exceptions may be possible.</p></li>
-					<li class="ml-5 hide-if-not-expanded">
-						<h3>What payment methods do you accept?</h3>
-						<p class="ml--5 new-homepage-paragraphs">We accept payment via debit/credit cards, bank transfers, as well as cash, directly to our team.</p></li>
-					<li class="ml-5 hide-if-not-expanded">
-						<h3>Can you provide me with an invoice for the carpet cleaning services?</h3>
-						<p class="ml--5 new-homepage-paragraphs">Yes, we will provide you with a receipt via email.</p></li>
-					<li class="ml-5 hide-if-not-expanded">
-						<h3>Are you insured?</h3>
-						<p class="ml--5 new-homepage-paragraphs">Yes, we are fully insured.</p></li>
-					<li class="ml-5 hide-if-not-expanded">
-						<h3>What happens if your cleaner damages anything while performing carpet cleaning at my property?</h3>
-						<p class="ml--5 new-homepage-paragraphs">We are fully insured and if an accident happens we are fully covered.</p></li>
-				</ul>
-			</div>
+			<FaqSection />
 
 			<FleurDivider></FleurDivider>
 
 			<div class="m-10% mb-3% flex flex-wrap flex-justify-center md-gap-15 gap-10">
-				<button class="cursor-pointer outline-none bg-brand-action hover-bg-brand-action-hover:hover font-size-6 font-600 w-200px h-60px c-paper flex flex-items-center flex-justify-center relative b-solid b-rd-3 b-4 b-brand-action hover-b-brand-action-hover:hover whitespace-normal line-height-6 word-spacing-0.5 py-9" style="box-shadow: 0 0 0 3px rgba(255, 255, 255, .9) inset; letter-spacing: 0.05rem;"><a class="c-paper font-size-5">GET A QUOTE</a></button>
-				<button class="cursor-pointer outline-none bg-brand-second-action hover-bg-brand-second-action-hover:hover font-size-6 font-600 w-200px h-60px c-paper flex flex-items-center flex-justify-center relative b-solid b-rd-3 b-4 b-brand-second-action hover-b-brand-second-action-hover:hover whitespace-normal line-height-6 word-spacing-0.5 py-9" style="box-shadow: 0 0 0 3px rgba(255, 255, 255, .9) inset; letter-spacing: 0.05rem;"><a class="c-paper font-size-5">PRICES</a></button>
+				<button class="cursor-pointer outline-none bg-brand-action hover-bg-brand-action-hover:hover font-size-6 font-600 w-200px h-60px c-paper flex flex-items-center flex-justify-center relative b-solid b-rd-3 b-4 b-brand-action hover-b-brand-action-hover:hover whitespace-normal line-height-6 word-spacing-0.5 py-9" style="box-shadow: 0 0 0 3px rgba(255, 255, 255, .9) inset; letter-spacing: 0.05rem;"><a href="/contact-us" class="c-paper font-size-5">REQUEST A QUOTE</a></button>
+				<button class="cursor-pointer outline-none bg-brand-second-action hover-bg-brand-second-action-hover:hover font-size-6 font-600 w-200px h-60px c-paper flex flex-items-center flex-justify-center relative b-solid b-rd-3 b-4 b-brand-second-action hover-b-brand-second-action-hover:hover whitespace-normal line-height-6 word-spacing-0.5 py-9" style="box-shadow: 0 0 0 3px rgba(255, 255, 255, .9) inset; letter-spacing: 0.05rem;"><a href="/prices" class="c-paper font-size-5">PRICES</a></button>
 			</div>
 		</>
 	);

@@ -113,8 +113,8 @@ export function FaqSection() {
           <Typography variant="h3">Do you have a cancellation fee?</Typography>
           <Typography variant="body">Yes, if you cancel on the day of the cleaning, you will lose your deposit.</Typography></li>
         <li>
-          <Typography variant="h3">Do I need to pay for the congestion/parking charge?</Typography>
-          <Typography variant="body">Yes, the client is requested to arrange suitable parking space for our vehicles within close proximity of the property and to cover any parking/congestion expenses, if applicable.</Typography></li>
+          <Typography variant="h3">Do I need to pay for the congestion / parking charge?</Typography>
+          <Typography variant="body">Yes, the client is requested to arrange suitable parking space for our vehicles within close proximity of the property and to cover any parking / congestion expenses, if applicable.</Typography></li>
         <li>
           <Typography variant="h3">Do I need to move furniture before steam extraction carpet cleaning?</Typography>
           <Typography variant="body">Your assistance in moving away small, delicate, or valuable furniture items such as lamps and ornaments would be greatly appreciated for insurance purposes. If possible, please position them in a secure area before our arrival, one that won't be affected during cleaning. We are more than willing to help move other lightweight furniture like chairs, armchairs, and tables during the cleaning. After the cleaning is done, we will put them back in their original positions. If heavy furniture, such as sofas, beds, wardrobes, and cupboards, needs to be moved, an additional charge will be placed. This is because it demands extra time and effort from our technician, who will be compensated accordingly. Our primary objective is to make the entire process as stress-free as possible for you.</Typography></li>
@@ -158,9 +158,7 @@ export function FaqSection() {
         </li>
         <li>
           <p>Previous mishandling of the stains.</p>
-        </li>
-        <li>
-          <p>Nonetheless, we are committed to making every possible effort to remove all stains from your carpet. Our approach involves:</p>
+          <Typography variant="body">Nonetheless, we are committed to making every possible effort to remove all stains from your carpet. Our approach involves:</Typography>
         </li>
         <li>
           <p>Utilising advanced cleaning equipment;</p>
@@ -185,7 +183,7 @@ export function FaqSection() {
           <Typography variant="body">Yes, we will either send you a receipt via email.</Typography></li>
         <li>
           <Typography variant="h3">Are you qualified?</Typography>
-          <Typography variant="body">Yes, we are qualified and fully trained members of NCCA (National Carpet Cleaners Association) – the UK’s recognised industry qualification.</Typography></li>
+          <Typography variant="body">Yes, we are qualified and fully trained members of <a class="color-paper-link hover-color-paper-link-hover:hover" href="https://trustedlocalcleaners.ncca.co.uk/listing/fine-carpet-cleaning-ltd/" target="_blank" rel="noopener">NCCA</a> (National Carpet Cleaners Association) – the UK’s recognised industry qualification.</Typography></li>
         <li>
           <Typography variant="h3">How long have you been in the carpet cleaning business?</Typography>
           <Typography variant="body">We have been in the carpet cleaning business since 2012. In these years, we have dealt with numerous types of carpets, rugs, upholstery and stains from commercial and residential customers and have gained a lot of experience. Thanks to this knowledge and our strive for perfect execution, we have been able to better our services by:</Typography></li>
@@ -335,9 +333,9 @@ export default function Page() {
         <p>Other professional carpet cleaning services we offer are:</p>
 
         <ul>
-          <li class="ml--5"><a class="color-paper-link-hover hover-color-paper-link:hover font-size-17.5px line-height-8 word-spacing--0.12 tracking--0.04" href="/">Dry carpet cleaning</a></li>
-          <li class="ml--5"><a class="color-paper-link-hover hover-color-paper-link:hover font-size-17.5px line-height-8 word-spacing--0.12 tracking--0.04" href="/">Eco-friendly carpet cleaning</a></li>
-          <li class="ml--5"><a class="color-paper-link-hover hover-color-paper-link:hover font-size-17.5px line-height-8 word-spacing--0.12 tracking--0.04" href="/">Fast-dry carpet cleaning</a></li>
+          <li class="ml--5"><a class="color-paper-link-hover hover-color-paper-link:hover font-size-17.5px line-height-8 word-spacing--0.12 tracking--0.04" href="/professional-carpet-cleaning-services/dry">Dry carpet cleaning</a></li>
+          <li class="ml--5"><a class="color-paper-link-hover hover-color-paper-link:hover font-size-17.5px line-height-8 word-spacing--0.12 tracking--0.04" href="/professional-carpet-cleaning-services/eco-friendly">Eco-friendly carpet cleaning</a></li>
+          <li class="ml--5"><a class="color-paper-link-hover hover-color-paper-link:hover font-size-17.5px line-height-8 word-spacing--0.12 tracking--0.04" href="/professional-carpet-cleaning-services/fast-dry">Fast-dry carpet cleaning</a></li>
         </ul>
       </div>
 
@@ -373,15 +371,15 @@ export default function Page() {
       <div class="mt-20 py-8 px-12 md-px-14 bg-paper b-rd-3" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 18%);">
         <ol style="counter-reset: ordered; list-style: none;">
           <li class="ml--5">
-            <h3 class="ml--5 font-size-6 md-font-size-7">Highly-efficient extractors.</h3>
-            <Typography variant="body">"Fine Carpet Cleaning Ltd" prides itself on utilising top-of-the-line cleaning equipment and products. Our machines, considered to be among the most powerful and effective portable machines in the world, have been tested extensively, and we have selected the best brands available in the UK market – "Mytee" and "Airflex." Further enhancing their performance, our team's engineer makes significant improvements to maximise their capabilities.</Typography>
+            <h3 class="ml--5 font-size-6 md-font-size-7">Highly-efficient extractors</h3>
+            <Typography variant="body">"Fine Carpet Cleaning Ltd" prides itself on utilising top-of-the-line cleaning equipment and products. Our machines, considered to be among the most powerful and effective portable machines in the world, have been tested extensively, and we have selected the best brands available in the UK market – "<a class="color-paper-link hover-color-paper-link-hover:hover" href="https://www.mytee.com/products/1003dx-speedster-deluxe-carpet-extractor/" target="_blank" rel="noopener">Mytee</a>" and "<a class="color-paper-link hover-color-paper-link-hover:hover" href="https://www.clean-smart.co.uk/store/airflex-storm" target="_blank" rel="noopener">Airflex</a>". Further enhancing their performance, our team's engineer makes significant improvements to maximise their capabilities.</Typography>
           </li>
           <li class="ml--5">
-            <h3 class="ml--5 font-size-6 md-font-size-7">Powerful vacuum cleaners.</h3>
+            <h3 class="ml--5 font-size-6 md-font-size-7">Powerful vacuum cleaners</h3>
             <Typography variant="body">Additionally, we employ a high-filtration twin-motor vacuum cleaner, which we believe to be the best on the market. This vacuum cleaner has been specifically designed for expert carpet cleaning, with one motor pounding the carpet while the other suctioning out any loose dirt, dry soil, and dust.</Typography>
           </li>
           <li class="ml--5">
-            <h3 class="ml--5 font-size-6 md-font-size-7">Thoughtfully chosen cleaning supplies.</h3>
+            <h3 class="ml--5 font-size-6 md-font-size-7">Thoughtfully chosen cleaning supplies</h3>
             <Typography variant="body">To ensure the best results, we use a variety of cleaning products from over 20 leading brands in the UK and US markets. Through extensive testing, we have chosen the detergents that provide exceptional outcomes. Among the brands we use are "Alltec," "Prochem," "Chemspec," "Solution World of Clean," and "TMF." This wide selection allows our technicians to choose the most suitable detergents based on the fabric of the carpet, level of soiling, and type of stains to be removed.</Typography>
             <Typography variant="body">With our top-notch cleaning equipment and products, we guarantee a professional carpet cleaning service of the highest quality.</Typography>
           </li>
@@ -485,7 +483,7 @@ export default function Page() {
         </tbody>
       </table>
 
-      <button class="outline-none bg-brand-second-action hover-bg-brand-second-action-hover:hover font-size-6 font-600 w-250px h-60px c-paper flex flex-items-center flex-justify-center relative b-solid b-rd-3 b-4 b-brand-second-action hover-b-brand-second-action-hover:hover whitespace-normal line-height-6 word-spacing-0.5 py-9 my-20 mx-auto" style="box-shadow: 0 0 0 3px rgba(255, 255, 255, .9) inset; letter-spacing: 0.05rem;"><a class="c-paper font-size-5">REQUEST A QUOTE</a></button>
+      <button class="outline-none bg-brand-second-action hover-bg-brand-second-action-hover:hover font-size-6 font-600 w-250px h-60px c-paper flex flex-items-center flex-justify-center relative b-solid b-rd-3 b-4 b-brand-second-action hover-b-brand-second-action-hover:hover whitespace-normal line-height-6 word-spacing-0.5 py-9 my-20 mx-auto" style="box-shadow: 0 0 0 3px rgba(255, 255, 255, .9) inset; letter-spacing: 0.05rem;"><a href="/contact-us" class="c-paper font-size-5">REQUEST A QUOTE</a></button>
 
       <FleurDivider></FleurDivider>
 
@@ -500,23 +498,23 @@ export default function Page() {
       <div class="mt-20 py-8 px-12 md-px-14 bg-paper b-rd-3" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 18%);">
         <ol style="counter-reset: ordered; list-style: none;">
           <li class="ml--5">
-            <h3 class="ml--5 font-size-6 md-font-size-7">Apply a stain protector.</h3>
-            <Typography variant="body">Our carpet steam cleaning specialist advises you to add a stain protector to your carpet and upholstery whenever possible. By doing this, you can save a significant amount of money on professional stain removal services. If you're interested, <a class="color-paper-link hover-color-paper-link-hover:hover" href="/">we recommend learning more about the advantages of using stain protection services.</a></Typography>
+            <h3 class="ml--5 font-size-6 md-font-size-7">Apply a stain protector</h3>
+            <Typography variant="body">Our carpet steam cleaning specialist advises you to add a stain protector to your carpet and upholstery whenever possible. By doing this, you can save a significant amount of money on professional stain removal services. If you're interested, we recommend <a class="color-paper-link hover-color-paper-link-hover:hover" href="/stain-protection-services">learning more about the advantages of using stain protection services</a>.</Typography>
           </li>
           <li class="ml--5">
-            <h3 class="ml--5 font-size-6 md-font-size-7">Try stain removal service.</h3>
-            <Typography variant="body">According to our carpet steam cleaning specialist, it is highly recommended to seek the services of a professional stain removal company if your carpet or upholstery has been stained. This is because attempting to clean the stain yourself or allowing it to dry may result in fabric damage, making it unlikely for the stain to be completely removed. In fact, trying to clean the stain on your own will likely seal it rather than eliminate it, making it even more difficult or even impossible for a professional steam clean carpet company to remove. Therefore, scheduling a <a class="color-paper-link hover-color-paper-link-hover:hover" href="/">professional stain removal service</a> from an expert steam clean carpet company today can save your valuable carpet or upholstery, which may be worth thousands.</Typography>
+            <h3 class="ml--5 font-size-6 md-font-size-7">Try stain removal service</h3>
+            <Typography variant="body">According to our carpet steam cleaning specialist, it is highly recommended to seek the services of a professional stain removal company if your carpet or upholstery has been stained. This is because attempting to clean the stain yourself or allowing it to dry may result in fabric damage, making it unlikely for the stain to be completely removed. In fact, trying to clean the stain on your own will likely seal it rather than eliminate it, making it even more difficult or even impossible for a professional steam clean carpet company to remove. Therefore, scheduling a <a class="color-paper-link hover-color-paper-link-hover:hover" href="/professional-stain-removal-services">professional stain removal service</a> from an expert steam clean carpet company today can save your valuable carpet or upholstery, which may be worth thousands.</Typography>
           </li>
           <li class="ml--5">
-            <h3 class="ml--5 font-size-6 md-font-size-7">Decide with knowledge and awareness.</h3>
+            <h3 class="ml--5 font-size-6 md-font-size-7">Decide with knowledge and awareness</h3>
             <Typography variant="body"><a class="color-paper-link hover-color-paper-link-hover:hover" href="/services">By exploring our other services</a>, you may discover additional services that can sometimes be overlooked or forgotten. Our team takes pride in providing a comprehensive range of services, including upholstery cleaning, rug cleaning, and many others. Don't miss out on the opportunity to experience the full range of our expertise and make the most informed decisions for your cleaning needs.</Typography>
           </li>
           <li class="ml--5">
-            <h3 class="ml--5 font-size-6 md-font-size-7">Unite multiple services.</h3>
+            <h3 class="ml--5 font-size-6 md-font-size-7">Unite multiple services</h3>
             <Typography variant="body">For optimal cost efficiency, our skilled carpet steam cleaning service specialists suggest combining multiple services into one appointment. Choosing to have technicians visit separately can result in additional costs such as travel time, parking fees, and the management of heavy equipment during loading and unloading, making individual appointments less financially advantageous.</Typography>
           </li>
           <li class="ml--5">
-            <h3 class="ml--5 font-size-6 md-font-size-7">Experience the advantages of good health.</h3>
+            <h3 class="ml--5 font-size-6 md-font-size-7">Experience the advantages of good health</h3>
             <Typography variant="body">If you have carpet, carpet floor covering, or upholstery, it's important to be aware of the health benefits of keeping them clean. These items can accumulate significant amounts of dust, microorganisms, and dirt particles that can potentially lead to health problems. Not properly taking care of them can increase the risk of experiencing various reactions, skin issues, and allergies. To avoid these issues, our carpet cleaning specialist recommends using professional carpet steam cleaning services in London at least once a year. If you have a high amount of traffic on your carpets, it is in your best interest to have them cleaned more frequently.</Typography>
           </li>
         </ol>
@@ -539,7 +537,7 @@ export default function Page() {
 
       <div class="m-10% mb-3% flex flex-wrap flex-justify-center md-gap-15 gap-10">
         <button class="cursor-pointer outline-none bg-brand-second-action hover-bg-brand-second-action-hover:hover font-size-6 font-600 w-200px h-60px c-paper flex flex-items-center flex-justify-center relative b-solid b-rd-3 b-4 b-brand-second-action hover-b-brand-second-action-hover:hover whitespace-normal line-height-6 word-spacing-0.5 py-9" style="box-shadow: 0 0 0 3px rgba(255, 255, 255, .9) inset; letter-spacing: 0.05rem;"><a href="/services" class="c-paper font-size-5">SERVICES</a></button>
-        <button class="cursor-pointer outline-none bg-brand-action hover-bg-brand-action-hover:hover font-size-6 font-600 w-200px h-60px c-paper flex flex-items-center flex-justify-center relative b-solid b-rd-3 b-4 b-brand-action hover-b-brand-action-hover:hover whitespace-normal line-height-6 word-spacing-0.5 py-9" style="box-shadow: 0 0 0 3px rgba(255, 255, 255, .9) inset; letter-spacing: 0.05rem;"><a href="/Contact-us" class="c-paper font-size-5">REQUEST A QUOTE</a></button>
+        <button class="cursor-pointer outline-none bg-brand-action hover-bg-brand-action-hover:hover font-size-6 font-600 w-200px h-60px c-paper flex flex-items-center flex-justify-center relative b-solid b-rd-3 b-4 b-brand-action hover-b-brand-action-hover:hover whitespace-normal line-height-6 word-spacing-0.5 py-9" style="box-shadow: 0 0 0 3px rgba(255, 255, 255, .9) inset; letter-spacing: 0.05rem;"><a href="/contact-us" class="c-paper font-size-5">REQUEST A QUOTE</a></button>
       </div>
 
 

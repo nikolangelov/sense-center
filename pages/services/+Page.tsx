@@ -1,10 +1,10 @@
 function FleurDivider() {
-	return (
-		<div class="m-auto my-30 md-my-36 position-relative w-80%">
-			<div class="divider-shadow overflow-hidden h-0.5 after-block::after after-w-full::after after-h-6::after after-mx-auto::after after-mt--6::after"></div>
-			<div class="w-11 h-11 position-absolute position-bottom--6 left-47% bg-#f7f7f7"><img class="position-absolute max-w-7 mx-1.8" src="/assets/output-onlinepngtools.png" /></div>
-		</div>
-	);
+  return (
+    <div class="m-auto my-30 md-my-36 position-relative w-80%">
+      <div class="divider-shadow overflow-hidden h-0.5 after-block::after after-w-full::after after-h-6::after after-mx-auto::after after-mt--6::after"></div>
+      <div class="w-11 h-11 position-absolute position-bottom--6 left-47% bg-#f7f7f7"><img class="position-absolute max-w-7 mx-1.8" src="/assets/output-onlinepngtools.png" /></div>
+    </div>
+  );
 }
 
 function AllServicesButton(props: { href: string; src: string; alt: string; children: HTMLElement | any }) {
@@ -32,17 +32,17 @@ export default function Page() {
 
       <h1 class="md-mt-20 mt-10 md-mb-30 mb-0">All services we offer</h1>
 
-      <a href="/"><h2 class="hover-c-brand:hover md-mb-15 mb-5">Carpet cleaning services</h2></a>
+      <a href="/professional-carpet-cleaning-services"><h2 class="hover-c-brand:hover md-mb-15 mb-5">Carpet cleaning services</h2></a>
 
       <AllServicesButtonContainer>
         <AllServicesButton
-          href="/"
+          href="/professional-carpet-cleaning-services/steam"
           src="/assets/Професионално почистване на заведения.jpg"
           alt=""
         >Carpet steam cleaning
         </AllServicesButton>
         <AllServicesButton
-          href="/"
+          href="/professional-carpet-cleaning-services/dry"
           src="/assets/Професионално почистване на заведения.jpg"
           alt=""
         >Dry carpet cleaning
@@ -51,13 +51,13 @@ export default function Page() {
 
       <AllServicesButtonContainer>
         <AllServicesButton
-          href="/"
+          href="/professional-carpet-cleaning-services/eco-friendly"
           src="/assets/Професионално почистване на заведения.jpg"
           alt=""
         >Eco-friendly carpet cleaning
         </AllServicesButton>
         <AllServicesButton
-          href="/"
+          href="/professional-carpet-cleaning-services/same-day"
           src="/assets/Професионално почистване на заведения.jpg"
           alt=""
         >Same day carpet cleaning
@@ -66,13 +66,13 @@ export default function Page() {
 
       <AllServicesButtonContainer>
         <AllServicesButton
-          href="/"
+          href="/professional-carpet-cleaning-services/fast-dry"
           src="/assets/Професионално почистване на заведения.jpg"
           alt=""
         >Fast dry carpet cleaning
         </AllServicesButton>
         <AllServicesButton
-          href="/"
+          href="/professional-stain-removal-services"
           src="/assets/Професионално почистване на заведения.jpg"
           alt=""
         >Carpet stain removal
@@ -81,13 +81,13 @@ export default function Page() {
 
       <AllServicesButtonContainer>
         <AllServicesButton
-          href="/"
+          href="/stain-protection-services"
           src="/assets/Професионално почистване на заведения.jpg"
           alt=""
         >Carpet stain protection
         </AllServicesButton>
         <AllServicesButton
-          href="/"
+          href="/professional-carpet-cleaning-services/commercial"
           src="/assets/Професионално почистване на заведения.jpg"
           alt=""
         >Commercial carpet cleaning
@@ -96,13 +96,13 @@ export default function Page() {
 
       <AllServicesButtonContainer>
         <AllServicesButton
-          href="/"
+          href="/professional-carpet-cleaning-services/residential"
           src="/assets/Професионално почистване на заведения.jpg"
           alt=""
         >Residential carpet cleaning
         </AllServicesButton>
         <AllServicesButton
-          href="/"
+          href="/professional-carpet-cleaning-services/commercial/office"
           src="/assets/Професионално почистване на заведения.jpg"
           alt=""
         >Office carpet cleaning
@@ -111,17 +111,17 @@ export default function Page() {
 
       <FleurDivider></FleurDivider>
 
-      <a href="/"><h2 class="hover-c-brand:hover md-mb-15 mb-5">Upholstery cleaning services</h2></a>
+      <a href="/professional-upholstery-cleaning-services"><h2 class="hover-c-brand:hover md-mb-15 mb-5">Upholstery cleaning services</h2></a>
 
       <AllServicesButtonContainer>
         <AllServicesButton
-          href="/"
+          href="/professional-upholstery-cleaning-services/sofa"
           src="/assets/Професионално почистване на заведения.jpg"
           alt=""
         >Sofa cleaning
         </AllServicesButton>
         <AllServicesButton
-          href="/"
+          href="/professional-upholstery-cleaning-services/sofa/leather"
           src="/assets/Професионално почистване на заведения.jpg"
           alt=""
         >Leather sofa cleaning
@@ -130,13 +130,13 @@ export default function Page() {
 
       <AllServicesButtonContainer>
         <AllServicesButton
-          href="/"
+          href="/professional-upholstery-cleaning-services/furniture"
           src="/assets/Професионално почистване на заведения.jpg"
           alt=""
         >Furniture cleaning
         </AllServicesButton>
         <AllServicesButton
-          href="/"
+          href="/professional-upholstery-cleaning-services/mattress"
           src="/assets/Професионално почистване на заведения.jpg"
           alt=""
         >Mattress cleaning
@@ -145,13 +145,13 @@ export default function Page() {
 
       <AllServicesButtonContainer>
         <AllServicesButton
-          href="/"
+          href="/professional-upholstery-cleaning-services/pillow"
           src="/assets/Професионално почистване на заведения.jpg"
           alt=""
         >Pillow cleaning
         </AllServicesButton>
         <AllServicesButton
-          href="/"
+          href="/professional-stain-removal-services"
           src="/assets/Професионално почистване на заведения.jpg"
           alt=""
         >Upholstery stain removal
@@ -160,7 +160,7 @@ export default function Page() {
 
       <AllServicesButtonContainer>
         <AllServicesButton
-          href="/"
+          href="/stain-protection-services"
           src="/assets/Професионално почистване на заведения.jpg"
           alt=""
         >Upholstery stain protection
@@ -169,17 +169,17 @@ export default function Page() {
 
       <FleurDivider></FleurDivider>
 
-      <a href="/"><h2 class="hover-c-brand:hover md-mb-15 mb-5">Rug cleaning services</h2></a>
+      <a href="/professional-rug-cleaning-services"><h2 class="hover-c-brand:hover md-mb-15 mb-5">Rug cleaning services</h2></a>
 
       <AllServicesButtonContainer>
         <AllServicesButton
-          href="/"
+          href="/professional-rug-cleaning-services/steam"
           src="/assets/Професионално почистване на заведения.jpg"
           alt=""
         >Rug steam cleaning
         </AllServicesButton>
         <AllServicesButton
-          href="/"
+          href="/professional-rug-cleaning-services/dry"
           src="/assets/Професионално почистване на заведения.jpg"
           alt=""
         >Dry rug cleaning
@@ -188,13 +188,13 @@ export default function Page() {
 
       <AllServicesButtonContainer>
         <AllServicesButton
-          href="/"
+          href="/professional-stain-removal-services"
           src="/assets/Професионално почистване на заведения.jpg"
           alt=""
         >Rug stain removal
         </AllServicesButton>
         <AllServicesButton
-          href="/"
+          href="/stain-protection-services"
           src="/assets/Професионално почистване на заведения.jpg"
           alt=""
         >Rug stain protection
@@ -203,11 +203,11 @@ export default function Page() {
 
       <FleurDivider></FleurDivider>
 
-      <a href="/"><h2 class="hover-c-brand:hover md-mb-15 mb-5">Other services</h2></a>
+      <h2>Other services</h2>
 
       <AllServicesButtonContainer>
         <AllServicesButton
-          href="/"
+          href="/antiviral-sanitisation-services"
           src="/assets/Професионално почистване на заведения.jpg"
           alt=""
         >Antiviral sanitisation
@@ -217,8 +217,8 @@ export default function Page() {
       <FleurDivider></FleurDivider>
 
       <div class="m-10% mb-3% flex flex-wrap flex-justify-center md-gap-15 gap-10">
-        <button class="cursor-pointer outline-none bg-brand-second-action hover-bg-brand-second-action-hover:hover font-size-6 font-600 w-200px h-60px c-paper flex flex-items-center flex-justify-center relative b-solid b-rd-3 b-4 b-brand-second-action hover-b-brand-second-action-hover:hover whitespace-normal line-height-6 word-spacing-0.5 py-9" style="box-shadow: 0 0 0 3px rgba(255, 255, 255, .9) inset; letter-spacing: 0.05rem;"><a class="c-paper font-size-5">PRICES</a></button>
-        <button class="cursor-pointer outline-none bg-brand-action hover-bg-brand-action-hover:hover font-size-6 font-600 w-200px h-60px c-paper flex flex-items-center flex-justify-center relative b-solid b-rd-3 b-4 b-brand-action hover-b-brand-action-hover:hover whitespace-normal line-height-6 word-spacing-0.5 py-9" style="box-shadow: 0 0 0 3px rgba(255, 255, 255, .9) inset; letter-spacing: 0.05rem;"><a class="c-paper font-size-5">GET A QUOTE</a></button>
+        <button class="cursor-pointer outline-none bg-brand-second-action hover-bg-brand-second-action-hover:hover font-size-6 font-600 w-200px h-60px c-paper flex flex-items-center flex-justify-center relative b-solid b-rd-3 b-4 b-brand-second-action hover-b-brand-second-action-hover:hover whitespace-normal line-height-6 word-spacing-0.5 py-9" style="box-shadow: 0 0 0 3px rgba(255, 255, 255, .9) inset; letter-spacing: 0.05rem;"><a href="/prices" class="c-paper font-size-5">PRICES</a></button>
+        <button class="cursor-pointer outline-none bg-brand-action hover-bg-brand-action-hover:hover font-size-6 font-600 w-200px h-60px c-paper flex flex-items-center flex-justify-center relative b-solid b-rd-3 b-4 b-brand-action hover-b-brand-action-hover:hover whitespace-normal line-height-6 word-spacing-0.5 py-9" style="box-shadow: 0 0 0 3px rgba(255, 255, 255, .9) inset; letter-spacing: 0.05rem;"><a href="/contact-us" class="c-paper font-size-5">REQUEST A QUOTE</a></button>
       </div>
     </>
   );

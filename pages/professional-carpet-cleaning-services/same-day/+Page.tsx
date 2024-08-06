@@ -154,10 +154,8 @@ export function FaqSection() {
           </li>
           <li>
             <p>Have the stains not been properly treated in the past?</p>
-          </li>
-          <li>
-            <p>Nonetheless, we promise that we will try our best to remove all of the stains from your carpet. This includes:</p>
-          </li>
+            <Typography variant="body">Nonetheless, we promise that we will try our best to remove all of the stains from your carpet. This includes:</Typography>
+            </li>
           <li>
             <p>The usage of high-quality cleaning equipment;</p>
           </li>
@@ -245,10 +243,10 @@ export default function Page() {
         <p>If the situation is more complicated, we recommend that you take a look at our professional carpet cleaning services:</p>
 
         <ul>
-          <li class="ml--5"><a class="color-paper-link-hover hover-color-paper-link:hover font-size-17.5px line-height-8 word-spacing--0.12 tracking--0.04" href="/">Professional carpet steam cleaning services</a></li>
-          <li class="ml--5"><a class="color-paper-link-hover hover-color-paper-link:hover font-size-17.5px line-height-8 word-spacing--0.12 tracking--0.04" href="/">Dry carpet cleaning services</a></li>
-          <li class="ml--5"><a class="color-paper-link-hover hover-color-paper-link:hover font-size-17.5px line-height-8 word-spacing--0.12 tracking--0.04" href="/">Eco-friendly carpet cleaning services</a></li>
-          <li class="ml--5"><a class="color-paper-link-hover hover-color-paper-link:hover font-size-17.5px line-height-8 word-spacing--0.12 tracking--0.04" href="/">Fast dry carpet cleaning services</a></li>
+          <li class="ml--5"><a class="color-paper-link-hover hover-color-paper-link:hover font-size-17.5px line-height-8 word-spacing--0.12 tracking--0.04" href="/professional-carpet-cleaning-services/steam">Professional carpet steam cleaning services</a></li>
+          <li class="ml--5"><a class="color-paper-link-hover hover-color-paper-link:hover font-size-17.5px line-height-8 word-spacing--0.12 tracking--0.04" href="/professional-carpet-cleaning-services/dry">Dry carpet cleaning services</a></li>
+          <li class="ml--5"><a class="color-paper-link-hover hover-color-paper-link:hover font-size-17.5px line-height-8 word-spacing--0.12 tracking--0.04" href="/professional-carpet-cleaning-services/eco-friendly">Eco-friendly carpet cleaning services</a></li>
+          <li class="ml--5"><a class="color-paper-link-hover hover-color-paper-link:hover font-size-17.5px line-height-8 word-spacing--0.12 tracking--0.04" href="/professional-carpet-cleaning-services/fast-dry">Fast dry carpet cleaning services</a></li>
           <li class="ml--5"><a class="color-paper-link-hover hover-color-paper-link:hover font-size-17.5px line-height-8 word-spacing--0.12 tracking--0.04" href="/services">All of our services</a></li>
         </ul>
       </div>
@@ -259,15 +257,15 @@ export default function Page() {
       <div class="mt-20 py-8 px-12 md-px-14 bg-paper b-rd-3" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 18%);">
         <ol style="counter-reset: ordered; list-style: none;">
           <li class="ml--5">
-            <h3 class="ml--5 font-size-6 md-font-size-7">Advanced extractors.</h3>
-            <Typography variant="body">The machines we use for emergency carpet cleaning service are the result of a careful selection process. First, we researched all the leading brands in the global market. Then we went with <a class="color-paper-link hover-color-paper-link-hover:hover" href="https://www.mytee.com/products/1003dx-speedster-deluxe-carpet-extractor/" target="_blank" rel="noopener">“Mytee”</a>, the top company within the US, along with <a class="color-paper-link hover-color-paper-link-hover:hover" href="https://www.clean-smart.co.uk/store/airflex-storm" target="_blank" rel="noopener">“Airflex”</a>, the top manufacturer within the UK, as the most suitable choices. Our engineers then went on to improve the productivity of the devices.</Typography>
+            <h3 class="ml--5 font-size-6 md-font-size-7">Advanced extractors</h3>
+            <Typography variant="body">The machines we use for emergency carpet cleaning service are the result of a careful selection process. First, we researched all the leading brands in the global market. Then we went with “<a class="color-paper-link hover-color-paper-link-hover:hover" href="https://www.mytee.com/products/1003dx-speedster-deluxe-carpet-extractor/" target="_blank" rel="noopener">Mytee</a>”, the top company within the US, along with “<a class="color-paper-link hover-color-paper-link-hover:hover" href="https://www.clean-smart.co.uk/store/airflex-storm" target="_blank" rel="noopener">Airflex</a>”, the top manufacturer within the UK, as the most suitable choices. Our engineers then went on to improve the productivity of the devices.</Typography>
           </li>
           <li class="ml--5">
-            <h3 class="ml--5 font-size-6 md-font-size-7">Powerful dual-motor cleaners.</h3>
+            <h3 class="ml--5 font-size-6 md-font-size-7">Powerful dual-motor cleaners</h3>
             <Typography variant="body">We use a high-filtration dual-motor hoover, which we believe to be the best on the market. It is intended for high-performance carpet cleaning the same day. One of the dual engines pounds on the carpet while the other sucks up any loose dirt, dry soil, or dust.</Typography>
           </li>
           <li class="ml--5">
-            <h3 class="ml--5 font-size-6 md-font-size-7">Carefully selected cleaning products.</h3>
+            <h3 class="ml--5 font-size-6 md-font-size-7">Carefully selected cleaning products</h3>
             <Typography variant="body">In terms of cleaning solutions, we employ over 20 different detergents since we understand that each case requires a different approach. We have analysed practically all the cleaning solutions on the market and selected those that give the best results. These include "Alltec", "Prochem", "Chemspec", "Solution World of Clean", "TMF", and so on.</Typography>
           </li>
         </ol>
@@ -370,7 +368,7 @@ export default function Page() {
         </tbody>
       </table>
 
-      <button class="outline-none bg-brand-second-action hover-bg-brand-second-action-hover:hover font-size-6 font-600 w-250px h-60px c-paper flex flex-items-center flex-justify-center relative b-solid b-rd-3 b-4 b-brand-second-action hover-b-brand-second-action-hover:hover whitespace-normal line-height-6 word-spacing-0.5 py-9 my-20 mx-auto" style="box-shadow: 0 0 0 3px rgba(255, 255, 255, .9) inset; letter-spacing: 0.05rem;"><a class="c-paper font-size-5">REQUEST A QUOTE</a></button>
+      <button class="outline-none bg-brand-second-action hover-bg-brand-second-action-hover:hover font-size-6 font-600 w-250px h-60px c-paper flex flex-items-center flex-justify-center relative b-solid b-rd-3 b-4 b-brand-second-action hover-b-brand-second-action-hover:hover whitespace-normal line-height-6 word-spacing-0.5 py-9 my-20 mx-auto" style="box-shadow: 0 0 0 3px rgba(255, 255, 255, .9) inset; letter-spacing: 0.05rem;"><a href="/contact-us" class="c-paper font-size-5">REQUEST A QUOTE</a></button>
 
       <FleurDivider></FleurDivider>
 
@@ -385,27 +383,27 @@ export default function Page() {
       <div class="mt-20 py-8 px-12 md-px-14 bg-paper b-rd-3" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 18%);">
         <ol style="counter-reset: ordered; list-style: none;">
           <li class="ml--5">
-            <h3 class="ml--5 font-size-6 md-font-size-7">Quick action for Fresh Stains.</h3>
+            <h3 class="ml--5 font-size-6 md-font-size-7">Quick action for Fresh Stains</h3>
             <Typography variant="body">Accidents happen! With same day carpet cleaning, the quicker you act, the better.
             <br></br>
             Reach out to us right after a spill happens to prevent the stain from becoming permanent. If you treat new stains as quickly as possible, it is possible to remove them completely with just a few cleaning products. If there are already stains, you should inform us in advance so that our experts can assess the problem and bring any special stain removal that may be required.</Typography>
           </li>
           <li class="ml--5">
-            <h3 class="ml--5 font-size-6 md-font-size-7">Tell us more about the carpet.</h3>
+            <h3 class="ml--5 font-size-6 md-font-size-7">Tell us more about the carpet</h3>
             <Typography variant="body">Before the professionals arrive, please let us know what the problem with the carpet is. This includes facts such as the type of stain, heavily soiled areas, unexpected spillages or pet accidents. It is important to tell us about the material of the carpet so that we can use the right cleaning solutions. With this information the experts can tailor the cleaning method to your specific needs, ensuring a safe and effective cleaning of your home.</Typography>
           </li>
           <li class="ml--5">
-            <h3 class="ml--5 font-size-6 md-font-size-7">Plan Ahead (a little).</h3>
+            <h3 class="ml--5 font-size-6 md-font-size-7">Plan Ahead (a little)</h3>
             <Typography variant="body">Same day carpet cleaning appointments book up quickly, especially during peak hours. To ensure your preferred time slot, call us as soon as possible once a cleaning requirement occurs. The earlier you contact us, the more scheduling options we can offer you for later that day.</Typography>
             <Typography variant="body">Before you call us, take a few minutes to gather important information about your carpets. We need to know what material the carpet is made of, what type of stain it is, and how long it has been there. This will help us prepare for the cleaning and ensure the best results.</Typography>
           </li>
           <li class="ml--5">
-            <h3 class="ml--5 font-size-6 md-font-size-7">Save money and time.</h3>
+            <h3 class="ml--5 font-size-6 md-font-size-7">Save money and time</h3>
             <Typography variant="body">Enjoy the variety of services that can save both time and money. <a class="color-paper-link hover-color-paper-link-hover:hover" href="/services">Check out our wide range of carpet cleaning services</a> so you can make informed decisions regarding your carpets. We have specialised solutions for deep cleaning, stain removal, and odour treatment.</Typography>
             <Typography variant="body">By combining our same day carpet cleaning with other services, such as upholstery cleaning or specialised stain treatment, you will not only improve the cleanliness of your home or workplace, but also save you time and money. By completing numerous cleaning requirements in one visit, you can avoid multiple appointments and scheduling issues. In addition, combining services generally gets  you lower prices, making it an affordable option for a complete carpet cleaning.</Typography>
           </li>
           <li class="ml--5">
-            <h3 class="ml--5 font-size-6 md-font-size-7">Create a healthier indoor environment.</h3>
+            <h3 class="ml--5 font-size-6 md-font-size-7">Create a healthier indoor environment</h3>
             <Typography variant="body">Carpets and rugs are some of the things that collect a lot of dust, bacteria, and dirt particles in your home. They are harmful for your health, and they're definitely not something you want to have around.</Typography>
             <Typography variant="body">If you do not take measures for prevention, you are at a higher risk of various problems, such as skin issues and allergies. Therefore, our carpet cleaning specialist recommends you think about using the services of a cleaning carpet company once a year, depending on how much use your rugs, carpets, and upholstery receive.</Typography>
           </li>
@@ -429,7 +427,7 @@ export default function Page() {
 
       <div class="m-10% mb-3% flex flex-wrap flex-justify-center md-gap-15 gap-10">
         <button class="cursor-pointer outline-none bg-brand-second-action hover-bg-brand-second-action-hover:hover font-size-6 font-600 w-200px h-60px c-paper flex flex-items-center flex-justify-center relative b-solid b-rd-3 b-4 b-brand-second-action hover-b-brand-second-action-hover:hover whitespace-normal line-height-6 word-spacing-0.5 py-9" style="box-shadow: 0 0 0 3px rgba(255, 255, 255, .9) inset; letter-spacing: 0.05rem;"><a href="/services" class="c-paper font-size-5">SERVICES</a></button>
-        <button class="cursor-pointer outline-none bg-brand-action hover-bg-brand-action-hover:hover font-size-6 font-600 w-200px h-60px c-paper flex flex-items-center flex-justify-center relative b-solid b-rd-3 b-4 b-brand-action hover-b-brand-action-hover:hover whitespace-normal line-height-6 word-spacing-0.5 py-9" style="box-shadow: 0 0 0 3px rgba(255, 255, 255, .9) inset; letter-spacing: 0.05rem;"><a href="/Contact-us" class="c-paper font-size-5">REQUEST A QUOTE</a></button>
+        <button class="cursor-pointer outline-none bg-brand-action hover-bg-brand-action-hover:hover font-size-6 font-600 w-200px h-60px c-paper flex flex-items-center flex-justify-center relative b-solid b-rd-3 b-4 b-brand-action hover-b-brand-action-hover:hover whitespace-normal line-height-6 word-spacing-0.5 py-9" style="box-shadow: 0 0 0 3px rgba(255, 255, 255, .9) inset; letter-spacing: 0.05rem;"><a href="/contact-us" class="c-paper font-size-5">REQUEST A QUOTE</a></button>
       </div>
 
 

@@ -1,6 +1,6 @@
 import 'uno.css'
 import "./style.css";
-import {children, createEffect, JSX, onCleanup} from "solid-js";
+import { children, createEffect, JSX, onCleanup } from "solid-js";
 import { createSignal, Show } from "solid-js";
 import HamburgerMenuIcon from '~icons/mdi/hamburger-menu';
 import MdiKeyboardArrowUp from '~icons/mdi/keyboard-arrow-up';
@@ -74,8 +74,8 @@ const MyDropdown = () => {
               <DropownMenuLink href="/professional-carpet-cleaning-services/eco-friendly">Eco-friendly carpet cleaning</DropownMenuLink>
               <DropownMenuLink href="/professional-carpet-cleaning-services/same-day">Same day carpet cleaning</DropownMenuLink>
               <DropownMenuLink href="/professional-carpet-cleaning-services/fast-dry">Fast dry carpet cleaning</DropownMenuLink>
-              <DropownMenuLink href="/">Carpet stain removal</DropownMenuLink>
-              <DropownMenuLink href="/">Carpet stain protection</DropownMenuLink>
+              <DropownMenuLink href="/professional-stain-removal-services">Carpet stain removal</DropownMenuLink>
+              <DropownMenuLink href="/stain-protection-services">Carpet stain protection</DropownMenuLink>
               <DropownMenuLink href="/professional-carpet-cleaning-services/commercial">Commercial carpet cleaning</DropownMenuLink>
               <DropownMenuLink href="/professional-carpet-cleaning-services/residential">Residential carpet cleaning</DropownMenuLink>
               <DropownMenuLink href="/professional-carpet-cleaning-services/commercial/office">Office carpet cleaning</DropownMenuLink>
@@ -84,13 +84,13 @@ const MyDropdown = () => {
               <DropownMenuLink href="/professional-upholstery-cleaning-services/furniture">Furniture cleaning</DropownMenuLink>
               <DropownMenuLink href="/professional-upholstery-cleaning-services/mattress">Mattress cleaning</DropownMenuLink>
               <DropownMenuLink href="/professional-upholstery-cleaning-services/pillow">Pillow cleaning</DropownMenuLink>
-              <DropownMenuLink href="/">Upholstery stain removal</DropownMenuLink>
-              <DropownMenuLink href="/">Upholstery stain protection</DropownMenuLink>
-              <DropownMenuLink href="/">Rug steam cleaning</DropownMenuLink>
-              <DropownMenuLink href="/">Dry rug cleaning</DropownMenuLink>
-              <DropownMenuLink href="/">Rug stain removal</DropownMenuLink>
-              <DropownMenuLink href="/">Rug stain protection</DropownMenuLink>
-              <DropownMenuLink href="/">Antiviral sanitisation</DropownMenuLink>
+              <DropownMenuLink href="/professional-stain-removal-services">Upholstery stain removal</DropownMenuLink>
+              <DropownMenuLink href="/stain-protection-services">Upholstery stain protection</DropownMenuLink>
+              <DropownMenuLink href="/professional-rug-cleaning-services/steam">Rug steam cleaning</DropownMenuLink>
+              <DropownMenuLink href="/professional-rug-cleaning-services/dry">Dry rug cleaning</DropownMenuLink>
+              <DropownMenuLink href="/professional-stain-removal-services">Rug stain removal</DropownMenuLink>
+              <DropownMenuLink href="/stain-protection-services">Rug stain protection</DropownMenuLink>
+              <DropownMenuLink href="/antiviral-sanitisation-services">Antiviral sanitisation</DropownMenuLink>
               <hr class="b-none bg-brand-second-action h-1px my-0"></hr>
             </div>
           )}
@@ -99,33 +99,33 @@ const MyDropdown = () => {
         <div
           class={`py-5 b-b-solid b-b border-brand-second-action transition-all duration-500 ${isDropdownOpen() ? 'mt-245' : 'mt-0'}`}
         >
-          <a href="/Prices" class="flex flex-nowrap c-paper-inv hover-c-brand:hover font-size-5 font-500" style="font-family: Open Sans, sans-serif; letter-spacing: 0.6px;">
+          <a href="/prices" class="flex flex-nowrap c-paper-inv hover-c-brand:hover font-size-5 font-500" style="font-family: Open Sans, sans-serif; letter-spacing: 0.6px;">
             <RiMoneyPoundCircleLine class="mr-3" />Prices
           </a>
         </div>
 
         <div class="py-5 b-b-solid b-b border-brand-second-action">
-          <a href="/Reviews" class="flex flex-nowrap c-paper-inv hover-c-brand:hover font-size-5 font-500" style="font-family: Open Sans, sans-serif; letter-spacing: 0.6px;">
+          <a href="/reviews" class="flex flex-nowrap c-paper-inv hover-c-brand:hover font-size-5 font-500" style="font-family: Open Sans, sans-serif; letter-spacing: 0.6px;">
             <MdiCommentAccountOutline class="mr-3" />Reviews
           </a>
         </div>
         <div class="py-5 b-b-solid b-b border-brand-second-action">
-          <a href="/About-us" class="flex flex-nowrap c-paper-inv hover-c-brand:hover font-size-5 font-500" style="font-family: Open Sans, sans-serif; letter-spacing: 0.6px;">
+          <a href="/about-us" class="flex flex-nowrap c-paper-inv hover-c-brand:hover font-size-5 font-500" style="font-family: Open Sans, sans-serif; letter-spacing: 0.6px;">
             <MdiAccountGroupOutline class="mr-3" />About us
           </a>
         </div>
         <div class="py-5 b-b-solid b-b border-brand-second-action">
-          <a href="/Areas-we-cover" class="flex flex-nowrap c-paper-inv hover-c-brand:hover font-size-5 font-500" style="font-family: Open Sans, sans-serif; letter-spacing: 0.6px;">
+          <a href="/areas-we-cover" class="flex flex-nowrap c-paper-inv hover-c-brand:hover font-size-5 font-500" style="font-family: Open Sans, sans-serif; letter-spacing: 0.6px;">
             <MdiPlaceOutline class="mr-3" />Areas we cover
           </a>
         </div>
         <div class="py-5 b-b-solid b-b border-brand-second-action">
-          <a href="/Contact-us" class="flex flex-nowrap c-paper-inv hover-c-brand:hover font-size-5 font-500" style="font-family: Open Sans, sans-serif; letter-spacing: 0.6px;">
+          <a href="/contact-us" class="flex flex-nowrap c-paper-inv hover-c-brand:hover font-size-5 font-500" style="font-family: Open Sans, sans-serif; letter-spacing: 0.6px;">
             <MdiPhoneOutline class="mr-3" />Contact us
           </a>
         </div>
         <div class="py-5 b-b-solid b-b border-brand-second-action">
-          <a href="/Feedback" class="flex flex-nowrap c-paper-inv hover-c-brand:hover font-size-5 font-500" style="font-family: Open Sans, sans-serif; letter-spacing: 0.6px;">
+          <a href="/feedback" class="flex flex-nowrap c-paper-inv hover-c-brand:hover font-size-5 font-500" style="font-family: Open Sans, sans-serif; letter-spacing: 0.6px;">
             <MdiEmailEditOutline class="mr-3" />Feedback
           </a>
         </div>
@@ -176,7 +176,7 @@ export default function LayoutDefault(props: { children?: JSX.Element }) {
                 </div>
               </div>
               <div class="flex flex-col flex-wrap">
-              <a href="/professional-upholstery-cleaning-services"><h3 class="whitespace-normal text-center hover-c-brand:hover">Upholstery cleaning services</h3></a>
+                <a href="/professional-upholstery-cleaning-services"><h3 class="whitespace-normal text-center hover-c-brand:hover">Upholstery cleaning services</h3></a>
                 <div class="dropdown-content flex-row flex-wrap hidden flex-items-center flex-content-center">
                   <DropdownMenuItem href="/professional-upholstery-cleaning-services/mattress" src="/assets/Професионално почистване на заведения.jpg">Mattress</DropdownMenuItem>
                   <DropdownMenuItem href="/professional-upholstery-cleaning-services/sofa" src="/assets/Професионално почистване на заведения.jpg">Sofa</DropdownMenuItem>
@@ -189,29 +189,29 @@ export default function LayoutDefault(props: { children?: JSX.Element }) {
               </div>
               <div class="flex flex-col">
                 <div class="flex flex-col flex-wrap">
-                <a href="/professional-carpet-cleaning-services"><h3 class="whitespace-normal text-center hover-c-brand:hover">Rug cleaning services</h3></a>
+                  <a href="/professional-rug-cleaning-services"><h3 class="whitespace-normal text-center hover-c-brand:hover">Rug cleaning services</h3></a>
                   <div class="dropdown-content flex-row flex-wrap hidden flex-items-center flex-content-center">
-                    <DropdownMenuItem href="/" src="/assets/Професионално почистване на заведения.jpg">Rug dry</DropdownMenuItem>
-                    <DropdownMenuItem href="/" src="/assets/Професионално почистване на заведения.jpg">Rug steam</DropdownMenuItem>
+                    <DropdownMenuItem href="/professional-rug-cleaning-services/dry" src="/assets/Професионално почистване на заведения.jpg">Rug dry</DropdownMenuItem>
+                    <DropdownMenuItem href="/professional-rug-cleaning-services/steam" src="/assets/Професионално почистване на заведения.jpg">Rug steam</DropdownMenuItem>
                   </div>
                 </div>
                 <div class="flex flex-col flex-wrap">
-                <a href="/professional-carpet-cleaning-services"><h3 class="whitespace-normal text-center hover-c-brand:hover">Other cleaning services</h3></a>
+                  <a href="/professional-carpet-cleaning-services"><h3 class="whitespace-normal text-center hover-c-brand:hover">Other cleaning services</h3></a>
                   <div class="dropdown-content flex-row flex-wrap hidden flex-items-center flex-content-center flex-justify-center">
-                    <DropdownMenuItem href="/" src="/assets/Професионално почистване на заведения.jpg">Stain removal</DropdownMenuItem>
-                    <DropdownMenuItem href="/" src="/assets/Професионално почистване на заведения.jpg">Stain protection</DropdownMenuItem>
-                    <DropdownMenuItem href="/" src="/assets/Професионално почистване на заведения.jpg">Antiviral sanitisation</DropdownMenuItem>
+                    <DropdownMenuItem href="/professional-stain-removal-services" src="/assets/Професионално почистване на заведения.jpg">Stain removal</DropdownMenuItem>
+                    <DropdownMenuItem href="/stain-protection-services" src="/assets/Професионално почистване на заведения.jpg">Stain protection</DropdownMenuItem>
+                    <DropdownMenuItem href="/antiviral-sanitisation-services" src="/assets/Професионално почистване на заведения.jpg">Antiviral sanitisation</DropdownMenuItem>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-          <MenuItem href="/Prices">Prices</MenuItem>
-          <MenuItem href="/Reviews">Reviews</MenuItem>
-          <MenuItem href="/About-us">About us</MenuItem>
-          <MenuItem href="/Areas-we-cover">Areas we cover</MenuItem>
-          <MenuItem href="/Contact-us">Contact us</MenuItem>
-          <MenuItem href="/Feedback">Feedback</MenuItem>
+          <MenuItem href="/prices">Prices</MenuItem>
+          <MenuItem href="/reviews">Reviews</MenuItem>
+          <MenuItem href="/about-us">About us</MenuItem>
+          <MenuItem href="/areas-we-cover">Areas we cover</MenuItem>
+          <MenuItem href="/contact-us">Contact us</MenuItem>
+          <MenuItem href="/feedback">Feedback</MenuItem>
           <HamburgerMenu />
         </div>
       </Topbar>

@@ -113,8 +113,8 @@ export function FaqSection() {
           <Typography variant="h3">Do you have a cancellation fee?</Typography>
           <Typography variant="body">Yes, we do have a cancellation fee, but it is only applied if you cancel on the day of the cleaning. In that case, you will lose your deposit.</Typography></li>
         <li>
-          <Typography variant="h3">Do I need to pay for the congestion/parking charge?</Typography>
-          <Typography variant="body">Yes, we request that you arrange a suitable parking space for our vehicles within close proximity of the property since we carry heavy equipment, and to cover any parking/congestion expenses if applicable.</Typography></li>
+          <Typography variant="h3">Do I need to pay for the congestion / parking charge?</Typography>
+          <Typography variant="body">Yes, we request that you arrange a suitable parking space for our vehicles within close proximity of the property since we carry heavy equipment, and to cover any parking / congestion expenses if applicable.</Typography></li>
         <li>
           <Typography variant="h3">Do I need to move furniture before water free carpet cleaning?</Typography>
           <Typography variant="body">We kindly request your assistance in relocating small, fragile, or valuable furniture items, such as lamps and ornaments, for insurance reasons. If possible, please position these items in a secure area before our team's arrival, one that will remain undisturbed during the cleaning process.</Typography>
@@ -153,9 +153,7 @@ export function FaqSection() {
         </li>
         <li>
           <p>Any prior attempts to treat the stains.</p>
-        </li>
-        <li>
-          <p>Nevertheless, our commitment is to exert every conceivable effort to remove all stains from your carpet. Our strategy includes:</p>
+          <Typography variant="body">Nevertheless, our commitment is to exert every conceivable effort to remove all stains from your carpet. Our strategy includes:</Typography>
         </li>
         <li>
           <p>The use of cutting-edge cleaning equipment;</p>
@@ -177,13 +175,13 @@ export function FaqSection() {
           <Typography variant="body">Yes, we can provide you with an estimate over the phone, eliminating the need for an in-person visit to your property. However, for commercial properties, a site visit may be necessary. Additionally, you have the option to get a dry carpet cleaning quote online.</Typography></li>
         <li>
           <Typography variant="h3">What payment methods do you accept for waterless carpet cleaning services?</Typography>
-          <Typography variant="body">We accept debit/credit cards, and cash payments directly to our team.</Typography></li>
+          <Typography variant="body">We accept debit / credit cards, and cash payments directly to our team.</Typography></li>
         <li>
           <Typography variant="h3">Can you provide me with an invoice for the professional dry carpet cleaning in London?</Typography>
           <Typography variant="body">Yes, we will send you a receipt via email.</Typography></li>
         <li>
           <Typography variant="h3">Are you qualified?</Typography>
-          <Typography variant="body">Yes, we are qualified and fully trained members of NCCA (National Carpet Cleaners Association) – the UK’s recognised industry qualification, and of Checkatrade.</Typography></li>
+          <Typography variant="body">Yes, we are qualified and fully trained members of <a class="color-paper-link hover-color-paper-link-hover:hover" href="https://trustedlocalcleaners.ncca.co.uk/listing/fine-carpet-cleaning-ltd/" target="_blank" rel="noopener">NCCA</a> (National Carpet Cleaners Association) – the UK’s recognised industry qualification, and of <a class="color-paper-link hover-color-paper-link-hover:hover" href="https://www.checkatrade.com/trades/FineCarpetCleaning" target="_blank" rel="noopener">Checkatrade</a>.</Typography></li>
         <li>
           <Typography variant="h3">How long have you been in the carpet cleaning business?</Typography>
           <Typography variant="body">Since 2012, we have been actively working in the carpet cleaning industry, serving both commercial and residential clients. Over these years, we've encountered a wide array of carpets, rugs, upholstery, and stains and gained valuable experience. This experience, coupled with our commitment to achieve excellence, has driven us to enhance our services through:</Typography></li>
@@ -215,7 +213,7 @@ export function FaqSection() {
           <Typography variant="body">Yes, water free carpet cleaning really works. The advantages of dry organic carpet cleaning include quicker drying times compared to traditional steam cleaning, as well as less risk of over-wetting the carpet. It's often used for maintenance cleaning or in situations where minimal drying time is essential, such as in commercial settings.</Typography></li>
         <li>
           <Typography variant="h3">Is dry carpet cleaning effective?</Typography>
-          <Typography variant="body">Dry organic carpet cleaning is effective, but it's important to note that it may not be as effective in deep cleaning heavily soiled carpets or in removing certain types of stains. The choice between dry (no water) and wet (steam) carpet cleaning methods depends on factors like the carpet's condition, the type of stains, and the specific cleaning needs. Check out our <a class="color-paper-link hover-color-paper-link-hover:hover" href="/steam">steam carpet cleaning page</a> to read more and to make an informed decision.</Typography></li>
+          <Typography variant="body">Dry organic carpet cleaning is effective, but it's important to note that it may not be as effective in deep cleaning heavily soiled carpets or in removing certain types of stains. The choice between dry (no water) and wet (steam) carpet cleaning methods depends on factors like the carpet's condition, the type of stains, and the specific cleaning needs. Check out our <a class="color-paper-link hover-color-paper-link-hover:hover" href="/professional-carpet-cleaning-services/steam">steam carpet cleaning page</a> to read more and to make an informed decision.</Typography></li>
         <li>
           <Typography variant="h3">How much does it cost to dry clean a carpet?</Typography>
           <Typography variant="body">How much the carpet dry cleaning costs depends on the following factors:</Typography></li>
@@ -231,7 +229,7 @@ export function FaqSection() {
         <li>
           <p>Ease of access to the carpets.</p>
         </li>
-        <Typography variant="body">To learn more, check out our <a class="color-paper-link hover-color-paper-link-hover:hover" href="/steam">carpet dry cleaning prices</a>.</Typography>
+        <Typography variant="body">To learn more, check out our <a class="color-paper-link hover-color-paper-link-hover:hover" href="/prices">carpet dry cleaning prices</a>.</Typography>
         <li>
           <Typography variant="h3">What is a dry carpet cleaning process?</Typography>
           <Typography variant="body">Here's the process of carpet cleaning without water:</Typography></li>
@@ -269,7 +267,7 @@ export function FaqSection() {
         </li>
         <li>
           <Typography variant="h3">Is “Fine Carpet Cleaning” Ltd. a specialised dry carpet cleaning company?</Typography>
-          <Typography variant="body">Yes, “Fine Carpet Cleaning” Ltd is a specialised dry carpet cleaning company. Anyhow apart from professional dry carpet cleaning, we are offering a variety of  <a class="color-paper-link hover-color-paper-link-hover:hover" href="/steam">other cleaning services.</a></Typography></li>
+          <Typography variant="body">Yes, “Fine Carpet Cleaning” Ltd is a specialised dry carpet cleaning company. Anyhow apart from professional dry carpet cleaning, we are offering a variety of  <a class="color-paper-link hover-color-paper-link-hover:hover" href="/services">other cleaning services.</a></Typography></li>
       </ul>
     </Entry>
   </Container>
@@ -334,9 +332,9 @@ export default function Page() {
         <p>Other carpet cleaning services we perform:</p>
 
         <ul>
-          <li class="ml--5"><a class="color-paper-link-hover hover-color-paper-link:hover font-size-17.5px line-height-8 word-spacing--0.12 tracking--0.04" href="/steam">Steam carpet cleaning</a></li>
-          <li class="ml--5"><a class="color-paper-link-hover hover-color-paper-link:hover font-size-17.5px line-height-8 word-spacing--0.12 tracking--0.04" href="/">Eco-friendly carpet cleaning</a></li>
-          <li class="ml--5"><a class="color-paper-link-hover hover-color-paper-link:hover font-size-17.5px line-height-8 word-spacing--0.12 tracking--0.04" href="/">Fast-dry carpet cleaning</a></li>
+          <li class="ml--5"><a class="color-paper-link-hover hover-color-paper-link:hover font-size-17.5px line-height-8 word-spacing--0.12 tracking--0.04" href="/professional-carpet-cleaning-services/steam">Steam carpet cleaning</a></li>
+          <li class="ml--5"><a class="color-paper-link-hover hover-color-paper-link:hover font-size-17.5px line-height-8 word-spacing--0.12 tracking--0.04" href="/professional-carpet-cleaning-services/eco-friendly">Eco-friendly carpet cleaning</a></li>
+          <li class="ml--5"><a class="color-paper-link-hover hover-color-paper-link:hover font-size-17.5px line-height-8 word-spacing--0.12 tracking--0.04" href="/professional-carpet-cleaning-services/fast-dry">Fast-dry carpet cleaning</a></li>
         </ul>
       </div>
 
@@ -369,16 +367,16 @@ export default function Page() {
       <div class="mt-20 py-8 px-12 md-px-14 bg-paper b-rd-3" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 18%);">
         <ol style="counter-reset: ordered; list-style: none;">
           <li class="ml--5">
-            <h3 class="ml--5 font-size-6 md-font-size-7">Carefully selected cleaning supplies.</h3>
-            <Typography variant="body">We at "Fine Carpet Cleaning Ltd" use the most effective and top-of-the-line cleaning equipment and premium products in our no-water carpet cleaning. Our machines are recognised as some of the most powerful and effective portable machines globally.</Typography>
+            <h3 class="ml--5 font-size-6 md-font-size-7">Carefully selected cleaning supplies</h3>
+            <Typography variant="body">We at "Fine Carpet Cleaning" Ltd. use the most effective and top-of-the-line cleaning equipment and premium products in our no-water carpet cleaning. Our machines are recognised as some of the most powerful and effective portable machines globally.</Typography>
           </li>
           <li class="ml--5">
-            <h3 class="ml--5 font-size-6 md-font-size-7">Efficient vacuum cleaner.</h3>
-            <Typography variant="body">The machine we have carefully selected to use for our waterless carpet cleaning is professionally designed for commercial use - the “SEBO BS 36”. With its counter rotating brush (CRB ) it brings dirt and debris to the surface, where it can be easily extracted. This will leave your carpet looking and feeling fluffy and fresh, and will help to extend its lifespan.</Typography>
+            <h3 class="ml--5 font-size-6 md-font-size-7">Efficient vacuum cleaner</h3>
+            <Typography variant="body">The machine we have carefully selected to use for our waterless carpet cleaning is professionally designed for commercial use - the “SEBO BS 36”. With its counter rotating brush (CRB) it brings dirt and debris to the surface, where it can be easily extracted. This will leave your carpet looking and feeling fluffy and fresh, and will help to extend its lifespan.</Typography>
           </li>
           <li class="ml--5">
-            <h3 class="ml--5 font-size-6 md-font-size-7">Thoughtfully chosen cleaning products.</h3>
-            <Typography variant="body">To ensure exceptional results in our dry pro carpet cleaning, we have extensively tested which cleaning product gives the best results and have selected the most efficient one - the <a class="color-paper-link hover-color-paper-link-hover:hover" href="https://envirodri.com/">“Envirodri”</a> dry carpet cleaning powder. This cleaning product is eco-clean and has been designed to attract and absorb dirt and soiling from all carpet types. It is then vacuumed away to leave behind cleaner, fresher and newer looking carpets.</Typography>
+            <h3 class="ml--5 font-size-6 md-font-size-7">Thoughtfully chosen cleaning products</h3>
+            <Typography variant="body">To ensure exceptional results in our dry pro carpet cleaning, we have extensively tested which cleaning product gives the best results and have selected the most efficient one - the <a class="color-paper-link hover-color-paper-link-hover:hover" href="https://envirodri.com/" target="_blank" rel="noopener">“Envirodri”</a> dry carpet cleaning powder. This cleaning product is eco-clean and has been designed to attract and absorb dirt and soiling from all carpet types. It is then vacuumed away to leave behind cleaner, fresher and newer looking carpets.</Typography>
             <Typography variant="body">With our cutting-edge cleaning equipment and premium products, we guarantee a top-quality carpet dry cleaning service.</Typography>
           </li>
         </ol>
@@ -481,7 +479,7 @@ export default function Page() {
         </tbody>
       </table>
 
-      <button class="outline-none bg-brand-second-action hover-bg-brand-second-action-hover:hover font-size-6 font-600 w-250px h-60px c-paper flex flex-items-center flex-justify-center relative b-solid b-rd-3 b-4 b-brand-second-action hover-b-brand-second-action-hover:hover whitespace-normal line-height-6 word-spacing-0.5 py-9 my-20 mx-auto" style="box-shadow: 0 0 0 3px rgba(255, 255, 255, .9) inset; letter-spacing: 0.05rem;"><a class="c-paper font-size-5">REQUEST A QUOTE</a></button>
+      <button class="outline-none bg-brand-second-action hover-bg-brand-second-action-hover:hover font-size-6 font-600 w-250px h-60px c-paper flex flex-items-center flex-justify-center relative b-solid b-rd-3 b-4 b-brand-second-action hover-b-brand-second-action-hover:hover whitespace-normal line-height-6 word-spacing-0.5 py-9 my-20 mx-auto" style="box-shadow: 0 0 0 3px rgba(255, 255, 255, .9) inset; letter-spacing: 0.05rem;"><a href="/contact-us" class="c-paper font-size-5">REQUEST A QUOTE</a></button>
 
       <FleurDivider></FleurDivider>
 
@@ -496,12 +494,12 @@ export default function Page() {
       <div class="mt-20 py-8 px-12 md-px-14 bg-paper b-rd-3" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 18%);">
         <ol style="counter-reset: ordered; list-style: none;">
           <li class="ml--5">
-            <h3 class="ml--5 font-size-6 md-font-size-7">Use a stain defender.</h3>
-            <Typography variant="body">Our dry carpet cleaning specialist advises adding a stain protector to your carpet and upholstery whenever possible. This measure can save you a significant amount on professional stain removal services. For more information on the benefits of stain protection, we recommend further visiting <a class="color-paper-link hover-color-paper-link-hover:hover" href="/">our dedicated stain protection services page.</a></Typography>
+            <h3 class="ml--5 font-size-6 md-font-size-7">Use a stain defender</h3>
+            <Typography variant="body">Our dry carpet cleaning specialist advises adding a stain protector to your carpet and upholstery whenever possible. This measure can save you a significant amount on professional stain removal services. For more information on the benefits of stain protection, we recommend further visiting <a class="color-paper-link hover-color-paper-link-hover:hover" href="/stain-protection-services">our dedicated stain protection services page.</a></Typography>
           </li>
           <li class="ml--5">
             <h3 class="ml--5 font-size-6 md-font-size-7">Professional Stain Removal</h3>
-            <Typography variant="body">It's highly recommended to hire a professional stain removal service if your carpet or upholstery becomes stained. “Do it yourself” (DIY) attempts or letting the stain dry can lead to fabric damage, making the complete removal very hard. In fact, self-cleaning attempts can seal the stain, making it even more challenging or impossible for professionals to remove. Looking for <a class="color-paper-link hover-color-paper-link-hover:hover" href="/">professional stain removal services</a> can preserve the value of your carpet or upholstery.</Typography>
+            <Typography variant="body">It's highly recommended to hire a professional stain removal service if your carpet or upholstery becomes stained. “Do it yourself” (DIY) attempts or letting the stain dry can lead to fabric damage, making the complete removal very hard. In fact, self-cleaning attempts can seal the stain, making it even more challenging or impossible for professionals to remove. Looking for <a class="color-paper-link hover-color-paper-link-hover:hover" href="/professional-stain-removal-services">professional stain removal services</a> can preserve the value of your carpet or upholstery.</Typography>
           </li>
           <li class="ml--5">
             <h3 class="ml--5 font-size-6 md-font-size-7">Comprehensive Services</h3>
@@ -539,7 +537,7 @@ export default function Page() {
 
       <div class="m-10% mb-3% flex flex-wrap flex-justify-center md-gap-15 gap-10">
         <button class="cursor-pointer outline-none bg-brand-second-action hover-bg-brand-second-action-hover:hover font-size-6 font-600 w-200px h-60px c-paper flex flex-items-center flex-justify-center relative b-solid b-rd-3 b-4 b-brand-second-action hover-b-brand-second-action-hover:hover whitespace-normal line-height-6 word-spacing-0.5 py-9" style="box-shadow: 0 0 0 3px rgba(255, 255, 255, .9) inset; letter-spacing: 0.05rem;"><a href="/services" class="c-paper font-size-5">SERVICES</a></button>
-        <button class="cursor-pointer outline-none bg-brand-action hover-bg-brand-action-hover:hover font-size-6 font-600 w-200px h-60px c-paper flex flex-items-center flex-justify-center relative b-solid b-rd-3 b-4 b-brand-action hover-b-brand-action-hover:hover whitespace-normal line-height-6 word-spacing-0.5 py-9" style="box-shadow: 0 0 0 3px rgba(255, 255, 255, .9) inset; letter-spacing: 0.05rem;"><a href="/Contact-us" class="c-paper font-size-5">REQUEST A QUOTE</a></button>
+        <button class="cursor-pointer outline-none bg-brand-action hover-bg-brand-action-hover:hover font-size-6 font-600 w-200px h-60px c-paper flex flex-items-center flex-justify-center relative b-solid b-rd-3 b-4 b-brand-action hover-b-brand-action-hover:hover whitespace-normal line-height-6 word-spacing-0.5 py-9" style="box-shadow: 0 0 0 3px rgba(255, 255, 255, .9) inset; letter-spacing: 0.05rem;"><a href="/contact-us" class="c-paper font-size-5">REQUEST A QUOTE</a></button>
       </div>
 
 

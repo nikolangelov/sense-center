@@ -114,7 +114,7 @@ export function FaqSection() {
 					<Typography variant="body">We require a deposit before performing the cleaning service. If you cancel the service on the day of the cleaning you will lose that deposit.</Typography></li>
 				<li>
 					<Typography variant="h3">Should I pay for the congestion / parking charge?</Typography>
-					<Typography variant="body">Yes, we kindly ask that the client arrange a suitable parking space for our vehicles within close proximity of the property and to cover any parking/congestion expenses.</Typography></li>
+					<Typography variant="body">Yes, we kindly ask that the client arrange a suitable parking space for our vehicles within close proximity of the property and to cover any parking / congestion expenses.</Typography></li>
 				<li>
 					<Typography variant="h3">What if I live on the 4th floor or above and I have no lift?</Typography>
 					<Typography variant="body">Due to the considerable weight of our equipment, which exceeds 50 kilograms, an additional fee is applied for each additional floor that requires manual transportation. The reason behind this is that it typically consumes a significant amount of time and can lead to faster tiring among our technicians. Consequently, this may reduce our overall productivity for the day compared to our standard output.</Typography></li>
@@ -179,13 +179,13 @@ export function FaqSection() {
 					<Typography variant="body">Yes, we can give you an upholstery cleaning quote over the phone, there is no need for us to visit your property. You can also receive an upholstery cleaning quote online.</Typography></li>
 				<li>
 					<Typography variant="h3">What payment methods do you accept for your upholstery fabric cleaning services?</Typography>
-					<Typography variant="body">We accept debit/credit cards, bank transfers and cash payments directly to our team.</Typography></li>
+					<Typography variant="body">We accept debit / credit cards, bank transfers and cash payments directly to our team.</Typography></li>
 				<li>
 					<Typography variant="h3">Can your upholstery cleaning company provide me with an invoice?</Typography>
 					<Typography variant="body">Yes, we will either send you a receipt via email or via any method of your choice.</Typography></li>
 				<li>
 					<Typography variant="h3">Are you qualified?</Typography>
-					<Typography variant="body">Yes, we are qualified and fully trained members of Checkatrade and of NCCA (National Carpet Cleaners Association) – the UK’s acknowledged industry qualification.</Typography></li>
+					<Typography variant="body">Yes, we are qualified and fully trained members of <a class="color-paper-link hover-color-paper-link-hover:hover" href="https://www.checkatrade.com/trades/FineCarpetCleaning" target="_blank" rel="noopener">Checkatrade</a> and of <a class="color-paper-link hover-color-paper-link-hover:hover" href="https://trustedlocalcleaners.ncca.co.uk/listing/fine-carpet-cleaning-ltd/" target="_blank" rel="noopener">NCCA</a> (National Carpet Cleaners Association) – the UK’s acknowledged industry qualification.</Typography></li>
 				<li>
 					<Typography variant="h3">How long have you been in the upholstery cleaning business?</Typography>
 					<Typography variant="body">Since 2012, we have been actively involved in the upholstery cleaning industry. Over the years, we have encountered various types of carpets, rugs, upholstery and stains from both commercial and residential clients, accumulating valuable experience. Our commitment to providing the best upholstery cleaning services has driven us to enhance our performance through the following means:</Typography></li>
@@ -251,7 +251,7 @@ export function FaqSection() {
 					<p>Cotton upholstery cleaning;</p>
 				</li>
 				<li>
-					<p>Leather upholstery cleaning(link);</p>
+					<p><a class="color-paper-link hover-color-paper-link-hover:hover" href="/professional-upholstery-cleaning-services/sofa/leather">Leather upholstery cleaning</a>;</p>
 				</li>
 				<li>
 					<p>Wool upholstery cleaning;</p>
@@ -285,7 +285,7 @@ export function FaqSection() {
 				<li>
 					<p>The fabric of the furniture.</p>
 				</li>
-				<Typography variant="body">To learn more, check out our <a class="color-paper-link hover-color-paper-link-hover:hover" href="/">upholstery cleaning prices</a>.</Typography>
+				<Typography variant="body">To learn more, check out our <a class="color-paper-link hover-color-paper-link-hover:hover" href="/prices">upholstery cleaning prices</a>.</Typography>
 				<li>
 					<Typography variant="h3">Can you clean nylon upholstery?</Typography>
 					<Typography variant="body">Yes, we can clean nylon upholstery and furniture made from other synthetic fabrics. In such special cases with synthetic upholstery from polyester, rayon, acrylic or nylon, we will not use a steam cleaning method, but dry cleaning, as the heat and steam <strong>will</strong> damage the furniture.</Typography></li>
@@ -360,13 +360,13 @@ export default function Page() {
 				<h3>What do we offer:</h3>
 				<p>The professional upholstery cleaning services we offer are:</p>
 				<ul>
-					<li class="ml--5"><a class="color-paper-link-hover hover-color-paper-link:hover font-size-17.5px line-height-8 word-spacing--0.12 tracking--0.04" href="/">Sofa cleaning</a></li>
-					<li class="ml--5"><a class="color-paper-link-hover hover-color-paper-link:hover font-size-17.5px line-height-8 word-spacing--0.12 tracking--0.04" href="/">Leather sofa cleaning</a></li>
-					<li class="ml--5"><a class="color-paper-link-hover hover-color-paper-link:hover font-size-17.5px line-height-8 word-spacing--0.12 tracking--0.04" href="/">Furniture cleaning</a></li>
-					<li class="ml--5"><a class="color-paper-link-hover hover-color-paper-link:hover font-size-17.5px line-height-8 word-spacing--0.12 tracking--0.04" href="/">Mattress cleaning</a></li>
-					<li class="ml--5"><a class="color-paper-link-hover hover-color-paper-link:hover font-size-17.5px line-height-8 word-spacing--0.12 tracking--0.04" href="/">Pillow cleaning</a></li>
-					<li class="ml--5"><a class="color-paper-link-hover hover-color-paper-link:hover font-size-17.5px line-height-8 word-spacing--0.12 tracking--0.04" href="/">Upholstery stain removal</a></li>
-					<li class="ml--5"><a class="color-paper-link-hover hover-color-paper-link:hover font-size-17.5px line-height-8 word-spacing--0.12 tracking--0.04" href="/">Upholstery stain protector</a></li>
+					<li class="ml--5"><a class="color-paper-link-hover hover-color-paper-link:hover font-size-17.5px line-height-8 word-spacing--0.12 tracking--0.04" href="/professional-upholstery-cleaning-services/sofa">Sofa cleaning</a></li>
+					<li class="ml--5"><a class="color-paper-link-hover hover-color-paper-link:hover font-size-17.5px line-height-8 word-spacing--0.12 tracking--0.04" href="/professional-upholstery-cleaning-services/sofa/leather">Leather sofa cleaning</a></li>
+					<li class="ml--5"><a class="color-paper-link-hover hover-color-paper-link:hover font-size-17.5px line-height-8 word-spacing--0.12 tracking--0.04" href="/professional-upholstery-cleaning-services/furniture">Furniture cleaning</a></li>
+					<li class="ml--5"><a class="color-paper-link-hover hover-color-paper-link:hover font-size-17.5px line-height-8 word-spacing--0.12 tracking--0.04" href="/professional-upholstery-cleaning-services/mattress">Mattress cleaning</a></li>
+					<li class="ml--5"><a class="color-paper-link-hover hover-color-paper-link:hover font-size-17.5px line-height-8 word-spacing--0.12 tracking--0.04" href="/professional-upholstery-cleaning-services/pillow">Pillow cleaning</a></li>
+					<li class="ml--5"><a class="color-paper-link-hover hover-color-paper-link:hover font-size-17.5px line-height-8 word-spacing--0.12 tracking--0.04" href="/professional-stain-removal-services">Upholstery stain removal</a></li>
+					<li class="ml--5"><a class="color-paper-link-hover hover-color-paper-link:hover font-size-17.5px line-height-8 word-spacing--0.12 tracking--0.04" href="/stain-protection-services">Upholstery stain protector</a></li>
 				</ul>
 
 				<h3>The process of our professional upholstery cleaning services:</h3>
@@ -399,7 +399,7 @@ export default function Page() {
 				<ol style="counter-reset: ordered; list-style: none;">
 					<li class="ml--5">
 						<h3 class="ml--5 font-size-6 md-font-size-7">High-quality extractors</h3>
-						<Typography variant="body">At "Fine Carpet Cleaning Ltd," we take pride in our commitment to using cutting-edge cleaning equipment and premium products. Our machines, known for their exceptional power and effectiveness, are considered among the best portable machines globally. They have undergone rigorous testing, and we've selected top brands available in the UK market, including "Mytee" and "Airflex." Furthermore, our in-house engineer makes significant enhancements to maximize their performance.</Typography>
+						<Typography variant="body">At "Fine Carpet Cleaning Ltd," we take pride in our commitment to using cutting-edge cleaning equipment and premium products. Our machines, known for their exceptional power and effectiveness, are considered among the best portable machines globally. They have undergone rigorous testing, and we've selected top brands available in the UK market, including "<a class="color-paper-link hover-color-paper-link-hover:hover" href="https://www.mytee.com/products/1003dx-speedster-deluxe-carpet-extractor/" target="_blank" rel="noopener">Mytee</a>" and "<a class="color-paper-link hover-color-paper-link-hover:hover" href="https://www.clean-smart.co.uk/store/airflex-storm" target="_blank" rel="noopener">Airflex</a>". Furthermore, our in-house engineer makes significant enhancements to maximize their performance.</Typography>
 					</li>
 					<li class="ml--5">
 						<h3 class="ml--5 font-size-6 md-font-size-7">Efficient vacuum cleaners</h3>
@@ -522,7 +522,7 @@ export default function Page() {
 				</tbody>
 			</table>
 
-			<button class="outline-none bg-brand-second-action hover-bg-brand-second-action-hover:hover font-size-6 font-600 w-250px h-60px c-paper flex flex-items-center flex-justify-center relative b-solid b-rd-3 b-4 b-brand-second-action hover-b-brand-second-action-hover:hover whitespace-normal line-height-6 word-spacing-0.5 py-9 my-20 mx-auto" style="box-shadow: 0 0 0 3px rgba(255, 255, 255, .9) inset; letter-spacing: 0.05rem;"><a class="c-paper font-size-5">REQUEST A QUOTE</a></button>
+			<button class="outline-none bg-brand-second-action hover-bg-brand-second-action-hover:hover font-size-6 font-600 w-250px h-60px c-paper flex flex-items-center flex-justify-center relative b-solid b-rd-3 b-4 b-brand-second-action hover-b-brand-second-action-hover:hover whitespace-normal line-height-6 word-spacing-0.5 py-9 my-20 mx-auto" style="box-shadow: 0 0 0 3px rgba(255, 255, 255, .9) inset; letter-spacing: 0.05rem;"><a href="/contact-us" class="c-paper font-size-5">REQUEST A QUOTE</a></button>
 
 			<FleurDivider></FleurDivider>
 
@@ -533,12 +533,12 @@ export default function Page() {
 
 			<FleurDivider></FleurDivider>
 
-			<h2 class="line-height-12 md-line-height-14">Our professional upholstery cleaning services specialists advises:</h2>
+			<h2 class="line-height-12 md-line-height-14">Our professional upholstery cleaning services specialists advise:</h2>
 			<div class="mt-20 py-8 px-12 md-px-14 bg-paper b-rd-3" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 18%);">
 				<ol style="counter-reset: ordered; list-style: none;">
 					<li class="ml--5">
 						<h3 class="ml--5 font-size-6 md-font-size-7">Put on a stain defender</h3>
-						<Typography variant="body">Our professional upholstery cleaning specialist recommends considering the addition of a stain protector to your carpets and upholstery whenever it's affordable to you. This simple step can result in substantial cost savings on stain removal services. If you're curious, we encourage you to explore the advantages of <a class="color-paper-link hover-color-paper-link-hover:hover" href="/">stain protection services</a>.</Typography>
+						<Typography variant="body">Our professional upholstery cleaning specialist recommends considering the addition of a stain protector to your carpets and upholstery whenever it's affordable to you. This simple step can result in substantial cost savings on stain removal services. If you're curious, we encourage you to explore the advantages of <a class="color-paper-link hover-color-paper-link-hover:hover" href="/stain-protection-services">stain protection services</a>.</Typography>
 					</li>
 					<li class="ml--5">
 						<h3 class="ml--5 font-size-6 md-font-size-7">Try stain removal service</h3>
@@ -576,7 +576,7 @@ export default function Page() {
 
 			<div class="m-10% mb-3% flex flex-wrap flex-justify-center md-gap-15 gap-10">
 				<button class="cursor-pointer outline-none bg-brand-second-action hover-bg-brand-second-action-hover:hover font-size-6 font-600 w-200px h-60px c-paper flex flex-items-center flex-justify-center relative b-solid b-rd-3 b-4 b-brand-second-action hover-b-brand-second-action-hover:hover whitespace-normal line-height-6 word-spacing-0.5 py-9" style="box-shadow: 0 0 0 3px rgba(255, 255, 255, .9) inset; letter-spacing: 0.05rem;"><a href="/services" class="c-paper font-size-5">SERVICES</a></button>
-				<button class="cursor-pointer outline-none bg-brand-action hover-bg-brand-action-hover:hover font-size-6 font-600 w-200px h-60px c-paper flex flex-items-center flex-justify-center relative b-solid b-rd-3 b-4 b-brand-action hover-b-brand-action-hover:hover whitespace-normal line-height-6 word-spacing-0.5 py-9" style="box-shadow: 0 0 0 3px rgba(255, 255, 255, .9) inset; letter-spacing: 0.05rem;"><a href="/Contact-us" class="c-paper font-size-5">REQUEST A QUOTE</a></button>
+				<button class="cursor-pointer outline-none bg-brand-action hover-bg-brand-action-hover:hover font-size-6 font-600 w-200px h-60px c-paper flex flex-items-center flex-justify-center relative b-solid b-rd-3 b-4 b-brand-action hover-b-brand-action-hover:hover whitespace-normal line-height-6 word-spacing-0.5 py-9" style="box-shadow: 0 0 0 3px rgba(255, 255, 255, .9) inset; letter-spacing: 0.05rem;"><a href="/contact-us" class="c-paper font-size-5">REQUEST A QUOTE</a></button>
 			</div>
 
 

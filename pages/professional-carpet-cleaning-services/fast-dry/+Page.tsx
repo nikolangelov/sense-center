@@ -316,8 +316,8 @@ export default function Page() {
         <ul>
           <li class="ml--5"><a class="color-paper-link-hover hover-color-paper-link:hover font-size-17.5px line-height-8 word-spacing--0.12 tracking--0.04" href="/professional-carpet-cleaning-services/steam">Professional carpet steam cleaning services</a></li>
           <li class="ml--5"><a class="color-paper-link-hover hover-color-paper-link:hover font-size-17.5px line-height-8 word-spacing--0.12 tracking--0.04" href="/professional-carpet-cleaning-services/dry">Dry carpet cleaning services</a></li>
-          <li class="ml--5"><a class="color-paper-link-hover hover-color-paper-link:hover font-size-17.5px line-height-8 word-spacing--0.12 tracking--0.04" href="/professional-carpet-cleaning-services">Eco-friendly carpet cleaning services</a></li>
-          <li class="ml--5"><a class="color-paper-link-hover hover-color-paper-link:hover font-size-17.5px line-height-8 word-spacing--0.12 tracking--0.04" href="/professional-carpet-cleaning-services/services">All of our services</a></li>
+          <li class="ml--5"><a class="color-paper-link-hover hover-color-paper-link:hover font-size-17.5px line-height-8 word-spacing--0.12 tracking--0.04" href="/professional-carpet-cleaning-services/eco-friendly">Eco-friendly carpet cleaning services</a></li>
+          <li class="ml--5"><a class="color-paper-link-hover hover-color-paper-link:hover font-size-17.5px line-height-8 word-spacing--0.12 tracking--0.04" href="/services">All of our services</a></li>
         </ul>
       </div>
 
@@ -390,15 +390,15 @@ export default function Page() {
         <p>At our fast dry carpet cleaning service, we prioritise efficiency and effectiveness to ensure that your carpets are cleaned thoroughly and dried quickly. We use the latest advanced equipment and techniques to achieve the best results for our clients.</p>
         <ol style="counter-reset: ordered; list-style: none;">
           <li class="ml--5">
-            <h3 class="ml--5 font-size-6 md-font-size-7">High-powered, low-moisture cleaning machines.</h3>
-            <Typography variant="body">Our cleaning machines are specifically designed to deliver a deep clean while using minimal water. We have carefully selected the best machines from leading manufacturers such as "Mytee" (USA) and "Airflex" (UK). Our expert technicians have further optimised these machines to maximise their performance, ensuring that your carpets are cleaned perfectly.</Typography>
+            <h3 class="ml--5 font-size-6 md-font-size-7">High-powered, low-moisture cleaning machines</h3>
+            <Typography variant="body">Our cleaning machines are specifically designed to deliver a deep clean while using minimal water. We have carefully selected the best machines from leading manufacturers such as "<a class="color-paper-link hover-color-paper-link-hover:hover" href="https://www.mytee.com/products/1003dx-speedster-deluxe-carpet-extractor/" target="_blank" rel="noopener">Mytee</a>" (USA) and "<a class="color-paper-link hover-color-paper-link-hover:hover" href="https://www.clean-smart.co.uk/store/airflex-storm" target="_blank" rel="noopener">Airflex</a>" (UK). Our expert technicians have further optimised these machines to maximise their performance, ensuring that your carpets are cleaned perfectly.</Typography>
           </li>
           <li class="ml--5">
-            <h3 class="ml--5 font-size-6 md-font-size-7">Eco-friendly and effective cleaning solutions.</h3>
+            <h3 class="ml--5 font-size-6 md-font-size-7">Eco-friendly and effective cleaning solutions</h3>
             <Typography variant="body">We understand that every carpet cleaning situation is unique, which is why we have a wide range of carefully selected cleaning products at our disposal. Our technicians choose the most appropriate cleaning solution for your specific needs, considering factors such as carpet type, stain type, and level of soiling. We use eco-friendly and highly effective products from trusted brands like "Alltec," "Prochem," "Chemspec," and "Solution World of Clean" to ensure the best results while minimising environmental impact.</Typography>
           </li>
           <li class="ml--5">
-            <h3 class="ml--5 font-size-6 md-font-size-7">High-volume air movers.</h3>
+            <h3 class="ml--5 font-size-6 md-font-size-7">High-volume air movers</h3>
             <Typography variant="body">To speed up the drying process, we use high-volume air movers. These powerful fans circulate air and accelerate the evaporation of any remaining moisture in your carpets. By strategically placing these air movers, we can significantly reduce the drying time, often allowing your carpets to be dry within 2 hours.</Typography>
           </li>
         </ol>
@@ -501,7 +501,7 @@ export default function Page() {
         </tbody>
       </table>
 
-      <button class="outline-none bg-brand-second-action hover-bg-brand-second-action-hover:hover font-size-6 font-600 w-250px h-60px c-paper flex flex-items-center flex-justify-center relative b-solid b-rd-3 b-4 b-brand-second-action hover-b-brand-second-action-hover:hover whitespace-normal line-height-6 word-spacing-0.5 py-9 my-20 mx-auto" style="box-shadow: 0 0 0 3px rgba(255, 255, 255, .9) inset; letter-spacing: 0.05rem;"><a class="c-paper font-size-5">REQUEST A QUOTE</a></button>
+      <button class="outline-none bg-brand-second-action hover-bg-brand-second-action-hover:hover font-size-6 font-600 w-250px h-60px c-paper flex flex-items-center flex-justify-center relative b-solid b-rd-3 b-4 b-brand-second-action hover-b-brand-second-action-hover:hover whitespace-normal line-height-6 word-spacing-0.5 py-9 my-20 mx-auto" style="box-shadow: 0 0 0 3px rgba(255, 255, 255, .9) inset; letter-spacing: 0.05rem;"><a href="/contact-us" class="c-paper font-size-5">REQUEST A QUOTE</a></button>
 
       <FleurDivider></FleurDivider>
 
@@ -512,27 +512,27 @@ export default function Page() {
 
       <FleurDivider></FleurDivider>
 
-      <h2 class="line-height-12 md-line-height-14">Our carpet cleaning specialist advices:</h2>
+      <h2 class="line-height-12 md-line-height-14">Our carpet cleaning specialist advises:</h2>
       <div class="mt-20 py-8 px-12 md-px-14 bg-paper b-rd-3" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 18%);">
         <ol style="counter-reset: ordered; list-style: none;">
           <li class="ml--5">
-            <h3 class="ml--5 font-size-6 md-font-size-7">Use stain protection.</h3>
-            <Typography variant="body">Maximise the benefits of our fast dry carpet cleaning service by adding stain protection, which guards your carpet and upholstery against liquid penetration and lasting stains. This can save you money on future professional stain removal services and extend the life of your carpets. <a class="color-paper-link hover-color-paper-link-hover:hover" href="/">Learn more about the benefits of using stain protection services.</a></Typography>
+            <h3 class="ml--5 font-size-6 md-font-size-7">Use stain protection</h3>
+            <Typography variant="body">Maximise the benefits of our fast dry carpet cleaning service by adding stain protection, which guards your carpet and upholstery against liquid penetration and lasting stains. This can save you money on future professional stain removal services and extend the life of your carpets. <a class="color-paper-link hover-color-paper-link-hover:hover" href="/stain-protection-services">Learn more about the benefits of using stain protection services.</a></Typography>
           </li>
           <li class="ml--5">
-            <h3 class="ml--5 font-size-6 md-font-size-7">Extend the life of your carpets.</h3>
+            <h3 class="ml--5 font-size-6 md-font-size-7">Extend the life of your carpets</h3>
             <Typography variant="body">With our quick dry carpet cleaning service, your carpets will be clean and dry within 1-2 hours. Our fast dry method is gentle on carpet fibres and suitable for all types of carpets, including delicate and natural fibres. This will help prolong the life of your carpet investment.</Typography>
           </li>
           <li class="ml--5">
-            <h3 class="ml--5 font-size-6 md-font-size-7">Choose eco-friendly solutions.</h3>
+            <h3 class="ml--5 font-size-6 md-font-size-7">Choose eco-friendly solutions</h3>
             <Typography variant="body">When selecting a fast dry carpet cleaning service, search for companies that use environmentally friendly, non-toxic cleaning solutions. These products are safer for your family, pets, and the environment while still providing excellent cleaning results.</Typography>
           </li>
           <li class="ml--5">
-            <h3 class="ml--5 font-size-6 md-font-size-7">Schedule regular cleanings.</h3>
+            <h3 class="ml--5 font-size-6 md-font-size-7">Schedule regular cleanings</h3>
             <Typography variant="body">To maintain the appearance and extend the life of your carpets, schedule professional fast dry carpet cleaning services at least once a year, or more frequently in high-traffic areas. Regular cleaning helps prevent the buildup of dirt, allergens, and microorganisms that can cause health problems.</Typography>
           </li>
           <li class="ml--5">
-            <h3 class="ml--5 font-size-6 md-font-size-7">Explore our range of services and save money and time.</h3>
+            <h3 class="ml--5 font-size-6 md-font-size-7">Explore our range of services and save money and time</h3>
             <Typography variant="body">Familiarise yourself with our full range of carpet cleaning services to make informed decisions about what your carpets need. Combine fast dry carpet cleaning with other services like upholstery cleaning or stain protection to save money and time on multiple visits.</Typography>
           </li>
         </ol>
@@ -555,7 +555,7 @@ export default function Page() {
 
       <div class="m-10% mb-3% flex flex-wrap flex-justify-center md-gap-15 gap-10">
         <button class="cursor-pointer outline-none bg-brand-second-action hover-bg-brand-second-action-hover:hover font-size-6 font-600 w-200px h-60px c-paper flex flex-items-center flex-justify-center relative b-solid b-rd-3 b-4 b-brand-second-action hover-b-brand-second-action-hover:hover whitespace-normal line-height-6 word-spacing-0.5 py-9" style="box-shadow: 0 0 0 3px rgba(255, 255, 255, .9) inset; letter-spacing: 0.05rem;"><a href="/services" class="c-paper font-size-5">SERVICES</a></button>
-        <button class="cursor-pointer outline-none bg-brand-action hover-bg-brand-action-hover:hover font-size-6 font-600 w-200px h-60px c-paper flex flex-items-center flex-justify-center relative b-solid b-rd-3 b-4 b-brand-action hover-b-brand-action-hover:hover whitespace-normal line-height-6 word-spacing-0.5 py-9" style="box-shadow: 0 0 0 3px rgba(255, 255, 255, .9) inset; letter-spacing: 0.05rem;"><a href="/Contact-us" class="c-paper font-size-5">REQUEST A QUOTE</a></button>
+        <button class="cursor-pointer outline-none bg-brand-action hover-bg-brand-action-hover:hover font-size-6 font-600 w-200px h-60px c-paper flex flex-items-center flex-justify-center relative b-solid b-rd-3 b-4 b-brand-action hover-b-brand-action-hover:hover whitespace-normal line-height-6 word-spacing-0.5 py-9" style="box-shadow: 0 0 0 3px rgba(255, 255, 255, .9) inset; letter-spacing: 0.05rem;"><a href="/contact-us" class="c-paper font-size-5">REQUEST A QUOTE</a></button>
       </div>
 
 
