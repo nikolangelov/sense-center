@@ -110,216 +110,224 @@ export function FaqSection() {
     <Entry>
       <ul>
         <li>
-          <Typography variant="h3">Do you have a cancellation fee?</Typography>
-          <Typography variant="body">Yes, if you cancel on the day of the cleaning you will lose your deposit.</Typography></li>
+          <Typography variant="h3">Do you fee for cancellation?</Typography>
+          <Typography variant="body">We require a deposit before performing the mattress cleaning services, which will also guarantee your booked time slot. If you cancel the service on the day of the cleaning you will lose that deposit.</Typography></li>
         <li>
-          <Typography variant="h3">Will I be charged for the congestion/parking?</Typography>
-          <Typography variant="body">Yes, we kindly ask that you ensure that there is convenient parking space available for our vehicles near the property. Additionally, any parking or congestion charges are to be covered by the client.</Typography></li>
+          <Typography variant="h3">Will I pay for the congestion / parking charge?</Typography>
+          <Typography variant="body">Yes, we kindly ask that the client arrange a suitable parking space for our vehicles within close proximity of the property and to cover any parking / congestion expenses.</Typography></li>
         <li>
-          <Typography variant="h3">Do I need to move furniture before corporate carpet cleaning?</Typography>
-          <Typography variant="body">We would greatly appreciate your assistance in moving small, delicate, or valuable furniture items like lamps and ornaments away for insurance purposes. Please relocate them to a secure area before our arrival, if possible. We are more than willing to help move lightweight furniture such as chairs, armchairs, and tables during the cleaning. After the cleaning is completed, we will return them to their original positions. If there is a need to move heavy furniture like sofas, beds, wardrobes, and cupboards, there will be an additional charge. This is due to the extra time and effort required by our technician, who will be appropriately compensated. Our primary goal is to ensure a stress-free experience for you throughout the entire commercial carpet cleaning process.</Typography></li>
+          <Typography variant="h3">What if I live on the 4th floor or above and I have no lift?</Typography>
+          <Typography variant="body">Due to the weight of our equipment, which exceeds 50 kilograms, an additional fee will be applied for each floor that requires manual transportation. The reason is that such actions typically consume a significant amount of time and can make our technicians tire faster. Consequently, this may reduce our overall productivity for the day compared to our standard output.</Typography></li>
         <li>
-          <Typography variant="h3">What if my commercial building has no lift?</Typography>
-          <Typography variant="body">If you want us to clean the carpets on a high floor in your commercial building and it lacks an elevator, there will be an additional charge due to the weight and bulk of our equipment, which exceeds 50 kilograms. This is because manually transporting the equipment up multiple flights of stairs is more time-consuming, and our technicians may tire more quickly. Consequently, our productivity for the day may be reduced compared to our typical output.</Typography></li>
+          <Typography variant="h3">Are you an insured company?</Typography>
+          <Typography variant="body">Yes, we are completely insured.</Typography></li>
         <li>
-          <Typography variant="h3">Are you insured?</Typography>
-          <Typography variant="body">Yes, we are fully insured.</Typography></li>
+          <Typography variant="h3">What happens if your cleaners damage anything?</Typography>
+          <Typography variant="body">We are fully insured and if an accident happens it will be covered by our professional mattress cleaning company.</Typography></li>
       </ul>
     </Entry>
     <Entry>
       <ul>
         <li>
-          <Typography variant="h3">What happens if your cleaner damages anything while performing commercial carpet cleaning services?</Typography>
-          <Typography variant="body">We want to assure you that we have comprehensive insurance coverage, so in the event of an accident, you are fully protected.</Typography></li>
+          <Typography variant="h3">How long does the process of mattress cleaning services London take?</Typography>
+          <Typography variant="body">The duration process mainly depends on:</Typography></li>
         <li>
-          <Typography variant="h3">How long does the process of carpet cleaning for commercial buildings take?</Typography>
-          <Typography variant="body">The duration of the carpet cleaning for commercial buildings depends mainly on:</Typography></li>
-        <li>
-          <p>The commercial carpet cleaning method that will be used on the carpet, rug or upholstery;</p>
+          <p>How soiled the mattress is;</p>
         </li>
         <li>
-          <p>How dirty the carpet is;</p>
+          <p>The need for any stain removal treatments;</p>
         </li>
         <li>
-          <p>The size and quantities of the carpets;</p>
+          <p>The size and quantity of the mattresses.</p>
         </li>
         <li>
-          <p>If it needs any stain removal treatments;</p>
-        </li>
+          <Typography variant="h3">How long does it take for the upholstery to get dry after upholstery deep cleaning services?</Typography>
+          <Typography variant="body">It takes about 5-7 hours for the mattress to dry completely. We strongly advise that you let the mattress completely dry, especially before use, as damp mattresses are perfect breeding grounds for harmful moulds and bacteria.</Typography></li>
         <li>
-          <p>What kind of stains it has.</p>
-        </li>
-        <li>
-          <Typography variant="h3">How long does it take for the carpet to get completely dry after a hotel carpet cleaning is performed?</Typography>
-          <Typography variant="body">It depends on the carpet and the cleaning method used. For instance, if the <a class="color-paper-link hover-color-paper-link-hover:hover" href="/professional-carpet-cleaning-services/steam">steam cleaning</a> method is used, the approximate time for the carpet to get dry is 7 to 9 hours. If the carpet is cleaned through a <a class="color-paper-link hover-color-paper-link-hover:hover" href="/professional-carpet-cleaning-services/dry">dry cleaning</a> method, it will be dry immediately after the cleaning process has ended, or little after that.</Typography></li>
-        <li>
-          <Typography variant="h3">Do you guarantee that after cleaning my carpet all stains will be removed?</Typography>
-          <Typography variant="body">Unfortunately, we are unable to guarantee, as several uncontrollable factors come into play. These factors include:</Typography></li>
+          <Typography variant="h3">Do you guarantee that all stains will be removed?</Typography>
+          <Typography variant="body">Due to our experience and using some of the best equipment in the industry, we achieve high success rates in stain removal. However, it's essential to note that we cannot offer an absolute guarantee due to various factors beyond our control. These factors include:</Typography></li>
         <li>
           <p>The age of the stains;</p>
         </li>
         <li>
-          <p>The nature of the substance that caused the stains;</p>
+          <p>The nature of the substances responsible for the stains;</p>
         </li>
         <li>
-          <p>The carpet's type and fabric;</p>
+          <p>Any prior mishandling of the stains.</p>
+          <Typography variant="body">Nonetheless, we are fully committed to exerting every possible effort to eliminate all stains from your furniture.</Typography>
         </li>
         <li>
-          <p>Any prior attempts to remove the stains.</p>
-        </li>
+          <Typography variant="h3">How soon can I expect your cleaner to visit me?</Typography>
+          <Typography variant="body">We will make sure to get you an appointment as soon as possible. Usually, we are fully booked for the following three days, but exceptions may occur at times.</Typography></li>
         <li>
-          <p>Nevertheless, we are dedicated to exerting our utmost effort to eliminate all stains from your carpet. Our methodology includes:</p>
-        </li>
+          <Typography variant="h3">Can you give me a quote over the phone or do you need a viewing in person?</Typography>
+          <Typography variant="body">Yes, we can give you a mattress cleaning quote over the phone, there is usually no need for us to visit your property. You can also receive a quote online.</Typography></li>
         <li>
-          <p>Using state-of-the-art cleaning equipment;</p>
-        </li>
+          <Typography variant="h3">What payment methods do you accept for your mattress cleaning services?</Typography>
+          <Typography variant="body">We accept debit / credit cards, bank transfers and cash payments directly to our team.</Typography></li>
         <li>
-          <p>Utilising carefully selected premium detergents;</p>
-        </li>
-        <li>
-          <p>Tailoring our approach to the specific type of carpet and the stain's origin to achieve the best possible results.</p>
-        </li>
-        <li>
-          <Typography variant="h3">How soon will a cleaner visit me?</Typography>
-          <Typography variant="body">We'll make every effort to schedule an appointment for you as promptly as we can. Typically, our bookings are full for up to three days in advance, although occasional exceptions may occur.</Typography></li>
-        <li>
-          <Typography variant="h3">Can you give me a quote over the phone or do you need to visit my commercial property?</Typography>
-          <Typography variant="body">For a quote about any kind of commercial carpet cleaning, we do require that we come for a viewing in person. This is due to the fact that a quote over the phone without such a viewing will be very hard to estimate and in most cases, the final price will not be precise. The booked viewing and the commercial carpet cleaning process will be performed to your advantage and according to your busy schedule.</Typography></li>
-        <li>
-          <Typography variant="h3">What payment methods do you accept for commercial carpet cleaning in London?</Typography>
-          <Typography variant="body">We accept debit/credit cards, bank transfers and cash payments handed to our team.</Typography></li>
-        <li>
-          <Typography variant="h3">Can you send me an invoice for the carpet cleaning for commercial buildings?</Typography>
-          <Typography variant="body">Yes, we will send you a receipt via email, or via any means that are convenient to you.</Typography></li>
+          <Typography variant="h3">Can your dust mite removal company provide me with an invoice?</Typography>
+          <Typography variant="body">Yes, we will either send you a receipt via email or via any method of your choice.</Typography></li>
         <li>
           <Typography variant="h3">Are you qualified?</Typography>
-          <Typography variant="body">Yes, we are qualified and fully trained by the NCCA (National Carpet Cleaners Association) – the UK’s recognised industry qualification, and by Checkatrade.</Typography></li>
+          <Typography variant="body">Yes, we are qualified and fully trained members of <a class="color-paper-link hover-color-paper-link-hover:hover" href="https://www.checkatrade.com/trades/FineCarpetCleaning" target="_blank" rel="noopener">Checkatrade</a> and of <a class="color-paper-link hover-color-paper-link-hover:hover" href="https://trustedlocalcleaners.ncca.co.uk/listing/fine-carpet-cleaning-ltd/" target="_blank" rel="noopener">NCCA</a> (National Carpet Cleaners Association) – the UK’s acknowledged industry qualification.</Typography></li>
         <li>
-          <Typography variant="h3">How long have you been in the professional commercial carpet cleaning business?</Typography>
-          <Typography variant="body">Since 2012, we have been active in the carpet cleaning rental property industry, serving both commercial and residential clients. Over the years, we have encountered a wide array of carpets, rugs, upholstery, and various types of stains, accumulating valuable experience. Our commitment to excellence has driven us to enhance our services through the following means:</Typography></li>
+          <Typography variant="h3">How long have you been in the upholstery and carpet cleaning business?</Typography>
+          <Typography variant="body">Since 2012, we have been actively involved in the cleaning industry. Over the years, we have encountered various types of carpets, rugs, upholstery and stains from both commercial and residential clients, gaining valuable experience. Our commitment to providing the best carpet, sofa, mattress, dust mite cleaning services and many more, has driven us to enhance our performance through the following steps:</Typography></li>
         <li>
-          <p>Continuously upgrading our equipment and machinery with superior alternatives whenever they become available;</p>
+          <p>Continuously upgrading our equipment with superior alternatives whenever they become available to obtain;</p>
         </li>
         <li>
-          <p>Consistently evaluating and improving our cleaning products to ensure the highest quality of service;</p>
+          <p>Consistently improving our cleaning products to ensure the highest quality of service;</p>
         </li>
         <li>
-          <p>Dedication to expanding our knowledge and skills through ongoing professional courses and training, always seeking to enhance our expertise and competence.</p>
+          <p>Dedication to expanding our knowledge and skills through ongoing professional training, always seeking to enhance our competence.</p>
         </li>
         <li>
-          <Typography variant="h3">Can you give me a discount for the commercial carpet cleaning services?</Typography>
-          <Typography variant="body">Our commercial carpet cleaning services stand out for their top-quality results, thanks to our use of the most effective equipment and over 20 premium cleaning products. Not only are our commercial carpet cleaning prices highly competitive, but they are also some of the most attractive in the market. Bundling all the services you require proves to be more cost-effective compared to individual service visits. This is because of the initial high cost and additional charges for each technician visit, factoring in travel time, parking, and the handling of heavy equipment during loading and unloading.</Typography></li>
+          <Typography variant="h3">Can you give me a discount?</Typography>
+          <Typography variant="body">Our cleaning services are known for their top quality, utilising the most effective equipment and a range of premium cleaning products. What sets us apart even further is that our prices are not only highly competitive but also rank among the most attractive in the market.</Typography>
+          <Typography variant="body">Bundling all the services you need is a more cost-effective option compared to individual visits. This is because of the initial high cost and additional charges for each technician visit, taking into account factors such as travel time, parking, and the handling of heavy equipment during loading and unloading.</Typography></li>
         <li>
-          <Typography variant="h3">How much is commercial carpet cleaning per square foot?</Typography>
-          <Typography variant="body">You can check out our price table above, but in short, our commercial carpet cleaning prices per square foot are:</Typography></li>
+          <Typography variant="h3">How often should a mattress be professionally cleaned?</Typography>
+          <Typography variant="body">The frequency of professional mattress cleaning can depend on several factors, including personal preferences, the type of mattress, and whether there are specific issues like allergies or stains. Generally, the bedding should be washed at least once a week to minimise the amount of oil, sweat, skin, and fluids that get into your mattress, while your pillows should be cleaned at least twice a year. When it comes to the mattress itself, aim for a <strong>minimum of twice a year or once every season</strong>.</Typography>
+          <Typography variant="body">If any spills or stains have occurred on the mattress, it's advisable to address them promptly. Stains can attract bacteria and contribute to odours. Mattress cleaning services London will help with completely eliminating stains and odours and leave your mattress fresh and clean.</Typography></li>
         <li>
-          <p>from 0 to 2153ft² (200m²) - £2.20;</p>
+          <Typography variant="h3">Can you clean a mattress with a steam cleaner?</Typography>
+          <Typography variant="body">Yes, you can clean a mattress with a steam cleaner, and it can be an effective method for removing stains, odours, and killing bacteria. A few general pieces of advice when steam cleaning are to first vacuum thoroughly the mattress, to let the mattress dry out completely before use, to be cautious about using too much water and to always check the mattress care instructions. Some mattresses, especially memory foam or those with certain treatments, may not be suitable for steam cleaning.</Typography>
+          <Typography variant="body">If you have concerns or uncertainty about steam cleaning your mattress, it is advisable to take advantage of professional mattress cleaning services, which will best take care of your mattress.</Typography></li>
+        <li>
+          <Typography variant="h3">How effective is a steam cleaning mattress?</Typography>
+          <Typography variant="body">Steam cleaning can be an effective method for cleaning mattresses, especially when it comes to removing stains, eliminating odours, and reducing the presence of allergens like dust mites and bacteria, thanks to the high-temperature steam. To achieve the best possible results, hire mattress cleaning and dust mite removal services that will professionally take care of your mattress.</Typography></li>
+        <li>
+          <Typography variant="h3">How long does it take for a steam-cleaned mattress to dry?</Typography>
+          <Typography variant="body">It takes about 5-7 hours for a steam-cleaned mattress to dry completely. We strongly advise that you let the mattress completely dry, especially before use, as damp mattresses are breeding grounds for harmful moulds, bacteria and other allergens.</Typography>
         </li>
-        <li>
-          <p>from 2153ft² (200m²) to 10764ft² (1000m²) - £2.00.</p>
-        </li>
-        <li>
-          <Typography variant="h3">How much does commercial carpet cleaning cost?</Typography>
-          <Typography variant="body">Our minimum charge is £65.00. Per square metre, we charge £2.20 from 0 to 200m² and £2.00 – from 200 to 1000m².</Typography></li>
-        <li>
-          <Typography variant="h3">How often do hotels clean carpets?</Typography>
-          <Typography variant="body">The frequency with which hotels book commercial carpet cleaning services depends on a number of factors. We advise that hotels clean their carpets, rugs and upholstery on a regular basis, typically every 3-6 months. This is desirable for both the health and safety of guests, as well as the overall appearance of the hotel.</Typography>
-          <Typography variant="body">Here are some of the factors that can affect the frequency of hotel carpet cleaning services:</Typography>
-        </li>
-        <li>
-          <p>Type and fabric of the carpet: Some carpets, such as wool carpets, are more delicate than others and require more frequent cleaning.</p>
-        </li>
-        <li>
-          <p>Level of traffic: Carpets in high-traffic areas, such as hallways and lobbies, may need to be cleaned more often than carpets in low-traffic areas.</p>
-        </li>
-        <li>
-          <p>Hotel's cleaning schedule: Some hotels have a more rigorous cleaning schedule than others do.</p>
-        </li>
-        <Typography variant="body">In addition to regular cleaning, hotels may also spot-clean carpets as needed. This is typically done to remove small stains or spills.</Typography>
       </ul>
     </Entry>
     <Entry>
       <ul>
         <li>
-          <Typography variant="h3">What is the best method for commercial carpet cleaning?</Typography>
-          <Typography variant="body">Some of the most popular commercial carpet cleaning methods are:</Typography></li>
+          <Typography variant="h3">What is the best way to steam a mattress?</Typography>
+          <Typography variant="body">The steam cleaning method is the most effective way to clean a mattress. Steam cleaning at home can achieve good results when done properly. Booking a professional mattress cleaning company will give the best outcome, thanks to their expert equipment and experience gained through years of taking care of upholstery items.</Typography></li>
         <li>
-          <p>Hot water extraction, otherwise known as <a class="color-paper-link hover-color-paper-link-hover:hover" href="/professional-carpet-cleaning-services/steam">steam cleaning</a>, is easily the most common professional carpet cleaning technique. Steam cleaning uses hot water at high pressure to penetrate into carpet fibres, breaking down the dirt and bacteria stored deep within.</p>
+          <Typography variant="h3">What is the best way to clean and freshen up a mattress?</Typography>
+          <Typography variant="body">Cleaning and freshening up a mattress can be done effectively with a combination of methods to remove stains, odours, and allergens. Some general guidelines on the best way to clean and freshen up a mattress are:</Typography></li>
+        <li>
+          <p>Book professional mattress cleaning services at least twice a year or once every season. This will ensure that your mattress is taken care of and eliminates the possibility of moulds and allergens taking place;</p>
         </li>
         <li>
-          <p><a class="color-paper-link hover-color-paper-link-hover:hover" href="/professional-carpet-cleaning-services/dry">Dry carpet cleaning</a> is used for cleaning finer and more delicate carpets, rugs and upholstery, vulnerable to water damage. This cleaning method is suitable for all types of carpets and it is a significantly faster cleaning method because of its little to no drying time. It is also a great solution for cleaning big facilities without the luxury of off-time.</p>
-        </li>
-        <Typography variant="body">If you are having trouble deciding which industrial carpet cleaning services are best for you, feel free to contact us to get professional advice.</Typography>
-        <li>
-          <Typography variant="h3">What is commercial carpet cleaning?</Typography>
-          <Typography variant="body">Commercial carpet cleaning refers to professional cleaning by a commercial carpet cleaning company in commercial or business settings such as offices, retail stores, hotels and other commercial establishments. We at “Fine Carpet Cleaning” are also specialised in restaurant carpet cleaning and pub carpet cleaning. Such industrial carpet cleaning services are typically more extensive and intensive than residential carpet cleaning due to the higher volume of foot traffic and the potential for more significant soil and stains in commercial spaces.</Typography></li>
-        <li>
-          <Typography variant="h3">How often should a commercial carpet be cleaned?</Typography>
-          <Typography variant="body">The frequency of commercial carpet cleaning can vary based on several factors, including:</Typography></li>
-        <li>
-          <p>The type of commercial facility;</p>
+          <p>Use a vacuum cleaner with an upholstery attachment to thoroughly vacuum the mattress regularly;</p>
         </li>
         <li>
-          <p>The level of foot traffic the carpets receive;</p>
+          <p>Consider using a mattress protector to prevent future stains and protect against allergens or applying a stain protector layer to your mattress. Visit our stain protector dedicated page to learn more;</p>
         </li>
         <li>
-          <p>The specific needs of the business;</p>
+          <p>If your mattress allows it, rotate it regularly to ensure even wear and tear. This can also prevent the accumulation of allergens in specific areas;</p>
         </li>
         <li>
-          <p>Does the place have doormat;</p>
+          <p>Regularly wash bedding. Wash sheets, pillowcases, and mattress protectors weekly to maintain a clean sleeping environment;</p>
         </li>
         <li>
-          <p>On which floor is the place located (usually the first floor is dirtier because you directly enter the room from outside).</p>
-        </li>
-        <Typography variant="body">Cleanliness depends on these factors, so have them in mind when you are thinking about carpet cleaning. On average we recommend commercial carpet cleaning in London every 6 months.</Typography>
-        <li>
-          <Typography variant="h3">How do you clean hotel carpet?</Typography>
-          <Typography variant="body">Cleaning hotel carpets is a crucial part of maintaining a clean and welcoming environment for your guests. The cleaning process typically involves a combination of regular maintenance and periodic deep cleaning. Here are the steps involved in cleaning hotel carpets:</Typography></li>
-        <li>
-          <p>It's advisable to hire a professional carpet cleaning service with experience in hotel environments. They have the expertise and equipment to deep clean and restore the carpet effectively.</p>
+          <p>Use the services of a dust mite removal company if dust mites or other bed bugs have found their way to your mattress. Through their expert dust mite removal services, you can rest assured that all bugs will be exterminated, as well as future possibilities of them appearing again;</p>
         </li>
         <li>
-          <p>Stubborn stains may require specialised stain-removal techniques or products. Trained professionals can address these effectively. Check out our <a class="color-paper-link hover-color-paper-link-hover:hover" href="/">stain removal</a> page to learn more.</p>
+          <p>Keep the room well-ventilated. Proper ventilation is important to prevent the growth of mould and mildew. Open windows and use fans to ensure the mattress dries thoroughly after cleaning;</p>
         </li>
         <li>
-          <p>Consider applying a <a class="color-paper-link hover-color-paper-link-hover:hover" href="/">stain protector</a> after cleaning to help repel spills and stains, extending the time between cleanings.</p>
-        </li>
-        <Typography variant="body">Regular maintenance and professional cleaning from an industrial carpet cleaning company that specialises in offering hotel carpet cleaning services are essential for preserving the appearance and longevity of the carpets, rugs or upholstery in your hotel. Keeping carpets clean and fresh contributes to the overall guest experience and helps maintain a positive image for your establishment.</Typography>
-        <li>
-          <Typography variant="h3">What do hotels use to remove stains?</Typography>
-          <Typography variant="body">Many hotels use hotel carpet cleaning services that are equipped with the expertise and equipment to handle a wide range of stains effectively. These services can provide deep cleaning for carpets, upholstery, and other surfaces.</Typography>
-          <Typography variant="body">It's important to note that the choice of stain removal method or product depends on the type of stain, the fabric or material involved, and the hotel's specific protocols. Booking industrial carpet cleaning services, like the ones we offer at “Fine Carpet Cleaning” Ltd., will ensure that your hotel’s carpets, rugs and upholstery are correctly taken care of. That is thanks to our business carpet cleaning expertise, professional equipment and carefully selected cleaning products.</Typography></li>
-        <li>
-          <Typography variant="h3">What are your commercial carpet cleaning rates?</Typography>
-          <Typography variant="body">The carpet cleaning rates for commercial cleaning are determined by several variables, including:</Typography></li>
-        <li>
-          <p>The number and dimensions of the carpets;</p>
+          <p>Check the care instructions provided by the mattress manufacturer to ensure what cleaning methods are most suitable for your specific mattress type.</p>
         </li>
         <li>
-          <p>The degree of soiling;</p>
+          <Typography variant="h3">How much does it cost to steam clean a mattress?</Typography>
+          <Typography variant="body">How much the mattress cleaning service London costs depends on a number of factors. Some of them are:</Typography></li>
+        <li>
+          <p>The quantity and size of the mattresses;</p>
         </li>
         <li>
-          <p>The type of carpets;</p>
+          <p>How soiled they are;</p>
         </li>
         <li>
-          <p>The accessibility of the carpets.</p>
+          <p>If spills or stains have occurred;</p>
         </li>
-        <p>To learn more about our commercial carpet cleaning rates, check out our commercial carpet cleaning prices.</p>
         <li>
-          <Typography variant="h3">Do you offer industrial carpet cleaning services?</Typography>
-          <Typography variant="body">We at “Fine Carpet Cleaning” Ltd. are specialised in cleaning commercial carpets and perform in all boroughs in London. Wherever you want your carpets, rugs or upholstery to be cleaned by a commercial carpet cleaning company, you can rely on us to happily arrive at that destination.</Typography></li>
+          <p>If dust mite removal services should take place.</p>
+          <Typography variant="body">To learn more, take a look at our <a class="color-paper-link hover-color-paper-link-hover:hover" href="/prices">mattress cleaning prices</a>.</Typography></li>
         <li>
-          <Typography variant="h3">Are the cleaning machines loud? Will they interrupt the work process?</Typography>
-          <Typography variant="body">Yes, the machines are noisy, but commercial carpet cleaning is designed to be efficient, fast and minimise downtime for your business. Our powerful equipment and experienced technicians ensure that cleaning is completed quickly, usually within a few hours, depending on the size and condition of the area. In addition, we offer flexible scheduling options, including after-hours and weekend appointments, to further minimise disruption to your daily operations.</Typography></li>
+          <Typography variant="h3">How do you dry a mattress after cleaning it?</Typography>
+          <Typography variant="body">Leave the mattress to dry before use in a well-ventilated room. Proper ventilation is important to prevent the growth of mould and mildew.</Typography>
+          <Typography variant="body">It takes about 5-7 hours for a steam-cleaned mattress to dry. It’s best that you make sure the mattress is completely dry before use as damp mattresses are breeding grounds for harmful moulds.</Typography>
+        </li>
         <li>
-          <Typography variant="h3">Will our staff disrupt the work of your specialists?</Typography>
-          <Typography variant="body">Our team is trained to work efficiently and discreetly to minimise any interference with your staff and daily operations. We understand the importance of maintaining a productive work environment, so in order to ensure the good work of your team and our specialists, we advise you to book at a time when there are no people in the office in order not to interrupt each other's work. We can schedule carpet cleaning outside of your regular working hours, including evenings and weekends, to avoid disrupting your business activities.</Typography></li>
+          <Typography variant="h3">Is it possible to deep clean a mattress?</Typography>
+          <Typography variant="body">Yes, it is possible to deep clean a mattress to remove embedded dirt, dust, stains, allergens, and odours. Deep cleaning involves thorough cleaning methods that go beyond surface cleaning. An expert mattress cleaning company like “Fine Carpet Cleaning” Ltd. will use special equipment and premium cleaning products to achieve the best possible results for your mattress.</Typography></li>
         <li>
-          <Typography variant="h3">Can you also carry out carpet cleaning outside business hours?</Typography>
-          <Typography variant="body">Yes, we can also carry out commercial carpet cleaning outside regular working hours. We know that it's important to minimise disruption to your business. That's why we offer flexible schedules that include evenings, weekends, and even early mornings. Our mission is to satisfy your specific needs and to ensure that your carpets are cleaned at a time that is most convenient for you so that your business can continue to run without interruption. Contact us to discuss your preferred time, and we will create a cleaning schedule that fits your routine.</Typography></li>
+          <Typography variant="h3">Can you steam clean a mouldy mattress?</Typography>
+          <Typography variant="body">Steam cleaning can be effective in treating a mouldy mattress, but it's important to approach the situation with caution and follow proper procedures. Mould is an issue that can negatively impact health, so it's crucial to address it promptly and thoroughly. Booking professional mattress cleaning services will assure you that your mattress will be properly taken care of.</Typography></li>
         <li>
-          <Typography variant="h3">Do you also clean at weekends?</Typography>
-          <Typography variant="body">Yes, we also clean at weekends. The optimal time for commercial carpet cleaning is when no one is at work so as not to disturb the work of your staff. The only thing we need is a person who can tell us where the electricity and water connections are. There is no extra charge for weekend cleaning, so you can book whenever it is convenient for you.</Typography></li>
+          <Typography variant="h3">How do professional cleaners clean mattresses?</Typography></li>
+          <li>
+            <p>First we carry out a thorough inspection. According to the level of pollution and/or additional blemishes, we will determine our course of action during the mattress cleaning service London;</p>
+          </li>
+          <li>
+            <p>Depending on how soiled your mattress is, disinfectants and eco-friendly cleaning solutions may be used to treat settled stains. Washing solutions will be sprayed on problem areas and allowed to soak for 3-5 minutes before the steam cleaning procedure;</p>
+          </li>
+          <li>
+            <p>After applying cleaning treatments, steam cleaning is performed on your mattresses to break up stains, sweat, urine, and other residues that may have accumulated;</p>
+          </li>
+          <li>
+            <p>If there are any remaining stains our cleaning experts will begin the dirt or stain extraction process, using special cleaning chemicals and equipment;</p>
+          </li>
+          <li>
+            <p>It takes about 5-7 hours for a steam-cleaned mattress to dry completely. It’s best to leave the mattress to dry in a ventilated room, if possible, as damp mattresses are perfect breeding grounds for harmful moulds and bacteria.</p>
+          </li>
+        <li>
+          <Typography variant="h3">Can I steam-clean a memory foam mattress?</Typography>
+          <Typography variant="body">The main weakness of memory foam is its vulnerability to heat and water. Memory foam should not be washed in a washing machine, as this will damage the fibres and cause it to lose its structural memory. For the same reason, steam cleaning memory foam should be performed with extreme caution.</Typography>
+          <Typography variant="body">The best action would be to call in a professional mattress cleaning company. Thanks to their knowledge and years of experience they will know how your mattress should be handled and what specific cleaning method should be used to achieve the best possible outcome.</Typography>
+        </li>
+        <li>
+          <Typography variant="h3">How do you deep clean a yellow mattress?</Typography>
+          <Typography variant="body">A yellowed mattress may be the result of various factors, including body oils, sweat, and other stains. Deep cleaning from an expert mattress cleaning company can help remove these stains, clean your mattress in depth and refresh it.</Typography></li>
+        <li>
+          <Typography variant="h3">How do you get urine smell out of a mattress?</Typography></li>
+          <li>
+            <p><strong>Act Quickly:</strong> The sooner you address a urine stain, the better. Try to blot up as much of the liquid as possible using paper towels or a clean, absorbent cloth.</p>
+          </li>
+          <li>
+            <p><strong>Remove Bedding:</strong> Take off all sheets, pillowcases, and mattress protectors, and wash them separately according to the care instructions.</p>
+          </li>
+          <li>
+            <p><strong>Blot Excess Moisture:</strong> Use paper towels or a clean cloth to blot as much of the remaining urine as possible. Press down firmly without rubbing to avoid spreading the stain.</p>
+          </li>
+          <li>
+            <p><strong>Mattress cleaning services:</strong> Call a mattress cleaning company to handle the stain.</p>
+          </li>
+          <li>
+            <p><strong>Mattress Protector:</strong> Consider using a waterproof mattress protector to prevent future accidents and protect against stains and odours.</p>
+          </li>
+        <li>
+          <Typography variant="h3">How do you get old stains out of a mattress UK?</Typography>
+          <Typography variant="body">Professional mattress cleaning services have access to specialised equipment and cleaning solutions to effectively remove old stains. The following is a general overview of how professionals like “Fine Carpet Cleaning” Ltd. will handle the task:</Typography></li>
+        <li>
+          <p>The cleaning process starts by assessing the type and severity of the stains on the mattress. Different stains may require different treatments.</p>
+        </li>
+        <li>
+          <p>Professionals often apply a pre-treatment to the stained areas. This could be a specialised stain remover or a cleaning solution tailored to the specific type of stain.</p>
+        </li>
+        <li>
+          <p>Mattress cleaning services use steam cleaning or hot water extraction methods. This involves using high-pressure hot water along with cleaning agents to penetrate deep into the mattress fabric, loosening and extracting dirt, stains, and contaminants.</p>
+        </li>
+        <li>
+          <p>The cleaning equipment extracts the water, cleaning solution, and dislodged particles from the mattress. This step helps in removing both the cleaning agents and the contaminants, leaving the mattress cleaner and fresher.</p>
+        </li>
+        <li>
+          <p>Powerful drying equipment is used to extract as much moisture as possible from the mattress. Rapid drying is essential to prevent mould and mildew growth.</p>
+        </li>
+        <li>
+          <p>For stubborn or persistent stains, professionals may employ targeted stain removal techniques. This could involve using specific stain removers or treatments based on the nature of the stain.</p>
+        </li>
+        <li>
+          <p>After the cleaning process, professionals may conduct a final inspection to ensure that the stains are effectively treated, and the mattress is in good condition.</p>
+        </li>
       </ul>
     </Entry>
   </Container>
@@ -328,108 +336,129 @@ export function FaqSection() {
 export default function Page() {
   return (
     <>
-      <h1 class="mt-10 md-mt-17 font-size-12.5 md-font-size-16 md-line-height-18 line-height-16">Commercial carpet cleaning services</h1>
+      <h1 class="mt-10 md-mt-17 font-size-12.5 md-font-size-16 md-line-height-18 line-height-16">Mattress cleaning services</h1>
       <div class="flex flex-justify-center"><img class="b-rd-3 md-mt-10 mt-2 max-w-full" src="/assets/Професионално почистване на заведения.jpg" alt="" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 30%);" /></div>
 
       <FleurDivider></FleurDivider>
 
-      <h2 class="line-height-12 md-line-height-14">What to expect from our commercial carpet cleaning services</h2>
+      <h2 class="line-height-12 md-line-height-14">What to expect from our mattress cleaning services</h2>
       <div class="mt-20 py-8 px-8 md-px-14 bg-paper b-rd-3" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 18%);">
         <Typography variant="h3">Benefits:</Typography>
-        <p>Fine Carpet Cleaning” Ltd. performs commercial carpet cleaning services in all of London. We have years of experience in commercial carpet cleaning for businesses of all sizes. We deliver a deeper clean that is healthier for your employees and customers without interfering with your business activities. The benefits of using commercial carpet cleaning services are:</p>
+        <p>We at “Fine Carpet Cleaning” Ltd. perform mattress cleaning services. Apart from refreshing and leaving your bed feeling brand-new, mattress cleaning services have great health benefits. Studies reveal that a typical used mattress may have 100,000 to 10 million mites inside. Additionally, the human body loses about half a pint of fluid every night, most of which is absorbed into the fibres of the mattress. Mattress cleaning services and dust mite cleaning services will help exterminate any unwanted guests and fluids, leaving your environment significantly cleaner and healthier. A lot more advantages are gained through such services, such as:</p>
         <ul>
           <li class="ml--5">
-            <p><strong>Customised pricing and discounts</strong> - For business customers, an inspection is always conducted in advance. This will allow the cleaning team to assess access to the water and electricity systems and get an idea of the full scope of the job. In this way we will be able to customise the service to your specific needs and ensure you get the best possible price.</p>
+            <p>Removing any stains, spots, and dirt from the surface of the mattress;</p>
           </li>
           <li class="ml--5">
-            <p><strong>Flexible scheduling</strong> - you can make booking at a convenient time for you in order to avoid disrupting daily operations. We offer evening, weekend, and early morning appointments to ensure minimal interference with your business activities.</p>
+            <p>Extending the life of your mattress;</p>
           </li>
           <li class="ml--5">
-            <p><strong>Professionalism</strong> - Business environments frequently require higher levels of cleanliness and hygiene. Our business carpet cleaning services are designed to meet these requirements, delivering a clean and healthy working environment for your staff and clients.</p>
+            <p>Eliminating odours made from spills, pets, or smoking will leave your mattress fresh;</p>
+          </li>
+          <li class="ml--5">
+            <p>Professional mattress cleaning experts have the tools and expertise to get the job done efficiently and effectively;</p>
+          </li>
+          <li class="ml--5">
+            <p>Mattress cleaning service London is confirmed to be absolutely harmless for the surfaces, especially when carried out by our trained and certified experts;</p>
+          </li>
+          <li class="ml--5">
+            <p>Killing all dust mites that cause problems for people with breathing problems and asthma;</p>
+          </li>
+          <li class="ml--5">
+            <p>Killing bed bugs and their eggs, which is not possible with an insecticide treatment as the eggs of the bed bugs are resistant to it due to the chemical structure of their shells;</p>
+          </li>
+          <li class="ml--5">
+            <p>Killing the eggs of moths and preventing a moth infestation from spreading quickly in your home and damaging the fabrics;</p>
+          </li>
+          <li class="ml--5">
+            <p>Killing bacteria in the mattress;</p>
+          </li>
+          <li class="ml--5">
+            <p>Refreshing and deodorising.</p>
           </li>
         </ul>
 
         <Typography variant="h3">Simple booking process:</Typography>
-        <p>The usual process of booking our commercial carpet cleaning services:</p>
+        <p>The usual process of booking our mattress carpet cleaning services:</p>
 
         <ul>
           <li class="ml--5">
             <p>You reach out to us.</p>
           </li>
           <li class="ml--5">
-            <p>We come for a viewing of the space you want to be cleaned and offer recommendations on which services will best suit you.</p>
+            <p>You receive tailored service suggestions based on your needs.</p>
           </li>
           <li class="ml--5">
-            <p>You will receive a quote for the business carpet cleaning service.</p>
+            <p>We give you a price estimate.</p>
           </li>
           <li class="ml--5">
-            <p>If you find our terms agreeable, we will schedule an appointment for you.</p>
+            <p>If our terms align with your wishes, we schedule a convenient appointment for you.</p>
           </li>
           <li class="ml--5">
-            <p>One of our skilled technicians will then visit your property to perform the carpet cleaning.</p>
+            <p>Our professional mattress cleaning experts will then conduct the mattress cleaning services at your property.</p>
           </li>
         </ul>
+
         <Typography variant="h3">What do we offer:</Typography>
-        <p><strong>Specialised carpet cleaning for every business need:</strong></p>
+        <p>Other cleaning services you might be interested in are:</p>
 
         <ul>
-          <li class="ml--5"><p>Hotel carpet cleaning services</p></li>
-          <li class="ml--5"><p>Restaurant carpet cleaning services</p></li>
-          <li class="ml--5"><p>Pub carpet cleaning services</p></li>
-          <li class="ml--5"><a class="color-paper-link-hover hover-color-paper-link:hover font-size-17.5px line-height-8 word-spacing--0.12 tracking--0.04" href="/">Office carpet cleaning services</a></li>
-          <li class="ml--5"><p>Industrial carpet cleaning services</p></li>
-          <li class="ml--5"><p>Corporate carpet cleaning services</p></li>
-          <li class="ml--5"><p>Contract carpet cleaning services</p></li>
-          <li class="ml--5"><p>Retail carpet cleaning services</p></li>
-          <li class="ml--5"><p>Health facilities carpet cleaning services</p></li>
-          <li class="ml--5"><p>Rental property carpet cleaning</p></li>
-          <li class="ml--5"><p>And many more</p></li>
+          <li class="ml--5"><a class="color-paper-link-hover hover-color-paper-link:hover font-size-17.5px line-height-8 word-spacing--0.12 tracking--0.04" href="/professional-stain-removal-services">Upholstery stain removal</a></li>
+          <li class="ml--5"><a class="color-paper-link-hover hover-color-paper-link:hover font-size-17.5px line-height-8 word-spacing--0.12 tracking--0.04" href="/stain-protection-services">Upholstery stain protector</a></li>
+          <li class="ml--5"><a class="color-paper-link-hover hover-color-paper-link:hover font-size-17.5px line-height-8 word-spacing--0.12 tracking--0.04" href="/professional-upholstery-cleaning-services/sofa">Sofa cleaning</a></li>
+          <li class="ml--5"><a class="color-paper-link-hover hover-color-paper-link:hover font-size-17.5px line-height-8 word-spacing--0.12 tracking--0.04" href="/professional-upholstery-cleaning-services/sofa/leather">Leather sofa cleaning</a></li>
+          <li class="ml--5"><a class="color-paper-link-hover hover-color-paper-link:hover font-size-17.5px line-height-8 word-spacing--0.12 tracking--0.04" href="/professional-upholstery-cleaning-services/furniture">Furniture cleaning</a></li>
+          <li class="ml--5"><a class="color-paper-link-hover hover-color-paper-link:hover font-size-17.5px line-height-8 word-spacing--0.12 tracking--0.04" href="/professional-upholstery-cleaning-services/pillow">Pillow cleaning</a></li>
         </ul>
-        <p><strong>Beyond carpets: Our full range of professional cleaning services:</strong></p>
+
+        <Typography variant="h3">The process of our mattress cleaning services:</Typography>
+        <p>Effectively disinfecting beds requires a multi-layered cleaning approach to completely remove odours, stains, allergens, and bed bugs from your mattresses. Here is a complete run-down of all the steps performed for cleaning mattresses professionally.</p>
+
         <ul>
-          <li class="ml--5"><a class="color-paper-link-hover hover-color-paper-link:hover font-size-17.5px line-height-8 word-spacing--0.12 tracking--0.04" href="/">Professional rug cleaning services</a></li>
-          <li class="ml--5"><a class="color-paper-link-hover hover-color-paper-link:hover font-size-17.5px line-height-8 word-spacing--0.12 tracking--0.04" href="/">Professional upholstery cleaning services</a></li>
-          <li class="ml--5"><a class="color-paper-link-hover hover-color-paper-link:hover font-size-17.5px line-height-8 word-spacing--0.12 tracking--0.04" href="/">Stain protection services</a></li>
-          <li class="ml--5"><a class="color-paper-link-hover hover-color-paper-link:hover font-size-17.5px line-height-8 word-spacing--0.12 tracking--0.04" href="/">Professional stain removal services</a></li>
+          <li class="ml--5"><p><strong>Inspection</strong> - The first step of the cleaning process would be to carry out a thorough inspection. According to the level of pollution and/or additional blemishes, we will determine our course of action during the mattress cleaning service London.</p></li>
+          <li class="ml--5"><p><strong>Applying pre-determined disinfectants and eco-friendly cleaning solutions</strong> - Depending on the condition of your mattress, we apply disinfectants and eco-friendly cleaning solutions to treat settled stains. Washing solutions will be sprayed on problem areas and allowed to soak for 3-5 minutes before the steam cleaning procedure.</p></li>
+          <li class="ml--5"><p><strong>Steam cleaning</strong> - After applying cleaning treatments, steam cleaning is performed on your mattresses to break up stains, sweat, urine, and other residues that may have accumulated. Hot water is used in steam cleaning equipment to moisten the mattress and bring out accumulated dirt from within it. The steam cleaning equipment also has a built-in vacuum to suck out the dirt particles that are loosened up by the steam moisture.</p></li>
+          <li class="ml--5"><p><strong>Stain treatment</strong> - If there are any remaining stains, our cleaning experts will begin the dirt or stain extraction process using special cleaning solutions and equipment. All the deeply ingrained dirt and other contaminants will be removed at this stage.</p></li>
+          <li class="ml--5"><p><strong>Drying</strong> - It takes about 5-7 hours for a steam-cleaned mattress to dry completely. We strongly recommend allowing the mattress to completely dry, especially before use, as damp mattresses are breeding grounds for harmful moulds.</p></li>
         </ul>
       </div>
 
       <FleurDivider></FleurDivider>
 
-      <h2 class="line-height-12 md-line-height-14">Equipment and products we use for our commercial carpet cleaning services</h2>
+      <h2 class="line-height-12 md-line-height-14">Equipment and products we use for our mattress cleaning services</h2>
       <div class="mt-20 py-8 px-12 md-px-14 bg-paper b-rd-3" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 18%);">
         <p>At "Fine Carpet Cleaning" Ltd., we use a range of top-tier cleaning equipment and products to ensure the highest quality commercial carpet cleaning:</p>
         <ol style="counter-reset: ordered; list-style: none;">
           <li class="ml--5">
-            <h3 class="ml--5 font-size-6 md-font-size-7">Premium devices</h3>
-            <Typography variant="body">Our machines are some of the most powerful and effective portable machines globally. We've conducted extensive testing of various machine brands available in the UK market and have chosen the best, including "Mytee" (a leading US manufacturer) and "Airflex" (one of the top UK manufacturers). Our in-house engineer also fine-tunes and enhances these machines to maximise their performance.</Typography>
+            <h3 class="ml--5 font-size-6 md-font-size-7">Top-tier technology</h3>
+            <Typography variant="body">At "Fine Carpet Cleaning Ltd," we are committed to using cutting-edge cleaning equipment and premium products. Our machines, known for their exceptional power and effectiveness, are considered among the best portable machines globally. After going through extensive testing, we have chosen to work with equipment from top brands available in the UK market, including "<a class="color-paper-link hover-color-paper-link-hover:hover" href="https://www.mytee.com/products/1003dx-speedster-deluxe-carpet-extractor/" target="_blank" rel="noopener">Mytee</a>" and "<a class="color-paper-link hover-color-paper-link-hover:hover" href="https://www.clean-smart.co.uk/store/airflex-storm" target="_blank" rel="noopener">Airflex</a>". Furthermore, our in-house engineer makes additional enhancements to the cleaning machines to maximise their performance.</Typography>
           </li>
           <li class="ml--5">
-            <h3 class="ml--5 font-size-6 md-font-size-7">Effective vacuum cleaner</h3>
-            <Typography variant="body">The equipment we use for our carpet commercial cleaning includes a high-filtration twin-motor vacuum cleaner, which we believe to be the best on the market. This vacuum cleaner is purpose-built for high-performance industrial carpet cleaning. It features two motors, with one agitating the carpet while the other efficiently suctions out loose dirt, dry soil, and dust.</Typography>
+            <h3 class="ml--5 font-size-6 md-font-size-7">Powerful vacuum cleaners</h3>
+            <Typography variant="body">Designed for high-performance expert carpet cleaning, our high-filtration twin motor vacuum cleaner is widely regarded as the best on the market. One motor pounds at the carpet while the other effectively removes loose dirt, dry soil, and dust.</Typography>
           </li>
           <li class="ml--5">
-            <h3 class="ml--5 font-size-6 md-font-size-7">Precisely chosen cleaning agents</h3>
-            <Typography variant="body">We make use of over 20 different cleaning products from renowned brands in the UK and US markets. Our selection process involves extensive testing, and we've chosen products from brands such as "Alltec," "Prochem," "Chemspec," "Solution World of Clean," and "TMF." This diverse range allows our technicians to select the most suitable detergents for each situation based on factors like:</Typography>
+            <h3 class="ml--5 font-size-6 md-font-size-7">Selectively chosen cleaning agents</h3>
+            <Typography variant="body">Our huge selection of cleaning products has also been carefully selected after in-depth testing of almost all cleaning products available on the market. This extensive variety enables our technicians to choose the most appropriate detergents based on factors such as:</Typography>
           </li>
         </ol>
         <ul>
           <li class="ml--5">
-            <p>The fabric and type of the carpet.</p>
+            <p>The fabric of the mattress;</p>
           </li>
           <li class="ml--5">
-            <p>How soiled the carpet is.</p>
+            <p>The level of soiling;</p>
           </li>
           <li class="ml--5">
-            <p>The type of stains that need to be cleaned.</p>
+            <p>The type of stains needing treatment.</p>
           </li>
         </ul>
-        <p>This approach ensures the most professional contract carpet cleaning services.</p>
+        <p>With our high-quality cleaning equipment and products, we guarantee professional mattress cleaning services of the utmost quality.</p>
       </div>
 
       <FleurDivider></FleurDivider>
 
-      <h2 class="line-height-12 md-line-height-14">Pictures from our Commercial carpet cleaning services in London</h2>
+      <h2 class="line-height-12 md-line-height-14">Pictures from our mattress cleaning services</h2>
 
       <FacebookLikeGallery imgs={[
         { src: "/assets/Професионално почистване на заведения.jpg", alt: "" },
@@ -443,13 +472,13 @@ export default function Page() {
 
       <FleurDivider></FleurDivider>
 
-      <h2 class="line-height-12 md-line-height-14">Video from our Commercial carpet cleaning services in London</h2>
+      <h2 class="line-height-12 md-line-height-14">Videos from our mattress cleaning services</h2>
 
       <VideoPlayer></VideoPlayer>
 
       <FleurDivider></FleurDivider>
 
-      <h2 class="line-height-12 md-line-height-14">Commercial carpet cleaning prices</h2>
+      <h2 class="line-height-12 md-line-height-14">Our mattress cleaning services prices</h2>
 
       <div class="my-20 pt-8 pb-6 px-8 md-px-14 b-rd-3 bg-paper line-height-7.5 md-line-height-8 text-justify font-size-4 md-font-size-4.4"
         style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 18%);">
@@ -524,7 +553,7 @@ export default function Page() {
         </tbody>
       </table>
 
-      <button class="outline-none bg-brand-second-action hover-bg-brand-second-action-hover:hover font-size-6 font-600 w-250px h-60px c-paper flex flex-items-center flex-justify-center relative b-solid b-rd-3 b-4 b-brand-second-action hover-b-brand-second-action-hover:hover whitespace-normal line-height-6 word-spacing-0.5 py-9 my-20 mx-auto" style="box-shadow: 0 0 0 3px rgba(255, 255, 255, .9) inset; letter-spacing: 0.05rem;"><a class="c-paper font-size-5">REQUEST A QUOTE</a></button>
+      <button class="outline-none bg-brand-second-action hover-bg-brand-second-action-hover:hover font-size-6 font-600 w-250px h-60px c-paper flex flex-items-center flex-justify-center relative b-solid b-rd-3 b-4 b-brand-second-action hover-b-brand-second-action-hover:hover whitespace-normal line-height-6 word-spacing-0.5 py-9 my-20 mx-auto" style="box-shadow: 0 0 0 3px rgba(255, 255, 255, .9) inset; letter-spacing: 0.05rem;"><a href="/contact-us" class="c-paper font-size-5">REQUEST A QUOTE</a></button>
 
       <FleurDivider></FleurDivider>
 
@@ -535,56 +564,42 @@ export default function Page() {
 
       <FleurDivider></FleurDivider>
 
-      <h2 class="line-height-12 md-line-height-14">Our commercial carpet cleaning services specialists advise:</h2>
+      <h2 class="line-height-12 md-line-height-14">Our mattress cleaning services specialists advise:</h2>
       <div class="mt-20 py-8 px-12 md-px-14 bg-paper b-rd-3" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 18%);">
         <ol style="counter-reset: ordered; list-style: none;">
           <li class="ml--5">
-            <h3 class="ml--5 font-size-6 md-font-size-7">Fresh and clean carpet - mission possible!</h3>
-            <Typography variant="body">Here are some tips that will help you prolong the life of your carpet:</Typography>
-            <ul style="list-style: initial;" class="ml--5">
-              <li class="ml--5">
-                <p>If you spill something on the carpet, do not try to clean it up with anything because that will only make the situation worse. What you can do is soak up the liquid with kitchen paper.</p>
-              </li>
-              <li class="ml--5">
-                <p>The best way to maintain your carpet at home is to use a hoover with a beater at least once a week. This type of vacuum cleaner removes the dust from the carpet and return the natural fluffiness of the carpet.</p>
-              </li>
-              <li class="ml--5">
-                <p>The areas under the chairs are often worn. In order to prevent this, we recommend that you lay out a chair mat on the carpet.</p>
-              </li>
-            </ul>
-            <Typography variant="body">Our commercial carpet cleaning specialist suggests adding a stain protector to your carpet and upholstery for keeping the carpet fresh and clean. This can save you a considerable amount of money on professional stain removal services. If you are curious, we recommend that you find out <a class="color-paper-link hover-color-paper-link-hover:hover" href="/">more about the benefits of stain protection services.</a></Typography>
-          </li>
-
-
-          <li class="ml--5">
-            <h3 class="ml--5 font-size-6 md-font-size-7">Consider utilising the stain removal service.</h3>
-            <Typography variant="body">Our contract carpet cleaning specialists suggest enlist the services of a professional stain removal company if your carpet or upholstery has been stained rather than trying to clean it yourself. In case of unexpected spillage never try to clean the carpet with cleaning products from the supermarket, as these will severely damage the fabric. In fact, such stain removal attempts may seal the stain, making it even more challenging, if not impossible, for a professional commercial carpet cleaning company to remove it. Therefore, scheduling a professional <a class="color-paper-link hover-color-paper-link-hover:hover" href="/">stain removal service</a> from an expert industrial carpet cleaning company can potentially save your valuable carpet or upholstery, which could be worth a significant amount.</Typography>
+            <h3 class="ml--5 font-size-6 md-font-size-7">Utilise a stain guard</h3>
+            <Typography variant="body">Our professional mattress cleaning specialist recommends considering the addition of a stain protector to your mattress, carpets and other upholstery whenever possible. This simple step can result in substantial cost savings on stain removal services. If you have any questions, we encourage you to explore the advantages of <a class="color-paper-link hover-color-paper-link-hover:hover" href="/stain-protection-services">our stain protection services</a>.</Typography>
           </li>
           <li class="ml--5">
-            <h3 class="ml--5 font-size-6 md-font-size-7">Choose wisely after gathering information</h3>
-            <Typography variant="body">We offer a range of services that go beyond carpet cleaning, such as <a class="color-paper-link hover-color-paper-link-hover:hover" href="/">upholstery cleaning</a>, <a class="color-paper-link hover-color-paper-link-hover:hover" href="/">rug cleaning</a>, and <a class="color-paper-link hover-color-paper-link-hover:hover" href="/">more</a>. Our team takes pride in providing comprehensive solutions, so don't miss the opportunity to explore the full extent of our expertise and make informed decisions about your cleaning needs. We are not afraid of stains, so don’t worry and contact us as soon as possible.</Typography>
+            <h3 class="ml--5 font-size-6 md-font-size-7">Seek assistance from a professional cleaning service</h3>
+            <Typography variant="body">According to our specialist, it's highly recommended to book the <a class="color-paper-link hover-color-paper-link-hover:hover" href="/professional-stain-removal-services">services of a professional stain removal company</a> if your upholstery or carpet has been stained rather than trying to clean it yourself. A specialised company has the right equipment and expertise that will take care of your belongings and will tailor their cleaning method according to the nature of the stain. Attempting to clean the stain or allowing it to dry can lead to fabric damage. In fact, such stain removal attempts may seal the stain, making it even more challenging, if not impossible, for a professional mattress cleaning company to remove it. Therefore, scheduling a stain removal service can potentially save your valuable carpet or upholstery, which could be worth a significant amount.</Typography>
           </li>
           <li class="ml--5">
-            <h3 class="ml--5 font-size-6 md-font-size-7">Pre-cleaning inspection</h3>
-            <Typography variant="body">Our carpet commercial cleaning specialist suggests scheduling a viewing of the carpet before the cleaning. This enables us to get access to water and wastewater channels while also understanding the carpet issue. This visit is highly recommended to guarantee that we provide the best possible pricing and personalise our services to your company's specific needs.</Typography>
+            <h3 class="ml--5 font-size-6 md-font-size-7">Explore our list of services</h3>
+            <Typography variant="body">We offer a <a class="color-paper-link hover-color-paper-link-hover:hover" href="/services">range of services</a>, including carpet cleaning, rug cleaning, stain protection and more. Our team takes pride in providing comprehensive solutions, so don't miss the opportunity to explore the full extent of our expertise and make informed decisions about your cleaning needs.</Typography>
           </li>
           <li class="ml--5">
-            <h3 class="ml--5 font-size-6 md-font-size-7">Protect the health of your team</h3>
-            <Typography variant="body">If you have carpet, carpet floor covering, or upholstery in your commercial property, it's essential to be aware of the health benefits of keeping them clean. These items can accumulate substantial amounts of dust, microorganisms, and dirt particles that might lead to health issues for your staff or clients. Neglecting their care can increase the risk of various reactions, skin problems, and allergies. To prevent these issues, our carpet cleaning specialist recommends using professional commercial carpet cleaning services at least once a year. If your carpets experience heavy foot traffic, more frequent cleaning is in your best interest.</Typography>
+            <h3 class="ml--5 font-size-6 md-font-size-7">Save time and money</h3>
+            <Typography variant="body">Our experts recommend combining services. A single appointment is more cost-effective than having different cleaning services done individually. This is because separate visits by technicians involve additional expenses like travel time, parking, and the handling of heavy equipment during loading and unloading.</Typography>
+          </li>
+          <li class="ml--5">
+            <h3 class="ml--5 font-size-6 md-font-size-7">Enjoy the benefits of being in good health</h3>
+            <Typography variant="body">If you own carpets, rugs or upholstery, it's essential to be aware of the health benefits of keeping them clean. They can accumulate substantial amounts of dust, microorganisms, and dirt particles that might lead to health issues. Neglecting their care can increase the risk of various reactions, skin problems, and allergies. To prevent these issues, our specialist recommends using professional cleaning services at least once a year. If you own pets, have children or if your upholstery and carpets are easily stained we advise booking such services even more frequently.</Typography>
           </li>
         </ol>
       </div>
 
       <FleurDivider></FleurDivider>
 
-      <h2 class="line-height-12 md-line-height-14">Commercial carpet cleaning reviews in London</h2>
+      <h2 class="line-height-12 md-line-height-14">Reviews for our mattress cleaning services</h2>
 
       <GalerrySliderDesktop />
       <GalerrySliderMobile />
 
       <FleurDivider></FleurDivider>
 
-      <h2 class="line-height-12 md-line-height-14">FAQ regarding our commercial carpet cleaning services</h2>
+      <h2 class="line-height-12 md-line-height-14">FAQ regarding our mattress cleaning service in London</h2>
 
       <FaqSection />
 

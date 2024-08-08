@@ -114,7 +114,7 @@ export function FaqSection() {
           <Typography variant="body">We require a deposit before performing the soft furniture cleaning. If you cancel the service on the day of the cleaning, you will forfeit that deposit.</Typography></li>
         <li>
           <Typography variant="h3">Will I pay for the congestion / parking charge?</Typography>
-          <Typography variant="body">Yes, we kindly ask that the clients arrange a suitable parking space for our vehicles near the property and cover any parking/congestion expenses.</Typography></li>
+          <Typography variant="body">Yes, we kindly ask that the clients arrange a suitable parking space for our vehicles near the property and cover any parking / congestion expenses.</Typography></li>
         <li>
           <Typography variant="h3">What if I live on a high floor and have no lift?</Typography>
           <Typography variant="body">Due to the substantial weight of our equipment, exceeding 50 kilograms, an extra charge will be added for each additional floor requiring manual transportation. This consumes a significant amount of time and can lead to quicker fatigue among our technicians. Consequently, this may diminish our overall productivity for the day compared to our standard output.</Typography></li>
@@ -168,13 +168,13 @@ export function FaqSection() {
           <Typography variant="body">Yes, we can give you a quote for the white furniture cleaning over the phone, there is no need for us to visit your property. You can also receive a quote online.</Typography></li>
         <li>
           <Typography variant="h3">What payment methods do you accept for your mobile furniture cleaning?</Typography>
-          <Typography variant="body">We accept debit/credit cards, bank transfers, and cash payments directly to our team for mobile furniture cleaning.</Typography></li>
+          <Typography variant="body">We accept debit / credit cards, bank transfers, and cash payments directly to our team for mobile furniture cleaning.</Typography></li>
         <li>
           <Typography variant="h3">Can your white furniture cleaning company provide me with an invoice?</Typography>
           <Typography variant="body">Yes, we will either send you an invoice via email or via any method of your choice.</Typography></li>
         <li>
           <Typography variant="h3">Are you qualified for mobile furniture cleaning?</Typography>
-          <Typography variant="body">Yes, we are qualified and fully trained members of Checkatrade and of NCCA (National Carpet Cleaners Association) – the UK’s most acknowledged industry qualification.</Typography></li>
+          <Typography variant="body">Yes, we are qualified and fully trained members of <a class="color-paper-link hover-color-paper-link-hover:hover" href="https://www.checkatrade.com/trades/FineCarpetCleaning" target="_blank" rel="noopener">Checkatrade</a> and of <a class="color-paper-link hover-color-paper-link-hover:hover" href="https://trustedlocalcleaners.ncca.co.uk/listing/fine-carpet-cleaning-ltd/" target="_blank" rel="noopener">NCCA</a> (National Carpet Cleaners Association) – the UK’s most acknowledged industry qualification.</Typography></li>
         <li>
           <Typography variant="h3">How long have you been in the furniture cleaning business?</Typography>
           <Typography variant="body">We have been actively engaged in the cleaning industry since 2012. Throughout the years, our furniture cleaning business has encountered various types of carpets, rugs, furniture, and stains from both commercial and residential clients, accumulating valuable experience. Our commitment to providing the best furniture deep cleaning has compelled us to enhance our performance through the following means:</Typography></li>
@@ -294,13 +294,13 @@ export default function Page() {
         <h3>What do we offer:</h3>
         <p>Other services we offer are:</p>
         <ul>
-          <li class="ml--5"><a class="color-paper-link-hover hover-color-paper-link:hover font-size-17.5px line-height-8 word-spacing--0.12 tracking--0.04" href="/">Upholstery cleaning</a></li>
-          <li class="ml--5"><a class="color-paper-link-hover hover-color-paper-link:hover font-size-17.5px line-height-8 word-spacing--0.12 tracking--0.04" href="/">Sofa cleaning</a></li>
-          <li class="ml--5"><a class="color-paper-link-hover hover-color-paper-link:hover font-size-17.5px line-height-8 word-spacing--0.12 tracking--0.04" href="/">Leather sofa cleaning</a></li>
-          <li class="ml--5"><a class="color-paper-link-hover hover-color-paper-link:hover font-size-17.5px line-height-8 word-spacing--0.12 tracking--0.04" href="/">Mattress cleaning</a></li>
-          <li class="ml--5"><a class="color-paper-link-hover hover-color-paper-link:hover font-size-17.5px line-height-8 word-spacing--0.12 tracking--0.04" href="/">Pillow cleaning</a></li>
-          <li class="ml--5"><a class="color-paper-link-hover hover-color-paper-link:hover font-size-17.5px line-height-8 word-spacing--0.12 tracking--0.04" href="/">Upholstery stain removal</a></li>
-          <li class="ml--5"><a class="color-paper-link-hover hover-color-paper-link:hover font-size-17.5px line-height-8 word-spacing--0.12 tracking--0.04" href="/">Upholstery stain protector</a></li>
+          <li class="ml--5"><a class="color-paper-link-hover hover-color-paper-link:hover font-size-17.5px line-height-8 word-spacing--0.12 tracking--0.04" href="/professional-upholstery-cleaning-services">Upholstery cleaning</a></li>
+          <li class="ml--5"><a class="color-paper-link-hover hover-color-paper-link:hover font-size-17.5px line-height-8 word-spacing--0.12 tracking--0.04" href="/professional-upholstery-cleaning-services/sofa">Sofa cleaning</a></li>
+          <li class="ml--5"><a class="color-paper-link-hover hover-color-paper-link:hover font-size-17.5px line-height-8 word-spacing--0.12 tracking--0.04" href="/professional-upholstery-cleaning-services/sofa/leather">Leather sofa cleaning</a></li>
+          <li class="ml--5"><a class="color-paper-link-hover hover-color-paper-link:hover font-size-17.5px line-height-8 word-spacing--0.12 tracking--0.04" href="/professional-upholstery-cleaning-services/mattress">Mattress cleaning</a></li>
+          <li class="ml--5"><a class="color-paper-link-hover hover-color-paper-link:hover font-size-17.5px line-height-8 word-spacing--0.12 tracking--0.04" href="/professional-upholstery-cleaning-services/pillow">Pillow cleaning</a></li>
+          <li class="ml--5"><a class="color-paper-link-hover hover-color-paper-link:hover font-size-17.5px line-height-8 word-spacing--0.12 tracking--0.04" href="/professional-stain-removal-services">Upholstery stain removal</a></li>
+          <li class="ml--5"><a class="color-paper-link-hover hover-color-paper-link:hover font-size-17.5px line-height-8 word-spacing--0.12 tracking--0.04" href="/stain-protection-services">Upholstery stain protector</a></li>
         </ul>
 
         <h3>The process of our professional furniture cleaning services:</h3>
@@ -321,10 +321,10 @@ export default function Page() {
         <ol style="counter-reset: ordered; list-style: none;">
           <li class="ml--5">
             <h3 class="ml--5 font-size-6 md-font-size-7">Top-tier technology</h3>
-            <Typography variant="body">Our machines, known for their exceptional power and effectiveness, are considered among the best portable machines globally. They have undergone rigorous testing, and we've selected top brands available in the UK market, including "Mytee" and "Airflex." Furthermore, our in-house engineer makes significant enhancements to maximise their performance during furniture upholstery cleaning services.</Typography>
+            <Typography variant="body">Our machines, known for their exceptional power and effectiveness, are considered among the best portable machines globally. They have undergone rigorous testing, and we've selected top brands available in the UK market, including "<a class="color-paper-link hover-color-paper-link-hover:hover" href="https://www.mytee.com/products/1003dx-speedster-deluxe-carpet-extractor/" target="_blank" rel="noopener">Mytee</a>" and "<a class="color-paper-link hover-color-paper-link-hover:hover" href="https://www.clean-smart.co.uk/store/airflex-storm" target="_blank" rel="noopener">Airflex</a>". Furthermore, our in-house engineer makes significant enhancements to maximise their performance during furniture upholstery cleaning services.</Typography>
           </li>
           <li class="ml--5">
-            <h3 class="ml--5 font-size-6 md-font-size-7">Powerful vacuum cleaners.</h3>
+            <h3 class="ml--5 font-size-6 md-font-size-7">Powerful vacuum cleaners</h3>
             <Typography variant="body">We use a high-filtration twin motor vacuum cleaner, which we believe is the best one on the market. It is designed for high-performance expert carpet cleaning. One of the twin-motors pounds at the carpet while the other one sucks out any loose dirt, dry soil and dust.</Typography>
           </li>
           <li class="ml--5">
@@ -447,7 +447,7 @@ export default function Page() {
         </tbody>
       </table>
 
-      <button class="outline-none bg-brand-second-action hover-bg-brand-second-action-hover:hover font-size-6 font-600 w-250px h-60px c-paper flex flex-items-center flex-justify-center relative b-solid b-rd-3 b-4 b-brand-second-action hover-b-brand-second-action-hover:hover whitespace-normal line-height-6 word-spacing-0.5 py-9 my-20 mx-auto" style="box-shadow: 0 0 0 3px rgba(255, 255, 255, .9) inset; letter-spacing: 0.05rem;"><a class="c-paper font-size-5">REQUEST A QUOTE</a></button>
+      <button class="outline-none bg-brand-second-action hover-bg-brand-second-action-hover:hover font-size-6 font-600 w-250px h-60px c-paper flex flex-items-center flex-justify-center relative b-solid b-rd-3 b-4 b-brand-second-action hover-b-brand-second-action-hover:hover whitespace-normal line-height-6 word-spacing-0.5 py-9 my-20 mx-auto" style="box-shadow: 0 0 0 3px rgba(255, 255, 255, .9) inset; letter-spacing: 0.05rem;"><a href="/contact-us" class="c-paper font-size-5">REQUEST A QUOTE</a></button>
 
       <FleurDivider></FleurDivider>
 
@@ -463,7 +463,7 @@ export default function Page() {
         <ol style="counter-reset: ordered; list-style: none;">
           <li class="ml--5">
             <h3 class="ml--5 font-size-6 md-font-size-7">Apply a stain guard</h3>
-            <Typography variant="body">Our furniture cleaning specialist recommends considering the addition of a stain protector to your carpets and upholstery whenever it's affordable for you. This simple step can lead to significant cost savings on stain removal services. If you're curious, we encourage you to explore the advantages of <a class="color-paper-link hover-color-paper-link-hover:hover" href="/">stain protection services</a>.</Typography>
+            <Typography variant="body">Our furniture cleaning specialist recommends considering the addition of a stain protector to your carpets and upholstery whenever it's affordable for you. This simple step can lead to significant cost savings on stain removal services. If you're curious, we encourage you to explore the advantages of <a class="color-paper-link hover-color-paper-link-hover:hover" href="/stain-protection-services">stain protection services</a>.</Typography>
           </li>
           <li class="ml--5">
             <h3 class="ml--5 font-size-6 md-font-size-7">Try stain removal services</h3>

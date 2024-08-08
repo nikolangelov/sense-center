@@ -114,7 +114,7 @@ export function FaqSection() {
           <Typography variant="body">We require a deposit before performing the cleaning service. If you cancel the service on the day of the cleaning you will lose that deposit.</Typography></li>
         <li>
           <Typography variant="h3">Should I pay for the congestion / parking charge?</Typography>
-          <Typography variant="body">Yes, we kindly ask that the client arrange a suitable parking space for our vehicles within close proximity of the property and to cover any parking/congestion expenses.</Typography></li>
+          <Typography variant="body">Yes, we kindly ask that the client arrange a suitable parking space for our vehicles within close proximity of the property and to cover any parking / congestion expenses.</Typography></li>
         <li>
           <Typography variant="h3">What if I live on the 4th floor or above and I have no lift?</Typography>
           <Typography variant="body">Because our equipment weighs over 50 kilograms, we impose an additional fee for each extra floor that requires manual transportation. This is because the process tends to consume a substantial amount of time and can result in quicker fatigue among our technicians. As a result, our overall productivity for the day may be reduced compared to our standard output.</Typography></li>
@@ -152,13 +152,13 @@ export function FaqSection() {
           <Typography variant="body">Yes, we can give you a quote over the phone, there is no need for us to visit your property. You can also receive a quote for professional leather sofa cleaning services online.</Typography></li>
         <li>
           <Typography variant="h3">What payment methods do you accept for your leather upholstery cleaning services?</Typography>
-          <Typography variant="body">We accept debit/credit cards, bank transfers and cash payments directly to our team.</Typography></li>
+          <Typography variant="body">We accept debit / credit cards, bank transfers and cash payments directly to our team.</Typography></li>
         <li>
           <Typography variant="h3">Can your leather upholstery cleaning companies provide me with an invoice?</Typography>
           <Typography variant="body">Yes, we will either send you a receipt via email or via any method of your choice.</Typography></li>
         <li>
           <Typography variant="h3">Are you qualified?</Typography>
-          <Typography variant="body">Yes, we are qualified and fully trained members of Checkatrade and of NCCA (National Carpet Cleaners Association) – the UK’s acknowledged industry qualification.</Typography></li>
+          <Typography variant="body">Yes, we are qualified and fully trained members of <a class="color-paper-link hover-color-paper-link-hover:hover" href="https://www.checkatrade.com/trades/FineCarpetCleaning" target="_blank" rel="noopener">Checkatrade</a> and of <a class="color-paper-link hover-color-paper-link-hover:hover" href="https://trustedlocalcleaners.ncca.co.uk/listing/fine-carpet-cleaning-ltd/" target="_blank" rel="noopener">NCCA</a> (National Carpet Cleaners Association) – the UK’s acknowledged industry qualification.</Typography></li>
         <li>
           <Typography variant="h3">How long have you been in the upholstery and carpet cleaning business?</Typography>
           <Typography variant="body">Since 2012, we've been actively engaged in the upholstery and carpet cleaning industry. Over the years, we've dealt with a diverse range of carpets, rugs, upholstery, and stains from both commercial and residential clients, accumulating valuable experience. Our commitment to providing the best cleaning services has motivated us to enhance our performance through the following approaches:</Typography></li>
@@ -198,7 +198,7 @@ export function FaqSection() {
         <li>
           <p>The fabric of the furniture.</p>
         </li>
-        <Typography variant="body">To learn more, check out our <a class="color-paper-link hover-color-paper-link-hover:hover" href="/">leather upholstery cleaning prices</a>.</Typography>
+        <Typography variant="body">To learn more, check out our <a class="color-paper-link hover-color-paper-link-hover:hover" href="/prices">leather upholstery cleaning prices</a>.</Typography>
         <li>
           <Typography variant="h3">How to clean a nubuck leather sofa?</Typography>
           <Typography variant="body">Cleaning a nubuck leather sofa requires a gentle touch to avoid damaging the delicate material. We use specialised for nubuck cleaning products and methods:</Typography></li>
@@ -290,13 +290,13 @@ export default function Page() {
         <h3>What do we offer:</h3>
         <p>Other cleaning services you might be interested in are:</p>
         <ul>
-          <li class="ml--5"><a class="color-paper-link-hover hover-color-paper-link:hover font-size-17.5px line-height-8 word-spacing--0.12 tracking--0.04" href="/">Upholstery cleaning</a></li>
-          <li class="ml--5"><a class="color-paper-link-hover hover-color-paper-link:hover font-size-17.5px line-height-8 word-spacing--0.12 tracking--0.04" href="/">Sofa cleaning</a></li>
-          <li class="ml--5"><a class="color-paper-link-hover hover-color-paper-link:hover font-size-17.5px line-height-8 word-spacing--0.12 tracking--0.04" href="/">Furniture cleaning</a></li>
-          <li class="ml--5"><a class="color-paper-link-hover hover-color-paper-link:hover font-size-17.5px line-height-8 word-spacing--0.12 tracking--0.04" href="/">Mattress cleaning</a></li>
-          <li class="ml--5"><a class="color-paper-link-hover hover-color-paper-link:hover font-size-17.5px line-height-8 word-spacing--0.12 tracking--0.04" href="/">Pillow cleaning</a></li>
-          <li class="ml--5"><a class="color-paper-link-hover hover-color-paper-link:hover font-size-17.5px line-height-8 word-spacing--0.12 tracking--0.04" href="/">Upholstery stain removal</a></li>
-          <li class="ml--5"><a class="color-paper-link-hover hover-color-paper-link:hover font-size-17.5px line-height-8 word-spacing--0.12 tracking--0.04" href="/">Upholstery stain protector</a></li>
+          <li class="ml--5"><a class="color-paper-link-hover hover-color-paper-link:hover font-size-17.5px line-height-8 word-spacing--0.12 tracking--0.04" href="/professional-upholstery-cleaning-services">Upholstery cleaning</a></li>
+          <li class="ml--5"><a class="color-paper-link-hover hover-color-paper-link:hover font-size-17.5px line-height-8 word-spacing--0.12 tracking--0.04" href="/professional-upholstery-cleaning-services/sofa">Sofa cleaning</a></li>
+          <li class="ml--5"><a class="color-paper-link-hover hover-color-paper-link:hover font-size-17.5px line-height-8 word-spacing--0.12 tracking--0.04" href="/professional-upholstery-cleaning-services/furniture">Furniture cleaning</a></li>
+          <li class="ml--5"><a class="color-paper-link-hover hover-color-paper-link:hover font-size-17.5px line-height-8 word-spacing--0.12 tracking--0.04" href="/professional-upholstery-cleaning-services/mattress">Mattress cleaning</a></li>
+          <li class="ml--5"><a class="color-paper-link-hover hover-color-paper-link:hover font-size-17.5px line-height-8 word-spacing--0.12 tracking--0.04" href="/professional-upholstery-cleaning-services/pillow">Pillow cleaning</a></li>
+          <li class="ml--5"><a class="color-paper-link-hover hover-color-paper-link:hover font-size-17.5px line-height-8 word-spacing--0.12 tracking--0.04" href="/professional-stain-removal-services">Upholstery stain removal</a></li>
+          <li class="ml--5"><a class="color-paper-link-hover hover-color-paper-link:hover font-size-17.5px line-height-8 word-spacing--0.12 tracking--0.04" href="/stain-protection-services">Upholstery stain protector</a></li>
         </ul>
 
         <h3>The process of our professional leather sofa cleaning services:</h3>
@@ -323,7 +323,7 @@ export default function Page() {
           </li>
           <li class="ml--5">
             <h3 class="ml--5 font-size-6 md-font-size-7">High-quality extractors</h3>
-            <Typography variant="body">At "Fine Carpet Cleaning Ltd," our machines are renowned for their outstanding power and effectiveness, ranking among the best portable options globally. Thoroughly tested and selected from top brands in the UK market, including "Mytee" and "Airflex," these machines undergo additional enhancements by our in-house engineer to maximise their performance.</Typography>
+            <Typography variant="body">At "Fine Carpet Cleaning Ltd," our machines are renowned for their outstanding power and effectiveness, ranking among the best portable options globally. Thoroughly tested and selected from top brands in the UK market, including "<a class="color-paper-link hover-color-paper-link-hover:hover" href="https://www.mytee.com/products/1003dx-speedster-deluxe-carpet-extractor/" target="_blank" rel="noopener">Mytee</a>" and "<a class="color-paper-link hover-color-paper-link-hover:hover" href="https://www.clean-smart.co.uk/store/airflex-storm" target="_blank" rel="noopener">Airflex</a>", these machines undergo additional enhancements by our in-house engineer to maximise their performance.</Typography>
           </li>
           <li class="ml--5">
             <h3 class="ml--5 font-size-6 md-font-size-7">Carefully selected cleaning solution</h3>
@@ -441,7 +441,7 @@ export default function Page() {
         </tbody>
       </table>
 
-      <button class="outline-none bg-brand-second-action hover-bg-brand-second-action-hover:hover font-size-6 font-600 w-250px h-60px c-paper flex flex-items-center flex-justify-center relative b-solid b-rd-3 b-4 b-brand-second-action hover-b-brand-second-action-hover:hover whitespace-normal line-height-6 word-spacing-0.5 py-9 my-20 mx-auto" style="box-shadow: 0 0 0 3px rgba(255, 255, 255, .9) inset; letter-spacing: 0.05rem;"><a class="c-paper font-size-5">REQUEST A QUOTE</a></button>
+      <button class="outline-none bg-brand-second-action hover-bg-brand-second-action-hover:hover font-size-6 font-600 w-250px h-60px c-paper flex flex-items-center flex-justify-center relative b-solid b-rd-3 b-4 b-brand-second-action hover-b-brand-second-action-hover:hover whitespace-normal line-height-6 word-spacing-0.5 py-9 my-20 mx-auto" style="box-shadow: 0 0 0 3px rgba(255, 255, 255, .9) inset; letter-spacing: 0.05rem;"><a href="/contact-us" class="c-paper font-size-5">REQUEST A QUOTE</a></button>
 
       <FleurDivider></FleurDivider>
 
@@ -457,11 +457,11 @@ export default function Page() {
         <ol style="counter-reset: ordered; list-style: none;">
           <li class="ml--5">
             <h3 class="ml--5 font-size-6 md-font-size-7">Add a stain protector</h3>
-            <Typography variant="body">Our leather upholstery cleaning specialist suggests considering the addition of a stain protector to your carpets and upholstery when affordable. This simple step can lead to significant cost savings on stain removal services. Explore the advantages of <a class="color-paper-link hover-color-paper-link-hover:hover" href="/">stain protection services</a> to understand the benefits.</Typography>
+            <Typography variant="body">Our leather upholstery cleaning specialist suggests considering the addition of a stain protector to your carpets and upholstery when affordable. This simple step can lead to significant cost savings on stain removal services. Explore the advantages of <a class="color-paper-link hover-color-paper-link-hover:hover" href="/stain-protection-services">stain protection services</a> to understand the benefits.</Typography>
           </li>
           <li class="ml--5">
             <h3 class="ml--5 font-size-6 md-font-size-7">Seek assistance from a professional cleaning service</h3>
-            <Typography variant="body">According to our specialist, it's highly recommended to hire a professional stain removal company if your carpet or upholstery has been stained, rather than attempting self-cleaning.  Attempting to clean it at home may lead to fabric damage or seal the stain, making complete removal unlikely. Scheduling a professional <a class="color-paper-link hover-color-paper-link-hover:hover" href="/">stain removal service</a> can potentially save your valuable carpet or upholstery, which holds considerable worth.</Typography>
+            <Typography variant="body">According to our specialist, it's highly recommended to hire a professional stain removal company if your carpet or upholstery has been stained, rather than attempting self-cleaning.  Attempting to clean it at home may lead to fabric damage or seal the stain, making complete removal unlikely. Scheduling a professional <a class="color-paper-link hover-color-paper-link-hover:hover" href="/professional-stain-removal-services">stain removal service</a> can potentially save your valuable carpet or upholstery, which holds considerable worth.</Typography>
           </li>
           <li class="ml--5">
             <h3 class="ml--5 font-size-6 md-font-size-7">Choose wisely with understanding</h3>

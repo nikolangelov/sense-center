@@ -166,9 +166,7 @@ export function FaqSection() {
         </li>
         <li>
           <p >Any previous attempts made to remove the stains.</p>
-        </li>
-        <li>
-          <p class="hide-text-if-not-expanded">Nonetheless, our commitment is unwavering in striving to eliminate all stains from your carpet. Our approach involves:</p>
+          <Typography variant="body">Nonetheless, our commitment is unwavering in striving to eliminate all stains from your carpet. Our approach involves:</Typography>
         </li>
         <li>
           <p >Employing advanced cleaning equipment;</p>
@@ -187,13 +185,13 @@ export function FaqSection() {
           <Typography variant="body">To provide a price estimate for an office carpet deep cleaning, an in-person inspection is necessary. This is because attempting to estimate the cost over the phone, without a physical assessment, can be quite challenging, and, in most instances, the final office carpet cleaning price may lack precision. The scheduled viewing and the subsequent office carpet cleaning in London will be carried out to your benefit and in consideration of your busy schedule.</Typography></li>
         <li>
           <Typography variant="h3">What payment methods do you accept for your office carpet steam cleaning?</Typography>
-          <Typography variant="body">Debit/credit cards, bank transfers and cash payments handed to the team are accepted.</Typography></li>
+          <Typography variant="body">Debit / credit cards, bank transfers and cash payments handed to the team are accepted.</Typography></li>
         <li>
           <Typography variant="h3">Can you send me an invoice for the office carpet cleaning in London?</Typography>
           <Typography variant="body">Yes, a receipt can be sent via email or a preferred method.</Typography></li>
         <li>
           <Typography variant="h3">Are you qualified?</Typography>
-          <Typography variant="body">Yes, our team has gone through full training and is qualified by the NCCA and Checkatrade.</Typography></li>
+          <Typography variant="body">Yes, our team has gone through full training and is qualified by the <a class="color-paper-link hover-color-paper-link-hover:hover" href="https://trustedlocalcleaners.ncca.co.uk/listing/fine-carpet-cleaning-ltd/" target="_blank" rel="noopener">NCCA</a> and <a class="color-paper-link hover-color-paper-link-hover:hover" href="https://www.checkatrade.com/trades/FineCarpetCleaning" target="_blank" rel="noopener">Checkatrade</a>.</Typography></li>
         <li>
           <Typography variant="h3">How long have you been in the professional office carpet cleaning business?</Typography>
           <Typography variant="body">From 2012 onwards, we have been actively involved in the commercial office carpet cleaning sector, catering to both commercial and residential customers. Throughout this time, we have encountered a diverse range of carpets, rugs, upholstery, and various stain types, amassing valuable expertise. Our unwavering commitment to delivering excellence has motivated us to enhance our services through the following methods:</Typography></li>
@@ -322,7 +320,7 @@ export function FaqSection() {
         <li>
           <p >How easy the access to the carpets is.</p>
         </li>
-        <p>To learn more, visit our <a class="color-paper-link hover-color-paper-link-hover:hover" href="/">office carpet cleaning prices</a>.</p>
+        <p>To learn more, visit our <a class="color-paper-link hover-color-paper-link-hover:hover" href="/prices">office carpet cleaning prices</a>.</p>
         <li>
           <Typography variant="h3">Are you cleaning commercial carpet tiles?</Typography>
           <Typography variant="body">Yes, we are cleaning commercial carpet tiles. Our cleaners are able to handle any type of office carpet including commercial carpet tiles.</Typography></li>
@@ -389,10 +387,10 @@ export default function Page() {
         <p><strong>Some of the office carpet cleaning services we offer are:</strong></p>
 
         <ul>
-          <li class="ml--5"><a class="color-paper-link-hover hover-color-paper-link:hover font-size-17.5px line-height-8 word-spacing--0.12 tracking--0.04" href="/">Professional rug cleaning services</a></li>
-          <li class="ml--5"><a class="color-paper-link-hover hover-color-paper-link:hover font-size-17.5px line-height-8 word-spacing--0.12 tracking--0.04" href="/">Professional upholstery cleaning services</a></li>
-          <li class="ml--5"><a class="color-paper-link-hover hover-color-paper-link:hover font-size-17.5px line-height-8 word-spacing--0.12 tracking--0.04" href="/">Stain protection services</a></li>
-          <li class="ml--5"><a class="color-paper-link-hover hover-color-paper-link:hover font-size-17.5px line-height-8 word-spacing--0.12 tracking--0.04" href="/">Professional stain removal services</a></li>
+          <li class="ml--5"><a class="color-paper-link-hover hover-color-paper-link:hover font-size-17.5px line-height-8 word-spacing--0.12 tracking--0.04" href="/professional-rug-cleaning-services">Professional rug cleaning services</a></li>
+          <li class="ml--5"><a class="color-paper-link-hover hover-color-paper-link:hover font-size-17.5px line-height-8 word-spacing--0.12 tracking--0.04" href="/professional-upholstery-cleaning-services">Professional upholstery cleaning services</a></li>
+          <li class="ml--5"><a class="color-paper-link-hover hover-color-paper-link:hover font-size-17.5px line-height-8 word-spacing--0.12 tracking--0.04" href="/stain-protection-services">Stain protection services</a></li>
+          <li class="ml--5"><a class="color-paper-link-hover hover-color-paper-link:hover font-size-17.5px line-height-8 word-spacing--0.12 tracking--0.04" href="/professional-stain-removal-services">Professional stain removal services</a></li>
         </ul>
       </div>
 
@@ -403,7 +401,7 @@ export default function Page() {
         <ol style="counter-reset: ordered; list-style: none;">
           <li class="ml--5">
             <h3 class="ml--5 font-size-6 md-font-size-7">Premium devices</h3>
-            <Typography variant="body">At "Fine Carpet Cleaning Ltd," we take great pride in our commitment of utilising the finest cleaning equipment and products available for our carpet cleaning office services. Our cleaning machines, recognized as some of the most powerful and effective portable units globally, have undergone rigorous testing, and we have chosen to work with the best brands in the UK market, namely "Mytee" and "Airflex." Moreover, our in-house engineer continually enhances their performance to maximise their capabilities.</Typography>
+            <Typography variant="body">At "Fine Carpet Cleaning Ltd," we take great pride in our commitment of utilising the finest cleaning equipment and products available for our carpet cleaning office services. Our cleaning machines, recognized as some of the most powerful and effective portable units globally, have undergone rigorous testing, and we have chosen to work with the best brands in the UK market, namely "<a class="color-paper-link hover-color-paper-link-hover:hover" href="https://www.mytee.com/products/1003dx-speedster-deluxe-carpet-extractor/" target="_blank" rel="noopener">Mytee</a>" and "<a class="color-paper-link hover-color-paper-link-hover:hover" href="https://www.clean-smart.co.uk/store/airflex-storm" target="_blank" rel="noopener">Airflex</a>". Moreover, our in-house engineer continually enhances their performance to maximise their capabilities.</Typography>
           </li>
           <li class="ml--5">
             <h3 class="ml--5 font-size-6 md-font-size-7">Efficient vacuum cleaner</h3>
@@ -514,7 +512,7 @@ export default function Page() {
         </tbody>
       </table>
 
-      <button class="outline-none bg-brand-second-action hover-bg-brand-second-action-hover:hover font-size-6 font-600 w-250px h-60px c-paper flex flex-items-center flex-justify-center relative b-solid b-rd-3 b-4 b-brand-second-action hover-b-brand-second-action-hover:hover whitespace-normal line-height-6 word-spacing-0.5 py-9 my-20 mx-auto" style="box-shadow: 0 0 0 3px rgba(255, 255, 255, .9) inset; letter-spacing: 0.05rem;"><a class="c-paper font-size-5">REQUEST A QUOTE</a></button>
+      <button class="outline-none bg-brand-second-action hover-bg-brand-second-action-hover:hover font-size-6 font-600 w-250px h-60px c-paper flex flex-items-center flex-justify-center relative b-solid b-rd-3 b-4 b-brand-second-action hover-b-brand-second-action-hover:hover whitespace-normal line-height-6 word-spacing-0.5 py-9 my-20 mx-auto" style="box-shadow: 0 0 0 3px rgba(255, 255, 255, .9) inset; letter-spacing: 0.05rem;"><a href="/contact-us" class="c-paper font-size-5">REQUEST A QUOTE</a></button>
 
       <FleurDivider></FleurDivider>
 
@@ -530,11 +528,11 @@ export default function Page() {
         <ol style="counter-reset: ordered; list-style: none;">
           <li class="ml--5">
             <h3 class="ml--5 font-size-6 md-font-size-7">Smart investment for long-term carpet care</h3>
-            <p>Our office carpet cleaning expert suggests considering the addition of a stain protector for your carpet, rug and upholstery whenever possible. This step will very efficiently protect your carpet from any accidental stains and can lead to substantial cost savings on professional stain removal services. If you're interested, we encourage you to <a class="color-paper-link hover-color-paper-link-hover:hover" href="/">explore the benefits of utilizing stain protection services</a>.</p>
+            <p>Our office carpet cleaning expert suggests considering the addition of a stain protector for your carpet, rug and upholstery whenever possible. This step will very efficiently protect your carpet from any accidental stains and can lead to substantial cost savings on professional stain removal services. If you're interested, we encourage you to <a class="color-paper-link hover-color-paper-link-hover:hover" href="/stain-protection-services">explore the benefits of utilizing stain protection services</a>.</p>
           </li>
           <li class="ml--5">
             <h3 class="ml--5 font-size-6 md-font-size-7">Give the stain removal service a try</h3>
-            <Typography variant="body">As per our office carpet cleaning specialist, it is highly advisable to book a professional stain removal service when your carpet or upholstery incurs stains. This is because attempting to address the stain on your own or allowing it to set can risk fabric damage, making complete stain removal unlikely. In fact, stain cleaning attempts may seal the stain, complicating the removal process for professional cleaning experts. Hence, scheduling <a class="color-paper-link hover-color-paper-link-hover:hover" href="/">professional stain removal</a> from an experienced office carpet cleaning company can safeguard your valuable carpet or upholstery, potentially worth thousands.</Typography>
+            <Typography variant="body">As per our office carpet cleaning specialist, it is highly advisable to book a professional stain removal service when your carpet or upholstery incurs stains. This is because attempting to address the stain on your own or allowing it to set can risk fabric damage, making complete stain removal unlikely. In fact, stain cleaning attempts may seal the stain, complicating the removal process for professional cleaning experts. Hence, scheduling <a class="color-paper-link hover-color-paper-link-hover:hover" href="/professional-stain-removal-services">professional stain removal</a> from an experienced office carpet cleaning company can safeguard your valuable carpet or upholstery, potentially worth thousands.</Typography>
           </li>
           <li class="ml--5">
             <h3 class="ml--5 font-size-6 md-font-size-7">Make well-informed decisions</h3>

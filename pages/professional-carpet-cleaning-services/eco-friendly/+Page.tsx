@@ -162,9 +162,7 @@ export function FaqSection() {
         </li>
         <li>
           <p>Any prior mishandling of the stains.</p>
-        </li>
-        <li>
-          <p>Nonetheless, we are dedicated to putting forth our utmost effort to eliminate all stains from your carpet. Our approach includes:</p>
+          <Typography variant="body">Nonetheless, we are dedicated to putting forth our utmost effort to eliminate all stains from your carpet. Our approach includes:</Typography>
         </li>
         <li>
           <p>Utilising state-of-the-art equipment for our house and carpet cleaning services;</p>
@@ -175,7 +173,7 @@ export function FaqSection() {
         <li>
           <p>Customising our approach to chem-free carpet cleaning to suit the specific type of carpet and the staining agent, all in pursuit of achieving the best possible results.</p>
         </li>
-        <p>However, the organic carpet cleaning needs more agitation and more manual work, and it may need a second cleaning. We do not guarantee that the stain will be removed, as the sustainable cleaners are not as efficient as the traditional ones.</p>
+        <Typography variant="body">However, the organic carpet cleaning needs more agitation and more manual work, and it may need a second cleaning. We do not guarantee that the stain will be removed, as the sustainable cleaners are not as efficient as the traditional ones.</Typography>
         <li>
           <Typography variant="h3">How soon can I expect a cleaner to visit me for an eco-friendly carpet cleaning in London?</Typography>
           <Typography variant="body">We will make every effort to schedule a chemical-free carpet cleaning appointment for you as early as possible. Typically, our bookings are fully reserved for up to three days in advance, although there may be occasional exceptions.</Typography></li>
@@ -190,7 +188,7 @@ export function FaqSection() {
           <Typography variant="body">Yes, we will either send you a receipt via email or via any method of your choice.</Typography></li>
         <li>
           <Typography variant="h3">Are you qualified for eco-clean carpet care?</Typography>
-          <Typography variant="body">Yes, we have received full training and are certified as members of “Checkatrade” and of the “NCCA” (National Carpet Cleaners Association), the recognized industry qualification in the UK.</Typography></li>
+          <Typography variant="body">Yes, we have received full training and are certified as members of “<a class="color-paper-link hover-color-paper-link-hover:hover" href="https://www.checkatrade.com/trades/FineCarpetCleaning" target="_blank" rel="noopener">Checkatrade</a>” and of the “<a class="color-paper-link hover-color-paper-link-hover:hover" href="https://trustedlocalcleaners.ncca.co.uk/listing/fine-carpet-cleaning-ltd/" target="_blank" rel="noopener">NCCA</a>” (National Carpet Cleaners Association), the recognized industry qualification in the UK.</Typography></li>
         <li>
           <Typography variant="h3">How long have you been in the carpet cleaning domestic business?</Typography>
           <Typography variant="body">We have a strong track record in the professional environmentally friendly carpet cleaning industry, spanning back to 2012. Over these years, we've dealt with a wide variety of carpets, rugs, upholstery, and various stains from both commercial and residential clients. This extensive experience has motivated us to consistently improve our environmental carpet cleaning services. We accomplish this through the following means:</Typography></li>
@@ -267,7 +265,7 @@ export function FaqSection() {
         <li>
           <p>Any additional services required, such as stain removal or stain protection.</p>
         </li>
-        <p>For a comprehensive pricing breakdown, please visit our <a class="color-paper-link hover-color-paper-link-hover:hover" href="/">enviro green carpet cleaning prices page</a>. To obtain an accurate quote and determine the cost of the healthy carpet cleaning, it's recommended to get in touch with us. This will allow us to assess your specific needs, provide a more precise estimate, and discuss any optional services that might be applicable.</p>
+        <p>For a comprehensive pricing breakdown, please visit our <a class="color-paper-link hover-color-paper-link-hover:hover" href="/prices">enviro green carpet cleaning prices page</a>. To obtain an accurate quote and determine the cost of the healthy carpet cleaning, it's recommended to get in touch with us. This will allow us to assess your specific needs, provide a more precise estimate, and discuss any optional services that might be applicable.</p>
         <li>
           <Typography variant="h3">What is the best natural way to clean a carpet?</Typography>
           <Typography variant="body">The best natural way to do carpet cleaning without chemicals involves using environmentally friendly, non-toxic methods and ingredients. We at “Fine Carpet Cleaning” Ltd. provide chemical-free carpet cleaning services. This natural carpet cleaning method is effective for regular maintenance and deodorising. It's safe for your family, pets, and the environment.</Typography></li>
@@ -346,11 +344,11 @@ export default function Page() {
 
       <h2 class="line-height-12 md-line-height-14">Equipment and products we use for our eco-friendly carpet cleaning services</h2>
       <div class="mt-20 py-8 px-12 md-px-14 bg-paper b-rd-3" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 18%);">
-        <Typography variant="body">At "Fine Carpet Cleaning" Ltd., we employ a range of top-tier cleaning equipment and materials to ensure the highest quality in our eco carpet cleaning in London:</Typography>
+        <p>At "Fine Carpet Cleaning" Ltd., we employ a range of top-tier cleaning equipment and materials to ensure the highest quality in our eco carpet cleaning in London:</p>
         <ol style="counter-reset: ordered; list-style: none;">
           <li class="ml--5">
             <h3 class="ml--5 font-size-6 md-font-size-7">High-Performance Carpet Cleaning Machines</h3>
-            <Typography variant="body">Our machines are among the most powerful and efficient portable units globally. After rigorous testing of various machine brands in the UK market, we've chosen the best options, including "Mytee," a prominent US manufacturer, and "Airflex," one of the leading UK manufacturers. These machines are further optimised by our in-house engineer to guarantee a perfectly executed eco-clean carpet care.</Typography>
+            <Typography variant="body">Our machines are among the most powerful and efficient portable units globally. After rigorous testing of various machine brands in the UK market, we've chosen the best options, including "<a class="color-paper-link hover-color-paper-link-hover:hover" href="https://www.mytee.com/products/1003dx-speedster-deluxe-carpet-extractor/" target="_blank" rel="noopener">Mytee</a>", a prominent US manufacturer, and "<a class="color-paper-link hover-color-paper-link-hover:hover" href="https://www.clean-smart.co.uk/store/airflex-storm" target="_blank" rel="noopener">Airflex</a>", one of the leading UK manufacturers. These machines are further optimised by our in-house engineer to guarantee a perfectly executed eco-clean carpet care.</Typography>
           </li>
           <li class="ml--5">
             <h3 class="ml--5 font-size-6 md-font-size-7">The Power of Dual Motors</h3>
@@ -473,7 +471,7 @@ export default function Page() {
         </tbody>
       </table>
 
-      <button class="outline-none bg-brand-second-action hover-bg-brand-second-action-hover:hover font-size-6 font-600 w-250px h-60px c-paper flex flex-items-center flex-justify-center relative b-solid b-rd-3 b-4 b-brand-second-action hover-b-brand-second-action-hover:hover whitespace-normal line-height-6 word-spacing-0.5 py-9 my-20 mx-auto" style="box-shadow: 0 0 0 3px rgba(255, 255, 255, .9) inset; letter-spacing: 0.05rem;"><a class="c-paper font-size-5">REQUEST A QUOTE</a></button>
+      <button class="outline-none bg-brand-second-action hover-bg-brand-second-action-hover:hover font-size-6 font-600 w-250px h-60px c-paper flex flex-items-center flex-justify-center relative b-solid b-rd-3 b-4 b-brand-second-action hover-b-brand-second-action-hover:hover whitespace-normal line-height-6 word-spacing-0.5 py-9 my-20 mx-auto" style="box-shadow: 0 0 0 3px rgba(255, 255, 255, .9) inset; letter-spacing: 0.05rem;"><a href="/contact-us" class="c-paper font-size-5">REQUEST A QUOTE</a></button>
 
       <FleurDivider></FleurDivider>
 
@@ -489,7 +487,7 @@ export default function Page() {
         <ol style="counter-reset: ordered; list-style: none;">
           <li class="ml--5">
             <h3 class="ml--5 font-size-6 md-font-size-7">Proactive protection</h3>
-            <Typography variant="body">Our specialists in natural carpet cleaning recommend <strong>adding a water based stain protector</strong> to your carpet, rug and upholstery, which can lead to substantial savings on professional stain removal services. Explore the benefits of stain protection services <a class="color-paper-link hover-color-paper-link-hover:hover" href="/">here</a>.</Typography>
+            <Typography variant="body">Our specialists in natural carpet cleaning recommend <strong>adding a water based stain protector</strong> to your carpet, rug and upholstery, which can lead to substantial savings on professional stain removal services. Explore the benefits of stain protection services <a class="color-paper-link hover-color-paper-link-hover:hover" href="/stain-protection-services">here</a>.</Typography>
           </li>
           <li class="ml--5">
             <h3 class="ml--5 font-size-6 md-font-size-7">Use professional stain removal service</h3>
@@ -497,7 +495,7 @@ export default function Page() {
           </li>
           <li class="ml--5">
             <h3 class="ml--5 font-size-6 md-font-size-7">Explore our list of services</h3>
-            <Typography variant="body">We offer a<a class="color-paper-link hover-color-paper-link-hover:hover" href="/services">wide range of services</a> beyond carpet cleaning, including upholstery and rug cleaning. Our team provides comprehensive solutions, so don't miss the chance to explore the full extent of our expertise and make informed decisions about your cleaning needs.</Typography>
+            <Typography variant="body">We offer a <a class="color-paper-link hover-color-paper-link-hover:hover" href="/services">wide range of services</a> beyond carpet cleaning, including upholstery and rug cleaning. Our team provides comprehensive solutions, so don't miss the chance to explore the full extent of our expertise and make informed decisions about your cleaning needs.</Typography>
           </li>
           <li class="ml--5">
             <h3 class="ml--5 font-size-6 md-font-size-7">The advantages of combining eco-friendly cleaning services</h3>

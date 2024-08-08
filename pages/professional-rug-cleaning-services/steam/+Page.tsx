@@ -141,6 +141,7 @@ export function FaqSection() {
           <p>The size and quantity of the rugs;</p>
         </li>
         <li>
+          
           <p>If the rug needs any stain removal treatments.</p>
           <Typography variant="body">If you want to receive more detailed information, please feel free to contact us at any suitable time for you and we will estimate the duration of the cleaning process for your specific situation.</Typography>
         </li>
@@ -187,7 +188,7 @@ export function FaqSection() {
           <Typography variant="body">Yes, we will send you a receipt via email.</Typography></li>
         <li>
           <Typography variant="h3">Are you qualified for rug steam cleaning services?</Typography>
-          <Typography variant="body">Yes, we are fully qualified members of the National Carpet Cleaners Association (NCCA), the industry association recognised in the UK, and of Checkatrade.</Typography></li>
+          <Typography variant="body">Yes, we are fully qualified members of the National Carpet Cleaners Association (<a class="color-paper-link hover-color-paper-link-hover:hover" href="https://trustedlocalcleaners.ncca.co.uk/listing/fine-carpet-cleaning-ltd/" target="_blank" rel="noopener">NCCA</a>), the industry association recognised in the UK, and of <a class="color-paper-link hover-color-paper-link-hover:hover" href="https://www.checkatrade.com/trades/FineCarpetCleaning" target="_blank" rel="noopener">Checkatrade</a>.</Typography></li>
         <li>
           <Typography variant="h3">How long have you been in the rug cleaning business?</Typography>
           <Typography variant="body">Since 2012, we have been in the rug care industry. We have accumulated a great deal of knowledge over the years dealing with all kinds of carpets, rugs, upholstery, and stains from both commercial and residential clients. With the help of this knowledge and our commitment to flawless execution, we improve our services by:</Typography></li>
@@ -230,7 +231,7 @@ export function FaqSection() {
         </li>
         <li>
           <p>How easy the access to the rug is.</p>
-          <Typography variant="body">To learn more, check out our <a class="color-paper-link hover-color-paper-link-hover:hover" href="/">rug steam cleaning prices</a>.</Typography>
+          <Typography variant="body">To learn more, check out our <a class="color-paper-link hover-color-paper-link-hover:hover" href="/prices">rug steam cleaning prices</a>.</Typography>
         </li>
         <li>
           <Typography variant="h3">Does steaming a rug flatten it?</Typography>
@@ -318,10 +319,10 @@ export default function Page() {
         <h3>What do we offer:</h3>
         <p>Other cleaning services we offer are:</p>
         <ul>
-          <li class="ml--5"><a class="color-paper-link-hover hover-color-paper-link:hover font-size-17.5px line-height-8 word-spacing--0.12 tracking--0.04" href="/">Rug cleaning</a></li>
-          <li class="ml--5"><a class="color-paper-link-hover hover-color-paper-link:hover font-size-17.5px line-height-8 word-spacing--0.12 tracking--0.04" href="/">Dry rug cleaning</a></li>
-          <li class="ml--5"><a class="color-paper-link-hover hover-color-paper-link:hover font-size-17.5px line-height-8 word-spacing--0.12 tracking--0.04" href="/">Rug stain removal</a></li>
-          <li class="ml--5"><a class="color-paper-link-hover hover-color-paper-link:hover font-size-17.5px line-height-8 word-spacing--0.12 tracking--0.04" href="/">Rug stain protection</a></li>
+          <li class="ml--5"><a class="color-paper-link-hover hover-color-paper-link:hover font-size-17.5px line-height-8 word-spacing--0.12 tracking--0.04" href="/professional-rug-cleaning-services">Rug cleaning</a></li>
+          <li class="ml--5"><a class="color-paper-link-hover hover-color-paper-link:hover font-size-17.5px line-height-8 word-spacing--0.12 tracking--0.04" href="/professional-rug-cleaning-services/dry">Dry rug cleaning</a></li>
+          <li class="ml--5"><a class="color-paper-link-hover hover-color-paper-link:hover font-size-17.5px line-height-8 word-spacing--0.12 tracking--0.04" href="/professional-stain-removal-services">Rug stain removal</a></li>
+          <li class="ml--5"><a class="color-paper-link-hover hover-color-paper-link:hover font-size-17.5px line-height-8 word-spacing--0.12 tracking--0.04" href="/stain-protection-services">Rug stain protection</a></li>
         </ul>
 
         <h3>The process of our rug steam cleaning service:</h3>
@@ -342,7 +343,7 @@ export default function Page() {
         <ol style="counter-reset: ordered; list-style: none;">
           <li class="ml--5">
             <h3 class="ml--5 font-size-6 md-font-size-7">Highly-efficient extractors</h3>
-            <Typography variant="body">Our devices, which are regarded as some of the most potent and efficient portable devices ever made, have undergone rigorous testing, and we have chosen the top brands—"Mytee" and "Airflex"—that are offered on the UK market. Our team's engineer further boosts their performance by making major adjustments to enhance their potential.</Typography>
+            <Typography variant="body">Our devices, which are regarded as some of the most potent and efficient portable devices ever made, have undergone rigorous testing, and we have chosen the top brands — "<a class="color-paper-link hover-color-paper-link-hover:hover" href="https://www.mytee.com/products/1003dx-speedster-deluxe-carpet-extractor/" target="_blank" rel="noopener">Mytee</a>" and "<a class="color-paper-link hover-color-paper-link-hover:hover" href="https://www.clean-smart.co.uk/store/airflex-storm" target="_blank" rel="noopener">Airflex</a>" — that are offered on the UK market. Our team's engineer further boosts their performance by making major adjustments to enhance their potential.</Typography>
           </li>
           <li class="ml--5">
             <h3 class="ml--5 font-size-6 md-font-size-7">Powerful vacuum cleaners</h3>
@@ -452,7 +453,7 @@ export default function Page() {
         </tbody>
       </table>
 
-      <button class="outline-none bg-brand-second-action hover-bg-brand-second-action-hover:hover font-size-6 font-600 w-250px h-60px c-paper flex flex-items-center flex-justify-center relative b-solid b-rd-3 b-4 b-brand-second-action hover-b-brand-second-action-hover:hover whitespace-normal line-height-6 word-spacing-0.5 py-9 my-20 mx-auto" style="box-shadow: 0 0 0 3px rgba(255, 255, 255, .9) inset; letter-spacing: 0.05rem;"><a class="c-paper font-size-5">REQUEST A QUOTE</a></button>
+      <button class="outline-none bg-brand-second-action hover-bg-brand-second-action-hover:hover font-size-6 font-600 w-250px h-60px c-paper flex flex-items-center flex-justify-center relative b-solid b-rd-3 b-4 b-brand-second-action hover-b-brand-second-action-hover:hover whitespace-normal line-height-6 word-spacing-0.5 py-9 my-20 mx-auto" style="box-shadow: 0 0 0 3px rgba(255, 255, 255, .9) inset; letter-spacing: 0.05rem;"><a href="/contact-us" class="c-paper font-size-5">REQUEST A QUOTE</a></button>
 
       <FleurDivider></FleurDivider>
 
@@ -468,11 +469,11 @@ export default function Page() {
         <ol style="counter-reset: ordered; list-style: none;">
           <li class="ml--5">
             <h3 class="ml--5 font-size-6 md-font-size-7">Utilise a stain guard</h3>
-            <Typography variant="body">Whenever feasible, our cleaning expert suggests applying stain protection to your furniture, rugs and carpets. You can avoid paying a hefty price for expert stain removal services by doing this. We suggest finding out more about the benefits of using <a class="color-paper-link hover-color-paper-link-hover:hover" href="/">stain protection services</a> if you're interested.</Typography>
+            <Typography variant="body">Whenever feasible, our cleaning expert suggests applying stain protection to your furniture, rugs and carpets. You can avoid paying a hefty price for expert stain removal services by doing this. We suggest finding out more about the benefits of using <a class="color-paper-link hover-color-paper-link-hover:hover" href="/stain-protection-services">stain protection services</a> if you're interested.</Typography>
           </li>
           <li class="ml--5">
             <h3 class="ml--5 font-size-6 md-font-size-7">Seek assistance from a professional stain removal service</h3>
-            <Typography variant="body">If your carpet or upholstery has become stained, our steam cleaning specialist strongly advises hiring a professional stain removal company. Attempting to clean the stain yourself or allowing it to dry can damage the fabric, making complete removal unlikely. In fact, attempting to remove the stain yourself is more likely to seal it rather than remove it, which will make it harder or perhaps impossible for an experienced steam cleaning firm to remove. Therefore, you may save your priceless rug or upholstery - which could be worth thousands - by making an appointment for <a class="color-paper-link hover-color-paper-link-hover:hover" href="/">professional stain removal services</a>.</Typography>
+            <Typography variant="body">If your carpet or upholstery has become stained, our steam cleaning specialist strongly advises hiring a professional stain removal company. Attempting to clean the stain yourself or allowing it to dry can damage the fabric, making complete removal unlikely. In fact, attempting to remove the stain yourself is more likely to seal it rather than remove it, which will make it harder or perhaps impossible for an experienced steam cleaning firm to remove. Therefore, you may save your priceless rug or upholstery - which could be worth thousands - by making an appointment for <a class="color-paper-link hover-color-paper-link-hover:hover" href="/professional-stain-removal-services">professional stain removal services</a>.</Typography>
           </li>
           <li class="ml--5">
             <h3 class="ml--5 font-size-6 md-font-size-7">Explore our list of services</h3>

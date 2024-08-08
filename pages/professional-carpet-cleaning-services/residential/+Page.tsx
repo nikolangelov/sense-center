@@ -127,7 +127,7 @@ export function FaqSection() {
       </ul>
     </Entry>
     <Entry>
-      <ul class="hidden-questions-and-answers">
+      <ul>
         <li>
           <Typography variant="h3">What happens if your cleaner damages anything while performing residential carpet cleaning services?</Typography>
           <Typography variant="body">We are fully insured and if an accident happens in the process of the carpet and home cleaning services we are fully covered.</Typography></li>
@@ -158,9 +158,7 @@ export function FaqSection() {
         </li>
         <li>
           <p>Any prior mishandling of the stains.</p>
-        </li>
-        <li>
-          <p class="hide-text-if-not-expanded">Nevertheless, we are fully committed to make every possible effort to eliminate all stains from your carpet. Our approach involves:</p>
+        <Typography variant="body">Nevertheless, we are fully committed to make every possible effort to eliminate all stains from your carpet. Our approach involves:</Typography>
         </li>
         <li>
           <p>Employing state-of-the-art equipment for house and carpet cleaning services;</p>
@@ -179,13 +177,13 @@ export function FaqSection() {
           <Typography variant="body">Certainly, we can provide you with a phone estimate, and there is no necessity for us to conduct an on-site visit. However, it's important to note that commercial properties may require an in-person site visit. Additionally, you have the option to obtain a carpet cleaning quote for steam extraction services online.</Typography></li>
         <li>
           <Typography variant="h3">What payment methods do you accept for your carpet and house cleaning services?</Typography>
-          <Typography variant="body">We accept debit/credit cards, and cash payments directly to our team.</Typography></li>
+          <Typography variant="body">We accept debit / credit cards, and cash payments directly to our team.</Typography></li>
         <li>
           <Typography variant="h3">Can you provide me with an invoice for the home and carpet cleaning services?</Typography>
           <Typography variant="body">Yes, we will either send you a receipt via email or via any method of your choice.</Typography></li>
         <li>
           <Typography variant="h3">Are you qualified for carpet and home cleaning services?</Typography>
-          <Typography variant="body">Yes, we are certified and have received comprehensive training as members of Checkatrade and of the NCCA (National Carpet Cleaners Association), the recognized industry qualification in the UK.</Typography></li>
+          <Typography variant="body">Yes, we are certified and have received comprehensive training as members of <a class="color-paper-link hover-color-paper-link-hover:hover" href="https://www.checkatrade.com/trades/FineCarpetCleaning" target="_blank" rel="noopener">Checkatrade</a> and of the <a class="color-paper-link hover-color-paper-link-hover:hover" href="https://trustedlocalcleaners.ncca.co.uk/listing/fine-carpet-cleaning-ltd/" target="_blank" rel="noopener">NCCA</a> (National Carpet Cleaners Association), the recognized industry qualification in the UK.</Typography></li>
         <li>
           <Typography variant="h3">How long have you been in the carpet cleaning domestic business?</Typography>
           <Typography variant="body">We have a solid history in the professional residential carpet cleaning industry, dating back to 2012. Throughout these years, we've worked with a diverse range of carpets, rugs, upholstery, and various stains from both commercial and residential clients. This extensive experience has driven us to continually enhance our carpet house cleaning services. We achieve this by:</Typography></li>
@@ -220,7 +218,7 @@ export function FaqSection() {
       </ul>
     </Entry>
     <Entry>
-      <ul class="hidden-questions-and-answers">
+      <ul>
         <li>
           <Typography variant="h3">How often should carpets be cleaned with pets?</Typography>
           <Typography variant="body">We recommend that pet owners seek professional home carpet cleaning services at least once or twice per year. Cleaning when the seasons change is an easy way to remember when it's time to deep clean your carpets.</Typography></li>
@@ -239,7 +237,7 @@ export function FaqSection() {
         <li>
           <p>The ease of access to the carpets.</p>
         </li>
-        <Typography variant="body">For detailed pricing information, please refer to our <a class="color-paper-link hover-color-paper-link-hover:hover" href="/">residential carpet cleaning prices</a>.</Typography>
+        <Typography variant="body">For detailed pricing information, please refer to our <a class="color-paper-link hover-color-paper-link-hover:hover" href="/prices">residential carpet cleaning prices</a>.</Typography>
         <li>
           <Typography variant="h3">How much to carpet clean a house?</Typography>
           <Typography variant="body">The cost to clean carpets in-house can vary widely depending on several factors. These factors include:</Typography></li>
@@ -261,7 +259,7 @@ export function FaqSection() {
           <Typography variant="body">Our carpet cleaning cost for 1 bedroom apartment, carpet cleaning cost for 2 bedroom apartment, cost of carpet cleaning 3-bed house, cost of carpet cleaning 4 bedroom house varies, depending on multiple factors like how soiled the carpet is, the size of the carpet and if it needs any additional services.</Typography></li>
         <li>
           <Typography variant="h3">What is the cost of carpet cleaning a 1 bedroom apartment?</Typography>
-          <Typography variant="body">Our carpet cleaning 1-bedroom apartment or carpet cleaning 2-bedroom apartment price depends on a number of factors, so we recommend checking out our <a class="color-paper-link hover-color-paper-link-hover:hover" href="/">full house carpet cleaning prices</a>.</Typography></li>
+          <Typography variant="body">Our carpet cleaning 1-bedroom apartment or carpet cleaning 2-bedroom apartment price depends on a number of factors, so we recommend checking out our <a class="color-paper-link hover-color-paper-link-hover:hover" href="/prices">full house carpet cleaning prices</a>.</Typography></li>
       </ul>
     </Entry>
   </Container>
@@ -332,10 +330,10 @@ export default function Page() {
         <ul>
           <li class="ml--5"><a class="color-paper-link-hover hover-color-paper-link:hover font-size-17.5px line-height-8 word-spacing--0.12 tracking--0.04" href="/professional-carpet-cleaning-services/steam">Steam carpet cleaning</a></li>
           <li class="ml--5"><a class="color-paper-link-hover hover-color-paper-link:hover font-size-17.5px line-height-8 word-spacing--0.12 tracking--0.04" href="/professional-carpet-cleaning-services/dry">Dry carpet cleaning</a></li>
-          <li class="ml--5"><a class="color-paper-link-hover hover-color-paper-link:hover font-size-17.5px line-height-8 word-spacing--0.12 tracking--0.04" href="/">Rug cleaning</a></li>
-          <li class="ml--5"><a class="color-paper-link-hover hover-color-paper-link:hover font-size-17.5px line-height-8 word-spacing--0.12 tracking--0.04" href="/">Upholstery cleaning</a></li>
-          <li class="ml--5"><a class="color-paper-link-hover hover-color-paper-link:hover font-size-17.5px line-height-8 word-spacing--0.12 tracking--0.04" href="/">Stain protection</a></li>
-          <li class="ml--5"><a class="color-paper-link-hover hover-color-paper-link:hover font-size-17.5px line-height-8 word-spacing--0.12 tracking--0.04" href="/">Stain removal</a></li>
+          <li class="ml--5"><a class="color-paper-link-hover hover-color-paper-link:hover font-size-17.5px line-height-8 word-spacing--0.12 tracking--0.04" href="/professional-rug-cleaning-services">Rug cleaning</a></li>
+          <li class="ml--5"><a class="color-paper-link-hover hover-color-paper-link:hover font-size-17.5px line-height-8 word-spacing--0.12 tracking--0.04" href="/professional-upholstery-cleaning-services">Upholstery cleaning</a></li>
+          <li class="ml--5"><a class="color-paper-link-hover hover-color-paper-link:hover font-size-17.5px line-height-8 word-spacing--0.12 tracking--0.04" href="/stain-protection-services">Stain protection</a></li>
+          <li class="ml--5"><a class="color-paper-link-hover hover-color-paper-link:hover font-size-17.5px line-height-8 word-spacing--0.12 tracking--0.04" href="/professional-stain-removal-services">Stain removal</a></li>
         </ul>
       </div>
 
@@ -347,7 +345,7 @@ export default function Page() {
         <ol style="counter-reset: ordered; list-style: none;">
           <li class="ml--5">
             <h3 class="ml--5 font-size-6 md-font-size-7">Top-notch equipment</h3>
-            <Typography variant="body">Our machines are some of the most potent and efficient portable units on a global scale. After conducting rigorous testing of almost all machine brands available in the UK market, we've opted for the best options, including "Mytee," a prominent US manufacturer, and "Airflex," one of the leading UK manufacturers. To further enhance their performance, our in-house engineer fine-tunes and modifies these machines to guarantee a perfectly executed house carpet cleaning service in London.</Typography>
+            <Typography variant="body">Our machines are some of the most potent and efficient portable units on a global scale. After conducting rigorous testing of almost all machine brands available in the UK market, we've opted for the best options, including "<a class="color-paper-link hover-color-paper-link-hover:hover" href="https://www.mytee.com/products/1003dx-speedster-deluxe-carpet-extractor/" target="_blank" rel="noopener">Mytee</a>", a prominent US manufacturer, and "<a class="color-paper-link hover-color-paper-link-hover:hover" href="https://www.clean-smart.co.uk/store/airflex-storm" target="_blank" rel="noopener">Airflex</a>", one of the leading UK manufacturers. To further enhance their performance, our in-house engineer fine-tunes and modifies these machines to guarantee a perfectly executed house carpet cleaning service in London.</Typography>
           </li>
           <li class="ml--5">
             <h3 class="ml--5 font-size-6 md-font-size-7">Powerful vacuum cleaners</h3>
@@ -469,7 +467,7 @@ export default function Page() {
         </tbody>
       </table>
 
-      <button class="outline-none bg-brand-second-action hover-bg-brand-second-action-hover:hover font-size-6 font-600 w-250px h-60px c-paper flex flex-items-center flex-justify-center relative b-solid b-rd-3 b-4 b-brand-second-action hover-b-brand-second-action-hover:hover whitespace-normal line-height-6 word-spacing-0.5 py-9 my-20 mx-auto" style="box-shadow: 0 0 0 3px rgba(255, 255, 255, .9) inset; letter-spacing: 0.05rem;"><a class="c-paper font-size-5">REQUEST A QUOTE</a></button>
+      <button class="outline-none bg-brand-second-action hover-bg-brand-second-action-hover:hover font-size-6 font-600 w-250px h-60px c-paper flex flex-items-center flex-justify-center relative b-solid b-rd-3 b-4 b-brand-second-action hover-b-brand-second-action-hover:hover whitespace-normal line-height-6 word-spacing-0.5 py-9 my-20 mx-auto" style="box-shadow: 0 0 0 3px rgba(255, 255, 255, .9) inset; letter-spacing: 0.05rem;"><a href="/contact-us" class="c-paper font-size-5">REQUEST A QUOTE</a></button>
 
       <FleurDivider></FleurDivider>
 
@@ -485,18 +483,18 @@ export default function Page() {
         <ol style="counter-reset: ordered; list-style: none;">
           <li class="ml--5">
             <h3 class="ml--5 font-size-6 md-font-size-7">Use a stain defender</h3>
-            <Typography variant="body">Our expert in domestic carpet cleaning in London recommends considering the addition of a stain protector to your carpet and upholstery, whenever it's within your budget. This simple step can result in significant savings on professional stain removal services. If you're interested, we encourage you to <a class="color-paper-link hover-color-paper-link-hover:hover" href="/">explore the advantages of utilizing stain protection services</a>.</Typography>
+            <Typography variant="body">Our expert in domestic carpet cleaning in London recommends considering the addition of a stain protector to your carpet and upholstery, whenever it's within your budget. This simple step can result in significant savings on professional stain removal services. If you're interested, we encourage you to <a class="color-paper-link hover-color-paper-link-hover:hover" href="/stain-protection-services">explore the advantages of utilizing stain protection services</a>.</Typography>
           </li>
           <li class="ml--5">
             <h3 class="ml--5 font-size-6 md-font-size-7">Think about the stain removal service option</h3>
             <Typography variant="body">As per our specialist in carpet and house cleaning services, it is highly recommended to engage a professional stain removal company if your carpet or upholstery has incurred stains, rather than attempting to clean it. This is because trying to clean the stain yourself or letting it dry can cause damage to the fabric, making complete stain removal less likely. In fact, such attempts may actually seal the stain, making it even more challenging, if not impossible, for a professional house and carpet cleaning company to effectively remove it. Therefore, scheduling a professional stain removal service from an experienced carpet cleaning domestic company can potentially safeguard your valuable carpet or upholstery, which may hold significant value.</Typography>
           </li>
           <li class="ml--5">
-            <h3 class="ml--5 font-size-6 md-font-size-7">Exploring Our Full Range of Services</h3>
+            <h3 class="ml--5 font-size-6 md-font-size-7">Exploring our full range of services</h3>
             <Typography variant="body">We provide a <a class="color-paper-link hover-color-paper-link-hover:hover" href="/services">wide variety of services</a> that extend beyond carpet cleaning, including upholstery cleaning, rug cleaning, and more. Our team is dedicated to offering a wide array of solutions, so don't miss the opportunity to explore the full breadth of our expertise and make well-informed decisions regarding your cleaning requirements in house carpet cleaning.</Typography>
           </li>
           <li class="ml--5">
-            <h3 class="ml--5 font-size-6 md-font-size-7">Combining Carpet Cleaning Services for Maximum Value</h3>
+            <h3 class="ml--5 font-size-6 md-font-size-7">Combining carpet cleaning services for maximum value</h3>
             <Typography variant="body">To cut down on costs, our professional residential carpet cleaning expert suggests bundling multiple services into one appointment. It is more economical to have all required services completed together instead of separately. This way, you can avoid incurring extra expenses related to each technician visit, including travel time, parking charges, and equipment management during loading and unloading.</Typography>
           </li>
           <li class="ml--5">

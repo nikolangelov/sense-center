@@ -113,7 +113,7 @@ export function FaqSection() {
           <Typography variant="h3">Will you fee me if I cancel the stain removal in London?</Typography>
           <Typography variant="body">Yes, there is a cancellation fee; however, it only applies in the event that you cancel on the day of the professional stain removal service. You will lose your deposit in that scenario.</Typography></li>
         <li>
-          <Typography variant="h3">Should I pay for the congestion/parking charge?</Typography>
+          <Typography variant="h3">Should I pay for the congestion / parking charge?</Typography>
           <Typography variant="body">Yes, we respectfully request that the client provide us with an appropriate parking area close to the property or pay for any costs associated with parking or traffic.</Typography></li>
         <li>
           <Typography variant="h3">What if I live on the 4th floor or above and I have no lift?</Typography>
@@ -188,7 +188,7 @@ export function FaqSection() {
           <Typography variant="body">Yes, we will send you a receipt via email.</Typography></li>
         <li>
           <Typography variant="h3">Are you qualified for stain removal in London?</Typography>
-          <Typography variant="body">Yes, we meet the requirements to join Checkatrade and the National Carpet Cleaners Association (NCCA), the UK's recognised industry association, and we are fully trained members of both organisations.</Typography></li>
+          <Typography variant="body">Yes, we meet the requirements to join <a class="color-paper-link hover-color-paper-link-hover:hover" href="https://www.checkatrade.com/trades/FineCarpetCleaning" target="_blank" rel="noopener">Checkatrade</a> and the National Carpet Cleaners Association (<a class="color-paper-link hover-color-paper-link-hover:hover" href="https://trustedlocalcleaners.ncca.co.uk/listing/fine-carpet-cleaning-ltd/" target="_blank" rel="noopener">NCCA</a>), the UK's recognised industry association, and we are fully trained members of both organisations.</Typography></li>
         <li>
           <Typography variant="h3">How long have you been in the cleaning business?</Typography>
           <Typography variant="body">Since 2012, we have been active in the carpet cleaning and stain removal industry. Throughout the years, we've encountered various types of carpets, rugs, upholstery, and stains while performing our services, accumulating valuable experience. Our commitment to being one of the best cleaning and stain removal companies has led us to enhance our performance through the following means:</Typography></li>
@@ -215,7 +215,7 @@ export function FaqSection() {
         </li>
         <li>
           <p>The quantity and size of the stain.</p>
-          <Typography variant="body">To learn more, check out our <a class="color-paper-link hover-color-paper-link-hover:hover" href="/">stain removal prices</a>.</Typography>
+          <Typography variant="body">To learn more, check out our <a class="color-paper-link hover-color-paper-link-hover:hover" href="/prices">stain removal prices</a>.</Typography>
         </li>
         <li>
           <Typography variant="h3">What stains cannot be removed from carpet?</Typography>
@@ -255,7 +255,7 @@ export function FaqSection() {
         </li>
         <li>
           <p>The quantity and size of the stain.</p>
-          <Typography variant="body">To learn more, view our <a class="color-paper-link hover-color-paper-link-hover:hover" href="/">stain removal prices</a>.</Typography>
+          <Typography variant="body">To learn more, view our <a class="color-paper-link hover-color-paper-link-hover:hover" href="/prices">stain removal prices</a>.</Typography>
         </li>
         <li>
           <Typography variant="h3">How do professionals clean carpet stains?</Typography>
@@ -312,10 +312,10 @@ export default function Page() {
         <h3>What do we offer:</h3>
         <p>Other professional cleaning services we offer are:</p>
         <ul>
-          <li class="ml--5"><a class="color-paper-link-hover hover-color-paper-link:hover font-size-17.5px line-height-8 word-spacing--0.12 tracking--0.04" href="/">Carpet cleaning</a></li>
-          <li class="ml--5"><a class="color-paper-link-hover hover-color-paper-link:hover font-size-17.5px line-height-8 word-spacing--0.12 tracking--0.04" href="/">Upholstery cleaning</a></li>
-          <li class="ml--5"><a class="color-paper-link-hover hover-color-paper-link:hover font-size-17.5px line-height-8 word-spacing--0.12 tracking--0.04" href="/">Rug cleaning</a></li>
-          <li class="ml--5"><a class="color-paper-link-hover hover-color-paper-link:hover font-size-17.5px line-height-8 word-spacing--0.12 tracking--0.04" href="/">Stain protection</a></li>
+          <li class="ml--5"><a class="color-paper-link-hover hover-color-paper-link:hover font-size-17.5px line-height-8 word-spacing--0.12 tracking--0.04" href="/professional-carpet-cleaning-services">Carpet cleaning</a></li>
+          <li class="ml--5"><a class="color-paper-link-hover hover-color-paper-link:hover font-size-17.5px line-height-8 word-spacing--0.12 tracking--0.04" href="/professional-upholstery-cleaning-services">Upholstery cleaning</a></li>
+          <li class="ml--5"><a class="color-paper-link-hover hover-color-paper-link:hover font-size-17.5px line-height-8 word-spacing--0.12 tracking--0.04" href="/professional-rug-cleaning-services">Rug cleaning</a></li>
+          <li class="ml--5"><a class="color-paper-link-hover hover-color-paper-link:hover font-size-17.5px line-height-8 word-spacing--0.12 tracking--0.04" href="/stain-protection-services">Stain protection</a></li>
         </ul>
       </div>
 
@@ -326,7 +326,7 @@ export default function Page() {
         <ol style="counter-reset: ordered; list-style: none;">
           <li class="ml--5">
             <h3 class="ml--5 font-size-6 md-font-size-7">Highly-efficient extractors</h3>
-            <Typography variant="body">"Fine Carpet Cleaning" Ltd makes use of top-notch cleaning tools and supplies. Our devices are among the most potent, efficient, and sizable portable ones available in the world. After thoroughly evaluating a number of machine brands available in the UK, we have decided to choose "Mytee" and "Airflex" as our professional cleaning tools. Furthermore, these devices are further enhanced by our in-house engineer, who makes substantial modifications to optimise their functionality.</Typography>
+            <Typography variant="body">"Fine Carpet Cleaning" Ltd makes use of top-notch cleaning tools and supplies. Our devices are among the most potent, efficient, and sizable portable ones available in the world. After thoroughly evaluating a number of machine brands available in the UK, we have decided to choose "<a class="color-paper-link hover-color-paper-link-hover:hover" href="https://www.mytee.com/products/1003dx-speedster-deluxe-carpet-extractor/" target="_blank" rel="noopener">Mytee</a>" and "<a class="color-paper-link hover-color-paper-link-hover:hover" href="https://www.clean-smart.co.uk/store/airflex-storm" target="_blank" rel="noopener">Airflex</a>" as our professional cleaning tools. Furthermore, these devices are further enhanced by our in-house engineer, who makes substantial modifications to optimise their functionality.</Typography>
           </li>
           <li class="ml--5">
             <h3 class="ml--5 font-size-6 md-font-size-7">Powerful vacuum cleaners</h3>
@@ -448,7 +448,7 @@ export default function Page() {
         </tbody>
       </table>
 
-      <button class="outline-none bg-brand-second-action hover-bg-brand-second-action-hover:hover font-size-6 font-600 w-250px h-60px c-paper flex flex-items-center flex-justify-center relative b-solid b-rd-3 b-4 b-brand-second-action hover-b-brand-second-action-hover:hover whitespace-normal line-height-6 word-spacing-0.5 py-9 my-20 mx-auto" style="box-shadow: 0 0 0 3px rgba(255, 255, 255, .9) inset; letter-spacing: 0.05rem;"><a class="c-paper font-size-5">REQUEST A QUOTE</a></button>
+      <button class="outline-none bg-brand-second-action hover-bg-brand-second-action-hover:hover font-size-6 font-600 w-250px h-60px c-paper flex flex-items-center flex-justify-center relative b-solid b-rd-3 b-4 b-brand-second-action hover-b-brand-second-action-hover:hover whitespace-normal line-height-6 word-spacing-0.5 py-9 my-20 mx-auto" style="box-shadow: 0 0 0 3px rgba(255, 255, 255, .9) inset; letter-spacing: 0.05rem;"><a href="/contact-us" class="c-paper font-size-5">REQUEST A QUOTE</a></button>
 
       <FleurDivider></FleurDivider>
 
@@ -464,11 +464,11 @@ export default function Page() {
         <ol style="counter-reset: ordered; list-style: none;">
           <li class="ml--5">
             <h3 class="ml--5 font-size-6 md-font-size-7">Apply a stain protector</h3>
-            <Typography variant="body">When it's possible, our cleaning specialist advises adding a stain protector to your furniture, carpets, and rugs. Stain removal services can be significantly reduced by taking this simple step. We invite you to investigate the advantages of <a class="color-paper-link hover-color-paper-link-hover:hover" href="/">stain protection services</a> if you're interested.</Typography>
+            <Typography variant="body">When it's possible, our cleaning specialist advises adding a stain protector to your furniture, carpets, and rugs. Stain removal services can be significantly reduced by taking this simple step. We invite you to investigate the advantages of <a class="color-paper-link hover-color-paper-link-hover:hover" href="/stain-protection-services">stain protection services</a> if you're interested.</Typography>
           </li>
           <li class="ml--5">
             <h3 class="ml--5 font-size-6 md-font-size-7">Try professional stain removal</h3>
-            <Typography variant="body">In the event that your rug or upholstery has become stained, our specialist advises hiring a professional stain removal service instead of trying to clean it yourself. This is due to the possibility of fabric damage from cleaning or waiting for the stain to settle, which makes total stain removal difficult. Such approaches may actually seal the stain, making it more challenging, if not impossible, for a cleaning professional to remove. As a result, booking a stain removal service(link) may be able to rescue your priceless upholstery or rug, which may be worth a substantial amount of money. We perform professional carpet stain removal, sofa stain removal services, mattress stain removal services, rug stain removal services, couch stain removal services, upholstery stain removal in London, and more.</Typography>
+            <Typography variant="body">In the event that your rug or upholstery has become stained, our specialist advises hiring a professional stain removal service instead of trying to clean it yourself. This is due to the possibility of fabric damage from cleaning or waiting for the stain to settle, which makes total stain removal difficult. Such approaches may actually seal the stain, making it more challenging, if not impossible, for a cleaning professional to remove. As a result, booking a stain removal service may be able to rescue your priceless upholstery or rug, which may be worth a substantial amount of money. We perform professional carpet stain removal, sofa stain removal services, mattress stain removal services, rug stain removal services, couch stain removal services, upholstery stain removal in London, and more.</Typography>
           </li>
           <li class="ml--5">
             <h3 class="ml--5 font-size-6 md-font-size-7">Explore our full range of services</h3>

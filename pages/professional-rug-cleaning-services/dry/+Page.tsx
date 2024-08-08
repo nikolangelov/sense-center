@@ -114,7 +114,7 @@ export function FaqSection() {
           <Typography variant="body">Yes, we do have a cancellation fee, but it is only applied if you cancel on the day of the cleaning. In that case, you will lose your deposit.</Typography></li>
         <li>
           <Typography variant="h3">Do I need to pay for the congestion / parking charge?</Typography>
-          <Typography variant="body">Yes, we request that you arrange a suitable parking space for our vehicles within close proximity of the property since we carry heavy equipment, and to cover any parking/congestion expenses if applicable.</Typography></li>
+          <Typography variant="body">Yes, we request that you arrange a suitable parking space for our vehicles within close proximity of the property since we carry heavy equipment, and to cover any parking / congestion expenses if applicable.</Typography></li>
         <li>
           <Typography variant="h3">Do I need to move furniture before the area rug dry cleaning near me?</Typography>
           <Typography variant="body">We kindly ask for your assistance in relocating small, fragile, or valuable furniture items, such as lamps and ornaments, for insurance reasons. If possible, please position these items in a secure area before our team's arrival, one that will remain undisturbed during the cleaning process.</Typography>
@@ -162,7 +162,7 @@ export function FaqSection() {
           <Typography variant="body">Yes, we will send you a receipt via email.</Typography></li>
         <li>
           <Typography variant="h3">Are you qualified?</Typography>
-          <Typography variant="body">Yes, we are qualified and fully trained members of NCCA (National Carpet Cleaners Association) – the UK’s recognised industry qualification, and of Checkatrade.</Typography></li>
+          <Typography variant="body">Yes, we are qualified and fully trained members of <a class="color-paper-link hover-color-paper-link-hover:hover" href="https://trustedlocalcleaners.ncca.co.uk/listing/fine-carpet-cleaning-ltd/" target="_blank" rel="noopener">NCCA</a> (National Carpet Cleaners Association) – the UK’s recognised industry qualification, and of <a class="color-paper-link hover-color-paper-link-hover:hover" href="https://www.checkatrade.com/trades/FineCarpetCleaning" target="_blank" rel="noopener">Checkatrade</a>.</Typography></li>
         <li>
           <Typography variant="h3">How long have you been in the rug cleaning business?</Typography>
           <Typography variant="body">We have been actively serving both commercial and residential clients in the carpet and rug cleaning sector since 2012. We have worked with a variety of carpets, rugs, upholstery, and stains throughout the years, and we've learned a lot. This knowledge, along with our dedication to quality, has inspired us to improve our services by:</Typography></li>
@@ -192,7 +192,7 @@ export function FaqSection() {
           </li>
           <li>
             <p>How easy the access to the rug is.</p>
-            <Typography variant="body">To learn more, take a look at our <a class="color-paper-link hover-color-paper-link-hover:hover" href="/">dry clean rug prices</a>.</Typography>
+            <Typography variant="body">To learn more, take a look at our <a class="color-paper-link hover-color-paper-link-hover:hover" href="/prices">dry clean rug prices</a>.</Typography>
           </li>
       </ul>
     </Entry>
@@ -288,9 +288,9 @@ export default function Page() {
         <h3>What do we offer:</h3>
         <p>Other rug cleaning services we perform are:</p>
         <ul>
-          <li class="ml--5"><a class="color-paper-link-hover hover-color-paper-link:hover font-size-17.5px line-height-8 word-spacing--0.12 tracking--0.04" href="/">Rug steam cleaning</a></li>
-          <li class="ml--5"><a class="color-paper-link-hover hover-color-paper-link:hover font-size-17.5px line-height-8 word-spacing--0.12 tracking--0.04" href="/">Rug stain removal</a></li>
-          <li class="ml--5"><a class="color-paper-link-hover hover-color-paper-link:hover font-size-17.5px line-height-8 word-spacing--0.12 tracking--0.04" href="/">Rug stain protection</a></li>
+          <li class="ml--5"><a class="color-paper-link-hover hover-color-paper-link:hover font-size-17.5px line-height-8 word-spacing--0.12 tracking--0.04" href="/professional-rug-cleaning-services/steam">Rug steam cleaning</a></li>
+          <li class="ml--5"><a class="color-paper-link-hover hover-color-paper-link:hover font-size-17.5px line-height-8 word-spacing--0.12 tracking--0.04" href="/professional-stain-removal-services">Rug stain removal</a></li>
+          <li class="ml--5"><a class="color-paper-link-hover hover-color-paper-link:hover font-size-17.5px line-height-8 word-spacing--0.12 tracking--0.04" href="/stain-protection-services">Rug stain protection</a></li>
         </ul>
 
         <h3>The process of our dry rug cleaning service:</h3>
@@ -310,7 +310,7 @@ export default function Page() {
         <ol style="counter-reset: ordered; list-style: none;">
           <li class="ml--5">
             <h3 class="ml--5 font-size-6 md-font-size-7">Highly-efficient extractors</h3>
-            <Typography variant="body">At "Fine Carpet Cleaning Ltd," we utilise some of the finest portable machines globally in our pillow cleaning service. After rigorous testing, we've carefully selected top brands available in the UK market, including "Mytee" and "Airflex." Moreover, our in-house engineer implements significant enhancements to optimise their performance.At "Fine Carpet Cleaning Ltd," we employ the most effective and cutting-edge cleaning equipment, along with premium products for our rug dry cleaning London. Our machines are recognized as some of the most powerful and efficient portable units globally.</Typography>
+            <Typography variant="body">At "Fine Carpet Cleaning" Ltd., we utilise some of the finest portable machines globally in our pillow cleaning service. After rigorous testing, we've carefully selected top brands available in the UK market, including "<a class="color-paper-link hover-color-paper-link-hover:hover" href="https://www.mytee.com/products/1003dx-speedster-deluxe-carpet-extractor/" target="_blank" rel="noopener">Mytee</a>" and "<a class="color-paper-link hover-color-paper-link-hover:hover" href="https://www.clean-smart.co.uk/store/airflex-storm" target="_blank" rel="noopener">Airflex</a>". Moreover, our in-house engineer implements significant enhancements to optimise their performance.At "Fine Carpet Cleaning Ltd," we employ the most effective and cutting-edge cleaning equipment, along with premium products for our rug dry cleaning London. Our machines are recognized as some of the most powerful and efficient portable units globally.</Typography>
           </li>
           <li class="ml--5">
             <h3 class="ml--5 font-size-6 md-font-size-7">Excellent standard device</h3>
@@ -318,7 +318,7 @@ export default function Page() {
           </li>
           <li class="ml--5">
             <h3 class="ml--5 font-size-6 md-font-size-7">Carefully selected cleaning products</h3>
-            <Typography variant="body">For optimal results in our rug dry cleaning London, we extensively tested various cleaning products and selected the most efficient one - the "<a class="color-paper-link hover-color-paper-link-hover:hover" href="/https://envirodri.com/">Envirodri</a>" dry rug cleaning powder. This eco-friendly cleaning product is designed to attract and absorb dirt and soiling from all rug types, which is then vacuumed away, leaving behind cleaner, fresher, and newer-looking rugs.</Typography>
+            <Typography variant="body">For optimal results in our rug dry cleaning London, we extensively tested various cleaning products and selected the most efficient one - the "<a class="color-paper-link hover-color-paper-link-hover:hover" href="https://envirodri.com/" target="_blank" rel="noopener">Envirodri</a>" dry rug cleaning powder. This eco-friendly cleaning product is designed to attract and absorb dirt and soiling from all rug types, which is then vacuumed away, leaving behind cleaner, fresher, and newer-looking rugs.</Typography>
             <Typography variant="body">With our state-of-the-art cleaning equipment and premium products, we assure a high-quality rug dry cleaning London service.</Typography>
           </li>
         </ol>
@@ -421,7 +421,7 @@ export default function Page() {
         </tbody>
       </table>
 
-      <button class="outline-none bg-brand-second-action hover-bg-brand-second-action-hover:hover font-size-6 font-600 w-250px h-60px c-paper flex flex-items-center flex-justify-center relative b-solid b-rd-3 b-4 b-brand-second-action hover-b-brand-second-action-hover:hover whitespace-normal line-height-6 word-spacing-0.5 py-9 my-20 mx-auto" style="box-shadow: 0 0 0 3px rgba(255, 255, 255, .9) inset; letter-spacing: 0.05rem;"><a class="c-paper font-size-5">REQUEST A QUOTE</a></button>
+      <button class="outline-none bg-brand-second-action hover-bg-brand-second-action-hover:hover font-size-6 font-600 w-250px h-60px c-paper flex flex-items-center flex-justify-center relative b-solid b-rd-3 b-4 b-brand-second-action hover-b-brand-second-action-hover:hover whitespace-normal line-height-6 word-spacing-0.5 py-9 my-20 mx-auto" style="box-shadow: 0 0 0 3px rgba(255, 255, 255, .9) inset; letter-spacing: 0.05rem;"><a href="/contact-us" class="c-paper font-size-5">REQUEST A QUOTE</a></button>
 
       <FleurDivider></FleurDivider>
 
@@ -437,11 +437,11 @@ export default function Page() {
         <ol style="counter-reset: ordered; list-style: none;">
           <li class="ml--5">
             <h3 class="ml--5 font-size-6 md-font-size-7">Use stain protector</h3>
-            <Typography variant="body">Our expert in rug dry cleaning London recommends considering the addition of a stain protector to your rugs and upholstery whenever possible. This step can lead to substantial savings on stain removal services. For more insights into the benefits of stain protection, we suggest visiting our dedicated <a class="color-paper-link hover-color-paper-link-hover:hover" href="/">stain protection service</a>page.</Typography>
+            <Typography variant="body">Our expert in rug dry cleaning London recommends considering the addition of a stain protector to your rugs and upholstery whenever possible. This step can lead to substantial savings on stain removal services. For more insights into the benefits of stain protection, we suggest visiting our dedicated <a class="color-paper-link hover-color-paper-link-hover:hover" href="/stain-protection-services">stain protection service</a> page.</Typography>
           </li>
           <li class="ml--5">
             <h3 class="ml--5 font-size-6 md-font-size-7">Try professional stain removal</h3>
-            <Typography variant="body">It's highly advisable to book a professional stain removal service if your rug or upholstery has been stained. Cleaning attempts or allowing the stain to dry can result in fabric damage, making complete removal challenging. In some cases, amateur attempts can even seal the stain, complicating its removal by professionals. Opting for professional <a class="color-paper-link hover-color-paper-link-hover:hover" href="/">stain removal services</a> can help preserve the value of your carpet, rug or upholstery.</Typography>
+            <Typography variant="body">It's highly advisable to book a professional stain removal service if your rug or upholstery has been stained. Cleaning attempts or allowing the stain to dry can result in fabric damage, making complete removal challenging. In some cases, amateur attempts can even seal the stain, complicating its removal by professionals. Opting for professional <a class="color-paper-link hover-color-paper-link-hover:hover" href="/professional-stain-removal-services">stain removal services</a> can help preserve the value of your carpet, rug or upholstery.</Typography>
           </li>
           <li class="ml--5">
             <h3 class="ml--5 font-size-6 md-font-size-7">Explore our comprehensive services</h3>

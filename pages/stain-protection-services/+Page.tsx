@@ -142,7 +142,7 @@ export function FaqSection() {
           <Typography variant="body">Yes, we will send you a receipt via email.</Typography></li>
         <li>
           <Typography variant="h3">Are you qualified for upholstery stain protection?</Typography>
-          <Typography variant="body">Yes, we fulfil the criteria for membership in Checkatrade and the National Carpet Cleaners Association (NCCA), the UK's renowned industry organisation, and we are professionally trained members of both.</Typography></li>
+          <Typography variant="body">Yes, we fulfil the criteria for membership in <a class="color-paper-link hover-color-paper-link-hover:hover" href="https://www.checkatrade.com/trades/FineCarpetCleaning" target="_blank" rel="noopener">Checkatrade</a> and the National Carpet Cleaners Association (<a class="color-paper-link hover-color-paper-link-hover:hover" href="https://trustedlocalcleaners.ncca.co.uk/listing/fine-carpet-cleaning-ltd/" target="_blank" rel="noopener">NCCA</a>), the UK's renowned industry organisation, and we are professionally trained members of both.</Typography></li>
         <li>
           <Typography variant="h3">How long have you been in the furniture stain protection business?</Typography>
           <Typography variant="body">We have been in the carpet cleaning and Scotchgard appliance business since 2012. We've faced many sorts of carpets, rugs, upholstery, and stains while executing our services throughout the years, gaining great experience. Our dedication to being one of the leading cleaning and carpet stain protection businesses has prompted us to boost our efficiency through the following means:</Typography></li>
@@ -167,7 +167,6 @@ export function FaqSection() {
         <li>
           <p>The quantity and size of the sofas.</p>
         </li>
-        <Typography variant="body">To learn more, check out our <a class="color-paper-link hover-color-paper-link-hover:hover" href="/">stain protection services</a>.</Typography>
         <li>
           <Typography variant="h3">What is stain protection?</Typography>
           <Typography variant="body">Stain protector, commonly known as Scotchgard protector, is a clear, invisible liquid that is applied to the fabric by professionals. It creates an invisible protective coating to each fibre of the carpet or upholstery, making it resistant to daily soiling and both water-based and oil-based stains. The goal of stain prevention services is to protect the material against liquid penetration, which can cause permanent damage and stains to the carpet and upholstery.</Typography></li>
@@ -305,19 +304,21 @@ export default function Page() {
         <h3>What do we offer:</h3>
         <p>Other professional cleaning services you might be interested in are:</p>
         <ul>
-          <li class="ml--5"><a class="color-paper-link-hover hover-color-paper-link:hover font-size-17.5px line-height-8 word-spacing--0.12 tracking--0.04" href="/">Carpet cleaning</a></li>
-          <li class="ml--5"><a class="color-paper-link-hover hover-color-paper-link:hover font-size-17.5px line-height-8 word-spacing--0.12 tracking--0.04" href="/">Upholstery cleaning</a></li>
-          <li class="ml--5"><a class="color-paper-link-hover hover-color-paper-link:hover font-size-17.5px line-height-8 word-spacing--0.12 tracking--0.04" href="/">Rug cleaning</a></li>
-          <li class="ml--5"><a class="color-paper-link-hover hover-color-paper-link:hover font-size-17.5px line-height-8 word-spacing--0.12 tracking--0.04" href="/">Stain removal</a></li>
+          <li class="ml--5"><a class="color-paper-link-hover hover-color-paper-link:hover font-size-17.5px line-height-8 word-spacing--0.12 tracking--0.04" href="/professional-carpet-cleaning-services">Carpet cleaning</a></li>
+          <li class="ml--5"><a class="color-paper-link-hover hover-color-paper-link:hover font-size-17.5px line-height-8 word-spacing--0.12 tracking--0.04" href="/professional-upholstery-cleaning-services">Upholstery cleaning</a></li>
+          <li class="ml--5"><a class="color-paper-link-hover hover-color-paper-link:hover font-size-17.5px line-height-8 word-spacing--0.12 tracking--0.04" href="/professional-rug-cleaning-services">Rug cleaning</a></li>
+          <li class="ml--5"><a class="color-paper-link-hover hover-color-paper-link:hover font-size-17.5px line-height-8 word-spacing--0.12 tracking--0.04" href="/professional-stain-removal-services">Stain removal</a></li>
         </ul>
         <h3>The process of our stain protection services:</h3>
         <p>Our professional stain protection services aim to prolong the life and beauty of your carpets and sofas. The stain prevention is carried out in two cases:</p>
-        <li class="ml--5">
-          <p><strong>New Carpets or Sofas:</strong> If your carpet or couch is new, we will apply two coats of solvent-based protection. This process allows us to treat the fabric while it is dry, reducing the need to add further moisture. The solvent-based protector creates a strong barrier against further stains, providing long-term protection.</p>
-        </li>
-        <li class="ml--5">
-          <p><strong>Post-Cleaning Protection:</strong> Following our detailed professional cleaning services, we make sure the carpet or sofa is totally dry. We next apply the first coat of water-based stain protection from east to west. We let this layer dry for around ten minutes. Once dry, we apply a second coat from north to south, achieving complete covering. This cross-application approach provides complete and deep coverage, enhancing the protective barrier against spills and stains.</p>
-        </li>
+        <ul>
+          <li class="ml--5">
+            <p><strong>New Carpets or Sofas:</strong> If your carpet or couch is new, we will apply two coats of solvent-based protection. This process allows us to treat the fabric while it is dry, reducing the need to add further moisture. The solvent-based protector creates a strong barrier against further stains, providing long-term protection.</p>
+          </li>
+          <li class="ml--5">
+            <p><strong>Post-Cleaning Protection:</strong> Following our detailed professional cleaning services, we make sure the carpet or sofa is totally dry. We next apply the first coat of water-based stain protection from east to west. We let this layer dry for around ten minutes. Once dry, we apply a second coat from north to south, achieving complete covering. This cross-application approach provides complete and deep coverage, enhancing the protective barrier against spills and stains.</p>
+          </li>
+        </ul>
       </div>
 
       <FleurDivider></FleurDivider>
@@ -327,7 +328,7 @@ export default function Page() {
         <ol style="counter-reset: ordered; list-style: none;">
           <li class="ml--5">
             <h3 class="ml--5 font-size-6 md-font-size-7">High-efficient extractors</h3>
-            <Typography variant="body">"Fine Carpet Cleaning" Ltd uses the best cleaning equipment and materials. Our tools are among the strongest, most effective, and largest portable ones on the market. Following a careful assessment of several machine models available in the UK, we have selected "Mytee" and "Airflex" as our expert cleaning equipment. Our in-house engineer also improves these devices further, making significant adjustments to maximise their functioning.</Typography>
+            <Typography variant="body">"Fine Carpet Cleaning" Ltd uses the best cleaning equipment and materials. Our tools are among the strongest, most effective, and largest portable ones on the market. Following a careful assessment of several machine models available in the UK, we have selected "<a class="color-paper-link hover-color-paper-link-hover:hover" href="https://www.mytee.com/products/1003dx-speedster-deluxe-carpet-extractor/" target="_blank" rel="noopener">Mytee</a>" and "<a class="color-paper-link hover-color-paper-link-hover:hover" href="https://www.clean-smart.co.uk/store/airflex-storm" target="_blank" rel="noopener">Airflex</a>" as our expert cleaning equipment. Our in-house engineer also improves these devices further, making significant adjustments to maximise their functioning.</Typography>
           </li>
           <li class="ml--5">
             <h3 class="ml--5 font-size-6 md-font-size-7">Dual motor vacuum cleaner</h3>
@@ -439,7 +440,7 @@ export default function Page() {
         </tbody>
       </table>
 
-      <button class="outline-none bg-brand-second-action hover-bg-brand-second-action-hover:hover font-size-6 font-600 w-250px h-60px c-paper flex flex-items-center flex-justify-center relative b-solid b-rd-3 b-4 b-brand-second-action hover-b-brand-second-action-hover:hover whitespace-normal line-height-6 word-spacing-0.5 py-9 my-20 mx-auto" style="box-shadow: 0 0 0 3px rgba(255, 255, 255, .9) inset; letter-spacing: 0.05rem;"><a class="c-paper font-size-5">REQUEST A QUOTE</a></button>
+      <button class="outline-none bg-brand-second-action hover-bg-brand-second-action-hover:hover font-size-6 font-600 w-250px h-60px c-paper flex flex-items-center flex-justify-center relative b-solid b-rd-3 b-4 b-brand-second-action hover-b-brand-second-action-hover:hover whitespace-normal line-height-6 word-spacing-0.5 py-9 my-20 mx-auto" style="box-shadow: 0 0 0 3px rgba(255, 255, 255, .9) inset; letter-spacing: 0.05rem;"><a href="/contact-us" class="c-paper font-size-5">REQUEST A QUOTE</a></button>
 
       <FleurDivider></FleurDivider>
 
