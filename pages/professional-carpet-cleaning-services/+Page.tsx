@@ -277,7 +277,7 @@ export function FaqSection() {
                         of
                         the carpets, how soiled they are, the type of the carpets and how easy the access to the
                         carpets is. For more detailed information check out <a
-                            class="color-paper-link hover-color-paper-link-hover:hover" href="/prices">carpet cleaning price list</a>.</Typography>
+                            class="color-paper-link hover-color-paper-link-hover:hover" href="#price_table">carpet cleaning price list</a>.</Typography>
                 </li>
                 <li>
                     <Typography variant="h3">Do you offer cheap carpet cleaning?</Typography>
@@ -299,7 +299,7 @@ export function FaqSection() {
                 <li>
                     <Typography variant="h3">Do you offer stairs carpet cleaning services?</Typography>
                     <Typography variant="body">Yes, we do. You can check the prices for stairs carpet cleaning services in
-                        our <a class="color-paper-link hover-color-paper-link-hover:hover" href="/prices"
+                        our <a class="color-paper-link hover-color-paper-link-hover:hover" href="#price_table"
                         >price list</a> or alternatively you can use our price calculator. If
                         you need more details regarding our stairs carpet cleaning services feel free to <a
                             class="color-paper-link hover-color-paper-link-hover:hover" href="/contact-us">contact us</a>.</Typography>
@@ -737,7 +737,7 @@ export default function Page() {
                 charge. Don't forget to request it when booking because telling us at the moment of cleaning causes
                 delays for the technicians and messes up the schedule.
                 <br></br>
-                <strong>Deodorising - Free of charge - just notify us when booking.</strong></div>
+                <strong id="price_table">Deodorising - Free of charge - just notify us when booking.</strong></div>
 
             <table class="w-full m-auto font-sans">
                 <thead style="box-shadow: 0px 20px 20px 1px rgb(84 89 95 / 10%);">

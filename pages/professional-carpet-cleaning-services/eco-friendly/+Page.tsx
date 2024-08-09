@@ -265,7 +265,7 @@ export function FaqSection() {
         <li>
           <p>Any additional services required, such as stain removal or stain protection.</p>
         </li>
-        <p>For a comprehensive pricing breakdown, please visit our <a class="color-paper-link hover-color-paper-link-hover:hover" href="/prices">enviro green carpet cleaning prices page</a>. To obtain an accurate quote and determine the cost of the healthy carpet cleaning, it's recommended to get in touch with us. This will allow us to assess your specific needs, provide a more precise estimate, and discuss any optional services that might be applicable.</p>
+        <Typography variant="body">For a comprehensive pricing breakdown, please visit our <a class="color-paper-link hover-color-paper-link-hover:hover" href="#price_table">enviro green carpet cleaning prices page</a>. To obtain an accurate quote and determine the cost of the healthy carpet cleaning, it's recommended to get in touch with us. This will allow us to assess your specific needs, provide a more precise estimate, and discuss any optional services that might be applicable.</Typography>
         <li>
           <Typography variant="h3">What is the best natural way to clean a carpet?</Typography>
           <Typography variant="body">The best natural way to do carpet cleaning without chemicals involves using environmentally friendly, non-toxic methods and ingredients. We at “Fine Carpet Cleaning” Ltd. provide chemical-free carpet cleaning services. This natural carpet cleaning method is effective for regular maintenance and deodorising. It's safe for your family, pets, and the environment.</Typography></li>
@@ -406,7 +406,7 @@ export default function Page() {
         charge. Don't forget to request it when booking because telling us at the moment of cleaning causes
         delays for the technicians and messes up the schedule.
         <br></br>
-        <strong>Deodorising - Free of charge - just notify us when booking.</strong></div>
+        <strong id="price_table">Deising - Free of charge - just notify us when booking.</strong></div>
 
       <table class="w-full m-auto font-sans">
         <thead style="box-shadow: 0px 20px 20px 1px rgb(84 89 95 / 10%);">

@@ -145,9 +145,6 @@ ol li:before {
 }
 
 
-.dropdown:hover .dropdown-content {
-  display: flex;
-}
 
 .facebook-like-gallery .keen-slider {
   width: 100%;

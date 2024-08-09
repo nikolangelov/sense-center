@@ -232,7 +232,7 @@ export function FaqSection() {
         <li>
           <p>The fabric of the pillows.</p>
         </li>
-          <Typography variant="body">To learn more, check out our <a class="color-paper-link hover-color-paper-link-hover:hover" href="/prices">dry cleaning pillows prices</a>.</Typography>
+          <Typography variant="body">To learn more, check out our <a class="color-paper-link hover-color-paper-link-hover:hover" href="#price_table">dry cleaning pillows prices</a>.</Typography>
         <li>
           <Typography variant="h3">Are pillows worth washing?</Typography>
           <Typography variant="body">Yes, it is very advisable to wash your pillows at least every six months. Professional pillow cleaning is highly effective and works exceptionally well. This is made possible by the expertise, equipment, products, and methods employed by expert companies. A professional pillow cleaning company like "Fine Carpet Cleaning Ltd." offers top-quality cleaning services that are particularly effective in tackling stubborn stains, eliminating odours, and eradicating germ buildup. These results are often unattainable through regular cleaning methods.</Typography></li>
@@ -405,7 +405,7 @@ export default function Page() {
         charge. Don't forget to request it when booking because telling us at the moment of cleaning causes
         delays for the technicians and messes up the schedule.
         <br></br>
-        <strong>Deodorising - Free of charge - just notify us when booking.</strong></div>
+        <strong id="price_table">Deising - Free of charge - just notify us when booking.</strong></div>
 
       <table class="w-full m-auto font-sans">
         <thead style="box-shadow: 0px 20px 20px 1px rgb(84 89 95 / 10%);">

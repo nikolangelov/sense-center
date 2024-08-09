@@ -192,7 +192,7 @@ export function FaqSection() {
           </li>
           <li>
             <p>How easy the access to the rug is.</p>
-            <Typography variant="body">To learn more, take a look at our <a class="color-paper-link hover-color-paper-link-hover:hover" href="/prices">dry clean rug prices</a>.</Typography>
+            <Typography variant="body">To learn more, take a look at our <a class="color-paper-link hover-color-paper-link-hover:hover" href="#price_table">dry clean rug prices</a>.</Typography>
           </li>
       </ul>
     </Entry>
@@ -356,7 +356,7 @@ export default function Page() {
         charge. Don't forget to request it when booking because telling us at the moment of cleaning causes
         delays for the technicians and messes up the schedule.
         <br></br>
-        <strong>Deodorising - Free of charge - just notify us when booking.</strong></div>
+        <strong id="price_table">Deising - Free of charge - just notify us when booking.</strong></div>
 
       <table class="w-full m-auto font-sans">
         <thead style="box-shadow: 0px 20px 20px 1px rgb(84 89 95 / 10%);">

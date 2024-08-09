@@ -198,7 +198,7 @@ export function FaqSection() {
         <li>
           <p>The fabric of the furniture.</p>
         </li>
-        <Typography variant="body">To learn more, check out our <a class="color-paper-link hover-color-paper-link-hover:hover" href="/prices">leather upholstery cleaning prices</a>.</Typography>
+        <Typography variant="body">To learn more, check out our <a class="color-paper-link hover-color-paper-link-hover:hover" href="#price_table">leather upholstery cleaning prices</a>.</Typography>
         <li>
           <Typography variant="h3">How to clean a nubuck leather sofa?</Typography>
           <Typography variant="body">Cleaning a nubuck leather sofa requires a gentle touch to avoid damaging the delicate material. We use specialised for nubuck cleaning products and methods:</Typography></li>
@@ -376,7 +376,7 @@ export default function Page() {
         charge. Don't forget to request it when booking because telling us at the moment of cleaning causes
         delays for the technicians and messes up the schedule.
         <br></br>
-        <strong>Deodorising - Free of charge - just notify us when booking.</strong></div>
+        <strong id="price_table">Deising - Free of charge - just notify us when booking.</strong></div>
 
       <table class="w-full m-auto font-sans">
         <thead style="box-shadow: 0px 20px 20px 1px rgb(84 89 95 / 10%);">

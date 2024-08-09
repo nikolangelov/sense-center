@@ -320,7 +320,7 @@ export function FaqSection() {
         <li>
           <p >How easy the access to the carpets is.</p>
         </li>
-        <p>To learn more, visit our <a class="color-paper-link hover-color-paper-link-hover:hover" href="/prices">office carpet cleaning prices</a>.</p>
+        <p>To learn more, visit our <a class="color-paper-link hover-color-paper-link-hover:hover" href="#price_table">office carpet cleaning prices</a>.</p>
         <li>
           <Typography variant="h3">Are you cleaning commercial carpet tiles?</Typography>
           <Typography variant="body">Yes, we are cleaning commercial carpet tiles. Our cleaners are able to handle any type of office carpet including commercial carpet tiles.</Typography></li>
@@ -447,7 +447,7 @@ export default function Page() {
         charge. Don't forget to request it when booking because telling us at the moment of cleaning causes
         delays for the technicians and messes up the schedule.
         <br></br>
-        <strong>Deodorising - Free of charge - just notify us when booking.</strong></div>
+        <strong id="price_table">Deising - Free of charge - just notify us when booking.</strong></div>
 
       <table class="w-full m-auto font-sans">
         <thead style="box-shadow: 0px 20px 20px 1px rgb(84 89 95 / 10%);">

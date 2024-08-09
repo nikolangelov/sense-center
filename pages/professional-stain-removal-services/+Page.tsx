@@ -215,7 +215,7 @@ export function FaqSection() {
         </li>
         <li>
           <p>The quantity and size of the stain.</p>
-          <Typography variant="body">To learn more, check out our <a class="color-paper-link hover-color-paper-link-hover:hover" href="/prices">stain removal prices</a>.</Typography>
+          <Typography variant="body">To learn more, check out our <a class="color-paper-link hover-color-paper-link-hover:hover" href="#price_table">stain removal prices</a>.</Typography>
         </li>
         <li>
           <Typography variant="h3">What stains cannot be removed from carpet?</Typography>
@@ -255,7 +255,7 @@ export function FaqSection() {
         </li>
         <li>
           <p>The quantity and size of the stain.</p>
-          <Typography variant="body">To learn more, view our <a class="color-paper-link hover-color-paper-link-hover:hover" href="/prices">stain removal prices</a>.</Typography>
+          <Typography variant="body">To learn more, view our <a class="color-paper-link hover-color-paper-link-hover:hover" href="#price_table">stain removal prices</a>.</Typography>
         </li>
         <li>
           <Typography variant="h3">How do professionals clean carpet stains?</Typography>
@@ -383,7 +383,7 @@ export default function Page() {
         charge. Don't forget to request it when booking because telling us at the moment of cleaning causes
         delays for the technicians and messes up the schedule.
         <br></br>
-        <strong>Deodorising - Free of charge - just notify us when booking.</strong></div>
+        <strong id="price_table">Deising - Free of charge - just notify us when booking.</strong></div>
 
       <table class="w-full m-auto font-sans">
         <thead style="box-shadow: 0px 20px 20px 1px rgb(84 89 95 / 10%);">
