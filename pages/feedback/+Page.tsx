@@ -14,13 +14,7 @@ const GA_MEASUREMENT_ID = 'G-PWPSS6VWF1'; // Replace with your actual GA4 Measur
 const CookieConsent = () => {
   const [showBanner, setShowBanner] = createSignal(true);
   const [showSettings, setShowSettings] = createSignal(false);
-  const [cookiePreferences, setCookiePreferences] = createSignal<{
-    necessary: boolean;
-    functional: boolean;
-    analytics: boolean;
-    advertising: boolean;
-    thirdParty: boolean;
-  }>({
+  const [cookiePreferences, setCookiePreferences] = createSignal({
     necessary: true,
     functional: false,
     analytics: false,
@@ -43,31 +37,35 @@ const CookieConsent = () => {
   };
 
   const removeGoogleAnalytics = () => {
-    // Remove GA cookies
     Cookies.remove('_ga');
     Cookies.remove('_gat');
     Cookies.remove('_gid');
-
-    // Disable GA tracking
     window.gtag && window.gtag('config', GA_MEASUREMENT_ID, { 'send_page_view': false });
-
-    // Remove the GA script tag
     const gaScript = document.querySelector(`script[src^="https://www.googletagmanager.com/gtag/js"]`);
     if (gaScript) {
       gaScript.remove();
     }
   };
 
-  createEffect(() => {
-    const savedPreferences = Cookies.get('cookiePreferences');
-    if (savedPreferences) {
-      const preferences = JSON.parse(savedPreferences);
-      setCookiePreferences(preferences);
-      setShowBanner(false);
-      if (preferences.analytics) {
-        loadGoogleAnalytics();
+  onMount(() => {
+    if (typeof window !== 'undefined') {
+      const savedPreferences = Cookies.get('cookiePreferences');
+      if (savedPreferences) {
+        const preferences = JSON.parse(savedPreferences);
+        setCookiePreferences(preferences);
+        setShowBanner(false);
+        if (preferences.analytics) {
+          loadGoogleAnalytics();
+        }
+      } else {
+        setShowBanner(true);
       }
     }
+  });
+
+  onMount(() => {
+    console.log("Component mounted");
+    setShowBanner(true);
   });
 
   const savePreferences = () => {
@@ -90,8 +88,6 @@ const CookieConsent = () => {
 
   const applyPreferences = () => {
     const preferences = cookiePreferences();
-
-    // Always set necessary cookies
     Cookies.set('necessary_cookie', 'true', { expires: 30 });
 
     if (preferences.functional) {
@@ -123,16 +119,16 @@ const CookieConsent = () => {
 
   const CookieCategory = (props: { title: string; description: string; name: 'necessary' | 'functional' | 'analytics' | 'advertising' | 'thirdParty'; }) => (
     <div class="flex flex-col">
-      <h4 class="font-size">{props.title}</h4>
-      <div class="flex flex-row">
+      <h4 class="mb-1 mt-2 line-height-6 sm-line-height-6 md-line-height-8 font-size-4 md-font-size-4.5">{props.title}</h4>
+      <div class="flex flex-row flex-items-center">
         <input
-          class="mr-4"
+          class="mr-4 mb-0 flex flex-items-center"
           type="checkbox"
           checked={cookiePreferences()[props.name]}
           disabled={props.name === 'necessary'}
           onChange={(e) => setCookiePreferences({ ...cookiePreferences(), [props.name]: e.target.checked })}
         />
-        <p class="text-left word-spacing-widest">{props.description}</p>
+        <p class="text-left word-spacing-widest mb-0 mt-0 flex flex-items-center line-height-5 sm-line-height-6 md-line-height-8 md-font-size-4 font-size-3.2">{props.description}</p>
       </div>
     </div>
   );
@@ -140,20 +136,22 @@ const CookieConsent = () => {
   return (
     <>
       <Show when={showBanner()}>
-        <div class="cookie-banner">
-          <p>Този сайт използва бисквитки за подобряване на вашето преживяване. Моля, изберете кои бисквитки разрешавате.</p>
-          <button onClick={acceptAll}>Приемам всички</button>
-          <button class="b-solid b-1 b-brand b-rd-2 bg-paper font-700 font-size-4 uppercase c-brand cursor-pointer mr-5 py-2 px-5" onClick={() => setShowSettings(true)}>
-            Настройки на бисквитките</button>
-          <a href="/cookie-policy" target="_blank">Пълна политика за бисквитките</a>
+        <div class="fixed inset-0 justify-center items-center z-50">
+          <div class="fixed bottom-0 bg-paper rounded-lg shadow-lg w-full flex flex-row flex-justify-between flex-items-center h-18">
+            <p class="mb-0 font-size-4.2 ml-8 pb-2">Този сайт използва бисквитки за подобряване на вашето преживяване.</p>
+            <div class="flex flex-justify-between flex-items-center mr-15">
+              <button class="b-solid b-2 b-brand b-rd-1 bg-brand hover-bg-brand-second-action-hover:hover transition-colors hover-b-brand-second-action-hover:hover font-700 font-size-3.5 uppercase c-paper cursor-pointer mr-2 py-1.5 px-5 line-height-normal" onClick={() => setShowSettings(false)}>Разбирам</button>
+              <button class="b-solid b-2 b-brand b-rd-1 bg-paper hover-b-brand-second-action-hover:hover hover-c-brand-second-action-hover:hover transition-colors font-700 font-size-3.5 uppercase c-brand cursor-pointer mr-2 py-1.5 px-5 line-height-normal" onClick={() => setShowSettings(true)}>Настройки на бисквитките</button>
+              <a href="/cookie-policy" target="_blank" class="b-solid b-2 b-brand b-rd-1 bg-paper hover-b-brand-second-action-hover:hover hover-c-brand-second-action-hover:hover transition-colors font-700 font-size-3.5 uppercase c-brand cursor-pointer mr-5 py-1.5 px-5 font-sans line-height-normal text-center" style="font-family:'Arial'">Пълна политика за бисквитките</a>
+            </div>
+          </div>
         </div>
       </Show>
 
       <Show when={showSettings()}>
-        <div class="cookie-settings">
-          <CookieContainer>
-            <h2>Настройки на бисквитките</h2>
-
+        <div class="fixed inset-0 bg-gray-800 bg-opacity-50 flex justify-center items-center z-50 mt-20 botom-0">
+          <div class="bg-paper px-10 pt-8 pb-6 rounded-lg shadow-lg w-11/12 md:w-3/4 lg:w-2/3">
+            <h2 class="mb-0 md-mb-8 md-mt-3 mt-0 line-height-7 sm-line-height-6 md-line-height-8 font-size-6 md-font-size-10">Настройки на бисквитките</h2>
 
             <CookieCategory
               name="necessary"
@@ -185,28 +183,17 @@ const CookieConsent = () => {
               description="Тези бисквитки се задават от външни услуги, които добавяме към страниците."
             />
 
-            <button onClick={savePreferences}>Запази настройки</button>
-            <button onClick={acceptAll}>Приеми всички</button>
-            <button onClick={() => setShowSettings(false)}>Затвори</button>
-          </CookieContainer>
-
+            <div class="flex justify-center md-justify-end gap-3 mt-1 md-mt-0 pt-0">
+              <button class="b-solid b-2 b-brand b-rd-1 bg-brand hover-bg-brand-second-action-hover:hover transition-colors hover-b-brand-second-action-hover:hover font-700 font-size-2.7 md-font-size-4 uppercase c-paper cursor-pointer py-1.5 md-py-3.5 px-4 md-px-5 mt-4 md-mt-10 line-height-4" onClick={savePreferences}>Запази настройки</button>
+              <button class="b-solid b-2 b-brand b-rd-1 bg-paper hover-c-brand-second-action-hover:hover transition-colors hover-b-brand-second-action-hover:hover font-700 font-size-2.7 md-font-size-4 uppercase c-brand cursor-pointer py-1.5 md-py-3.5 px-4 md-px-5 mt-4 md-mt-10 line-height-4" onClick={acceptAll}>Приеми всички</button>
+              <button class="b-solid b-2 b-brand b-rd-1 bg-paper hover-c-brand-second-action-hover:hover transition-colors hover-b-brand-second-action-hover:hover font-700 font-size-2.7 md-font-size-4 uppercase c-brand cursor-pointer py-1.5 md-py-3.5 px-4 md-px-5 mt-4 md-mt-10 line-height-4" onClick={() => setShowSettings(false)}>Затвори</button>
+            </div>
+          </div>
         </div>
       </Show>
-
-      <button class="b-solid b-1 b-brand b-rd-2 bg-paper font-700 font-size-4 uppercase c-brand cursor-pointer mr-5 py-2 px-5" onClick={() => setShowSettings(true)}>
-        Настройки на бисквитките
-      </button>
     </>
   );
 };
-
-function CookieContainer(props: { children: HTMLElement | any }) {
-  return (
-    <div class="mt-20 py-8 px-5 md-px-14 bg-paper b-rd-3 mx-auto" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 10%);">
-      {props.children}
-    </div>
-  )
-}
 
 function FleurDivider() {
   return (
