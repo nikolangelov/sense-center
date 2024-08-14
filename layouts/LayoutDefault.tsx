@@ -1,7 +1,6 @@
 import 'uno.css'
 import "./style.css";
-import { children, createEffect, JSX, onCleanup } from "solid-js";
-import { createSignal, Show } from "solid-js";
+import { children, createEffect, JSX, onCleanup, onMount, createSignal, Show } from "solid-js";
 import HamburgerMenuIcon from '~icons/mdi/hamburger-menu';
 import MdiKeyboardArrowUp from '~icons/mdi/keyboard-arrow-up';
 import RiPhoneFill from '~icons/ri/phone-fill';
@@ -14,9 +13,279 @@ import MdiPlaceOutline from '~icons/mdi/place-outline';
 import MdiEmailEditOutline from '~icons/mdi/email-edit-outline';
 import MdiPhoneOutline from '~icons/mdi/phone-outline';
 import MdiCommentAccountOutline from '~icons/mdi/comment-account-outline';
-import { Button, ButtonProps, Dropdown, DropdownToggleProps } from "solid-bootstrap-core";
+import { Dropdown } from "solid-bootstrap-core";
 import RiCloseFill from '~icons/ri/close-fill';
 import RiArrowDownSLine from '~icons/ri/arrow-down-s-line';
+import Cookies from 'js-cookie';
+
+declare global {
+  interface Window {
+    dataLayer: any[];
+    gtag: (...args: any[]) => void;
+  }
+}
+
+const GA_MEASUREMENT_ID = 'G-PWPSS6VWF1'; // Replace with your actual GA4 Measurement ID
+
+const CookieConsent = () => {
+  console.log("CookieConsent component initialized");
+
+  const [hasMadeChoice, setHasMadeChoice] = createSignal(false);
+  const [showBanner, setShowBanner] = createSignal(false); // Start with false to keep it hidden
+  const [showSettings, setShowSettings] = createSignal(false);
+  const [cookiePreferences, setCookiePreferences] = createSignal({
+    necessary: true,
+    functional: false,
+    analytics: false,
+    advertising: false,
+    thirdParty: false,
+  });
+
+  const loadGoogleAnalytics = () => {
+    console.log("Loading Google Analytics...");
+    const script = document.createElement("script");
+    script.src = `https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`;
+    script.async = true;
+    document.head.appendChild(script);
+
+    script.onload = () => {
+      console.log("Google Analytics loaded");
+      window.dataLayer = window.dataLayer || [];
+      window.gtag = function () {
+        window.dataLayer.push(arguments);
+      };
+      window.gtag("js", new Date());
+      window.gtag("config", GA_MEASUREMENT_ID, { anonymize_ip: true });
+    };
+  };
+
+  const removeGoogleAnalytics = () => {
+    Cookies.remove("_ga");
+    Cookies.remove("_gat");
+    Cookies.remove("_gid");
+    window.gtag &&
+      window.gtag("config", GA_MEASUREMENT_ID, { send_page_view: false });
+    const gaScript = document.querySelector(
+      `script[src^="https://www.googletagmanager.com/gtag/js"]`
+    );
+    if (gaScript) {
+      gaScript.remove();
+    }
+  };
+
+  onMount(() => {
+    console.log("CookieConsent component mounted");
+    const savedPreferences = Cookies.get("cookiePreferences");
+    const bannerClosed = Cookies.get("bannerClosed");
+
+    if (savedPreferences) {
+      console.log("Saved preferences found:", savedPreferences);
+      const preferences = JSON.parse(savedPreferences);
+      setCookiePreferences(preferences);
+      setHasMadeChoice(true);
+      applyPreferences();
+    }
+
+    if (bannerClosed !== "true" && !savedPreferences) {
+      setShowBanner(true);
+    }
+
+    console.log(
+      "Initial showBanner value:",
+      showBanner(),
+      "hasMadeChoice:",
+      hasMadeChoice()
+    );
+  });
+
+  const savePreferences = () => {
+    console.log("Saving preferences:", cookiePreferences());
+    Cookies.set("cookiePreferences", JSON.stringify(cookiePreferences()), {
+      expires: 365,
+      path: "/",
+    });
+    Cookies.set("bannerClosed", "true", { expires: 365, path: "/" });
+    console.log("Cookies set");
+    setHasMadeChoice(true);
+    setShowBanner(false);
+    setShowSettings(false);
+    applyPreferences();
+    console.log(
+      "After saving, showBanner:",
+      showBanner(),
+      "hasMadeChoice:",
+      hasMadeChoice()
+    );
+  };
+
+  const closeBanner = () => {
+    console.log("Closing banner without saving preferences");
+    Cookies.set("bannerClosed", "true", { expires: 365, path: "/" });
+    setShowBanner(false);
+  };
+
+  const acceptAll = () => {
+    setCookiePreferences({
+      necessary: true,
+      functional: true,
+      analytics: true,
+      advertising: true,
+      thirdParty: true,
+    });
+    savePreferences();
+  };
+
+  const applyPreferences = () => {
+    const preferences = cookiePreferences();
+    Cookies.set("necessary_cookie", "true", { expires: 30 });
+
+    if (preferences.functional) {
+      Cookies.set("functional_cookie", "true", { expires: 30 });
+    } else {
+      Cookies.remove("functional_cookie");
+    }
+
+    if (preferences.analytics) {
+      Cookies.set("analytics_cookie", "true", { expires: 30 });
+      loadGoogleAnalytics();
+    } else {
+      Cookies.remove("analytics_cookie");
+      removeGoogleAnalytics();
+    }
+
+    if (preferences.advertising) {
+      Cookies.set("advertising_cookie", "true", { expires: 30 });
+    } else {
+      Cookies.remove("advertising_cookie");
+    }
+
+    if (preferences.thirdParty) {
+      Cookies.set("third_party_cookie", "true", { expires: 30 });
+    } else {
+      Cookies.remove("third_party_cookie");
+    }
+  };
+
+  const CookieCategory = (props: {
+    title: string;
+    description: string;
+    name:
+    | "necessary"
+    | "functional"
+    | "analytics"
+    | "advertising"
+    | "thirdParty";
+  }) => (
+    <div class="flex flex-col">
+      <h4 class="mb-1 mt-2 line-height-6 sm-line-height-6 md-line-height-8 font-size-4 md-font-size-4.5">
+        {props.title}
+      </h4>
+      <div class="flex flex-row flex-items-center">
+        <input
+          class="mr-4 mb-0 flex flex-items-center"
+          type="checkbox"
+          checked={cookiePreferences()[props.name]}
+          disabled={props.name === "necessary"}
+          onChange={(e) =>
+            setCookiePreferences({
+              ...cookiePreferences(),
+              [props.name]: e.target.checked,
+            })
+          }
+        />
+        <p class="text-left word-spacing-widest mb-0 mt-0 flex flex-items-center line-height-5 sm-line-height-6 md-line-height-8 md-font-size-4 font-size-3.2">
+          {props.description}
+        </p>
+      </div>
+    </div>
+  );
+
+  return (
+    <>
+      <Show when={showBanner()}>
+        <div
+          class={`fixed bottom-0 left-0 right-0 justify-center items-center z-100 transition-opacity duration-500 ease-in-out ${showBanner() ? "opacity-100" : "opacity-0 hidden"
+            }`}
+        >
+          <div class="fixed bg-paper w-full flex flex-col md-flex-row flex-justify-evenly md-flex-justify-between flex-items-center h-40 md-h-16 relative" style="box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.4);">
+            <p
+              class="mb-0 mt-0 font-size-3.8 mx-3 md-ml-8 md-mr-0 text-left word-spacing-1 line-height-5.5"
+              style="font-family:'Roboto'"
+            >
+              We use cookies tp improve your experience on this website. By continuing to use our site, you accept our use of cookies.
+            </p>
+            <div class="flex flex-justify-between flex-items-center md-mr-8 md-gap-0 gap-2">
+              <button
+                class="b-solid b-2 b-brand b-rd-1 bg-brand hover-bg-brand-action-hover:hover transition-colors hover-b-brand-action-hover:hover font-700 font-size-3.5 uppercase c-paper cursor-pointer mr-2 py-1.5 px-5 line-height-normal"
+                onClick={savePreferences}
+              >
+                Accept
+              </button>
+              <button
+                class="hidden b-solid b-2 b-brand b-rd-1 bg-paper hover-b-brand-action-hover:hover hover-c-brand-action-hover:hover transition-colors font-700 font-size-3.5 uppercase c-brand cursor-pointer mr-2 py-1.5 px-5 line-height-normal"
+                onClick={() => setShowSettings(true)}
+              >
+                Settings
+              </button>
+              <a
+                href="/cookie-policy"
+                target="_blank"
+                class="b-solid b-2 b-brand b-rd-1 bg-paper hover-b-brand-action-hover:hover hover-c-brand-action-hover:hover transition-colors font-700 font-size-3.5 uppercase c-brand cursor-pointer py-1.5 px-5 font-sans line-height-normal text-center"
+                style="font-family:'Arial'"
+              >
+                Privacy policy
+              </a>
+            </div>
+          </div>
+        </div>
+      </Show>
+
+      <Show when={showSettings()}>
+        <div class="fixed inset-0 bg-gray-800 bg-opacity-50 flex justify-center items-center z-50 mt-20 botom-0">
+          <div class="bg-paper px-10 pt-8 pb-6 w-11/12 md:w-3/4 lg:w-2/3">
+            <h2 class="mb-0 md-mb-8 md-mt-3 mt-0 line-height-7 sm-line-height-6 md-line-height-8 font-size-6 md-font-size-10">Настройки на бисквитките</h2>
+
+            <CookieCategory
+              name="necessary"
+              title="Строго необходими бисквитки"
+              description="Тези бисквитки са необходими за функционирането на сайта и не могат да бъдат изключени."
+            />
+
+            <CookieCategory
+              name="functional"
+              title="Функционални бисквитки"
+              description="Тези бисквитки позволяват на уебсайта да предостави подобрена функционалност и персонализация."
+            />
+
+            <CookieCategory
+              name="analytics"
+              title="Аналитични бисквитки"
+              description="Тези бисквитки ни помагат да разберем как посетителите взаимодействат с уебсайта."
+            />
+
+            <CookieCategory
+              name="advertising"
+              title="Рекламни бисквитки"
+              description="Тези бисквитки се използват за показване на релевантни реклами."
+            />
+
+            <CookieCategory
+              name="thirdParty"
+              title="Бисквитки на трети страни"
+              description="Тези бисквитки се задават от външни услуги, които добавяме към страниците."
+            />
+
+            <div class="flex justify-center md-justify-end gap-3 mt-1 md-mt-0 pt-0">
+              <button class="b-solid b-2 b-brand b-rd-1 bg-brand hover-bg-brand-second-action-hover:hover transition-colors hover-b-brand-second-action-hover:hover font-700 font-size-2.7 md-font-size-4 uppercase c-paper cursor-pointer py-1.5 md-py-3.5 px-4 md-px-5 mt-4 md-mt-10 line-height-4" onClick={savePreferences}>Save settings</button>
+              <button class="b-solid b-2 b-brand b-rd-1 bg-paper hover-c-brand-second-action-hover:hover transition-colors hover-b-brand-second-action-hover:hover font-700 font-size-2.7 md-font-size-4 uppercase c-brand cursor-pointer py-1.5 md-py-3.5 px-4 md-px-5 mt-4 md-mt-10 line-height-4" onClick={acceptAll}>Accept all</button>
+              <button class="b-solid b-2 b-brand b-rd-1 bg-paper hover-c-brand-second-action-hover:hover transition-colors hover-b-brand-second-action-hover:hover font-700 font-size-2.7 md-font-size-4 uppercase c-brand cursor-pointer py-1.5 md-py-3.5 px-4 md-px-5 mt-4 md-mt-10 line-height-4" onClick={() => setShowSettings(false)}>Close</button>
+            </div>
+          </div>
+        </div>
+      </Show>
+    </>
+  );
+};
 
 function DropownMenuLink(props: { href: string | undefined; children: number | boolean | Node | JSX.ArrayElement | (string & {}) | null | undefined; }) {
   return (
@@ -41,7 +310,7 @@ const MyDropdown = (props: { closeMenu: () => void; }) => {
   };
 
   return (
-    <div class="dropdown-menu show w-full overflow-y-auto max-h-600px sticky">
+    <div class="dropdown-menu show w-full overflow-y-auto max-h-770px sticky">
       <Dropdown show={isDropdownOpen()}>
         <Dropdown.Toggle>
           {(props) => (
@@ -50,7 +319,7 @@ const MyDropdown = (props: { closeMenu: () => void; }) => {
                 <div class="py-5 flex flex-content-center flex-justify-between w-full">
                   <a onClick={handleLinkClick}
                     href="/services"
-                    class="w-full flex flex-nowrap c-paper-inv hover-c-brand:hover font-size-5 font-500"
+                    class="w-full flex flex-items-center flex-nowrap c-paper-inv hover-c-brand:hover font-size-5 font-500"
                     style="font-family: Open Sans, sans-serif; letter-spacing: 0.6px;"
                   >
                     <MdiVacuum class="mr-3 hover-c-brand-second-action:hover" />Services
@@ -66,7 +335,7 @@ const MyDropdown = (props: { closeMenu: () => void; }) => {
             <div
               {...menuProps}
               onClick={handleLinkClick}
-              class="dropdown-menu show w-full max-h-1000px"
+              class="show w-full max-h-1000px"
               style={{
                 transition: 'visibility 500ms, opacity 500ms',
                 visibility: meta.show ? 'visible' : 'hidden',
@@ -104,33 +373,33 @@ const MyDropdown = (props: { closeMenu: () => void; }) => {
         <div
           class={`py-5 b-b-solid b-b border-brand-second-action transition-all duration-500 ${isDropdownOpen() ? 'mt-245' : 'mt-0'}`}
         >
-          <a onClick={handleLinkClick} href="/prices" class="flex flex-nowrap c-paper-inv hover-c-brand:hover font-size-5 font-500" style="font-family: Open Sans, sans-serif; letter-spacing: 0.6px;">
+          <a onClick={handleLinkClick} href="/prices" class="flex flex-items-center flex-nowrap c-paper-inv hover-c-brand:hover font-size-5 font-500" style="font-family: Open Sans, sans-serif; letter-spacing: 0.6px;">
             <RiMoneyPoundCircleLine class="mr-3" />Prices
           </a>
         </div>
 
         <div class="py-5 b-b-solid b-b border-brand-second-action">
-          <a onClick={handleLinkClick} href="/reviews" class="flex flex-nowrap c-paper-inv hover-c-brand:hover font-size-5 font-500" style="font-family: Open Sans, sans-serif; letter-spacing: 0.6px;">
+          <a onClick={handleLinkClick} href="/reviews" class="flex flex-items-center flex-nowrap c-paper-inv hover-c-brand:hover font-size-5 font-500" style="font-family: Open Sans, sans-serif; letter-spacing: 0.6px;">
             <MdiCommentAccountOutline class="mr-3" />Reviews
           </a>
         </div>
         <div class="py-5 b-b-solid b-b border-brand-second-action">
-          <a onClick={handleLinkClick} href="/about-us" class="flex flex-nowrap c-paper-inv hover-c-brand:hover font-size-5 font-500" style="font-family: Open Sans, sans-serif; letter-spacing: 0.6px;">
+          <a onClick={handleLinkClick} href="/about-us" class="flex flex-items-center flex-nowrap c-paper-inv hover-c-brand:hover font-size-5 font-500" style="font-family: Open Sans, sans-serif; letter-spacing: 0.6px;">
             <MdiAccountGroupOutline class="mr-3" />About us
           </a>
         </div>
         <div class="py-5 b-b-solid b-b border-brand-second-action">
-          <a onClick={handleLinkClick} href="/areas-we-cover" class="flex flex-nowrap c-paper-inv hover-c-brand:hover font-size-5 font-500" style="font-family: Open Sans, sans-serif; letter-spacing: 0.6px;">
+          <a onClick={handleLinkClick} href="/areas-we-cover" class="flex flex-items-center flex-nowrap c-paper-inv hover-c-brand:hover font-size-5 font-500" style="font-family: Open Sans, sans-serif; letter-spacing: 0.6px;">
             <MdiPlaceOutline class="mr-3" />Areas we cover
           </a>
         </div>
         <div class="py-5 b-b-solid b-b border-brand-second-action">
-          <a onClick={handleLinkClick} href="/contact-us" class="flex flex-nowrap c-paper-inv hover-c-brand:hover font-size-5 font-500" style="font-family: Open Sans, sans-serif; letter-spacing: 0.6px;">
+          <a onClick={handleLinkClick} href="/contact-us" class="flex flex-items-center flex-nowrap c-paper-inv hover-c-brand:hover font-size-5 font-500" style="font-family: Open Sans, sans-serif; letter-spacing: 0.6px;">
             <MdiPhoneOutline class="mr-3" />Contact us
           </a>
         </div>
         <div class="py-5 b-b-solid b-b border-brand-second-action">
-          <a onClick={handleLinkClick} href="/feedback" class="flex flex-nowrap c-paper-inv hover-c-brand:hover font-size-5 font-500" style="font-family: Open Sans, sans-serif; letter-spacing: 0.6px;">
+          <a onClick={handleLinkClick} href="/feedback" class="flex flex-items-center flex-nowrap c-paper-inv hover-c-brand:hover font-size-5 font-500" style="font-family: Open Sans, sans-serif; letter-spacing: 0.6px;">
             <MdiEmailEditOutline class="mr-3" />Feedback
           </a>
         </div>
@@ -224,13 +493,13 @@ function DropDownMenuDesktop(props: { closeMenu: () => void }) {
         <div class="flex flex-col flex-wrap">
           <a href="/professional-rug-cleaning-services" onClick={handleClick}><h3 class="whitespace-normal text-center hover-c-brand:hover">Rug cleaning services</h3></a>
           <div class="flex flex-row flex-wrap hidden flex-items-center flex-content-center">
-          <DropdownMenuItem href="/professional-rug-cleaning-services/steam" src="/assets/Професионално почистване на заведения.jpg" closeMenu={props.closeMenu}>Rug steam cleaning</DropdownMenuItem>
+            <DropdownMenuItem href="/professional-rug-cleaning-services/steam" src="/assets/Професионално почистване на заведения.jpg" closeMenu={props.closeMenu}>Rug steam cleaning</DropdownMenuItem>
             <DropdownMenuItem href="/professional-rug-cleaning-services/dry" src="/assets/Професионално почистване на заведения.jpg" closeMenu={props.closeMenu}>Dry rug cleaning</DropdownMenuItem>
             <DropdownMenuItem href="/professional-stain-removal-services" src="/assets/Професионално почистване на заведения.jpg" closeMenu={props.closeMenu}>Rug stain removal</DropdownMenuItem>
           </div>
           <div class="flex flex-row flex-wrap hidden flex-items-center flex-content-center flex-justify-center">
-          <DropdownMenuItem href="//stain-protection-services" src="/assets/Професионално почистване на заведения.jpg" closeMenu={props.closeMenu}>Rug stain protection</DropdownMenuItem>
-        </div>
+            <DropdownMenuItem href="/stain-protection-services" src="/assets/Професионално почистване на заведения.jpg" closeMenu={props.closeMenu}>Rug stain protection</DropdownMenuItem>
+          </div>
         </div>
         <div class="flex flex-col flex-wrap">
           <h3 class="whitespace-normal text-center">Other cleaning services</h3>
@@ -256,12 +525,14 @@ export default function LayoutDefault(props: { children?: JSX.Element }) {
     <div class="flex flex-col">
       <Topbar>
         <Logo />
-        <button
-          class="get-a-quote-button whitespace-nowrap md-ml-2 xl-ml-10 font-serif uppercase font-500 c-paper overflow-hidden relative bg-paper b-double b-rd-1 b-4 b-transparent h-13 w-45 cursor-pointer font-size-3.5 tracking-wide"
-          style="min-width: fit-content; background-origin: border-box; background-clip: padding-box, border-box; box-shadow: 0 0 0 2.5px rgba(255, 255, 255, 1) inset; background-image: linear-gradient(90deg, rgb(13, 46, 41) 0%, rgb(26, 135, 94) 50%), radial-gradient(circle at left top, rgb(13, 46, 41), rgb(26, 135, 94));"
-        >
-          Request a quote
-        </button>
+        <a href="/contact-us">
+          <button
+            class="get-a-quote-button whitespace-nowrap md-ml-2 xl-ml-10 font-serif uppercase font-500 c-paper overflow-hidden relative bg-paper b-double b-rd-1 b-4 b-transparent h-13 w-45 cursor-pointer font-size-3.5 tracking-wide"
+            style="min-width: fit-content; background-origin: border-box; background-clip: padding-box, border-box; box-shadow: 0 0 0 2.5px rgba(255, 255, 255, 1) inset; background-image: linear-gradient(90deg, rgb(13, 46, 41) 0%, rgb(26, 135, 94) 50%), radial-gradient(circle at left top, rgb(13, 46, 41), rgb(26, 135, 94));"
+          >
+            Request a quote
+          </button>
+        </a>
         <div class="flex whitespace-nowrap flex-nowrap flex-justify-end flex-items-end font-semibold gap-5 xl-gap-5xl md-pr-10 md-pl-5 xl-pl-10 pr-6 flex-content-center flex-items-center">
           <div
             onMouseEnter={handleMouseEnter}
@@ -284,11 +555,9 @@ export default function LayoutDefault(props: { children?: JSX.Element }) {
         </div>
       </Topbar>
       <Content>{childrenMemo()}</Content>
+      <CookieConsent />
       <BackToTopArrow></BackToTopArrow>
       <MainFooter>
-
-
-
         <div class="flex flex-col gap-5 flex-wrap line-height-0 my-5">
           <h3 class="font-size-4.5 uppercase font-letter tracking-widest mt-0 mb-2 c-paper font-600">Contacts</h3>
           <div class="flex flex-items-center gap-2">
@@ -323,10 +592,14 @@ export default function LayoutDefault(props: { children?: JSX.Element }) {
         <div class="flex flex-col gap-5 flex-wrap line-height-0 my-5">
           <h3 class="font-size-4.5 uppercase font-letter tracking-widest mt-0 mb-2 c-paper font-600">Menu</h3>
           <MainFooterMenuItem href="/">Home</MainFooterMenuItem>
+          <MainFooterMenuItem href="/services">Services</MainFooterMenuItem>
           <MainFooterMenuItem href="/prices">Prices</MainFooterMenuItem>
+          <MainFooterMenuItem href="/reviews">Reviews</MainFooterMenuItem>
+          <MainFooterMenuItem href="/about-us">About us</MainFooterMenuItem>
           <MainFooterMenuItem href="/areas-we-cover">Areas we cover</MainFooterMenuItem>
+          <MainFooterMenuItem href="/contact-us">Contact us</MainFooterMenuItem>
+          <MainFooterMenuItem href="/feedback">Feedback</MainFooterMenuItem>
         </div>
-
       </MainFooter>
       <BottomFooter>
         <p class="text-center lg-font-size-4 md-font-size-3 font-size-3.7 font-400 line-height-6 font-sans">Copyright &copy; 2024 Fine Carpet Cleaning London</p>
@@ -404,9 +677,19 @@ function HamburgerMenu() {
             position: "fixed",
           }}
         />
+
+        <div>
+          <input type="checkbox" id="menyAvPaa" />
+          <label id="burger" for="menyAvPaa">
+            <div></div>
+            <div></div>
+            <div></div>
+          </label>
+        </div>
+
       </button>
       <Show when={open()}>
-        <div class="fixed w-screen h-3000px bg-#f7f7f7 left-0 top-19.6 px-10">
+        <div class="fixed w-screen h-3000px bg-brand left-0 top-19.6 px-10">
           <div class="py-15 text-left">
             <MyDropdown closeMenu={closeMenu} />
           </div>
@@ -478,7 +761,7 @@ function BackToTopArrow() {
   };
 
   return (
-    <div class="block z-9999 position-fixed right-3 bottom-5"
+    <div class="block z-99 position-fixed right-4 bottom-4"
       classList={{
         'back-to-top-arrow': true,
         'visible': isVisible(),

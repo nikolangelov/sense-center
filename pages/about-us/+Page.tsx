@@ -57,12 +57,12 @@ const GalerrySliderMobile = () => {
 export default function Page() {
   return (
     <>
+      <h1 class="mt-10 md-mt-17 font-size-14 md-font-size-16 md-line-height-18 line-height-16">Who are we?</h1>
+
       <div class="mt-20">
         <GalerrySliderDesktop />
         <GalerrySliderMobile />
       </div>
-
-      <h1 class="mt-25 font-size-14 md-font-size-16 md-line-height-18 line-height-16">Who are we?</h1>
 
       <div class="mt-20 py-8 px-8 md-px-14 b-rd-3 bg-paper line-height-8 text-justify font-size-4.4" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 18%);">
 

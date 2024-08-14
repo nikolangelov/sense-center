@@ -52,47 +52,21 @@ const GalerrySliderMobile = () => {
 };
 
 const VideoPlayer = () => {
-  const [isStarted, setIsStarted] = createSignal(false);
-  let videoRef: HTMLVideoElement;
-
-  const startVideo = () => {
-    videoRef.play();
-    setIsStarted(true);
-  };
-
-  return (
-    <div class="flex flex-justify-center flex-items-center">
-      {!isStarted() && (
-        <button
-          class="z-1 c-paper font-size-12 position-absolute cursor-pointer b-none bg-transparent"
-          onClick={startVideo}
-        >
-          <RiYoutubeFill class="c-#ff0000 md-w-20 mt-5 md-mt-0 md-h-20 w-15 h-15" />
-        </button>
-      )}
-      <video
-        ref={(el) => (videoRef = el)}
-        class="mt-10 b-rd-3" style="width: 100%; width: -moz-available; width: -webkit-fill-available; width: fill-available;"
-        controls
-        muted
-      >
-        <div class="vertical-top max-w-full font-size-4 color-paper-inv block">
-          <a
-            class="color-paper-inv block"
-            href="https://www.youtube.com/watch?v=zedTK_cCobY"
-            target="_blank"
-            rel="noopener"
-          >
-            Professional Carpet Cleaning London - Fine Carpet Cleaning
-          </a>
-        </div>
-        <source
-          src="/assets/Professional Carpet Cleaning London - Fine Carpet Cleaning (1).mp4"
-          type="video/mp4"
-        />
-      </video>
-    </div>
-  );
+	return (
+		<div class="flex flex-justify-center flex-items-center mt-20">
+			<video
+				class="mt-10 b-rd-3" style="width: 100%; width: -moz-available; width: -webkit-fill-available; width: fill-available;"
+				autoplay
+				controls
+				muted
+			>
+				<source
+					src="/assets/Professional Carpet Cleaning London - Fine Carpet Cleaning (1).mp4"
+					type="video/mp4"
+				/>
+			</video>
+		</div>
+	);
 };
 
 function FleurDivider() {

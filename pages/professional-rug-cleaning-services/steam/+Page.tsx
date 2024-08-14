@@ -52,47 +52,21 @@ const GalerrySliderMobile = () => {
 };
 
 const VideoPlayer = () => {
-  const [isStarted, setIsStarted] = createSignal(false);
-  let videoRef: HTMLVideoElement;
-
-  const startVideo = () => {
-    videoRef.play();
-    setIsStarted(true);
-  };
-
-  return (
-    <div class="flex flex-justify-center flex-items-center">
-      {!isStarted() && (
-        <button
-          class="z-1 c-paper font-size-12 position-absolute cursor-pointer b-none bg-transparent"
-          onClick={startVideo}
-        >
-          <RiYoutubeFill class="c-#ff0000 md-w-20 mt-5 md-mt-0 md-h-20 w-15 h-15" />
-        </button>
-      )}
-      <video
-        ref={(el) => (videoRef = el)}
-        class="mt-10 b-rd-3" style="width: 100%; width: -moz-available; width: -webkit-fill-available; width: fill-available;"
-        controls
-        muted
-      >
-        <div class="vertical-top max-w-full font-size-4 color-paper-inv block">
-          <a
-            class="color-paper-inv block"
-            href="https://www.youtube.com/watch?v=zedTK_cCobY"
-            target="_blank"
-            rel="noopener"
-          >
-            Professional Carpet Cleaning London - Fine Carpet Cleaning
-          </a>
-        </div>
-        <source
-          src="/assets/Professional Carpet Cleaning London - Fine Carpet Cleaning (1).mp4"
-          type="video/mp4"
-        />
-      </video>
-    </div>
-  );
+	return (
+		<div class="flex flex-justify-center flex-items-center mt-20">
+			<video
+				class="mt-10 b-rd-3" style="width: 100%; width: -moz-available; width: -webkit-fill-available; width: fill-available;"
+				autoplay
+				controls
+				muted
+			>
+				<source
+					src="/assets/Professional Carpet Cleaning London - Fine Carpet Cleaning (1).mp4"
+					type="video/mp4"
+				/>
+			</video>
+		</div>
+	);
 };
 
 function FleurDivider() {
@@ -324,8 +298,12 @@ export default function Page() {
           <li class="ml--5"><a class="color-paper-link-hover hover-color-paper-link:hover font-size-17.5px line-height-8 word-spacing--0.12 tracking--0.04" href="/professional-stain-removal-services">Rug stain removal</a></li>
           <li class="ml--5"><a class="color-paper-link-hover hover-color-paper-link:hover font-size-17.5px line-height-8 word-spacing--0.12 tracking--0.04" href="/stain-protection-services">Rug stain protection</a></li>
         </ul>
+        </div>
 
-        <h3>The process of our rug steam cleaning service:</h3>
+        <FleurDivider></FleurDivider>
+
+        <h2>The process of our rug steam cleaning service:</h2>
+        <div class="mt-20 py-8 px-8 md-px-14 bg-paper b-rd-3" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 18%);">
         <ul>
           <li class="ml--5"><p>We start by doing a pre-cleaning survey. We apply a unique strategy to each rug, taking into account its kind, condition, and level of pollution. This is required to determine the approximate amount of detergent and equipment required for steam cleaning the rug.</p></li>
           <li class="ml--5"><p>Using a high-filtration twin-motor Hoover cleaner made especially for high-performance steam cleaning is the second stage. This gets rid of any dust, dry soils, and loose dirt.</p></li>

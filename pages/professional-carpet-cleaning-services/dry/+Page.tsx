@@ -52,40 +52,14 @@ const GalerrySliderMobile = () => {
 };
 
 const VideoPlayer = () => {
-  const [isStarted, setIsStarted] = createSignal(false);
-  let videoRef: HTMLVideoElement;
-
-  const startVideo = () => {
-    videoRef.play();
-    setIsStarted(true);
-  };
-
   return (
-    <div class="flex flex-justify-center flex-items-center">
-      {!isStarted() && (
-        <button
-          class="z-1 c-paper font-size-12 position-absolute cursor-pointer b-none bg-transparent"
-          onClick={startVideo}
-        >
-          <RiYoutubeFill class="c-#ff0000 md-w-20 mt-5 md-mt-0 md-h-20 w-15 h-15" />
-        </button>
-      )}
+    <div class="flex flex-justify-center flex-items-center mt-20">
       <video
-        ref={(el) => (videoRef = el)}
         class="mt-10 b-rd-3" style="width: 100%; width: -moz-available; width: -webkit-fill-available; width: fill-available;"
+        autoplay
         controls
         muted
       >
-        <div class="vertical-top max-w-full font-size-4 color-paper-inv block">
-          <a
-            class="color-paper-inv block"
-            href="https://www.youtube.com/watch?v=zedTK_cCobY"
-            target="_blank"
-            rel="noopener"
-          >
-            Professional Carpet Cleaning London - Fine Carpet Cleaning
-          </a>
-        </div>
         <source
           src="/assets/Professional Carpet Cleaning London - Fine Carpet Cleaning (1).mp4"
           type="video/mp4"
@@ -340,25 +314,25 @@ export default function Page() {
 
       <FleurDivider></FleurDivider>
 
-      <h3>The process of our dry carpet cleaning in London</h3>
+      <h2>The process of our dry carpet cleaning in London</h2>
       <div class="mt-20 py-8 px-8 md-px-14 bg-paper b-rd-3" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 18%);">
-        <ul>
+        <ol style="counter-reset: ordered; list-style: none;">
           <li class="ml--5">
-            <p>The carpet is thoroughly vacuumed with a powerful cleaner to extract most of the dirt and grime particles.</p>
+            <Typography variant="body">The carpet is thoroughly vacuumed with a powerful cleaner to extract most of the dirt and grime particles.</Typography>
           </li>
           <li class="ml--5">
-            <p>A biodegradable cleaning compound is applied to the carpet, which attracts dirt and grime.</p>
+            <Typography variant="body">A biodegradable cleaning compound is applied to the carpet, which attracts dirt and grime.</Typography>
           </li>
           <li class="ml--5">
-            <p>After that, a machine is used for its agitation into the fibres.</p>
+            <Typography variant="body">After that, a machine is used for its agitation into the fibres.</Typography>
           </li>
           <li class="ml--5">
-            <p>Finally, everything is vacuumed off, leaving the carpet both clean and dry. This leaves the carpet shinier, refreshed and clean.</p>
+            <Typography variant="body">Finally, everything is vacuumed off, leaving the carpet both clean and dry. This leaves the carpet shinier, refreshed and clean.</Typography>
           </li>
           <li class="ml--5">
-            <p>For smaller areas, we may brush the cleaning powder into the carpet by hand using a large brush, then vacuum it off. We use this method for small spaces that don’t need the large equipment we normally would use, and the effect is the same, leaving the carpet clean and fresh.</p>
+            <Typography variant="body">For smaller areas, we may brush the cleaning powder into the carpet by hand using a large brush, then vacuum it off. We use this method for small spaces that don’t need the large equipment we normally would use, and the effect is the same, leaving the carpet clean and fresh.</Typography>
           </li>
-        </ul>
+        </ol>
       </div>
 
       <FleurDivider></FleurDivider>
@@ -531,7 +505,7 @@ export default function Page() {
 
       <h2 class="line-height-12 md-line-height-14">FAQ regarding our dry carpet cleaning services</h2>
 
-<FaqSection/>
+      <FaqSection />
 
       <FleurDivider></FleurDivider>
 

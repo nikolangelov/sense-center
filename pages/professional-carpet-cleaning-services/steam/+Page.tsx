@@ -52,40 +52,14 @@ const GalerrySliderMobile = () => {
 };
 
 const VideoPlayer = () => {
-  const [isStarted, setIsStarted] = createSignal(false);
-  let videoRef: HTMLVideoElement;
-
-  const startVideo = () => {
-    videoRef.play();
-    setIsStarted(true);
-  };
-
   return (
-    <div class="flex flex-justify-center flex-items-center">
-      {!isStarted() && (
-        <button
-          class="z-1 c-paper font-size-12 position-absolute cursor-pointer b-none bg-transparent"
-          onClick={startVideo}
-        >
-          <RiYoutubeFill class="c-#ff0000 md-w-20 mt-5 md-mt-0 md-h-20 w-15 h-15" />
-        </button>
-      )}
+    <div class="flex flex-justify-center flex-items-center mt-20">
       <video
-        ref={(el) => (videoRef = el)}
         class="mt-10 b-rd-3" style="width: 100%; width: -moz-available; width: -webkit-fill-available; width: fill-available;"
+        autoplay
         controls
         muted
       >
-        <div class="vertical-top max-w-full font-size-4 color-paper-inv block">
-          <a
-            class="color-paper-inv block"
-            href="https://www.youtube.com/watch?v=zedTK_cCobY"
-            target="_blank"
-            rel="noopener"
-          >
-            Professional Carpet Cleaning London - Fine Carpet Cleaning
-          </a>
-        </div>
         <source
           src="/assets/Professional Carpet Cleaning London - Fine Carpet Cleaning (1).mp4"
           type="video/mp4"
@@ -341,28 +315,28 @@ export default function Page() {
 
       <FleurDivider></FleurDivider>
 
-      <h3>The process of our professional carpet steam cleaning in London</h3>
+      <h2>The process of our professional carpet steam cleaning in London</h2>
       <div class="mt-20 py-8 px-8 md-px-14 bg-paper b-rd-3" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 18%);">
-        <ul>
+        <ol style="counter-reset: ordered; list-style: none;">
           <li class="ml--5">
-            <p>First, we carry out a pre-cleaning survey. We do this because we use an individual approach for every carpet, based on its type, condition, and degree of pollution. This is necessary to estimate what detergents and tools need to be used to steam clean the carpet.</p>
+            <Typography variant="body">First, we carry out a pre-cleaning survey. We do this because we use an individual approach for every carpet, based on its type, condition, and degree of pollution. This is necessary to estimate what detergents and tools need to be used to steam clean the carpet.</Typography>
           </li>
           <li class="ml--5">
-            <p>The second step is to use a high-filtration twin-motor vacuum cleaner that has been specifically designed for high-performance steam cleaning of carpets. This removes any loose dirt, dry soiling, and dust.</p>
+            <Typography variant="body">The second step is to use a high-filtration twin-motor vacuum cleaner that has been specifically designed for high-performance steam cleaning of carpets. This removes any loose dirt, dry soiling, and dust.</Typography>
           </li>
           <li class="ml--5">
-            <p>Third, we apply heavy-duty pre-spray, designed to lift oily dirt and pollutants from your carpet so they can be safely extracted using our high-performance extraction machines.</p>
+            <Typography variant="body">Third, we apply heavy-duty pre-spray, designed to lift oily dirt and pollutants from your carpet so they can be safely extracted using our high-performance extraction machines.</Typography>
           </li>
           <li class="ml--5">
-            <p>Fourth, we introduce the cleaning solution to the carpet fibres. This loosens the soil and gets it ready for extraction.</p>
+            <Typography variant="body">Fourth, we introduce the cleaning solution to the carpet fibres. This loosens the soil and gets it ready for extraction.</Typography>
           </li>
           <li class="ml--5">
-            <p>Fifth, pure, softened hot water is gently injected deep into the carpet fibres, releasing soil for effective removal by our powerful machine. Any remaining spots and stains are treated individually with specially selected cleaning products.</p>
+            <Typography variant="body">Fifth, pure, softened hot water is gently injected deep into the carpet fibres, releasing soil for effective removal by our powerful machine. Any remaining spots and stains are treated individually with specially selected cleaning products.</Typography>
           </li>
           <li class="ml--5">
-            <p>Last, we rinse and extract again to ensure no chemical residues remain from the steam cleaning of carpets.</p>
+            <Typography variant="body">Last, we rinse and extract again to ensure no chemical residues remain from the steam cleaning of carpets.</Typography>
           </li>
-        </ul>
+        </ol>
       </div>
 
       <FleurDivider></FleurDivider>

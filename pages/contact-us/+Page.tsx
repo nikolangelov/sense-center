@@ -108,7 +108,7 @@ export const ContactUs = () => {
         </span>
 
         <textarea name="message" placeholder="Message:" class="mt-2 bg-gray-1 b-none w-full pt-3 pl-3 pb-30 b-rd-1 c-paper-inv font-serif font-size-4" style="box-shadow: 0 1px 2px rgba(0, 0, 0, .12) inset;" />
-        <input type="submit" value="Request a quote" class="cursor-pointer flex flex-justify-center text-center mx-auto py-4 mt-7 px-10 bg-brand b-none c-paper b-rd-2 w-full uppercase font-800 font-size-4.4 md-font-size-5" style="letter-spacing: 1px;" />
+        <input type="submit" value="Request a quote" class="cursor-pointer flex flex-justify-center text-center mx-auto py-4 mt-7 px-10 bg-brand hover-bg-brand-second-action-hover:hover transition-colors b-none c-paper b-rd-2 w-full uppercase font-800 font-size-4.4 md-font-size-5" style="letter-spacing: 1px;" />
       </form>
 
     </div>
@@ -118,7 +118,7 @@ export const ContactUs = () => {
 export default function Page() {
   return (
     <>
-      <h1 class="mt-17 font-size-14 md-font-size-16 md-line-height-18 line-height-16">Contacts</h1>
+      <h1 class="mt-17 font-size-14 md-font-size-16 md-line-height-18 line-height-16 pb-8">Contacts</h1>
 
       <div class="bg-paper b-rd-3" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 10%);">
         <div class="flex flex-justify-between pb-2 pt-10 md-pt-8 px-2 w-90% m-auto">
@@ -154,7 +154,7 @@ export default function Page() {
 
       <FleurDivider></FleurDivider>
 
-      <h2>Book directly</h2>
+      <h2>Request a quote</h2>
 
       <ContactUs />
 

@@ -66,40 +66,14 @@ function FleurDivider() {
 }
 
 const VideoPlayer = () => {
-	const [isStarted, setIsStarted] = createSignal(false);
-	let videoRef: HTMLVideoElement;
-
-	const startVideo = () => {
-		videoRef.play();
-		setIsStarted(true);
-	};
-
 	return (
 		<div class="flex flex-justify-center flex-items-center mt-20">
-			{!isStarted() && (
-				<button
-					class="z-1 c-paper font-size-12 position-absolute cursor-pointer b-none bg-transparent"
-					onClick={startVideo}
-				>
-					<RiYoutubeFill class="c-#ff0000 md-w-20 mt-5 md-mt-0 md-h-20 w-15 h-15" />
-				</button>
-			)}
 			<video
-				ref={(el) => (videoRef = el)}
 				class="mt-10 b-rd-3" style="width: 100%; width: -moz-available; width: -webkit-fill-available; width: fill-available;"
+				autoplay
 				controls
 				muted
 			>
-				<div class="vertical-top max-w-full font-size-4 color-paper-inv block">
-					<a
-						class="color-paper-inv block"
-						href="https://www.youtube.com/watch?v=zedTK_cCobY"
-						target="_blank"
-						rel="noopener"
-					>
-						Professional Carpet Cleaning London - Fine Carpet Cleaning
-					</a>
-				</div>
 				<source
 					src="/assets/Professional Carpet Cleaning London - Fine Carpet Cleaning (1).mp4"
 					type="video/mp4"
@@ -190,7 +164,7 @@ export function FaqSection() {
 				</li>
 				<li>
 					<p>If your carpets get stained frequently.</p>
-					<Typography variant="body">You can reach out to us if you seek expert advice or if you want to book a <a class="color-paper-link hover-color-paper-link-hover:hover" href="/" target="_blank" rel="noopener">professional carpet cleaning service</a>.</Typography></li>
+					<Typography variant="body">You can reach out to us if you seek expert advice or if you want to book a <a class="color-paper-link hover-color-paper-link-hover:hover" href="/professional-carpet-cleaning-services">professional carpet cleaning service</a>.</Typography></li>
 				<li>
 					<Typography variant="h3">How much will a professional carpet cleaning cost?</Typography>
 					<Typography variant="body">The price of carpet cleaning depends on several factors. The most significant among them are:</Typography></li>
@@ -205,7 +179,7 @@ export function FaqSection() {
 				</li>
 				<li>
 					<p>The ease of access to them.</p>
-					<Typography variant="body">For more specific pricing details regarding the carpet cleaning we offer, you can check out our <a class="color-paper-link hover-color-paper-link-hover:hover" href="/" target="_blank" rel="noopener">price list</a></Typography></li>
+					<Typography variant="body">For more specific pricing details regarding the carpet cleaning we offer, you can check out our <a class="color-paper-link hover-color-paper-link-hover:hover" href="/prices">price list</a></Typography></li>
 				<li>
 					<Typography variant="h3">How fast will the carpet get dry after a cleaning service?</Typography>
 					<Typography variant="body">The drying time of a carpet is determined by various factors. Among them are:</Typography></li>
@@ -270,9 +244,9 @@ export function FaqSection() {
 export default function Page() {
 	return (
 		<>
-			<div class="flex flex-justify-center"><img class="b-rd-3 md-my-20 my-10" src="/assets/Професионално почистване на заведения.jpg" alt="" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 30%); width: -moz-available; width: -webkit-fill-available; width: fill-available;" /></div>
-			<h1 class="font-size-14 md-font-size-16 md-line-height-18 line-height-16">“Fine Carpet Cleaning” Ltd.</h1>
-			<div class="mt-20 py-8 px-8 md-px-14 b-rd-3 bg-paper line-height-8 text-justify font-size-4.4" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 18%);">“Fine Carpet Cleaning” Ltd. is a carpet cleaning company that operates in all London boroughs. We provide a variety of commercial and domestic carpet cleaning services, tailoring them to our client's needs.</div>
+			<h1 class="mt-10 md-mt-17 font-size-14 md-font-size-16 md-line-height-18 line-height-16">“Fine Carpet Cleaning” Ltd.</h1>
+			<div class="flex flex-justify-center"><img class="b-rd-3 md-my-20 my-10 md-mt-10 mt-2" src="/assets/Професионално почистване на заведения.jpg" alt="" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 30%); width: -moz-available; width: -webkit-fill-available; width: fill-available;" /></div>
+			<div class="mt-10 py-8 px-8 md-px-14 b-rd-3 bg-paper line-height-8 text-justify font-size-4.4" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 18%);">“Fine Carpet Cleaning” Ltd. is a carpet cleaning company that operates in all London boroughs. We provide a variety of commercial and domestic carpet cleaning services, tailoring them to our client's needs.</div>
 
 			<FleurDivider />
 
