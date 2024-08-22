@@ -52,21 +52,21 @@ const GalerrySliderMobile = () => {
 };
 
 const VideoPlayer = () => {
-	return (
-		<div class="flex flex-justify-center flex-items-center mt-20">
-			<video
-				class="mt-10 b-rd-3" style="width: 100%; width: -moz-available; width: -webkit-fill-available; width: fill-available;"
-				autoplay
-				controls
-				muted
-			>
-				<source
-					src="/assets/Professional Carpet Cleaning London - Fine Carpet Cleaning (1).mp4"
-					type="video/mp4"
-				/>
-			</video>
-		</div>
-	);
+  return (
+    <div class="flex flex-justify-center flex-items-center mt-20">
+      <video
+        class="mt-10 b-rd-3" style="width: 100%; width: -moz-available; width: -webkit-fill-available; width: fill-available;"
+        autoplay
+        controls
+        muted
+      >
+        <source
+          src="/assets/Professional Carpet Cleaning London - Fine Carpet Cleaning (1).mp4"
+          type="video/mp4"
+        />
+      </video>
+    </div>
+  );
 };
 
 function FleurDivider() {
@@ -238,21 +238,21 @@ export function FaqSection() {
           <Typography variant="body">Steam cleaning can be effective in treating a mouldy mattress, but it's important to approach the situation with caution and follow proper procedures. Mould is an issue that can negatively impact health, so it's crucial to address it promptly and thoroughly. Booking professional mattress cleaning services will assure you that your mattress will be properly taken care of.</Typography></li>
         <li>
           <Typography variant="h3">How do professional cleaners clean mattresses?</Typography></li>
-          <li>
-            <p>First we carry out a thorough inspection. According to the level of pollution and/or additional blemishes, we will determine our course of action during the mattress cleaning service London;</p>
-          </li>
-          <li>
-            <p>Depending on how soiled your mattress is, disinfectants and eco-friendly cleaning solutions may be used to treat settled stains. Washing solutions will be sprayed on problem areas and allowed to soak for 3-5 minutes before the steam cleaning procedure;</p>
-          </li>
-          <li>
-            <p>After applying cleaning treatments, steam cleaning is performed on your mattresses to break up stains, sweat, urine, and other residues that may have accumulated;</p>
-          </li>
-          <li>
-            <p>If there are any remaining stains our cleaning experts will begin the dirt or stain extraction process, using special cleaning chemicals and equipment;</p>
-          </li>
-          <li>
-            <p>It takes about 5-7 hours for a steam-cleaned mattress to dry completely. It’s best to leave the mattress to dry in a ventilated room, if possible, as damp mattresses are perfect breeding grounds for harmful moulds and bacteria.</p>
-          </li>
+        <li>
+          <p>First we carry out a thorough inspection. According to the level of pollution and/or additional blemishes, we will determine our course of action during the mattress cleaning service London;</p>
+        </li>
+        <li>
+          <p>Depending on how soiled your mattress is, disinfectants and eco-friendly cleaning solutions may be used to treat settled stains. Washing solutions will be sprayed on problem areas and allowed to soak for 3-5 minutes before the steam cleaning procedure;</p>
+        </li>
+        <li>
+          <p>After applying cleaning treatments, steam cleaning is performed on your mattresses to break up stains, sweat, urine, and other residues that may have accumulated;</p>
+        </li>
+        <li>
+          <p>If there are any remaining stains our cleaning experts will begin the dirt or stain extraction process, using special cleaning chemicals and equipment;</p>
+        </li>
+        <li>
+          <p>It takes about 5-7 hours for a steam-cleaned mattress to dry completely. It’s best to leave the mattress to dry in a ventilated room, if possible, as damp mattresses are perfect breeding grounds for harmful moulds and bacteria.</p>
+        </li>
         <li>
           <Typography variant="h3">Can I steam-clean a memory foam mattress?</Typography>
           <Typography variant="body">The main weakness of memory foam is its vulnerability to heat and water. Memory foam should not be washed in a washing machine, as this will damage the fibres and cause it to lose its structural memory. For the same reason, steam cleaning memory foam should be performed with extreme caution.</Typography>
@@ -263,21 +263,21 @@ export function FaqSection() {
           <Typography variant="body">A yellowed mattress may be the result of various factors, including body oils, sweat, and other stains. Deep cleaning from an expert mattress cleaning company can help remove these stains, clean your mattress in depth and refresh it.</Typography></li>
         <li>
           <Typography variant="h3">How do you get urine smell out of a mattress?</Typography></li>
-          <li>
-            <p><strong>Act Quickly:</strong> The sooner you address a urine stain, the better. Try to blot up as much of the liquid as possible using paper towels or a clean, absorbent cloth.</p>
-          </li>
-          <li>
-            <p><strong>Remove Bedding:</strong> Take off all sheets, pillowcases, and mattress protectors, and wash them separately according to the care instructions.</p>
-          </li>
-          <li>
-            <p><strong>Blot Excess Moisture:</strong> Use paper towels or a clean cloth to blot as much of the remaining urine as possible. Press down firmly without rubbing to avoid spreading the stain.</p>
-          </li>
-          <li>
-            <p><strong>Mattress cleaning services:</strong> Call a mattress cleaning company to handle the stain.</p>
-          </li>
-          <li>
-            <p><strong>Mattress Protector:</strong> Consider using a waterproof mattress protector to prevent future accidents and protect against stains and odours.</p>
-          </li>
+        <li>
+          <p><strong>Act Quickly:</strong> The sooner you address a urine stain, the better. Try to blot up as much of the liquid as possible using paper towels or a clean, absorbent cloth.</p>
+        </li>
+        <li>
+          <p><strong>Remove Bedding:</strong> Take off all sheets, pillowcases, and mattress protectors, and wash them separately according to the care instructions.</p>
+        </li>
+        <li>
+          <p><strong>Blot Excess Moisture:</strong> Use paper towels or a clean cloth to blot as much of the remaining urine as possible. Press down firmly without rubbing to avoid spreading the stain.</p>
+        </li>
+        <li>
+          <p><strong>Mattress cleaning services:</strong> Call a mattress cleaning company to handle the stain.</p>
+        </li>
+        <li>
+          <p><strong>Mattress Protector:</strong> Consider using a waterproof mattress protector to prevent future accidents and protect against stains and odours.</p>
+        </li>
         <li>
           <Typography variant="h3">How do you get old stains out of a mattress UK?</Typography>
           <Typography variant="body">Professional mattress cleaning services have access to specialised equipment and cleaning solutions to effectively remove old stains. The following is a general overview of how professionals like “Fine Carpet Cleaning” Ltd. will handle the task:</Typography></li>
@@ -384,21 +384,21 @@ export default function Page() {
           <li class="ml--5"><a class="color-paper-link-hover hover-color-paper-link:hover font-size-17.5px line-height-8 word-spacing--0.12 tracking--0.04" href="/professional-upholstery-cleaning-services/furniture">Furniture cleaning</a></li>
           <li class="ml--5"><a class="color-paper-link-hover hover-color-paper-link:hover font-size-17.5px line-height-8 word-spacing--0.12 tracking--0.04" href="/professional-upholstery-cleaning-services/pillow">Pillow cleaning</a></li>
         </ul>
-        </div>
+      </div>
 
-        <FleurDivider></FleurDivider>
+      <FleurDivider></FleurDivider>
 
-        <h2>The process of our mattress cleaning services:</h2>
-        <div class="mt-20 py-8 px-8 md-px-14 bg-paper b-rd-3" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 18%);">
+      <h2>The process of our mattress cleaning services:</h2>
+      <div class="mt-20 py-8 px-8 md-px-14 bg-paper b-rd-3" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 18%);">
         <p>Effectively disinfecting beds requires a multi-layered cleaning approach to completely remove odours, stains, allergens, and bed bugs from your mattresses. Here is a complete run-down of all the steps performed for cleaning mattresses professionally.</p>
 
-        <ul>
-          <li class="ml--5"><p><strong>Inspection</strong> - The first step of the cleaning process would be to carry out a thorough inspection. According to the level of pollution and/or additional blemishes, we will determine our course of action during the mattress cleaning service London.</p></li>
-          <li class="ml--5"><p><strong>Applying pre-determined disinfectants and eco-friendly cleaning solutions</strong> - Depending on the condition of your mattress, we apply disinfectants and eco-friendly cleaning solutions to treat settled stains. Washing solutions will be sprayed on problem areas and allowed to soak for 3-5 minutes before the steam cleaning procedure.</p></li>
-          <li class="ml--5"><p><strong>Steam cleaning</strong> - After applying cleaning treatments, steam cleaning is performed on your mattresses to break up stains, sweat, urine, and other residues that may have accumulated. Hot water is used in steam cleaning equipment to moisten the mattress and bring out accumulated dirt from within it. The steam cleaning equipment also has a built-in vacuum to suck out the dirt particles that are loosened up by the steam moisture.</p></li>
-          <li class="ml--5"><p><strong>Stain treatment</strong> - If there are any remaining stains, our cleaning experts will begin the dirt or stain extraction process using special cleaning solutions and equipment. All the deeply ingrained dirt and other contaminants will be removed at this stage.</p></li>
-          <li class="ml--5"><p><strong>Drying</strong> - It takes about 5-7 hours for a steam-cleaned mattress to dry completely. We strongly recommend allowing the mattress to completely dry, especially before use, as damp mattresses are breeding grounds for harmful moulds.</p></li>
-        </ul>
+        <ol style="counter-reset: ordered; list-style: none;">
+          <li class="ml--5"><Typography variant="body"><strong>Inspection</strong> - The first step of the cleaning process would be to carry out a thorough inspection. According to the level of pollution and/or additional blemishes, we will determine our course of action during the mattress cleaning service London.</Typography></li>
+          <li class="ml--5"><Typography variant="body"><strong>Applying pre-determined disinfectants and eco-friendly cleaning solutions</strong> - Depending on the condition of your mattress, we apply disinfectants and eco-friendly cleaning solutions to treat settled stains. Washing solutions will be sprayed on problem areas and allowed to soak for 3-5 minutes before the steam cleaning procedure.</Typography></li>
+          <li class="ml--5"><Typography variant="body"><strong>Steam cleaning</strong> - After applying cleaning treatments, steam cleaning is performed on your mattresses to break up stains, sweat, urine, and other residues that may have accumulated. Hot water is used in steam cleaning equipment to moisten the mattress and bring out accumulated dirt from within it. The steam cleaning equipment also has a built-in vacuum to suck out the dirt particles that are loosened up by the steam moisture.</Typography></li>
+          <li class="ml--5"><Typography variant="body"><strong>Stain treatment</strong> - If there are any remaining stains, our cleaning experts will begin the dirt or stain extraction process using special cleaning solutions and equipment. All the deeply ingrained dirt and other contaminants will be removed at this stage.</Typography></li>
+          <li class="ml--5"><Typography variant="body"><strong>Drying</strong> - It takes about 5-7 hours for a steam-cleaned mattress to dry completely. We strongly recommend allowing the mattress to completely dry, especially before use, as damp mattresses are breeding grounds for harmful moulds.</Typography></li>
+        </ol>
       </div>
 
       <FleurDivider></FleurDivider>
@@ -584,12 +584,9 @@ export default function Page() {
       <FleurDivider></FleurDivider>
 
       <div class="m-10% mb-3% flex flex-wrap flex-justify-center md-gap-15 gap-10">
-        <button class="cursor-pointer outline-none bg-brand-second-action hover-bg-brand-second-action-hover:hover font-size-6 font-600 w-200px h-60px c-paper flex flex-items-center flex-justify-center relative b-solid b-rd-3 b-4 b-brand-second-action hover-b-brand-second-action-hover:hover whitespace-normal line-height-6 word-spacing-0.5 py-9" style="box-shadow: 0 0 0 3px rgba(255, 255, 255, .9) inset; letter-spacing: 0.05rem;"><a href="/services" class="c-paper font-size-5">SERVICES</a></button>
-        <button class="cursor-pointer outline-none bg-brand-action hover-bg-brand-action-hover:hover font-size-6 font-600 w-200px h-60px c-paper flex flex-items-center flex-justify-center relative b-solid b-rd-3 b-4 b-brand-action hover-b-brand-action-hover:hover whitespace-normal line-height-6 word-spacing-0.5 py-9" style="box-shadow: 0 0 0 3px rgba(255, 255, 255, .9) inset; letter-spacing: 0.05rem;"><a href="/contact-us" class="c-paper font-size-5">REQUEST A QUOTE</a></button>
+        <a href="/services"><button class="cursor-pointer outline-none bg-brand-second-action hover-bg-brand-second-action-hover:hover font-size-5 font-600 w-200px h-60px c-paper flex flex-items-center flex-justify-center relative b-solid b-rd-3 b-4 b-brand-second-action hover-b-brand-second-action-hover:hover whitespace-normal line-height-6 word-spacing-0.5 py-9" style="box-shadow: 0 0 0 3px rgba(255, 255, 255, .9) inset; letter-spacing: 0.05rem;">SERVICES</button></a>
+        <a href="/contact-us"><button class="cursor-pointer outline-none bg-brand-action hover-bg-brand-action-hover:hover font-size-5 font-600 w-200px h-60px c-paper flex flex-items-center flex-justify-center relative b-solid b-rd-3 b-4 b-brand-action hover-b-brand-action-hover:hover whitespace-normal line-height-6 word-spacing-0.5 py-9" style="box-shadow: 0 0 0 3px rgba(255, 255, 255, .9) inset; letter-spacing: 0.05rem;">REQUEST A QUOTE</button></a>
       </div>
-
-
-
     </>
   );
 }

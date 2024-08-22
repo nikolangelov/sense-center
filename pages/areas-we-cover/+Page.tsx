@@ -33,7 +33,7 @@ function FullScreenImageGallery() {
 
 function AreaButton(props: { href: string; buttontitle: string }) {
   return (
-    <button class="outline-none bg-brand-second-action hover-bg-brand-second-action-hover:hover font-size-6 font-600 w-230px h-110px c-paper flex flex-items-center flex-justify-center relative b-solid b-rd-3 b-4 b-brand-second-action hover-b-brand-second-action-hover:hover whitespace-normal line-height-6 word-spacing-0.5" style="box-shadow: 0 0 0 3px rgba(255, 255, 255, .9) inset; letter-spacing: 0.0rem;">{props.buttontitle}</button>
+    <button class="outline-none bg-brand-second-action font-size-6 font-600 w-230px h-110px c-paper flex flex-items-center flex-justify-center relative b-solid b-rd-3 b-4 b-brand-second-action whitespace-normal line-height-6 word-spacing-0.5" style="box-shadow: 0 0 0 3px rgba(255, 255, 255, .9) inset; letter-spacing: 0.0rem;">{props.buttontitle}</button>
   )
 }
 function ButtonContainer(props: { children: HTMLElement | any }) {
@@ -49,10 +49,10 @@ export default function Page() {
     <>
       <h1 class="mt-17 font-size-14 md-font-size-16 md-line-height-18 line-height-16">Areas we cover</h1>
 
-      <FullScreenImageGallery/>
+      <FullScreenImageGallery />
 
-		<p class="md-max-w-80% font-size-4 line-height-5.5 md-line-height-6 m-auto mt-5 ">*Fine Carpet Cleaning London operates in all of London. The map below shows all of the London postcodes we cover.<br></br>
-		**Transport surcharge may apply for all other post codes.</p>
+      <p class="md-max-w-80% font-size-4 line-height-5.5 md-line-height-6 m-auto mt-5 ">*Fine Carpet Cleaning London operates in all of London. The map below shows all of the London postcodes we cover.<br></br>
+        **Transport surcharge may apply for all other post codes.</p>
 
       <FleurDivider></FleurDivider>
 
@@ -226,8 +226,8 @@ export default function Page() {
       <FleurDivider></FleurDivider>
 
       <div class="m-10% mb-3% flex flex-wrap flex-justify-center md-gap-15 gap-10">
-        <button class="cursor-pointer outline-none bg-brand-action hover-bg-brand-action-hover:hover font-size-6 font-600 w-200px h-60px c-paper flex flex-items-center flex-justify-center relative b-solid b-rd-3 b-4 b-brand-action hover-b-brand-action-hover:hover whitespace-normal line-height-6 word-spacing-0.5 py-9" style="box-shadow: 0 0 0 3px rgba(255, 255, 255, .9) inset; letter-spacing: 0.05rem;"><a href="/contact-us" class="c-paper font-size-5">REQUEST A QUOTE</a></button>
-        <button class="cursor-pointer outline-none bg-brand-second-action hover-bg-brand-second-action-hover:hover font-size-6 font-600 w-200px h-60px c-paper flex flex-items-center flex-justify-center relative b-solid b-rd-3 b-4 b-brand-second-action hover-b-brand-second-action-hover:hover whitespace-normal line-height-6 word-spacing-0.5 py-9" style="box-shadow: 0 0 0 3px rgba(255, 255, 255, .9) inset; letter-spacing: 0.05rem;"><a href="/services" class="c-paper font-size-5">SERVICES</a></button>
+        <a href="/contact-us"><button class="cursor-pointer outline-none bg-brand-action hover-bg-brand-action-hover:hover font-size-5 font-600 w-200px h-60px c-paper flex flex-items-center flex-justify-center relative b-solid b-rd-3 b-4 b-brand-action hover-b-brand-action-hover:hover whitespace-normal line-height-6 word-spacing-0.5 py-9" style="box-shadow: 0 0 0 3px rgba(255, 255, 255, .9) inset; letter-spacing: 0.05rem;">REQUEST A QUOTE</button></a>
+        <a href="/services"><button class="cursor-pointer outline-none bg-brand-second-action hover-bg-brand-second-action-hover:hover font-size-5 font-600 w-200px h-60px c-paper flex flex-items-center flex-justify-center relative b-solid b-rd-3 b-4 b-brand-second-action hover-b-brand-second-action-hover:hover whitespace-normal line-height-6 word-spacing-0.5 py-9" style="box-shadow: 0 0 0 3px rgba(255, 255, 255, .9) inset; letter-spacing: 0.05rem;">SERVICES</button></a>
       </div>
     </>
   );

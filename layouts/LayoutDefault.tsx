@@ -219,7 +219,7 @@ const CookieConsent = () => {
                 class="b-solid b-2 b-brand b-rd-1 bg-brand hover-bg-brand-action-hover:hover transition-colors hover-b-brand-action-hover:hover font-700 font-size-3.5 uppercase c-paper cursor-pointer mr-2 py-1.5 px-5 line-height-normal"
                 onClick={savePreferences}
               >
-                Accept
+                Close
               </button>
               <button
                 class="hidden b-solid b-2 b-brand b-rd-1 bg-paper hover-b-brand-action-hover:hover hover-c-brand-action-hover:hover transition-colors font-700 font-size-3.5 uppercase c-brand cursor-pointer mr-2 py-1.5 px-5 line-height-normal"
@@ -290,9 +290,9 @@ const CookieConsent = () => {
 function DropownMenuLink(props: { href: string | undefined; children: number | boolean | Node | JSX.ArrayElement | (string & {}) | null | undefined; }) {
   return (
     <a href={props.href}>
-      <div class="left-0 w-full my-3 flex flex-nowrap c-paper-inv hover-c-brand:hover font-size-4.5 font-500" style="font-family: Open Sans, sans-serif; letter-spacing: 0.6px;">
-        {props.children}
-      </div>
+      <ul class="left-0 w-full my-3 flex flex-nowrap c-paper-inv hover-c-brand:hover font-size-4.5 font-500" style="font-family: Open Sans, sans-serif; letter-spacing: 0.6px;">
+        <li><div class="font-sans font-400 c-paper">{props.children}</div></li>
+      </ul>
     </a>
   );
 }
@@ -319,12 +319,12 @@ const MyDropdown = (props: { closeMenu: () => void; }) => {
                 <div class="py-5 flex flex-content-center flex-justify-between w-full">
                   <a onClick={handleLinkClick}
                     href="/services"
-                    class="w-full flex flex-items-center flex-nowrap c-paper-inv hover-c-brand:hover font-size-5 font-500"
+                    class="w-full flex flex-items-center flex-nowrap c-paper hover-c-brand:hover font-size-5 font-500"
                     style="font-family: Open Sans, sans-serif; letter-spacing: 0.6px;"
                   >
                     <MdiVacuum class="mr-3 hover-c-brand-second-action:hover" />Services
                   </a>
-                  <RiArrowDownSLine class="w-10 h-auto cursor-pointer" onClick={handleArrowClick} />
+                  <RiArrowDownSLine class="w-10 h-auto c-paper cursor-pointer" onClick={handleArrowClick} />
                 </div>
               </div>
             </div>
@@ -373,33 +373,33 @@ const MyDropdown = (props: { closeMenu: () => void; }) => {
         <div
           class={`py-5 b-b-solid b-b border-brand-second-action transition-all duration-500 ${isDropdownOpen() ? 'mt-245' : 'mt-0'}`}
         >
-          <a onClick={handleLinkClick} href="/prices" class="flex flex-items-center flex-nowrap c-paper-inv hover-c-brand:hover font-size-5 font-500" style="font-family: Open Sans, sans-serif; letter-spacing: 0.6px;">
+          <a onClick={handleLinkClick} href="/prices" class="flex flex-items-center flex-nowrap c-paper hover-c-brand:hover font-size-5 font-500" style="font-family: Open Sans, sans-serif; letter-spacing: 0.6px;">
             <RiMoneyPoundCircleLine class="mr-3" />Prices
           </a>
         </div>
 
         <div class="py-5 b-b-solid b-b border-brand-second-action">
-          <a onClick={handleLinkClick} href="/reviews" class="flex flex-items-center flex-nowrap c-paper-inv hover-c-brand:hover font-size-5 font-500" style="font-family: Open Sans, sans-serif; letter-spacing: 0.6px;">
+          <a onClick={handleLinkClick} href="/reviews" class="flex flex-items-center flex-nowrap c-paper hover-c-brand:hover font-size-5 font-500" style="font-family: Open Sans, sans-serif; letter-spacing: 0.6px;">
             <MdiCommentAccountOutline class="mr-3" />Reviews
           </a>
         </div>
         <div class="py-5 b-b-solid b-b border-brand-second-action">
-          <a onClick={handleLinkClick} href="/about-us" class="flex flex-items-center flex-nowrap c-paper-inv hover-c-brand:hover font-size-5 font-500" style="font-family: Open Sans, sans-serif; letter-spacing: 0.6px;">
+          <a onClick={handleLinkClick} href="/about-us" class="flex flex-items-center flex-nowrap c-paper hover-c-brand:hover font-size-5 font-500" style="font-family: Open Sans, sans-serif; letter-spacing: 0.6px;">
             <MdiAccountGroupOutline class="mr-3" />About us
           </a>
         </div>
         <div class="py-5 b-b-solid b-b border-brand-second-action">
-          <a onClick={handleLinkClick} href="/areas-we-cover" class="flex flex-items-center flex-nowrap c-paper-inv hover-c-brand:hover font-size-5 font-500" style="font-family: Open Sans, sans-serif; letter-spacing: 0.6px;">
+          <a onClick={handleLinkClick} href="/areas-we-cover" class="flex flex-items-center flex-nowrap c-paper hover-c-brand:hover font-size-5 font-500" style="font-family: Open Sans, sans-serif; letter-spacing: 0.6px;">
             <MdiPlaceOutline class="mr-3" />Areas we cover
           </a>
         </div>
         <div class="py-5 b-b-solid b-b border-brand-second-action">
-          <a onClick={handleLinkClick} href="/contact-us" class="flex flex-items-center flex-nowrap c-paper-inv hover-c-brand:hover font-size-5 font-500" style="font-family: Open Sans, sans-serif; letter-spacing: 0.6px;">
+          <a onClick={handleLinkClick} href="/contact-us" class="flex flex-items-center flex-nowrap c-paper hover-c-brand:hover font-size-5 font-500" style="font-family: Open Sans, sans-serif; letter-spacing: 0.6px;">
             <MdiPhoneOutline class="mr-3" />Contact us
           </a>
         </div>
         <div class="py-5 b-b-solid b-b border-brand-second-action">
-          <a onClick={handleLinkClick} href="/feedback" class="flex flex-items-center flex-nowrap c-paper-inv hover-c-brand:hover font-size-5 font-500" style="font-family: Open Sans, sans-serif; letter-spacing: 0.6px;">
+          <a onClick={handleLinkClick} href="/feedback" class="flex flex-items-center flex-nowrap c-paper hover-c-brand:hover font-size-5 font-500" style="font-family: Open Sans, sans-serif; letter-spacing: 0.6px;">
             <MdiEmailEditOutline class="mr-3" />Feedback
           </a>
         </div>
@@ -551,8 +551,8 @@ export default function LayoutDefault(props: { children?: JSX.Element }) {
           <MenuItem href="/areas-we-cover">Areas we cover</MenuItem>
           <MenuItem href="/contact-us">Contact us</MenuItem>
           <MenuItem href="/feedback">Feedback</MenuItem>
-          <HamburgerMenu />
         </div>
+        <HamburgerMenu />
       </Topbar>
       <Content>{childrenMemo()}</Content>
       <CookieConsent />
@@ -647,49 +647,44 @@ function Logo() {
 
 function HamburgerMenu() {
   const [open, setOpen] = createSignal(false);
+  const [menuHeight, setMenuHeight] = createSignal('0px');
 
   const handleToggle = () => {
-    setOpen(!open());
+    if (open()) {
+      // Closing the menu
+      setMenuHeight('0px');
+      setTimeout(() => setOpen(false), 400); // Match the duration of the CSS transition
+    } else {
+      // Opening the menu
+      setOpen(true);
+      setMenuHeight('3000px'); // Set the desired height for the menu when open
+    }
   };
 
   const closeMenu = () => {
-    setOpen(false);
+    setMenuHeight('0px');
+    setTimeout(() => setOpen(false), 400); // Match the duration of the CSS transition
   };
 
   return (
-    <div class="flex flex-content-center flex-justify-between">
-      <button class="bg-transparent cursor-pointer border-style-none lg-hidden" onClick={handleToggle} style="position: relative;">
-        <HamburgerMenuIcon
-          class="w-10 h-10 color-brand hover-color-brand-second-action"
-          style={{
-            opacity: open() ? 0 : 1,
-            transform: open() ? "rotate(90deg)" : "rotate(0deg)",
-            transition: "opacity 0.3s, transform 0.3s",
-            position: "relative",
-          }}
-        />
-        <RiCloseFill
-          class="w-10 h-10 color-brand hover-color-brand-second-action right-8"
-          style={{
-            opacity: open() ? 1 : 0,
-            transform: open() ? "rotate(0deg)" : "rotate(90deg)",
-            transition: "opacity 0.3s, transform 0.3s",
-            position: "fixed",
-          }}
-        />
+    <div class="lg-hidden flex flex-content-center flex-justify-between">
+      <input type="checkbox" id="menu-checkbox" class="hidden" />
+      <label
+        id="burger-menu"
+        for="menu-checkbox"
+        onClick={handleToggle}
+        class="absolute cursor-pointer flex flex-justify-between flex-col w-10 h-7 right-6 top-6.5"
+      >
+        <div></div>
+        <div></div>
+        <div></div>
+      </label>
 
-        <div>
-          <input type="checkbox" id="menyAvPaa" />
-          <label id="burger" for="menyAvPaa">
-            <div></div>
-            <div></div>
-            <div></div>
-          </label>
-        </div>
-
-      </button>
       <Show when={open()}>
-        <div class="fixed w-screen h-3000px bg-brand left-0 top-19.6 px-10">
+        <div
+          class="fixed w-screen bg-brand left-0 top-19.6 px-10 transition-all transition-duration-400"
+          style={{ height: menuHeight(), overflow: 'hidden' }}
+        >
           <div class="py-15 text-left">
             <MyDropdown closeMenu={closeMenu} />
           </div>
@@ -698,8 +693,6 @@ function HamburgerMenu() {
     </div>
   );
 }
-
-
 
 function MainFooter(props: { children: JSX.Element }) {
   return (

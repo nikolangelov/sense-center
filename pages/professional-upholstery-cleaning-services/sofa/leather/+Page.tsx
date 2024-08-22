@@ -52,21 +52,21 @@ const GalerrySliderMobile = () => {
 };
 
 const VideoPlayer = () => {
-	return (
-		<div class="flex flex-justify-center flex-items-center mt-20">
-			<video
-				class="mt-10 b-rd-3" style="width: 100%; width: -moz-available; width: -webkit-fill-available; width: fill-available;"
-				autoplay
-				controls
-				muted
-			>
-				<source
-					src="/assets/Professional Carpet Cleaning London - Fine Carpet Cleaning (1).mp4"
-					type="video/mp4"
-				/>
-			</video>
-		</div>
-	);
+  return (
+    <div class="flex flex-justify-center flex-items-center mt-20">
+      <video
+        class="mt-10 b-rd-3" style="width: 100%; width: -moz-available; width: -webkit-fill-available; width: fill-available;"
+        autoplay
+        controls
+        muted
+      >
+        <source
+          src="/assets/Professional Carpet Cleaning London - Fine Carpet Cleaning (1).mp4"
+          type="video/mp4"
+        />
+      </video>
+    </div>
+  );
 };
 
 function FleurDivider() {
@@ -274,17 +274,17 @@ export default function Page() {
         </ul>
       </div>
 
-        <h2>The process of our professional leather sofa cleaning services:</h2>
-        <div class="mt-20 py-8 px-8 md-px-14 bg-paper b-rd-3" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 18%);">
+      <h2>The process of our professional leather sofa cleaning services:</h2>
+      <div class="mt-20 py-8 px-8 md-px-14 bg-paper b-rd-3" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 18%);">
         <p>Professional leather sofa cleaning is essential to maintain its elegance and longevity.</p>
-        <ul>
-          <li class="ml--5"><p>First, we will carry out a pre-cleaning survey, to establish exactly what cleaning detergents and tools need to be used for the specific fabric. We will inspect the leather furniture assessing the leather type and checking for any splitting, scratches, soiling, colour loss and other areas of concern.</p></li>
-          <li class="ml--5"><p>Our process begins with carefully dusting the sofa to remove any loose particles.</p></li>
-          <li class="ml--5"><p>Next, we apply a specialised detergent, gently agitate it to lift dirt, and then wipe it off, ensuring a thorough clean.</p></li>
-          <li class="ml--5"><p>We then allow the sofa to dry for about 10 minutes.</p></li>
-          <li class="ml--5"><p>Finally, we apply a protective cream to nourish the leather and shield it from future damage.</p></li>
-          <li class="ml--5"><p>This meticulous approach keeps your leather sofa looking pristine and extends its lifespan.</p></li>
-        </ul>
+        <ol style="counter-reset: ordered; list-style: none;">
+          <li class="ml--5"><Typography variant="body">First, we will carry out a pre-cleaning survey, to establish exactly what cleaning detergents and tools need to be used for the specific fabric. We will inspect the leather furniture assessing the leather type and checking for any splitting, scratches, soiling, colour loss and other areas of concern.</Typography></li>
+          <li class="ml--5"><Typography variant="body">Our process begins with carefully dusting the sofa to remove any loose particles.</Typography></li>
+          <li class="ml--5"><Typography variant="body">Next, we apply a specialised detergent, gently agitate it to lift dirt, and then wipe it off, ensuring a thorough clean.</Typography></li>
+          <li class="ml--5"><Typography variant="body">We then allow the sofa to dry for about 10 minutes.</Typography></li>
+          <li class="ml--5"><Typography variant="body">Finally, we apply a protective cream to nourish the leather and shield it from future damage.</Typography></li>
+          <li class="ml--5"><Typography variant="body">This meticulous approach keeps your leather sofa looking pristine and extends its lifespan.</Typography></li>
+        </ol>
       </div>
 
       <FleurDivider></FleurDivider>
@@ -469,12 +469,9 @@ export default function Page() {
       <FleurDivider></FleurDivider>
 
       <div class="m-10% mb-3% flex flex-wrap flex-justify-center md-gap-15 gap-10">
-        <button class="cursor-pointer outline-none bg-brand-second-action hover-bg-brand-second-action-hover:hover font-size-6 font-600 w-200px h-60px c-paper flex flex-items-center flex-justify-center relative b-solid b-rd-3 b-4 b-brand-second-action hover-b-brand-second-action-hover:hover whitespace-normal line-height-6 word-spacing-0.5 py-9" style="box-shadow: 0 0 0 3px rgba(255, 255, 255, .9) inset; letter-spacing: 0.05rem;"><a href="/services" class="c-paper font-size-5">SERVICES</a></button>
-        <button class="cursor-pointer outline-none bg-brand-action hover-bg-brand-action-hover:hover font-size-6 font-600 w-200px h-60px c-paper flex flex-items-center flex-justify-center relative b-solid b-rd-3 b-4 b-brand-action hover-b-brand-action-hover:hover whitespace-normal line-height-6 word-spacing-0.5 py-9" style="box-shadow: 0 0 0 3px rgba(255, 255, 255, .9) inset; letter-spacing: 0.05rem;"><a href="/contact-us" class="c-paper font-size-5">REQUEST A QUOTE</a></button>
+        <a href="/services"><button class="cursor-pointer outline-none bg-brand-second-action hover-bg-brand-second-action-hover:hover font-size-5 font-600 w-200px h-60px c-paper flex flex-items-center flex-justify-center relative b-solid b-rd-3 b-4 b-brand-second-action hover-b-brand-second-action-hover:hover whitespace-normal line-height-6 word-spacing-0.5 py-9" style="box-shadow: 0 0 0 3px rgba(255, 255, 255, .9) inset; letter-spacing: 0.05rem;">SERVICES</button></a>
+        <a href="/contact-us"><button class="cursor-pointer outline-none bg-brand-action hover-bg-brand-action-hover:hover font-size-5 font-600 w-200px h-60px c-paper flex flex-items-center flex-justify-center relative b-solid b-rd-3 b-4 b-brand-action hover-b-brand-action-hover:hover whitespace-normal line-height-6 word-spacing-0.5 py-9" style="box-shadow: 0 0 0 3px rgba(255, 255, 255, .9) inset; letter-spacing: 0.05rem;">REQUEST A QUOTE</button></a>
       </div>
-
-
-
     </>
   );
 }

@@ -31,7 +31,7 @@ export const ContactUs = () => {
   };
 
   return (
-    <div class="mt-20 py-8 px-5 md-px-14 bg-paper b-rd-3 mx-auto" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 10%);">
+    <div class="mt-15 py-8 px-5 md-px-14 bg-paper b-rd-3 mx-auto" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 10%);">
 
       <form id="id01" class="flex-gap-5 flex flex-col py-5" ref={el => form = el as HTMLFormElement} onSubmit={sendEmail}>
 
@@ -118,7 +118,13 @@ export const ContactUs = () => {
 export default function Page() {
   return (
     <>
-      <h1 class="mt-17 font-size-14 md-font-size-16 md-line-height-18 line-height-16 pb-8">Contacts</h1>
+      <h1 class="mt-17 font-size-14 md-font-size-16 md-line-height-18 line-height-16 pb-8">Request a quote</h1>
+
+      <ContactUs />
+
+      <FleurDivider></FleurDivider>
+
+      <h2>Contacts</h2>
 
       <div class="bg-paper b-rd-3" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 10%);">
         <div class="flex flex-justify-between pb-2 pt-10 md-pt-8 px-2 w-90% m-auto">
@@ -151,12 +157,6 @@ export default function Page() {
           <img src="/assets/QR_Code_example.png" alt="QR code" class="md-w-15% w-30% mx-auto mb-5" />
         </div>
       </div>
-
-      <FleurDivider></FleurDivider>
-
-      <h2>Request a quote</h2>
-
-      <ContactUs />
 
       <FleurDivider></FleurDivider>
 

@@ -52,21 +52,21 @@ const GalerrySliderMobile = () => {
 };
 
 const VideoPlayer = () => {
-	return (
-		<div class="flex flex-justify-center flex-items-center mt-20">
-			<video
-				class="mt-10 b-rd-3" style="width: 100%; width: -moz-available; width: -webkit-fill-available; width: fill-available;"
-				autoplay
-				controls
-				muted
-			>
-				<source
-					src="/assets/Professional Carpet Cleaning London - Fine Carpet Cleaning (1).mp4"
-					type="video/mp4"
-				/>
-			</video>
-		</div>
-	);
+  return (
+    <div class="flex flex-justify-center flex-items-center mt-20">
+      <video
+        class="mt-10 b-rd-3" style="width: 100%; width: -moz-available; width: -webkit-fill-available; width: fill-available;"
+        autoplay
+        controls
+        muted
+      >
+        <source
+          src="/assets/Professional Carpet Cleaning London - Fine Carpet Cleaning (1).mp4"
+          type="video/mp4"
+        />
+      </video>
+    </div>
+  );
 };
 
 function FleurDivider() {
@@ -212,29 +212,29 @@ export default function Page() {
           <li class="ml--5"><a class="color-paper-link-hover hover-color-paper-link:hover font-size-17.5px line-height-8 word-spacing--0.12 tracking--0.04" href="/professional-upholstery-cleaning-services">Upholstery cleaning services</a></li>
           <li class="ml--5"><a class="color-paper-link-hover hover-color-paper-link:hover font-size-17.5px line-height-8 word-spacing--0.12 tracking--0.04" href="/professional-rug-cleaning-services">Rug cleaning services</a></li>
         </ul>
-        </div>
+      </div>
 
-        <FleurDivider></FleurDivider>
+      <FleurDivider></FleurDivider>
 
-        <h2>The process of our antiviral sanitisation services:</h2>
-        <div class="mt-20 py-8 px-8 md-px-14 bg-paper b-rd-3" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 18%);">
-        <ul>
+      <h2>The process of our antiviral sanitisation services:</h2>
+      <div class="mt-20 py-8 px-8 md-px-14 bg-paper b-rd-3" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 18%);">
+        <ol style="counter-reset: ordered; list-style: none;">
           <li class="ml--5">
-            <p><strong>Survey:</strong> Once we arrive, the first thing to do is to determine what needs to be done and how the service will be performed.</p>
+            <Typography variant="body"><strong>Survey:</strong> Once we arrive, the first thing to do is to determine what needs to be done and how the service will be performed.</Typography>
           </li>
           <li class="ml--5">
-            <p><strong>Preparations:</strong> The preparations for our antiviral sanitisation are simple yet important. All electrical appliances must be switched off or unplugged. All fire alarm devices must be removed or fully covered.</p>
+            <Typography variant="body"><strong>Preparations:</strong> The preparations for our antiviral sanitisation are simple yet important. All electrical appliances must be switched off or unplugged. All fire alarm devices must be removed or fully covered.</Typography>
           </li>
           <li class="ml--5">
-            <p><strong>Sanitisation:</strong> After the preparations are done, we will begin the sanitisation with a fogging machine using a top-tier, hospital-grade, bio detergent which is extremely efficient against all viruses and bacteria, especially COVID-19.</p>
+            <Typography variant="body"><strong>Sanitisation:</strong> After the preparations are done, we will begin the sanitisation with a fogging machine using a top-tier, hospital-grade, bio detergent which is extremely efficient against all viruses and bacteria, especially COVID-19.</Typography>
           </li>
           <li class="ml--5">
-            <p><strong>Ventilation:</strong> The next step is to leave the disinfected room to ventilate. Our technician will open the windows just a few inches so it can ventilate properly. Approximately 60 minutes are needed to achieve the best result.</p>
+            <Typography variant="body"><strong>Ventilation:</strong> The next step is to leave the disinfected room to ventilate. Our technician will open the windows just a few inches so it can ventilate properly. Approximately 60 minutes are needed to achieve the best result.</Typography>
           </li>
           <li class="ml--5">
-            <p><strong>Protection:</strong> Our antiviral bio detergent will leave an invisible protective layer on the surface killing any viruses and bacteria that will come into contact after the sanitisation. Please keep in mind that how long the protective layer will last depends on how often the surface is used.</p>
+            <Typography variant="body"><strong>Protection:</strong> Our antiviral bio detergent will leave an invisible protective layer on the surface killing any viruses and bacteria that will come into contact after the sanitisation. Please keep in mind that how long the protective layer will last depends on how often the surface is used.</Typography>
           </li>
-        </ul>
+        </ol>
       </div>
 
       <FleurDivider></FleurDivider>
@@ -395,12 +395,9 @@ export default function Page() {
       <FleurDivider></FleurDivider>
 
       <div class="m-10% mb-3% flex flex-wrap flex-justify-center md-gap-15 gap-10">
-        <button class="cursor-pointer outline-none bg-brand-second-action hover-bg-brand-second-action-hover:hover font-size-6 font-600 w-200px h-60px c-paper flex flex-items-center flex-justify-center relative b-solid b-rd-3 b-4 b-brand-second-action hover-b-brand-second-action-hover:hover whitespace-normal line-height-6 word-spacing-0.5 py-9" style="box-shadow: 0 0 0 3px rgba(255, 255, 255, .9) inset; letter-spacing: 0.05rem;"><a href="/services" class="c-paper font-size-5">SERVICES</a></button>
-        <button class="cursor-pointer outline-none bg-brand-action hover-bg-brand-action-hover:hover font-size-6 font-600 w-200px h-60px c-paper flex flex-items-center flex-justify-center relative b-solid b-rd-3 b-4 b-brand-action hover-b-brand-action-hover:hover whitespace-normal line-height-6 word-spacing-0.5 py-9" style="box-shadow: 0 0 0 3px rgba(255, 255, 255, .9) inset; letter-spacing: 0.05rem;"><a href="/contact-us" class="c-paper font-size-5">REQUEST A QUOTE</a></button>
+        <a href="/services"><button class="cursor-pointer outline-none bg-brand-second-action hover-bg-brand-second-action-hover:hover font-size-5 font-600 w-200px h-60px c-paper flex flex-items-center flex-justify-center relative b-solid b-rd-3 b-4 b-brand-second-action hover-b-brand-second-action-hover:hover whitespace-normal line-height-6 word-spacing-0.5 py-9" style="box-shadow: 0 0 0 3px rgba(255, 255, 255, .9) inset; letter-spacing: 0.05rem;">SERVICES</button></a>
+        <a href="/contact-us"><button class="cursor-pointer outline-none bg-brand-action hover-bg-brand-action-hover:hover font-size-5 font-600 w-200px h-60px c-paper flex flex-items-center flex-justify-center relative b-solid b-rd-3 b-4 b-brand-action hover-b-brand-action-hover:hover whitespace-normal line-height-6 word-spacing-0.5 py-9" style="box-shadow: 0 0 0 3px rgba(255, 255, 255, .9) inset; letter-spacing: 0.05rem;">REQUEST A QUOTE</button></a>
       </div>
-
-
-
     </>
   );
 }

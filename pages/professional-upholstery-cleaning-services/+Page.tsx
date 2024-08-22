@@ -342,32 +342,32 @@ export default function Page() {
 					<li class="ml--5"><a class="color-paper-link-hover hover-color-paper-link:hover font-size-17.5px line-height-8 word-spacing--0.12 tracking--0.04" href="/professional-stain-removal-services">Upholstery stain removal</a></li>
 					<li class="ml--5"><a class="color-paper-link-hover hover-color-paper-link:hover font-size-17.5px line-height-8 word-spacing--0.12 tracking--0.04" href="/stain-protection-services">Upholstery stain protector</a></li>
 				</ul>
-				</div>
+			</div>
 
-				<FleurDivider></FleurDivider>
+			<FleurDivider></FleurDivider>
 
-				<h2>The process of our professional upholstery cleaning services:</h2>
-				<div class="mt-20 py-8 px-8 md-px-14 bg-paper b-rd-3" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 18%);">
-				<ul>
+			<h2>The process of our professional upholstery cleaning services:</h2>
+			<div class="mt-20 py-8 px-8 md-px-14 bg-paper b-rd-3" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 18%);">
+				<ol style="counter-reset: ordered; list-style: none;">
 					<li class="ml--5">
-						<p>First, we will carry out a pre-cleaning survey, to establish exactly what cleaning detergents and tools need to be used for the specific fabric.</p>
+						<Typography variant="body">First, we will carry out a pre-cleaning survey, to establish exactly what cleaning detergents and tools need to be used for the specific fabric.</Typography>
 					</li>
 					<li class="ml--5">
-						<p>Second, we dry vacuum the fabric. This removes any loose dirt, dry soils and dust.</p>
+						<Typography variant="body">Second, we dry vacuum the fabric. This removes any loose dirt, dry soils and dust.</Typography>
 					</li>
 					<li class="ml--5">
-						<p>We then apply heavy duty pre-spray, designed to lift oily dirt and pollutants from your upholstery, so they can be safely extracted using our high performance extraction machines.</p>
+						<Typography variant="body">We then apply heavy duty pre-spray, designed to lift oily dirt and pollutants from your upholstery, so they can be safely extracted using our high performance extraction machines.</Typography>
 					</li>
 					<li class="ml--5">
-						<p>The cleaning solution is worked onto the upholstery. This loosens the soiling, ready for extraction.</p>
+						<Typography variant="body">The cleaning solution is worked onto the upholstery. This loosens the soiling, ready for extraction.</Typography>
 					</li>
 					<li class="ml--5">
-						<p>Pure softened hot water (reaches a maximum 135 Degrees) is gently injected deeply into the fibres. This releases the soil and allows our powerful hot water extraction machine to effectively remove it. Any remaining spots and stains are worked on individually using special products.</p>
+						<Typography variant="body">Pure softened hot water (reaches a maximum 135 Degrees) is gently injected deeply into the fibres. This releases the soil and allows our powerful hot water extraction machine to effectively remove it. Any remaining spots and stains are worked on individually using special products.</Typography>
 					</li>
 					<li class="ml--5">
-						<p>Finally, we rinse and extract again to ensure no chemical residues are left behind.</p>
+						<Typography variant="body">Finally, we rinse and extract again to ensure no chemical residues are left behind.</Typography>
 					</li>
-				</ul>
+				</ol>
 			</div>
 
 			<FleurDivider></FleurDivider>
@@ -553,12 +553,9 @@ export default function Page() {
 			<FleurDivider></FleurDivider>
 
 			<div class="m-10% mb-3% flex flex-wrap flex-justify-center md-gap-15 gap-10">
-				<button class="cursor-pointer outline-none bg-brand-second-action hover-bg-brand-second-action-hover:hover font-size-6 font-600 w-200px h-60px c-paper flex flex-items-center flex-justify-center relative b-solid b-rd-3 b-4 b-brand-second-action hover-b-brand-second-action-hover:hover whitespace-normal line-height-6 word-spacing-0.5 py-9" style="box-shadow: 0 0 0 3px rgba(255, 255, 255, .9) inset; letter-spacing: 0.05rem;"><a href="/services" class="c-paper font-size-5">SERVICES</a></button>
-				<button class="cursor-pointer outline-none bg-brand-action hover-bg-brand-action-hover:hover font-size-6 font-600 w-200px h-60px c-paper flex flex-items-center flex-justify-center relative b-solid b-rd-3 b-4 b-brand-action hover-b-brand-action-hover:hover whitespace-normal line-height-6 word-spacing-0.5 py-9" style="box-shadow: 0 0 0 3px rgba(255, 255, 255, .9) inset; letter-spacing: 0.05rem;"><a href="/contact-us" class="c-paper font-size-5">REQUEST A QUOTE</a></button>
+				<a href="/services"><button class="cursor-pointer outline-none bg-brand-second-action hover-bg-brand-second-action-hover:hover font-size-5 font-600 w-200px h-60px c-paper flex flex-items-center flex-justify-center relative b-solid b-rd-3 b-4 b-brand-second-action hover-b-brand-second-action-hover:hover whitespace-normal line-height-6 word-spacing-0.5 py-9" style="box-shadow: 0 0 0 3px rgba(255, 255, 255, .9) inset; letter-spacing: 0.05rem;">SERVICES</button></a>
+				<a href="/contact-us"><button class="cursor-pointer outline-none bg-brand-action hover-bg-brand-action-hover:hover font-size-5 font-600 w-200px h-60px c-paper flex flex-items-center flex-justify-center relative b-solid b-rd-3 b-4 b-brand-action hover-b-brand-action-hover:hover whitespace-normal line-height-6 word-spacing-0.5 py-9" style="box-shadow: 0 0 0 3px rgba(255, 255, 255, .9) inset; letter-spacing: 0.05rem;">REQUEST A QUOTE</button></a>
 			</div>
-
-
-
 		</>
 	);
 }

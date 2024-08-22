@@ -52,21 +52,21 @@ const GalerrySliderMobile = () => {
 };
 
 const VideoPlayer = () => {
-	return (
-		<div class="flex flex-justify-center flex-items-center mt-20">
-			<video
-				class="mt-10 b-rd-3" style="width: 100%; width: -moz-available; width: -webkit-fill-available; width: fill-available;"
-				autoplay
-				controls
-				muted
-			>
-				<source
-					src="/assets/Professional Carpet Cleaning London - Fine Carpet Cleaning (1).mp4"
-					type="video/mp4"
-				/>
-			</video>
-		</div>
-	);
+  return (
+    <div class="flex flex-justify-center flex-items-center mt-20">
+      <video
+        class="mt-10 b-rd-3" style="width: 100%; width: -moz-available; width: -webkit-fill-available; width: fill-available;"
+        autoplay
+        controls
+        muted
+      >
+        <source
+          src="/assets/Professional Carpet Cleaning London - Fine Carpet Cleaning (1).mp4"
+          type="video/mp4"
+        />
+      </video>
+    </div>
+  );
 };
 
 function FleurDivider() {
@@ -155,19 +155,19 @@ export function FaqSection() {
         <li>
           <Typography variant="h3">How much does a dry-cleaning rug cost?</Typography>
           <Typography variant="body">How much the dry cleaning rug costs depends on the following factors:</Typography></li>
-          <li>
-            <p>The quantity and size of the rugs;</p>
-          </li>
-          <li>
-            <p>How soiled they are;</p>
-          </li>
-          <li>
-            <p>The type and fabric of the rugs;</p>
-          </li>
-          <li>
-            <p>How easy the access to the rug is.</p>
-            <Typography variant="body">To learn more, take a look at our <a class="color-paper-link hover-color-paper-link-hover:hover" href="#price_table">dry clean rug prices</a>.</Typography>
-          </li>
+        <li>
+          <p>The quantity and size of the rugs;</p>
+        </li>
+        <li>
+          <p>How soiled they are;</p>
+        </li>
+        <li>
+          <p>The type and fabric of the rugs;</p>
+        </li>
+        <li>
+          <p>How easy the access to the rug is.</p>
+          <Typography variant="body">To learn more, take a look at our <a class="color-paper-link hover-color-paper-link-hover:hover" href="#price_table">dry clean rug prices</a>.</Typography>
+        </li>
       </ul>
     </Entry>
     <Entry>
@@ -266,19 +266,19 @@ export default function Page() {
           <li class="ml--5"><a class="color-paper-link-hover hover-color-paper-link:hover font-size-17.5px line-height-8 word-spacing--0.12 tracking--0.04" href="/professional-stain-removal-services">Rug stain removal</a></li>
           <li class="ml--5"><a class="color-paper-link-hover hover-color-paper-link:hover font-size-17.5px line-height-8 word-spacing--0.12 tracking--0.04" href="/stain-protection-services">Rug stain protection</a></li>
         </ul>
-        </div>
+      </div>
 
-        <FleurDivider></FleurDivider>
+      <FleurDivider></FleurDivider>
 
-        <h2>The process of our dry rug cleaning service:</h2>
-        <div class="mt-20 py-8 px-8 md-px-14 bg-paper b-rd-3" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 18%);">
-        <ul>
-          <li class="ml--5"><p>A powerful vacuum cleaner is used to clean the rug so that most of the dirt and grimy particles are extracted.</p></li>
-          <li class="ml--5"><p>After that, a biodegradable cleaning compound is simmered onto the rug, which attracts dirt and grime and brings them to the surface.</p></li>
-          <li class="ml--5"><p>Then a machine is used to agitate the cleaning compound into the fibres.</p></li>
-          <li class="ml--5"><p>Finally, everything is vacuumed off, leaving the rug clean, fresh and dry.</p></li>
-          <li class="ml--5"><p>If the area that needs to be cleaned is small, we may brush the cleaning powder into the carpet with a large brush by hand and then we will vacuum the area. We use this method for small spaces that don’t need the heavy equipment we would normally use, and the effect is the same, leaving the rug clean and fresh.</p></li>
-        </ul>
+      <h2>The process of our dry rug cleaning service:</h2>
+      <div class="mt-20 py-8 px-8 md-px-14 bg-paper b-rd-3" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 18%);">
+        <ol style="counter-reset: ordered; list-style: none;">
+          <li class="ml--5"><Typography variant="body">A powerful vacuum cleaner is used to clean the rug so that most of the dirt and grimy particles are extracted.</Typography></li>
+          <li class="ml--5"><Typography variant="body">After that, a biodegradable cleaning compound is simmered onto the rug, which attracts dirt and grime and brings them to the surface.</Typography></li>
+          <li class="ml--5"><Typography variant="body">Then a machine is used to agitate the cleaning compound into the fibres.</Typography></li>
+          <li class="ml--5"><Typography variant="body">Finally, everything is vacuumed off, leaving the rug clean, fresh and dry.</Typography></li>
+          <li class="ml--5"><Typography variant="body">If the area that needs to be cleaned is small, we may brush the cleaning powder into the carpet with a large brush by hand and then we will vacuum the area. We use this method for small spaces that don’t need the heavy equipment we would normally use, and the effect is the same, leaving the rug clean and fresh.</Typography></li>
+        </ol>
       </div>
 
       <FleurDivider></FleurDivider>
@@ -452,12 +452,9 @@ export default function Page() {
       <FleurDivider></FleurDivider>
 
       <div class="m-10% mb-3% flex flex-wrap flex-justify-center md-gap-15 gap-10">
-        <button class="cursor-pointer outline-none bg-brand-second-action hover-bg-brand-second-action-hover:hover font-size-6 font-600 w-200px h-60px c-paper flex flex-items-center flex-justify-center relative b-solid b-rd-3 b-4 b-brand-second-action hover-b-brand-second-action-hover:hover whitespace-normal line-height-6 word-spacing-0.5 py-9" style="box-shadow: 0 0 0 3px rgba(255, 255, 255, .9) inset; letter-spacing: 0.05rem;"><a href="/services" class="c-paper font-size-5">SERVICES</a></button>
-        <button class="cursor-pointer outline-none bg-brand-action hover-bg-brand-action-hover:hover font-size-6 font-600 w-200px h-60px c-paper flex flex-items-center flex-justify-center relative b-solid b-rd-3 b-4 b-brand-action hover-b-brand-action-hover:hover whitespace-normal line-height-6 word-spacing-0.5 py-9" style="box-shadow: 0 0 0 3px rgba(255, 255, 255, .9) inset; letter-spacing: 0.05rem;"><a href="/contact-us" class="c-paper font-size-5">REQUEST A QUOTE</a></button>
+        <a href="/services"><button class="cursor-pointer outline-none bg-brand-second-action hover-bg-brand-second-action-hover:hover font-size-5 font-600 w-200px h-60px c-paper flex flex-items-center flex-justify-center relative b-solid b-rd-3 b-4 b-brand-second-action hover-b-brand-second-action-hover:hover whitespace-normal line-height-6 word-spacing-0.5 py-9" style="box-shadow: 0 0 0 3px rgba(255, 255, 255, .9) inset; letter-spacing: 0.05rem;">SERVICES</button></a>
+        <a href="/contact-us"><button class="cursor-pointer outline-none bg-brand-action hover-bg-brand-action-hover:hover font-size-5 font-600 w-200px h-60px c-paper flex flex-items-center flex-justify-center relative b-solid b-rd-3 b-4 b-brand-action hover-b-brand-action-hover:hover whitespace-normal line-height-6 word-spacing-0.5 py-9" style="box-shadow: 0 0 0 3px rgba(255, 255, 255, .9) inset; letter-spacing: 0.05rem;">REQUEST A QUOTE</button></a>
       </div>
-
-
-
     </>
   );
 }

@@ -2,16 +2,16 @@ import "solid-slider/slider.css";
 import { createSignal, Show } from 'solid-js';
 import range from "lodash/range"
 
-function FleurDivider () {
-	return (
-		<div class="m-auto my-30 md-my-36 position-relative w-80%">
-			<div class="divider-shadow overflow-hidden h-0.5 after-block::after after-w-full::after after-h-6::after after-mx-auto::after after-mt--6::after"></div>
-			<div class="w-11 h-11 position-absolute position-bottom--6 left-47% bg-#f7f7f7"><img class="position-absolute max-w-7 mx-1.8" src="/assets/output-onlinepngtools.png" /></div>
-		</div>
-	);
+function FleurDivider() {
+  return (
+    <div class="m-auto my-30 md-my-36 position-relative w-80%">
+      <div class="divider-shadow overflow-hidden h-0.5 after-block::after after-w-full::after after-h-6::after after-mx-auto::after after-mt--6::after"></div>
+      <div class="w-11 h-11 position-absolute position-bottom--6 left-47% bg-#f7f7f7"><img class="position-absolute max-w-7 mx-1.8" src="/assets/output-onlinepngtools.png" /></div>
+    </div>
+  );
 }
 
-function ButtonsFilterReviews({setFilter}:{setFilter:(rating:number | undefined) => void }) {
+function ButtonsFilterReviews({ setFilter }: { setFilter: (rating: number | undefined) => void }) {
   return (
     <div class="flex flex-justify-center md-flex-justify-between flex-wrap">
       <div class="flex flex-col flex-justify-center gap-0">
@@ -37,7 +37,7 @@ function ButtonsFilterReviews({setFilter}:{setFilter:(rating:number | undefined)
             {rating !== undefined && (
               <>
                 <div class="b-rd-3 h-4 bg-gray-3 w-80% overflow-hidden whitespace-nowrap m-r-2">
-                  <div class="b-rd-3 h-4 bg-#ffbe22" style={{ width: getWidth(rating)}}></div>
+                  <div class="b-rd-3 h-4 bg-#ffbe22" style={{ width: getWidth(rating) }}></div>
                 </div>
                 <div class="number-of-reviews-in-new-rvs">({getReviewCount(rating)})</div>
               </>
@@ -83,24 +83,24 @@ function getReviewCount(rating: number) {
   }
 }
 
-function StarReview(props: {src: string; filterStars: number | undefined; stars: number; hrefGoogleReview: string; name:string; date:string; reviewText:string; }) {
+function StarReview(props: { src: string; filterStars: number | undefined; stars: number; hrefGoogleReview: string; name: string; date: string; reviewText: string; }) {
   return (
-    <Show when={props.filterStars===undefined || props.filterStars===props.stars}>
+    <Show when={props.filterStars === undefined || props.filterStars === props.stars}>
       <table class="m-y-25 5-stars w-90% md-w-70% m-auto border-style-solid b-gray-2" style="border-width: 1px 0px 1px 0px;">
         <tbody>
           <tr>
             <td class="top-row-of-new-google-review flex flex-justify-between flex-items-center">
               <div class="profile-pic-and-name-in-review flex flex-items-center gap-4">
-                <img class="w-12 h-12" src={props.src} alt="profile"/>
+                <img class="w-12 h-12" src={props.src} alt="profile" />
                 <p class="flex flex-col"><b>{props.name}</b>{props.date}</p>
               </div>
-                <img class="w-10 h-10" src="/assets/GoogleLogoPNGImage.png" alt="Google logo"/>
+              <img class="w-10 h-10" src="/assets/GoogleLogoPNGImage.png" alt="Google logo" />
             </td>
           </tr>
           <tr>
-            <td class="p-t-5 p-b-2"> 
-              {range (props.stars).map((_: any)=><img class="m-r-2 w-5" src="/assets/google-star-review-logo-e1706350894182.png" alt="star"/>)}
-              {range (5-props.stars).map((_: any)=><img class="w-5 m-r-2" src="/assets/output-onlinepngtools-e1707480352597.png" alt="star"/>)}
+            <td class="p-t-5 p-b-2">
+              {range(props.stars).map((_: any) => <img class="m-r-2 w-5" src="/assets/google-star-review-logo-e1706350894182.png" alt="star" />)}
+              {range(5 - props.stars).map((_: any) => <img class="w-5 m-r-2" src="/assets/output-onlinepngtools-e1707480352597.png" alt="star" />)}
             </td>
           </tr>
           <tr>
@@ -118,8 +118,8 @@ function StarReview(props: {src: string; filterStars: number | undefined; stars:
   );
 }
 
-export default function Page() { 
-  const [filterStars, setFilterStars] = createSignal < number | undefined > ()
+export default function Page() {
+  const [filterStars, setFilterStars] = createSignal<number | undefined>()
   return (
     <>
 
@@ -223,7 +223,7 @@ export default function Page() {
         filterStars={filterStars()}
       />
 
-      <StarReview      
+      <StarReview
         src="/assets/profile-pics-reviews/unnamed.png"
         reviewText="Excellent service very quick only took a hour, carpet very clean all stains cleaned.
           front room stairs corridor landing’s small bedroom great service.
@@ -236,7 +236,7 @@ export default function Page() {
         filterStars={filterStars()}
       />
 
-      <StarReview      
+      <StarReview
         src="/assets/profile-pics-reviews/unnamed-49.png"
         reviewText="I had my carpet cleaned by Nikolay from Fine Carpet Cleaning. What a fantastic job he did ! He is very professional, efficient and organised in the way he works. My carpet looks new again. I highly recommend."
         name="Samanta Federico"
@@ -246,7 +246,7 @@ export default function Page() {
         filterStars={filterStars()}
       />
 
-      <StarReview      
+      <StarReview
         src="/assets/profile-pics-reviews/unnamed-2.png"
         reviewText="Thank you for the great customer service and for the outstanding job you have done. We love our carper even more now.
       Gergana"
@@ -257,7 +257,7 @@ export default function Page() {
         filterStars={filterStars()}
       />
 
-      <StarReview      
+      <StarReview
         src="/assets/profile-pics-reviews/unnamed-3.png"
         reviewText="Very pleased with the results of my carpets being cleaned. Easy process from start to finish helped by very friendly Maya who arranged it all. Would certainly use this company again."
         name="Rosalind Faw"
@@ -267,7 +267,7 @@ export default function Page() {
         filterStars={filterStars()}
       />
 
-      <StarReview      
+      <StarReview
         src="/assets/profile-pics-reviews/unnamed-7-1.png"
         reviewText="Very good carpet cleaning"
         name="david o'brien"
@@ -277,7 +277,7 @@ export default function Page() {
         filterStars={filterStars()}
       />
 
-      <StarReview      
+      <StarReview
         src="/assets/profile-pics-reviews/unnamed-4.png"
         reviewText="Excellent cleaning company! Very happy with the service all carpet strains gone."
         name="Ladine Oconnor"
@@ -287,7 +287,7 @@ export default function Page() {
         filterStars={filterStars()}
       />
 
-      <StarReview      
+      <StarReview
         src="/assets/profile-pics-reviews/unnamed-5.png"
         reviewText="Was very mislead by the positive reviews. I was debating whether to just leave it or say something but a few days have passed now and I am very unhappy with the service. I was told my white shaggy rug could be as good as new and deep cleaned, only to have it look exactly the same after. The website said £28, but I was told it needs a deeper clean with urine removal which is £65. The rug smelt and looked EXACTLY the same after completion. £65 I was charged for a Hoover that done nothing. They gave me 10% off when I complained and then start saying they don’t know until they try, which felt so misleading telling me they could before I paid. I would have understood if this was made clear before payment, but it Was said with such certainty, even right before they started I said can we definitely make it good as new, and he literally said “yes absolutely” straight to my face. Money down the drain. Avoid at all costs!"
         name="Brad Merry"
@@ -297,7 +297,7 @@ export default function Page() {
         filterStars={filterStars()}
       />
 
-      <StarReview      
+      <StarReview
         src="/assets/profile-pics-reviews/unnamed-6.png"
         reviewText="Very dissapoined. While the customer service itself is very friendly and professional, the work itself is absolutely useless. I paid £160 to clean my sofa, send photos, videos and explained that the sofa is natural leather. All I wanted,was just to refereh my leather sofa a bit. However I saw 0 difference from before and after. ;( what a waste of money."
         name="E M"
@@ -307,7 +307,7 @@ export default function Page() {
         filterStars={filterStars()}
       />
 
-      <StarReview      
+      <StarReview
         src="/assets/profile-pics-reviews/unnamed-7.png"
         reviewText="My carpet was in really bad shape, Fine Carpet Cleaning came around and it looks perfect!
       Will be definitely using their services again"
@@ -318,7 +318,7 @@ export default function Page() {
         filterStars={filterStars()}
       />
 
-      <StarReview      
+      <StarReview
         src="/assets/profile-pics-reviews/unnamed-8.png"
         reviewText="Good company - very responsive via email & fairly priced. On the day the guys were punctual, polite and did a good thorough job."
         name="Rachel Ellis"
@@ -328,7 +328,7 @@ export default function Page() {
         filterStars={filterStars()}
       />
 
-      <StarReview      
+      <StarReview
         src="/assets/profile-pics-reviews/unnamed-2.png"
         reviewText="Real professionals"
         name="G B"
@@ -338,7 +338,7 @@ export default function Page() {
         filterStars={filterStars()}
       />
 
-      <StarReview      
+      <StarReview
         src="/assets/profile-pics-reviews/unnamed-9.png"
         reviewText="Very happy with the service . The carpet cleaning man did a great job. Was very friendly and on time . And it was a great price"
         name="Katrina Scott"
@@ -348,7 +348,7 @@ export default function Page() {
         filterStars={filterStars()}
       />
 
-      <StarReview      
+      <StarReview
         src="/assets/profile-pics-reviews/unnamed-62.png"
         reviewText="Excellent carpet cleaning service"
         name="Sheikh Khanom"
@@ -358,7 +358,7 @@ export default function Page() {
         filterStars={filterStars()}
       />
 
-      <StarReview      
+      <StarReview
         src="/assets/profile-pics-reviews/unnamed-59.png"
         reviewText="Great service, would recommend."
         name="Peter Tobin"
@@ -368,7 +368,7 @@ export default function Page() {
         filterStars={filterStars()}
       />
 
-      <StarReview      
+      <StarReview
         src="/assets/profile-pics-reviews/unnamed-10.png"
         reviewText="Yavor and his team have been more than helpful to our short-term rentals business. Not only they've dealt with old stains and left our carpets like brand new, but we are very grateful for their professionalism."
         name="Alena Mineva"
@@ -378,7 +378,7 @@ export default function Page() {
         filterStars={filterStars()}
       />
 
-      <StarReview      
+      <StarReview
         src="/assets/profile-pics-reviews/unnamed-11.png"
         reviewText="Great job from start to finish: competitive quotation, efficient arrangements before appointment, technician arrived exactly on time, efficient clean and stain protection with powerful modern equipment. Very happy with the whole process and will use them again."
         name="Kirsten Pansegrouw"
@@ -388,7 +388,7 @@ export default function Page() {
         filterStars={filterStars()}
       />
 
-      <StarReview      
+      <StarReview
         src="/assets/profile-pics-reviews/unnamed-12.png"
         reviewText="Excellent service, cost and great communication! Provided stain removal for a carpet. Highly recommended!"
         name="Helder Oliveira"
@@ -396,9 +396,9 @@ export default function Page() {
         stars={5}
         hrefGoogleReview="https://g.co/kgs/Shz3uGZ"
         filterStars={filterStars()}
-        />
+      />
 
-      <StarReview      
+      <StarReview
         src="/assets/profile-pics-reviews/unnamed-45-1.png"
         reviewText=""
         name="Ramya Kaza"
@@ -408,7 +408,7 @@ export default function Page() {
         filterStars={filterStars()}
       />
 
-      <StarReview      
+      <StarReview
         src="/assets/profile-pics-reviews/unnamed-32-1.png"
         reviewText=""
         name="Martin Parzulov"
@@ -418,7 +418,7 @@ export default function Page() {
         filterStars={filterStars()}
       />
 
-      <StarReview      
+      <StarReview
         src="/assets/profile-pics-reviews/unnamed-13.png"
         reviewText="First time we used Fine Carpet Cleaning London, we sourced their add on Gumtree and I must say I was taken back with the level of service we received.
       We had a 2 bedroom apartment carpet wash, booked the appointment for the very next day.
@@ -431,7 +431,7 @@ export default function Page() {
         filterStars={filterStars()}
       />
 
-      <StarReview      
+      <StarReview
         src="/assets/profile-pics-reviews/unnamed-43-1.png"
         reviewText=""
         name="Kam Pindoria"
@@ -441,7 +441,7 @@ export default function Page() {
         filterStars={filterStars()}
       />
 
-      <StarReview      
+      <StarReview
         src="/assets/profile-pics-reviews/unnamed-21-1.png"
         reviewText=""
         name="Tereza Aleksieva"
@@ -449,9 +449,9 @@ export default function Page() {
         stars={5}
         hrefGoogleReview="https://maps.app.goo.gl/aGJwRnPuUjGgZ44e7"
         filterStars={filterStars()}
-        />
+      />
 
-      <StarReview      
+      <StarReview
         src="/assets/profile-pics-reviews/unnamed-37-1.png"
         reviewText=""
         name="Samir Patel"
@@ -461,7 +461,7 @@ export default function Page() {
         filterStars={filterStars()}
       />
 
-      <StarReview      
+      <StarReview
         src="/assets/profile-pics-reviews/unnamed-14.png"
         reviewText="This is my second time using this specific company I highly recommened them as they are excellent, my sofa had some stains and general dirt and it has come up very clean the person was informative and tidy he was polite and friendly and I am very impressed by how my sofa cleaned up very well. Also further too this the person that manages the phone is always friendly and polite and understanding, very competent at his job and offers reasonable prices. I will most definitely recommend this company and everything they have done. Also the person arrived within the allocated time slot.
       Highly recommened
@@ -478,7 +478,7 @@ export default function Page() {
         filterStars={filterStars()}
       />
 
-      <StarReview      
+      <StarReview
         src="/assets/profile-pics-reviews/unnamed-58.png"
         reviewText="Polite and professional, easy communication and better price than other pushy businesses in the area"
         name="Richard Kaye"
@@ -488,7 +488,7 @@ export default function Page() {
         filterStars={filterStars()}
       />
 
-      <StarReview      
+      <StarReview
         src="/assets/profile-pics-reviews/unnamed-8-1.png"
         reviewText="Nice men clean good"
         name="Waqas Ali"
@@ -498,7 +498,7 @@ export default function Page() {
         filterStars={filterStars()}
       />
 
-      <StarReview      
+      <StarReview
         src="/assets/profile-pics-reviews/unnamed-5.png"
         reviewText="Would recommend this company. Would definitely use them again. On time and very polite service"
         name="Bernice Gilbert"
@@ -508,7 +508,7 @@ export default function Page() {
         filterStars={filterStars()}
       />
 
-      <StarReview      
+      <StarReview
         src="/assets/profile-pics-reviews/unnamed-15.png"
         reviewText="Had sofa frames cleaned, they look brand new! You cannot get better price with great quality.
       I had food stains and water mark all gone!!
@@ -520,7 +520,7 @@ export default function Page() {
         filterStars={filterStars()}
       />
 
-      <StarReview      
+      <StarReview
         src="/assets/profile-pics-reviews/unnamed-11-1.png"
         reviewText="Very satisfied"
         name="Ka Po Yuen"
@@ -530,7 +530,7 @@ export default function Page() {
         filterStars={filterStars()}
       />
 
-      <StarReview      
+      <StarReview
         src="/assets/profile-pics-reviews/unnamed-29-1.png"
         reviewText=""
         name="ken chapman"
@@ -540,7 +540,7 @@ export default function Page() {
         filterStars={filterStars()}
       />
 
-      <StarReview      
+      <StarReview
         src="/assets/profile-pics-reviews/unnamed-16.png"
         reviewText="I have used this company four times now and each time have been really pleased with their service.
       Their pricing is very competitive and on occasion when they have had to go over an area twice to achieve perfect results there hasn’t been a surcharge.
@@ -552,7 +552,7 @@ export default function Page() {
         filterStars={filterStars()}
       />
 
-      <StarReview      
+      <StarReview
         src="/assets/profile-pics-reviews/unnamed-54.png"
         reviewText="The carpet smelled awful after the cleaning. They cleaned it in less than 30 mins whereas the previous cleaning company took an hour to do the job. Was not impressed with the job that was done and would not use again."
         name="Amandeep Singh"
@@ -562,7 +562,7 @@ export default function Page() {
         filterStars={filterStars()}
       />
 
-      <StarReview      
+      <StarReview
         src="/assets/profile-pics-reviews/unnamed-12-1.png"
         reviewText="Excellent service"
         name="linda miller"
@@ -572,7 +572,7 @@ export default function Page() {
         filterStars={filterStars()}
       />
 
-      <StarReview      
+      <StarReview
         src="/assets/profile-pics-reviews/unnamed-17.png"
         reviewText="Second time using. I'm not easy impressed. On time, good job, clean, professional and courteous just like last time so recommended to a friend already. Will use again."
         name="Les Johnston"
@@ -582,7 +582,7 @@ export default function Page() {
         filterStars={filterStars()}
       />
 
-      <StarReview      
+      <StarReview
         src="/assets/profile-pics-reviews/unnamed-56.png"
         reviewText="it was very good experience but I think the guy who cleaned my carpet lacked detergent or something effective in the high traffic carpet as nothing changed after cleaning 🧹"
         name="Islam Bashir"
@@ -592,7 +592,7 @@ export default function Page() {
         filterStars={filterStars()}
       />
 
-      <StarReview      
+      <StarReview
         src="/assets/profile-pics-reviews/unnamed-63.png"
         reviewText="Very Professional service fast response excellent work completed"
         name="Sheree Davenport"
@@ -602,7 +602,7 @@ export default function Page() {
         filterStars={filterStars()}
       />
 
-      <StarReview      
+      <StarReview
         src="/assets/profile-pics-reviews/unnamed-35-1.png"
         reviewText=""
         name="Zina Wilkinson"
@@ -612,7 +612,7 @@ export default function Page() {
         filterStars={filterStars()}
       />
 
-      <StarReview      
+      <StarReview
         src="/assets/profile-pics-reviews/unnamed-18.png"
         reviewText="Very professional and friendly service. Carpets were brand new, amazing work. Very clean and the products used smelt really nice and fresh."
         name="Nima Mohamed"
@@ -622,7 +622,7 @@ export default function Page() {
         filterStars={filterStars()}
       />
 
-      <StarReview      
+      <StarReview
         src="/assets/profile-pics-reviews/unnamed-54.png"
         reviewText="Very professional communication throughout and excellent cleaning service from the technician. This is the third time I’ve used this company."
         name="Alkesh C"
@@ -632,7 +632,7 @@ export default function Page() {
         filterStars={filterStars()}
       />
 
-      <StarReview      
+      <StarReview
         src="/assets/profile-pics-reviews/unnamed-14-1.png"
         reviewText=""
         name="Martin Angelov"
@@ -642,7 +642,7 @@ export default function Page() {
         filterStars={filterStars()}
       />
 
-      <StarReview      
+      <StarReview
         src="/assets/profile-pics-reviews/unnamed-19.png"
         reviewText="Excellent! We were very happy with both the quality of the service and also the value for money. We will definitely be using their services again."
         name="Baljinder kaur"
@@ -652,7 +652,7 @@ export default function Page() {
         filterStars={filterStars()}
       />
 
-      <StarReview      
+      <StarReview
         src="/assets/profile-pics-reviews/unnamed-38-1.png"
         reviewText=""
         name="Abz Mujib"
@@ -662,7 +662,7 @@ export default function Page() {
         filterStars={filterStars()}
       />
 
-      <StarReview      
+      <StarReview
         src="/assets/profile-pics-reviews/unnamed-57.png"
         reviewText="Very happy with the service. The stains and marks are all gone. Carpet looks very clean."
         name="Hatim Shah"
@@ -672,7 +672,7 @@ export default function Page() {
         filterStars={filterStars()}
       />
 
-      <StarReview      
+      <StarReview
         src="/assets/profile-pics-reviews/unnamed-55.png"
         reviewText="I've used Fine Carpet Cleaning for my business premises and my home and they provide an excellent service."
         name="Gerald Powell"
@@ -682,7 +682,7 @@ export default function Page() {
         filterStars={filterStars()}
       />
 
-      <StarReview      
+      <StarReview
         src="/assets/profile-pics-reviews/unnamed-41-1.png"
         reviewText=""
         name="Flori Rizea"
@@ -692,7 +692,7 @@ export default function Page() {
         filterStars={filterStars()}
       />
 
-      <StarReview      
+      <StarReview
         src="/assets/profile-pics-reviews/unnamed-20-1.png"
         reviewText=""
         name="Marc Yallop"
@@ -702,7 +702,7 @@ export default function Page() {
         filterStars={filterStars()}
       />
 
-      <StarReview      
+      <StarReview
         src="/assets/profile-pics-reviews/unnamed-15-1.png"
         reviewText=""
         name="Patricia Mbock"
@@ -712,7 +712,7 @@ export default function Page() {
         filterStars={filterStars()}
       />
 
-      <StarReview      
+      <StarReview
         src="/assets/profile-pics-reviews/unnamed-5.png"
         reviewText="Would recommend this company. Would definitely use them again. On time and very polite service"
         name="Bernice Gilbert"
@@ -722,7 +722,7 @@ export default function Page() {
         filterStars={filterStars()}
       />
 
-      <StarReview      
+      <StarReview
         src="/assets/profile-pics-reviews/unnamed-25-1.png"
         reviewText=""
         name="Ralph W"
@@ -732,7 +732,7 @@ export default function Page() {
         filterStars={filterStars()}
       />
 
-      <StarReview      
+      <StarReview
         src="/assets/profile-pics-reviews/unnamed-20.png"
         reviewText="I have used Fine Carpet Cleaning for years and need I say they turn our home to new each time they come to do the carpet cleaning. Staffs are very helpful when it comes to flexibility they always deliver the utmost returning that new carpet smell. I will highly recommend Fine Carpet Cleaning Ltd anytime any day.
       Moved home recently and we resumed business as usual.....use Fine Carpet Cleaning you won't regret"
@@ -743,7 +743,7 @@ export default function Page() {
         filterStars={filterStars()}
       />
 
-      <StarReview      
+      <StarReview
         src="/assets/profile-pics-reviews/unnamed-25.png"
         reviewText=""
         name="Minsung Kim"
@@ -753,7 +753,7 @@ export default function Page() {
         filterStars={filterStars()}
       />
 
-      <StarReview      
+      <StarReview
         src="/assets/profile-pics-reviews/unnamed-21.png"
         reviewText="Very efficient and friendly. Excellent at keeping the client informed and sticking to the times agreed. Nicky worked very quickly and thoroughly. I was very happy with the result and will be using them again shortly."
         name="Judith Hd"
@@ -763,7 +763,7 @@ export default function Page() {
         filterStars={filterStars()}
       />
 
-      <StarReview      
+      <StarReview
         src="/assets/profile-pics-reviews/unnamed-1-2.png"
         reviewText="Brilliant service, polite technician. Would recommend to everyone."
         name="Suly Mayet"
@@ -773,7 +773,7 @@ export default function Page() {
         filterStars={filterStars()}
       />
 
-      <StarReview      
+      <StarReview
         src="/assets/profile-pics-reviews/unnamed-16-1.png"
         reviewText=""
         name="Bee Sounds (DJ)"
@@ -783,7 +783,7 @@ export default function Page() {
         filterStars={filterStars()}
       />
 
-      <StarReview      
+      <StarReview
         src="/assets/profile-pics-reviews/unnamed-9-1.png"
         reviewText="Excellent customer service"
         name="Natasha Osborne"
@@ -793,7 +793,7 @@ export default function Page() {
         filterStars={filterStars()}
       />
 
-      <StarReview      
+      <StarReview
         src="/assets/profile-pics-reviews/unnamed-27-1.png"
         reviewText=""
         name="wasiu bankole"
@@ -803,7 +803,7 @@ export default function Page() {
         filterStars={filterStars()}
       />
 
-      <StarReview      
+      <StarReview
         src="/assets/profile-pics-reviews/unnamed-9-1.png"
         reviewText="Was okay, the price was decent but unfortunately they couldn’t get 75% of the stains out of my carpet although I’d sent them pictures beforehand, and I had to ask them to go over certain areas and stains they could remove."
         name="Nazia Uddin"
@@ -813,7 +813,7 @@ export default function Page() {
         filterStars={filterStars()}
       />
 
-      <StarReview      
+      <StarReview
         src="/assets/profile-pics-reviews/unnamed-2-1.png"
         reviewText="Punctual, professional and reasonable price. Highly recommended."
         name="Naser Mehrabi"
@@ -823,7 +823,7 @@ export default function Page() {
         filterStars={filterStars()}
       />
 
-      <StarReview      
+      <StarReview
         src="/assets/profile-pics-reviews/unnamed-60.png"
         reviewText="Amazing results, super professional service and attention to details , highly recommend the company"
         name="Temenujka Mollova"
@@ -833,7 +833,7 @@ export default function Page() {
         filterStars={filterStars()}
       />
 
-      <StarReview      
+      <StarReview
         src="/assets/profile-pics-reviews/unnamed-36-1.png"
         reviewText=""
         name="Tom Pegg"
@@ -843,7 +843,7 @@ export default function Page() {
         filterStars={filterStars()}
       />
 
-      <StarReview      
+      <StarReview
         src="/assets/profile-pics-reviews/unnamed-28-1.png"
         reviewText=""
         name="A M"
@@ -853,7 +853,7 @@ export default function Page() {
         filterStars={filterStars()}
       />
 
-      <StarReview      
+      <StarReview
         src="/assets/profile-pics-reviews/unnamed-5.png"
         reviewText="Very great and fast service 🤩 highly recommend"
         name="Becks Bucks"
@@ -863,7 +863,7 @@ export default function Page() {
         filterStars={filterStars()}
       />
 
-      <StarReview      
+      <StarReview
         src="/assets/profile-pics-reviews/unnamed-61.png"
         reviewText="Very good service and very professional. High standard and I definitely recommend them."
         name="Taty Lima"
@@ -873,7 +873,7 @@ export default function Page() {
         filterStars={filterStars()}
       />
 
-      <StarReview      
+      <StarReview
         src="/assets/profile-pics-reviews/unnamed-24.png"
         reviewText="Fine Carpet Cleaning were really well priced, turned up on time, did a really good job, my carpets are like new! Will use for all carpet cleaning and upholstery cleaning in future."
         name="Gemma Louise"
@@ -883,7 +883,7 @@ export default function Page() {
         filterStars={filterStars()}
       />
 
-      <StarReview      
+      <StarReview
         src="/assets/profile-pics-reviews/unnamed-25.png"
         reviewText="Have used them twice and they are wonderful. Good cleaning, friendly and accommodating service. Definitely recommend!"
         name="Munish Thairani"
@@ -893,7 +893,7 @@ export default function Page() {
         filterStars={filterStars()}
       />
 
-      <StarReview      
+      <StarReview
         src="/assets/profile-pics-reviews/unnamed-22-1.png"
         reviewText=""
         name="David Mcall"
@@ -903,7 +903,7 @@ export default function Page() {
         filterStars={filterStars()}
       />
 
-      <StarReview      
+      <StarReview
         src="/assets/profile-pics-reviews/unnamed-10-1.png"
         reviewText="Thanks for your service."
         name="Curly Treats"
@@ -913,7 +913,7 @@ export default function Page() {
         filterStars={filterStars()}
       />
 
-      <StarReview      
+      <StarReview
         src="/assets/profile-pics-reviews/unnamed-42-1.png"
         reviewText=""
         name="Yara Evans"
@@ -923,7 +923,7 @@ export default function Page() {
         filterStars={filterStars()}
       />
 
-      <StarReview      
+      <StarReview
         src="/assets/profile-pics-reviews/unnamed-18-1.png"
         reviewText=""
         name="Diner Chowdhury"
@@ -933,7 +933,7 @@ export default function Page() {
         filterStars={filterStars()}
       />
 
-      <StarReview      
+      <StarReview
         src="/assets/profile-pics-reviews/unnamed-23-1.png"
         reviewText=""
         name="Rumyana Nedeva"
@@ -943,7 +943,7 @@ export default function Page() {
         filterStars={filterStars()}
       />
 
-      <StarReview      
+      <StarReview
         src="/assets/profile-pics-reviews/unnamed-26.png"
         reviewText="The best service i have ever used! They were very helpful and the price was reasonable. I can’t recommend them enough"
         name="ege cevik"
@@ -953,7 +953,7 @@ export default function Page() {
         filterStars={filterStars()}
       />
 
-      <StarReview      
+      <StarReview
         src="/assets/profile-pics-reviews/unnamed-17-1.png"
         reviewText=""
         name="Kevin Sampson"
@@ -963,7 +963,7 @@ export default function Page() {
         filterStars={filterStars()}
       />
 
-      <StarReview      
+      <StarReview
         src="/assets/profile-pics-reviews/unnamed-27.png"
         reviewText="The shaggy rug could not be cleaned properly due to it being a high pile rug. the machine they use is an industrial powerful machine but no way it can pick up all rubbish etc."
         name="yusuf Mohammed"
@@ -973,7 +973,7 @@ export default function Page() {
         filterStars={filterStars()}
       />
 
-      <StarReview      
+      <StarReview
         src="/assets/profile-pics-reviews/unnamed-39-1.png"
         reviewText=""
         name="Srikanth Vemuri"
@@ -983,7 +983,7 @@ export default function Page() {
         filterStars={filterStars()}
       />
 
-      <StarReview      
+      <StarReview
         src="/assets/profile-pics-reviews/unnamed-28.png"
         reviewText="I am very happy with the service I received, the friendly and professional man who came to deep clean my floors and a few pieces of furniture. After lockdown things were in dire need of a clean and he took his time paying attention to detail. I will re-book for a 'Covid Clean' since I am moving home soon, ensuring my new flat is sanitised by these professionals. Thank you Fine Carpet Cleaning London :)"
         name="A L"
@@ -993,7 +993,7 @@ export default function Page() {
         filterStars={filterStars()}
       />
 
-      <StarReview      
+      <StarReview
         src="/assets/profile-pics-reviews/unnamed-29.png"
         reviewText="This was the second time I used Fine Carpet cleaning. On both ocassions I found getting a quote and booking an appointment quick and easy. The person who did the cleanning was polite and very efficient with minimal disruption to my home. Very pleased with results including a difficult stain which was removed successfully."
         name="Christine Rajah"
@@ -1003,7 +1003,7 @@ export default function Page() {
         filterStars={filterStars()}
       />
 
-      <StarReview      
+      <StarReview
         src="/assets/profile-pics-reviews/unnamed-3-1.png"
         reviewText="All in all was satisfied with the work and a reasonable price."
         name="Isaac Tamir"
@@ -1013,7 +1013,7 @@ export default function Page() {
         filterStars={filterStars()}
       />
 
-      <StarReview      
+      <StarReview
         src="/assets/profile-pics-reviews/unnamed-24-1.png"
         reviewText=""
         name="aelis3"
@@ -1023,7 +1023,7 @@ export default function Page() {
         filterStars={filterStars()}
       />
 
-      <StarReview      
+      <StarReview
         src="/assets/profile-pics-reviews/unnamed-30.png"
         reviewText="I would recommend this company. Their machinery is industrial and robust, they did an excellent job on my carpets, very thorough and all the stains came out. They were professional and costs were very reasonable."
         name="Anna Townsend"
@@ -1033,7 +1033,7 @@ export default function Page() {
         filterStars={filterStars()}
       />
 
-      <StarReview      
+      <StarReview
         src="/assets/profile-pics-reviews/unnamed-31.png"
         reviewText="They did a fantastic job removing an old paint stain from my carpet, The cleaner was on time, professional and fast. I can't thank them enough! Def recommend. Again, thank you -Bianca"
         name="Bianca"
@@ -1043,7 +1043,7 @@ export default function Page() {
         filterStars={filterStars()}
       />
 
-      <StarReview      
+      <StarReview
         src="/assets/profile-pics-reviews/unnamed-30-1.png"
         reviewText=""
         name="FAHAD HASSAN"
@@ -1053,7 +1053,7 @@ export default function Page() {
         filterStars={filterStars()}
       />
 
-      <StarReview      
+      <StarReview
         src="/assets/profile-pics-reviews/unnamed-4-1.png"
         reviewText="Really pleased with the service, would recommend again"
         name="Graeme Smith"
@@ -1063,7 +1063,7 @@ export default function Page() {
         filterStars={filterStars()}
       />
 
-      <StarReview      
+      <StarReview
         src="/assets/profile-pics-reviews/unnamed-19-1.png"
         reviewText=""
         name="Zakaria Ahmed"
@@ -1073,7 +1073,7 @@ export default function Page() {
         filterStars={filterStars()}
       />
 
-      <StarReview      
+      <StarReview
         src="/assets/profile-pics-reviews/unnamed-68.png"
         reviewText="Very pleased with how my settee came out , gentleman was very polite"
         name="mandy rhys"
@@ -1083,7 +1083,7 @@ export default function Page() {
         filterStars={filterStars()}
       />
 
-      <StarReview      
+      <StarReview
         src="/assets/profile-pics-reviews/unnamed-40-1.png"
         reviewText=""
         name="Miguel Pelaez"
@@ -1093,7 +1093,7 @@ export default function Page() {
         filterStars={filterStars()}
       />
 
-      <StarReview      
+      <StarReview
         src="/assets/profile-pics-reviews/unnamed-32.png"
         reviewText="Yes we was very pleased with the outcome of the cleaning of our carpets we have used them a couple of times now & both times were great thanks again ⭐️⭐️⭐️⭐️⭐️"
         name="STONE TONE"
@@ -1103,7 +1103,7 @@ export default function Page() {
         filterStars={filterStars()}
       />
 
-      <StarReview      
+      <StarReview
         src="/assets/profile-pics-reviews/unnamed-5-1.png"
         reviewText="very good service.!!
       highly recommend"
@@ -1114,7 +1114,7 @@ export default function Page() {
         filterStars={filterStars()}
       />
 
-      <StarReview      
+      <StarReview
         src="/assets/profile-pics-reviews/unnamed-67.png"
         reviewText="Excellent service, on time, fast and great attention to detail!"
         name="Gregor Bran"
@@ -1124,7 +1124,7 @@ export default function Page() {
         filterStars={filterStars()}
       />
 
-      <StarReview      
+      <StarReview
         src="/assets/profile-pics-reviews/unnamed-33.png"
         reviewText="These guys are truly excellent at what they do, their prices are reasonable and their customer service is second to none. They really are best in the business."
         name="G Jones"
@@ -1134,7 +1134,7 @@ export default function Page() {
         filterStars={filterStars()}
       />
 
-      <StarReview      
+      <StarReview
         src="/assets/profile-pics-reviews/unnamed-33-1.png"
         reviewText=""
         name="Ruth Elman"
@@ -1144,7 +1144,7 @@ export default function Page() {
         filterStars={filterStars()}
       />
 
-      <StarReview      
+      <StarReview
         src="/assets/profile-pics-reviews/unnamed-34-1.png"
         reviewText=""
         name="Tina Nelan"
@@ -1154,7 +1154,7 @@ export default function Page() {
         filterStars={filterStars()}
       />
 
-      <StarReview      
+      <StarReview
         src="/assets/profile-pics-reviews/unnamed-34.png"
         reviewText="Great company! Professional from beginning to end. Booking was really easy, the guys arrived on time with all the equipment needed to carry out the work. The carpets looked amazing by the time they had finished. Will definitely be using them again."
         name="Colin Burnell"
@@ -1164,7 +1164,7 @@ export default function Page() {
         filterStars={filterStars()}
       />
 
-      <StarReview      
+      <StarReview
         src="/assets/profile-pics-reviews/unnamed-6-1.png"
         reviewText="professional, reliable, quick and good service"
         name="Eva Hertegovina"
@@ -1174,7 +1174,7 @@ export default function Page() {
         filterStars={filterStars()}
       />
 
-      <StarReview      
+      <StarReview
         src="/assets/profile-pics-reviews/unnamed-35.png"
         reviewText="We have had an excellent experience with Fine Carpet Cleaning London. From the first moment we contacted them right to point of completing the work, this company has been extremely professional, and accommodating. They have also been very honest and professional, explaining from the beginning what could or could not be achieved from the process. Their communication has also been excellent, always timely, professional and efficient.
       Fine Carpet Cleaning London do a lot more than carpets. They managed to save/rescue our new faux leather sofa (ivory colour) from red wine splashes/spray. I truly thought we would have to buy a new sofa, but fortunately, that will not be necessary. Our sofa is now looking as good as new, although the red wine stains were removed 4 days after the splashes occurred! They also cleaned the carpet in our living room, which also suffered from the red wine incident. Now it looks lovely, nice and clean.
@@ -1187,7 +1187,7 @@ export default function Page() {
         filterStars={filterStars()}
       />
 
-      <StarReview      
+      <StarReview
         src="/assets/profile-pics-reviews/unnamed-65.png"
         reviewText="Cleaned three rugs. On time, fast, quality work. Would order again."
         name="Alexander"
@@ -1197,7 +1197,7 @@ export default function Page() {
         filterStars={filterStars()}
       />
 
-      <StarReview      
+      <StarReview
         src="/assets/profile-pics-reviews/unnamed-36.png"
         reviewText="Great experience! Fast efficient service, no nonsense pricing, easy to work with and within a 5 minute phone call everything was arranged for the following day. Carpet is a lot more fresher and cleaner - industrial grade carpet cleaning machine used. Highly recommend!"
         name="Adil Hussain"
@@ -1207,7 +1207,7 @@ export default function Page() {
         filterStars={filterStars()}
       />
 
-      <StarReview      
+      <StarReview
         src="/assets/profile-pics-reviews/unnamed-37.png"
         reviewText="Brilliant service, prompt time keeping, and friendly team .
       Fine carpet cleaning did an amazing job they were here on time and the technician advised me fully on what he was going to do and how, and when they finished they left no mess .
@@ -1219,7 +1219,7 @@ export default function Page() {
         filterStars={filterStars()}
       />
 
-      <StarReview      
+      <StarReview
         src="/assets/profile-pics-reviews/unnamed-38.png"
         reviewText="Fine Carpet Cleaning has been cleaning the carpets and upholstery in our house for the past three years.They have always been extremely efficient, quick to respond and providing professional service. We are happy to recommend their company to everyone who needs best quality of steam carpet cleaning!"
         name="Cvetelina Andonova"
@@ -1229,7 +1229,7 @@ export default function Page() {
         filterStars={filterStars()}
       />
 
-      <StarReview      
+      <StarReview
         src="/assets/profile-pics-reviews/unnamed-66.png"
         reviewText="Very effective and quick service! Highly recommend this company!"
         name="Marek"
@@ -1239,7 +1239,7 @@ export default function Page() {
         filterStars={filterStars()}
       />
 
-      <StarReview      
+      <StarReview
         src="/assets/profile-pics-reviews/unnamed-39.png"
         reviewText="My carpet is brilliant, clean looks like new!I called in the morning to book for the same day and they came in same day. Quickly and efficient ! Really recommend."
         name="Fernando Mendonca"
@@ -1249,7 +1249,7 @@ export default function Page() {
         filterStars={filterStars()}
       />
 
-      <StarReview      
+      <StarReview
         src="/assets/profile-pics-reviews/unnamed-40.png"
         reviewText="Fine Carpet Cleaning are the best in the business, they are very professional, knowledgable and always offer the best advice. They provide a 1st class service every single time."
         name="Freshn Up Cleaning"
@@ -1259,7 +1259,7 @@ export default function Page() {
         filterStars={filterStars()}
       />
 
-      <StarReview      
+      <StarReview
         src="/assets/profile-pics-reviews/unnamed-41.png"
         reviewText="Very professional ! Turned up in time , easy to communicate ! Highly recommended .
       Will keep using they services , already booked another appointment with them .
@@ -1271,7 +1271,7 @@ export default function Page() {
         filterStars={filterStars()}
       />
 
-      <StarReview      
+      <StarReview
         src="/assets/profile-pics-reviews/unnamed-42.png"
         reviewText="I was very please with the cleaning of my two carpets and more importantly my wife was pleased. I would certainly recommend this company
       Regards
@@ -1283,7 +1283,7 @@ export default function Page() {
         filterStars={filterStars()}
       />
 
-      <StarReview      
+      <StarReview
         src="/assets/profile-pics-reviews/unnamed-43.png"
         reviewText="Very professional, quiet and efficient! Truly recommend. Definitely I will use them again. A big thank you ."
         name="Alina Matei"
@@ -1293,7 +1293,7 @@ export default function Page() {
         filterStars={filterStars()}
       />
 
-      <StarReview      
+      <StarReview
         src="/assets/profile-pics-reviews/unnamed-44.png"
         reviewText="Great service. Easy to book. Reliable and did a good job at a reasonable price."
         name="Julie Parker"
@@ -1303,7 +1303,7 @@ export default function Page() {
         filterStars={filterStars()}
       />
 
-      <StarReview      
+      <StarReview
         src="/assets/profile-pics-reviews/unnamed-45.png"
         reviewText="Great service, carpets cleaned very professionally. Definatley recommend.
       Thank you"
@@ -1314,7 +1314,7 @@ export default function Page() {
         filterStars={filterStars()}
       />
 
-      <StarReview      
+      <StarReview
         src="/assets/profile-pics-reviews/unnamed-44-1.png"
         reviewText=""
         name="Ismahan Mohamed"
@@ -1324,7 +1324,7 @@ export default function Page() {
         filterStars={filterStars()}
       />
 
-      <StarReview      
+      <StarReview
         src="/assets/profile-pics-reviews/unnamed-46.png"
         reviewText="excellent service. Prompt replies, easy online payment and they pitched up on time on the day!"
         name="Kirsty Scallan"
@@ -1334,7 +1334,7 @@ export default function Page() {
         filterStars={filterStars()}
       />
 
-      <StarReview      
+      <StarReview
         src="/assets/profile-pics-reviews/unnamed-47.png"
         reviewText="They left my carpet super clean and spot free. Totally faultless service ."
         name="Bola Osifeso"
@@ -1344,7 +1344,7 @@ export default function Page() {
         filterStars={filterStars()}
       />
 
-      <StarReview      
+      <StarReview
         src="/assets/profile-pics-reviews/unnamed-48.png"
         reviewText="Great guys for commercial or domestic work
       Always do a good job at a reasonable cost and very helpful
@@ -1357,7 +1357,7 @@ export default function Page() {
         filterStars={filterStars()}
       />
 
-      <StarReview      
+      <StarReview
         src="/assets/profile-pics-reviews/unnamed-49.png"
         reviewText="Great job!I recommend Fine Carpet Cleaning highly-reasonable prices with hard working staff!!!Well done!"
         name="Slavka Shinina"
@@ -1367,7 +1367,7 @@ export default function Page() {
         filterStars={filterStars()}
       />
 
-      <StarReview      
+      <StarReview
         src="/assets/profile-pics-reviews/unnamed-64.png"
         reviewText="Fantastic prompt polite and reliable service. very clean carpets!"
         name="Janette Hodgkinson"
@@ -1377,7 +1377,7 @@ export default function Page() {
         filterStars={filterStars()}
       />
 
-      <StarReview      
+      <StarReview
         src="/assets/profile-pics-reviews/unnamed-69.png"
         reviewText="Had an old sofa from the 1960s steam cleaned and it went from smelling like a wet dog to fresh as a daisy."
         name="Ted2.0"
@@ -1387,7 +1387,7 @@ export default function Page() {
         filterStars={filterStars()}
       />
 
-      <StarReview      
+      <StarReview
         src="/assets/profile-pics-reviews/unnamed-50.png"
         reviewText="I was extremely pleased with the carpet cleaning service provided,would like to recommend the Fine Carpet Cleaning service to any Londoner. They are punctual, hard working, polite and the results are impressive to say the least. My carpets look amazing. Best wishes, J."
         name="Jason Block"
@@ -1397,7 +1397,7 @@ export default function Page() {
         filterStars={filterStars()}
       />
 
-      <StarReview      
+      <StarReview
         src="/assets/profile-pics-reviews/unnamed-51.png"
         reviewText="I was extremely delighted of the service provided by Fine Carpet. My cousine very recently moved to South Kensington as the whole entire house needed proper brushing. Good timing, courtesy service, professional performance followed by the ' wow ' effect after we came back to the property. Six stars of Five indeed, keep it that way guys!
       Highly recommended"
@@ -1408,7 +1408,7 @@ export default function Page() {
         filterStars={filterStars()}
       />
 
-      <StarReview      
+      <StarReview
         src="/assets/profile-pics-reviews/unnamed-52.png"
         reviewText="We were very happy with the service provided. It was quick, efficient and hassle free. We were also lucky enough to get it at 50% off, definitely a bargain! We will most certainly use them again even without the discount."
         name="Juliana Dinkova"
@@ -1418,7 +1418,7 @@ export default function Page() {
         filterStars={filterStars()}
       />
 
-      <StarReview      
+      <StarReview
         src="/assets/profile-pics-reviews/unnamed-53.png"
         reviewText="I am very pleased to leave this review, as I had a lot of old stains on the upholstery of my beloved sofa, which now shines like new, thanks a bunch guys!"
         name="Sabrina James"
@@ -1429,8 +1429,8 @@ export default function Page() {
       />
 
       <div class="m-10% mb-3% flex flex-wrap flex-justify-center md-gap-15 gap-10">
-        <button class="cursor-pointer outline-none bg-brand-second-action hover-bg-brand-second-action-hover:hover font-size-6 font-600 w-200px h-60px c-paper flex flex-items-center flex-justify-center relative b-solid b-rd-3 b-4 b-brand-second-action hover-b-brand-second-action-hover:hover whitespace-normal line-height-6 word-spacing-0.5 py-9" style="box-shadow: 0 0 0 3px rgba(255, 255, 255, .9) inset; letter-spacing: 0.05rem;"><a href="/services" class="c-paper font-size-5">SERVICES</a></button>
-        <button class="cursor-pointer outline-none bg-brand-action hover-bg-brand-action-hover:hover font-size-6 font-600 w-200px h-60px c-paper flex flex-items-center flex-justify-center relative b-solid b-rd-3 b-4 b-brand-action hover-b-brand-action-hover:hover whitespace-normal line-height-6 word-spacing-0.5 py-9" style="box-shadow: 0 0 0 3px rgba(255, 255, 255, .9) inset; letter-spacing: 0.05rem;"><a href="/contact-us" class="c-paper font-size-5">REQUEST A QUOTE</a></button>
+        <a href="/services"><button class="cursor-pointer outline-none bg-brand-second-action hover-bg-brand-second-action-hover:hover font-size-5 font-600 w-200px h-60px c-paper flex flex-items-center flex-justify-center relative b-solid b-rd-3 b-4 b-brand-second-action hover-b-brand-second-action-hover:hover whitespace-normal line-height-6 word-spacing-0.5 py-9" style="box-shadow: 0 0 0 3px rgba(255, 255, 255, .9) inset; letter-spacing: 0.05rem;">SERVICES</button></a>
+        <a href="/contact-us"><button class="cursor-pointer outline-none bg-brand-action hover-bg-brand-action-hover:hover font-size-5 font-600 w-200px h-60px c-paper flex flex-items-center flex-justify-center relative b-solid b-rd-3 b-4 b-brand-action hover-b-brand-action-hover:hover whitespace-normal line-height-6 word-spacing-0.5 py-9" style="box-shadow: 0 0 0 3px rgba(255, 255, 255, .9) inset; letter-spacing: 0.05rem;">REQUEST A QUOTE</button></a>
       </div>
     </>
   );

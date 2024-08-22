@@ -282,14 +282,14 @@ export default function Page() {
 
         <h2>The process of our professional furniture cleaning services:</h2>
         <div class="mt-20 py-8 px-8 md-px-14 bg-paper b-rd-3" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 18%);">
-        <ul>
-          <li class="ml--5"><p>We begin with a pre-cleaning survey to determine the specific fabric and identify the appropriate cleaning detergents and tools needed for the furniture upholstery cleaning services.</p></li>
-          <li class="ml--5"><p>Then we conduct a dry vacuum cleaning on the fabric to eliminate loose dirt, dry soil, and dust.</p></li>
-          <li class="ml--5"><p>After that, we apply a heavy-duty pre-spray designed to lift oily dirt and pollutants from the furniture, making them ready for extraction using high-performance machines.</p></li>
-          <li class="ml--5"><p>We work the cleaning solution onto the upholstery to loosen the soiling in preparation for extraction.</p></li>
-          <li class="ml--5"><p>Then we gently inject pure, softened hot water (reaching a maximum of 135 degrees) deep into the fibres, releasing the soil. We utilise a powerful hot water extraction machine to effectively remove the soil, addressing any remaining spots and stains individually with special products.</p></li>
-          <li class="ml--5"><p>Finally, we conclude the furniture upholstery cleaning services by rinsing and extracting again to ensure no chemical residues are left behind.</p></li>
-        </ul>
+        <ol style="counter-reset: ordered; list-style: none;">
+          <li class="ml--5"><Typography variant="body">We begin with a pre-cleaning survey to determine the specific fabric and identify the appropriate cleaning detergents and tools needed for the furniture upholstery cleaning services.</Typography></li>
+          <li class="ml--5"><Typography variant="body">Then we conduct a dry vacuum cleaning on the fabric to eliminate loose dirt, dry soil, and dust.</Typography></li>
+          <li class="ml--5"><Typography variant="body">After that, we apply a heavy-duty pre-spray designed to lift oily dirt and pollutants from the furniture, making them ready for extraction using high-performance machines.</Typography></li>
+          <li class="ml--5"><Typography variant="body">We work the cleaning solution onto the upholstery to loosen the soiling in preparation for extraction.</Typography></li>
+          <li class="ml--5"><Typography variant="body">Then we gently inject pure, softened hot water (reaching a maximum of 135 degrees) deep into the fibres, releasing the soil. We utilise a powerful hot water extraction machine to effectively remove the soil, addressing any remaining spots and stains individually with special products.</Typography></li>
+          <li class="ml--5"><Typography variant="body">Finally, we conclude the furniture upholstery cleaning services by rinsing and extracting again to ensure no chemical residues are left behind.</Typography></li>
+        </ol>
       </div>
 
       <FleurDivider></FleurDivider>
@@ -478,12 +478,9 @@ export default function Page() {
       <FleurDivider></FleurDivider>
 
       <div class="m-10% mb-3% flex flex-wrap flex-justify-center md-gap-15 gap-10">
-        <button class="cursor-pointer outline-none bg-brand-second-action hover-bg-brand-second-action-hover:hover font-size-6 font-600 w-200px h-60px c-paper flex flex-items-center flex-justify-center relative b-solid b-rd-3 b-4 b-brand-second-action hover-b-brand-second-action-hover:hover whitespace-normal line-height-6 word-spacing-0.5 py-9" style="box-shadow: 0 0 0 3px rgba(255, 255, 255, .9) inset; letter-spacing: 0.05rem;"><a href="/services" class="c-paper font-size-5">SERVICES</a></button>
-        <button class="cursor-pointer outline-none bg-brand-action hover-bg-brand-action-hover:hover font-size-6 font-600 w-200px h-60px c-paper flex flex-items-center flex-justify-center relative b-solid b-rd-3 b-4 b-brand-action hover-b-brand-action-hover:hover whitespace-normal line-height-6 word-spacing-0.5 py-9" style="box-shadow: 0 0 0 3px rgba(255, 255, 255, .9) inset; letter-spacing: 0.05rem;"><a href="/contact-us" class="c-paper font-size-5">REQUEST A QUOTE</a></button>
+        <a href="/services"><button class="cursor-pointer outline-none bg-brand-second-action hover-bg-brand-second-action-hover:hover font-size-5 font-600 w-200px h-60px c-paper flex flex-items-center flex-justify-center relative b-solid b-rd-3 b-4 b-brand-second-action hover-b-brand-second-action-hover:hover whitespace-normal line-height-6 word-spacing-0.5 py-9" style="box-shadow: 0 0 0 3px rgba(255, 255, 255, .9) inset; letter-spacing: 0.05rem;">SERVICES</button></a>
+        <a href="/contact-us"><button class="cursor-pointer outline-none bg-brand-action hover-bg-brand-action-hover:hover font-size-5 font-600 w-200px h-60px c-paper flex flex-items-center flex-justify-center relative b-solid b-rd-3 b-4 b-brand-action hover-b-brand-action-hover:hover whitespace-normal line-height-6 word-spacing-0.5 py-9" style="box-shadow: 0 0 0 3px rgba(255, 255, 255, .9) inset; letter-spacing: 0.05rem;">REQUEST A QUOTE</button></a>
       </div>
-
-
-
     </>
   );
 }

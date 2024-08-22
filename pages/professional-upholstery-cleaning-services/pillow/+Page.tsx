@@ -309,14 +309,14 @@ export default function Page() {
 
         <h2>The process of our pillow cleaning services:</h2>
         <div class="mt-20 py-8 px-8 md-px-14 bg-paper b-rd-3" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 18%);">
-        <ul>
-          <li class="ml--5"><p>First, we establish exactly what cleaning detergents and tools need to be used for the specific fabric and type of pillow.</p></li>
-          <li class="ml--5"><p>Second, we use a vacuum cleaner to clean the fabric. This removes any loose dirt, dry soils and dust.</p></li>
-          <li class="ml--5"><p>We then apply heavy duty pre-spray, which lifts oily dirt and pollutants from your pillows, after which they can be safely extracted using our high-performance extraction machines.</p></li>
-          <li class="ml--5"><p>The cleaning solution is worked onto the pillow. This loosens the soiling, making it ready for extraction.</p></li>
-          <li class="ml--5"><p>Pure softened hot water (which reaches a maximum of 135 Degrees) is gently injected deeply into the fibres. This releases the soil and allows our powerful hot water extraction machine to effectively remove it. Any remaining spots and stains are worked on individually using special detergents and products.</p></li>
-          <li class="ml--5"><p>Finally, we rinse and extract again to ensure no chemical residues are left behind.</p></li>
-        </ul>
+        <ol style="counter-reset: ordered; list-style: none;">
+          <li class="ml--5"><Typography variant="body">First, we establish exactly what cleaning detergents and tools need to be used for the specific fabric and type of pillow.</Typography></li>
+          <li class="ml--5"><Typography variant="body">Second, we use a vacuum cleaner to clean the fabric. This removes any loose dirt, dry soils and dust.</Typography></li>
+          <li class="ml--5"><Typography variant="body">We then apply heavy duty pre-spray, which lifts oily dirt and pollutants from your pillows, after which they can be safely extracted using our high-performance extraction machines.</Typography></li>
+          <li class="ml--5"><Typography variant="body">The cleaning solution is worked onto the pillow. This loosens the soiling, making it ready for extraction.</Typography></li>
+          <li class="ml--5"><Typography variant="body">Pure softened hot water (which reaches a maximum of 135 Degrees) is gently injected deeply into the fibres. This releases the soil and allows our powerful hot water extraction machine to effectively remove it. Any remaining spots and stains are worked on individually using special detergents and products.</Typography></li>
+          <li class="ml--5"><Typography variant="body">Finally, we rinse and extract again to ensure no chemical residues are left behind.</Typography></li>
+        </ol>
       </div>
 
       <FleurDivider></FleurDivider>
@@ -501,12 +501,9 @@ export default function Page() {
       <FleurDivider></FleurDivider>
 
       <div class="m-10% mb-3% flex flex-wrap flex-justify-center md-gap-15 gap-10">
-        <button class="cursor-pointer outline-none bg-brand-second-action hover-bg-brand-second-action-hover:hover font-size-6 font-600 w-200px h-60px c-paper flex flex-items-center flex-justify-center relative b-solid b-rd-3 b-4 b-brand-second-action hover-b-brand-second-action-hover:hover whitespace-normal line-height-6 word-spacing-0.5 py-9" style="box-shadow: 0 0 0 3px rgba(255, 255, 255, .9) inset; letter-spacing: 0.05rem;"><a href="/services" class="c-paper font-size-5">SERVICES</a></button>
-        <button class="cursor-pointer outline-none bg-brand-action hover-bg-brand-action-hover:hover font-size-6 font-600 w-200px h-60px c-paper flex flex-items-center flex-justify-center relative b-solid b-rd-3 b-4 b-brand-action hover-b-brand-action-hover:hover whitespace-normal line-height-6 word-spacing-0.5 py-9" style="box-shadow: 0 0 0 3px rgba(255, 255, 255, .9) inset; letter-spacing: 0.05rem;"><a href="/contact-us" class="c-paper font-size-5">REQUEST A QUOTE</a></button>
+        <a href="/services"><button class="cursor-pointer outline-none bg-brand-second-action hover-bg-brand-second-action-hover:hover font-size-5 font-600 w-200px h-60px c-paper flex flex-items-center flex-justify-center relative b-solid b-rd-3 b-4 b-brand-second-action hover-b-brand-second-action-hover:hover whitespace-normal line-height-6 word-spacing-0.5 py-9" style="box-shadow: 0 0 0 3px rgba(255, 255, 255, .9) inset; letter-spacing: 0.05rem;">SERVICES</button></a>
+        <a href="/contact-us"><button class="cursor-pointer outline-none bg-brand-action hover-bg-brand-action-hover:hover font-size-5 font-600 w-200px h-60px c-paper flex flex-items-center flex-justify-center relative b-solid b-rd-3 b-4 b-brand-action hover-b-brand-action-hover:hover whitespace-normal line-height-6 word-spacing-0.5 py-9" style="box-shadow: 0 0 0 3px rgba(255, 255, 255, .9) inset; letter-spacing: 0.05rem;">REQUEST A QUOTE</button></a>
       </div>
-
-
-
     </>
   );
 }

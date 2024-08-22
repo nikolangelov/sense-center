@@ -15,10 +15,10 @@ const GalerrySliderDesktop = () => {
 		<SliderProvider>
 			<div class="max-w-1000px m-auto position-relative hidden md-block">
 				<Slider options={{ loop: true, slides: { perView: 3, spacing: 10 } }}>
-					<img src="/assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" />
-					<img src="/assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" />
-					<img src="/assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" />
-					<img src="/assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" />
+					<img src="/assets/service-pics/carpet-professional-cleaning-1 (1).jpg" />
+					<img src="/assets/service-pics/carpet-professional-cleaning-2 (1).jpg" />
+					<img src="/assets/service-pics/carpet-professional-cleaning-3.jpg" />
+					<img src="/assets/service-pics/c6f1890a-f218-45ff-8543-754a9752f89c.jpeg" />
 					<img src="/assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" />
 					<img src="/assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" />
 				</Slider>
@@ -107,7 +107,7 @@ export function FaqSection() {
 	const { Container, Entry } = createCollapsable()
 	return <Container>
 		<Entry>
-			<ul>
+			<ol style="counter-reset: ordered; list-style: none;">
 				<li>
 					<Typography variant="h3">How long have you been in the carpet cleaning business?</Typography>
 					<Typography variant="body">"Fine Carpet Cleaning" Ltd. has been operating in the carpet cleaning industry since 2012. We serve both commercial and residential clients, and over the years, we've cleaned all kinds of carpets, rugs, upholstery, and stains. Through these experiences, we've acquired valuable knowledge and expertise. Our commitment to delivering top-notch service has driven us to improve our services in the following ways:</Typography></li>
@@ -122,30 +122,33 @@ export function FaqSection() {
 				</li>
 				<li>
 					<Typography variant="h3">When do you need professional carpet cleaning?</Typography>
-					<Typography variant="body">In our experience, the majority of our clients have sought our carpet cleaning services when:</Typography></li>
-				<li>
-					<p>Their carpet has had stains that they couldn’t remove by themselves;</p>
-				</li>
-				<li>
-					<p>Their carpet has an unpleasant odour;</p>
-				</li>
-				<li>
-					<p>Their carpet has been attracting pests, such as spiders or mice;</p>
-				</li>
-				<li>
-					<p>Their carpet has lost its colour;</p>
-				</li>
-				<li>
-					<p>They started to have allergies or asthma attacks;</p>
-				</li>
-				<li>
-					<p>Their carpet has been visibly dirty;</p>
-				</li>
-				<li>
-					<p>They wanted to prolong their carpet’s life;</p>
-				</li>
-				<li>
-					<p>Or they simply wanted to refresh their carpets.</p>
+					<Typography variant="body">In our experience, the majority of our clients have sought our carpet cleaning services when:</Typography>
+					<ul class="ml--5" style="list-style: initial;">
+						<li class="ml--5">
+							<p>Their carpet has had stains that they couldn’t remove by themselves;</p>
+						</li>
+						<li class="ml--5">
+							<p>Their carpet has an unpleasant odour;</p>
+						</li>
+						<li class="ml--5">
+							<p>Their carpet has been attracting pests, such as spiders or mice;</p>
+						</li>
+						<li class="ml--5">
+							<p>Their carpet has lost its colour;</p>
+						</li>
+						<li class="ml--5">
+							<p>They started to have allergies or asthma attacks;</p>
+						</li>
+						<li class="ml--5">
+							<p>Their carpet has been visibly dirty;</p>
+						</li>
+						<li class="ml--5">
+							<p>They wanted to prolong their carpet’s life;</p>
+						</li>
+						<li class="ml--5">
+							<p>Or they simply wanted to refresh their carpets.</p>
+						</li>
+					</ul>
 				</li>
 				<li>
 					<Typography variant="h3">How frequently should a carpet be professionally cleaned?</Typography>
@@ -196,10 +199,10 @@ export function FaqSection() {
 					<p>Whether it requires extra stain removal treatment or not.</p>
 					<Typography variant="body">For example wool carpets tend to absorb more water and take longer to dry, typically ranging between 10 and 12 hours. In cases where the carpet is exceptionally dirty and requires multiple treatments, the drying process may extend even further.</Typography>
 					<Typography variant="body">On the other hand, synthetic carpets tend to dry faster, usually within a span of 7 to 10 hours. Nevertheless, the drying duration still depends on the carpet's level of dirtiness and the necessity for multiple treatments.</Typography></li>
-			</ul>
+			</ol>
 		</Entry>
 		<Entry>
-			<ul>
+			<ol style="counter-reset: ordered; list-style: none;">
 				<li>
 					<Typography variant="h3">How long will the carpet cleaning service take?</Typography>
 					<Typography variant="body">The duration of our carpet cleaning service depends on the following factors:</Typography>
@@ -236,7 +239,7 @@ export function FaqSection() {
 				<li>
 					<Typography variant="h3">What happens if your cleaner damages anything while performing carpet cleaning at my property?</Typography>
 					<Typography variant="body">We are fully insured, and if an accident happens, we are fully covered.</Typography></li>
-			</ul>
+			</ol>
 		</Entry>
 	</Container>
 }
@@ -244,8 +247,8 @@ export function FaqSection() {
 export default function Page() {
 	return (
 		<>
-			<h1 class="mt-10 md-mt-17 font-size-14 md-font-size-16 md-line-height-18 line-height-16">“Fine Carpet Cleaning” Ltd.</h1>
-			<div class="flex flex-justify-center"><img class="b-rd-3 md-my-20 my-10 md-mt-10 mt-2" src="/assets/Професионално почистване на заведения.jpg" alt="" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 30%); width: -moz-available; width: -webkit-fill-available; width: fill-available;" /></div>
+			<h1 class="mt-10 md-mt-20 font-size-14 md-font-size-21 md-line-height-18 line-height-16">Fine Carpet Cleaning</h1>
+			<div class="flex flex-justify-center"><img class="b-rd-3 md-my-20 my-10 md-mt-10 mt-2" src="/assets/service-pics/carpet-cleaning-specialists-3.jpg" alt="" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 30%); width: -moz-available; width: -webkit-fill-available; width: fill-available;" /></div>
 			<div class="mt-10 py-8 px-8 md-px-14 b-rd-3 bg-paper line-height-8 text-justify font-size-4.4" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 18%);">“Fine Carpet Cleaning” Ltd. is a carpet cleaning company that operates in all London boroughs. We provide a variety of commercial and domestic carpet cleaning services, tailoring them to our client's needs.</div>
 
 			<FleurDivider />
@@ -253,7 +256,7 @@ export default function Page() {
 			<h2 class="mb-15 md-mb-20">Our main cleaning services</h2>
 			<div class="p-6 pt-12 bg-paper b-rd-3 flex flex-justify-center" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 18%);">
 				<a href="/professional-carpet-cleaning-services">
-					<img class="md-mt-3 mt--6 mx-auto block md-w-650px xs-w-330px w-270px" src="/assets/Професионално почистване на заведения.jpg" alt="" />
+					<img class="md-mt-3 mt--6 mx-auto block md-w-650px xs-w-330px w-270px" src="/assets/service-pics/carpet-cleaning-specialists-3.jpg" alt="" />
 					<h3 class="flex flex-justify-center flex-content-center flex-wrap flex-items-center md-mt-16 md-mb-9 mb-4 text-center font-size-7 md-font-size-9">Professional carpet cleaning services</h3>
 				</a>
 			</div>
@@ -444,8 +447,8 @@ export default function Page() {
 			<FleurDivider></FleurDivider>
 
 			<div class="m-10% mb-3% flex flex-wrap flex-justify-center md-gap-15 gap-10">
-				<button class="cursor-pointer outline-none bg-brand-action hover-bg-brand-action-hover:hover font-size-6 font-600 w-200px h-60px c-paper flex flex-items-center flex-justify-center relative b-solid b-rd-3 b-4 b-brand-action hover-b-brand-action-hover:hover whitespace-normal line-height-6 word-spacing-0.5 py-9" style="box-shadow: 0 0 0 3px rgba(255, 255, 255, .9) inset; letter-spacing: 0.05rem;"><a href="/contact-us" class="c-paper font-size-5">REQUEST A QUOTE</a></button>
-				<button class="cursor-pointer outline-none bg-brand-second-action hover-bg-brand-second-action-hover:hover font-size-6 font-600 w-200px h-60px c-paper flex flex-items-center flex-justify-center relative b-solid b-rd-3 b-4 b-brand-second-action hover-b-brand-second-action-hover:hover whitespace-normal line-height-6 word-spacing-0.5 py-9" style="box-shadow: 0 0 0 3px rgba(255, 255, 255, .9) inset; letter-spacing: 0.05rem;"><a href="/prices" class="c-paper font-size-5">PRICES</a></button>
+				<a href="/contact-us"><button class="cursor-pointer outline-none bg-brand-action hover-bg-brand-action-hover:hover font-size-5 font-600 w-200px h-60px c-paper flex flex-items-center flex-justify-center relative b-solid b-rd-3 b-4 b-brand-action hover-b-brand-action-hover:hover whitespace-normal line-height-6 word-spacing-0.5 py-9" style="box-shadow: 0 0 0 3px rgba(255, 255, 255, .9) inset; letter-spacing: 0.05rem;">REQUEST A QUOTE</button></a>
+				<a href="/prices"><button class="cursor-pointer outline-none bg-brand-second-action hover-bg-brand-second-action-hover:hover font-size-5 font-600 w-200px h-60px c-paper flex flex-items-center flex-justify-center relative b-solid b-rd-3 b-4 b-brand-second-action hover-b-brand-second-action-hover:hover whitespace-normal line-height-6 word-spacing-0.5 py-9" style="box-shadow: 0 0 0 3px rgba(255, 255, 255, .9) inset; letter-spacing: 0.05rem;">PRICES</button></a>
 			</div>
 		</>
 	);
