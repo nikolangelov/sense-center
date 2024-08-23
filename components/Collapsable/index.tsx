@@ -27,7 +27,9 @@ export function createCollapsable(): CollapsableComponents {
     return <Show when={idx <= shown()}>
       <div class="mt-5 py-8 px-10 md-pr-12 md-pl-8 bg-paper b-rd-3"
         style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 18%);">
-        {props.children}
+        <ul style="list-style-type: none;">
+          {props.children}
+        </ul>
       </div>
     </Show>
   }

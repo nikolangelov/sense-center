@@ -86,10 +86,10 @@ function getReviewCount(rating: number) {
 function StarReview(props: { src: string; filterStars: number | undefined; stars: number; hrefGoogleReview: string; name: string; date: string; reviewText: string; }) {
   return (
     <Show when={props.filterStars === undefined || props.filterStars === props.stars}>
-      <table class="m-y-25 5-stars w-90% md-w-70% m-auto border-style-solid b-gray-2" style="border-width: 1px 0px 1px 0px;">
+      <table class="m-y-25 w-90% md-w-70% m-auto border-style-solid b-gray-2" style="border-width: 1px 0px 1px 0px;">
         <tbody>
           <tr>
-            <td class="top-row-of-new-google-review flex flex-justify-between flex-items-center">
+            <td class="flex flex-justify-between flex-items-center">
               <div class="profile-pic-and-name-in-review flex flex-items-center gap-4">
                 <img class="w-12 h-12" src={props.src} alt="profile" />
                 <p class="flex flex-col"><b>{props.name}</b>{props.date}</p>

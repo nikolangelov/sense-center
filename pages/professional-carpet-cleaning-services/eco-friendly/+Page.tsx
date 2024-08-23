@@ -2,7 +2,6 @@ import RiArrowRightSLine from '~icons/ri/arrow-right-s-line';
 import RiArrowLeftSLine from '~icons/ri/arrow-left-s-line';
 import "solid-slider/slider.css";
 import { Component, createSignal, Show } from 'solid-js';
-import RiYoutubeFill from '~icons/ri/youtube-fill';
 import { FacebookLikeGallery } from '../../../components/FacebookLikeGallery';
 import { createSlider, Slider, SliderButton, SliderProvider } from 'solid-slider';
 import { RotatingBanners } from '../../../components/RotatingBanners';

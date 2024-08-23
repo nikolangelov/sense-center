@@ -1,7 +1,6 @@
 import 'uno.css'
 import "./style.css";
 import { children, createEffect, JSX, onCleanup, onMount, createSignal, Show } from "solid-js";
-import HamburgerMenuIcon from '~icons/mdi/hamburger-menu';
 import MdiKeyboardArrowUp from '~icons/mdi/keyboard-arrow-up';
 import RiPhoneFill from '~icons/ri/phone-fill';
 import MdiClock from '~icons/mdi/clock';
@@ -13,8 +12,6 @@ import MdiPlaceOutline from '~icons/mdi/place-outline';
 import MdiEmailEditOutline from '~icons/mdi/email-edit-outline';
 import MdiPhoneOutline from '~icons/mdi/phone-outline';
 import MdiCommentAccountOutline from '~icons/mdi/comment-account-outline';
-import { Dropdown } from "solid-bootstrap-core";
-import RiCloseFill from '~icons/ri/close-fill';
 import RiArrowDownSLine from '~icons/ri/arrow-down-s-line';
 import Cookies from 'js-cookie';
 
@@ -287,16 +284,6 @@ const CookieConsent = () => {
   );
 };
 
-function DropownMenuLink(props: { href: string | undefined; children: number | boolean | Node | JSX.ArrayElement | (string & {}) | null | undefined; }) {
-  return (
-    <a href={props.href}>
-      <ul class="left-0 w-full my-3 flex flex-nowrap c-paper-inv hover-c-brand:hover font-size-4.5 font-500" style="font-family: Open Sans, sans-serif; letter-spacing: 0.6px;">
-        <li><div class="font-sans font-400 c-paper">{props.children}</div></li>
-      </ul>
-    </a>
-  );
-}
-
 const MyDropdown = (props: { closeMenu: () => void; }) => {
   const [isDropdownOpen, setDropdownOpen] = createSignal(false);
 
@@ -304,106 +291,45 @@ const MyDropdown = (props: { closeMenu: () => void; }) => {
     props.closeMenu();
   };
 
-  const handleArrowClick = (e: { stopPropagation: () => void; }) => {
-    e.stopPropagation();
-    setDropdownOpen(!isDropdownOpen());
-  };
-
   return (
-    <div class="dropdown-menu show w-full overflow-y-auto max-h-770px sticky">
-      <Dropdown show={isDropdownOpen()}>
-        <Dropdown.Toggle>
-          {(props) => (
-            <div {...props} class="b-none outline-none bg-transparent w-full">
-              <div class="flex flex-justify-evenly w-full">
-                <div class="py-5 flex flex-content-center flex-justify-between w-full">
-                  <a onClick={handleLinkClick}
-                    href="/services"
-                    class="w-full flex flex-items-center flex-nowrap c-paper hover-c-brand:hover font-size-5 font-500"
-                    style="font-family: Open Sans, sans-serif; letter-spacing: 0.6px;"
-                  >
-                    <MdiVacuum class="mr-3 hover-c-brand-second-action:hover" />Services
-                  </a>
-                  <RiArrowDownSLine class="w-10 h-auto c-paper cursor-pointer" onClick={handleArrowClick} />
-                </div>
-              </div>
-            </div>
-          )}
-        </Dropdown.Toggle>
-        <Dropdown.Menu flip offset={[0, 4]}>
-          {(menuProps, meta) => (
-            <div
-              {...menuProps}
-              onClick={handleLinkClick}
-              class="show w-full max-h-1000px"
-              style={{
-                transition: 'visibility 500ms, opacity 500ms',
-                visibility: meta.show ? 'visible' : 'hidden',
-                opacity: meta.show ? '1' : '0',
-                ...menuProps.style,
-              }}
-            >
-              <DropownMenuLink href="/professional-carpet-cleaning-services/steam">Carpet steam cleaning</DropownMenuLink>
-              <DropownMenuLink href="/professional-carpet-cleaning-services/dry">Dry carpet cleaning</DropownMenuLink>
-              <DropownMenuLink href="/professional-carpet-cleaning-services/eco-friendly">Eco-friendly carpet cleaning</DropownMenuLink>
-              <DropownMenuLink href="/professional-carpet-cleaning-services/same-day">Same day carpet cleaning</DropownMenuLink>
-              <DropownMenuLink href="/professional-carpet-cleaning-services/fast-dry">Fast dry carpet cleaning</DropownMenuLink>
-              <DropownMenuLink href="/professional-stain-removal-services">Carpet stain removal</DropownMenuLink>
-              <DropownMenuLink href="/stain-protection-services">Carpet stain protection</DropownMenuLink>
-              <DropownMenuLink href="/professional-carpet-cleaning-services/commercial">Commercial carpet cleaning</DropownMenuLink>
-              <DropownMenuLink href="/professional-carpet-cleaning-services/residential">Residential carpet cleaning</DropownMenuLink>
-              <DropownMenuLink href="/professional-carpet-cleaning-services/commercial/office">Office carpet cleaning</DropownMenuLink>
-              <DropownMenuLink href="/professional-upholstery-cleaning-services/sofa">Sofa cleaning</DropownMenuLink>
-              <DropownMenuLink href="/professional-upholstery-cleaning-services/sofa/leather">Leather sofa cleaning</DropownMenuLink>
-              <DropownMenuLink href="/professional-upholstery-cleaning-services/furniture">Furniture cleaning</DropownMenuLink>
-              <DropownMenuLink href="/professional-upholstery-cleaning-services/mattress">Mattress cleaning</DropownMenuLink>
-              <DropownMenuLink href="/professional-upholstery-cleaning-services/pillow">Pillow cleaning</DropownMenuLink>
-              <DropownMenuLink href="/professional-stain-removal-services">Upholstery stain removal</DropownMenuLink>
-              <DropownMenuLink href="/stain-protection-services">Upholstery stain protection</DropownMenuLink>
-              <DropownMenuLink href="/professional-rug-cleaning-services/steam">Rug steam cleaning</DropownMenuLink>
-              <DropownMenuLink href="/professional-rug-cleaning-services/dry">Dry rug cleaning</DropownMenuLink>
-              <DropownMenuLink href="/professional-stain-removal-services">Rug stain removal</DropownMenuLink>
-              <DropownMenuLink href="/stain-protection-services">Rug stain protection</DropownMenuLink>
-              <DropownMenuLink href="/antiviral-sanitisation-services">Antiviral sanitisation</DropownMenuLink>
-              <hr class="b-none bg-brand-second-action h-1px my-0"></hr>
-            </div>
-          )}
-        </Dropdown.Menu>
-        <hr class="b-none bg-brand-second-action h-1px my-0"></hr>
-        <div
-          class={`py-5 b-b-solid b-b border-brand-second-action transition-all duration-500 ${isDropdownOpen() ? 'mt-245' : 'mt-0'}`}
-        >
-          <a onClick={handleLinkClick} href="/prices" class="flex flex-items-center flex-nowrap c-paper hover-c-brand:hover font-size-5 font-500" style="font-family: Open Sans, sans-serif; letter-spacing: 0.6px;">
-            <RiMoneyPoundCircleLine class="mr-3" />Prices
-          </a>
-        </div>
+    <div class="w-full overflow-y-auto max-h-770px sticky">
+      <div class="py-5 b-b-solid b-b border-brand-second-action">
+        <a onClick={handleLinkClick} href="/services" class="flex flex-items-center flex-nowrap c-paper-inv hover-c-brand:hover font-size-5 font-500" style="font-family: Open Sans, sans-serif; letter-spacing: 0.6px;">
+          <MdiVacuum class="mr-3" />Services
+        </a>
+      </div>
 
-        <div class="py-5 b-b-solid b-b border-brand-second-action">
-          <a onClick={handleLinkClick} href="/reviews" class="flex flex-items-center flex-nowrap c-paper hover-c-brand:hover font-size-5 font-500" style="font-family: Open Sans, sans-serif; letter-spacing: 0.6px;">
-            <MdiCommentAccountOutline class="mr-3" />Reviews
-          </a>
-        </div>
-        <div class="py-5 b-b-solid b-b border-brand-second-action">
-          <a onClick={handleLinkClick} href="/about-us" class="flex flex-items-center flex-nowrap c-paper hover-c-brand:hover font-size-5 font-500" style="font-family: Open Sans, sans-serif; letter-spacing: 0.6px;">
-            <MdiAccountGroupOutline class="mr-3" />About us
-          </a>
-        </div>
-        <div class="py-5 b-b-solid b-b border-brand-second-action">
-          <a onClick={handleLinkClick} href="/areas-we-cover" class="flex flex-items-center flex-nowrap c-paper hover-c-brand:hover font-size-5 font-500" style="font-family: Open Sans, sans-serif; letter-spacing: 0.6px;">
-            <MdiPlaceOutline class="mr-3" />Areas we cover
-          </a>
-        </div>
-        <div class="py-5 b-b-solid b-b border-brand-second-action">
-          <a onClick={handleLinkClick} href="/contact-us" class="flex flex-items-center flex-nowrap c-paper hover-c-brand:hover font-size-5 font-500" style="font-family: Open Sans, sans-serif; letter-spacing: 0.6px;">
-            <MdiPhoneOutline class="mr-3" />Contact us
-          </a>
-        </div>
-        <div class="py-5 b-b-solid b-b border-brand-second-action">
-          <a onClick={handleLinkClick} href="/feedback" class="flex flex-items-center flex-nowrap c-paper hover-c-brand:hover font-size-5 font-500" style="font-family: Open Sans, sans-serif; letter-spacing: 0.6px;">
-            <MdiEmailEditOutline class="mr-3" />Feedback
-          </a>
-        </div>
-      </Dropdown>
+      <div class="py-5 b-b-solid b-b border-brand-second-action">
+        <a onClick={handleLinkClick} href="/prices" class="flex flex-items-center flex-nowrap c-paper-inv hover-c-brand:hover font-size-5 font-500" style="font-family: Open Sans, sans-serif; letter-spacing: 0.6px;">
+          <RiMoneyPoundCircleLine class="mr-3" />Prices
+        </a>
+      </div>
+
+      <div class="py-5 b-b-solid b-b border-brand-second-action">
+        <a onClick={handleLinkClick} href="/reviews" class="flex flex-items-center flex-nowrap c-paper-inv hover-c-brand:hover font-size-5 font-500" style="font-family: Open Sans, sans-serif; letter-spacing: 0.6px;">
+          <MdiCommentAccountOutline class="mr-3" />Reviews
+        </a>
+      </div>
+      <div class="py-5 b-b-solid b-b border-brand-second-action">
+        <a onClick={handleLinkClick} href="/about-us" class="flex flex-items-center flex-nowrap c-paper-inv hover-c-brand:hover font-size-5 font-500" style="font-family: Open Sans, sans-serif; letter-spacing: 0.6px;">
+          <MdiAccountGroupOutline class="mr-3" />About us
+        </a>
+      </div>
+      <div class="py-5 b-b-solid b-b border-brand-second-action">
+        <a onClick={handleLinkClick} href="/areas-we-cover" class="flex flex-items-center flex-nowrap c-paper-inv hover-c-brand:hover font-size-5 font-500" style="font-family: Open Sans, sans-serif; letter-spacing: 0.6px;">
+          <MdiPlaceOutline class="mr-3" />Areas we cover
+        </a>
+      </div>
+      <div class="py-5 b-b-solid b-b border-brand-second-action">
+        <a onClick={handleLinkClick} href="/contact-us" class="flex flex-items-center flex-nowrap c-paper-inv hover-c-brand:hover font-size-5 font-500" style="font-family: Open Sans, sans-serif; letter-spacing: 0.6px;">
+          <MdiPhoneOutline class="mr-3" />Contact us
+        </a>
+      </div>
+      <div class="py-5 b-b-solid b-b border-brand-second-action">
+        <a onClick={handleLinkClick} href="/feedback" class="flex flex-items-center flex-nowrap c-paper-inv hover-c-brand:hover font-size-5 font-500" style="font-family: Open Sans, sans-serif; letter-spacing: 0.6px;">
+          <MdiEmailEditOutline class="mr-3" />Feedback
+        </a>
+      </div>
     </div>
   );
 };
@@ -682,7 +608,7 @@ function HamburgerMenu() {
 
       <Show when={open()}>
         <div
-          class="fixed w-screen bg-brand left-0 top-19.6 px-10 transition-all transition-duration-400"
+          class="fixed w-screen bg-#f7f7f7 left-0 top-19.6 px-10 transition-all transition-duration-400"
           style={{ height: menuHeight(), overflow: 'hidden' }}
         >
           <div class="py-15 text-left">

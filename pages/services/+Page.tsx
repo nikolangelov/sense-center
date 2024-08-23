@@ -10,8 +10,8 @@ function FleurDivider() {
 function AllServicesButton(props: { href: string; src: string; alt: string; children: HTMLElement | any }) {
   return (
     <a href={props.href}>
-      <div class="bg-paper mt-7 mb-2 max-w-300px md-max-w-800px b-rd-3 px-7 pt-7 pb-2 flex flex-col flex-justify-center" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 18%); ">
-        <img class="md-max-w-400px max-w-270px" src={props.src} alt={props.alt} />
+      <div class="bg-paper mt-7 mb-2 max-w-350px md-max-w-800px b-rd-3 px-7 pt-7 pb-2 flex flex-col flex-justify-center" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 18%); ">
+        <img class="md-max-w-400px max-w-300px mx-auto" src={props.src} alt={props.alt} />
         <h3 class="flex flex-justify-center flex-content-center flex-wrap flex-items-center font-size-7 md-font-size-9 h-60px md-w-400px hover-c-brand:hover text-center">{props.children}</h3>
       </div>
     </a>
@@ -29,9 +29,7 @@ function AllServicesButtonContainer(props: { children: HTMLElement | any }) {
 export default function Page() {
   return (
     <>
-
-      <h1 class="md-mt-20 mt-10 md-mb-30 mb-0">All services we offer</h1>
-
+      <h1 class="md-mt-20 mt-10 md-mb-25 mb-0">All services we offer</h1>
       <a href="/professional-carpet-cleaning-services"><h2 class="hover-c-brand:hover md-mb-15 mb-5">Carpet cleaning services</h2></a>
 
       <AllServicesButtonContainer>
