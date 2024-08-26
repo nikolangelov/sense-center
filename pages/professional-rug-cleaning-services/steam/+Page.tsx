@@ -52,21 +52,21 @@ const GalerrySliderMobile = () => {
 };
 
 const VideoPlayer = () => {
-	return (
-		<div class="flex flex-justify-center flex-items-center mt-20">
-			<video
-				class="mt-10 b-rd-3" style="width: 100%; width: -moz-available; width: -webkit-fill-available; width: fill-available;"
-				autoplay
-				controls
-				muted
-			>
-				<source
-					src="/assets/Professional Carpet Cleaning London - Fine Carpet Cleaning (1).mp4"
-					type="video/mp4"
-				/>
-			</video>
-		</div>
-	);
+  return (
+    <div class="flex flex-justify-center flex-items-center mt-20">
+      <video
+        class="mt-10 b-rd-3" style="width: 100%; width: -moz-available; width: -webkit-fill-available; width: fill-available;"
+        autoplay
+        controls
+        muted
+      >
+        <source
+          src="/assets/Professional Carpet Cleaning London - Fine Carpet Cleaning (1).mp4"
+          type="video/mp4"
+        />
+      </video>
+    </div>
+  );
 };
 
 function FleurDivider() {
@@ -82,161 +82,167 @@ export function FaqSection() {
   const { Container, Entry } = createCollapsable()
   return <Container>
     <Entry>
-      <ul>
-        <li>
-          <Typography variant="h3">Do you have a cancellation fee for the Chinese rug cleaning near me?</Typography>
-          <Typography variant="body">Yes, we do have a cancellation fee, but it is only applied if you cancel on the day of the deep rug cleaning. In that case, you will lose the deposit you made.</Typography></li>
-        <li>
-          <Typography variant="h3">Do I need to pay for the congestion / parking charge?</Typography>
-          <Typography variant="body">Yes, the client will be asked to provide appropriate parking arrangements for our vehicles close to the property and to pay for any associated parking or transportation costs.</Typography></li>
-        <li>
-          <Typography variant="h3">Do I need to move my furniture before the deep rug cleaning?</Typography>
-          <Typography variant="body">For insurance concerns, we would really appreciate your help in relocating small, fragile, or expensive furniture pieces like lamps and ornaments. Before we arrive, if at all achievable, please place them in a secure location that won't be damaged during cleaning. During the cleaning, we would be more than happy to assist with moving any additional lightweight furniture, such as chairs, couches, and tables. Once the cleaning is completed, we will return them to their previous locations. There will be a further charge if large items such as couches, beds, closets, and cabinets need to be moved. This is due to the fact that it requires more time and effort from our technician, who will be paid appropriately. Our main goal is to reduce as much stress from the procedure for you as we can.</Typography></li>
-        <li>
-          <Typography variant="h3">What if I live on the 4th floor or above and I have no lift?</Typography>
-          <Typography variant="body">Because our equipment weighs over 50 kg, we charge additionally for each additional floor that needs to be carried by hand. The reason is that we couldn't complete as much work that day as we typically can because this usually takes a long time and our technicians become tired easily.</Typography></li>
-        <li>
-          <Typography variant="h3">Are you insured?</Typography>
-          <Typography variant="body">Yes, we are fully insured.</Typography></li>
-      </ul>
+      <li>
+        <Typography variant="h3">1. Do you have a cancellation fee for the Chinese rug cleaning near me?</Typography>
+        <Typography variant="body">Yes, we do have a cancellation fee, but it is only applied if you cancel on the day of the deep rug cleaning. In that case, you will lose the deposit you made.</Typography></li>
+      <li>
+        <Typography variant="h3">2. Do I need to pay for the congestion / parking charge?</Typography>
+        <Typography variant="body">Yes, the client will be asked to provide appropriate parking arrangements for our vehicles close to the property and to pay for any associated parking or transportation costs.</Typography></li>
+      <li>
+        <Typography variant="h3">3. Do I need to move my furniture before the deep rug cleaning?</Typography>
+        <Typography variant="body">For insurance concerns, we would really appreciate your help in relocating small, fragile, or expensive furniture pieces like lamps and ornaments. Before we arrive, if at all achievable, please place them in a secure location that won't be damaged during cleaning. During the cleaning, we would be more than happy to assist with moving any additional lightweight furniture, such as chairs, couches, and tables. Once the cleaning is completed, we will return them to their previous locations. There will be a further charge if large items such as couches, beds, closets, and cabinets need to be moved. This is due to the fact that it requires more time and effort from our technician, who will be paid appropriately. Our main goal is to reduce as much stress from the procedure for you as we can.</Typography></li>
+      <li>
+        <Typography variant="h3">4. What if I live on the 4th floor or above and I have no lift?</Typography>
+        <Typography variant="body">Because our equipment weighs over 50 kg, we charge additionally for each additional floor that needs to be carried by hand. The reason is that we couldn't complete as much work that day as we typically can because this usually takes a long time and our technicians become tired easily.</Typography></li>
+      <li>
+        <Typography variant="h3">5. Are you insured?</Typography>
+        <Typography variant="body">Yes, we are fully insured.</Typography></li>
     </Entry>
     <Entry>
-      <ul>
-        <li>
-          <Typography variant="h3">What happens if your cleaner damages anything while performing the rug steam cleaning service?</Typography>
-          <Typography variant="body">Since we have complete insurance, we will be compensated for any accidents that occur.</Typography></li>
-        <li>
-          <Typography variant="h3">How long does the process of deep rug cleaning take?</Typography>
-          <Typography variant="body">The duration of the deep rug cleaning process depends mainly on:</Typography></li>
-        <li>
+      <li>
+        <Typography variant="h3">6. What happens if your cleaner damages anything while performing the rug steam cleaning service?</Typography>
+        <Typography variant="body">Since we have complete insurance, we will be compensated for any accidents that occur.</Typography></li>
+      <li>
+        <Typography variant="h3">7. How long does the process of deep rug cleaning take?</Typography>
+        <Typography variant="body">The duration of the deep rug cleaning process depends mainly on:</Typography></li>
+      <ul class="ml--5" style="list-style: initial;">
+        <Typography variant="li">
           <p>How soiled the rug is;</p>
-        </li>
-        <li>
+        </Typography>
+        <Typography variant="li">
           <p>The size and quantity of the rugs;</p>
-        </li>
-        <li>
-          
+        </Typography>
+        <Typography variant="li">
           <p>If the rug needs any stain removal treatments.</p>
-          <Typography variant="body">If you want to receive more detailed information, please feel free to contact us at any suitable time for you and we will estimate the duration of the cleaning process for your specific situation.</Typography>
-        </li>
-        <li>
-          <Typography variant="h3">How long does it take a rug to dry after steam cleaning?</Typography>
-          <Typography variant="body">It depends on the rug and the cleaning method used, but the approximate time for the carpet to get dry after steam cleaning is 7 to 9 hours.</Typography></li>
-        <li>
-          <Typography variant="h3">Do you guarantee that after the Chinese rug cleaning near me, all stains will be removed?</Typography>
-          <Typography variant="body">Unfortunately, there are a number of external factors that prevent us from offering a complete guarantee. Among these are:</Typography></li>
-        <li>
-          <p>The age of the stains;</p>
-        </li>
-        <li>
-          <p>The material causing the stains;</p>
-        </li>
-        <li>
-          <p>The rug's type and material;</p>
-        </li>
-        <li>
-          <p>If the stains were previously handled incorrectly.</p>
-          <Typography variant="body">However, we guarantee to use every resource at our disposal to get rid of any stains on your rug. Our strategy entails:</Typography>
-        </li>
-
-        <li>
-          <p>Using cutting-edge cleaning equipment;</p>
-        </li>
-        <li>
-          <p>Using carefully selected, high-quality detergents;</p>
-        </li>
-        <li>
-          <p>Adjusting our strategy based on the particular type of rug.</p>
-        </li>
-        <li>
-          <Typography variant="h3">How soon can I expect a technician to clean my rug?</Typography>
-          <Typography variant="body">We'll work to schedule you an appointment as quickly as we can. Though there are occasionally exceptions, we are often fully booked three days in advance.</Typography></li>
-        <li>
-          <Typography variant="h3">Can you give me a quote for the steam clean rug cost over the phone or do you need to visit my property?</Typography>
-          <Typography variant="body">It is not necessary for us to visit your property in order to provide you with an estimate over the phone. On the other hand, commercial property may need a site visit. Online quotes for the steam clean rug cost are also available.</Typography></li>
-        <li>
-          <Typography variant="h3">What payment methods do you accept for deep rug cleaning?</Typography>
-          <Typography variant="body">We accept debit / credit cards, bank transfers and cash payments handed directly to our team.</Typography></li>
-        <li>
-          <Typography variant="h3">Can you provide me with an invoice for the steam clean rug cost?</Typography>
-          <Typography variant="body">Yes, we will send you a receipt via email.</Typography></li>
-        <li>
-          <Typography variant="h3">Are you qualified for rug steam cleaning services?</Typography>
-          <Typography variant="body">Yes, we are fully qualified members of the National Carpet Cleaners Association (<a class="color-paper-link hover-color-paper-link-hover:hover" href="https://trustedlocalcleaners.ncca.co.uk/listing/fine-carpet-cleaning-ltd/" target="_blank" rel="noopener">NCCA</a>), the industry association recognised in the UK, and of <a class="color-paper-link hover-color-paper-link-hover:hover" href="https://www.checkatrade.com/trades/FineCarpetCleaning" target="_blank" rel="noopener">Checkatrade</a>.</Typography></li>
-        <li>
-          <Typography variant="h3">How long have you been in the rug cleaning business?</Typography>
-          <Typography variant="body">Since 2012, we have been in the rug care industry. We have accumulated a great deal of knowledge over the years dealing with all kinds of carpets, rugs, upholstery, and stains from both commercial and residential clients. With the help of this knowledge and our commitment to flawless execution, we improve our services by:</Typography></li>
-        <li>
-          <p>Consistently replacing our machinery and equipment with better models when available;</p>
-        </li>
-        <li>
-          <p>Testing and improving our cleaning supplies on a regular basis;</p>
-        </li>
-        <li>
-          <p>Always looking for ways to become more knowledgeable and skilled through further professional training and courses.</p>
-        </li>
-        <li>
-          <Typography variant="h3">Can you give me a discount for the Chinese rug cleaning near me?</Typography>
-          <Typography variant="body">Our deep rug cleaning prices are not only extremely affordable but also among the most attractive on the market, not only being highly competitive but also reflecting our commitment to high-quality cleaning services. We use top-of-the-line equipment and over 20 premium cleaning products. To get the best deal, we recommend bundling all the services you need. This cost efficiency arises from reducing the initial expenses and additional fees associated with each technician visit, such as travel time, parking, and managing heavy equipment during loading and unloading.</Typography></li>
+        </Typography>
       </ul>
+      <li>
+        <Typography variant="body">If you want to receive more detailed information, please feel free to contact us at any suitable time for you and we will estimate the duration of the cleaning process for your specific situation.</Typography>
+      </li>
+      <li>
+        <Typography variant="h3">8. How long does it take a rug to dry after steam cleaning?</Typography>
+        <Typography variant="body">It depends on the rug and the cleaning method used, but the approximate time for the carpet to get dry after steam cleaning is 7 to 9 hours.</Typography></li>
+      <li>
+        <Typography variant="h3">9. Do you guarantee that after the Chinese rug cleaning near me, all stains will be removed?</Typography>
+        <Typography variant="body">Unfortunately, there are a number of external factors that prevent us from offering a complete guarantee. Among these are:</Typography></li>
+      <ul class="ml--5" style="list-style: initial;">
+        <Typography variant="li">
+          <p>The age of the stains;</p>
+        </Typography>
+        <Typography variant="li">
+          <p>The material causing the stains;</p>
+        </Typography>
+        <Typography variant="li">
+          <p>The rug's type and material;</p>
+        </Typography>
+        <Typography variant="li">
+          <p>If the stains were previously handled incorrectly.</p>
+        </Typography>
+      </ul>
+      <li>
+        <Typography variant="body">However, we guarantee to use every resource at our disposal to get rid of any stains on your rug. Our strategy entails:</Typography>
+      </li>
+      <ul class="ml--5" style="list-style: initial;">
+        <Typography variant="li">
+          <p>Using cutting-edge cleaning equipment;</p>
+        </Typography>
+        <Typography variant="li">
+          <p>Using carefully selected, high-quality detergents;</p>
+        </Typography>
+        <Typography variant="li">
+          <p>Adjusting our strategy based on the particular type of rug.</p>
+        </Typography>
+      </ul>
+      <li>
+        <Typography variant="h3">10. How soon can I expect a technician to clean my rug?</Typography>
+        <Typography variant="body">We'll work to schedule you an appointment as quickly as we can. Though there are occasionally exceptions, we are often fully booked three days in advance.</Typography></li>
+      <li>
+        <Typography variant="h3">11. Can you give me a quote for the steam clean rug cost over the phone or do you need to visit my property?</Typography>
+        <Typography variant="body">It is not necessary for us to visit your property in order to provide you with an estimate over the phone. On the other hand, commercial property may need a site visit. Online quotes for the steam clean rug cost are also available.</Typography></li>
+      <li>
+        <Typography variant="h3">12. What payment methods do you accept for deep rug cleaning?</Typography>
+        <Typography variant="body">We accept debit / credit cards, bank transfers and cash payments handed directly to our team.</Typography></li>
+      <li>
+        <Typography variant="h3">13. Can you provide me with an invoice for the steam clean rug cost?</Typography>
+        <Typography variant="body">Yes, we will send you a receipt via email.</Typography></li>
+      <li>
+        <Typography variant="h3">14. Are you qualified for rug steam cleaning services?</Typography>
+        <Typography variant="body">Yes, we are fully qualified members of the National Carpet Cleaners Association (<a class="color-paper-link hover-color-paper-link-hover:hover" href="https://trustedlocalcleaners.ncca.co.uk/listing/fine-carpet-cleaning-ltd/" target="_blank" rel="noopener">NCCA</a>), the industry association recognised in the UK, and of <a class="color-paper-link hover-color-paper-link-hover:hover" href="https://www.checkatrade.com/trades/FineCarpetCleaning" target="_blank" rel="noopener">Checkatrade</a>.</Typography></li>
+      <li>
+        <Typography variant="h3">15. How long have you been in the rug cleaning business?</Typography>
+        <Typography variant="body">Since 2012, we have been in the rug care industry. We have accumulated a great deal of knowledge over the years dealing with all kinds of carpets, rugs, upholstery, and stains from both commercial and residential clients. With the help of this knowledge and our commitment to flawless execution, we improve our services by:</Typography></li>
+      <ul class="ml--5" style="list-style: initial;">
+        <Typography variant="li">
+          <p>Consistently replacing our machinery and equipment with better models when available;</p>
+        </Typography>
+        <Typography variant="li">
+          <p>Testing and improving our cleaning supplies on a regular basis;</p>
+        </Typography>
+        <Typography variant="li">
+          <p>Always looking for ways to become more knowledgeable and skilled through further professional training and courses.</p>
+        </Typography>
+      </ul>
+      <li>
+        <Typography variant="h3">16. Can you give me a discount for the Chinese rug cleaning near me?</Typography>
+        <Typography variant="body">Our deep rug cleaning prices are not only extremely affordable but also among the most attractive on the market, not only being highly competitive but also reflecting our commitment to high-quality cleaning services. We use top-of-the-line equipment and over 20 premium cleaning products. To get the best deal, we recommend bundling all the services you need. This cost efficiency arises from reducing the initial expenses and additional fees associated with each technician visit, such as travel time, parking, and managing heavy equipment during loading and unloading.</Typography></li>
     </Entry>
     <Entry>
-      <ul>
-        <li>
-          <Typography variant="h3">Will steam cleaning leave the rug wet?</Typography>
-          <Typography variant="body">The rug stays somewhat moist after steam cleaning, even though 95% of the water used is absorbed. Steam-cleaned rugs typically take 7-9 hours to dry completely when left to air dry.</Typography></li>
-        <li>
-          <Typography variant="h3">How often should you steam clean your rugs?</Typography>
-          <Typography variant="body">The main factor that determines the frequency of deep rug cleaning is the rug's rate of soiling. A rug should typically be cleaned every 12 months. However, we advise hiring a professional rug steam cleaning service more frequently if you have kids, pets, a smoking habit, heavy traffic on the rug, or if you stain it frequently. Feel free to get in touch with us at any moment if you need help or professional rug steam cleaning services.</Typography></li>
-        <li>
-          <Typography variant="h3">Can you steam clean a rug?</Typography>
-          <Typography variant="body">Yes, rugs can be steam-cleaned. Steam cleaning is the most thorough, effective method for removing dirt and soil from the base of the rug. It is an effective approach provided by reputable businesses such as "Fine Carpet Cleaning” Ltd. Their methods, tools, supplies, and experience guarantee outstanding outcomes. This procedure guarantees the elimination of stubborn stains, odours, and germ accumulation that standard cleaning procedures are unable to remove.</Typography></li>
-        <li>
-          <Typography variant="h3">How much does it cost to steam clean a rug?</Typography>
-          <Typography variant="body">How much the steam clean rug cost depends on a number of factors. Some of them are:</Typography></li>
-        <li>
+      <li>
+        <Typography variant="h3">17. Will steam cleaning leave the rug wet?</Typography>
+        <Typography variant="body">The rug stays somewhat moist after steam cleaning, even though 95% of the water used is absorbed. Steam-cleaned rugs typically take 7-9 hours to dry completely when left to air dry.</Typography></li>
+      <li>
+        <Typography variant="h3">18. How often should you steam clean your rugs?</Typography>
+        <Typography variant="body">The main factor that determines the frequency of deep rug cleaning is the rug's rate of soiling. A rug should typically be cleaned every 12 months. However, we advise hiring a professional rug steam cleaning service more frequently if you have kids, pets, a smoking habit, heavy traffic on the rug, or if you stain it frequently. Feel free to get in touch with us at any moment if you need help or professional rug steam cleaning services.</Typography></li>
+      <li>
+        <Typography variant="h3">19. Can you steam clean a rug?</Typography>
+        <Typography variant="body">Yes, rugs can be steam-cleaned. Steam cleaning is the most thorough, effective method for removing dirt and soil from the base of the rug. It is an effective approach provided by reputable businesses such as "Fine Carpet Cleaning” Ltd. Their methods, tools, supplies, and experience guarantee outstanding outcomes. This procedure guarantees the elimination of stubborn stains, odours, and germ accumulation that standard cleaning procedures are unable to remove.</Typography></li>
+      <li>
+        <Typography variant="h3">20. How much does it cost to steam clean a rug?</Typography>
+        <Typography variant="body">How much the steam clean rug cost depends on a number of factors. Some of them are:</Typography></li>
+      <ul class="ml--5" style="list-style: initial;">
+        <Typography variant="li">
           <p>The quantity and size of the rugs;</p>
-        </li>
-        <li>
+        </Typography>
+        <Typography variant="li">
           <p>How soiled they are;</p>
-        </li>
-        <li>
+        </Typography>
+        <Typography variant="li">
           <p>The type of the rugs;</p>
-        </li>
-        <li>
+        </Typography>
+        <Typography variant="li">
           <p>How easy the access to the rug is.</p>
-          <Typography variant="body">To learn more, check out our <a class="color-paper-link hover-color-paper-link-hover:hover" href="#price_table">rug steam cleaning prices</a>.</Typography>
-        </li>
-        <li>
-          <Typography variant="h3">Does steaming a rug flatten it?</Typography>
-          <Typography variant="body">Steam cleaning will not flatten your rug if done correctly. It is even the most effective and recommended way to clean your rug. Steam cleaning your rug regularly will revitalise the rug pile, as well as remove dirt and prolong the life of your rug.</Typography></li>
-        <li>
-          <Typography variant="h3">How do professionals clean Oriental rugs?</Typography>
-          <Typography variant="body">Our Oriental rug cleaning in London is performed through the following steps: we perform a pre-cleaning survey to determine which cleaning method and products the oriental rug needs based on its condition. We then use special steam cleaning machines and apply the cleaning solution. Hot water is injected into the fibres, after which everything is extracted, leaving your rug looking fresh and almost brand-new. Our services also include Persian rug cleaning in London, shag rug cleaning, Asian rug cleaning, polypropylene rug cleaning, acrylic rug cleaning, flat weave rug cleaning, Turkish rug cleaning, Moroccan rug cleaning in London, polyester shaggy rug cleaning, Kilim rug cleaning in London, bathtub rug cleaning, high pile rug cleaning and more.</Typography></li>
-
-
-        <li>
-          <Typography variant="h3">Can you steam clean a rug on hardwood floors?</Typography>
-          <Typography variant="body">Yes, our rug steam cleaning service is perfect for cleaning rugs on hardwood floors and on any other surface.</Typography></li>
-        <li>
-          <Typography variant="h3">Can you steam clean a polypropylene rug?</Typography>
-          <Typography variant="body">Yes, polypropylene rugs can be steam cleaned. Steam cleaning, if done properly, is the most thorough and effective method for removing dirt and soil from the base of the rug. Hiring professionals will be the best solution, because of their expertise and knowledge about what cleaning methods and solutions should be used for the specific type of rug. Apart from polypropylene rug cleaning, we are experts in shag rug cleaning, Oriental rug cleaning in London, Persian rug cleaning in London, acrylic rug cleaning, Asian rug cleaning, Turkish rug cleaning, flat weave rug cleaning, Kilim rug cleaning in London, Moroccan rug cleaning in London, polyester shaggy rug cleaning, high pile rug cleaning, bathtub rug cleaning and many more.</Typography></li>
-        <li>
-          <Typography variant="h3">Can you steam-clean Oriental rugs?</Typography>
-          <Typography variant="body">Yes, Oriental rugs can definitely be steam-cleaned, if done properly, since these hand-knotted rugs need special care. In that case, a professional rug steam cleaning service is the best solution. Not only is it time-saving and stress-free for you, but it is also the best maintenance choice for your Oriental rug. Our Oriental rug cleaning in London is the most thorough and effective method for removing all dirt, soil and bacteria from the base of the rug.</Typography></li>
-        <li>
-          <Typography variant="h3">Can you steam clean a shag rug?</Typography>
-          <Typography variant="body">Yes, shag rugs can be steam-cleaned. We recommend using professional help to steam clean your shag rug. Through their expertise and knowledge, you can rest assured that your deep-pile rug will be properly taken care of. We at “Fine Carpet Cleaning” Ltd. are specialised in shag rug cleaning which you can take great advantage of. Contact us at any suitable time for you to book your desired cleaning services or to receive professional advice.</Typography></li>
-        <li>
-          <Typography variant="h3">Can you steam clean a Persian rug?</Typography>
-          <Typography variant="body">Persian rugs are also valued for their durability and high quality due to their exquisite craftsmanship. They can be treasured for many years to come with the correct maintenance and care. Persian rugs need special cleaning solutions and cleaning methods so they can be treated properly. A professional rug steam cleaning service is the ideal choice in that situation. It saves you time and reduces tension, and it's the ideal option for maintaining your Persian rug. Our Persian rug cleaning in London is the most complete and efficient way to get rid of all the filth, grime, and bacteria from the rug's foundation.</Typography></li>
-        <li>
-          <Typography variant="h3">Can you steam clean a Kilim rug?</Typography>
-          <Typography variant="body">Kilim rugs cost more than traditional rugs since they are handmade and each one has a unique design. Because Kilim rugs are manufactured with natural fibres and dyes, they are more resilient than typical carpets. To effectively care for Kilim rugs, specific cleaning agents and techniques are required. In that case, hiring a professional deep rug cleaning service is the best option. It's the best choice for keeping your Kilim rug in good condition and saves you time and stress. The most thorough and effective method for removing all grime, dirt, and bacteria from the rug's basis is our Kilim rug cleaning in London. We also perform polypropylene rug cleaning, shag rug cleaning, Oriental rug cleaning in London, Persian rug cleaning in London, acrylic rug cleaning, Asian rug cleaning, Turkish rug cleaning, flat weave rug cleaning, Moroccan rug cleaning in London, polyester shaggy rug cleaning, high pile rug cleaning, bathtub rug cleaning and many more.</Typography></li>
-        <li>
-          <Typography variant="h3">Can you steam clean an area rug?</Typography>
-          <Typography variant="body">Yes, almost all kinds of area rugs can be steam cleaned, depending on the fabric the rug is made of. Our rug steam cleaning service includes polypropylene rug cleaning, shag rug cleaning, Oriental rug cleaning in London, Persian rug cleaning in London, acrylic rug cleaning, Asian rug cleaning, Turkish rug cleaning, flat weave rug cleaning, Kilim rug cleaning in London, Moroccan rug cleaning in London, polyester shaggy rug cleaning, high pile rug cleaning, bathtub rug cleaning and many more.</Typography></li>
+        </Typography>
       </ul>
+      <li>
+        <Typography variant="body">To learn more, check out our <a class="color-paper-link hover-color-paper-link-hover:hover" href="#price_table">rug steam cleaning prices</a>.</Typography>
+      </li>
+      <li>
+        <Typography variant="h3">21. Does steaming a rug flatten it?</Typography>
+        <Typography variant="body">Steam cleaning will not flatten your rug if done correctly. It is even the most effective and recommended way to clean your rug. Steam cleaning your rug regularly will revitalise the rug pile, as well as remove dirt and prolong the life of your rug.</Typography></li>
+      <li>
+        <Typography variant="h3">22. How do professionals clean Oriental rugs?</Typography>
+        <Typography variant="body">Our Oriental rug cleaning in London is performed through the following steps: we perform a pre-cleaning survey to determine which cleaning method and products the oriental rug needs based on its condition. We then use special steam cleaning machines and apply the cleaning solution. Hot water is injected into the fibres, after which everything is extracted, leaving your rug looking fresh and almost brand-new. Our services also include Persian rug cleaning in London, shag rug cleaning, Asian rug cleaning, polypropylene rug cleaning, acrylic rug cleaning, flat weave rug cleaning, Turkish rug cleaning, Moroccan rug cleaning in London, polyester shaggy rug cleaning, Kilim rug cleaning in London, bathtub rug cleaning, high pile rug cleaning and more.</Typography></li>
+      <li>
+        <Typography variant="h3">23. Can you steam clean a rug on hardwood floors?</Typography>
+        <Typography variant="body">Yes, our rug steam cleaning service is perfect for cleaning rugs on hardwood floors and on any other surface.</Typography></li>
+      <li>
+        <Typography variant="h3">24. Can you steam clean a polypropylene rug?</Typography>
+        <Typography variant="body">Yes, polypropylene rugs can be steam cleaned. Steam cleaning, if done properly, is the most thorough and effective method for removing dirt and soil from the base of the rug. Hiring professionals will be the best solution, because of their expertise and knowledge about what cleaning methods and solutions should be used for the specific type of rug. Apart from polypropylene rug cleaning, we are experts in shag rug cleaning, Oriental rug cleaning in London, Persian rug cleaning in London, acrylic rug cleaning, Asian rug cleaning, Turkish rug cleaning, flat weave rug cleaning, Kilim rug cleaning in London, Moroccan rug cleaning in London, polyester shaggy rug cleaning, high pile rug cleaning, bathtub rug cleaning and many more.</Typography></li>
+      <li>
+        <Typography variant="h3">25. Can you steam-clean Oriental rugs?</Typography>
+        <Typography variant="body">Yes, Oriental rugs can definitely be steam-cleaned, if done properly, since these hand-knotted rugs need special care. In that case, a professional rug steam cleaning service is the best solution. Not only is it time-saving and stress-free for you, but it is also the best maintenance choice for your Oriental rug. Our Oriental rug cleaning in London is the most thorough and effective method for removing all dirt, soil and bacteria from the base of the rug.</Typography></li>
+      <li>
+        <Typography variant="h3">26. Can you steam clean a shag rug?</Typography>
+        <Typography variant="body">Yes, shag rugs can be steam-cleaned. We recommend using professional help to steam clean your shag rug. Through their expertise and knowledge, you can rest assured that your deep-pile rug will be properly taken care of. We at “Fine Carpet Cleaning” Ltd. are specialised in shag rug cleaning which you can take great advantage of. Contact us at any suitable time for you to book your desired cleaning services or to receive professional advice.</Typography></li>
+      <li>
+        <Typography variant="h3">27. Can you steam clean a Persian rug?</Typography>
+        <Typography variant="body">Persian rugs are also valued for their durability and high quality due to their exquisite craftsmanship. They can be treasured for many years to come with the correct maintenance and care. Persian rugs need special cleaning solutions and cleaning methods so they can be treated properly. A professional rug steam cleaning service is the ideal choice in that situation. It saves you time and reduces tension, and it's the ideal option for maintaining your Persian rug. Our Persian rug cleaning in London is the most complete and efficient way to get rid of all the filth, grime, and bacteria from the rug's foundation.</Typography></li>
+      <li>
+        <Typography variant="h3">28. Can you steam clean a Kilim rug?</Typography>
+        <Typography variant="body">Kilim rugs cost more than traditional rugs since they are handmade and each one has a unique design. Because Kilim rugs are manufactured with natural fibres and dyes, they are more resilient than typical carpets. To effectively care for Kilim rugs, specific cleaning agents and techniques are required. In that case, hiring a professional deep rug cleaning service is the best option. It's the best choice for keeping your Kilim rug in good condition and saves you time and stress. The most thorough and effective method for removing all grime, dirt, and bacteria from the rug's basis is our Kilim rug cleaning in London. We also perform polypropylene rug cleaning, shag rug cleaning, Oriental rug cleaning in London, Persian rug cleaning in London, acrylic rug cleaning, Asian rug cleaning, Turkish rug cleaning, flat weave rug cleaning, Moroccan rug cleaning in London, polyester shaggy rug cleaning, high pile rug cleaning, bathtub rug cleaning and many more.</Typography></li>
+      <li>
+        <Typography variant="h3">29. Can you steam clean an area rug?</Typography>
+        <Typography variant="body">Yes, almost all kinds of area rugs can be steam cleaned, depending on the fabric the rug is made of. Our rug steam cleaning service includes polypropylene rug cleaning, shag rug cleaning, Oriental rug cleaning in London, Persian rug cleaning in London, acrylic rug cleaning, Asian rug cleaning, Turkish rug cleaning, flat weave rug cleaning, Kilim rug cleaning in London, Moroccan rug cleaning in London, polyester shaggy rug cleaning, high pile rug cleaning, bathtub rug cleaning and many more.</Typography></li>
     </Entry>
   </Container>
 }
@@ -298,12 +304,12 @@ export default function Page() {
           <li class="ml--5"><a class="color-paper-link-hover hover-color-paper-link:hover font-size-17.5px line-height-8 word-spacing--0.12 tracking--0.04" href="/professional-stain-removal-services">Rug stain removal</a></li>
           <li class="ml--5"><a class="color-paper-link-hover hover-color-paper-link:hover font-size-17.5px line-height-8 word-spacing--0.12 tracking--0.04" href="/stain-protection-services">Rug stain protection</a></li>
         </ul>
-        </div>
+      </div>
 
-        <FleurDivider></FleurDivider>
+      <FleurDivider></FleurDivider>
 
-        <h2>The process of our rug steam cleaning service:</h2>
-        <div class="mt-20 py-8 px-8 md-px-14 bg-paper b-rd-3" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 18%);">
+      <h2>The process of our rug steam cleaning service:</h2>
+      <div class="mt-20 py-8 px-8 md-px-14 bg-paper b-rd-3" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 18%);">
         <ol style="counter-reset: ordered; list-style: none;">
           <li class="ml--5"><Typography variant="body">We start by doing a pre-cleaning survey. We apply a unique strategy to each rug, taking into account its kind, condition, and level of pollution. This is required to determine the approximate amount of detergent and equipment required for steam cleaning the rug.</Typography></li>
           <li class="ml--5"><Typography variant="body">Using a high-filtration twin-motor Hoover cleaner made especially for high-performance steam cleaning is the second stage. This gets rid of any dust, dry soils, and loose dirt.</Typography></li>

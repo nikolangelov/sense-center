@@ -82,77 +82,75 @@ export function FaqSection() {
   const { Container, Entry } = createCollapsable()
   return <Container>
     <Entry>
-      <ul>
-        <li>
-          <Typography variant="h3">Will you fee me if I cancel the service?</Typography>
-          <Typography variant="body">Yes, but it is only applied when you cancel on the day of the antiviral sanitisation services. In that case, you will lose your deposit.</Typography></li>
-        <li>
-          <Typography variant="h3">Should I pay for the congestion / parking charge?</Typography>
-          <Typography variant="body">Yes, we kindly ask that the client arrange a suitable parking space for our vehicles within close proximity of the property or to cover any parking / congestion expenses.</Typography></li>
-        <li>
-          <Typography variant="h3">What if I live on the 4th floor or above and I have no lift?</Typography>
-          <Typography variant="body">Due to the weight of our devices, which exceeds 50 kilograms, a fee will be applied for each extra floor that requires manual movement. This is due to the fact that it takes an extended period of time and can result in faster weariness among our technicians. As a result, our overall production for the day may be lower than our usual output.</Typography></li>
-        <li>
-          <Typography variant="h3">Is your company insured?</Typography>
-          <Typography variant="body">Yes, we are completely insured.</Typography></li>
-        <li>
-          <Typography variant="h3">What happens if your cleaner damages anything?</Typography>
-          <Typography variant="body">We are fully insured and if an accident happens it will be covered by our company.</Typography></li>
-      </ul>
+      <li>
+        <Typography variant="h3">1. Will you fee me if I cancel the service?</Typography>
+        <Typography variant="body">Yes, but it is only applied when you cancel on the day of the antiviral sanitisation services. In that case, you will lose your deposit.</Typography></li>
+      <li>
+        <Typography variant="h3">2. Should I pay for the congestion / parking charge?</Typography>
+        <Typography variant="body">Yes, we kindly ask that the client arrange a suitable parking space for our vehicles within close proximity of the property or to cover any parking / congestion expenses.</Typography></li>
+      <li>
+        <Typography variant="h3">3. What if I live on the 4th floor or above and I have no lift?</Typography>
+        <Typography variant="body">Due to the weight of our devices, which exceeds 50 kilograms, a fee will be applied for each extra floor that requires manual movement. This is due to the fact that it takes an extended period of time and can result in faster weariness among our technicians. As a result, our overall production for the day may be lower than our usual output.</Typography></li>
+      <li>
+        <Typography variant="h3">4. Is your company insured?</Typography>
+        <Typography variant="body">Yes, we are completely insured.</Typography></li>
+      <li>
+        <Typography variant="h3">5. What happens if your cleaner damages anything?</Typography>
+        <Typography variant="body">We are fully insured and if an accident happens it will be covered by our company.</Typography></li>
     </Entry>
     <Entry>
-      <ul>
-        <li>
-          <Typography variant="h3">How long does the process of antiviral sanitisation services take?</Typography>
-          <Typography variant="body">The duration mainly depends on the size of the room and is not fixed. The usual sanitisation is 75 minutes per room.</Typography></li>
-        <li>
-          <Typography variant="h3">How soon can I expect your cleaner to visit me?</Typography>
-          <Typography variant="body">We will try to get you an appointment as soon as possible. Usually, we are fully booked for the following three days, but sometimes there are exceptions.</Typography></li>
-        <li>
-          <Typography variant="h3">Can you give me a quote over the phone or do you need a viewing in person?</Typography>
-          <Typography variant="body">Yes, we can give you a quote over the phone, there is no need for us to visit your property. You can also receive a quote online.</Typography></li>
-        <li>
-          <Typography variant="h3">What payment methods do you accept?</Typography>
-          <Typography variant="body">We accept debit / credit cards, bank transfers and cash payments directly handed to our team.</Typography></li>
-        <li>
-          <Typography variant="h3">Can you provide me with an invoice?</Typography>
-          <Typography variant="body">Yes, we will send you a receipt via email.</Typography></li>
-        <li>
-          <Typography variant="h3">Are you qualified for your antiviral sanitisation services?</Typography>
-          <Typography variant="body">Yes, we are qualified to do antiviral sanitisation. We have received the appropriate information, instruction and training and have achieved the required standard in Infection Control and Bio-Hazard Fogging.</Typography>
-          <Typography variant="body">As for the carpet and upholstery cleaning services, we are qualified and fully trained members of <a class="color-paper-link hover-color-paper-link-hover:hover" href="https://trustedlocalcleaners.ncca.co.uk/listing/fine-carpet-cleaning-ltd/" target="_blank" rel="noopener">NCCA</a> (National Carpet Cleaners Association) – the UK’s recognised industry qualification.</Typography>
-        </li>
-        <li>
-          <Typography variant="h3">How long have you been in the cleaning business?</Typography>
-          <Typography variant="body">We've been involved in the cleaning business since 2012. We've encountered a wide range of carpets, rugs, upholstery, and stains throughout the years, gaining important experience. Our dedication to delivering outstanding services has prompted us to improve our performance in the following ways:</Typography></li>
-        <li>
+      <li>
+        <Typography variant="h3">6. How long does the process of antiviral sanitisation services take?</Typography>
+        <Typography variant="body">The duration mainly depends on the size of the room and is not fixed. The usual sanitisation is 75 minutes per room.</Typography></li>
+      <li>
+        <Typography variant="h3">7. How soon can I expect your cleaner to visit me?</Typography>
+        <Typography variant="body">We will try to get you an appointment as soon as possible. Usually, we are fully booked for the following three days, but sometimes there are exceptions.</Typography></li>
+      <li>
+        <Typography variant="h3">8. Can you give me a quote over the phone or do you need a viewing in person?</Typography>
+        <Typography variant="body">Yes, we can give you a quote over the phone, there is no need for us to visit your property. You can also receive a quote online.</Typography></li>
+      <li>
+        <Typography variant="h3">9. What payment methods do you accept?</Typography>
+        <Typography variant="body">We accept debit / credit cards, bank transfers and cash payments directly handed to our team.</Typography></li>
+      <li>
+        <Typography variant="h3">10. Can you provide me with an invoice?</Typography>
+        <Typography variant="body">Yes, we will send you a receipt via email.</Typography></li>
+      <li>
+        <Typography variant="h3">11. Are you qualified for your antiviral sanitisation services?</Typography>
+        <Typography variant="body">Yes, we are qualified to do antiviral sanitisation. We have received the appropriate information, instruction and training and have achieved the required standard in Infection Control and Bio-Hazard Fogging.</Typography>
+        <Typography variant="body">As for the carpet and upholstery cleaning services, we are qualified and fully trained members of <a class="color-paper-link hover-color-paper-link-hover:hover" href="https://trustedlocalcleaners.ncca.co.uk/listing/fine-carpet-cleaning-ltd/" target="_blank" rel="noopener">NCCA</a> (National Carpet Cleaners Association) – the UK’s recognised industry qualification.</Typography>
+      </li>
+      <li>
+        <Typography variant="h3">12. How long have you been in the cleaning business?</Typography>
+        <Typography variant="body">We've been involved in the cleaning business since 2012. We've encountered a wide range of carpets, rugs, upholstery, and stains throughout the years, gaining important experience. Our dedication to delivering outstanding services has prompted us to improve our performance in the following ways:</Typography></li>
+      <ul class="ml--5" style="list-style: initial;">
+        <Typography variant="li">
           <p>Continuously upgrading our equipment and machinery with superior alternatives whenever they become available;</p>
-        </li>
-        <li>
+        </Typography>
+        <Typography variant="li">
           <p>Regularly evaluating and refining our cleaning solutions to ensure the greatest quality of service;</p>
-        </li>
-        <li>
+        </Typography>
+        <Typography variant="li">
           <p>Commitment to improving our knowledge and abilities through regular professional courses and training, continually working to improve our cleaning services expertise.</p>
-        </li>
-        <li>
-          <Typography variant="h3">Can you give me a discount?</Typography>
-          <Typography variant="body">Our cleaning services are well-known for their exceptional quality, utilizing state-of-the-art equipment and an extensive selection of premium cleaning materials. What truly sets us apart is our highly competitive and attractive pricing. We suggest bundling all the services you need to get a better price. This cost efficiency is due to the initial expenses and extra fees tied to each technician visit, including travel time, parking, and managing bulky equipment during loading and unloading.</Typography></li>
-        <li>
-          <Typography variant="h3">What is antiviral sanitisation?</Typography>
-          <Typography variant="body">We offer specialised disinfection and antiviral sanitisation services. The procedure is very straightforward. It kills 99.99% of all germs and viruses on any surface using the most effective method known - fogging. When the procedure comes into contact with a surface, it has an immediate effect.</Typography></li>
-        <li>
-          <Typography variant="h3">Why hire professionals to perform antiviral sanitisation?</Typography>
-          <Typography variant="body">Daily antibacterial cleaning needs to occur both at home and in the office. The regular disinfection cleaning and maintenance of our homes and offices is part of everyone’s lives. However, normal cleaning products may not be able to kill all of the bacteria and viruses on surfaces and furniture. This is where our professional house and office sanitising service comes in handy for you.</Typography></li>
-        <li>
-          <Typography variant="h3">What European Standards do you hold?</Typography>
-          <Typography variant="body">We have the following European Standards: E14476, EN1276, EN1650.</Typography>
-        </li>
-        <li>
-          <Typography variant="h3">What viruses and bacteria do your bio product terminate?</Typography>
-          <Typography variant="body"><strong>Viruses:</strong> Vaccinia Virus – Coronavirus - Adenovirus – Avian Bronchitis Virus – Canine Distemper Virus – Canine Parvovirus – Feline CaliciVirus (SRSV) – Feline Leukaemia Virus – Feline Panleukopenia Virus – Feline Picornavirus – Hepatitis B Virus – Herpes Simplex Type 1 (HSV 1) - Herpes Simplex Type 2 – Human Immunodeficiency Virus (HIV) – Infectious Bovine Rhinotracheitis Virus - Influenza Virus Type A – Newcastle Disease Virus – Porcine Parvovirus – Pseudorabies Virus - Rabies Virus – Respiratory Syncytial Virus – Rubella Virus – Transmissible Gastroenteritis</Typography>
-          <Typography variant="body"><strong>Bacteria and Spores:</strong> Staphylococcus aureus (3 separate multi-resistant strains) Pseudomonas aeruginosa (multi-resistant strain) - Escherichia coli (including O157 and multi-resistant strains) – Enterococcus hirae – Klebsiella pneumoniae – Salmonella choleraesuis – Salmonella enteritidis – Salmonella typhi – Salmonella typhimurium – Staphylococcus epidermidis – Streptococcus faecalis (multi-resistant strain) – Streptococcus pyogenes – Acinetobacter calcoaceticus – Bordatella bronchiseptica – Clostridium difficile – Enterobacter aerogenes – Enterobacter cloacae – Fusobacterium necrophorum – Listeria monocytogenes – Pasteurella multocida – Proteus mirabilis – Proteus vulgaris - Serratia marcescens – Shigella flexeri – Shigella sonnei – Chlamydia psittaci</Typography>
-        </li>
+        </Typography>
       </ul>
+      <li>
+        <Typography variant="h3">13. Can you give me a discount?</Typography>
+        <Typography variant="body">Our cleaning services are well-known for their exceptional quality, utilizing state-of-the-art equipment and an extensive selection of premium cleaning materials. What truly sets us apart is our highly competitive and attractive pricing. We suggest bundling all the services you need to get a better price. This cost efficiency is due to the initial expenses and extra fees tied to each technician visit, including travel time, parking, and managing bulky equipment during loading and unloading.</Typography></li>
+      <li>
+        <Typography variant="h3">14. What is antiviral sanitisation?</Typography>
+        <Typography variant="body">We offer specialised disinfection and antiviral sanitisation services. The procedure is very straightforward. It kills 99.99% of all germs and viruses on any surface using the most effective method known - fogging. When the procedure comes into contact with a surface, it has an immediate effect.</Typography></li>
+      <li>
+        <Typography variant="h3">15. Why hire professionals to perform antiviral sanitisation?</Typography>
+        <Typography variant="body">Daily antibacterial cleaning needs to occur both at home and in the office. The regular disinfection cleaning and maintenance of our homes and offices is part of everyone’s lives. However, normal cleaning products may not be able to kill all of the bacteria and viruses on surfaces and furniture. This is where our professional house and office sanitising service comes in handy for you.</Typography></li>
+      <li>
+        <Typography variant="h3">16. What European Standards do you hold?</Typography>
+        <Typography variant="body">We have the following European Standards: E14476, EN1276, EN1650.</Typography>
+      </li>
+      <li>
+        <Typography variant="h3">17. What viruses and bacteria do your bio product terminate?</Typography>
+        <Typography variant="body"><strong>Viruses:</strong> Vaccinia Virus – Coronavirus - Adenovirus – Avian Bronchitis Virus – Canine Distemper Virus – Canine Parvovirus – Feline CaliciVirus (SRSV) – Feline Leukaemia Virus – Feline Panleukopenia Virus – Feline Picornavirus – Hepatitis B Virus – Herpes Simplex Type 1 (HSV 1) - Herpes Simplex Type 2 – Human Immunodeficiency Virus (HIV) – Infectious Bovine Rhinotracheitis Virus - Influenza Virus Type A – Newcastle Disease Virus – Porcine Parvovirus – Pseudorabies Virus - Rabies Virus – Respiratory Syncytial Virus – Rubella Virus – Transmissible Gastroenteritis</Typography>
+        <Typography variant="body"><strong>Bacteria and Spores:</strong> Staphylococcus aureus (3 separate multi-resistant strains) Pseudomonas aeruginosa (multi-resistant strain) - Escherichia coli (including O157 and multi-resistant strains) – Enterococcus hirae – Klebsiella pneumoniae – Salmonella choleraesuis – Salmonella enteritidis – Salmonella typhi – Salmonella typhimurium – Staphylococcus epidermidis – Streptococcus faecalis (multi-resistant strain) – Streptococcus pyogenes – Acinetobacter calcoaceticus – Bordatella bronchiseptica – Clostridium difficile – Enterobacter aerogenes – Enterobacter cloacae – Fusobacterium necrophorum – Listeria monocytogenes – Pasteurella multocida – Proteus mirabilis – Proteus vulgaris - Serratia marcescens – Shigella flexeri – Shigella sonnei – Chlamydia psittaci</Typography>
+      </li>
     </Entry>
   </Container>
 }

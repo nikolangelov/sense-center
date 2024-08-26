@@ -52,21 +52,21 @@ const GalerrySliderMobile = () => {
 };
 
 const VideoPlayer = () => {
-	return (
-		<div class="flex flex-justify-center flex-items-center mt-20">
-			<video
-				class="mt-10 b-rd-3" style="width: 100%; width: -moz-available; width: -webkit-fill-available; width: fill-available;"
-				autoplay
-				controls
-				muted
-			>
-				<source
-					src="/assets/Professional Carpet Cleaning London - Fine Carpet Cleaning (1).mp4"
-					type="video/mp4"
-				/>
-			</video>
-		</div>
-	);
+  return (
+    <div class="flex flex-justify-center flex-items-center mt-20">
+      <video
+        class="mt-10 b-rd-3" style="width: 100%; width: -moz-available; width: -webkit-fill-available; width: fill-available;"
+        autoplay
+        controls
+        muted
+      >
+        <source
+          src="/assets/Professional Carpet Cleaning London - Fine Carpet Cleaning (1).mp4"
+          type="video/mp4"
+        />
+      </video>
+    </div>
+  );
 };
 
 function FleurDivider() {
@@ -82,153 +82,157 @@ export function FaqSection() {
   const { Container, Entry } = createCollapsable()
   return <Container>
     <Entry>
-      <ul>
-        <li>
-          <Typography variant="h3">Do you have a cancellation fee?</Typography>
-          <Typography variant="body">Yes, if you decide to cancel the cleaning on the day it's scheduled, you will lose your deposit.</Typography></li>
-        <li>
-          <Typography variant="h3">Do I need to pay for congestion / parking charges?</Typography>
-          <Typography variant="body">Yes, the consumer is asked to set up an appropriate parking area for our cars near the property and to pay for any parking or traffic-related costs if necessary.</Typography></li>
-        <li>
-          <Typography variant="h3">Do carpet cleaning services move furniture?</Typography>
-          <Typography variant="body">It would be greatly appreciated if you could relocate delicate, small, or expensive pieces of furniture for insurance purposes, like lamps and decorations. If possible, position them in a location that won't be disrupted by the cleaning process. We aim to have the floors free of any obstacles. We'll assist in moving light furniture such as chairs, sofas, and tables during the cleaning and ensure they are returned to their original positions. If heavier items like sofas, beds, wardrobes, or cabinets have to be moved, there will be an additional fee. This is because it will take more time and effort from our technician, who will be paid for this extra work. Our objective is to make the entire process as smooth and worry-free for you as we can.</Typography></li>
-        <li>
-          <Typography variant="h3">What if I live on the 4th floor or higher and I have no lift?</Typography>
-          <Typography variant="body">Our equipment weighs more than 50 kg, so whenever our technician has to transport it manually, we add extra fees for each additional floor. This is because transporting them by hand often requires a significant amount of time, and our technicians become exhausted more quickly, therefore they are unable to complete as much work on that particular day.</Typography></li>
-        <li>
-          <Typography variant="h3">Are you insured?</Typography>
-          <Typography variant="body">Yes, we do have complete insurance.</Typography></li>
-      </ul>
+      <li>
+        <Typography variant="h3">1. Do you have a cancellation fee?</Typography>
+        <Typography variant="body">Yes, if you decide to cancel the cleaning on the day it's scheduled, you will lose your deposit.</Typography></li>
+      <li>
+        <Typography variant="h3">2. Do I need to pay for congestion / parking charges?</Typography>
+        <Typography variant="body">Yes, the consumer is asked to set up an appropriate parking area for our cars near the property and to pay for any parking or traffic-related costs if necessary.</Typography></li>
+      <li>
+        <Typography variant="h3">3. Do carpet cleaning services move furniture?</Typography>
+        <Typography variant="body">It would be greatly appreciated if you could relocate delicate, small, or expensive pieces of furniture for insurance purposes, like lamps and decorations. If possible, position them in a location that won't be disrupted by the cleaning process. We aim to have the floors free of any obstacles. We'll assist in moving light furniture such as chairs, sofas, and tables during the cleaning and ensure they are returned to their original positions. If heavier items like sofas, beds, wardrobes, or cabinets have to be moved, there will be an additional fee. This is because it will take more time and effort from our technician, who will be paid for this extra work. Our objective is to make the entire process as smooth and worry-free for you as we can.</Typography></li>
+      <li>
+        <Typography variant="h3">4. What if I live on the 4th floor or higher and I have no lift?</Typography>
+        <Typography variant="body">Our equipment weighs more than 50 kg, so whenever our technician has to transport it manually, we add extra fees for each additional floor. This is because transporting them by hand often requires a significant amount of time, and our technicians become exhausted more quickly, therefore they are unable to complete as much work on that particular day.</Typography></li>
+      <li>
+        <Typography variant="h3">5. Are you insured?</Typography>
+        <Typography variant="body">Yes, we do have complete insurance.</Typography></li>
     </Entry>
     <Entry>
-      <ul>
-        <li>
-          <Typography variant="h3">What happens if your cleaner damages anything while performing fast dry carpet cleaning services?</Typography>
-          <Typography variant="body">We have complete coverage in the event of an accident because we are fully insured.</Typography></li>
-        <li>
-          <Typography variant="h3">How long does the process of fast dry carpet cleaning service take?</Typography>
-          <Typography variant="body">The fast dry carpet cleaning procedure depends on the level of dirtiness of the carpet and whether it requires any treatments for removing stains. It can range from 20 to 60 minutes for each room.</Typography></li>
-        <li>
-          <Typography variant="h3">How long does it take for the carpet to get dry?</Typography>
-          <Typography variant="body">The drying time varies based on several elements such as the carpet's material, its level of dirtiness, the thickness of its fibres, and whether it requires a service for removing stains.</Typography>
-          <Typography variant="body">Carpets made of wool soak up more moisture and take a longer time to dry, typically between 10 to 12 hours. Should the carpet be excessively soiled and necessitate multiple treatments, the drying period could extend further.</Typography>
-          <Typography variant="body">Carpets made of synthetic materials dry more quickly, usually taking 7 to 10 hours and this remains true regardless of the carpet's condition and the number of treatments needed.</Typography>
-        </li>
-        <li>
-          <Typography variant="h3">Do you guarantee that after cleaning my carpet all stains will be removed?</Typography>
-          <Typography variant="body">No, because there are factors that are beyond our influence. These elements include:</Typography></li>
-        <li>
+      <li>
+        <Typography variant="h3">6. What happens if your cleaner damages anything while performing fast dry carpet cleaning services?</Typography>
+        <Typography variant="body">We have complete coverage in the event of an accident because we are fully insured.</Typography></li>
+      <li>
+        <Typography variant="h3">7. How long does the process of fast dry carpet cleaning service take?</Typography>
+        <Typography variant="body">The fast dry carpet cleaning procedure depends on the level of dirtiness of the carpet and whether it requires any treatments for removing stains. It can range from 20 to 60 minutes for each room.</Typography></li>
+      <li>
+        <Typography variant="h3">8. How long does it take for the carpet to get dry?</Typography>
+        <Typography variant="body">The drying time varies based on several elements such as the carpet's material, its level of dirtiness, the thickness of its fibres, and whether it requires a service for removing stains.</Typography>
+        <Typography variant="body">Carpets made of wool soak up more moisture and take a longer time to dry, typically between 10 to 12 hours. Should the carpet be excessively soiled and necessitate multiple treatments, the drying period could extend further.</Typography>
+        <Typography variant="body">Carpets made of synthetic materials dry more quickly, usually taking 7 to 10 hours and this remains true regardless of the carpet's condition and the number of treatments needed.</Typography>
+      </li>
+      <li>
+        <Typography variant="h3">9. Do you guarantee that after cleaning my carpet all stains will be removed?</Typography>
+        <Typography variant="body">No, because there are factors that are beyond our influence. These elements include:</Typography></li>
+      <ul class="ml--5" style="list-style: initial;">
+        <Typography variant="li">
           <p>When did the stains appear?</p>
-        </li>
-        <li>
+        </Typography>
+        <Typography variant="li">
           <p>Which polluting agent is responsible for the stains?</p>
-        </li>
-        <li>
+        </Typography>
+        <Typography variant="li">
           <p>What is the carpet material?</p>
-        </li>
-        <li>
+        </Typography>
+        <Typography variant="li">
           <p>Have the stains already been improperly treated?</p>
-        </li>
-        <Typography variant="body">However, we can assure you that we will make every effort to remove any stain from your carpet.</Typography>
-        <Typography variant="body">This involves:</Typography>
-        <li>
-          <p>The use of  top-tier cleaning equipment;</p>
-        </li>
-        <li>
-          <p>The use of effective and sustainable non-toxic cleaning solutions;</p>
-        </li>
-        <li>
-          <p>Personalised strategy based on the kind of carpet and pollutants.</p>
-        </li>
-        <li>
-          <Typography variant="h3">How to dry carpet quickly after cleaning?</Typography>
-          <Typography variant="body">Quick dry carpet cleaning aims to leave your carpet as dry as possible.</Typography>
-          <Typography variant="body">However, if your carpet still has some moisture, here are some tips that will help you.</Typography>
-          <Typography variant="body">Firstly, solutions with no equipment:</Typography></li>
-        <li>
-          <p>If the room is filled with many windows, there's no need to worry. Simply open them and allow the air to circulate. Make sure to open interior doors. In this way, you will allow humid air to escape and encourage air circulation in your home.</p>
-        </li>
-        <li>
-          <p>Another way is to use a fan or dehumidifier in order to speed up the process.</p>
-        </li>
-        <Typography variant="body">The fastest method is to use a combination of windows and a fan or dehumidifier as well to create cross-ventilation and speed up the drying process.</Typography>
-        <li>
-          <Typography variant="h3">What is the fastest way to dry carpet?</Typography>
-          <Typography variant="body">Do not worry about wet carpet, we take care of all steps of the drying process.
-            <br></br>
-            The instant dry carpet cleaning service aims to leave your carpet fresh and dry.
-            <br></br>
-            We use an air moving floor fan to make sure your carpet remains clean and as good as new after a professional cleaning.
-          </Typography></li>
-        <li>
-          <Typography variant="h3">What is quick dry carpet cleaning?</Typography>
-          <Typography variant="body">The moisture left after the traditional carpet cleaning method creates an ideal environment for bacteria, mould, and mildew because of the large amount of water that is used. However, fast dry carpet cleaning reduces the risk of spreading germs all over the place. It is also known as very low-moisture cleaning. This technology is gaining popularity due to its quicker drying time, safer biodegradable cleaning options, and its ability to preserve the fibres of the carpet, unlike steam or hot water extraction methods. Quick dry carpet cleaning uses specialised equipment and techniques to achieve the desired results. The finishing touch of cleaning is to avoid the long drying of the carpet. For this purpose, we use a carpet turbo dryer, which significantly shortens the time.</Typography></li>
-        <li>
-          <Typography variant="h3">Is it OK to let water dry on carpet?</Typography>
-          <Typography variant="body">No, it is not OK. It is important to make sure your carpet is dry after some type of professional cleaning. If you don't properly dry your carpet after cleaning it, the damp and dark environment creates the perfect conditions for unwanted growth. Mildew, moulds, and other tiny organisms can start to multiply and spread in these moist areas.</Typography></li>
-        <li>
-          <Typography variant="h3">Does carpet dry better with heat or cold?</Typography>
-          <Typography variant="body">Both of them can help with drying, but there are some things you should know:</Typography></li>
-        <li>
-          <p>The cold air drying takes a lot longer because the water does not vanish so fast in cold temperatures.</p>
-        </li>
-        <li>
-          <p>It is possible for the cold air to cause damage, such as more brittle and stiffer fibres.</p>
-        </li>
-        <li>
-          <p>The best carpet drying temperature is around 22–24 °C.</p>
-        </li>
-        <Typography variant="body">We suggest letting a professional service clean your carpet in the next cleaning session, so you do not have to take care of drying your carpet. The perfect option for this is rapid dry carpet cleaning, after which you can enjoy your brand new looking carpet.</Typography>
-        <li>
-          <Typography variant="h3">Should I use hot air to dry the carpet?</Typography>
-          <Typography variant="body">Using hot air to dry your carpet after cleaning can speed drying times and reduce the risk of mould and mildew, but the hot air can cause potential damage to the carpet’s fibres. So, we do not recommend using hot air in order to protect your carpet and ensure effective drying.</Typography></li>
-        <li>
-          <Typography variant="h3">Should you open windows to dry carpet?</Typography>
-          <Typography variant="body">Yes. We advise you to open the windows and doors. This can help to circulate fresh air throughout the carpeted room, helping it dry faster because the air flow will speed up the process. Allowing sunlight to stream through the curtains and blinds can further accelerate the process.</Typography></li>
-        <li>
-          <Typography variant="h3">Will a fan help carpet dry faster?</Typography>
-          <Typography variant="body">Yes, it helps, especially when the weather outside is humid and you cannot open the window. The fan creates an appropriate funnel of air. Once there is a funnel of air blowing over the carpet, it starts to dry out the carpet quickly. The last step of our fast dry carpet cleaning includes a drying procedure with a hard floor dryer in order to speed up the process.</Typography></li>
-        <li>
-          <Typography variant="h3">Will a dehumidifier dry a wet carpet?</Typography>
-          <Typography variant="body">For sure, it will help. In case there is still humidity left after the fast dry carpet cleaning service, the dehumidifier is a faithful assistant in the fight against mould and mildew. It will absorb the moisture from the air and will also help to reduce potentially musty odours developing in your home. We suggest using a dehumidifier as an important step in keeping your home healthy and free of germs.</Typography></li>
+        </Typography>
       </ul>
+      <Typography variant="body">However, we can assure you that we will make every effort to remove any stain from your carpet.</Typography>
+      <Typography variant="body">This involves:</Typography>
+      <ul class="ml--5" style="list-style: initial;">
+        <Typography variant="li">
+          <p>The use of  top-tier cleaning equipment;</p>
+        </Typography>
+        <Typography variant="li">
+          <p>The use of effective and sustainable non-toxic cleaning solutions;</p>
+        </Typography>
+        <Typography variant="li">
+          <p>Personalised strategy based on the kind of carpet and pollutants.</p>
+        </Typography>
+      </ul>
+      <li>
+        <Typography variant="h3">10. How to dry carpet quickly after cleaning?</Typography>
+        <Typography variant="body">Quick dry carpet cleaning aims to leave your carpet as dry as possible.</Typography>
+        <Typography variant="body">However, if your carpet still has some moisture, here are some tips that will help you.</Typography>
+        <Typography variant="body">Firstly, solutions with no equipment:</Typography></li>
+      <ul class="ml--5" style="list-style: initial;">
+        <Typography variant="li">
+          <p>If the room is filled with many windows, there's no need to worry. Simply open them and allow the air to circulate. Make sure to open interior doors. In this way, you will allow humid air to escape and encourage air circulation in your home.</p>
+        </Typography>
+        <Typography variant="li">
+          <p>Another way is to use a fan or dehumidifier in order to speed up the process.</p>
+        </Typography>
+      </ul>
+      <Typography variant="body">The fastest method is to use a combination of windows and a fan or dehumidifier as well to create cross-ventilation and speed up the drying process.</Typography>
+      <li>
+        <Typography variant="h3">11. What is the fastest way to dry carpet?</Typography>
+        <Typography variant="body">Do not worry about wet carpet, we take care of all steps of the drying process.
+          <br></br>
+          The instant dry carpet cleaning service aims to leave your carpet fresh and dry.
+          <br></br>
+          We use an air moving floor fan to make sure your carpet remains clean and as good as new after a professional cleaning.
+        </Typography></li>
+      <li>
+        <Typography variant="h3">12. What is quick dry carpet cleaning?</Typography>
+        <Typography variant="body">The moisture left after the traditional carpet cleaning method creates an ideal environment for bacteria, mould, and mildew because of the large amount of water that is used. However, fast dry carpet cleaning reduces the risk of spreading germs all over the place. It is also known as very low-moisture cleaning. This technology is gaining popularity due to its quicker drying time, safer biodegradable cleaning options, and its ability to preserve the fibres of the carpet, unlike steam or hot water extraction methods. Quick dry carpet cleaning uses specialised equipment and techniques to achieve the desired results. The finishing touch of cleaning is to avoid the long drying of the carpet. For this purpose, we use a carpet turbo dryer, which significantly shortens the time.</Typography></li>
+      <li>
+        <Typography variant="h3">13. Is it OK to let water dry on carpet?</Typography>
+        <Typography variant="body">No, it is not OK. It is important to make sure your carpet is dry after some type of professional cleaning. If you don't properly dry your carpet after cleaning it, the damp and dark environment creates the perfect conditions for unwanted growth. Mildew, moulds, and other tiny organisms can start to multiply and spread in these moist areas.</Typography></li>
+      <li>
+        <Typography variant="h3">14. Does carpet dry better with heat or cold?</Typography>
+        <Typography variant="body">Both of them can help with drying, but there are some things you should know:</Typography></li>
+      <ul class="ml--5" style="list-style: initial;">
+        <Typography variant="li">
+          <p>The cold air drying takes a lot longer because the water does not vanish so fast in cold temperatures.</p>
+        </Typography>
+        <Typography variant="li">
+          <p>It is possible for the cold air to cause damage, such as more brittle and stiffer fibres.</p>
+        </Typography>
+        <Typography variant="li">
+          <p>The best carpet drying temperature is around 22–24 °C.</p>
+        </Typography>
+      </ul>
+      <Typography variant="body">We suggest letting a professional service clean your carpet in the next cleaning session, so you do not have to take care of drying your carpet. The perfect option for this is rapid dry carpet cleaning, after which you can enjoy your brand new looking carpet.</Typography>
+      <li>
+        <Typography variant="h3">15. Should I use hot air to dry the carpet?</Typography>
+        <Typography variant="body">Using hot air to dry your carpet after cleaning can speed drying times and reduce the risk of mould and mildew, but the hot air can cause potential damage to the carpet’s fibres. So, we do not recommend using hot air in order to protect your carpet and ensure effective drying.</Typography></li>
+      <li>
+        <Typography variant="h3">16. Should you open windows to dry carpet?</Typography>
+        <Typography variant="body">Yes. We advise you to open the windows and doors. This can help to circulate fresh air throughout the carpeted room, helping it dry faster because the air flow will speed up the process. Allowing sunlight to stream through the curtains and blinds can further accelerate the process.</Typography></li>
+      <li>
+        <Typography variant="h3">17. Will a fan help carpet dry faster?</Typography>
+        <Typography variant="body">Yes, it helps, especially when the weather outside is humid and you cannot open the window. The fan creates an appropriate funnel of air. Once there is a funnel of air blowing over the carpet, it starts to dry out the carpet quickly. The last step of our fast dry carpet cleaning includes a drying procedure with a hard floor dryer in order to speed up the process.</Typography></li>
+      <li>
+        <Typography variant="h3">18. Will a dehumidifier dry a wet carpet?</Typography>
+        <Typography variant="body">For sure, it will help. In case there is still humidity left after the fast dry carpet cleaning service, the dehumidifier is a faithful assistant in the fight against mould and mildew. It will absorb the moisture from the air and will also help to reduce potentially musty odours developing in your home. We suggest using a dehumidifier as an important step in keeping your home healthy and free of germs.</Typography></li>
     </Entry>
     <Entry>
-      <ul>
-        <li>
-          <Typography variant="h3">What temperature dries carpet faster?</Typography>
-          <Typography variant="body">The temperature at which a carpet dries faster depends on several factors, including the type of carpet, the level of humidity in the room, and the airflow. In general, warmer temperatures can help dry carpets more quickly than cooler temperatures. We advise you to keep the temperature in the room around 22–24 degrees.</Typography></li>
-        <li>
-          <Typography variant="h3">How long does it take to air dry a carpet?</Typography>
-          <Typography variant="body">Usually, the steam-cleaned carpets can take 12-24 hours to dry completely, depending on factors like humidity and ventilation. However, quick dry carpet cleaning has a significant advantage in drying time, with carpets typically drying within 1-2 hours because of the small amount of liquid used.</Typography></li>
-        <li>
-          <Typography variant="h3">How do you dry carpet in the winter?</Typography>
-          <Typography variant="body">As we say, the drying period of a carpet is no more than 2 hours because of the fans which circulate the air and decrease time. So, we suggest trying our rapid dry carpet cleaning in the winter as it offers shorter drying times. It allows you to resume using your carpets within 1–2 hours, enjoying your time at home without any hassle.</Typography></li>
-        <li>
-          <Typography variant="h3">How do you dehumidify wet carpet?</Typography>
-          <Typography variant="body">After fast dry carpet cleaning service, you can expect a clean and dry carpet. We use a Dri-Pod carpet and hard floor drier. It directs air across the floor in all directions to boost evaporation and quickly remove surface moisture.</Typography>
-          <Typography variant="body">If, after the procedure, you still think there is some moisture left, you can activate a dehumidifier.</Typography>
-          <Typography variant="body">Following the instant dry carpet cleaning, there should be no moisture left. However, if you suspect there might still be some moisture present, you can activate a dehumidifier. It will significantly help by extracting moisture from your entire house, including your carpets.</Typography></li>
-        <li>
-          <Typography variant="h3">Does heat or air dry carpet faster?</Typography>
-          <Typography variant="body">Both heat and air can play a role in drying carpets after cleaning, but their effectiveness depends on factors like humidity, airflow, and carpet type.</Typography>
-          <Typography variant="body">Heat helps evaporate moisture more quickly. However, excessive heat can potentially damage some carpet fibres, so we do not recommend it.</Typography>
-          <Typography variant="body">Proper air movement is essential for quick dry carpet cleaning. We use powerful air blowers to encourage swift drying by generating concentrated, straight air currents. Experience the change our speedy dry carpet cleaning can bring about and witness the transformation of your home into a cleaner, healthier, and more welcoming environment. Schedule your visit today and let us handle everything else!</Typography></li>
+      <li>
+        <Typography variant="h3">19. What temperature dries carpet faster?</Typography>
+        <Typography variant="body">The temperature at which a carpet dries faster depends on several factors, including the type of carpet, the level of humidity in the room, and the airflow. In general, warmer temperatures can help dry carpets more quickly than cooler temperatures. We advise you to keep the temperature in the room around 22–24 degrees.</Typography></li>
+      <li>
+        <Typography variant="h3">20. How long does it take to air dry a carpet?</Typography>
+        <Typography variant="body">Usually, the steam-cleaned carpets can take 12-24 hours to dry completely, depending on factors like humidity and ventilation. However, quick dry carpet cleaning has a significant advantage in drying time, with carpets typically drying within 1-2 hours because of the small amount of liquid used.</Typography></li>
+      <li>
+        <Typography variant="h3">21. How do you dry carpet in the winter?</Typography>
+        <Typography variant="body">As we say, the drying period of a carpet is no more than 2 hours because of the fans which circulate the air and decrease time. So, we suggest trying our rapid dry carpet cleaning in the winter as it offers shorter drying times. It allows you to resume using your carpets within 1–2 hours, enjoying your time at home without any hassle.</Typography></li>
+      <li>
+        <Typography variant="h3">22. How do you dehumidify wet carpet?</Typography>
+        <Typography variant="body">After fast dry carpet cleaning service, you can expect a clean and dry carpet. We use a Dri-Pod carpet and hard floor drier. It directs air across the floor in all directions to boost evaporation and quickly remove surface moisture.</Typography>
+        <Typography variant="body">If, after the procedure, you still think there is some moisture left, you can activate a dehumidifier.</Typography>
+        <Typography variant="body">Following the instant dry carpet cleaning, there should be no moisture left. However, if you suspect there might still be some moisture present, you can activate a dehumidifier. It will significantly help by extracting moisture from your entire house, including your carpets.</Typography></li>
+      <li>
+        <Typography variant="h3">23. Does heat or air dry carpet faster?</Typography>
+        <Typography variant="body">Both heat and air can play a role in drying carpets after cleaning, but their effectiveness depends on factors like humidity, airflow, and carpet type.</Typography>
+        <Typography variant="body">Heat helps evaporate moisture more quickly. However, excessive heat can potentially damage some carpet fibres, so we do not recommend it.</Typography>
+        <Typography variant="body">Proper air movement is essential for quick dry carpet cleaning. We use powerful air blowers to encourage swift drying by generating concentrated, straight air currents. Experience the change our speedy dry carpet cleaning can bring about and witness the transformation of your home into a cleaner, healthier, and more welcoming environment. Schedule your visit today and let us handle everything else!</Typography></li>
 
-        <li>
-          <Typography variant="h3">How do you dry a large wet carpet?</Typography>
-          <Typography variant="body">We suggest you follow these steps in order to dry your large wet carpet:</Typography></li>
-        <li>
+      <li>
+        <Typography variant="h3">24. How do you dry a large wet carpet?</Typography>
+        <Typography variant="body">We suggest you follow these steps in order to dry your large wet carpet:</Typography></li>
+      <ul class="ml--5" style="list-style: initial;">
+        <Typography variant="li">
           <p>Firstly, make sure to extract the water by placing absorbent towels on the carpet. This will help soak up the remaining water.</p>
-        </li>
-        <li>
+        </Typography>
+        <Typography variant="li">
           <p>If there is not much water, you can put a fan or dehumidifier in the room to help with air circulation. It is good to check from time to time how it is going and to relocate the fan/dehumidifier. If you do not have any of this equipment, you can open the windows and doors so that air flows into the room.</p>
-        </li>
-        <li>
+        </Typography>
+        <Typography variant="li">
           <p>If there is still too much water, it may be necessary to seek the assistance of a professional instead of attempting to manage the issue alone.</p>
-        </li>
-        <Typography variant="body"><strong>When thinking about your upcoming carpet cleaning appointment, think about the many advantages of fast dry carpet cleaning service. It provides a mix of effectiveness, health advantages, and eco-friendly aspects that are hard to beat.</strong></Typography>
+        </Typography>
       </ul>
+      <Typography variant="body"><strong>When thinking about your upcoming carpet cleaning appointment, think about the many advantages of fast dry carpet cleaning service. It provides a mix of effectiveness, health advantages, and eco-friendly aspects that are hard to beat.</strong></Typography>
     </Entry>
   </Container>
 }

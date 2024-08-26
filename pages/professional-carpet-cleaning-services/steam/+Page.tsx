@@ -82,175 +82,181 @@ export function FaqSection() {
   const { Container, Entry } = createCollapsable()
   return <Container>
     <Entry>
-      <ul>
-        <li>
-          <Typography variant="h3">Do you have a cancellation fee?</Typography>
-          <Typography variant="body">Yes, if you cancel on the day of the cleaning, you will lose your deposit.</Typography></li>
-        <li>
-          <Typography variant="h3">Do I need to pay for the congestion / parking charge?</Typography>
-          <Typography variant="body">Yes, the client is requested to arrange suitable parking space for our vehicles within close proximity of the property and to cover any parking / congestion expenses, if applicable.</Typography></li>
-        <li>
-          <Typography variant="h3">Do I need to move furniture before steam extraction carpet cleaning?</Typography>
-          <Typography variant="body">Your assistance in moving away small, delicate, or valuable furniture items such as lamps and ornaments would be greatly appreciated for insurance purposes. If possible, please position them in a secure area before our arrival, one that won't be affected during cleaning. We are more than willing to help move other lightweight furniture like chairs, armchairs, and tables during the cleaning. After the cleaning is done, we will put them back in their original positions. If heavy furniture, such as sofas, beds, wardrobes, and cupboards, needs to be moved, an additional charge will be placed. This is because it demands extra time and effort from our technician, who will be compensated accordingly. Our primary objective is to make the entire process as stress-free as possible for you.</Typography></li>
-        <li>
-          <Typography variant="h3">What if I live on the 4th floor or above and I have no lift?</Typography>
-          <Typography variant="body">Since our equipment is very heavy (50kg+), we charge extra for every extra floor that we need to carry by hand. The reason is that this will usually take a lot of time and our technicians tire faster, therefore, that day we cannot do as much work as we usually do.</Typography></li>
-        <li>
-          <Typography variant="h3">Are you insured?</Typography>
-          <Typography variant="body">Yes, we are fully insured.</Typography></li>
-      </ul>
+      <li>
+        <Typography variant="h3">1. Do you have a cancellation fee?</Typography>
+        <Typography variant="body">Yes, if you cancel on the day of the cleaning, you will lose your deposit.</Typography></li>
+      <li>
+        <Typography variant="h3">2. Do I need to pay for the congestion / parking charge?</Typography>
+        <Typography variant="body">Yes, the client is requested to arrange suitable parking space for our vehicles within close proximity of the property and to cover any parking / congestion expenses, if applicable.</Typography></li>
+      <li>
+        <Typography variant="h3">3. Do I need to move furniture before steam extraction carpet cleaning?</Typography>
+        <Typography variant="body">Your assistance in moving away small, delicate, or valuable furniture items such as lamps and ornaments would be greatly appreciated for insurance purposes. If possible, please position them in a secure area before our arrival, one that won't be affected during cleaning. We are more than willing to help move other lightweight furniture like chairs, armchairs, and tables during the cleaning. After the cleaning is done, we will put them back in their original positions. If heavy furniture, such as sofas, beds, wardrobes, and cupboards, needs to be moved, an additional charge will be placed. This is because it demands extra time and effort from our technician, who will be compensated accordingly. Our primary objective is to make the entire process as stress-free as possible for you.</Typography></li>
+      <li>
+        <Typography variant="h3">4. What if I live on the 4th floor or above and I have no lift?</Typography>
+        <Typography variant="body">Since our equipment is very heavy (50kg+), we charge extra for every extra floor that we need to carry by hand. The reason is that this will usually take a lot of time and our technicians tire faster, therefore, that day we cannot do as much work as we usually do.</Typography></li>
+      <li>
+        <Typography variant="h3">5. Are you insured?</Typography>
+        <Typography variant="body">Yes, we are fully insured.</Typography></li>
     </Entry>
     <Entry>
-      <ul>
-        <li>
-          <Typography variant="h3">What happens if your cleaner damages anything while performing professional carpet steam cleaning services?</Typography>
-          <Typography variant="body">We are fully insured, and if an accident happens, we are fully covered.</Typography></li>
-        <li>
-          <Typography variant="h3">How long does the process of professional hot water extraction carpet cleaning  take?</Typography>
-          <Typography variant="body">The duration of the professional hot water extraction carpet cleaning process depends mainly on:</Typography></li>
-        <li>
+      <li>
+        <Typography variant="h3">6. What happens if your cleaner damages anything while performing professional carpet steam cleaning services?</Typography>
+        <Typography variant="body">We are fully insured, and if an accident happens, we are fully covered.</Typography></li>
+      <li>
+        <Typography variant="h3">7. How long does the process of professional hot water extraction carpet cleaning  take?</Typography>
+        <Typography variant="body">The duration of the professional hot water extraction carpet cleaning process depends mainly on:</Typography></li>
+      <ul class="ml--5" style="list-style: initial;">
+        <Typography variant="li">
           <p>How soiled the carpet is;</p>
-        </li>
-        <li>
+        </Typography>
+        <Typography variant="li">
           <p>If it needs any stain removal treatments.</p>
-        </li>
-        <Typography variant="body">In most cases, the process of professional hot water extraction carpet cleaning takes from 20 to 60 minutes per room.</Typography>
-        <li>
-          <Typography variant="h3">How long does it take for the carpet to get dry after a professional carpet steam cleaning service is performed?</Typography>
-          <Typography variant="body">It depends on the carpet and the cleaning method used, but the approximate time for the carpet to get dry is 7 to 9 hours.</Typography></li>
-        <li>
-          <Typography variant="h3">Do you guarantee that after cleaning my carpet, all stains will be removed?</Typography>
-          <Typography variant="body">Unfortunately, we cannot provide an absolute guarantee due to several factors beyond our influence. These factors include:</Typography></li>
-        <li>
-          <p>How old the stains are;</p>
-        </li>
-        <li>
-          <p>The substance that is responsible for the stains;</p>
-        </li>
-        <li>
-          <p>The type and fabric of the carpet;</p>
-        </li>
-        <li>
-          <p>Previous mishandling of the stains.</p>
-          <Typography variant="body">Nonetheless, we are committed to making every possible effort to remove all stains from your carpet. Our approach involves:</Typography>
-        </li>
-        <li>
-          <p>Utilising advanced cleaning equipment;</p>
-        </li>
-        <li>
-          <p>Applying carefully chosen premium detergents;</p>
-        </li>
-        <li>
-          <p>Tailoring our approach to the specific carpet type and staining agent to ensure the best possible outcome.</p>
-        </li>
-        <li>
-          <Typography variant="h3">How soon can I expect a cleaner to visit me?</Typography>
-          <Typography variant="body">We will try to get you an appointment as soon as possible. Usually, we are fully booked for 3 days ahead, but sometimes there are exceptions.</Typography></li>
-        <li>
-          <Typography variant="h3">Can you give me a quote over the phone or do you need to visit my property?</Typography>
-          <Typography variant="body">We can provide an estimate over the phone for residential properties. Commercial properties may require a site visit. You can also get an online quote for our steam extraction carpet cleaning services.</Typography></li>
-        <li>
-          <Typography variant="h3">What payment methods do you accept for professional carpet steam cleaning services?</Typography>
-          <Typography variant="body">We accept debit/credit cards, and cash payments directly to our team.</Typography></li>
-        <li>
-          <Typography variant="h3">Can you provide me with an invoice for the professional carpet steam cleaning services?</Typography>
-          <Typography variant="body">Yes, we will either send you a receipt via email.</Typography></li>
-        <li>
-          <Typography variant="h3">Are you qualified?</Typography>
-          <Typography variant="body">Yes, we are qualified and fully trained members of <a class="color-paper-link hover-color-paper-link-hover:hover" href="https://trustedlocalcleaners.ncca.co.uk/listing/fine-carpet-cleaning-ltd/" target="_blank" rel="noopener">NCCA</a> (National Carpet Cleaners Association) – the UK’s recognised industry qualification.</Typography></li>
-        <li>
-          <Typography variant="h3">How long have you been in the carpet cleaning business?</Typography>
-          <Typography variant="body">We have been in the carpet cleaning business since 2012. In these years, we have dealt with numerous types of carpets, rugs, upholstery and stains from commercial and residential customers and have gained a lot of experience. Thanks to this knowledge and our strive for perfect execution, we have been able to better our services by:</Typography></li>
-        <li>
-          <p>Replacing our equipment and machinery with better ones all the time, if such are available;</p>
-        </li>
-        <li>
-          <p>Regularly testing and upgrading our cleaning products;</p>
-        </li>
-        <li>
-          <p>Constantly searching to improve our knowledge and competence by going through additional professional courses and training.</p>
-        </li>
-        <li>
-          <Typography variant="h3">Can you give me a discount?</Typography>
-          <Typography variant="body">Because we offer top-quality professional carpet steam cleaning services, utilising the most effective equipment and more than 20 premium cleaning products, our carpet steam cleaning prices are not only very competitive but also among the most attractive in the market.  Bundling all the services you need is more cost-effective than if they were performed individually. This is due to the initial high cost and additional charges for each visit by the technician, taking into account factors such as travel time, parking, and the handling of heavy equipment during loading and unloading.</Typography></li>
-        <li>
-          <Typography variant="h3">Does steam cleaning leave the carpet wet?</Typography>
-          <Typography variant="body">Although 95% of the water used gets extracted when steam cleaning, the carpet remains slightly wet afterward. When left to dry on its own, steam-cleaned carpet will usually take 7-9 hours before it completely dries.</Typography></li>
-        <li>
-          <Typography variant="h3">Can you walk on the carpet after steam cleaning?</Typography>
-          <Typography variant="body">It is recommended that you try to stay off the freshly steam-cleaned carpets until they are dry – about 7-9 hours. If you cannot avoid walking over your damp carpet before it is dry, do it with caution. When you transition from carpet to another hard surface, like tile or hardwood, it can be very slippery.</Typography></li>
+        </Typography>
       </ul>
+      <Typography variant="body">In most cases, the process of professional hot water extraction carpet cleaning takes from 20 to 60 minutes per room.</Typography>
+      <li>
+        <Typography variant="h3">8. How long does it take for the carpet to get dry after a professional carpet steam cleaning service is performed?</Typography>
+        <Typography variant="body">It depends on the carpet and the cleaning method used, but the approximate time for the carpet to get dry is 7 to 9 hours.</Typography></li>
+      <li>
+        <Typography variant="h3">9. Do you guarantee that after cleaning my carpet, all stains will be removed?</Typography>
+        <Typography variant="body">Unfortunately, we cannot provide an absolute guarantee due to several factors beyond our influence. These factors include:</Typography></li>
+      <ul class="ml--5" style="list-style: initial;">
+        <Typography variant="li">
+          <p>How old the stains are;</p>
+        </Typography>
+        <Typography variant="li">
+          <p>The substance that is responsible for the stains;</p>
+        </Typography>
+        <Typography variant="li">
+          <p>The type and fabric of the carpet;</p>
+        </Typography>
+      </ul>
+      <li>
+        <Typography variant="body">Previous mishandling of the stains.</Typography>
+        <Typography variant="body">Nonetheless, we are committed to making every possible effort to remove all stains from your carpet. Our approach involves:</Typography>
+      </li>
+      <ul class="ml--5" style="list-style: initial;">
+        <Typography variant="li">
+          <p>Utilising advanced cleaning equipment;</p>
+        </Typography>
+        <Typography variant="li">
+          <p>Applying carefully chosen premium detergents;</p>
+        </Typography>
+        <Typography variant="li">
+          <p>Tailoring our approach to the specific carpet type and staining agent to ensure the best possible outcome.</p>
+        </Typography>
+      </ul>
+      <li>
+        <Typography variant="h3">10. How soon can I expect a cleaner to visit me?</Typography>
+        <Typography variant="body">We will try to get you an appointment as soon as possible. Usually, we are fully booked for 3 days ahead, but sometimes there are exceptions.</Typography></li>
+      <li>
+        <Typography variant="h3">11. Can you give me a quote over the phone or do you need to visit my property?</Typography>
+        <Typography variant="body">We can provide an estimate over the phone for residential properties. Commercial properties may require a site visit. You can also get an online quote for our steam extraction carpet cleaning services.</Typography></li>
+      <li>
+        <Typography variant="h3">12. What payment methods do you accept for professional carpet steam cleaning services?</Typography>
+        <Typography variant="body">We accept debit/credit cards, and cash payments directly to our team.</Typography></li>
+      <li>
+        <Typography variant="h3">13. Can you provide me with an invoice for the professional carpet steam cleaning services?</Typography>
+        <Typography variant="body">Yes, we will either send you a receipt via email.</Typography></li>
+      <li>
+        <Typography variant="h3">14. Are you qualified?</Typography>
+        <Typography variant="body">Yes, we are qualified and fully trained members of <a class="color-paper-link hover-color-paper-link-hover:hover" href="https://trustedlocalcleaners.ncca.co.uk/listing/fine-carpet-cleaning-ltd/" target="_blank" rel="noopener">NCCA</a> (National Carpet Cleaners Association) – the UK’s recognised industry qualification.</Typography></li>
+      <li>
+        <Typography variant="h3">15. How long have you been in the carpet cleaning business?</Typography>
+        <Typography variant="body">We have been in the carpet cleaning business since 2012. In these years, we have dealt with numerous types of carpets, rugs, upholstery and stains from commercial and residential customers and have gained a lot of experience. Thanks to this knowledge and our strive for perfect execution, we have been able to better our services by:</Typography></li>
+      <ul class="ml--5" style="list-style: initial;">
+        <Typography variant="li">
+          <p>Replacing our equipment and machinery with better ones all the time, if such are available;</p>
+        </Typography>
+        <Typography variant="li">
+          <p>Regularly testing and upgrading our cleaning products;</p>
+        </Typography>
+        <Typography variant="li">
+          <p>Constantly searching to improve our knowledge and competence by going through additional professional courses and training.</p>
+        </Typography>
+      </ul>
+      <li>
+        <Typography variant="h3">16. Can you give me a discount?</Typography>
+        <Typography variant="body">Because we offer top-quality professional carpet steam cleaning services, utilising the most effective equipment and more than 20 premium cleaning products, our carpet steam cleaning prices are not only very competitive but also among the most attractive in the market.  Bundling all the services you need is more cost-effective than if they were performed individually. This is due to the initial high cost and additional charges for each visit by the technician, taking into account factors such as travel time, parking, and the handling of heavy equipment during loading and unloading.</Typography></li>
+      <li>
+        <Typography variant="h3">17. Does steam cleaning leave the carpet wet?</Typography>
+        <Typography variant="body">Although 95% of the water used gets extracted when steam cleaning, the carpet remains slightly wet afterward. When left to dry on its own, steam-cleaned carpet will usually take 7-9 hours before it completely dries.</Typography></li>
+      <li>
+        <Typography variant="h3">18. Can you walk on the carpet after steam cleaning?</Typography>
+        <Typography variant="body">It is recommended that you try to stay off the freshly steam-cleaned carpets until they are dry – about 7-9 hours. If you cannot avoid walking over your damp carpet before it is dry, do it with caution. When you transition from carpet to another hard surface, like tile or hardwood, it can be very slippery.</Typography></li>
     </Entry>
     <Entry>
-      <ul>
-        <li>
-          <Typography variant="h3">Do you pretreat the carpet before steam cleaning?</Typography>
-          <Typography variant="body">Yes, pretreating your carpet with a solution of liquid detergent and warm water is recommended before steam extraction carpet cleaning. This helps loosen dirt and grime so that they can be lifted away during the steam cleaning process.</Typography>
-          <Typography variant="body">Hiring our professional deep carpet cleaning service saves you time and ensures optimal results. As professionals, we carry out a pre-cleaning survey based on the type of carpet, its condition, and its degree of pollution.</Typography></li>
-        <li>
-          <Typography variant="h3">How often should carpets be steam cleaned?</Typography>
-          <Typography variant="body">The deep steam carpet cleaning frequency depends mainly on factors like how fast the carpet soils. On average, a carpet should be cleaned at 12-month intervals. However, if you have pets, children, high traffic on the carpet, a smoking habit, or if you stain it a lot, we recommend using an expert carpet cleaning service more often than that. Feel free to contact us anytime for professional carpet cleaning services or advice.</Typography></li>
-        <li>
-          <Typography variant="h3">Does steam cleaning carpets work?</Typography>
-          <Typography variant="body">Yes, steam carpet cleaning definitely works. Steam carpet cleaning is a highly effective method offered by professional companies like "Fine Carpet Cleaning Ltd." Their experience, equipment, products, and techniques ensure exceptional results. This approach is not only efficient but also affordable, guaranteeing the removal of tough stains, odours, and germ buildup that regular cleaning methods cannot eliminate.</Typography></li>
-        <li>
-          <Typography variant="h3">Does steam cleaning carpets remove stains?</Typography>
-          <Typography variant="body"><strong>The short answer is yes, they do.</strong> Steam cleaning is highly effective in removing deep-down stains, dirt, and grime, while also eliminating bacteria and removing dust mites, allergens, mould, pet dander, and unpleasant odours. However, certain stubborn stains, such as extremely old ones or those that have been treated improperly, can be challenging to remove completely, even with expert assistance. Fortunately, due to our extensive experience and utilisation of top-notch equipment, we at “Fine Carpet Cleaning Ltd.” have achieved remarkable success rates in stain removal. Nevertheless, we cannot offer a guarantee that every stain can be completely eradicated. Rest assured, we will evaluate the stain and inform you during the quotation process about our confidence in achieving its removal.</Typography></li>
-        <li>
-          <Typography variant="h3">Does steam cleaning damage the carpet?</Typography>
-          <Typography variant="body">No, steam cleaning does not damage carpets, if done properly. In fact, it is the most thorough method and is recommended by most carpet manufacturers. Steam cleaning effectively removes deep-down stains, dirt, and grime. It kills bacteria, removes dust mites, allergens, mould, pet dander and odours, while prolonging the carpet's lifespan.</Typography></li>
-        <li>
-          <Typography variant="h3">How often should you steam clean your carpet with pets?</Typography>
-          <Typography variant="body">We recommend that pet owners seek professional deep carpet cleaning services once or twice per year. Cleaning when the seasons change is an easy way to remember when it's time to deep clean your carpets.</Typography></li>
-        <li>
-          <Typography variant="h3">Will steam cleaning a carpet get rid of cat urine smell?</Typography>
-          <Typography variant="body">We do not recommend steam cleaning a carpet when stained with pet urine. The heat will permanently set the stain and the odour by bonding the protein into any man-made fibres.</Typography>
-          <Typography variant="body">Professional carpet cleaning companies like ours are experienced and can effectively remove cat urine stains and odours using the right methods and products specifically designed for pet stains. Regular maintenance and professional carpet cleaning services can help keep carpets fresh and clean. Feel free to contact us if you need professional advice.</Typography></li>
-        <li>
-          <Typography variant="h3">Does steam cleaning a carpet kill bacteria?</Typography>
-          <Typography variant="body">Yes, without a doubt having your carpets cleaned by a professional hot water extraction carpet cleaning company in London can effectively kill bacteria. Your carpet can have as much as 200,000 bacteria per square inch. Carpet cleaning with steam cleans deeply using hot water, which eliminates dirt, germ buildup, allergens, parasites and bacteria such as E. coli, Salmonella and many others.</Typography></li>
-        <li>
-          <Typography variant="h3">Does steam cleaning a carpet help with allergies?</Typography>
-          <Typography variant="body">Regular cleaning is essential for allergy sufferers as it helps to reduce exposure to allergens. A professional deep clean carpet company effectively removes dust, pollen, pet dander, mould, and other allergens that can trigger allergic reactions. Carpets that are not regularly cleaned can become breeding grounds for dust mites, which can cause serious allergic reactions. Steam cleaning, also known as the hot water extraction method, is a recommended allergy carpet cleaning method as it has been proven to reduce allergens in carpets. However, it is important to ensure that all the water is properly removed from the carpet after steam cleaning to prevent moisture-related issues.</Typography>
-          <Typography variant="body">“Fine Carpet Cleaning Ltd.” is a company that specialises in professional hot water extraction carpet cleaning services and uses special machines and solutions to effectively remove allergens. Vacuuming regularly is also important in removing allergens from the carpet.</Typography></li>
-        <li>
-          <Typography variant="h3">Is steam cleaning best for carpets?</Typography>
-          <Typography variant="body">A deep carpet cleaning service is the most effective way to clean your carpet. Cleaning your carpet with hot water at high pressure successfully removes dirt, bacteria, grime, and toxins embedded in the carpet fibres. Professional deep carpet cleaning offers many advantages, including:</Typography></li>
-        <li>
+      <li>
+        <Typography variant="h3">19. Do you pretreat the carpet before steam cleaning?</Typography>
+        <Typography variant="body">Yes, pretreating your carpet with a solution of liquid detergent and warm water is recommended before steam extraction carpet cleaning. This helps loosen dirt and grime so that they can be lifted away during the steam cleaning process.</Typography>
+        <Typography variant="body">Hiring our professional deep carpet cleaning service saves you time and ensures optimal results. As professionals, we carry out a pre-cleaning survey based on the type of carpet, its condition, and its degree of pollution.</Typography></li>
+      <li>
+        <Typography variant="h3">20. How often should carpets be steam cleaned?</Typography>
+        <Typography variant="body">The deep steam carpet cleaning frequency depends mainly on factors like how fast the carpet soils. On average, a carpet should be cleaned at 12-month intervals. However, if you have pets, children, high traffic on the carpet, a smoking habit, or if you stain it a lot, we recommend using an expert carpet cleaning service more often than that. Feel free to contact us anytime for professional carpet cleaning services or advice.</Typography></li>
+      <li>
+        <Typography variant="h3">21. Does steam cleaning carpets work?</Typography>
+        <Typography variant="body">Yes, steam carpet cleaning definitely works. Steam carpet cleaning is a highly effective method offered by professional companies like "Fine Carpet Cleaning Ltd." Their experience, equipment, products, and techniques ensure exceptional results. This approach is not only efficient but also affordable, guaranteeing the removal of tough stains, odours, and germ buildup that regular cleaning methods cannot eliminate.</Typography></li>
+      <li>
+        <Typography variant="h3">22. Does steam cleaning carpets remove stains?</Typography>
+        <Typography variant="body"><strong>The short answer is yes, they do.</strong> Steam cleaning is highly effective in removing deep-down stains, dirt, and grime, while also eliminating bacteria and removing dust mites, allergens, mould, pet dander, and unpleasant odours. However, certain stubborn stains, such as extremely old ones or those that have been treated improperly, can be challenging to remove completely, even with expert assistance. Fortunately, due to our extensive experience and utilisation of top-notch equipment, we at “Fine Carpet Cleaning Ltd.” have achieved remarkable success rates in stain removal. Nevertheless, we cannot offer a guarantee that every stain can be completely eradicated. Rest assured, we will evaluate the stain and inform you during the quotation process about our confidence in achieving its removal.</Typography></li>
+      <li>
+        <Typography variant="h3">23. Does steam cleaning damage the carpet?</Typography>
+        <Typography variant="body">No, steam cleaning does not damage carpets, if done properly. In fact, it is the most thorough method and is recommended by most carpet manufacturers. Steam cleaning effectively removes deep-down stains, dirt, and grime. It kills bacteria, removes dust mites, allergens, mould, pet dander and odours, while prolonging the carpet's lifespan.</Typography></li>
+      <li>
+        <Typography variant="h3">24. How often should you steam clean your carpet with pets?</Typography>
+        <Typography variant="body">We recommend that pet owners seek professional deep carpet cleaning services once or twice per year. Cleaning when the seasons change is an easy way to remember when it's time to deep clean your carpets.</Typography></li>
+      <li>
+        <Typography variant="h3">25. Will steam cleaning a carpet get rid of cat urine smell?</Typography>
+        <Typography variant="body">We do not recommend steam cleaning a carpet when stained with pet urine. The heat will permanently set the stain and the odour by bonding the protein into any man-made fibres.</Typography>
+        <Typography variant="body">Professional carpet cleaning companies like ours are experienced and can effectively remove cat urine stains and odours using the right methods and products specifically designed for pet stains. Regular maintenance and professional carpet cleaning services can help keep carpets fresh and clean. Feel free to contact us if you need professional advice.</Typography></li>
+      <li>
+        <Typography variant="h3">26. Does steam cleaning a carpet kill bacteria?</Typography>
+        <Typography variant="body">Yes, without a doubt having your carpets cleaned by a professional hot water extraction carpet cleaning company in London can effectively kill bacteria. Your carpet can have as much as 200,000 bacteria per square inch. Carpet cleaning with steam cleans deeply using hot water, which eliminates dirt, germ buildup, allergens, parasites and bacteria such as E. coli, Salmonella and many others.</Typography></li>
+      <li>
+        <Typography variant="h3">27. Does steam cleaning a carpet help with allergies?</Typography>
+        <Typography variant="body">Regular cleaning is essential for allergy sufferers as it helps to reduce exposure to allergens. A professional deep clean carpet company effectively removes dust, pollen, pet dander, mould, and other allergens that can trigger allergic reactions. Carpets that are not regularly cleaned can become breeding grounds for dust mites, which can cause serious allergic reactions. Steam cleaning, also known as the hot water extraction method, is a recommended allergy carpet cleaning method as it has been proven to reduce allergens in carpets. However, it is important to ensure that all the water is properly removed from the carpet after steam cleaning to prevent moisture-related issues.</Typography>
+        <Typography variant="body">“Fine Carpet Cleaning Ltd.” is a company that specialises in professional hot water extraction carpet cleaning services and uses special machines and solutions to effectively remove allergens. Vacuuming regularly is also important in removing allergens from the carpet.</Typography></li>
+      <li>
+        <Typography variant="h3">28. Is steam cleaning best for carpets?</Typography>
+        <Typography variant="body">A deep carpet cleaning service is the most effective way to clean your carpet. Cleaning your carpet with hot water at high pressure successfully removes dirt, bacteria, grime, and toxins embedded in the carpet fibres. Professional deep carpet cleaning offers many advantages, including:</Typography></li>
+      <ul class="ml--5" style="list-style: initial;">
+        <Typography variant="li">
           <p>Prolonging the carpet’s life;</p>
-        </li>
-        <li>
+        </Typography>
+        <Typography variant="li">
           <p>Effectively treating tough stains;</p>
-        </li>
-        <li>
+        </Typography>
+        <Typography variant="li">
           <p>Leaving no residue behind;</p>
-        </li>
-        <li>
+        </Typography>
+        <Typography variant="li">
           <p>Avoiding harsh chemicals.</p>
-        </li>
-        <li>
-          <Typography variant="h3">How much does a professional carpet deep cleaning service cost?</Typography>
-          <Typography variant="body">How much the professional carpet deep cleaning service costs depends on a number of factors. Some of them are:</Typography></li>
-        <li>
-          <p>Quantity and size of the carpets;</p>
-        </li>
-        <li>
-          <p>Level of soiling;</p>
-        </li>
-        <li>
-          <p>Carpet type;</p>
-        </li>
-        <li>
-          <p>Ease of access to the carpets.</p>
-        </li>
-        <Typography variant="body">To learn more, check out our <a class="color-paper-link hover-color-paper-link-hover:hover" href="#price_table">carpet steam cleaning prices</a>.</Typography>
-        <li>
-          <Typography variant="h3">Can you steam clean a wool carpet?</Typography>
-          <Typography variant="body">Yes, steam cleaning can be used on wool carpets without causing damage. It is one of the most thorough and effective methods for removing dirt and soil from the carpet's base. However, wool carpets are sensitive to chemicals, so it's essential to use gentle products. Hiring professionals is advisable, as they have the expertise to choose the appropriate cleaning methods for your specific type of carpet.</Typography></li>
-        <li>
-          <Typography variant="h3">Can you steam clean a nylon carpet?</Typography>
-          <Typography variant="body">In special cases like synthetic rugs and carpets from acrylic or nylon, we strongly recommend not using steam cleaning, but dry cleaning, as the heat and steam will damage the rug.</Typography></li>
+        </Typography>
       </ul>
+      <li>
+        <Typography variant="h3">29. How much does a professional carpet deep cleaning service cost?</Typography>
+        <Typography variant="body">How much the professional carpet deep cleaning service costs depends on a number of factors. Some of them are:</Typography></li>
+      <ul class="ml--5" style="list-style: initial;">
+        <Typography variant="li">
+          <p>Quantity and size of the carpets;</p>
+        </Typography>
+        <Typography variant="li">
+          <p>Level of soiling;</p>
+        </Typography>
+        <Typography variant="li">
+          <p>Carpet type;</p>
+        </Typography>
+        <Typography variant="li">
+          <p>Ease of access to the carpets.</p>
+        </Typography>
+      </ul>
+      <Typography variant="body">To learn more, check out our <a class="color-paper-link hover-color-paper-link-hover:hover" href="#price_table">carpet steam cleaning prices</a>.</Typography>
+      <li>
+        <Typography variant="h3">30. Can you steam clean a wool carpet?</Typography>
+        <Typography variant="body">Yes, steam cleaning can be used on wool carpets without causing damage. It is one of the most thorough and effective methods for removing dirt and soil from the carpet's base. However, wool carpets are sensitive to chemicals, so it's essential to use gentle products. Hiring professionals is advisable, as they have the expertise to choose the appropriate cleaning methods for your specific type of carpet.</Typography></li>
+      <li>
+        <Typography variant="h3">31. Can you steam clean a nylon carpet?</Typography>
+        <Typography variant="body">In special cases like synthetic rugs and carpets from acrylic or nylon, we strongly recommend not using steam cleaning, but dry cleaning, as the heat and steam will damage the rug.</Typography></li>
     </Entry>
   </Container>
 }

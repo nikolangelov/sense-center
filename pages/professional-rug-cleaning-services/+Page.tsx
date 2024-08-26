@@ -52,21 +52,21 @@ const GalerrySliderMobile = () => {
 };
 
 const VideoPlayer = () => {
-	return (
-		<div class="flex flex-justify-center flex-items-center mt-20">
-			<video
-				class="mt-10 b-rd-3" style="width: 100%; width: -moz-available; width: -webkit-fill-available; width: fill-available;"
-				autoplay
-				controls
-				muted
-			>
-				<source
-					src="/assets/Professional Carpet Cleaning London - Fine Carpet Cleaning (1).mp4"
-					type="video/mp4"
-				/>
-			</video>
-		</div>
-	);
+  return (
+    <div class="flex flex-justify-center flex-items-center mt-20">
+      <video
+        class="mt-10 b-rd-3" style="width: 100%; width: -moz-available; width: -webkit-fill-available; width: fill-available;"
+        autoplay
+        controls
+        muted
+      >
+        <source
+          src="/assets/Professional Carpet Cleaning London - Fine Carpet Cleaning (1).mp4"
+          type="video/mp4"
+        />
+      </video>
+    </div>
+  );
 };
 
 function FleurDivider() {
@@ -82,202 +82,212 @@ export function FaqSection() {
   const { Container, Entry } = createCollapsable()
   return <Container>
     <Entry>
-      <ul>
-        <li>
-          <Typography variant="h3">Will you fee me if I cancel the quality rug cleaning?</Typography>
-          <Typography variant="body">We require a deposit before performing quality rug cleaning. If you cancel on the day of the cleaning you will lose that deposit.</Typography></li>
-        <li>
-          <Typography variant="h3">Should I pay for the congestion / parking charge?</Typography>
-          <Typography variant="body">Yes, we kindly ask that the client arrange a suitable parking space for our vehicles within close proximity of the property or to cover any parking / congestion expenses.</Typography></li>
-        <li>
-          <Typography variant="h3">What if I live on the 4th floor or above and I have no lift?</Typography>
-          <Typography variant="body">Due to the substantial weight of our equipment, exceeding 50 kilograms, a charge will be added for each additional floor that necessitates manual transportation. This is because it tends to consume a significant amount of time and can result in quicker fatigue among our technicians. As a result, this may diminish our overall productivity for the day compared to our standard output.</Typography></li>
-        <li>
-          <Typography variant="h3">Should I move furniture before the chemical-free rug cleaning?</Typography>
-          <Typography variant="body">We would appreciate it if you could relocate small, fragile, or valuable pieces of furniture for insurance reasons, such as lamps and ornaments. If possible, please place them well out of the way before our arrival in an area that won't be disturbed during the emergency rug cleaning. We'll assist in moving other lightweight furniture like chairs, armchairs, and tables during the cleaning process and return them to their original places. If there's a need to move heavy furniture, such as sofas, beds, wardrobes, or cupboards, an additional charge will apply. This is because it requires extra time and effort from our technicians, and they deserve additional compensation for it. Our aim is to make the entire process as stress-free for you as possible.</Typography></li>
-        <li>
-          <Typography variant="h3">Is your rug cleaning company insured?</Typography>
-          <Typography variant="body">Yes, our rug cleaning company is completely insured.</Typography></li>
-      </ul>
+      <li>
+        <Typography variant="h3">1. Will you fee me if I cancel the quality rug cleaning?</Typography>
+        <Typography variant="body">We require a deposit before performing quality rug cleaning. If you cancel on the day of the cleaning you will lose that deposit.</Typography></li>
+      <li>
+        <Typography variant="h3">2. Should I pay for the congestion / parking charge?</Typography>
+        <Typography variant="body">Yes, we kindly ask that the client arrange a suitable parking space for our vehicles within close proximity of the property or to cover any parking / congestion expenses.</Typography></li>
+      <li>
+        <Typography variant="h3">3. What if I live on the 4th floor or above and I have no lift?</Typography>
+        <Typography variant="body">Due to the substantial weight of our equipment, exceeding 50 kilograms, a charge will be added for each additional floor that necessitates manual transportation. This is because it tends to consume a significant amount of time and can result in quicker fatigue among our technicians. As a result, this may diminish our overall productivity for the day compared to our standard output.</Typography></li>
+      <li>
+        <Typography variant="h3">4. Should I move furniture before the chemical-free rug cleaning?</Typography>
+        <Typography variant="body">We would appreciate it if you could relocate small, fragile, or valuable pieces of furniture for insurance reasons, such as lamps and ornaments. If possible, please place them well out of the way before our arrival in an area that won't be disturbed during the emergency rug cleaning. We'll assist in moving other lightweight furniture like chairs, armchairs, and tables during the cleaning process and return them to their original places. If there's a need to move heavy furniture, such as sofas, beds, wardrobes, or cupboards, an additional charge will apply. This is because it requires extra time and effort from our technicians, and they deserve additional compensation for it. Our aim is to make the entire process as stress-free for you as possible.</Typography></li>
+      <li>
+        <Typography variant="h3">5. Is your rug cleaning company insured?</Typography>
+        <Typography variant="body">Yes, our rug cleaning company is completely insured.</Typography></li>
     </Entry>
     <Entry>
-      <ul>
-        <li>
-          <Typography variant="h3">What happens if your rug cleaning company damages anything?</Typography>
-          <Typography variant="body">We are fully insured and if an accident happens, it will be covered by our rug cleaning company.</Typography></li>
-        <li>
-          <Typography variant="h3">How long does the process of specialist rug cleaning London take?</Typography>
-          <Typography variant="body">The usual cleaning time for a conventional rug washing service is 10 to 15 minutes per room and 15 to 20 minutes per room for green rug cleaning services, although these are not fixed. The duration of the specialist rug cleaning London process might take longer, mainly depending on:</Typography></li>
-        <li>
+      <li>
+        <Typography variant="h3">6. What happens if your rug cleaning company damages anything?</Typography>
+        <Typography variant="body">We are fully insured and if an accident happens, it will be covered by our rug cleaning company.</Typography></li>
+      <li>
+        <Typography variant="h3">7. How long does the process of specialist rug cleaning London take?</Typography>
+        <Typography variant="body">The usual cleaning time for a conventional rug washing service is 10 to 15 minutes per room and 15 to 20 minutes per room for green rug cleaning services, although these are not fixed. The duration of the specialist rug cleaning London process might take longer, mainly depending on:</Typography></li>
+      <ul class="ml--5" style="list-style: initial;">
+        <Typography variant="li">
           <p>How soiled the rug is;</p>
-        </li>
-        <li>
+        </Typography>
+        <Typography variant="li">
           <p>If it needs any stain removal treatments;</p>
-        </li>
-        <li>
+        </Typography>
+        <Typography variant="li">
           <p>What cleaning method will be used on the rug.</p>
-        </li>
-        <li>
-          <Typography variant="h3">How long does it take for the rug to get dry after a specialist rug cleaning London?</Typography>
-          <Typography variant="body">Our team will instruct you on the drying time. The drying time after quality rug cleaning services varies depending on the fabric type of the rug and the cleaning method employed. For example, if a steam cleaning method is utilised, the approximate drying time typically ranges from 7 to 9 hours. On the other hand, if the dry cleaning method is used, the rug will be dry immediately after the cleaning process or shortly thereafter.</Typography>
-          <Typography variant="body">Dry cleaning is used only for delicate materials, as this cleaning method is not as effective as steam cleaning. Steam cleaning is effective in eliminating stains and cleaning the rug in-depth and is suitable for both residential rug cleaning and commercial rug cleaning services.</Typography>
-          <Typography variant="body">If you are having trouble deciding which modern rug cleaning will suit you or are searching for a mobile rug cleaning company, you can contact us at any suitable time to receive professional advice.</Typography></li>
-        <li>
-          <Typography variant="h3">Do you guarantee that after modern rug cleaning all stains will be removed?</Typography>
-          <Typography variant="body">Given our extensive experience and utilisation of some of the finest equipment in the industry for modern rug cleaning, we achieve high success rates in stain removal. However, it's crucial to note that we cannot provide an absolute guarantee due to various factors beyond our control. These factors include:</Typography></li>
-        <li>
-          <p>How long ago did the stains appear;</p>
-        </li>
-        <li>
-          <p>The nature of the substances responsible for the stains;</p>
-        </li>
-        <li>
-          <p>The type and fabric of the upholstery;</p>
-        </li>
-        <li>
-          <p>Any prior mishandling of the stains.</p>
-        </li>
-        <Typography variant="body">Nevertheless, we are fully committed to exerting every possible effort to eliminate all stains from your rug. Our methodology involves:</Typography>
-        <li>
-          <p>Utilising the best cleaning equipment on the market;</p>
-        </li>
-        <li>
-          <p>Applying a carefully selected range of premium detergents;</p>
-        </li>
-        <li>
-          <p>Customising our approach to suit the specific type of rug and the staining agent to ensure the best possible outcome.</p>
-        </li>
-        <li>
-          <Typography variant="h3">How soon can I expect your large rug cleaning near me to visit me?</Typography>
-          <Typography variant="body">We will try to get you an appointment for a high-end upholstery cleaning as soon as possible. Usually, we are fully booked for the following three days, but sometimes there are exceptions. We also offer same-day rug cleaning services for situations that need emergency rug cleaning.</Typography></li>
-        <li>
-          <Typography variant="h3">Can you give me a quote for the large rug cleaning near me over the phone or do you need a viewing in person?</Typography>
-          <Typography variant="body">Yes, we can give you a quote for the mobile rug cleaning over the phone, there is no need for us to visit your property. You can also receive a mobile rug cleaning quote online.</Typography></li>
-        <li>
-          <Typography variant="h3">What payment methods do you accept for your large rug cleaning near me?</Typography>
-          <Typography variant="body">We accept debit / credit cards, bank transfers and cash payments directly to our team.</Typography></li>
-        <li>
-          <Typography variant="h3">Can you provide me with an invoice for the eco rug cleaning?</Typography>
-          <Typography variant="body">Yes, we will either send you a receipt via email or via any method of your choice.</Typography></li>
-        <li>
-          <Typography variant="h3">Are you qualified for your large and small rug cleaning near me?</Typography>
-          <Typography variant="body">Yes, we are qualified and fully trained members of <a class="color-paper-link hover-color-paper-link-hover:hover" href="https://www.checkatrade.com/trades/FineCarpetCleaning" target="_blank" rel="noopener">Checkatrade</a> and of <a class="color-paper-link hover-color-paper-link-hover:hover" href="https://trustedlocalcleaners.ncca.co.uk/listing/fine-carpet-cleaning-ltd/" target="_blank" rel="noopener">NCCA</a> (National Carpet Cleaners Association) – the UK’s acknowledged industry qualification.</Typography></li>
-        <li>
-          <Typography variant="h3">How long have you been in the eco rug cleaning business?</Typography>
-          <Typography variant="body">Since 2012, we've actively participated in the eco rug cleaning industry. Throughout the years, we've encountered various types of carpets, rugs, upholstery, and stains while performing both residential rug cleaning and commercial rug cleaning services, accumulating valuable experience. Our commitment to providing the best rug-washing services has led us to enhance our performance through the following means:</Typography></li>
-        <li>
-          <p>Continuously upgrading our equipment and machinery with superior alternatives whenever they become available;</p>
-        </li>
-        <li>
-          <p>Consistently evaluating and improving our cleaning products to ensure the highest quality of service;</p>
-        </li>
-        <li>
-          <p>Dedication to expanding our knowledge and skills through ongoing professional courses and training, always seeking to enhance our competence in our green rug cleaning services.</p>
-        </li>
-        <li>
-          <Typography variant="h3">Can you add a discount to the chemical-free rug cleaning quote?</Typography>
-          <Typography variant="body">Our green rug cleaning services are renowned for their exceptional quality, using the most efficient equipment and a selection of premium cleaning products. What further distinguishes us is that our rug cleaning prices are not only highly competitive but also stand among the most attractive in the market. We strongly recommend combining all the services you require in order to get a better price. The reason for this cost efficiency is linked to the initial expenses and additional fees connected to every technician appointment, taking into account variables like travel time, parking, and the management of bulky equipment while loading and unloading.</Typography></li>
-        <li>
-          <Typography variant="h3">Can you steam clean a wool rug?</Typography>
-          <Typography variant="body">Yes, rugs made from wool can be steam cleaned, although it should be done with caution. We offer professional wool carpet cleaning services. The help of experts is the best and most stress-free way to handle even the most delicate rugs.</Typography>
-          <Typography variant="body">The drying time of wool rugs is slower than that of other types of rugs, ranging between 10 and 12 hours. If the carpet is very soiled and needs several treatments, the drying time might take even longer.</Typography>
-        </li>
+        </Typography>
       </ul>
+      <li>
+        <Typography variant="h3">8. How long does it take for the rug to get dry after a specialist rug cleaning London?</Typography>
+        <Typography variant="body">Our team will instruct you on the drying time. The drying time after quality rug cleaning services varies depending on the fabric type of the rug and the cleaning method employed. For example, if a steam cleaning method is utilised, the approximate drying time typically ranges from 7 to 9 hours. On the other hand, if the dry cleaning method is used, the rug will be dry immediately after the cleaning process or shortly thereafter.</Typography>
+        <Typography variant="body">Dry cleaning is used only for delicate materials, as this cleaning method is not as effective as steam cleaning. Steam cleaning is effective in eliminating stains and cleaning the rug in-depth and is suitable for both residential rug cleaning and commercial rug cleaning services.</Typography>
+        <Typography variant="body">If you are having trouble deciding which modern rug cleaning will suit you or are searching for a mobile rug cleaning company, you can contact us at any suitable time to receive professional advice.</Typography></li>
+      <li>
+        <Typography variant="h3">9. Do you guarantee that after modern rug cleaning all stains will be removed?</Typography>
+        <Typography variant="body">Given our extensive experience and utilisation of some of the finest equipment in the industry for modern rug cleaning, we achieve high success rates in stain removal. However, it's crucial to note that we cannot provide an absolute guarantee due to various factors beyond our control. These factors include:</Typography></li>
+      <ul class="ml--5" style="list-style: initial;">
+        <Typography variant="li">
+          <p>How long ago did the stains appear;</p>
+        </Typography>
+        <Typography variant="li">
+          <p>The nature of the substances responsible for the stains;</p>
+        </Typography>
+        <Typography variant="li">
+          <p>The type and fabric of the upholstery;</p>
+        </Typography>
+        <Typography variant="li">
+          <p>Any prior mishandling of the stains.</p>
+        </Typography>
+      </ul>
+      <Typography variant="body">Nevertheless, we are fully committed to exerting every possible effort to eliminate all stains from your rug. Our methodology involves:</Typography>
+      <ul class="ml--5" style="list-style: initial;">
+        <Typography variant="li">
+          <p>Utilising the best cleaning equipment on the market;</p>
+        </Typography>
+        <Typography variant="li">
+          <p>Applying a carefully selected range of premium detergents;</p>
+        </Typography>
+        <Typography variant="li">
+          <p>Customising our approach to suit the specific type of rug and the staining agent to ensure the best possible outcome.</p>
+        </Typography>
+      </ul>
+      <li>
+        <Typography variant="h3">10. How soon can I expect your large rug cleaning near me to visit me?</Typography>
+        <Typography variant="body">We will try to get you an appointment for a high-end upholstery cleaning as soon as possible. Usually, we are fully booked for the following three days, but sometimes there are exceptions. We also offer same-day rug cleaning services for situations that need emergency rug cleaning.</Typography></li>
+      <li>
+        <Typography variant="h3">11. Can you give me a quote for the large rug cleaning near me over the phone or do you need a viewing in person?</Typography>
+        <Typography variant="body">Yes, we can give you a quote for the mobile rug cleaning over the phone, there is no need for us to visit your property. You can also receive a mobile rug cleaning quote online.</Typography></li>
+      <li>
+        <Typography variant="h3">12. What payment methods do you accept for your large rug cleaning near me?</Typography>
+        <Typography variant="body">We accept debit / credit cards, bank transfers and cash payments directly to our team.</Typography></li>
+      <li>
+        <Typography variant="h3">13. Can you provide me with an invoice for the eco rug cleaning?</Typography>
+        <Typography variant="body">Yes, we will either send you a receipt via email or via any method of your choice.</Typography></li>
+      <li>
+        <Typography variant="h3">14. Are you qualified for your large and small rug cleaning near me?</Typography>
+        <Typography variant="body">Yes, we are qualified and fully trained members of <a class="color-paper-link hover-color-paper-link-hover:hover" href="https://www.checkatrade.com/trades/FineCarpetCleaning" target="_blank" rel="noopener">Checkatrade</a> and of <a class="color-paper-link hover-color-paper-link-hover:hover" href="https://trustedlocalcleaners.ncca.co.uk/listing/fine-carpet-cleaning-ltd/" target="_blank" rel="noopener">NCCA</a> (National Carpet Cleaners Association) – the UK’s acknowledged industry qualification.</Typography></li>
+      <li>
+        <Typography variant="h3">15. How long have you been in the eco rug cleaning business?</Typography>
+        <Typography variant="body">Since 2012, we've actively participated in the eco rug cleaning industry. Throughout the years, we've encountered various types of carpets, rugs, upholstery, and stains while performing both residential rug cleaning and commercial rug cleaning services, accumulating valuable experience. Our commitment to providing the best rug-washing services has led us to enhance our performance through the following means:</Typography></li>
+      <ul class="ml--5" style="list-style: initial;">
+        <Typography variant="li">
+          <p>Continuously upgrading our equipment and machinery with superior alternatives whenever they become available;</p>
+        </Typography>
+        <Typography variant="li">
+          <p>Consistently evaluating and improving our cleaning products to ensure the highest quality of service;</p>
+        </Typography>
+        <Typography variant="li">
+          <p>Dedication to expanding our knowledge and skills through ongoing professional courses and training, always seeking to enhance our competence in our green rug cleaning services.</p>
+        </Typography>
+      </ul>
+      <li>
+        <Typography variant="h3">16. Can you add a discount to the chemical-free rug cleaning quote?</Typography>
+        <Typography variant="body">Our green rug cleaning services are renowned for their exceptional quality, using the most efficient equipment and a selection of premium cleaning products. What further distinguishes us is that our rug cleaning prices are not only highly competitive but also stand among the most attractive in the market. We strongly recommend combining all the services you require in order to get a better price. The reason for this cost efficiency is linked to the initial expenses and additional fees connected to every technician appointment, taking into account variables like travel time, parking, and the management of bulky equipment while loading and unloading.</Typography></li>
+      <li>
+        <Typography variant="h3">17. Can you steam clean a wool rug?</Typography>
+        <Typography variant="body">Yes, rugs made from wool can be steam cleaned, although it should be done with caution. We offer professional wool carpet cleaning services. The help of experts is the best and most stress-free way to handle even the most delicate rugs.</Typography>
+        <Typography variant="body">The drying time of wool rugs is slower than that of other types of rugs, ranging between 10 and 12 hours. If the carpet is very soiled and needs several treatments, the drying time might take even longer.</Typography>
+      </li>
     </Entry>
     <Entry>
-      <ul>
-        <li>
-          <Typography variant="h3">How much does a rug cleaning cost?</Typography>
-          <Typography variant="body">How much the chemical-free rug cleaning costs depends on a number of factors. Some of them are:</Typography></li>
-        <li>
+      <li>
+        <Typography variant="h3">18. How much does a rug cleaning cost?</Typography>
+        <Typography variant="body">How much the chemical-free rug cleaning costs depends on a number of factors. Some of them are:</Typography></li>
+      <ul class="ml--5" style="list-style: initial;">
+        <Typography variant="li">
           <p>The quantity and size of the rugs;</p>
-        </li>
-        <li>
+        </Typography>
+        <Typography variant="li">
           <p>How soiled they are;</p>
-        </li>
-        <li>
+        </Typography>
+        <Typography variant="li">
           <p>What fabric the rug is made of.</p>
-          <Typography variant="body">To learn more, check out our <a class="color-paper-link hover-color-paper-link-hover:hover" href="#price_table">rug cleaning prices</a>.</Typography>
-        </li>
-        <li>
-          <Typography variant="h3">Where can I take my rug to be cleaned?</Typography>
-          <Typography variant="body">There is no need to bring your rug somewhere in order to get it cleaned. If you book our rug cleaning company’s services, our cleaning expert will visit you on-site and clean the rug on the spot.</Typography></li>
-        <li>
-          <Typography variant="h3">Is professional rug cleaning worth it?</Typography>
-          <Typography variant="body">Yes, professional rug cleaning services are the most effective way to take care of your rugs. Due to our powerful equipment, we are able to deliver the results you desire within a fraction of time. Such services will ensure that your rugs will be free of things like dust, dirt, pollen, germs and mites, which can lead to potential health problems.</Typography></li>
-        <li>
-          <Typography variant="h3">How do professionals clean area rugs?</Typography>
-          <Typography variant="body">This is made possible by the expertise, equipment, products, and methods employed by expert companies. A professional rug cleaning company like "Fine Carpet Cleaning Ltd." offers top-quality cleaning services that are particularly effective in tackling stubborn stains, eliminating odours, and eradicating germ buildup. These results are often unattainable through regular cleaning methods.</Typography>
-          <Typography variant="body">Apart from professional area rug cleaning, we are specialised in wool carpet cleaning services, professionally clean flokati rugs, professional antique rug cleaning, handmade rug cleaning, vintage rug cleaning, cotton rug cleaning, alpaca rug cleaning, lambswool rug cleaning, Navajo rug cleaning, natural fibre rug cleaning, Khazai rug cleaning, karastan rug cleaning, throw rug cleaning, Indian rug cleaning, Aubusson rug cleaning, Ziegler rug cleaning and more.</Typography></li>
-        <li>
-          <Typography variant="h3">How often should upholstery be professionally cleaned?</Typography>
-          <Typography variant="body">The frequency of cleaning your rugs depends mainly on factors like how fast the rug soils. On average, rugs should be cleaned at 12-month intervals. However, if you have pets or children, use it very frequently or if it is easily stained, we recommend using mobile rug cleaning services more often than that. Regular professional cleaning not only keeps your rug looking its best but also helps maintain a healthy and clean living environment.</Typography></li>
-        <li>
-          <Typography variant="h3">Do you perform rug cleaning London on rugs made from different fabrics?</Typography>
-          <Typography variant="body">Our rug cleaning company performs rug cleaning for all kinds of fabrics. We are specialised in wool carpet cleaning services, professionally clean flokati rugs, professional antique rug cleaning, handmade rug cleaning, vintage rug cleaning, cotton rug cleaning, alpaca rug cleaning, lambswool rug cleaning, Navajo rug cleaning, natural fibre rug cleaning, Khazai rug cleaning, karastan rug cleaning, throw rug cleaning, Indian rug cleaning, Aubusson rug cleaning, Ziegler rug cleaning and more.</Typography></li>
-        <li>
-          <Typography variant="h3">Do you perform same-day rug cleaning?</Typography>
-          <Typography variant="body">Yes, one of the many services we perform is same-day rug cleaning. Every once in a while accidents happen that need an emergency rug cleaning. That is where same-day rug cleaning services become very useful.</Typography></li>
-        <li>
-          <Typography variant="h3">Do you perform professional rug cleaning for cat urine stains?</Typography>
-          <Typography variant="body">Yes, we perform professional rug cleaning for cat urine stains. Thanks to our equipment and professional training, we are specialised in services like professional rug cleaning for cat urine stains and in eliminating bacteria, dust mites allergens and spills from everyday use. Your rug will be left looking brand-new, fresh and odour-free.</Typography></li>
-        <li>
-          <Typography variant="h3">What other services do you perform apart from small rug cleaning near me?</Typography>
-          <Typography variant="body">We offer various rug cleaning services that you might need, such as:</Typography></li>
-        <li>
-          <p>Wool carpet cleaning services;</p>
-        </li>
-        <li>
-          <p>Professionally clean flokati rug;</p>
-        </li>
-        <li>
-          <p>Professional antique rug cleaning;</p>
-        </li>
-        <li>
-          <p>Handmade rug cleaning;</p>
-        </li>
-        <li>
-          <p>Vintage rug cleaning;</p>
-        </li>
-        <li>
-          <p>Cotton rug cleaning;</p>
-        </li>
-        <li>
-          <p>Alpaca rug cleaning;</p>
-        </li>
-        <li>
-          <p>Lambswool rug cleaning;</p>
-        </li>
-        <li>
-          <p>Navajo rug cleaning;</p>
-        </li>
-        <li>
-          <p>Natural fibre rug cleaning;</p>
-        </li>
-        <li>
-          <p>Khazai rug cleaning;</p>
-        </li>
-        <li>
-          <p>Karastan rug cleaning;</p>
-        </li>
-        <li>
-          <p>Throw rug cleaning;</p>
-        </li>
-        <li>
-          <p>Indian rug cleaning;</p>
-        </li>
-        <li>
-          <p>Aubusson rug cleaning;</p>
-        </li>
-        <li>
-          <p>Ziegler rug cleaning.</p>
-          <Typography variant="body">If you are wondering which services best suit you or are looking forward to booking professional rug cleaning services, feel free to contact us at any suitable time for you.</Typography>
-        </li>
-        <li>
-          <Typography variant="h3">Is there a company that performs small rug cleaning near me?</Typography>
-          <Typography variant="body">“Fine Carpet Cleaning” Ltd. performs in all of London. Feel free to contact us to receive home rug cleaning services wherever you are and rest assured that we will take good care of your rugs.</Typography>
-        </li>
+        </Typography>
       </ul>
+      <li>
+        <Typography variant="body">To learn more, check out our <a class="color-paper-link hover-color-paper-link-hover:hover" href="#price_table">rug cleaning prices</a>.</Typography>
+      </li>
+      <li>
+        <Typography variant="h3">19. Where can I take my rug to be cleaned?</Typography>
+        <Typography variant="body">There is no need to bring your rug somewhere in order to get it cleaned. If you book our rug cleaning company’s services, our cleaning expert will visit you on-site and clean the rug on the spot.</Typography></li>
+      <li>
+        <Typography variant="h3">20. Is professional rug cleaning worth it?</Typography>
+        <Typography variant="body">Yes, professional rug cleaning services are the most effective way to take care of your rugs. Due to our powerful equipment, we are able to deliver the results you desire within a fraction of time. Such services will ensure that your rugs will be free of things like dust, dirt, pollen, germs and mites, which can lead to potential health problems.</Typography></li>
+      <li>
+        <Typography variant="h3">21. How do professionals clean area rugs?</Typography>
+        <Typography variant="body">This is made possible by the expertise, equipment, products, and methods employed by expert companies. A professional rug cleaning company like "Fine Carpet Cleaning Ltd." offers top-quality cleaning services that are particularly effective in tackling stubborn stains, eliminating odours, and eradicating germ buildup. These results are often unattainable through regular cleaning methods.</Typography>
+        <Typography variant="body">Apart from professional area rug cleaning, we are specialised in wool carpet cleaning services, professionally clean flokati rugs, professional antique rug cleaning, handmade rug cleaning, vintage rug cleaning, cotton rug cleaning, alpaca rug cleaning, lambswool rug cleaning, Navajo rug cleaning, natural fibre rug cleaning, Khazai rug cleaning, karastan rug cleaning, throw rug cleaning, Indian rug cleaning, Aubusson rug cleaning, Ziegler rug cleaning and more.</Typography></li>
+      <li>
+        <Typography variant="h3">22. How often should upholstery be professionally cleaned?</Typography>
+        <Typography variant="body">The frequency of cleaning your rugs depends mainly on factors like how fast the rug soils. On average, rugs should be cleaned at 12-month intervals. However, if you have pets or children, use it very frequently or if it is easily stained, we recommend using mobile rug cleaning services more often than that. Regular professional cleaning not only keeps your rug looking its best but also helps maintain a healthy and clean living environment.</Typography></li>
+      <li>
+        <Typography variant="h3">23. Do you perform rug cleaning London on rugs made from different fabrics?</Typography>
+        <Typography variant="body">Our rug cleaning company performs rug cleaning for all kinds of fabrics. We are specialised in wool carpet cleaning services, professionally clean flokati rugs, professional antique rug cleaning, handmade rug cleaning, vintage rug cleaning, cotton rug cleaning, alpaca rug cleaning, lambswool rug cleaning, Navajo rug cleaning, natural fibre rug cleaning, Khazai rug cleaning, karastan rug cleaning, throw rug cleaning, Indian rug cleaning, Aubusson rug cleaning, Ziegler rug cleaning and more.</Typography></li>
+      <li>
+        <Typography variant="h3">24. Do you perform same-day rug cleaning?</Typography>
+        <Typography variant="body">Yes, one of the many services we perform is same-day rug cleaning. Every once in a while accidents happen that need an emergency rug cleaning. That is where same-day rug cleaning services become very useful.</Typography></li>
+      <li>
+        <Typography variant="h3">25. Do you perform professional rug cleaning for cat urine stains?</Typography>
+        <Typography variant="body">Yes, we perform professional rug cleaning for cat urine stains. Thanks to our equipment and professional training, we are specialised in services like professional rug cleaning for cat urine stains and in eliminating bacteria, dust mites allergens and spills from everyday use. Your rug will be left looking brand-new, fresh and odour-free.</Typography></li>
+      <li>
+        <Typography variant="h3">26. What other services do you perform apart from small rug cleaning near me?</Typography>
+        <Typography variant="body">We offer various rug cleaning services that you might need, such as:</Typography></li>
+      <ul class="ml--5" style="list-style: initial;">
+        <Typography variant="li">
+          <p>Wool carpet cleaning services;</p>
+        </Typography>
+        <Typography variant="li">
+          <p>Professionally clean flokati rug;</p>
+        </Typography>
+        <Typography variant="li">
+          <p>Professional antique rug cleaning;</p>
+        </Typography>
+        <Typography variant="li">
+          <p>Handmade rug cleaning;</p>
+        </Typography>
+        <Typography variant="li">
+          <p>Vintage rug cleaning;</p>
+        </Typography>
+        <Typography variant="li">
+          <p>Cotton rug cleaning;</p>
+        </Typography>
+        <Typography variant="li">
+          <p>Alpaca rug cleaning;</p>
+        </Typography>
+        <Typography variant="li">
+          <p>Lambswool rug cleaning;</p>
+        </Typography>
+        <Typography variant="li">
+          <p>Navajo rug cleaning;</p>
+        </Typography>
+        <Typography variant="li">
+          <p>Natural fibre rug cleaning;</p>
+        </Typography>
+        <Typography variant="li">
+          <p>Khazai rug cleaning;</p>
+        </Typography>
+        <Typography variant="li">
+          <p>Karastan rug cleaning;</p>
+        </Typography>
+        <Typography variant="li">
+          <p>Throw rug cleaning;</p>
+        </Typography>
+        <Typography variant="li">
+          <p>Indian rug cleaning;</p>
+        </Typography>
+        <Typography variant="li">
+          <p>Aubusson rug cleaning;</p>
+        </Typography>
+        <Typography variant="li">
+          <p>Ziegler rug cleaning.</p>
+        </Typography>
+      </ul>
+      <li>
+        <Typography variant="body">If you are wondering which services best suit you or are looking forward to booking professional rug cleaning services, feel free to contact us at any suitable time for you.</Typography>
+      </li>
+      <li>
+        <Typography variant="h3">27. Is there a company that performs small rug cleaning near me?</Typography>
+        <Typography variant="body">“Fine Carpet Cleaning” Ltd. performs in all of London. Feel free to contact us to receive home rug cleaning services wherever you are and rest assured that we will take good care of your rugs.</Typography>
+      </li>
     </Entry>
   </Container>
 }

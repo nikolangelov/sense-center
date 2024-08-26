@@ -82,167 +82,176 @@ export function FaqSection() {
   const { Container, Entry } = createCollapsable()
   return <Container>
     <Entry>
-      <ul>
-        <li>
-          <Typography variant="h3">Do you have a cancellation fee?</Typography>
-          <Typography variant="body">Yes, we do have a cancellation fee, but it is only applied if you cancel on the day of the cleaning. In that case, you will lose your deposit.</Typography></li>
-        <li>
-          <Typography variant="h3">Do I need to pay for the congestion / parking charge?</Typography>
-          <Typography variant="body">Yes, we request that you arrange a suitable parking space for our vehicles within close proximity of the property since we carry heavy equipment, and to cover any parking / congestion expenses if applicable.</Typography></li>
-        <li>
-          <Typography variant="h3">Do I need to move furniture before water free carpet cleaning?</Typography>
-          <Typography variant="body">We kindly request your assistance in relocating small, fragile, or valuable furniture items, such as lamps and ornaments, for insurance reasons. If possible, please position these items in a secure area before our team's arrival, one that will remain undisturbed during the cleaning process.</Typography>
-          <Typography variant="body">For your convenience, we are more than happy to assist in moving other lightweight furniture, such as chairs, armchairs, and tables during the cleaning. Once the cleaning is completed, we will return these items to their original positions.</Typography>
-          <Typography variant="body">In cases where heavy furniture, such as sofas, beds, wardrobes, or cupboards, needs to be moved, an additional fee will apply. This accounts for the extra time and effort required by our technician, who will receive appropriate compensation. Our primary goal is to ensure a stress-free experience for you throughout the entire process.</Typography></li>
-        <li>
-          <Typography variant="h3">What happens if I live on the 4th floor or above and I have no lift?</Typography>
-          <Typography variant="body">Due to the weight of our equipment, which exceeds 50kg, we apply an additional charge for each additional floor that requires manual carrying. This charge is necessary because this process typically consumes a significant amount of time and can lead to faster tiring of our technicians. Because of that, on such days, we may not be able to complete as much work as we typically do.</Typography></li>
-        <li>
-          <Typography variant="h3">Are you insured?</Typography>
-          <Typography variant="body">Yes, we are fully insured.</Typography></li>
-      </ul>
+      <li>
+        <Typography variant="h3">1. Do you have a cancellation fee?</Typography>
+        <Typography variant="body">Yes, we do have a cancellation fee, but it is only applied if you cancel on the day of the cleaning. In that case, you will lose your deposit.</Typography></li>
+      <li>
+        <Typography variant="h3">2. Do I need to pay for the congestion / parking charge?</Typography>
+        <Typography variant="body">Yes, we request that you arrange a suitable parking space for our vehicles within close proximity of the property since we carry heavy equipment, and to cover any parking / congestion expenses if applicable.</Typography></li>
+      <li>
+        <Typography variant="h3">3. Do I need to move furniture before water free carpet cleaning?</Typography>
+        <Typography variant="body">We kindly request your assistance in relocating small, fragile, or valuable furniture items, such as lamps and ornaments, for insurance reasons. If possible, please position these items in a secure area before our team's arrival, one that will remain undisturbed during the cleaning process.</Typography>
+        <Typography variant="body">For your convenience, we are more than happy to assist in moving other lightweight furniture, such as chairs, armchairs, and tables during the cleaning. Once the cleaning is completed, we will return these items to their original positions.</Typography>
+        <Typography variant="body">In cases where heavy furniture, such as sofas, beds, wardrobes, or cupboards, needs to be moved, an additional fee will apply. This accounts for the extra time and effort required by our technician, who will receive appropriate compensation. Our primary goal is to ensure a stress-free experience for you throughout the entire process.</Typography></li>
+      <li>
+        <Typography variant="h3">4. What happens if I live on the 4th floor or above and I have no lift?</Typography>
+        <Typography variant="body">Due to the weight of our equipment, which exceeds 50kg, we apply an additional charge for each additional floor that requires manual carrying. This charge is necessary because this process typically consumes a significant amount of time and can lead to faster tiring of our technicians. Because of that, on such days, we may not be able to complete as much work as we typically do.</Typography></li>
+      <li>
+        <Typography variant="h3">5. Are you insured?</Typography>
+        <Typography variant="body">Yes, we are fully insured.</Typography></li>
     </Entry>
     <Entry>
-      <ul>
-        <li>
-          <Typography variant="h3">What happens if your cleaner damages anything while performing carpet dry cleaning services?</Typography>
-          <Typography variant="body">We are fully insured and if anything is damaged we are fully covered.</Typography></li>
-        <li>
-          <Typography variant="h3">How long does the process of dry pro carpet cleaning take?</Typography>
-          <Typography variant="body">The process of water free carpet cleaning depends on the degree of soiling of the carpet, whether stain removal is required and whether furniture is present. Professional dry carpet cleaning can take between 15 and 30 minutes for each room. However, heavily soiled carpets or those with many stains may require more time to ensure thorough cleaning. The existence of furniture might also impact the drying times, as it may need to be moved. This cleaning method is especially beneficial in commercial settings or high-traffic areas where carpets need to be ready for use quickly.</Typography></li>
-        <li>
-          <Typography variant="h3">How long does it take for the carpet to get dry after a carpet dry cleaning in London is performed?</Typography>
-          <Typography variant="body">Since the dry carpet cleaning method uses a cleaning product that is in powder form and little to no water is involved in the cleaning process, the carpet will be completely dry almost immediately after the cleaning procedure has ended.</Typography></li>
-        <li>
-          <Typography variant="h3">Do you guarantee that all stains will be removed after professional dry carpet cleaning services?</Typography>
-          <Typography variant="body">No, unfortunately, we are unable to offer an absolute guarantee due to various factors that are beyond our control. These factors include:</Typography></li>
-        <li>
+      <li>
+        <Typography variant="h3">6. What happens if your cleaner damages anything while performing carpet dry cleaning services?</Typography>
+        <Typography variant="body">We are fully insured and if anything is damaged we are fully covered.</Typography></li>
+      <li>
+        <Typography variant="h3">7. How long does the process of dry pro carpet cleaning take?</Typography>
+        <Typography variant="body">The process of water free carpet cleaning depends on the degree of soiling of the carpet, whether stain removal is required and whether furniture is present. Professional dry carpet cleaning can take between 15 and 30 minutes for each room. However, heavily soiled carpets or those with many stains may require more time to ensure thorough cleaning. The existence of furniture might also impact the drying times, as it may need to be moved. This cleaning method is especially beneficial in commercial settings or high-traffic areas where carpets need to be ready for use quickly.</Typography></li>
+      <li>
+        <Typography variant="h3">8. How long does it take for the carpet to get dry after a carpet dry cleaning in London is performed?</Typography>
+        <Typography variant="body">Since the dry carpet cleaning method uses a cleaning product that is in powder form and little to no water is involved in the cleaning process, the carpet will be completely dry almost immediately after the cleaning procedure has ended.</Typography></li>
+      <li>
+        <Typography variant="h3">9. Do you guarantee that all stains will be removed after professional dry carpet cleaning services?</Typography>
+        <Typography variant="body">No, unfortunately, we are unable to offer an absolute guarantee due to various factors that are beyond our control. These factors include:</Typography></li>
+      <ul class="ml--5" style="list-style: initial;">
+        <Typography variant="li">
           <p>The age of the stains;</p>
-        </li>
-        <li>
+        </Typography>
+        <Typography variant="li">
           <p>The nature of the substance that caused the stains;</p>
-        </li>
-        <li>
+        </Typography>
+        <Typography variant="li">
           <p>The carpet's type and fabric;</p>
-        </li>
-        <li>
+        </Typography>
+        <Typography variant="li">
           <p>Any prior attempts to treat the stains.</p>
-          <Typography variant="body">Nevertheless, our commitment is to exert every conceivable effort to remove all stains from your carpet. Our strategy includes:</Typography>
-        </li>
-        <li>
-          <p>The use of cutting-edge cleaning equipment;</p>
-        </li>
-        <li>
-          <p>The application of carefully chosen high-quality detergents;</p>
-        </li>
-        <li>
-          <p>Tailoring our approach to suit the specific carpet type and the nature of the staining agent, thereby optimising the likelihood of the best possible outcome.</p>
-        </li>
-        <li>
-          <Typography variant="h3">Can you clean the stain from my natural fibre carpet, after I have attempted to clean it?</Typography>
-          <Typography variant="body">If you have attempted to clean your natural fibre carpet with water or via a steam cleaning method, we unfortunately cannot remove the stain. The reason is that carpets that are made of natural fabrics such as seagrass, coir, sisal carpets, silk, viscose or jute are very delicate and can only be cleaned with a dry cleaning method that uses little to no water. The use of water and steam on such carpets will damage them. In such an unfortunate case the only way to save your carpet is to look for a professional carpet dyeing company.</Typography></li>
-        <li>
-          <Typography variant="h3">How soon can I expect a cleaner to visit me?</Typography>
-          <Typography variant="body">We will make every effort to secure an appointment for you as quickly as possible. Typically, our schedule is booked for the next three days, although there may be occasional exceptions.</Typography></li>
-        <li>
-          <Typography variant="h3">Can you give me a quote over the phone, or do you have to visit my property?</Typography>
-          <Typography variant="body">Yes, we can provide you with an estimate over the phone, eliminating the need for an in-person visit to your property. However, for commercial properties, a site visit may be necessary. Additionally, you have the option to get a dry carpet cleaning quote online.</Typography></li>
-        <li>
-          <Typography variant="h3">What payment methods do you accept for waterless carpet cleaning services?</Typography>
-          <Typography variant="body">We accept debit / credit cards, and cash payments directly to our team.</Typography></li>
-        <li>
-          <Typography variant="h3">Can you provide me with an invoice for the professional dry carpet cleaning in London?</Typography>
-          <Typography variant="body">Yes, we will send you a receipt via email.</Typography></li>
-        <li>
-          <Typography variant="h3">Are you qualified?</Typography>
-          <Typography variant="body">Yes, we are qualified and fully trained members of <a class="color-paper-link hover-color-paper-link-hover:hover" href="https://trustedlocalcleaners.ncca.co.uk/listing/fine-carpet-cleaning-ltd/" target="_blank" rel="noopener">NCCA</a> (National Carpet Cleaners Association) – the UK’s recognised industry qualification, and of <a class="color-paper-link hover-color-paper-link-hover:hover" href="https://www.checkatrade.com/trades/FineCarpetCleaning" target="_blank" rel="noopener">Checkatrade</a>.</Typography></li>
-        <li>
-          <Typography variant="h3">How long have you been in the carpet cleaning business?</Typography>
-          <Typography variant="body">Since 2012, we have been actively working in the carpet cleaning industry, serving both commercial and residential clients. Over these years, we've encountered a wide array of carpets, rugs, upholstery, and stains and gained valuable experience. This experience, coupled with our commitment to achieve excellence, has driven us to enhance our services through:</Typography></li>
-        <li>
-          <p><strong>Continual Equipment Upgrades:</strong> We consistently replace our equipment and machinery with superior alternatives whenever they become available in the market.</p>
-        </li>
-        <li>
-          <p><strong>Ongoing Product Enhancement:</strong> We regularly assess and improve our cleaning products to ensure they remain at the forefront of industry standards.</p>
-        </li>
-        <li>
-          <p><strong>Continuous Learning and Development:</strong> We are dedicated to enhancing our knowledge and skills by actively pursuing additional professional courses and training opportunities. This commitment enables us to stay updated with the latest industry advancements.</p>
-        </li>
-        <li>
-          <Typography variant="h3">Can you give me a discount for the dry organic carpet cleaning services?</Typography>
-          <Typography variant="body">Given our commitment to provide high-quality professional dry carpet cleaning services, which involve the use of highly effective equipment and a wide selection of more than 20 premium cleaning products, our carpet dry cleaning prices stand out as not only highly competitive but also the most attractive in the market. We strongly encourage you to look at the advantages of having the services you require performed at once, which proves to be more cost-effective than having them executed individually. This cost-efficiency is because of the substantial initial cost and additional fees that come with each technician visit, considering factors like travel time, parking, and the handling of heavy equipment during loading and unloading.</Typography></li>
-        <li>
-          <Typography variant="h3">What is dry carpet cleaning?</Typography>
-          <Typography variant="body">Dry carpet cleaning is a carpet cleaning method that doesn't require the use of a significant amount of water. Instead of water-based cleaning solutions, it typically involves the use of specialised dry cleaning compounds or powders.</Typography></li>
+        </Typography>
       </ul>
+      <li>
+        <Typography variant="body">Nevertheless, our commitment is to exert every conceivable effort to remove all stains from your carpet. Our strategy includes:</Typography>
+      </li>
+      <ul class="ml--5" style="list-style: initial;">
+        <Typography variant="li">
+          <p>The use of cutting-edge cleaning equipment;</p>
+        </Typography>
+        <Typography variant="li">
+          <p>The application of carefully chosen high-quality detergents;</p>
+        </Typography>
+        <Typography variant="li">
+          <p>Tailoring our approach to suit the specific carpet type and the nature of the staining agent, thereby optimising the likelihood of the best possible outcome.</p>
+        </Typography>
+      </ul>
+      <li>
+        <Typography variant="h3">10. Can you clean the stain from my natural fibre carpet, after I have attempted to clean it?</Typography>
+        <Typography variant="body">If you have attempted to clean your natural fibre carpet with water or via a steam cleaning method, we unfortunately cannot remove the stain. The reason is that carpets that are made of natural fabrics such as seagrass, coir, sisal carpets, silk, viscose or jute are very delicate and can only be cleaned with a dry cleaning method that uses little to no water. The use of water and steam on such carpets will damage them. In such an unfortunate case the only way to save your carpet is to look for a professional carpet dyeing company.</Typography></li>
+      <li>
+        <Typography variant="h3">11. How soon can I expect a cleaner to visit me?</Typography>
+        <Typography variant="body">We will make every effort to secure an appointment for you as quickly as possible. Typically, our schedule is booked for the next three days, although there may be occasional exceptions.</Typography></li>
+      <li>
+        <Typography variant="h3">12. Can you give me a quote over the phone, or do you have to visit my property?</Typography>
+        <Typography variant="body">Yes, we can provide you with an estimate over the phone, eliminating the need for an in-person visit to your property. However, for commercial properties, a site visit may be necessary. Additionally, you have the option to get a dry carpet cleaning quote online.</Typography></li>
+      <li>
+        <Typography variant="h3">13. What payment methods do you accept for waterless carpet cleaning services?</Typography>
+        <Typography variant="body">We accept debit / credit cards, and cash payments directly to our team.</Typography></li>
+      <li>
+        <Typography variant="h3">14. Can you provide me with an invoice for the professional dry carpet cleaning in London?</Typography>
+        <Typography variant="body">Yes, we will send you a receipt via email.</Typography></li>
+      <li>
+        <Typography variant="h3">15. Are you qualified?</Typography>
+        <Typography variant="body">Yes, we are qualified and fully trained members of <a class="color-paper-link hover-color-paper-link-hover:hover" href="https://trustedlocalcleaners.ncca.co.uk/listing/fine-carpet-cleaning-ltd/" target="_blank" rel="noopener">NCCA</a> (National Carpet Cleaners Association) – the UK’s recognised industry qualification, and of <a class="color-paper-link hover-color-paper-link-hover:hover" href="https://www.checkatrade.com/trades/FineCarpetCleaning" target="_blank" rel="noopener">Checkatrade</a>.</Typography></li>
+      <li>
+        <Typography variant="h3">16. How long have you been in the carpet cleaning business?</Typography>
+        <Typography variant="body">Since 2012, we have been actively working in the carpet cleaning industry, serving both commercial and residential clients. Over these years, we've encountered a wide array of carpets, rugs, upholstery, and stains and gained valuable experience. This experience, coupled with our commitment to achieve excellence, has driven us to enhance our services through:</Typography></li>
+      <ul class="ml--5" style="list-style: initial;">
+        <Typography variant="li">
+          <p><strong>Continual Equipment Upgrades:</strong> We consistently replace our equipment and machinery with superior alternatives whenever they become available in the market.</p>
+        </Typography>
+        <Typography variant="li">
+          <p><strong>Ongoing Product Enhancement:</strong> We regularly assess and improve our cleaning products to ensure they remain at the forefront of industry standards.</p>
+        </Typography>
+        <Typography variant="li">
+          <p><strong>Continuous Learning and Development:</strong> We are dedicated to enhancing our knowledge and skills by actively pursuing additional professional courses and training opportunities. This commitment enables us to stay updated with the latest industry advancements.</p>
+        </Typography>
+      </ul>
+      <li>
+        <Typography variant="h3">17. Can you give me a discount for the dry organic carpet cleaning services?</Typography>
+        <Typography variant="body">Given our commitment to provide high-quality professional dry carpet cleaning services, which involve the use of highly effective equipment and a wide selection of more than 20 premium cleaning products, our carpet dry cleaning prices stand out as not only highly competitive but also the most attractive in the market. We strongly encourage you to look at the advantages of having the services you require performed at once, which proves to be more cost-effective than having them executed individually. This cost-efficiency is because of the substantial initial cost and additional fees that come with each technician visit, considering factors like travel time, parking, and the handling of heavy equipment during loading and unloading.</Typography></li>
+      <li>
+        <Typography variant="h3">18. What is dry carpet cleaning?</Typography>
+        <Typography variant="body">Dry carpet cleaning is a carpet cleaning method that doesn't require the use of a significant amount of water. Instead of water-based cleaning solutions, it typically involves the use of specialised dry cleaning compounds or powders.</Typography></li>
     </Entry>
     <Entry>
-      <ul>
-        <li>
-          <Typography variant="h3">Does dry cleaning kill carpet beetles?</Typography>
-          <Typography variant="body">Dry pro carpet cleaning typically doesn't involve a process that would effectively kill carpet beetles. Dry carpet cleaning companies typically rely on the use of specialised dry cleaning compounds or powders and mechanical agitation to remove dirt and stains from carpets. This method is effective for cleaning and maintaining carpets, so it may eliminate the potential problem of the carpet having carpet beetles.</Typography>
-          <Typography variant="body">If you suspect a carpet beetle infestation in your home, we advise you to take specific measures to address the problem.</Typography></li>
-        <li>
-          <Typography variant="h3">Does dry carpet cleaning work?</Typography>
-          <Typography variant="body">Yes, water free carpet cleaning really works. The advantages of dry organic carpet cleaning include quicker drying times compared to traditional steam cleaning, as well as less risk of over-wetting the carpet. It's often used for maintenance cleaning or in situations where minimal drying time is essential, such as in commercial settings.</Typography></li>
-        <li>
-          <Typography variant="h3">Is dry carpet cleaning effective?</Typography>
-          <Typography variant="body">Dry organic carpet cleaning is effective, but it's important to note that it may not be as effective in deep cleaning heavily soiled carpets or in removing certain types of stains. The choice between dry (no water) and wet (steam) carpet cleaning methods depends on factors like the carpet's condition, the type of stains, and the specific cleaning needs. Check out our <a class="color-paper-link hover-color-paper-link-hover:hover" href="/professional-carpet-cleaning-services/steam">steam carpet cleaning page</a> to read more and to make an informed decision.</Typography></li>
-        <li>
-          <Typography variant="h3">How much does it cost to dry clean a carpet?</Typography>
-          <Typography variant="body">How much the carpet dry cleaning costs depends on the following factors:</Typography></li>
-        <li>
+      <li>
+        <Typography variant="h3">19. Does dry cleaning kill carpet beetles?</Typography>
+        <Typography variant="body">Dry pro carpet cleaning typically doesn't involve a process that would effectively kill carpet beetles. Dry carpet cleaning companies typically rely on the use of specialised dry cleaning compounds or powders and mechanical agitation to remove dirt and stains from carpets. This method is effective for cleaning and maintaining carpets, so it may eliminate the potential problem of the carpet having carpet beetles.</Typography>
+        <Typography variant="body">If you suspect a carpet beetle infestation in your home, we advise you to take specific measures to address the problem.</Typography></li>
+      <li>
+        <Typography variant="h3">20. Does dry carpet cleaning work?</Typography>
+        <Typography variant="body">Yes, water free carpet cleaning really works. The advantages of dry organic carpet cleaning include quicker drying times compared to traditional steam cleaning, as well as less risk of over-wetting the carpet. It's often used for maintenance cleaning or in situations where minimal drying time is essential, such as in commercial settings.</Typography></li>
+      <li>
+        <Typography variant="h3">21. Is dry carpet cleaning effective?</Typography>
+        <Typography variant="body">Dry organic carpet cleaning is effective, but it's important to note that it may not be as effective in deep cleaning heavily soiled carpets or in removing certain types of stains. The choice between dry (no water) and wet (steam) carpet cleaning methods depends on factors like the carpet's condition, the type of stains, and the specific cleaning needs. Check out our <a class="color-paper-link hover-color-paper-link-hover:hover" href="/professional-carpet-cleaning-services/steam">steam carpet cleaning page</a> to read more and to make an informed decision.</Typography></li>
+      <li>
+        <Typography variant="h3">22. How much does it cost to dry clean a carpet?</Typography>
+        <Typography variant="body">How much the carpet dry cleaning costs depends on the following factors:</Typography></li>
+      <ul class="ml--5" style="list-style: initial;">
+        <Typography variant="li">
           <p>The quantity and size of the carpets;</p>
-        </li>
-        <li>
+        </Typography>
+        <Typography variant="li">
           <p>Level of soiling;</p>
-        </li>
-        <li>
+        </Typography>
+        <Typography variant="li">
           <p>The type and fabric of the carpets;</p>
-        </li>
-        <li>
+        </Typography>
+        <Typography variant="li">
           <p>Ease of access to the carpets.</p>
-        </li>
-        <Typography variant="body">To learn more, check out our <a class="color-paper-link hover-color-paper-link-hover:hover" href="#price_table">carpet dry cleaning prices</a>.</Typography>
-        <li>
-          <Typography variant="h3">What is a dry carpet cleaning process?</Typography>
-          <Typography variant="body">Here's the process of carpet cleaning without water:</Typography></li>
-        <li>
-          <p><strong>Application of Cleaning Compound:</strong> A dry cleaning compound or powder is applied to the carpet.</p>
-        </li>
-        <li>
-          <p><strong>Extraction:</strong> The carpet is vacuumed thoroughly to remove the compound, along with the dirt and stains that have been absorbed by it.</p>
-        </li>
-        <li>
-          <Typography variant="h3">Can carpets be dry-cleaned?</Typography>
-          <Typography variant="body">Yes, carpets can be dry cleaned using a method known as dry carpet cleaning. No water carpet cleaning is an alternative to traditional wet or steam cleaning methods. It is mostly used in the following typical scenarios:</Typography></li>
-        <li>
-          <p>If your carpet is made of natural fibres, such as seagrass, coir, sisal carpets, silk, viscose or jute. In this case dry carpet cleaning is the only option you have as steam cleaning would cause damage to such carpet.</p>
-        </li>
-        <li>
-          <p>In case that you own a big facility and you can’t tolerate any off-time for letting the carpet dry after steam cleaning.</p>
-        </li>
-        <li>
-          <p>In case your carpets do not need deep cleaning but only refreshment.</p>
-        </li>
-
-        <li>
-          <Typography variant="h3">How does dry carpet cleaning work?</Typography>
-          <Typography variant="body">Dry carpet cleaning is a cleaning method that doesn't rely on a significant amount of water. Instead, it uses specialised dry-cleaning compounds or powders to clean carpets. These cleaning compounds attract dirt and grime and are agitated into the fibres of the carpet using a special machine. Finally, the carpet is vacuumed thoroughly, leaving it refreshed and clean.</Typography>
-          <Typography variant="body">No water carpet cleaning services have several advantages, including:</Typography></li>
-        <li>
-          <p><strong>Quick Drying:</strong> Since it uses minimal moisture, the carpet typically dries much faster than with wet cleaning methods.</p>
-        </li>
-        <li>
-          <p><strong>Less Risk of Over-Wetting:</strong> There's a reduced risk of over-wetting the carpet, which can lead to mould and mildew growth.</p>
-        </li>
-        <li>
-          <p><strong>Minimal Disruption:</strong> It's less disruptive because there's no need to wait for the carpet to dry.</p>
-        </li>
-        <li>
-          <Typography variant="h3">Is “Fine Carpet Cleaning” Ltd. a specialised dry carpet cleaning company?</Typography>
-          <Typography variant="body">Yes, “Fine Carpet Cleaning” Ltd is a specialised dry carpet cleaning company. Anyhow apart from professional dry carpet cleaning, we are offering a variety of  <a class="color-paper-link hover-color-paper-link-hover:hover" href="/services">other cleaning services.</a></Typography></li>
+        </Typography>
       </ul>
+      <Typography variant="body">To learn more, check out our <a class="color-paper-link hover-color-paper-link-hover:hover" href="#price_table">carpet dry cleaning prices</a>.</Typography>
+      <li>
+        <Typography variant="h3">23. What is a dry carpet cleaning process?</Typography>
+        <Typography variant="body">Here's the process of carpet cleaning without water:</Typography></li>
+      <ul class="ml--5" style="list-style: initial;">
+        <Typography variant="li">
+          <p><strong>Application of Cleaning Compound:</strong> A dry cleaning compound or powder is applied to the carpet.</p>
+        </Typography>
+        <Typography variant="li">
+          <p><strong>Extraction:</strong> The carpet is vacuumed thoroughly to remove the compound, along with the dirt and stains that have been absorbed by it.</p>
+        </Typography>
+      </ul>
+      <li>
+        <Typography variant="h3">24. Can carpets be dry-cleaned?</Typography>
+        <Typography variant="body">Yes, carpets can be dry cleaned using a method known as dry carpet cleaning. No water carpet cleaning is an alternative to traditional wet or steam cleaning methods. It is mostly used in the following typical scenarios:</Typography></li>
+      <ul class="ml--5" style="list-style: initial;">
+        <Typography variant="li">
+          <p>If your carpet is made of natural fibres, such as seagrass, coir, sisal carpets, silk, viscose or jute. In this case dry carpet cleaning is the only option you have as steam cleaning would cause damage to such carpet.</p>
+        </Typography>
+        <Typography variant="li">
+          <p>In case that you own a big facility and you can’t tolerate any off-time for letting the carpet dry after steam cleaning.</p>
+        </Typography>
+        <Typography variant="li">
+          <p>In case your carpets do not need deep cleaning but only refreshment.</p>
+        </Typography>
+      </ul>
+      <li>
+        <Typography variant="h3">25. How does dry carpet cleaning work?</Typography>
+        <Typography variant="body">Dry carpet cleaning is a cleaning method that doesn't rely on a significant amount of water. Instead, it uses specialised dry-cleaning compounds or powders to clean carpets. These cleaning compounds attract dirt and grime and are agitated into the fibres of the carpet using a special machine. Finally, the carpet is vacuumed thoroughly, leaving it refreshed and clean.</Typography>
+        <Typography variant="body">No water carpet cleaning services have several advantages, including:</Typography></li>
+      <ul class="ml--5" style="list-style: initial;">
+        <Typography variant="li">
+          <p><strong>Quick Drying:</strong> Since it uses minimal moisture, the carpet typically dries much faster than with wet cleaning methods.</p>
+        </Typography>
+        <Typography variant="li">
+          <p><strong>Less Risk of Over-Wetting:</strong> There's a reduced risk of over-wetting the carpet, which can lead to mould and mildew growth.</p>
+        </Typography>
+        <Typography variant="li">
+          <p><strong>Minimal Disruption:</strong> It's less disruptive because there's no need to wait for the carpet to dry.</p>
+        </Typography>
+      </ul>
+      <li>
+        <Typography variant="h3">26. Is “Fine Carpet Cleaning” Ltd. a specialised dry carpet cleaning company?</Typography>
+        <Typography variant="body">Yes, “Fine Carpet Cleaning” Ltd is a specialised dry carpet cleaning company. Anyhow apart from professional dry carpet cleaning, we are offering a variety of  <a class="color-paper-link hover-color-paper-link-hover:hover" href="/services">other cleaning services.</a></Typography></li>
     </Entry>
   </Container>
 }

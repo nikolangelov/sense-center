@@ -82,132 +82,134 @@ export function FaqSection() {
   const { Container, Entry } = createCollapsable()
   return <Container>
     <Entry>
-      <ul>
-        <li>
-          <Typography variant="h3">Do you fee for cancellation?</Typography>
-          <Typography variant="body">We require a deposit before performing the cleaning service. If you cancel the service on the day of the cleaning you will lose that deposit.</Typography></li>
-        <li>
-          <Typography variant="h3">Should I pay for the congestion / parking charge?</Typography>
-          <Typography variant="body">Yes, we kindly ask that the client arrange a suitable parking space for our vehicles within close proximity of the property and to cover any parking / congestion expenses.</Typography></li>
-        <li>
-          <Typography variant="h3">What if I live on the 4th floor or above and I have no lift?</Typography>
-          <Typography variant="body">Because our equipment weighs over 50 kilograms, we impose an additional fee for each extra floor that requires manual transportation. This is because the process tends to consume a substantial amount of time and can result in quicker fatigue among our technicians. As a result, our overall productivity for the day may be reduced compared to our standard output.</Typography></li>
-        <li>
-          <Typography variant="h3">Are you insured?</Typography>
-          <Typography variant="body">Yes, we are completely insured.</Typography></li>
-        <li>
-          <Typography variant="h3">What happens if your cleaners damage anything?</Typography>
-          <Typography variant="body">We are fully insured and if an accident happens it will be covered by our company.</Typography></li>
-      </ul>
+      <li>
+        <Typography variant="h3">1. Do you fee for cancellation?</Typography>
+        <Typography variant="body">We require a deposit before performing the cleaning service. If you cancel the service on the day of the cleaning you will lose that deposit.</Typography></li>
+      <li>
+        <Typography variant="h3">2. Should I pay for the congestion / parking charge?</Typography>
+        <Typography variant="body">Yes, we kindly ask that the client arrange a suitable parking space for our vehicles within close proximity of the property and to cover any parking / congestion expenses.</Typography></li>
+      <li>
+        <Typography variant="h3">3. What if I live on the 4th floor or above and I have no lift?</Typography>
+        <Typography variant="body">Because our equipment weighs over 50 kilograms, we impose an additional fee for each extra floor that requires manual transportation. This is because the process tends to consume a substantial amount of time and can result in quicker fatigue among our technicians. As a result, our overall productivity for the day may be reduced compared to our standard output.</Typography></li>
+      <li>
+        <Typography variant="h3">4. Are you insured?</Typography>
+        <Typography variant="body">Yes, we are completely insured.</Typography></li>
+      <li>
+        <Typography variant="h3">5. What happens if your cleaners damage anything?</Typography>
+        <Typography variant="body">We are fully insured and if an accident happens it will be covered by our company.</Typography></li>
     </Entry>
     <Entry>
-      <ul>
-        <li>
-          <Typography variant="h3">How long does the process of leather furniture cleaning London take?</Typography>
-          <Typography variant="body">The duration of the professional leather upholstery cleaning process mainly depends on:</Typography></li>
-        <li>
+      <li>
+        <Typography variant="h3">6. How long does the process of leather furniture cleaning London take?</Typography>
+        <Typography variant="body">The duration of the professional leather upholstery cleaning process mainly depends on:</Typography></li>
+      <ul class="ml--5" style="list-style: initial;">
+        <Typography variant="li">
           <p>How soiled the upholstery is;</p>
-        </li>
-        <li>
+        </Typography>
+        <Typography variant="li">
           <p>Does it need any stain removal treatments;</p>
-        </li>
-        <li>
+        </Typography>
+        <Typography variant="li">
           <p>What cleaning method will be used on the upholstery.</p>
-        </li>
-        <li>
-          <Typography variant="h3">How long does it take for the leather upholstery to get dry after leather sofa cleaning services?</Typography>
-          <Typography variant="body">The drying time after leather sofa cleaning services varies depending on the fabric and type of the upholstery. Typically it can be used 30–60 minutes after the cleaning, so you can go back to your daily activities.</Typography>
-          <Typography variant="body">If you are having trouble deciding which leather upholstery cleaning services will best suit you or are seeking advice from leather upholstery cleaning companies, you can contact us at any suitable time for you.</Typography></li>
-        <li>
-          <Typography variant="h3">How soon can I expect your cleaners to visit me?</Typography>
-          <Typography variant="body">We will try to get you an appointment for a professional leather sofa cleaning as soon as possible. Usually, we are fully booked for the following three days, but sometimes there are exceptions. </Typography></li>
-        <li>
-          <Typography variant="h3">Can you give me a quote for the leather furniture cleaning London over the phone or do you need a viewing in person?</Typography>
-          <Typography variant="body">Yes, we can give you a quote over the phone, there is no need for us to visit your property. You can also receive a quote for professional leather sofa cleaning services online.</Typography></li>
-        <li>
-          <Typography variant="h3">What payment methods do you accept for your leather upholstery cleaning services?</Typography>
-          <Typography variant="body">We accept debit / credit cards, bank transfers and cash payments directly to our team.</Typography></li>
-        <li>
-          <Typography variant="h3">Can your leather upholstery cleaning companies provide me with an invoice?</Typography>
-          <Typography variant="body">Yes, we will either send you a receipt via email or via any method of your choice.</Typography></li>
-        <li>
-          <Typography variant="h3">Are you qualified?</Typography>
-          <Typography variant="body">Yes, we are qualified and fully trained members of <a class="color-paper-link hover-color-paper-link-hover:hover" href="https://www.checkatrade.com/trades/FineCarpetCleaning" target="_blank" rel="noopener">Checkatrade</a> and of <a class="color-paper-link hover-color-paper-link-hover:hover" href="https://trustedlocalcleaners.ncca.co.uk/listing/fine-carpet-cleaning-ltd/" target="_blank" rel="noopener">NCCA</a> (National Carpet Cleaners Association) – the UK’s acknowledged industry qualification.</Typography></li>
-        <li>
-          <Typography variant="h3">How long have you been in the upholstery and carpet cleaning business?</Typography>
-          <Typography variant="body">Since 2012, we've been actively engaged in the upholstery and carpet cleaning industry. Over the years, we've dealt with a diverse range of carpets, rugs, upholstery, and stains from both commercial and residential clients, accumulating valuable experience. Our commitment to providing the best cleaning services has motivated us to enhance our performance through the following approaches:</Typography></li>
-        <li>
-          <p>Continuously upgrading our equipment and machinery with superior alternatives whenever they become available;</p>
-        </li>
-        <li>
-          <p>Consistently evaluating and improving our cleaning products to ensure the highest quality of service;</p>
-        </li>
-        <li>
-          <p>Dedication to expanding our knowledge and skills through ongoing professional courses and training, always seeking to enhance our competence.</p>
-        </li>
-        <li>
-          <Typography variant="h3">Can you add a discount for the professional leather sofa cleaning?</Typography>
-          <Typography variant="body">Our leather upholstery cleaning services are renowned for their exceptional quality, making use of highly effective equipment and a range of top-tier cleaning products. What truly distinguishes us is not only the competitiveness but also the attractiveness of our prices in the market. Combining all the services you require is a more economical option than making separate requests for each service. Through this, you'll realise that bundling all the services you need is more cost-efficient than individual service requests.</Typography></li>
-        <Typography variant="body">This efficiency is attributed to the initial cost and additional charges related to each technician visit, including factors like travel time, parking, and handling heavy equipment during loading and unloading.</Typography>
-        <li>
-          <Typography variant="h3">Can I use my furniture after professional leather upholstery cleaning?</Typography>
-          <Typography variant="body">It depends on the cleaning method used. The drying time for a leather sofa typically ranges from 30 to 60 minutes. This duration depends on factors such as the type of cleaning method used, the material of the sofa, the level of soiling, and the room's temperature and humidity levels. If leather sofa cleaning services have been performed, it is recommended that you try to stay off the freshly cleaned upholstery until it is dry.</Typography></li>
-        <li>
-          <Typography variant="h3">How often should leather upholstery be professionally cleaned?</Typography>
-          <Typography variant="body">The frequency of cleaning from leather upholstery cleaning companies depends mainly on factors like how fast the upholstery soils. On average, a carpet should be cleaned at 12-month intervals. However, if you have pets or children, use it very frequently or if it is easily stained, we recommend using professional leather sofa cleaning services more often than that. Regular professional cleaning not only keeps your leather upholstery looking its best but also helps maintain a healthy and clean living environment. You can contact us anytime to receive professional leather upholstery cleaning services or advice.</Typography>
-        </li>
+        </Typography>
       </ul>
+      <li>
+        <Typography variant="h3">7. How long does it take for the leather upholstery to get dry after leather sofa cleaning services?</Typography>
+        <Typography variant="body">The drying time after leather sofa cleaning services varies depending on the fabric and type of the upholstery. Typically it can be used 30–60 minutes after the cleaning, so you can go back to your daily activities.</Typography>
+        <Typography variant="body">If you are having trouble deciding which leather upholstery cleaning services will best suit you or are seeking advice from leather upholstery cleaning companies, you can contact us at any suitable time for you.</Typography></li>
+      <li>
+        <Typography variant="h3">8. How soon can I expect your cleaners to visit me?</Typography>
+        <Typography variant="body">We will try to get you an appointment for a professional leather sofa cleaning as soon as possible. Usually, we are fully booked for the following three days, but sometimes there are exceptions. </Typography></li>
+      <li>
+        <Typography variant="h3">9. Can you give me a quote for the leather furniture cleaning London over the phone or do you need a viewing in person?</Typography>
+        <Typography variant="body">Yes, we can give you a quote over the phone, there is no need for us to visit your property. You can also receive a quote for professional leather sofa cleaning services online.</Typography></li>
+      <li>
+        <Typography variant="h3">10. What payment methods do you accept for your leather upholstery cleaning services?</Typography>
+        <Typography variant="body">We accept debit / credit cards, bank transfers and cash payments directly to our team.</Typography></li>
+      <li>
+        <Typography variant="h3">11. Can your leather upholstery cleaning companies provide me with an invoice?</Typography>
+        <Typography variant="body">Yes, we will either send you a receipt via email or via any method of your choice.</Typography></li>
+      <li>
+        <Typography variant="h3">12. Are you qualified?</Typography>
+        <Typography variant="body">Yes, we are qualified and fully trained members of <a class="color-paper-link hover-color-paper-link-hover:hover" href="https://www.checkatrade.com/trades/FineCarpetCleaning" target="_blank" rel="noopener">Checkatrade</a> and of <a class="color-paper-link hover-color-paper-link-hover:hover" href="https://trustedlocalcleaners.ncca.co.uk/listing/fine-carpet-cleaning-ltd/" target="_blank" rel="noopener">NCCA</a> (National Carpet Cleaners Association) – the UK’s acknowledged industry qualification.</Typography></li>
+      <li>
+        <Typography variant="h3">13. How long have you been in the upholstery and carpet cleaning business?</Typography>
+        <Typography variant="body">Since 2012, we've been actively engaged in the upholstery and carpet cleaning industry. Over the years, we've dealt with a diverse range of carpets, rugs, upholstery, and stains from both commercial and residential clients, accumulating valuable experience. Our commitment to providing the best cleaning services has motivated us to enhance our performance through the following approaches:</Typography></li>
+      <ul class="ml--5" style="list-style: initial;">
+        <Typography variant="li">
+          <p>Continuously upgrading our equipment and machinery with superior alternatives whenever they become available;</p>
+        </Typography>
+        <Typography variant="li">
+          <p>Consistently evaluating and improving our cleaning products to ensure the highest quality of service;</p>
+        </Typography>
+        <Typography variant="li">
+          <p>Dedication to expanding our knowledge and skills through ongoing professional courses and training, always seeking to enhance our competence.</p>
+        </Typography>
+      </ul>
+      <li>
+        <Typography variant="h3">14. Can you add a discount for the professional leather sofa cleaning?</Typography>
+        <Typography variant="body">Our leather upholstery cleaning services are renowned for their exceptional quality, making use of highly effective equipment and a range of top-tier cleaning products. What truly distinguishes us is not only the competitiveness but also the attractiveness of our prices in the market. Combining all the services you require is a more economical option than making separate requests for each service. Through this, you'll realise that bundling all the services you need is more cost-efficient than individual service requests.</Typography></li>
+      <Typography variant="body">This efficiency is attributed to the initial cost and additional charges related to each technician visit, including factors like travel time, parking, and handling heavy equipment during loading and unloading.</Typography>
+      <li>
+        <Typography variant="h3">15. Can I use my furniture after professional leather upholstery cleaning?</Typography>
+        <Typography variant="body">It depends on the cleaning method used. The drying time for a leather sofa typically ranges from 30 to 60 minutes. This duration depends on factors such as the type of cleaning method used, the material of the sofa, the level of soiling, and the room's temperature and humidity levels. If leather sofa cleaning services have been performed, it is recommended that you try to stay off the freshly cleaned upholstery until it is dry.</Typography></li>
+      <li>
+        <Typography variant="h3">16. How often should leather upholstery be professionally cleaned?</Typography>
+        <Typography variant="body">The frequency of cleaning from leather upholstery cleaning companies depends mainly on factors like how fast the upholstery soils. On average, a carpet should be cleaned at 12-month intervals. However, if you have pets or children, use it very frequently or if it is easily stained, we recommend using professional leather sofa cleaning services more often than that. Regular professional cleaning not only keeps your leather upholstery looking its best but also helps maintain a healthy and clean living environment. You can contact us anytime to receive professional leather upholstery cleaning services or advice.</Typography>
+      </li>
     </Entry>
     <Entry>
-      <ul>
-        <li>
-          <Typography variant="h3">What are your professional leather sofa cleaning prices?</Typography>
-          <Typography variant="body">How much professional leather sofa cleaning services cost depends on a number of factors. Some of them are:</Typography></li>
-        <li>
+      <li>
+        <Typography variant="h3">17. What are your professional leather sofa cleaning prices?</Typography>
+        <Typography variant="body">How much professional leather sofa cleaning services cost depends on a number of factors. Some of them are:</Typography></li>
+      <ul class="ml--5" style="list-style: initial;">
+        <Typography variant="li">
           <p>The quantity and size of the upholstery;</p>
-        </li>
-        <li>
+        </Typography>
+        <Typography variant="li">
           <p>How soiled it is;</p>
-        </li>
-        <li>
+        </Typography>
+        <Typography variant="li">
           <p>The fabric of the furniture.</p>
-        </li>
-        <Typography variant="body">To learn more, check out our <a class="color-paper-link hover-color-paper-link-hover:hover" href="#price_table">leather upholstery cleaning prices</a>.</Typography>
-        <li>
-          <Typography variant="h3">How to clean a nubuck leather sofa?</Typography>
-          <Typography variant="body">Cleaning a nubuck leather sofa requires a gentle touch to avoid damaging the delicate material. We use specialised for nubuck cleaning products and methods:</Typography></li>
-        <li>
-          <p>The sofa is first dry brushed with a soft nubuck brush to remove surface dust and loose particles. This step helps to lift the pile and prepare the surface for more thorough cleaning.</p>
-        </li>
-        <li>
-          <p>A hoover with a soft brush attachment is used to remove dust and dirt from the surface and crevices of the sofa.</p>
-        </li>
-        <li>
-          <p>Stains are treated with a special nubuck cleaner. This cleaner is applied to a soft cloth or sponge and carefully dabbed onto the affected area to remove the stain without damaging the material.</p>
-        </li>
-        <li>
-          <p>A special nubuck cleaning solution is applied. This is usually done with a spray or a foam cleaner specially developed for nubuck. The cleaner is gently worked into the fabric with a soft brush or sponge to remove dirt and grime.</p>
-        </li>
-        <li>
-          <p>The cleaner is then wiped off with a clean, damp cloth to ensure all residue is removed.</p>
-        </li>
-        <li>
-          <p>The sofa is left to air dry. It is important not to use heat sources.</p>
-        </li>
-        <li>
-          <p>To help guard against spills and stains in the future, a nubuck protection spray is sprayed. It creates a barrier of protection without changing the nubuck's colour or texture.</p>
-        </li>
-        <li>
-          <Typography variant="h3">What is best for cleaning leather sofa?</Typography>
-          <Typography variant="body">The best and safest way to have your leather furniture cleaned is to take advantage of leather upholstery cleaning services. This step will save you effort and time and you can be sure that your upholstery will be properly taken care of. Leather upholstery cleaning companies are experts in this field due to their experience, professional training and special equipment. We highly advise to utilise such services, as cleaning leather furniture improperly can lead to further damage.</Typography></li>
-        <li>
-          <Typography variant="h3">Are leather sofas easy to clean?</Typography>
-          <Typography variant="body">Leather furniture is not difficult to clean, especially with the proper methods and equipment being used. The leather furniture cleaning London is done with a professional leather cleaning product. After the cleaning is completed, we apply a professional leather conditioner which moisturises the leather and gives it a nice and soft feel.</Typography></li>
-        <li>
-          <Typography variant="h3">Can you get leather couches professionally cleaned?</Typography>
-          <Typography variant="body">Yes, leather couches can be professionally cleaned. We recommend professional leather cleaning London as the best way to clean a leather couch. With professional leather sofa cleaning services, you can trust that your leather investment is being cared for by experts with the skillset and equipment to properly clean.</Typography>
-        </li>
+        </Typography>
       </ul>
+      <Typography variant="body">To learn more, check out our <a class="color-paper-link hover-color-paper-link-hover:hover" href="#price_table">leather upholstery cleaning prices</a>.</Typography>
+      <li>
+        <Typography variant="h3">18. How to clean a nubuck leather sofa?</Typography>
+        <Typography variant="body">Cleaning a nubuck leather sofa requires a gentle touch to avoid damaging the delicate material. We use specialised for nubuck cleaning products and methods:</Typography></li>
+      <ul class="ml--5" style="list-style: initial;">
+        <Typography variant="li">
+          <p>The sofa is first dry brushed with a soft nubuck brush to remove surface dust and loose particles. This step helps to lift the pile and prepare the surface for more thorough cleaning.</p>
+        </Typography>
+        <Typography variant="li">
+          <p>A hoover with a soft brush attachment is used to remove dust and dirt from the surface and crevices of the sofa.</p>
+        </Typography>
+        <Typography variant="li">
+          <p>Stains are treated with a special nubuck cleaner. This cleaner is applied to a soft cloth or sponge and carefully dabbed onto the affected area to remove the stain without damaging the material.</p>
+        </Typography>
+        <Typography variant="li">
+          <p>A special nubuck cleaning solution is applied. This is usually done with a spray or a foam cleaner specially developed for nubuck. The cleaner is gently worked into the fabric with a soft brush or sponge to remove dirt and grime.</p>
+        </Typography>
+        <Typography variant="li">
+          <p>The cleaner is then wiped off with a clean, damp cloth to ensure all residue is removed.</p>
+        </Typography>
+        <Typography variant="li">
+          <p>The sofa is left to air dry. It is important not to use heat sources.</p>
+        </Typography>
+        <Typography variant="li">
+          <p>To help guard against spills and stains in the future, a nubuck protection spray is sprayed. It creates a barrier of protection without changing the nubuck's colour or texture.</p>
+        </Typography>
+      </ul>
+      <li>
+        <Typography variant="h3">19. What is best for cleaning leather sofa?</Typography>
+        <Typography variant="body">The best and safest way to have your leather furniture cleaned is to take advantage of leather upholstery cleaning services. This step will save you effort and time and you can be sure that your upholstery will be properly taken care of. Leather upholstery cleaning companies are experts in this field due to their experience, professional training and special equipment. We highly advise to utilise such services, as cleaning leather furniture improperly can lead to further damage.</Typography></li>
+      <li>
+        <Typography variant="h3">20. Are leather sofas easy to clean?</Typography>
+        <Typography variant="body">Leather furniture is not difficult to clean, especially with the proper methods and equipment being used. The leather furniture cleaning London is done with a professional leather cleaning product. After the cleaning is completed, we apply a professional leather conditioner which moisturises the leather and gives it a nice and soft feel.</Typography></li>
+      <li>
+        <Typography variant="h3">21. Can you get leather couches professionally cleaned?</Typography>
+        <Typography variant="body">Yes, leather couches can be professionally cleaned. We recommend professional leather cleaning London as the best way to clean a leather couch. With professional leather sofa cleaning services, you can trust that your leather investment is being cared for by experts with the skillset and equipment to properly clean.</Typography>
+      </li>
     </Entry>
   </Container>
 }

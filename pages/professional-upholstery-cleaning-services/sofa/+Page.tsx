@@ -52,21 +52,21 @@ const GalerrySliderMobile = () => {
 };
 
 const VideoPlayer = () => {
-	return (
-		<div class="flex flex-justify-center flex-items-center mt-20">
-			<video
-				class="mt-10 b-rd-3" style="width: 100%; width: -moz-available; width: -webkit-fill-available; width: fill-available;"
-				autoplay
-				controls
-				muted
-			>
-				<source
-					src="/assets/Professional Carpet Cleaning London - Fine Carpet Cleaning (1).mp4"
-					type="video/mp4"
-				/>
-			</video>
-		</div>
-	);
+  return (
+    <div class="flex flex-justify-center flex-items-center mt-20">
+      <video
+        class="mt-10 b-rd-3" style="width: 100%; width: -moz-available; width: -webkit-fill-available; width: fill-available;"
+        autoplay
+        controls
+        muted
+      >
+        <source
+          src="/assets/Professional Carpet Cleaning London - Fine Carpet Cleaning (1).mp4"
+          type="video/mp4"
+        />
+      </video>
+    </div>
+  );
 };
 
 function FleurDivider() {
@@ -82,157 +82,162 @@ export function FaqSection() {
   const { Container, Entry } = createCollapsable()
   return <Container>
     <Entry>
-      <ul>
-        <li>
-          <Typography variant="h3">Do you fee for cancellation?</Typography>
-          <Typography variant="body">We require a deposit before performing the sofa set cleaning services. If you cancel the service on the day of the cleaning you will lose that deposit.</Typography></li>
-        <li>
-          <Typography variant="h3">Should I pay for the congestion / parking charge?</Typography>
-          <Typography variant="body">Yes, we kindly ask that the client arrange a suitable parking space for our vehicles within close proximity of the property and to cover any parking / congestion expenses.</Typography></li>
-        <li>
-          <Typography variant="h3">What if I live on the 4th floor or above and I have no lift?</Typography>
-          <Typography variant="body">Because our equipment weighs over 50 kilograms, we implement an extra fee for each additional floor that requires manual transportation. This is because moving the heavy equipment to different floors is time-consuming and can cause quicker fatigue among our technicians. As a result, this may impact our overall daily productivity compared to our standard output.</Typography></li>
-        <li>
-          <Typography variant="h3">Are you insured?</Typography>
-          <Typography variant="body">Yes, we are completely insured.</Typography></li>
-        <li>
-          <Typography variant="h3">What happens if your home sofa cleaning services technicians damage anything?</Typography>
-          <Typography variant="body">We are fully insured and if an accident happens it will be covered by our sofa cleaning company.</Typography></li>
-      </ul>
+      <li>
+        <Typography variant="h3">1. Do you fee for cancellation?</Typography>
+        <Typography variant="body">We require a deposit before performing the sofa set cleaning services. If you cancel the service on the day of the cleaning you will lose that deposit.</Typography></li>
+      <li>
+        <Typography variant="h3">2. Should I pay for the congestion / parking charge?</Typography>
+        <Typography variant="body">Yes, we kindly ask that the client arrange a suitable parking space for our vehicles within close proximity of the property and to cover any parking / congestion expenses.</Typography></li>
+      <li>
+        <Typography variant="h3">3. What if I live on the 4th floor or above and I have no lift?</Typography>
+        <Typography variant="body">Because our equipment weighs over 50 kilograms, we implement an extra fee for each additional floor that requires manual transportation. This is because moving the heavy equipment to different floors is time-consuming and can cause quicker fatigue among our technicians. As a result, this may impact our overall daily productivity compared to our standard output.</Typography></li>
+      <li>
+        <Typography variant="h3">4. Are you insured?</Typography>
+        <Typography variant="body">Yes, we are completely insured.</Typography></li>
+      <li>
+        <Typography variant="h3">5. What happens if your home sofa cleaning services technicians damage anything?</Typography>
+        <Typography variant="body">We are fully insured and if an accident happens it will be covered by our sofa cleaning company.</Typography></li>
     </Entry>
     <Entry>
-      <ul>
-        <li>
-          <Typography variant="h3">Do you guarantee that after sofa set cleaning services all stains will be removed?</Typography>
-          <Typography variant="body">Given our extensive experience and ownership of top-notch industry equipment, we consistently achieve high success rates in stain removal. However, it's important to acknowledge that we cannot provide an absolute guarantee due to various factors, including:</Typography></li>
-        <li>
+      <li>
+        <Typography variant="h3">6. Do you guarantee that after sofa set cleaning services all stains will be removed?</Typography>
+        <Typography variant="body">Given our extensive experience and ownership of top-notch industry equipment, we consistently achieve high success rates in stain removal. However, it's important to acknowledge that we cannot provide an absolute guarantee due to various factors, including:</Typography></li>
+      <ul class="ml--5" style="list-style: initial;">
+        <Typography variant="li">
           <p>The age of the stains;</p>
-        </li>
-        <li>
+        </Typography>
+        <Typography variant="li">
           <p>The nature of the substances causing the stains;</p>
-        </li>
-        <li>
+        </Typography>
+        <Typography variant="li">
           <p>The type and fabric of the sofa;</p>
-        </li>
-        <li>
+        </Typography>
+        <Typography variant="li">
           <p>Any previous mishandling of the stains.</p>
-        </li>
-        <Typography variant="body">Nevertheless, we are fully committed to applying every possible effort to eliminate all stains from your furniture. Our approach involves:</Typography>
-        <li>
-          <p>Utilising cutting-edge cleaning equipment;</p>
-        </li>
-        <li>
-          <p>Applying a thoughtfully selected range of premium detergents;</p>
-        </li>
-        <li>
-          <p>Customising our approach to match the specific sofa type and staining agent, ensuring the best possible outcome.</p>
-        </li>
-        <li>
-          <Typography variant="h3">How soon can I expect your London sofa cleaning technician to visit me?</Typography>
-          <Typography variant="body">We will try to get you an appointment for home sofa cleaning services as soon as possible. Usually, we are fully booked for the following three days, but sometimes there are exceptions.</Typography></li>
-        <li>
-          <Typography variant="h3">Can you give me a quote for your sofa cleaning prices over the phone or do you need a viewing in person?</Typography>
-          <Typography variant="body">Yes, we can give you a corner sofa cleaning quote over the phone, there is no need for us to visit your property. You can also receive a quote online.</Typography></li>
-        <li>
-          <Typography variant="h3">What payment methods do you accept for your home sofa cleaning services?</Typography>
-          <Typography variant="body">We accept debit / credit cards, bank transfer and cash payments directly to our team.</Typography></li>
-        <li>
-          <Typography variant="h3">Can your sofa cleaning company provide me with an invoice?</Typography>
-          <Typography variant="body">Yes, we will either send you a receipt via email or via any method of your choice.</Typography></li>
-        <li>
-          <Typography variant="h3">Are you qualified for sofa upholstery cleaning services?</Typography>
-          <Typography variant="body">Yes, we are qualified and fully trained members of <a class="color-paper-link hover-color-paper-link-hover:hover" href="https://www.checkatrade.com/trades/FineCarpetCleaning" target="_blank" rel="noopener">Checkatrade</a> and of <a class="color-paper-link hover-color-paper-link-hover:hover" href="https://trustedlocalcleaners.ncca.co.uk/listing/fine-carpet-cleaning-ltd/" target="_blank" rel="noopener">NCCA</a> (National Carpet Cleaners Association) – the UK’s acknowledged industry qualification.</Typography></li>
-        <li>
-          <Typography variant="h3">How long have you been in the sofa set cleaning services business?</Typography>
-          <Typography variant="body">Since 2012, we have been actively engaged in the sectional cleaning service industry. Throughout the years, we have dealt with a wide range of carpets, rugs, upholstery, and stains from both commercial and residential clients, gaining valuable experience. Our commitment to providing top-notch professional sofa cleaning services has led us to enhance our performance through the following strategies:</Typography></li>
-        <li>
-          <p>Continuously upgrading our equipment and machinery by adopting superior alternatives whenever they become available;</p>
-        </li>
-        <li>
-          <p>Consistently evaluating and improving our cleaning products to ensure the delivery of the highest quality service;</p>
-        </li>
-        <li>
-          <p>A dedication to expanding our knowledge and skills through ongoing professional courses and training, always striving to enhance our competence.</p>
-        </li>
-        <li>
-          <Typography variant="h3">Can you add a discount for the eco sofa cleaning?</Typography>
-          <Typography variant="body">Our best sofa cleaning services are renowned for their exceptional quality, employing the most effective equipment and a selection of premium cleaning products. What sets us apart even more is that our sofa cleaning prices not only stand out for their competitiveness but are also among the most attractive in the market. Combining all the services you require is a more economical option than making separate requests for each service.This cost-effectiveness is attributed to the initial cost and additional charges associated with each technician visit, taking into account factors such as travel time, parking, and the handling of heavy equipment during loading and unloading.</Typography></li>
-        <li>
-          <Typography variant="h3">What types of sofas do you clean?</Typography>
-          <Typography variant="body">Our sofa upholstery cleaning services are perfect for two, three, four, or five-seater sofas, but also relate to a broader range of soft furnishings and upholstery, including:</Typography></li>
-        <li>
-          <p>Rockers & armchairs;</p>
-        </li>
-        <li>
-          <p>Dining chairs;</p>
-        </li>
-        <li>
-          <p>Office chairs;</p>
-        </li>
-        <li>
-          <p>Soft blinds & curtains;</p>
-        </li>
-        <li>
-          <p>Pillows & cushions;</p>
-        </li>
-        <li>
-          <p>Single, double, and King size mattresses.</p>
-        </li>
-        <Typography variant="body">Additionally, we perform services for different types of sofas and fabrics such as velvet sofa cleaning services, suede sofa cleaning services, microfiber sofa cleaning services, sofa cover cleaning services, sofa cushion cleaning services, corner sofa cleaning, eco sofa cleaning and many more.</Typography>
-        <li>
-          <Typography variant="h3">How much does it cost to dry clean sofa covers?</Typography>
-          <Typography variant="body">How much the sofa cover cleaning services cost depends on a number of factors. Some of them are:</Typography></li>
-        <li>
-          <p>The quantity and size of the sofa;</p>
-        </li>
-        <li>
-          <p>How soiled it is;</p>
-        </li>
-        <li>
-          <p>The fabric of the sofa.</p>
-        </li>
-        <Typography variant="body">To learn more, check out our <a class="color-paper-link hover-color-paper-link-hover:hover" href="#price_table">sofa cleaning prices</a>.</Typography>
-
-        <li>
-          <Typography variant="h3">Is getting your couch professionally cleaned worth it?</Typography>
-          <Typography variant="body">Booking professional sofa cleaning services is a quick and efficient way of getting your couch and sofas refreshed with minimum effort from your side. It costs you much less than buying new furniture. Since technicians use cleaning supplies and hot water, not only is your sofa cleaned but sanitised as well. </Typography>
-          <Typography variant="body">The corner sofa cleaning services of “Fine Carpet Cleaning” Ltd. involve artillery of methods and solutions for producing optimal results and leaving your upholstery fresh and shiny as new. We employ the very best modern practices, approved by the industry officials; we continually upgrade our processes in order to justify our perfectionism and deliver state-of-the-art sofa cleaning services for our domestic and commercial clients.</Typography>
-        </li>
+        </Typography>
       </ul>
+      <Typography variant="body">Nevertheless, we are fully committed to applying every possible effort to eliminate all stains from your furniture. Our approach involves:</Typography>
+      <ul class="ml--5" style="list-style: initial;">
+        <Typography variant="li">
+          <p>Utilising cutting-edge cleaning equipment;</p>
+        </Typography>
+        <Typography variant="li">
+          <p>Applying a thoughtfully selected range of premium detergents;</p>
+        </Typography>
+        <Typography variant="li">
+          <p>Customising our approach to match the specific sofa type and staining agent, ensuring the best possible outcome.</p>
+        </Typography>
+      </ul>
+      <li>
+        <Typography variant="h3">7. How soon can I expect your London sofa cleaning technician to visit me?</Typography>
+        <Typography variant="body">We will try to get you an appointment for home sofa cleaning services as soon as possible. Usually, we are fully booked for the following three days, but sometimes there are exceptions.</Typography></li>
+      <li>
+        <Typography variant="h3">8. Can you give me a quote for your sofa cleaning prices over the phone or do you need a viewing in person?</Typography>
+        <Typography variant="body">Yes, we can give you a corner sofa cleaning quote over the phone, there is no need for us to visit your property. You can also receive a quote online.</Typography></li>
+      <li>
+        <Typography variant="h3">9. What payment methods do you accept for your home sofa cleaning services?</Typography>
+        <Typography variant="body">We accept debit / credit cards, bank transfer and cash payments directly to our team.</Typography></li>
+      <li>
+        <Typography variant="h3">10. Can your sofa cleaning company provide me with an invoice?</Typography>
+        <Typography variant="body">Yes, we will either send you a receipt via email or via any method of your choice.</Typography></li>
+      <li>
+        <Typography variant="h3">11. Are you qualified for sofa upholstery cleaning services?</Typography>
+        <Typography variant="body">Yes, we are qualified and fully trained members of <a class="color-paper-link hover-color-paper-link-hover:hover" href="https://www.checkatrade.com/trades/FineCarpetCleaning" target="_blank" rel="noopener">Checkatrade</a> and of <a class="color-paper-link hover-color-paper-link-hover:hover" href="https://trustedlocalcleaners.ncca.co.uk/listing/fine-carpet-cleaning-ltd/" target="_blank" rel="noopener">NCCA</a> (National Carpet Cleaners Association) – the UK’s acknowledged industry qualification.</Typography></li>
+      <li>
+        <Typography variant="h3">12. How long have you been in the sofa set cleaning services business?</Typography>
+        <Typography variant="body">Since 2012, we have been actively engaged in the sectional cleaning service industry. Throughout the years, we have dealt with a wide range of carpets, rugs, upholstery, and stains from both commercial and residential clients, gaining valuable experience. Our commitment to providing top-notch professional sofa cleaning services has led us to enhance our performance through the following strategies:</Typography></li>
+      <ul class="ml--5" style="list-style: initial;">
+        <Typography variant="li">
+          <p>Continuously upgrading our equipment and machinery by adopting superior alternatives whenever they become available;</p>
+        </Typography>
+        <Typography variant="li">
+          <p>Consistently evaluating and improving our cleaning products to ensure the delivery of the highest quality service;</p>
+        </Typography>
+        <Typography variant="li">
+          <p>A dedication to expanding our knowledge and skills through ongoing professional courses and training, always striving to enhance our competence.</p>
+        </Typography>
+      </ul>
+      <li>
+        <Typography variant="h3">13. Can you add a discount for the eco sofa cleaning?</Typography>
+        <Typography variant="body">Our best sofa cleaning services are renowned for their exceptional quality, employing the most effective equipment and a selection of premium cleaning products. What sets us apart even more is that our sofa cleaning prices not only stand out for their competitiveness but are also among the most attractive in the market. Combining all the services you require is a more economical option than making separate requests for each service.This cost-effectiveness is attributed to the initial cost and additional charges associated with each technician visit, taking into account factors such as travel time, parking, and the handling of heavy equipment during loading and unloading.</Typography></li>
+      <li>
+        <Typography variant="h3">14. What types of sofas do you clean?</Typography>
+        <Typography variant="body">Our sofa upholstery cleaning services are perfect for two, three, four, or five-seater sofas, but also relate to a broader range of soft furnishings and upholstery, including:</Typography></li>
+      <ul class="ml--5" style="list-style: initial;">
+        <Typography variant="li">
+          <p>Rockers & armchairs;</p>
+        </Typography>
+        <Typography variant="li">
+          <p>Dining chairs;</p>
+        </Typography>
+        <Typography variant="li">
+          <p>Office chairs;</p>
+        </Typography>
+        <Typography variant="li">
+          <p>Soft blinds & curtains;</p>
+        </Typography>
+        <Typography variant="li">
+          <p>Pillows & cushions;</p>
+        </Typography>
+        <Typography variant="li">
+          <p>Single, double, and King size mattresses.</p>
+        </Typography>
+      </ul>
+      <Typography variant="body">Additionally, we perform services for different types of sofas and fabrics such as velvet sofa cleaning services, suede sofa cleaning services, microfiber sofa cleaning services, sofa cover cleaning services, sofa cushion cleaning services, corner sofa cleaning, eco sofa cleaning and many more.</Typography>
+      <li>
+        <Typography variant="h3">15. How much does it cost to dry clean sofa covers?</Typography>
+        <Typography variant="body">How much the sofa cover cleaning services cost depends on a number of factors. Some of them are:</Typography></li>
+      <ul class="ml--5" style="list-style: initial;">
+        <Typography variant="li">
+          <p>The quantity and size of the sofa;</p>
+        </Typography>
+        <Typography variant="li">
+          <p>How soiled it is;</p>
+        </Typography>
+        <Typography variant="li">
+          <p>The fabric of the sofa.</p>
+        </Typography>
+      </ul>
+      <Typography variant="body">To learn more, check out our <a class="color-paper-link hover-color-paper-link-hover:hover" href="#price_table">sofa cleaning prices</a>.</Typography>
+      <li>
+        <Typography variant="h3">16. Is getting your couch professionally cleaned worth it?</Typography>
+        <Typography variant="body">Booking professional sofa cleaning services is a quick and efficient way of getting your couch and sofas refreshed with minimum effort from your side. It costs you much less than buying new furniture. Since technicians use cleaning supplies and hot water, not only is your sofa cleaned but sanitised as well. </Typography>
+        <Typography variant="body">The corner sofa cleaning services of “Fine Carpet Cleaning” Ltd. involve artillery of methods and solutions for producing optimal results and leaving your upholstery fresh and shiny as new. We employ the very best modern practices, approved by the industry officials; we continually upgrade our processes in order to justify our perfectionism and deliver state-of-the-art sofa cleaning services for our domestic and commercial clients.</Typography>
+      </li>
     </Entry>
     <Entry>
-      <ul>
-        <li>
-          <Typography variant="h3">Can a sofa be professionally cleaned?</Typography>
-          <Typography variant="body">Yes, sofas can be professionally cleaned. Professional sofa and couch cleaning services are offered by trained technicians and specialised cleaning companies. These professionals use advanced equipment, specialised cleaning solutions, and industry-recommended techniques to deep clean and refresh sofas.</Typography></li>
-        <li>
-          <Typography variant="h3">How long does it take a couch to dry after being professionally cleaned?</Typography>
-          <Typography variant="body">The drying time after couch cleaning services varies depending on the fabric and type of the upholstery and the cleaning method employed. If the dry cleaning services are chosen, the upholstery will be dry immediately after the cleaning process or shortly thereafter. Typically it takes 30-60 minutes for it to be completely dry. However, when steam cleaning is utilised, the approximate drying time typically ranges from 5 to 7 hours.</Typography>
-          <Typography variant="body">If you are having trouble deciding which best sofa cleaning services will suit you or are searching for an expert sofa cleaning company, you can contact us at any suitable time for you to receive professional advice.</Typography></li>
-        <li>
-          <Typography variant="h3">How long does it take for a sofa to be professionally cleaned?</Typography>
-          <Typography variant="body">The duration of the sofa upholstery cleaning services process mainly depends on:</Typography></li>
-        <li>
+      <li>
+        <Typography variant="h3">17. Can a sofa be professionally cleaned?</Typography>
+        <Typography variant="body">Yes, sofas can be professionally cleaned. Professional sofa and couch cleaning services are offered by trained technicians and specialised cleaning companies. These professionals use advanced equipment, specialised cleaning solutions, and industry-recommended techniques to deep clean and refresh sofas.</Typography></li>
+      <li>
+        <Typography variant="h3">18. How long does it take a couch to dry after being professionally cleaned?</Typography>
+        <Typography variant="body">The drying time after couch cleaning services varies depending on the fabric and type of the upholstery and the cleaning method employed. If the dry cleaning services are chosen, the upholstery will be dry immediately after the cleaning process or shortly thereafter. Typically it takes 30-60 minutes for it to be completely dry. However, when steam cleaning is utilised, the approximate drying time typically ranges from 5 to 7 hours.</Typography>
+        <Typography variant="body">If you are having trouble deciding which best sofa cleaning services will suit you or are searching for an expert sofa cleaning company, you can contact us at any suitable time for you to receive professional advice.</Typography></li>
+      <li>
+        <Typography variant="h3">19. How long does it take for a sofa to be professionally cleaned?</Typography>
+        <Typography variant="body">The duration of the sofa upholstery cleaning services process mainly depends on:</Typography></li>
+      <ul class="ml--5" style="list-style: initial;">
+        <Typography variant="li">
           <p>How soiled the sofa is;</p>
-        </li>
-        <li>
+        </Typography>
+        <Typography variant="li">
           <p>If it needs any stain removal treatments;</p>
-        </li>
-        <li>
+        </Typography>
+        <Typography variant="li">
           <p>What cleaning method will be used on the upholstery?</p>
-        </li>
-        <Typography variant="body">If you need more information feel free to contact us or to get the best sofa cleaning services.</Typography>
-        <li>
-          <Typography variant="h3">How often should a couch be deep cleaned?</Typography>
-          <Typography variant="body">The recommended cleaning frequency from a deep sofa cleaning company is primarily influenced by factors such as the speed at which the furniture becomes soiled. Generally, it's advisable to clean a sofa every 12 months on average. However, if you have pets, children, use it frequently, or if it is prone to staining, we suggest utilising home sofa cleaning services more frequently than the standard interval. Regular professional cleaning not only preserves the aesthetic appeal of your upholstery but also contributes to maintaining a healthy and clean living environment. Feel free to contact us anytime for a service from couch cleaning companies "near me" or advice.</Typography></li>
-        <li>
-          <Typography variant="h3">Can you get sofas steam cleaned?</Typography>
-          <Typography variant="body">Yes, you can use steam cleaning for your sofa and it will not damage it. Steam cleaning is the most thorough, effective method for removing dirt and soil from the base. Steam cleaning is the most effective way to clean a sofa. Cleaning your furniture with hot water at high pressure will successfully remove dirt, bacteria, grime, and toxins embedded in the sofa fibres. Professional sofa cleaning services can definitely clean your sofas and couches effectively, and it also has many other advantages, like prolonging the life of the sofas, being very effective on tough stains, not leaving any residue behind and not using harsh chemicals.</Typography>
-          <Typography variant="body">In special cases like synthetic sofas, we strongly recommend not using steam cleaning, but dry cleaning, as the heat and steam <strong>will</strong> damage the furniture.</Typography></li>
-        <li>
-          <Typography variant="h3">Are there couch cleaning companies near me?</Typography>
-          <Typography variant="body">“Fine Carpet Cleaning” Ltd. performs in all of London. Feel free to contact us to receive the best sofa cleaning services wherever you are and rest assured that we will take good care of your upholstery.</Typography></li>
+        </Typography>
       </ul>
+      <Typography variant="body">If you need more information feel free to contact us or to get the best sofa cleaning services.</Typography>
+      <li>
+        <Typography variant="h3">20. How often should a couch be deep cleaned?</Typography>
+        <Typography variant="body">The recommended cleaning frequency from a deep sofa cleaning company is primarily influenced by factors such as the speed at which the furniture becomes soiled. Generally, it's advisable to clean a sofa every 12 months on average. However, if you have pets, children, use it frequently, or if it is prone to staining, we suggest utilising home sofa cleaning services more frequently than the standard interval. Regular professional cleaning not only preserves the aesthetic appeal of your upholstery but also contributes to maintaining a healthy and clean living environment. Feel free to contact us anytime for a service from couch cleaning companies "near me" or advice.</Typography></li>
+      <li>
+        <Typography variant="h3">21. Can you get sofas steam cleaned?</Typography>
+        <Typography variant="body">Yes, you can use steam cleaning for your sofa and it will not damage it. Steam cleaning is the most thorough, effective method for removing dirt and soil from the base. Steam cleaning is the most effective way to clean a sofa. Cleaning your furniture with hot water at high pressure will successfully remove dirt, bacteria, grime, and toxins embedded in the sofa fibres. Professional sofa cleaning services can definitely clean your sofas and couches effectively, and it also has many other advantages, like prolonging the life of the sofas, being very effective on tough stains, not leaving any residue behind and not using harsh chemicals.</Typography>
+        <Typography variant="body">In special cases like synthetic sofas, we strongly recommend not using steam cleaning, but dry cleaning, as the heat and steam <strong>will</strong> damage the furniture.</Typography></li>
+      <li>
+        <Typography variant="h3">22. Are there couch cleaning companies near me?</Typography>
+        <Typography variant="body">“Fine Carpet Cleaning” Ltd. performs in all of London. Feel free to contact us to receive the best sofa cleaning services wherever you are and rest assured that we will take good care of your upholstery.</Typography></li>
     </Entry>
   </Container>
 }
@@ -273,8 +278,8 @@ export default function Page() {
           </li>
           <li class="ml--5">
             <p>Professionals will <strong>tailor their methods</strong> to the specific type of upholstery, ensuring the best results without damage.</p>
-          <Typography variant="body">At "Fine Carpet Cleaning Ltd.", we understand that excellent hygiene is vital. We offer professional sofa cleaning services that not only enhance the appearance of your furniture but also contribute to a healthier living environment.</Typography>
-          <Typography variant="body">To ensure that everything proceeds according to plan, we will conduct a product and cleaning method test on a small section of your upholstery. This test helps confirm that the detergent chosen is the most suitable for your furniture.</Typography>
+            <Typography variant="body">At "Fine Carpet Cleaning Ltd.", we understand that excellent hygiene is vital. We offer professional sofa cleaning services that not only enhance the appearance of your furniture but also contribute to a healthier living environment.</Typography>
+            <Typography variant="body">To ensure that everything proceeds according to plan, we will conduct a product and cleaning method test on a small section of your upholstery. This test helps confirm that the detergent chosen is the most suitable for your furniture.</Typography>
           </li>
         </ul>
 
@@ -335,7 +340,7 @@ export default function Page() {
         <ul>
           <li class="ml--5"><p>We start with a pre-cleaning survey to identify the appropriate cleaning detergents and tools needed for the specific fabric of the sofa.</p></li>
           <li class="ml--5"><p>Next, we use dry vacuum cleaning to eliminate loose dirt, dry soils, and dust from the fabric.</p>
-          <Typography variant="body">Professional sofa cleaning is essential to maintain its elegance and longevity. Our process begins with carefully dusting the sofa to remove any loose particles. Next, we apply a specialised detergent, gently agitate it to lift dirt, and then wipe it off, ensuring a thorough clean. We then allow the sofa to dry for about 10 minutes. Finally, we apply a protective cream to nourish the leather and shield it from future damage. This meticulous approach keeps your leather sofa looking pristine and extends its lifespan.</Typography></li>
+            <Typography variant="body">Professional sofa cleaning is essential to maintain its elegance and longevity. Our process begins with carefully dusting the sofa to remove any loose particles. Next, we apply a specialised detergent, gently agitate it to lift dirt, and then wipe it off, ensuring a thorough clean. We then allow the sofa to dry for about 10 minutes. Finally, we apply a protective cream to nourish the leather and shield it from future damage. This meticulous approach keeps your leather sofa looking pristine and extends its lifespan.</Typography></li>
           <li class="ml--5"><p>A heavy-duty pre-spray is then applied to lift oily dirt and pollutants from the upholstery, preparing them for extraction with our high-performance machines.</p></li>
           <li class="ml--5"><p>The cleaning solution is carefully worked into the upholstery, effectively loosening the soiling for the extraction process.</p></li>
           <li class="ml--5"><p>We gently inject pure softened hot water, reaching a maximum temperature of 135 degrees, deep into the fibres. This releases the soil, allowing our powerful hot water extraction machine to efficiently remove it. Any remaining spots and stains are individually treated with special products.</p></li>

@@ -52,21 +52,21 @@ const GalerrySliderMobile = () => {
 };
 
 const VideoPlayer = () => {
-	return (
-		<div class="flex flex-justify-center flex-items-center mt-20">
-			<video
-				class="mt-10 b-rd-3" style="width: 100%; width: -moz-available; width: -webkit-fill-available; width: fill-available;"
-				autoplay
-				controls
-				muted
-			>
-				<source
-					src="/assets/Professional Carpet Cleaning London - Fine Carpet Cleaning (1).mp4"
-					type="video/mp4"
-				/>
-			</video>
-		</div>
-	);
+  return (
+    <div class="flex flex-justify-center flex-items-center mt-20">
+      <video
+        class="mt-10 b-rd-3" style="width: 100%; width: -moz-available; width: -webkit-fill-available; width: fill-available;"
+        autoplay
+        controls
+        muted
+      >
+        <source
+          src="/assets/Professional Carpet Cleaning London - Fine Carpet Cleaning (1).mp4"
+          type="video/mp4"
+        />
+      </video>
+    </div>
+  );
 };
 
 function FleurDivider() {
@@ -82,159 +82,167 @@ export function FaqSection() {
   const { Container, Entry } = createCollapsable()
   return <Container>
     <Entry>
-      <ul>
-        <li>
-          <Typography variant="h3">Do you have a cancellation fee?</Typography>
-          <Typography variant="body">Yes, if you cancel on the day of the residential carpet cleaning you will lose your deposit.</Typography></li>
-        <li>
-          <Typography variant="h3">Do I need to pay for the congestion / parking charge?</Typography>
-          <Typography variant="body">Yes, we kindly ask the client to make arrangements for a convenient parking space for our vehicles near the property. If there are any parking or congestion charges associated with this, we ask the client to cover these expenses if they are applicable.</Typography></li>
-        <li>
-          <Typography variant="h3">Do I need to move furniture before professional home carpet cleaning?</Typography>
-          <Typography variant="body">We would greatly appreciate your cooperation in relocating small, delicate, or valuable furniture items like lamps and ornaments before the home carpet cleaning services, primarily for insurance purposes. If possible, please position these items in a secure area that won't be affected during the condo carpet cleaning process. We are more than willing to assist in moving other lightweight furniture, such as chairs, armchairs, and tables during the cleaning, and we will return them to their original positions once the cleaning is completed. However, if there is a need to move heavy furniture items like sofas, beds, wardrobes, and cupboards, an additional charge will apply. This extra fee accounts for the additional time and effort required by our technician, who will be duly compensated. Our main goal is to ensure a stress-free experience for you throughout the entire on-site carpet cleaning process.</Typography></li>
-        <li>
-          <Typography variant="h3">What if I live on a high floor and I have no lift?</Typography>
-          <Typography variant="body">Due to the substantial weight of our equipment for retail carpet cleaning, which exceeds 50 kilograms, an additional fee is applied for each additional floor that requires manual transportation. This is necessary because manually carrying the heavy equipment up multiple flights of stairs is a time-consuming task, and it can cause our technicians to fatigue more quickly. Consequently, our overall productivity for the day may be reduced compared to our standard output.</Typography></li>
-        <li>
-          <Typography variant="h3">Are you insured?</Typography>
-          <Typography variant="body">Yes, we are fully insured.</Typography></li>
-      </ul>
+      <li>
+        <Typography variant="h3">1. Do you have a cancellation fee?</Typography>
+        <Typography variant="body">Yes, if you cancel on the day of the residential carpet cleaning you will lose your deposit.</Typography></li>
+      <li>
+        <Typography variant="h3">2. Do I need to pay for the congestion / parking charge?</Typography>
+        <Typography variant="body">Yes, we kindly ask the client to make arrangements for a convenient parking space for our vehicles near the property. If there are any parking or congestion charges associated with this, we ask the client to cover these expenses if they are applicable.</Typography></li>
+      <li>
+        <Typography variant="h3">3. Do I need to move furniture before professional home carpet cleaning?</Typography>
+        <Typography variant="body">We would greatly appreciate your cooperation in relocating small, delicate, or valuable furniture items like lamps and ornaments before the home carpet cleaning services, primarily for insurance purposes. If possible, please position these items in a secure area that won't be affected during the condo carpet cleaning process. We are more than willing to assist in moving other lightweight furniture, such as chairs, armchairs, and tables during the cleaning, and we will return them to their original positions once the cleaning is completed. However, if there is a need to move heavy furniture items like sofas, beds, wardrobes, and cupboards, an additional charge will apply. This extra fee accounts for the additional time and effort required by our technician, who will be duly compensated. Our main goal is to ensure a stress-free experience for you throughout the entire on-site carpet cleaning process.</Typography></li>
+      <li>
+        <Typography variant="h3">4. What if I live on a high floor and I have no lift?</Typography>
+        <Typography variant="body">Due to the substantial weight of our equipment for retail carpet cleaning, which exceeds 50 kilograms, an additional fee is applied for each additional floor that requires manual transportation. This is necessary because manually carrying the heavy equipment up multiple flights of stairs is a time-consuming task, and it can cause our technicians to fatigue more quickly. Consequently, our overall productivity for the day may be reduced compared to our standard output.</Typography></li>
+      <li>
+        <Typography variant="h3">5. Are you insured?</Typography>
+        <Typography variant="body">Yes, we are fully insured.</Typography></li>
     </Entry>
     <Entry>
-      <ul>
-        <li>
-          <Typography variant="h3">What happens if your cleaner damages anything while performing residential carpet cleaning services?</Typography>
-          <Typography variant="body">We are fully insured and if an accident happens in the process of the carpet and home cleaning services we are fully covered.</Typography></li>
-        <li>
-          <Typography variant="h3">How long does the process of the house carpet cleaning services take?</Typography>
-          <Typography variant="body">The time it takes for the domestic carpet cleaning services process primarily hinges on two factors:</Typography></li>
-        <li>
+      <li>
+        <Typography variant="h3">6. What happens if your cleaner damages anything while performing residential carpet cleaning services?</Typography>
+        <Typography variant="body">We are fully insured and if an accident happens in the process of the carpet and home cleaning services we are fully covered.</Typography></li>
+      <li>
+        <Typography variant="h3">7. How long does the process of the house carpet cleaning services take?</Typography>
+        <Typography variant="body">The time it takes for the domestic carpet cleaning services process primarily hinges on two factors:</Typography></li>
+      <ul class="ml--5" style="list-style: initial;">
+        <Typography variant="li">
           <p>The level of soiling on the carpet;</p>
-        </li>
-        <li>
+        </Typography>
+        <Typography variant="li">
           <p>Whether stain removal treatments are necessary.</p>
-        </li>
-        <li>
-          <Typography variant="h3">How long does it take for the carpet to get dry after a domestic carpet cleaning in London is performed?</Typography>
-          <Typography variant="body">The drying time of the carpet after a whole house carpet cleaning varies depending on the carpet type and the cleaning method employed. For instance, when the steam cleaning method is utilized, the approximate drying time typically ranges from 7 to 9 hours. On the other hand, if the dry cleaning method is chosen, the carpet will be dry immediately after the cleaning process or shortly thereafter.</Typography>
-          <Typography variant="body">If you are having trouble deciding which residential carpet cleaning services will best suit you or are looking for the best residential carpet cleaning company, you can contact us at any suitable time for you to get professional house and carpet cleaning advice.</Typography></li>
-        <li>
-          <Typography variant="h3">Do you guarantee that after private carpet cleaning services my carpet all stains will be removed?</Typography>
-          <Typography variant="body">Regrettably, we cannot offer an absolute guarantee due to various factors that are beyond our control. These factors comprise:</Typography></li>
-        <li>
-          <p>The age of the stains;</p>
-        </li>
-        <li>
-          <p>The nature of the substances responsible for the stains;</p>
-        </li>
-        <li>
-          <p>The type and fabric of the carpet;</p>
-        </li>
-        <li>
-          <p>Any prior mishandling of the stains.</p>
-        <Typography variant="body">Nevertheless, we are fully committed to make every possible effort to eliminate all stains from your carpet. Our approach involves:</Typography>
-        </li>
-        <li>
-          <p>Employing state-of-the-art equipment for house and carpet cleaning services;</p>
-        </li>
-        <li>
-          <p>Applying a selection of premium detergents meticulously chosen for the job;</p>
-        </li>
-        <li>
-          <p>Customizing our approach of the domestic carpet cleaning to match the specific type of carpet and the staining agent to achieve the best possible results.</p>
-        </li>
-        <li>
-          <Typography variant="h3">How soon can I expect a cleaner to visit me for a home carpet cleaning in London?</Typography>
-          <Typography variant="body">We will make every effort to schedule a residential carpet cleaning appointment for you at your earliest convenience. Typically, our bookings are fully reserved for up to three days in advance, although occasional exceptions may arise.</Typography></li>
-        <li>
-          <Typography variant="h3">Can you give me a quote over the phone for a carpet cleaning home service or do you need to visit my property?</Typography>
-          <Typography variant="body">Certainly, we can provide you with a phone estimate, and there is no necessity for us to conduct an on-site visit. However, it's important to note that commercial properties may require an in-person site visit. Additionally, you have the option to obtain a carpet cleaning quote for steam extraction services online.</Typography></li>
-        <li>
-          <Typography variant="h3">What payment methods do you accept for your carpet and house cleaning services?</Typography>
-          <Typography variant="body">We accept debit / credit cards, and cash payments directly to our team.</Typography></li>
-        <li>
-          <Typography variant="h3">Can you provide me with an invoice for the home and carpet cleaning services?</Typography>
-          <Typography variant="body">Yes, we will either send you a receipt via email or via any method of your choice.</Typography></li>
-        <li>
-          <Typography variant="h3">Are you qualified for carpet and home cleaning services?</Typography>
-          <Typography variant="body">Yes, we are certified and have received comprehensive training as members of <a class="color-paper-link hover-color-paper-link-hover:hover" href="https://www.checkatrade.com/trades/FineCarpetCleaning" target="_blank" rel="noopener">Checkatrade</a> and of the <a class="color-paper-link hover-color-paper-link-hover:hover" href="https://trustedlocalcleaners.ncca.co.uk/listing/fine-carpet-cleaning-ltd/" target="_blank" rel="noopener">NCCA</a> (National Carpet Cleaners Association), the recognized industry qualification in the UK.</Typography></li>
-        <li>
-          <Typography variant="h3">How long have you been in the carpet cleaning domestic business?</Typography>
-          <Typography variant="body">We have a solid history in the professional residential carpet cleaning industry, dating back to 2012. Throughout these years, we've worked with a diverse range of carpets, rugs, upholstery, and various stains from both commercial and residential clients. This extensive experience has driven us to continually enhance our carpet house cleaning services. We achieve this by:</Typography></li>
-        <li>
-          <p>Consistently upgrading our equipment and machinery with superior alternatives whenever they become available;</p>
-        </li>
-        <li>
-          <p>Regularly testing and improving our selection of cleaning products;</p>
-        </li>
-        <li>
-          <p>Dedication to expanding our knowledge and competence by actively participating in additional professional courses and training. Our relentless pursuit of perfection has allowed us to refine our house and carpet cleaning services over the years.</p>
-        </li>
-        <li>
-          <Typography variant="h3">Can you give me a discount for the professional domestic carpet cleaning?</Typography>
-          <Typography variant="body">Our house cleaning and carpet cleaning services stand out for their top-quality results, thanks to the use of the most effective equipment and over 20 premium cleaning products.
-            <br></br>
-            As a result, our full house carpet cleaning prices are not only highly competitive but also some of the most attractive in the market. Bundling all the services you require proves to be more cost-effective compared to individual service visits. This is because of the initial high house carpet cleaning cost and additional charges for each technician visit, factoring in travel time, parking, and the handling of heavy equipment during loading and unloading.</Typography></li>
-        <li>
-          <Typography variant="h3">Can you walk on the carpet after a home carpet cleaning?</Typography>
-          <Typography variant="body">It depends on the method used. After a steam carpet cleaning it is recommended that you try to stay off the freshly steam-cleaned carpets until they are dry – about 7-9 hours. If you can not avoid walking over your damp carpet before it is dry, do it with caution. When you transition from carpet to another hard surface, like tile or hardwood, it can be very slippery.</Typography></li>
-        <Typography variant="body">If a dry cleaning method has been applied, the carpet or rug will be completely dry immediately after the domestic carpet cleaning has ended or shortly thereafter.</Typography>
-        <li>
-          <Typography variant="h3">How often should carpets go through a professional domestic carpet cleaning?</Typography>
-          <Typography variant="body">House carpet cleaning depends mainly on factors like how fast the carpet soils. On average, a carpet should be cleaned at 12-month intervals. However, if you have pets, children, high traffic on the carpet, a smoking habit or if you stain it a lot, we recommend using carpet and house cleaning services more often than that. Feel free to contact us anytime in order to get home carpet cleaning in London or advice.</Typography>
-        </li>
-        <li>
-          <Typography variant="h3">Do carpet house cleaning services remove stains?</Typography>
-          <Typography variant="body">It depends on the residential carpet cleaning method being used. For example, steam cleaning is highly effective in removing deep-down stains, dirt, and grime, while also eliminating bacteria and removing dust mites, allergens, mould, pet dander, and unpleasant odours. However, certain stubborn stains, such as extremely old ones or those that have been treated improperly, pose a significant challenge to complete elimination, even with expert assistance.</Typography>
-          <Typography variant="body">Dry carpet cleaning is not effective in removing stains, but it refreshes the carpet and brings back its colour. This service is used for cleaning finer, more delicate and natural carpets and rugs, which are very vulnerable to water damage.</Typography>
-          <Typography variant="body">Fortunately, due to our extensive experience and utilisation of top-notch equipment, we at “Fine Carpet Cleaning Ltd.” have achieved remarkable success rates in stain removal. Nevertheless, we cannot offer a guarantee that every stain can be completely eradicated. Rest assured, we will evaluate the stain and inform you during the quotation process about our confidence in achieving its removal.</Typography>
-        </li>
+        </Typography>
       </ul>
+      <li>
+        <Typography variant="h3">8. How long does it take for the carpet to get dry after a domestic carpet cleaning in London is performed?</Typography>
+        <Typography variant="body">The drying time of the carpet after a whole house carpet cleaning varies depending on the carpet type and the cleaning method employed. For instance, when the steam cleaning method is utilized, the approximate drying time typically ranges from 7 to 9 hours. On the other hand, if the dry cleaning method is chosen, the carpet will be dry immediately after the cleaning process or shortly thereafter.</Typography>
+        <Typography variant="body">If you are having trouble deciding which residential carpet cleaning services will best suit you or are looking for the best residential carpet cleaning company, you can contact us at any suitable time for you to get professional house and carpet cleaning advice.</Typography></li>
+      <li>
+        <Typography variant="h3">9. Do you guarantee that after private carpet cleaning services my carpet all stains will be removed?</Typography>
+        <Typography variant="body">Regrettably, we cannot offer an absolute guarantee due to various factors that are beyond our control. These factors comprise:</Typography></li>
+      <ul class="ml--5" style="list-style: initial;">
+        <Typography variant="li">
+          <p>The age of the stains;</p>
+        </Typography>
+        <Typography variant="li">
+          <p>The nature of the substances responsible for the stains;</p>
+        </Typography>
+        <Typography variant="li">
+          <p>The type and fabric of the carpet;</p>
+        </Typography>
+        <Typography variant="li">
+          <p>Any prior mishandling of the stains.</p>
+        </Typography>
+      </ul>
+      <li>
+        <Typography variant="body">Nevertheless, we are fully committed to make every possible effort to eliminate all stains from your carpet. Our approach involves:</Typography>
+      </li>
+      <ul class="ml--5" style="list-style: initial;">
+        <Typography variant="li">
+          <p>Employing state-of-the-art equipment for house and carpet cleaning services;</p>
+        </Typography>
+        <Typography variant="li">
+          <p>Applying a selection of premium detergents meticulously chosen for the job;</p>
+        </Typography>
+        <Typography variant="li">
+          <p>Customizing our approach of the domestic carpet cleaning to match the specific type of carpet and the staining agent to achieve the best possible results.</p>
+        </Typography>
+      </ul>
+      <li>
+        <Typography variant="h3">10. How soon can I expect a cleaner to visit me for a home carpet cleaning in London?</Typography>
+        <Typography variant="body">We will make every effort to schedule a residential carpet cleaning appointment for you at your earliest convenience. Typically, our bookings are fully reserved for up to three days in advance, although occasional exceptions may arise.</Typography></li>
+      <li>
+        <Typography variant="h3">11. Can you give me a quote over the phone for a carpet cleaning home service or do you need to visit my property?</Typography>
+        <Typography variant="body">Certainly, we can provide you with a phone estimate, and there is no necessity for us to conduct an on-site visit. However, it's important to note that commercial properties may require an in-person site visit. Additionally, you have the option to obtain a carpet cleaning quote for steam extraction services online.</Typography></li>
+      <li>
+        <Typography variant="h3">12. What payment methods do you accept for your carpet and house cleaning services?</Typography>
+        <Typography variant="body">We accept debit / credit cards, and cash payments directly to our team.</Typography></li>
+      <li>
+        <Typography variant="h3">13. Can you provide me with an invoice for the home and carpet cleaning services?</Typography>
+        <Typography variant="body">Yes, we will either send you a receipt via email or via any method of your choice.</Typography></li>
+      <li>
+        <Typography variant="h3">14. Are you qualified for carpet and home cleaning services?</Typography>
+        <Typography variant="body">Yes, we are certified and have received comprehensive training as members of <a class="color-paper-link hover-color-paper-link-hover:hover" href="https://www.checkatrade.com/trades/FineCarpetCleaning" target="_blank" rel="noopener">Checkatrade</a> and of the <a class="color-paper-link hover-color-paper-link-hover:hover" href="https://trustedlocalcleaners.ncca.co.uk/listing/fine-carpet-cleaning-ltd/" target="_blank" rel="noopener">NCCA</a> (National Carpet Cleaners Association), the recognized industry qualification in the UK.</Typography></li>
+      <li>
+        <Typography variant="h3">15. How long have you been in the carpet cleaning domestic business?</Typography>
+        <Typography variant="body">We have a solid history in the professional residential carpet cleaning industry, dating back to 2012. Throughout these years, we've worked with a diverse range of carpets, rugs, upholstery, and various stains from both commercial and residential clients. This extensive experience has driven us to continually enhance our carpet house cleaning services. We achieve this by:</Typography></li>
+      <ul class="ml--5" style="list-style: initial;">
+        <Typography variant="li">
+          <p>Consistently upgrading our equipment and machinery with superior alternatives whenever they become available;</p>
+        </Typography>
+        <Typography variant="li">
+          <p>Regularly testing and improving our selection of cleaning products;</p>
+        </Typography>
+        <Typography variant="li">
+          <p>Dedication to expanding our knowledge and competence by actively participating in additional professional courses and training. Our relentless pursuit of perfection has allowed us to refine our house and carpet cleaning services over the years.</p>
+        </Typography>
+      </ul>
+      <li>
+        <Typography variant="h3">16. Can you give me a discount for the professional domestic carpet cleaning?</Typography>
+        <Typography variant="body">Our house cleaning and carpet cleaning services stand out for their top-quality results, thanks to the use of the most effective equipment and over 20 premium cleaning products.
+          <br></br>
+          As a result, our full house carpet cleaning prices are not only highly competitive but also some of the most attractive in the market. Bundling all the services you require proves to be more cost-effective compared to individual service visits. This is because of the initial high house carpet cleaning cost and additional charges for each technician visit, factoring in travel time, parking, and the handling of heavy equipment during loading and unloading.</Typography></li>
+      <li>
+        <Typography variant="h3">17. Can you walk on the carpet after a home carpet cleaning?</Typography>
+        <Typography variant="body">It depends on the method used. After a steam carpet cleaning it is recommended that you try to stay off the freshly steam-cleaned carpets until they are dry – about 7-9 hours. If you can not avoid walking over your damp carpet before it is dry, do it with caution. When you transition from carpet to another hard surface, like tile or hardwood, it can be very slippery.</Typography></li>
+      <Typography variant="body">If a dry cleaning method has been applied, the carpet or rug will be completely dry immediately after the domestic carpet cleaning has ended or shortly thereafter.</Typography>
+      <li>
+        <Typography variant="h3">18. How often should carpets go through a professional domestic carpet cleaning?</Typography>
+        <Typography variant="body">House carpet cleaning depends mainly on factors like how fast the carpet soils. On average, a carpet should be cleaned at 12-month intervals. However, if you have pets, children, high traffic on the carpet, a smoking habit or if you stain it a lot, we recommend using carpet and house cleaning services more often than that. Feel free to contact us anytime in order to get home carpet cleaning in London or advice.</Typography>
+      </li>
+      <li>
+        <Typography variant="h3">19. Do carpet house cleaning services remove stains?</Typography>
+        <Typography variant="body">It depends on the residential carpet cleaning method being used. For example, steam cleaning is highly effective in removing deep-down stains, dirt, and grime, while also eliminating bacteria and removing dust mites, allergens, mould, pet dander, and unpleasant odours. However, certain stubborn stains, such as extremely old ones or those that have been treated improperly, pose a significant challenge to complete elimination, even with expert assistance.</Typography>
+        <Typography variant="body">Dry carpet cleaning is not effective in removing stains, but it refreshes the carpet and brings back its colour. This service is used for cleaning finer, more delicate and natural carpets and rugs, which are very vulnerable to water damage.</Typography>
+        <Typography variant="body">Fortunately, due to our extensive experience and utilisation of top-notch equipment, we at “Fine Carpet Cleaning Ltd.” have achieved remarkable success rates in stain removal. Nevertheless, we cannot offer a guarantee that every stain can be completely eradicated. Rest assured, we will evaluate the stain and inform you during the quotation process about our confidence in achieving its removal.</Typography>
+      </li>
     </Entry>
     <Entry>
-      <ul>
-        <li>
-          <Typography variant="h3">How often should carpets be cleaned with pets?</Typography>
-          <Typography variant="body">We recommend that pet owners seek professional home carpet cleaning services at least once or twice per year. Cleaning when the seasons change is an easy way to remember when it's time to deep clean your carpets.</Typography></li>
-        <li>
-          <Typography variant="h3">How much does a whole house carpet cleaning cost?</Typography>
-          <Typography variant="body">The cost to carpet clean a house can vary and depends on several factors, including:</Typography></li>
-        <li>
+      <li>
+        <Typography variant="h3">20. How often should carpets be cleaned with pets?</Typography>
+        <Typography variant="body">We recommend that pet owners seek professional home carpet cleaning services at least once or twice per year. Cleaning when the seasons change is an easy way to remember when it's time to deep clean your carpets.</Typography></li>
+      <li>
+        <Typography variant="h3">21. How much does a whole house carpet cleaning cost?</Typography>
+        <Typography variant="body">The cost to carpet clean a house can vary and depends on several factors, including:</Typography></li>
+      <ul class="ml--5" style="list-style: initial;">
+        <Typography variant="li">
           <p>The number and size of the carpets;</p>
-        </li>
-        <li>
+        </Typography>
+        <Typography variant="li">
           <p>The level of soiling on the carpets;</p>
-        </li>
-        <li>
+        </Typography>
+        <Typography variant="li">
           <p>The type of carpets;</p>
-        </li>
-        <li>
+        </Typography>
+        <Typography variant="li">
           <p>The ease of access to the carpets.</p>
-        </li>
-        <Typography variant="body">For detailed pricing information, please refer to our <a class="color-paper-link hover-color-paper-link-hover:hover" href="#price_table">residential carpet cleaning prices</a>.</Typography>
-        <li>
-          <Typography variant="h3">How much to carpet clean a house?</Typography>
-          <Typography variant="body">The cost to clean carpets in-house can vary widely depending on several factors. These factors include:</Typography></li>
-        <li>
-          <p>Size and quantity of the carpets, rugs and upholstery;</p>
-        </li>
-        <li>
-          <p>Level of soiling;</p>
-        </li>
-        <li>
-          <p>Type of cleaning method;</p>
-        </li>
-        <li>
-          <p>Additional services such as stain removal or stain protection.</p>
-        </li>
-        <Typography variant="body">To get an accurate quote and carpet cleaning apartment cost, it's best to contact us to assess your needs, provide a more precise estimate, and discuss any optional services that may be relevant.</Typography>
-        <li>
-          <Typography variant="h3">How much to carpet clean a 3-bed house?</Typography>
-          <Typography variant="body">Our carpet cleaning cost for 1 bedroom apartment, carpet cleaning cost for 2 bedroom apartment, cost of carpet cleaning 3-bed house, cost of carpet cleaning 4 bedroom house varies, depending on multiple factors like how soiled the carpet is, the size of the carpet and if it needs any additional services.</Typography></li>
-        <li>
-          <Typography variant="h3">What is the cost of carpet cleaning a 1 bedroom apartment?</Typography>
-          <Typography variant="body">Our carpet cleaning 1-bedroom apartment or carpet cleaning 2-bedroom apartment price depends on a number of factors, so we recommend checking out our <a class="color-paper-link hover-color-paper-link-hover:hover" href="#price_table">full house carpet cleaning prices</a>.</Typography></li>
+        </Typography>
       </ul>
+      <Typography variant="body">For detailed pricing information, please refer to our <a class="color-paper-link hover-color-paper-link-hover:hover" href="#price_table">residential carpet cleaning prices</a>.</Typography>
+      <li>
+        <Typography variant="h3">22. How much to carpet clean a house?</Typography>
+        <Typography variant="body">The cost to clean carpets in-house can vary widely depending on several factors. These factors include:</Typography></li>
+      <ul class="ml--5" style="list-style: initial;">
+        <Typography variant="li">
+          <p>Size and quantity of the carpets, rugs and upholstery;</p>
+        </Typography>
+        <Typography variant="li">
+          <p>Level of soiling;</p>
+        </Typography>
+        <Typography variant="li">
+          <p>Type of cleaning method;</p>
+        </Typography>
+        <Typography variant="li">
+          <p>Additional services such as stain removal or stain protection.</p>
+        </Typography>
+      </ul>
+      <Typography variant="body">To get an accurate quote and carpet cleaning apartment cost, it's best to contact us to assess your needs, provide a more precise estimate, and discuss any optional services that may be relevant.</Typography>
+      <li>
+        <Typography variant="h3">23. How much to carpet clean a 3-bed house?</Typography>
+        <Typography variant="body">Our carpet cleaning cost for 1 bedroom apartment, carpet cleaning cost for 2 bedroom apartment, cost of carpet cleaning 3-bed house, cost of carpet cleaning 4 bedroom house varies, depending on multiple factors like how soiled the carpet is, the size of the carpet and if it needs any additional services.</Typography></li>
+      <li>
+        <Typography variant="h3">24. What is the cost of carpet cleaning a 1 bedroom apartment?</Typography>
+        <Typography variant="body">Our carpet cleaning 1-bedroom apartment or carpet cleaning 2-bedroom apartment price depends on a number of factors, so we recommend checking out our <a class="color-paper-link hover-color-paper-link-hover:hover" href="#price_table">full house carpet cleaning prices</a>.</Typography></li>
     </Entry>
   </Container>
 }

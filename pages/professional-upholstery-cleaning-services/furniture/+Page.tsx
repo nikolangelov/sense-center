@@ -52,21 +52,21 @@ const GalerrySliderMobile = () => {
 };
 
 const VideoPlayer = () => {
-	return (
-		<div class="flex flex-justify-center flex-items-center mt-20">
-			<video
-				class="mt-10 b-rd-3" style="width: 100%; width: -moz-available; width: -webkit-fill-available; width: fill-available;"
-				autoplay
-				controls
-				muted
-			>
-				<source
-					src="/assets/Professional Carpet Cleaning London - Fine Carpet Cleaning (1).mp4"
-					type="video/mp4"
-				/>
-			</video>
-		</div>
-	);
+  return (
+    <div class="flex flex-justify-center flex-items-center mt-20">
+      <video
+        class="mt-10 b-rd-3" style="width: 100%; width: -moz-available; width: -webkit-fill-available; width: fill-available;"
+        autoplay
+        controls
+        muted
+      >
+        <source
+          src="/assets/Professional Carpet Cleaning London - Fine Carpet Cleaning (1).mp4"
+          type="video/mp4"
+        />
+      </video>
+    </div>
+  );
 };
 
 function FleurDivider() {
@@ -82,124 +82,124 @@ export function FaqSection() {
   const { Container, Entry } = createCollapsable()
   return <Container>
     <Entry>
-      <ul>
-        <li>
-          <Typography variant="h3">Will you fee me if I cancel the steam cleaning furniture services?</Typography>
-          <Typography variant="body">We require a deposit before performing the soft furniture cleaning. If you cancel the service on the day of the cleaning, you will forfeit that deposit.</Typography></li>
-        <li>
-          <Typography variant="h3">Will I pay for the congestion / parking charge?</Typography>
-          <Typography variant="body">Yes, we kindly ask that the clients arrange a suitable parking space for our vehicles near the property and cover any parking / congestion expenses.</Typography></li>
-        <li>
-          <Typography variant="h3">What if I live on a high floor and have no lift?</Typography>
-          <Typography variant="body">Due to the substantial weight of our equipment, exceeding 50 kilograms, an extra charge will be added for each additional floor requiring manual transportation. This consumes a significant amount of time and can lead to quicker fatigue among our technicians. Consequently, this may diminish our overall productivity for the day compared to our standard output.</Typography></li>
-        <li>
-          <Typography variant="h3">Are you an insured furniture cleaning business?</Typography>
-          <Typography variant="body">Yes, our furniture cleaning business is completely insured.</Typography></li>
-        <li>
-          <Typography variant="h3">What happens if your office furniture cleaning service technician damages anything?</Typography>
-          <Typography variant="body">We are fully insured, and if an accident happens, it will be covered by our furniture deep cleaning company.</Typography></li>
-      </ul>
+      <li>
+        <Typography variant="h3">1. Will you fee me if I cancel the steam cleaning furniture services?</Typography>
+        <Typography variant="body">We require a deposit before performing the soft furniture cleaning. If you cancel the service on the day of the cleaning, you will forfeit that deposit.</Typography></li>
+      <li>
+        <Typography variant="h3">2. Will I pay for the congestion / parking charge?</Typography>
+        <Typography variant="body">Yes, we kindly ask that the clients arrange a suitable parking space for our vehicles near the property and cover any parking / congestion expenses.</Typography></li>
+      <li>
+        <Typography variant="h3">3. What if I live on a high floor and have no lift?</Typography>
+        <Typography variant="body">Due to the substantial weight of our equipment, exceeding 50 kilograms, an extra charge will be added for each additional floor requiring manual transportation. This consumes a significant amount of time and can lead to quicker fatigue among our technicians. Consequently, this may diminish our overall productivity for the day compared to our standard output.</Typography></li>
+      <li>
+        <Typography variant="h3">4. Are you an insured furniture cleaning business?</Typography>
+        <Typography variant="body">Yes, our furniture cleaning business is completely insured.</Typography></li>
+      <li>
+        <Typography variant="h3">5. What happens if your office furniture cleaning service technician damages anything?</Typography>
+        <Typography variant="body">We are fully insured, and if an accident happens, it will be covered by our furniture deep cleaning company.</Typography></li>
     </Entry>
     <Entry>
-      <ul>
-        <li>
-          <Typography variant="h3">How long does the process of soft furniture cleaning take?</Typography>
-          <Typography variant="body">The duration of the furniture deep cleaning process mainly depends on:</Typography></li>
-        <li>
+      <li>
+        <Typography variant="h3">6. How long does the process of soft furniture cleaning take?</Typography>
+        <Typography variant="body">The duration of the furniture deep cleaning process mainly depends on:</Typography></li>
+      <ul class="ml--5" style="list-style: initial;">
+        <Typography variant="li">
           <p>How soiled the furniture is;</p>
-        </li>
-        <li>
+        </Typography>
+        <Typography variant="li">
           <p>Does it need any stain removal treatment;</p>
-        </li>
-        <li>
+        </Typography>
+        <Typography variant="li">
           <p>What cleaning method will be used on the furniture.</p>
-        </li>
-        <li>
-          <Typography variant="h3">How long does it take for the upholstery to get dry after the organic furniture cleaning?</Typography>
-          <Typography variant="body">The drying time after organic furniture cleaning varies depending on the fabric type of the furniture and the cleaning method employed. For instance, if steam-cleaning furniture services are utilised, the approximate drying time typically ranges from 7 to 9 hours. On the other hand, if dry cleaning services are used, the upholstery will be dry immediately after the cleaning process or shortly thereafter.</Typography>
-          <Typography variant="body">If you are having trouble deciding which furniture deep cleaning services will suit you or are searching for organic furniture cleaning services, you can contact us at any suitable time to receive professional advice.</Typography></li>
-        <li>
-          <Typography variant="h3">Do you guarantee that after white furniture cleaning services, all stains will be removed?</Typography>
-          <Typography variant="body">Because of our extensive experience and possession of some of the best equipment in the industry, we attain high success rates in stain removal. However, it's crucial to note that we cannot provide an absolute guarantee due to various factors beyond our control. These factors include:</Typography></li>
-        <li>
-          <p>The age of the stains;</p>
-        </li>
-        <li>
-          <p>The nature of the substances responsible for the stains;</p>
-        </li>
-        <li>
-          <p>The type and fabric of the furniture;</p>
-        </li>
-        <li>
-          <p>Any prior mishandling of the stains.</p>
-        </li>
-        <Typography variant="body">Nevertheless, we are fully committed to exerting every possible effort to eliminate all stains from your furniture.</Typography>
-        <li>
-          <Typography variant="h3">How soon can I expect your furniture cleaning specialists to visit me?</Typography>
-          <Typography variant="body">We will try to get you an appointment for a soft furniture cleaning as soon as possible. Usually, we are fully booked for the following three days, but there are exceptions at times.</Typography></li>
-        <li>
-          <Typography variant="h3">Can you give me a quote for the white furniture cleaning over the phone, or do you need a viewing in person?</Typography>
-          <Typography variant="body">Yes, we can give you a quote for the white furniture cleaning over the phone, there is no need for us to visit your property. You can also receive a quote online.</Typography></li>
-        <li>
-          <Typography variant="h3">What payment methods do you accept for your mobile furniture cleaning?</Typography>
-          <Typography variant="body">We accept debit / credit cards, bank transfers, and cash payments directly to our team for mobile furniture cleaning.</Typography></li>
-        <li>
-          <Typography variant="h3">Can your white furniture cleaning company provide me with an invoice?</Typography>
-          <Typography variant="body">Yes, we will either send you an invoice via email or via any method of your choice.</Typography></li>
-        <li>
-          <Typography variant="h3">Are you qualified for mobile furniture cleaning?</Typography>
-          <Typography variant="body">Yes, we are qualified and fully trained members of <a class="color-paper-link hover-color-paper-link-hover:hover" href="https://www.checkatrade.com/trades/FineCarpetCleaning" target="_blank" rel="noopener">Checkatrade</a> and of <a class="color-paper-link hover-color-paper-link-hover:hover" href="https://trustedlocalcleaners.ncca.co.uk/listing/fine-carpet-cleaning-ltd/" target="_blank" rel="noopener">NCCA</a> (National Carpet Cleaners Association) – the UK’s most acknowledged industry qualification.</Typography></li>
-        <li>
-          <Typography variant="h3">How long have you been in the furniture cleaning business?</Typography>
-          <Typography variant="body">We have been actively engaged in the cleaning industry since 2012. Throughout the years, our furniture cleaning business has encountered various types of carpets, rugs, furniture, and stains from both commercial and residential clients, accumulating valuable experience. Our commitment to providing the best furniture deep cleaning has compelled us to enhance our performance through the following means:</Typography></li>
-        <li>
-          <p>Continuously upgrading our equipment and machinery with superior alternatives whenever they become available;</p>
-        </li>
-        <li>
-          <p>Consistently evaluating and improving our cleaning products to ensure the highest quality of service;</p>
-        </li>
-        <li>
-          <p>Dedication to expanding our knowledge and skills through ongoing professional courses and training, always seeking to enhance our competence.</p>
-        </li>
-        <li>
-          <Typography variant="h3">Can you add a discount for the organic furniture cleaning?</Typography>
-          <Typography variant="body">Our mobile furniture cleaning services are renowned for their top quality, employing the most effective equipment and a range of premium cleaning products. What sets us apart even further is that our soft furniture cleaning prices are not only highly competitive but also rank among the most attractive in the market. We strongly recommend combining all the services you require in order to get a better price. The reason for this cost efficiency is linked to the initial expenses and additional fees connected to every technician appointment, taking into account variables like travel time, parking, and the management of bulky equipment while loading and unloading.</Typography></li>
-        <li>
-          <Typography variant="h3">How do you deep clean furniture?</Typography>
-          <Typography variant="body">Our furniture deep cleaning begins with a pre-cleaning survey to establish what method and products are best for the type of furniture that needs cleaning. Then we dry vacuum the fabric to eliminate loose dirt, after which we apply the detergents. We then utilise a powerful hot water extraction machine to effectively remove the soil, addressing any remaining spots and stains individually with special products. Finally, we conclude with rinsing and extracting again to ensure no chemical residues are left behind.</Typography>
-        </li>
+        </Typography>
       </ul>
+      <li>
+        <Typography variant="h3">7. How long does it take for the upholstery to get dry after the organic furniture cleaning?</Typography>
+        <Typography variant="body">The drying time after organic furniture cleaning varies depending on the fabric type of the furniture and the cleaning method employed. For instance, if steam-cleaning furniture services are utilised, the approximate drying time typically ranges from 7 to 9 hours. On the other hand, if dry cleaning services are used, the upholstery will be dry immediately after the cleaning process or shortly thereafter.</Typography>
+        <Typography variant="body">If you are having trouble deciding which furniture deep cleaning services will suit you or are searching for organic furniture cleaning services, you can contact us at any suitable time to receive professional advice.</Typography></li>
+      <li>
+        <Typography variant="h3">8. Do you guarantee that after white furniture cleaning services, all stains will be removed?</Typography>
+        <Typography variant="body">Because of our extensive experience and possession of some of the best equipment in the industry, we attain high success rates in stain removal. However, it's crucial to note that we cannot provide an absolute guarantee due to various factors beyond our control. These factors include:</Typography></li>
+      <ul class="ml--5" style="list-style: initial;">
+        <Typography variant="li">
+          <p>The age of the stains;</p>
+        </Typography>
+        <Typography variant="li">
+          <p>The nature of the substances responsible for the stains;</p>
+        </Typography>
+        <Typography variant="li">
+          <p>The type and fabric of the furniture;</p>
+        </Typography>
+        <Typography variant="li">
+          <p>Any prior mishandling of the stains.</p>
+        </Typography>
+      </ul>
+      <Typography variant="body">Nevertheless, we are fully committed to exerting every possible effort to eliminate all stains from your furniture.</Typography>
+      <li>
+        <Typography variant="h3">9. How soon can I expect your furniture cleaning specialists to visit me?</Typography>
+        <Typography variant="body">We will try to get you an appointment for a soft furniture cleaning as soon as possible. Usually, we are fully booked for the following three days, but there are exceptions at times.</Typography></li>
+      <li>
+        <Typography variant="h3">10. Can you give me a quote for the white furniture cleaning over the phone, or do you need a viewing in person?</Typography>
+        <Typography variant="body">Yes, we can give you a quote for the white furniture cleaning over the phone, there is no need for us to visit your property. You can also receive a quote online.</Typography></li>
+      <li>
+        <Typography variant="h3">11. What payment methods do you accept for your mobile furniture cleaning?</Typography>
+        <Typography variant="body">We accept debit / credit cards, bank transfers, and cash payments directly to our team for mobile furniture cleaning.</Typography></li>
+      <li>
+        <Typography variant="h3">12. Can your white furniture cleaning company provide me with an invoice?</Typography>
+        <Typography variant="body">Yes, we will either send you an invoice via email or via any method of your choice.</Typography></li>
+      <li>
+        <Typography variant="h3">13. Are you qualified for mobile furniture cleaning?</Typography>
+        <Typography variant="body">Yes, we are qualified and fully trained members of <a class="color-paper-link hover-color-paper-link-hover:hover" href="https://www.checkatrade.com/trades/FineCarpetCleaning" target="_blank" rel="noopener">Checkatrade</a> and of <a class="color-paper-link hover-color-paper-link-hover:hover" href="https://trustedlocalcleaners.ncca.co.uk/listing/fine-carpet-cleaning-ltd/" target="_blank" rel="noopener">NCCA</a> (National Carpet Cleaners Association) – the UK’s most acknowledged industry qualification.</Typography></li>
+      <li>
+        <Typography variant="h3">14. How long have you been in the furniture cleaning business?</Typography>
+        <Typography variant="body">We have been actively engaged in the cleaning industry since 2012. Throughout the years, our furniture cleaning business has encountered various types of carpets, rugs, furniture, and stains from both commercial and residential clients, accumulating valuable experience. Our commitment to providing the best furniture deep cleaning has compelled us to enhance our performance through the following means:</Typography></li>
+      <ul class="ml--5" style="list-style: initial;">
+        <Typography variant="li">
+          <p>Continuously upgrading our equipment and machinery with superior alternatives whenever they become available;</p>
+        </Typography>
+        <Typography variant="li">
+          <p>Consistently evaluating and improving our cleaning products to ensure the highest quality of service;</p>
+        </Typography>
+        <Typography variant="li">
+          <p>Dedication to expanding our knowledge and skills through ongoing professional courses and training, always seeking to enhance our competence.</p>
+        </Typography>
+      </ul>
+      <li>
+        <Typography variant="h3">15. Can you add a discount for the organic furniture cleaning?</Typography>
+        <Typography variant="body">Our mobile furniture cleaning services are renowned for their top quality, employing the most effective equipment and a range of premium cleaning products. What sets us apart even further is that our soft furniture cleaning prices are not only highly competitive but also rank among the most attractive in the market. We strongly recommend combining all the services you require in order to get a better price. The reason for this cost efficiency is linked to the initial expenses and additional fees connected to every technician appointment, taking into account variables like travel time, parking, and the management of bulky equipment while loading and unloading.</Typography></li>
+      <li>
+        <Typography variant="h3">16. How do you deep clean furniture?</Typography>
+        <Typography variant="body">Our furniture deep cleaning begins with a pre-cleaning survey to establish what method and products are best for the type of furniture that needs cleaning. Then we dry vacuum the fabric to eliminate loose dirt, after which we apply the detergents. We then utilise a powerful hot water extraction machine to effectively remove the soil, addressing any remaining spots and stains individually with special products. Finally, we conclude with rinsing and extracting again to ensure no chemical residues are left behind.</Typography>
+      </li>
     </Entry>
     <Entry>
-      <ul>
-        <li>
-          <Typography variant="h3">What is the best thing to clean furniture with?</Typography>
-          <Typography variant="body">Professional furniture cleaning services are highly effective and work exceptionally well. This is made possible by the expertise, equipment, products, and methods employed by expert companies. A professional furniture cleaning business like "Fine Carpet Cleaning Ltd." offers high-quality cleaning services that are particularly effective in cleaning musty furniture, tackling stubborn stains, eliminating odors, and eradicating germ buildup. These results are often unattainable through regular cleaning methods.</Typography></li>
-        <li>
-          <Typography variant="h3">How do you clean really dirty furniture?</Typography>
-          <Typography variant="body">Cleaning really dirty furniture requires a thorough and systematic approach. The cleaning method used should be tailored to the specific type of furniture and fabric. Our approach includes a pre-cleaning survey to establish what cleaning methods and detergent should be used for the furniture, using professional equipment, and utilising specialised techniques for professional furniture cleaning services. We offer a range of services specialised for all kinds of furniture, such as cleaning linen furniture, cleaning mould off furniture, recliner cleaning services, dining chair cleaning services, futon cleaning services, lampshade cleaning services, upholstered bed frame cleaning, professional headboard cleaning, and many more.</Typography></li>
-        <li>
-          <Typography variant="h3">Does steam cleaning work on furniture?</Typography>
-          <Typography variant="body">Steam cleaning furniture services are the most effective and popular method for furniture cleaning. During the steam cleaning, hot water is worked into the fabric, killing bacteria, dust mites and allergens. This cleaning method is best for cleaning musty furniture and cleaning mould off furniture. Due to our powerful equipment, we are able to deliver the results you desire within a fraction of time. The drying time of the upholstery is usually much shorter as well.</Typography>
-          <Typography variant="body">Your furniture could be easily worn out with time, especially when it is frequently used. We recommend that you consider booking steam cleaning furniture for bed bugs or for any other complication that has occurred. Such services will ensure that your furniture will be free of potential health problems.</Typography></li>
-        <li>
-          <Typography variant="h3">What types of furniture do you clean?</Typography>
-          <Typography variant="body">We perform services for any soft furnishing you might own, such as cleaning linen furniture, recliner cleaning services, dining chair cleaning services, futon cleaning services, lampshade cleaning services, upholstered bed frame cleaning, professional headboard cleaning, and many more.</Typography></li>
-        <li>
-          <Typography variant="h3">Can I use my furniture after steam cleaning furniture for bed bugs?</Typography>
-          <Typography variant="body">It depends on the cleaning method used. If steam cleaning furniture services have been performed, it is recommended that you try to stay off the freshly cleaned furniture until it is dry – about 7-9 hours.</Typography>
-          <Typography variant="body">If dry cleaning has been performed, the upholstery will be completely dry after the service has ended or shortly thereafter.</Typography>
-        </li>
-        <li>
-          <Typography variant="h3">How often should furniture be professionally cleaned by furniture steam cleaning companies near me?</Typography>
-          <Typography variant="body">The frequency of furniture cleaning depends mainly on factors like how fast the furniture soils. On average, furniture should be cleaned at 12-month intervals. However, if you have pets or children, use it very frequently, or if it is easily stained, we recommend using professional furniture cleaning services more often than that. If bed bugs have appeared in your furniture, we highly recommend acting quickly and having steam cleaning furniture for bed bugs performed at your property or booking services for cleaning musty furniture if mould has appeared. Regular professional cleaning not only keeps your upholstery looking its best but also helps maintain a healthy and clean living environment.</Typography></li>
-        <li>
-          <Typography variant="h3">Do you perform professional lampshade cleaning services?</Typography>
-          <Typography variant="body">Yes, our company is specialised in professional lampshade cleaning services. We have undergone expert training and have years of experience in cleaning all kinds of furniture, including cleaning linen furniture, cleaning mould off furniture, recliner cleaning services, dining chair cleaning services, futon cleaning services, lampshade cleaning services, upholstered bed frame cleaning, professional headboard cleaning, and many more.</Typography></li>
-        <li>
-          <Typography variant="h3">Are there furniture steam cleaning companies near me?</Typography>
-          <Typography variant="body">“Fine Carpet Cleaning” Ltd. performs in all of London. Feel free to contact us to receive furniture upholstery cleaning services wherever you are, and rest assured that we will take good care of your furniture.</Typography></li>
-      </ul>
+      <li>
+        <Typography variant="h3">17. What is the best thing to clean furniture with?</Typography>
+        <Typography variant="body">Professional furniture cleaning services are highly effective and work exceptionally well. This is made possible by the expertise, equipment, products, and methods employed by expert companies. A professional furniture cleaning business like "Fine Carpet Cleaning Ltd." offers high-quality cleaning services that are particularly effective in cleaning musty furniture, tackling stubborn stains, eliminating odors, and eradicating germ buildup. These results are often unattainable through regular cleaning methods.</Typography></li>
+      <li>
+        <Typography variant="h3">18. How do you clean really dirty furniture?</Typography>
+        <Typography variant="body">Cleaning really dirty furniture requires a thorough and systematic approach. The cleaning method used should be tailored to the specific type of furniture and fabric. Our approach includes a pre-cleaning survey to establish what cleaning methods and detergent should be used for the furniture, using professional equipment, and utilising specialised techniques for professional furniture cleaning services. We offer a range of services specialised for all kinds of furniture, such as cleaning linen furniture, cleaning mould off furniture, recliner cleaning services, dining chair cleaning services, futon cleaning services, lampshade cleaning services, upholstered bed frame cleaning, professional headboard cleaning, and many more.</Typography></li>
+      <li>
+        <Typography variant="h3">19. Does steam cleaning work on furniture?</Typography>
+        <Typography variant="body">Steam cleaning furniture services are the most effective and popular method for furniture cleaning. During the steam cleaning, hot water is worked into the fabric, killing bacteria, dust mites and allergens. This cleaning method is best for cleaning musty furniture and cleaning mould off furniture. Due to our powerful equipment, we are able to deliver the results you desire within a fraction of time. The drying time of the upholstery is usually much shorter as well.</Typography>
+        <Typography variant="body">Your furniture could be easily worn out with time, especially when it is frequently used. We recommend that you consider booking steam cleaning furniture for bed bugs or for any other complication that has occurred. Such services will ensure that your furniture will be free of potential health problems.</Typography></li>
+      <li>
+        <Typography variant="h3">20. What types of furniture do you clean?</Typography>
+        <Typography variant="body">We perform services for any soft furnishing you might own, such as cleaning linen furniture, recliner cleaning services, dining chair cleaning services, futon cleaning services, lampshade cleaning services, upholstered bed frame cleaning, professional headboard cleaning, and many more.</Typography></li>
+      <li>
+        <Typography variant="h3">21. Can I use my furniture after steam cleaning furniture for bed bugs?</Typography>
+        <Typography variant="body">It depends on the cleaning method used. If steam cleaning furniture services have been performed, it is recommended that you try to stay off the freshly cleaned furniture until it is dry – about 7-9 hours.</Typography>
+        <Typography variant="body">If dry cleaning has been performed, the upholstery will be completely dry after the service has ended or shortly thereafter.</Typography>
+      </li>
+      <li>
+        <Typography variant="h3">22. How often should furniture be professionally cleaned by furniture steam cleaning companies near me?</Typography>
+        <Typography variant="body">The frequency of furniture cleaning depends mainly on factors like how fast the furniture soils. On average, furniture should be cleaned at 12-month intervals. However, if you have pets or children, use it very frequently, or if it is easily stained, we recommend using professional furniture cleaning services more often than that. If bed bugs have appeared in your furniture, we highly recommend acting quickly and having steam cleaning furniture for bed bugs performed at your property or booking services for cleaning musty furniture if mould has appeared. Regular professional cleaning not only keeps your upholstery looking its best but also helps maintain a healthy and clean living environment.</Typography></li>
+      <li>
+        <Typography variant="h3">23. Do you perform professional lampshade cleaning services?</Typography>
+        <Typography variant="body">Yes, our company is specialised in professional lampshade cleaning services. We have undergone expert training and have years of experience in cleaning all kinds of furniture, including cleaning linen furniture, cleaning mould off furniture, recliner cleaning services, dining chair cleaning services, futon cleaning services, lampshade cleaning services, upholstered bed frame cleaning, professional headboard cleaning, and many more.</Typography></li>
+      <li>
+        <Typography variant="h3">24. Are there furniture steam cleaning companies near me?</Typography>
+        <Typography variant="body">“Fine Carpet Cleaning” Ltd. performs in all of London. Feel free to contact us to receive furniture upholstery cleaning services wherever you are, and rest assured that we will take good care of your furniture.</Typography></li>
     </Entry>
   </Container>
 }
@@ -276,12 +276,12 @@ export default function Page() {
           <li class="ml--5"><a class="color-paper-link-hover hover-color-paper-link:hover font-size-17.5px line-height-8 word-spacing--0.12 tracking--0.04" href="/professional-stain-removal-services">Upholstery stain removal</a></li>
           <li class="ml--5"><a class="color-paper-link-hover hover-color-paper-link:hover font-size-17.5px line-height-8 word-spacing--0.12 tracking--0.04" href="/stain-protection-services">Upholstery stain protector</a></li>
         </ul>
-        </div>
+      </div>
 
-        <FleurDivider></FleurDivider>
+      <FleurDivider></FleurDivider>
 
-        <h2>The process of our professional furniture cleaning services:</h2>
-        <div class="mt-20 py-8 px-8 md-px-14 bg-paper b-rd-3" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 18%);">
+      <h2>The process of our professional furniture cleaning services:</h2>
+      <div class="mt-20 py-8 px-8 md-px-14 bg-paper b-rd-3" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 18%);">
         <ol style="counter-reset: ordered; list-style: none;">
           <li class="ml--5"><Typography variant="body">We begin with a pre-cleaning survey to determine the specific fabric and identify the appropriate cleaning detergents and tools needed for the furniture upholstery cleaning services.</Typography></li>
           <li class="ml--5"><Typography variant="body">Then we conduct a dry vacuum cleaning on the fabric to eliminate loose dirt, dry soil, and dust.</Typography></li>

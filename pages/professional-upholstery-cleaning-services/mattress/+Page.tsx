@@ -82,226 +82,240 @@ export function FaqSection() {
   const { Container, Entry } = createCollapsable()
   return <Container>
     <Entry>
-      <ul>
-        <li>
-          <Typography variant="h3">Do you fee for cancellation?</Typography>
-          <Typography variant="body">We require a deposit before performing the mattress cleaning services, which will also guarantee your booked time slot. If you cancel the service on the day of the cleaning you will lose that deposit.</Typography></li>
-        <li>
-          <Typography variant="h3">Will I pay for the congestion / parking charge?</Typography>
-          <Typography variant="body">Yes, we kindly ask that the client arrange a suitable parking space for our vehicles within close proximity of the property and to cover any parking / congestion expenses.</Typography></li>
-        <li>
-          <Typography variant="h3">What if I live on the 4th floor or above and I have no lift?</Typography>
-          <Typography variant="body">Due to the weight of our equipment, which exceeds 50 kilograms, an additional fee will be applied for each floor that requires manual transportation. The reason is that such actions typically consume a significant amount of time and can make our technicians tire faster. Consequently, this may reduce our overall productivity for the day compared to our standard output.</Typography></li>
-        <li>
-          <Typography variant="h3">Are you an insured company?</Typography>
-          <Typography variant="body">Yes, we are completely insured.</Typography></li>
-        <li>
-          <Typography variant="h3">What happens if your cleaners damage anything?</Typography>
-          <Typography variant="body">We are fully insured and if an accident happens it will be covered by our professional mattress cleaning company.</Typography></li>
-      </ul>
+      <li>
+        <Typography variant="h3">1. Do you fee for cancellation?</Typography>
+        <Typography variant="body">We require a deposit before performing the mattress cleaning services, which will also guarantee your booked time slot. If you cancel the service on the day of the cleaning you will lose that deposit.</Typography></li>
+      <li>
+        <Typography variant="h3">2. Will I pay for the congestion / parking charge?</Typography>
+        <Typography variant="body">Yes, we kindly ask that the client arrange a suitable parking space for our vehicles within close proximity of the property and to cover any parking / congestion expenses.</Typography></li>
+      <li>
+        <Typography variant="h3">3. What if I live on the 4th floor or above and I have no lift?</Typography>
+        <Typography variant="body">Due to the weight of our equipment, which exceeds 50 kilograms, an additional fee will be applied for each floor that requires manual transportation. The reason is that such actions typically consume a significant amount of time and can make our technicians tire faster. Consequently, this may reduce our overall productivity for the day compared to our standard output.</Typography></li>
+      <li>
+        <Typography variant="h3">4. Are you an insured company?</Typography>
+        <Typography variant="body">Yes, we are completely insured.</Typography></li>
+      <li>
+        <Typography variant="h3">5. What happens if your cleaners damage anything?</Typography>
+        <Typography variant="body">We are fully insured and if an accident happens it will be covered by our professional mattress cleaning company.</Typography></li>
     </Entry>
     <Entry>
-      <ul>
-        <li>
-          <Typography variant="h3">How long does the process of mattress cleaning services London take?</Typography>
-          <Typography variant="body">The duration process mainly depends on:</Typography></li>
-        <li>
+      <li>
+        <Typography variant="h3">6. How long does the process of mattress cleaning services London take?</Typography>
+        <Typography variant="body">The duration process mainly depends on:</Typography></li>
+      <ul class="ml--5" style="list-style: initial;">
+        <Typography variant="li">
           <p>How soiled the mattress is;</p>
-        </li>
-        <li>
+        </Typography>
+        <Typography variant="li">
           <p>The need for any stain removal treatments;</p>
-        </li>
-        <li>
+        </Typography>
+        <Typography variant="li">
           <p>The size and quantity of the mattresses.</p>
-        </li>
-        <li>
-          <Typography variant="h3">How long does it take for the upholstery to get dry after upholstery deep cleaning services?</Typography>
-          <Typography variant="body">It takes about 5-7 hours for the mattress to dry completely. We strongly advise that you let the mattress completely dry, especially before use, as damp mattresses are perfect breeding grounds for harmful moulds and bacteria.</Typography></li>
-        <li>
-          <Typography variant="h3">Do you guarantee that all stains will be removed?</Typography>
-          <Typography variant="body">Due to our experience and using some of the best equipment in the industry, we achieve high success rates in stain removal. However, it's essential to note that we cannot offer an absolute guarantee due to various factors beyond our control. These factors include:</Typography></li>
-        <li>
-          <p>The age of the stains;</p>
-        </li>
-        <li>
-          <p>The nature of the substances responsible for the stains;</p>
-        </li>
-        <li>
-          <p>Any prior mishandling of the stains.</p>
-          <Typography variant="body">Nonetheless, we are fully committed to exerting every possible effort to eliminate all stains from your furniture.</Typography>
-        </li>
-        <li>
-          <Typography variant="h3">How soon can I expect your cleaner to visit me?</Typography>
-          <Typography variant="body">We will make sure to get you an appointment as soon as possible. Usually, we are fully booked for the following three days, but exceptions may occur at times.</Typography></li>
-        <li>
-          <Typography variant="h3">Can you give me a quote over the phone or do you need a viewing in person?</Typography>
-          <Typography variant="body">Yes, we can give you a mattress cleaning quote over the phone, there is usually no need for us to visit your property. You can also receive a quote online.</Typography></li>
-        <li>
-          <Typography variant="h3">What payment methods do you accept for your mattress cleaning services?</Typography>
-          <Typography variant="body">We accept debit / credit cards, bank transfers and cash payments directly to our team.</Typography></li>
-        <li>
-          <Typography variant="h3">Can your dust mite removal company provide me with an invoice?</Typography>
-          <Typography variant="body">Yes, we will either send you a receipt via email or via any method of your choice.</Typography></li>
-        <li>
-          <Typography variant="h3">Are you qualified?</Typography>
-          <Typography variant="body">Yes, we are qualified and fully trained members of <a class="color-paper-link hover-color-paper-link-hover:hover" href="https://www.checkatrade.com/trades/FineCarpetCleaning" target="_blank" rel="noopener">Checkatrade</a> and of <a class="color-paper-link hover-color-paper-link-hover:hover" href="https://trustedlocalcleaners.ncca.co.uk/listing/fine-carpet-cleaning-ltd/" target="_blank" rel="noopener">NCCA</a> (National Carpet Cleaners Association) – the UK’s acknowledged industry qualification.</Typography></li>
-        <li>
-          <Typography variant="h3">How long have you been in the upholstery and carpet cleaning business?</Typography>
-          <Typography variant="body">Since 2012, we have been actively involved in the cleaning industry. Over the years, we have encountered various types of carpets, rugs, upholstery and stains from both commercial and residential clients, gaining valuable experience. Our commitment to providing the best carpet, sofa, mattress, dust mite cleaning services and many more, has driven us to enhance our performance through the following steps:</Typography></li>
-        <li>
-          <p>Continuously upgrading our equipment with superior alternatives whenever they become available to obtain;</p>
-        </li>
-        <li>
-          <p>Consistently improving our cleaning products to ensure the highest quality of service;</p>
-        </li>
-        <li>
-          <p>Dedication to expanding our knowledge and skills through ongoing professional training, always seeking to enhance our competence.</p>
-        </li>
-        <li>
-          <Typography variant="h3">Can you give me a discount?</Typography>
-          <Typography variant="body">Our cleaning services are known for their top quality, utilising the most effective equipment and a range of premium cleaning products. What sets us apart even further is that our prices are not only highly competitive but also rank among the most attractive in the market.</Typography>
-          <Typography variant="body">Bundling all the services you need is a more cost-effective option compared to individual visits. This is because of the initial high cost and additional charges for each technician visit, taking into account factors such as travel time, parking, and the handling of heavy equipment during loading and unloading.</Typography></li>
-        <li>
-          <Typography variant="h3">How often should a mattress be professionally cleaned?</Typography>
-          <Typography variant="body">The frequency of professional mattress cleaning can depend on several factors, including personal preferences, the type of mattress, and whether there are specific issues like allergies or stains. Generally, the bedding should be washed at least once a week to minimise the amount of oil, sweat, skin, and fluids that get into your mattress, while your pillows should be cleaned at least twice a year. When it comes to the mattress itself, aim for a <strong>minimum of twice a year or once every season</strong>.</Typography>
-          <Typography variant="body">If any spills or stains have occurred on the mattress, it's advisable to address them promptly. Stains can attract bacteria and contribute to odours. Mattress cleaning services London will help with completely eliminating stains and odours and leave your mattress fresh and clean.</Typography></li>
-        <li>
-          <Typography variant="h3">Can you clean a mattress with a steam cleaner?</Typography>
-          <Typography variant="body">Yes, you can clean a mattress with a steam cleaner, and it can be an effective method for removing stains, odours, and killing bacteria. A few general pieces of advice when steam cleaning are to first vacuum thoroughly the mattress, to let the mattress dry out completely before use, to be cautious about using too much water and to always check the mattress care instructions. Some mattresses, especially memory foam or those with certain treatments, may not be suitable for steam cleaning.</Typography>
-          <Typography variant="body">If you have concerns or uncertainty about steam cleaning your mattress, it is advisable to take advantage of professional mattress cleaning services, which will best take care of your mattress.</Typography></li>
-        <li>
-          <Typography variant="h3">How effective is a steam cleaning mattress?</Typography>
-          <Typography variant="body">Steam cleaning can be an effective method for cleaning mattresses, especially when it comes to removing stains, eliminating odours, and reducing the presence of allergens like dust mites and bacteria, thanks to the high-temperature steam. To achieve the best possible results, hire mattress cleaning and dust mite removal services that will professionally take care of your mattress.</Typography></li>
-        <li>
-          <Typography variant="h3">How long does it take for a steam-cleaned mattress to dry?</Typography>
-          <Typography variant="body">It takes about 5-7 hours for a steam-cleaned mattress to dry completely. We strongly advise that you let the mattress completely dry, especially before use, as damp mattresses are breeding grounds for harmful moulds, bacteria and other allergens.</Typography>
-        </li>
+        </Typography>
       </ul>
+      <li>
+        <Typography variant="h3">7. How long does it take for the upholstery to get dry after upholstery deep cleaning services?</Typography>
+        <Typography variant="body">It takes about 5-7 hours for the mattress to dry completely. We strongly advise that you let the mattress completely dry, especially before use, as damp mattresses are perfect breeding grounds for harmful moulds and bacteria.</Typography></li>
+      <li>
+        <Typography variant="h3">8. Do you guarantee that all stains will be removed?</Typography>
+        <Typography variant="body">Due to our experience and using some of the best equipment in the industry, we achieve high success rates in stain removal. However, it's essential to note that we cannot offer an absolute guarantee due to various factors beyond our control. These factors include:</Typography></li>
+      <ul class="ml--5" style="list-style: initial;">
+        <Typography variant="li">
+          <p>The age of the stains;</p>
+        </Typography>
+        <Typography variant="li">
+          <p>The nature of the substances responsible for the stains;</p>
+        </Typography>
+        <Typography variant="li">
+          <p>Any prior mishandling of the stains.</p>
+        </Typography>
+      </ul>
+      <li>
+        <Typography variant="body">Nonetheless, we are fully committed to exerting every possible effort to eliminate all stains from your furniture.</Typography>
+      </li>
+      <li>
+        <Typography variant="h3">9. How soon can I expect your cleaner to visit me?</Typography>
+        <Typography variant="body">We will make sure to get you an appointment as soon as possible. Usually, we are fully booked for the following three days, but exceptions may occur at times.</Typography></li>
+      <li>
+        <Typography variant="h3">10. Can you give me a quote over the phone or do you need a viewing in person?</Typography>
+        <Typography variant="body">Yes, we can give you a mattress cleaning quote over the phone, there is usually no need for us to visit your property. You can also receive a quote online.</Typography></li>
+      <li>
+        <Typography variant="h3">11. What payment methods do you accept for your mattress cleaning services?</Typography>
+        <Typography variant="body">We accept debit / credit cards, bank transfers and cash payments directly to our team.</Typography></li>
+      <li>
+        <Typography variant="h3">12. Can your dust mite removal company provide me with an invoice?</Typography>
+        <Typography variant="body">Yes, we will either send you a receipt via email or via any method of your choice.</Typography></li>
+      <li>
+        <Typography variant="h3">13. Are you qualified?</Typography>
+        <Typography variant="body">Yes, we are qualified and fully trained members of <a class="color-paper-link hover-color-paper-link-hover:hover" href="https://www.checkatrade.com/trades/FineCarpetCleaning" target="_blank" rel="noopener">Checkatrade</a> and of <a class="color-paper-link hover-color-paper-link-hover:hover" href="https://trustedlocalcleaners.ncca.co.uk/listing/fine-carpet-cleaning-ltd/" target="_blank" rel="noopener">NCCA</a> (National Carpet Cleaners Association) – the UK’s acknowledged industry qualification.</Typography></li>
+      <li>
+        <Typography variant="h3">14. How long have you been in the upholstery and carpet cleaning business?</Typography>
+        <Typography variant="body">Since 2012, we have been actively involved in the cleaning industry. Over the years, we have encountered various types of carpets, rugs, upholstery and stains from both commercial and residential clients, gaining valuable experience. Our commitment to providing the best carpet, sofa, mattress, dust mite cleaning services and many more, has driven us to enhance our performance through the following steps:</Typography></li>
+      <ul class="ml--5" style="list-style: initial;">
+        <Typography variant="li">
+          <p>Continuously upgrading our equipment with superior alternatives whenever they become available to obtain;</p>
+        </Typography>
+        <Typography variant="li">
+          <p>Consistently improving our cleaning products to ensure the highest quality of service;</p>
+        </Typography>
+        <Typography variant="li">
+          <p>Dedication to expanding our knowledge and skills through ongoing professional training, always seeking to enhance our competence.</p>
+        </Typography>
+      </ul>
+      <li>
+        <Typography variant="h3">15. Can you give me a discount?</Typography>
+        <Typography variant="body">Our cleaning services are known for their top quality, utilising the most effective equipment and a range of premium cleaning products. What sets us apart even further is that our prices are not only highly competitive but also rank among the most attractive in the market.</Typography>
+        <Typography variant="body">Bundling all the services you need is a more cost-effective option compared to individual visits. This is because of the initial high cost and additional charges for each technician visit, taking into account factors such as travel time, parking, and the handling of heavy equipment during loading and unloading.</Typography></li>
+      <li>
+        <Typography variant="h3">16. How often should a mattress be professionally cleaned?</Typography>
+        <Typography variant="body">The frequency of professional mattress cleaning can depend on several factors, including personal preferences, the type of mattress, and whether there are specific issues like allergies or stains. Generally, the bedding should be washed at least once a week to minimise the amount of oil, sweat, skin, and fluids that get into your mattress, while your pillows should be cleaned at least twice a year. When it comes to the mattress itself, aim for a <strong>minimum of twice a year or once every season</strong>.</Typography>
+        <Typography variant="body">If any spills or stains have occurred on the mattress, it's advisable to address them promptly. Stains can attract bacteria and contribute to odours. Mattress cleaning services London will help with completely eliminating stains and odours and leave your mattress fresh and clean.</Typography></li>
+      <li>
+        <Typography variant="h3">17. Can you clean a mattress with a steam cleaner?</Typography>
+        <Typography variant="body">Yes, you can clean a mattress with a steam cleaner, and it can be an effective method for removing stains, odours, and killing bacteria. A few general pieces of advice when steam cleaning are to first vacuum thoroughly the mattress, to let the mattress dry out completely before use, to be cautious about using too much water and to always check the mattress care instructions. Some mattresses, especially memory foam or those with certain treatments, may not be suitable for steam cleaning.</Typography>
+        <Typography variant="body">If you have concerns or uncertainty about steam cleaning your mattress, it is advisable to take advantage of professional mattress cleaning services, which will best take care of your mattress.</Typography></li>
+      <li>
+        <Typography variant="h3">18. How effective is a steam cleaning mattress?</Typography>
+        <Typography variant="body">Steam cleaning can be an effective method for cleaning mattresses, especially when it comes to removing stains, eliminating odours, and reducing the presence of allergens like dust mites and bacteria, thanks to the high-temperature steam. To achieve the best possible results, hire mattress cleaning and dust mite removal services that will professionally take care of your mattress.</Typography></li>
+      <li>
+        <Typography variant="h3">19. How long does it take for a steam-cleaned mattress to dry?</Typography>
+        <Typography variant="body">It takes about 5-7 hours for a steam-cleaned mattress to dry completely. We strongly advise that you let the mattress completely dry, especially before use, as damp mattresses are breeding grounds for harmful moulds, bacteria and other allergens.</Typography>
+      </li>
     </Entry>
     <Entry>
-      <ul>
-        <li>
-          <Typography variant="h3">What is the best way to steam a mattress?</Typography>
-          <Typography variant="body">The steam cleaning method is the most effective way to clean a mattress. Steam cleaning at home can achieve good results when done properly. Booking a professional mattress cleaning company will give the best outcome, thanks to their expert equipment and experience gained through years of taking care of upholstery items.</Typography></li>
-        <li>
-          <Typography variant="h3">What is the best way to clean and freshen up a mattress?</Typography>
-          <Typography variant="body">Cleaning and freshening up a mattress can be done effectively with a combination of methods to remove stains, odours, and allergens. Some general guidelines on the best way to clean and freshen up a mattress are:</Typography></li>
-        <li>
+      <li>
+        <Typography variant="h3">20. What is the best way to steam a mattress?</Typography>
+        <Typography variant="body">The steam cleaning method is the most effective way to clean a mattress. Steam cleaning at home can achieve good results when done properly. Booking a professional mattress cleaning company will give the best outcome, thanks to their expert equipment and experience gained through years of taking care of upholstery items.</Typography></li>
+      <li>
+        <Typography variant="h3">21. What is the best way to clean and freshen up a mattress?</Typography>
+        <Typography variant="body">Cleaning and freshening up a mattress can be done effectively with a combination of methods to remove stains, odours, and allergens. Some general guidelines on the best way to clean and freshen up a mattress are:</Typography></li>
+      <ul class="ml--5" style="list-style: initial;">
+        <Typography variant="li">
           <p>Book professional mattress cleaning services at least twice a year or once every season. This will ensure that your mattress is taken care of and eliminates the possibility of moulds and allergens taking place;</p>
-        </li>
-        <li>
+        </Typography>
+        <Typography variant="li">
           <p>Use a vacuum cleaner with an upholstery attachment to thoroughly vacuum the mattress regularly;</p>
-        </li>
-        <li>
+        </Typography>
+        <Typography variant="li">
           <p>Consider using a mattress protector to prevent future stains and protect against allergens or applying a stain protector layer to your mattress. Visit our stain protector dedicated page to learn more;</p>
-        </li>
-        <li>
+        </Typography>
+        <Typography variant="li">
           <p>If your mattress allows it, rotate it regularly to ensure even wear and tear. This can also prevent the accumulation of allergens in specific areas;</p>
-        </li>
-        <li>
+        </Typography>
+        <Typography variant="li">
           <p>Regularly wash bedding. Wash sheets, pillowcases, and mattress protectors weekly to maintain a clean sleeping environment;</p>
-        </li>
-        <li>
+        </Typography>
+        <Typography variant="li">
           <p>Use the services of a dust mite removal company if dust mites or other bed bugs have found their way to your mattress. Through their expert dust mite removal services, you can rest assured that all bugs will be exterminated, as well as future possibilities of them appearing again;</p>
-        </li>
-        <li>
+        </Typography>
+        <Typography variant="li">
           <p>Keep the room well-ventilated. Proper ventilation is important to prevent the growth of mould and mildew. Open windows and use fans to ensure the mattress dries thoroughly after cleaning;</p>
-        </li>
-        <li>
+        </Typography>
+        <Typography variant="li">
           <p>Check the care instructions provided by the mattress manufacturer to ensure what cleaning methods are most suitable for your specific mattress type.</p>
-        </li>
-        <li>
-          <Typography variant="h3">How much does it cost to steam clean a mattress?</Typography>
-          <Typography variant="body">How much the mattress cleaning service London costs depends on a number of factors. Some of them are:</Typography></li>
-        <li>
+        </Typography>
+      </ul>
+      <li>
+        <Typography variant="h3">22. How much does it cost to steam clean a mattress?</Typography>
+        <Typography variant="body">How much the mattress cleaning service London costs depends on a number of factors. Some of them are:</Typography></li>
+      <ul class="ml--5" style="list-style: initial;">
+        <Typography variant="li">
           <p>The quantity and size of the mattresses;</p>
-        </li>
-        <li>
+        </Typography>
+        <Typography variant="li">
           <p>How soiled they are;</p>
-        </li>
-        <li>
+        </Typography>
+        <Typography variant="li">
           <p>If spills or stains have occurred;</p>
-        </li>
-        <li>
+        </Typography>
+        <Typography variant="li">
           <p>If dust mite removal services should take place.</p>
-          <Typography variant="body">To learn more, take a look at our <a class="color-paper-link hover-color-paper-link-hover:hover" href="#price_table">mattress cleaning prices</a>.</Typography></li>
-        <li>
-          <Typography variant="h3">How do you dry a mattress after cleaning it?</Typography>
-          <Typography variant="body">Leave the mattress to dry before use in a well-ventilated room. Proper ventilation is important to prevent the growth of mould and mildew.</Typography>
-          <Typography variant="body">It takes about 5-7 hours for a steam-cleaned mattress to dry. It’s best that you make sure the mattress is completely dry before use as damp mattresses are breeding grounds for harmful moulds.</Typography>
-        </li>
-        <li>
-          <Typography variant="h3">Is it possible to deep clean a mattress?</Typography>
-          <Typography variant="body">Yes, it is possible to deep clean a mattress to remove embedded dirt, dust, stains, allergens, and odours. Deep cleaning involves thorough cleaning methods that go beyond surface cleaning. An expert mattress cleaning company like “Fine Carpet Cleaning” Ltd. will use special equipment and premium cleaning products to achieve the best possible results for your mattress.</Typography></li>
-        <li>
-          <Typography variant="h3">Can you steam clean a mouldy mattress?</Typography>
-          <Typography variant="body">Steam cleaning can be effective in treating a mouldy mattress, but it's important to approach the situation with caution and follow proper procedures. Mould is an issue that can negatively impact health, so it's crucial to address it promptly and thoroughly. Booking professional mattress cleaning services will assure you that your mattress will be properly taken care of.</Typography></li>
-        <li>
-          <Typography variant="h3">How do professional cleaners clean mattresses?</Typography></li>
-        <li>
+        </Typography>
+      </ul>
+      <li>
+        <Typography variant="body">To learn more, take a look at our <a class="color-paper-link hover-color-paper-link-hover:hover" href="#price_table">mattress cleaning prices</a>.</Typography></li>
+      <li>
+        <Typography variant="h3">23. How do you dry a mattress after cleaning it?</Typography>
+        <Typography variant="body">Leave the mattress to dry before use in a well-ventilated room. Proper ventilation is important to prevent the growth of mould and mildew.</Typography>
+        <Typography variant="body">It takes about 5-7 hours for a steam-cleaned mattress to dry. It’s best that you make sure the mattress is completely dry before use as damp mattresses are breeding grounds for harmful moulds.</Typography>
+      </li>
+      <li>
+        <Typography variant="h3">24. Is it possible to deep clean a mattress?</Typography>
+        <Typography variant="body">Yes, it is possible to deep clean a mattress to remove embedded dirt, dust, stains, allergens, and odours. Deep cleaning involves thorough cleaning methods that go beyond surface cleaning. An expert mattress cleaning company like “Fine Carpet Cleaning” Ltd. will use special equipment and premium cleaning products to achieve the best possible results for your mattress.</Typography></li>
+      <li>
+        <Typography variant="h3">25. Can you steam clean a mouldy mattress?</Typography>
+        <Typography variant="body">Steam cleaning can be effective in treating a mouldy mattress, but it's important to approach the situation with caution and follow proper procedures. Mould is an issue that can negatively impact health, so it's crucial to address it promptly and thoroughly. Booking professional mattress cleaning services will assure you that your mattress will be properly taken care of.</Typography></li>
+      <li>
+        <Typography variant="h3">26. How do professional cleaners clean mattresses?</Typography></li>
+      <ul class="ml--5" style="list-style: initial;">
+        <Typography variant="li">
           <p>First we carry out a thorough inspection. According to the level of pollution and/or additional blemishes, we will determine our course of action during the mattress cleaning service London;</p>
-        </li>
-        <li>
+        </Typography>
+        <Typography variant="li">
           <p>Depending on how soiled your mattress is, disinfectants and eco-friendly cleaning solutions may be used to treat settled stains. Washing solutions will be sprayed on problem areas and allowed to soak for 3-5 minutes before the steam cleaning procedure;</p>
-        </li>
-        <li>
+        </Typography>
+        <Typography variant="li">
           <p>After applying cleaning treatments, steam cleaning is performed on your mattresses to break up stains, sweat, urine, and other residues that may have accumulated;</p>
-        </li>
-        <li>
+        </Typography>
+        <Typography variant="li">
           <p>If there are any remaining stains our cleaning experts will begin the dirt or stain extraction process, using special cleaning chemicals and equipment;</p>
-        </li>
-        <li>
+        </Typography>
+        <Typography variant="li">
           <p>It takes about 5-7 hours for a steam-cleaned mattress to dry completely. It’s best to leave the mattress to dry in a ventilated room, if possible, as damp mattresses are perfect breeding grounds for harmful moulds and bacteria.</p>
-        </li>
-        <li>
-          <Typography variant="h3">Can I steam-clean a memory foam mattress?</Typography>
-          <Typography variant="body">The main weakness of memory foam is its vulnerability to heat and water. Memory foam should not be washed in a washing machine, as this will damage the fibres and cause it to lose its structural memory. For the same reason, steam cleaning memory foam should be performed with extreme caution.</Typography>
-          <Typography variant="body">The best action would be to call in a professional mattress cleaning company. Thanks to their knowledge and years of experience they will know how your mattress should be handled and what specific cleaning method should be used to achieve the best possible outcome.</Typography>
-        </li>
-        <li>
-          <Typography variant="h3">How do you deep clean a yellow mattress?</Typography>
-          <Typography variant="body">A yellowed mattress may be the result of various factors, including body oils, sweat, and other stains. Deep cleaning from an expert mattress cleaning company can help remove these stains, clean your mattress in depth and refresh it.</Typography></li>
-        <li>
-          <Typography variant="h3">How do you get urine smell out of a mattress?</Typography></li>
-        <li>
+        </Typography>
+      </ul>
+      <li>
+        <Typography variant="h3">27. Can I steam-clean a memory foam mattress?</Typography>
+        <Typography variant="body">The main weakness of memory foam is its vulnerability to heat and water. Memory foam should not be washed in a washing machine, as this will damage the fibres and cause it to lose its structural memory. For the same reason, steam cleaning memory foam should be performed with extreme caution.</Typography>
+        <Typography variant="body">The best action would be to call in a professional mattress cleaning company. Thanks to their knowledge and years of experience they will know how your mattress should be handled and what specific cleaning method should be used to achieve the best possible outcome.</Typography>
+      </li>
+      <li>
+        <Typography variant="h3">28. How do you deep clean a yellow mattress?</Typography>
+        <Typography variant="body">A yellowed mattress may be the result of various factors, including body oils, sweat, and other stains. Deep cleaning from an expert mattress cleaning company can help remove these stains, clean your mattress in depth and refresh it.</Typography></li>
+      <li>
+        <Typography variant="h3">29. How do you get urine smell out of a mattress?</Typography></li>
+      <ul class="ml--5" style="list-style: initial;">
+        <Typography variant="li">
           <p><strong>Act Quickly:</strong> The sooner you address a urine stain, the better. Try to blot up as much of the liquid as possible using paper towels or a clean, absorbent cloth.</p>
-        </li>
-        <li>
+        </Typography>
+        <Typography variant="li">
           <p><strong>Remove Bedding:</strong> Take off all sheets, pillowcases, and mattress protectors, and wash them separately according to the care instructions.</p>
-        </li>
-        <li>
+        </Typography>
+        <Typography variant="li">
           <p><strong>Blot Excess Moisture:</strong> Use paper towels or a clean cloth to blot as much of the remaining urine as possible. Press down firmly without rubbing to avoid spreading the stain.</p>
-        </li>
-        <li>
+        </Typography>
+        <Typography variant="li">
           <p><strong>Mattress cleaning services:</strong> Call a mattress cleaning company to handle the stain.</p>
-        </li>
-        <li>
+        </Typography>
+        <Typography variant="li">
           <p><strong>Mattress Protector:</strong> Consider using a waterproof mattress protector to prevent future accidents and protect against stains and odours.</p>
-        </li>
-        <li>
-          <Typography variant="h3">How do you get old stains out of a mattress UK?</Typography>
-          <Typography variant="body">Professional mattress cleaning services have access to specialised equipment and cleaning solutions to effectively remove old stains. The following is a general overview of how professionals like “Fine Carpet Cleaning” Ltd. will handle the task:</Typography></li>
-        <li>
+        </Typography>
+      </ul>
+      <li>
+        <Typography variant="h3">30. How do you get old stains out of a mattress UK?</Typography>
+        <Typography variant="body">Professional mattress cleaning services have access to specialised equipment and cleaning solutions to effectively remove old stains. The following is a general overview of how professionals like “Fine Carpet Cleaning” Ltd. will handle the task:</Typography></li>
+      <ul class="ml--5" style="list-style: initial;">
+        <Typography variant="li">
           <p>The cleaning process starts by assessing the type and severity of the stains on the mattress. Different stains may require different treatments.</p>
-        </li>
-        <li>
+        </Typography>
+        <Typography variant="li">
           <p>Professionals often apply a pre-treatment to the stained areas. This could be a specialised stain remover or a cleaning solution tailored to the specific type of stain.</p>
-        </li>
-        <li>
+        </Typography>
+        <Typography variant="li">
           <p>Mattress cleaning services use steam cleaning or hot water extraction methods. This involves using high-pressure hot water along with cleaning agents to penetrate deep into the mattress fabric, loosening and extracting dirt, stains, and contaminants.</p>
-        </li>
-        <li>
+        </Typography>
+        <Typography variant="li">
           <p>The cleaning equipment extracts the water, cleaning solution, and dislodged particles from the mattress. This step helps in removing both the cleaning agents and the contaminants, leaving the mattress cleaner and fresher.</p>
-        </li>
-        <li>
+        </Typography>
+        <Typography variant="li">
           <p>Powerful drying equipment is used to extract as much moisture as possible from the mattress. Rapid drying is essential to prevent mould and mildew growth.</p>
-        </li>
-        <li>
+        </Typography>
+        <Typography variant="li">
           <p>For stubborn or persistent stains, professionals may employ targeted stain removal techniques. This could involve using specific stain removers or treatments based on the nature of the stain.</p>
-        </li>
-        <li>
+        </Typography>
+        <Typography variant="li">
           <p>After the cleaning process, professionals may conduct a final inspection to ensure that the stains are effectively treated, and the mattress is in good condition.</p>
-        </li>
+        </Typography>
       </ul>
     </Entry>
   </Container>

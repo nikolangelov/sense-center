@@ -82,125 +82,131 @@ export function FaqSection() {
   const { Container, Entry } = createCollapsable()
   return <Container>
     <Entry>
-      <ul>
-        <li>
-          <Typography variant="h3">Will you fee me if I cancel the dry rug cleaning service?</Typography>
-          <Typography variant="body">Yes, we do have a cancellation fee, but it is only applied if you cancel on the day of the cleaning. In that case, you will lose your deposit.</Typography></li>
-        <li>
-          <Typography variant="h3">Do I need to pay for the congestion / parking charge?</Typography>
-          <Typography variant="body">Yes, we request that you arrange a suitable parking space for our vehicles within close proximity of the property since we carry heavy equipment, and to cover any parking / congestion expenses if applicable.</Typography></li>
-        <li>
-          <Typography variant="h3">Do I need to move furniture before the area rug dry cleaning near me?</Typography>
-          <Typography variant="body">We kindly ask for your assistance in relocating small, fragile, or valuable furniture items, such as lamps and ornaments, for insurance reasons. If possible, please position these items in a secure area before our team's arrival, one that will remain undisturbed during the cleaning process.</Typography>
-          <Typography variant="body">We are more than happy to assist in moving other lightweight furniture for your convenience, such as chairs, armchairs, and tables during the cleaning. Once the cleaning is completed, we will return them to their original positions.</Typography>
-          <Typography variant="body">In cases where heavy furniture, such as sofas, beds, wardrobes, or cupboards, needs to be moved, an additional fee will apply. This accounts for the extra time and effort required by our technician, who will receive appropriate compensation. Our primary goal is to ensure a stress-free experience for you throughout the entire process.</Typography></li>
-        <li>
-          <Typography variant="h3">What happens if I live on the 4th floor or above and I have no lift?</Typography>
-          <Typography variant="body">Because of the substantial weight of our equipment, which exceeds 50 kg, we add an extra charge for every additional floor that necessitates manual carrying. This charge is essential, as this process often consumes a considerable amount of time and can result in quicker fatigue for our technicians. Consequently, on such days, we may not be able to accomplish as much work as our usual capacity.</Typography></li>
-        <li>
-          <Typography variant="h3">Are you insured?</Typography>
-          <Typography variant="body">Yes, our cleaning company is fully insured.</Typography></li>
-      </ul>
+      <li>
+        <Typography variant="h3">1. Will you fee me if I cancel the dry rug cleaning service?</Typography>
+        <Typography variant="body">Yes, we do have a cancellation fee, but it is only applied if you cancel on the day of the cleaning. In that case, you will lose your deposit.</Typography></li>
+      <li>
+        <Typography variant="h3">2. Do I need to pay for the congestion / parking charge?</Typography>
+        <Typography variant="body">Yes, we request that you arrange a suitable parking space for our vehicles within close proximity of the property since we carry heavy equipment, and to cover any parking / congestion expenses if applicable.</Typography></li>
+      <li>
+        <Typography variant="h3">3. Do I need to move furniture before the area rug dry cleaning near me?</Typography>
+        <Typography variant="body">We kindly ask for your assistance in relocating small, fragile, or valuable furniture items, such as lamps and ornaments, for insurance reasons. If possible, please position these items in a secure area before our team's arrival, one that will remain undisturbed during the cleaning process.</Typography>
+        <Typography variant="body">We are more than happy to assist in moving other lightweight furniture for your convenience, such as chairs, armchairs, and tables during the cleaning. Once the cleaning is completed, we will return them to their original positions.</Typography>
+        <Typography variant="body">In cases where heavy furniture, such as sofas, beds, wardrobes, or cupboards, needs to be moved, an additional fee will apply. This accounts for the extra time and effort required by our technician, who will receive appropriate compensation. Our primary goal is to ensure a stress-free experience for you throughout the entire process.</Typography></li>
+      <li>
+        <Typography variant="h3">4. What happens if I live on the 4th floor or above and I have no lift?</Typography>
+        <Typography variant="body">Because of the substantial weight of our equipment, which exceeds 50 kg, we add an extra charge for every additional floor that necessitates manual carrying. This charge is essential, as this process often consumes a considerable amount of time and can result in quicker fatigue for our technicians. Consequently, on such days, we may not be able to accomplish as much work as our usual capacity.</Typography></li>
+      <li>
+        <Typography variant="h3">5. Are you insured?</Typography>
+        <Typography variant="body">Yes, our cleaning company is fully insured.</Typography></li>
     </Entry>
     <Entry>
-      <ul>
-        <li>
-          <Typography variant="h3">What happens if your cleaner damages anything while performing area rug dry cleaning near me?</Typography>
-          <Typography variant="body">We are fully insured and if anything is damaged, it will be fully covered by us.</Typography></li>
-        <li>
-          <Typography variant="h3">How long does the process of area rug dry cleaning near me take?</Typography>
-          <Typography variant="body">The duration of the process depends mainly on:</Typography></li>
-        <li>
+      <li>
+        <Typography variant="h3">6. What happens if your cleaner damages anything while performing area rug dry cleaning near me?</Typography>
+        <Typography variant="body">We are fully insured and if anything is damaged, it will be fully covered by us.</Typography></li>
+      <li>
+        <Typography variant="h3">7. How long does the process of area rug dry cleaning near me take?</Typography>
+        <Typography variant="body">The duration of the process depends mainly on:</Typography></li>
+      <ul class="ml--5" style="list-style: initial;">
+        <Typography variant="li">
           <p>How soiled the rug is;</p>
-        </li>
-        <li>
+        </Typography>
+        <Typography variant="li">
           <p>The size and quantity of the rugs;</p>
-        </li>
-        <li>
+        </Typography>
+        <Typography variant="li">
           <p>If a stain removal service is needed.</p>
-        </li>
-        <li>
-          <Typography variant="h3">How long does it take for the carpet to get dry after a rug dry cleaning London is performed?</Typography>
-          <Typography variant="body">Since the dry cleaning method uses a cleaning product that is in powder form and little to no water is involved in the cleaning process, the rug will be completely dry either immediately or almost immediately after the cleaning procedure has ended.</Typography></li>
-        <li>
-          <Typography variant="h3">How soon can I expect a cleaner to visit me?</Typography>
-          <Typography variant="body">We will make every effort to secure an appointment for you as quickly as possible. Typically, our schedule is booked for the next three days, although there may be occasional exceptions.</Typography></li>
-        <li>
-          <Typography variant="h3">Can you give me a dry clean rug price quote over the phone or do you have to visit my property?</Typography>
-          <Typography variant="body">Yes, we can provide you with an estimate over the phone. However, for commercial properties, a site visit may be necessary. Additionally, you have the option to get a dry clean rug price quote online.</Typography></li>
-        <li>
-          <Typography variant="h3">What payment methods do you accept?</Typography>
-          <Typography variant="body">We accept debit / credit cards, bank transfers and cash payments handed directly to our team.</Typography></li>
-        <li>
-          <Typography variant="h3">Can you provide me with an invoice for the dry cleaning rug cost?</Typography>
-          <Typography variant="body">Yes, we will send you a receipt via email.</Typography></li>
-        <li>
-          <Typography variant="h3">Are you qualified?</Typography>
-          <Typography variant="body">Yes, we are qualified and fully trained members of <a class="color-paper-link hover-color-paper-link-hover:hover" href="https://trustedlocalcleaners.ncca.co.uk/listing/fine-carpet-cleaning-ltd/" target="_blank" rel="noopener">NCCA</a> (National Carpet Cleaners Association) – the UK’s recognised industry qualification, and of <a class="color-paper-link hover-color-paper-link-hover:hover" href="https://www.checkatrade.com/trades/FineCarpetCleaning" target="_blank" rel="noopener">Checkatrade</a>.</Typography></li>
-        <li>
-          <Typography variant="h3">How long have you been in the rug cleaning business?</Typography>
-          <Typography variant="body">We have been actively serving both commercial and residential clients in the carpet and rug cleaning sector since 2012. We have worked with a variety of carpets, rugs, upholstery, and stains throughout the years, and we've learned a lot. This knowledge, along with our dedication to quality, has inspired us to improve our services by:</Typography></li>
-        <li>
-          <p><strong>Constant Equipment Upgrades:</strong> As soon as better substitutes hit the market, we promptly swap out our old machinery and equipment for new ones.</p>
-        </li>
-        <li>
-          <p><strong>Continuous Product Improvement:</strong> To keep our cleaning products at the forefront of industry standards, we evaluate and enhance them on a regular basis.</p>
-        </li>
-        <li>
-          <p><strong>Constant Learning and Development:</strong> We actively seek out new professional courses and training opportunities in order to further our commitment to improving our knowledge and abilities. We are able to keep up with the most recent developments in the business thanks to this dedication.</p>
-        </li>
-        <li>
-          <Typography variant="h3">Can you add a discount for me in the dry clean rug price quote?</Typography>
-          <Typography variant="body">Our dry clean rug prices are the most appealing on the market, in addition to being extremely competitive, considering our dedication to providing high-quality cleaning services that entail the use of highly effective equipment and a wide selection of over 20 premium cleaning products. We recommend combining all the services you need to secure a better rate. This cost efficiency stems from the initial expenses and additional fees associated with each technician visit, which include factors like travel time, parking, and handling bulky equipment during loading and unloading.</Typography></li>
-        <li>
-          <Typography variant="h3">How much does a dry-cleaning rug cost?</Typography>
-          <Typography variant="body">How much the dry cleaning rug costs depends on the following factors:</Typography></li>
-        <li>
-          <p>The quantity and size of the rugs;</p>
-        </li>
-        <li>
-          <p>How soiled they are;</p>
-        </li>
-        <li>
-          <p>The type and fabric of the rugs;</p>
-        </li>
-        <li>
-          <p>How easy the access to the rug is.</p>
-          <Typography variant="body">To learn more, take a look at our <a class="color-paper-link hover-color-paper-link-hover:hover" href="#price_table">dry clean rug prices</a>.</Typography>
-        </li>
+        </Typography>
       </ul>
+      <li>
+        <Typography variant="h3">8. How long does it take for the carpet to get dry after a rug dry cleaning London is performed?</Typography>
+        <Typography variant="body">Since the dry cleaning method uses a cleaning product that is in powder form and little to no water is involved in the cleaning process, the rug will be completely dry either immediately or almost immediately after the cleaning procedure has ended.</Typography></li>
+      <li>
+        <Typography variant="h3">9. How soon can I expect a cleaner to visit me?</Typography>
+        <Typography variant="body">We will make every effort to secure an appointment for you as quickly as possible. Typically, our schedule is booked for the next three days, although there may be occasional exceptions.</Typography></li>
+      <li>
+        <Typography variant="h3">10. Can you give me a dry clean rug price quote over the phone or do you have to visit my property?</Typography>
+        <Typography variant="body">Yes, we can provide you with an estimate over the phone. However, for commercial properties, a site visit may be necessary. Additionally, you have the option to get a dry clean rug price quote online.</Typography></li>
+      <li>
+        <Typography variant="h3">11. What payment methods do you accept?</Typography>
+        <Typography variant="body">We accept debit / credit cards, bank transfers and cash payments handed directly to our team.</Typography></li>
+      <li>
+        <Typography variant="h3">12. Can you provide me with an invoice for the dry cleaning rug cost?</Typography>
+        <Typography variant="body">Yes, we will send you a receipt via email.</Typography></li>
+      <li>
+        <Typography variant="h3">13. Are you qualified?</Typography>
+        <Typography variant="body">Yes, we are qualified and fully trained members of <a class="color-paper-link hover-color-paper-link-hover:hover" href="https://trustedlocalcleaners.ncca.co.uk/listing/fine-carpet-cleaning-ltd/" target="_blank" rel="noopener">NCCA</a> (National Carpet Cleaners Association) – the UK’s recognised industry qualification, and of <a class="color-paper-link hover-color-paper-link-hover:hover" href="https://www.checkatrade.com/trades/FineCarpetCleaning" target="_blank" rel="noopener">Checkatrade</a>.</Typography></li>
+      <li>
+        <Typography variant="h3">14. How long have you been in the rug cleaning business?</Typography>
+        <Typography variant="body">We have been actively serving both commercial and residential clients in the carpet and rug cleaning sector since 2012. We have worked with a variety of carpets, rugs, upholstery, and stains throughout the years, and we've learned a lot. This knowledge, along with our dedication to quality, has inspired us to improve our services by:</Typography></li>
+      <ul class="ml--5" style="list-style: initial;">
+        <Typography variant="li">
+          <p><strong>Constant Equipment Upgrades:</strong> As soon as better substitutes hit the market, we promptly swap out our old machinery and equipment for new ones.</p>
+        </Typography>
+        <Typography variant="li">
+          <p><strong>Continuous Product Improvement:</strong> To keep our cleaning products at the forefront of industry standards, we evaluate and enhance them on a regular basis.</p>
+        </Typography>
+        <Typography variant="li">
+          <p><strong>Constant Learning and Development:</strong> We actively seek out new professional courses and training opportunities in order to further our commitment to improving our knowledge and abilities. We are able to keep up with the most recent developments in the business thanks to this dedication.</p>
+        </Typography>
+      </ul>
+      <li>
+        <Typography variant="h3">15. Can you add a discount for me in the dry clean rug price quote?</Typography>
+        <Typography variant="body">Our dry clean rug prices are the most appealing on the market, in addition to being extremely competitive, considering our dedication to providing high-quality cleaning services that entail the use of highly effective equipment and a wide selection of over 20 premium cleaning products. We recommend combining all the services you need to secure a better rate. This cost efficiency stems from the initial expenses and additional fees associated with each technician visit, which include factors like travel time, parking, and handling bulky equipment during loading and unloading.</Typography></li>
+      <li>
+        <Typography variant="h3">16. How much does a dry-cleaning rug cost?</Typography>
+        <Typography variant="body">How much the dry cleaning rug costs depends on the following factors:</Typography></li>
+      <ul class="ml--5" style="list-style: initial;">
+        <Typography variant="li">
+          <p>The quantity and size of the rugs;</p>
+        </Typography>
+        <Typography variant="li">
+          <p>How soiled they are;</p>
+        </Typography>
+        <Typography variant="li">
+          <p>The type and fabric of the rugs;</p>
+        </Typography>
+        <Typography variant="li">
+          <p>How easy the access to the rug is.</p>
+        </Typography>
+      </ul>
+      <li>
+        <Typography variant="body">To learn more, take a look at our <a class="color-paper-link hover-color-paper-link-hover:hover" href="#price_table">dry clean rug prices</a>.</Typography>
+      </li>
     </Entry>
     <Entry>
-      <ul>
-        <li>
-          <Typography variant="h3">Can sisal rugs be professionally cleaned?</Typography>
-          <Typography variant="body">Yes, sisal rugs can be professionally cleaned through dry cleaning. We are specialised in sisal rug cleaning. We also offer synthetic rug cleaning, delicate or all-natural fibres rug cleaning, such as coir rug cleaning, sheepskin rug cleaning, jute rug cleaning service, professional cleaning viscose rug, professional silk rug cleaning, professional cowhide rug cleaning, hemp rug cleaning, bamboo silk rug cleaning, seagrass rug cleaning and more.</Typography></li>
-        <li>
-          <Typography variant="h3">Can a jute rug be professionally cleaned?</Typography>
-          <Typography variant="body">Yes, jute rugs can be professionally dry-cleaned. Our company offers jute rug cleaning services. We also perform synthetic rug cleaning, delicate or all-natural fibres rug cleaning, such as coir rug cleaning, sheepskin rug cleaning, sisal rug cleaning, professional cleaning viscose rug, professional silk rug cleaning, professional cowhide rug cleaning, hemp rug cleaning, bamboo silk rug cleaning, seagrass rug cleaning and more.</Typography></li>
-        <li>
-          <Typography variant="h3">Can you steam clean a jute rug?</Typography>
-          <Typography variant="body">Jute rugs are delicate and need to be treated via a dry cleaning method, as steam cleaning is not suitable for them and will create permanent damage to the rugs. Dry cleaning uses no to little water and a cleaning compound in powder form to ensure that the jute rug will be properly treated.</Typography></li>
-        <li>
-          <Typography variant="h3">Can you steam clean a cowhide rug?</Typography>
-          <Typography variant="body">A cowhide rug is delicate and needs a dry cleaning treatment. Dry cleaning uses no to little water and a cleaning compound in powder form to ensure that your sisal rug will be carefully and properly treated. Water-based cleaning methods are not suitable for such materials and will create permanent damage to the rug.</Typography></li>
-        <li>
-          <Typography variant="h3">Can you steam clean a silk rug?</Typography>
-          <Typography variant="body">Rugs, made from silk are very delicate and will not sustain from steam cleaning. In steam cleaning, high-temperature water and high pressure are used, which will damage the rug. We at “Fine Carpet Cleaning” Ltd. perform dry rug cleaning services for such cases and will ensure that your beautiful rug will be left fresh and clean.</Typography></li>
-        <li>
-          <Typography variant="h3">How much does it cost to dry clean a sheepskin rug?</Typography>
-          <Typography variant="body">How much does it cost to dry clean a sheepskin rug depends on the following factors:</Typography></li>
-        <li>
+      <li>
+        <Typography variant="h3">17. Can sisal rugs be professionally cleaned?</Typography>
+        <Typography variant="body">Yes, sisal rugs can be professionally cleaned through dry cleaning. We are specialised in sisal rug cleaning. We also offer synthetic rug cleaning, delicate or all-natural fibres rug cleaning, such as coir rug cleaning, sheepskin rug cleaning, jute rug cleaning service, professional cleaning viscose rug, professional silk rug cleaning, professional cowhide rug cleaning, hemp rug cleaning, bamboo silk rug cleaning, seagrass rug cleaning and more.</Typography></li>
+      <li>
+        <Typography variant="h3">18. Can a jute rug be professionally cleaned?</Typography>
+        <Typography variant="body">Yes, jute rugs can be professionally dry-cleaned. Our company offers jute rug cleaning services. We also perform synthetic rug cleaning, delicate or all-natural fibres rug cleaning, such as coir rug cleaning, sheepskin rug cleaning, sisal rug cleaning, professional cleaning viscose rug, professional silk rug cleaning, professional cowhide rug cleaning, hemp rug cleaning, bamboo silk rug cleaning, seagrass rug cleaning and more.</Typography></li>
+      <li>
+        <Typography variant="h3">19. Can you steam clean a jute rug?</Typography>
+        <Typography variant="body">Jute rugs are delicate and need to be treated via a dry cleaning method, as steam cleaning is not suitable for them and will create permanent damage to the rugs. Dry cleaning uses no to little water and a cleaning compound in powder form to ensure that the jute rug will be properly treated.</Typography></li>
+      <li>
+        <Typography variant="h3">20. Can you steam clean a cowhide rug?</Typography>
+        <Typography variant="body">A cowhide rug is delicate and needs a dry cleaning treatment. Dry cleaning uses no to little water and a cleaning compound in powder form to ensure that your sisal rug will be carefully and properly treated. Water-based cleaning methods are not suitable for such materials and will create permanent damage to the rug.</Typography></li>
+      <li>
+        <Typography variant="h3">21. Can you steam clean a silk rug?</Typography>
+        <Typography variant="body">Rugs, made from silk are very delicate and will not sustain from steam cleaning. In steam cleaning, high-temperature water and high pressure are used, which will damage the rug. We at “Fine Carpet Cleaning” Ltd. perform dry rug cleaning services for such cases and will ensure that your beautiful rug will be left fresh and clean.</Typography></li>
+      <li>
+        <Typography variant="h3">22. How much does it cost to dry clean a sheepskin rug?</Typography>
+        <Typography variant="body">How much does it cost to dry clean a sheepskin rug depends on the following factors:</Typography></li>
+      <ul class="ml--5" style="list-style: initial;">
+        <Typography variant="li">
           <p>The quantity and size of the rugs;</p>
-        </li>
-        <li>
+        </Typography>
+        <Typography variant="li">
           <p>How soiled they are;</p>
-        </li>
-        <li>
+        </Typography>
+        <Typography variant="li">
           <p>How easy the access to the rug is.</p>
-          <Typography variant="body">If you want to receive information on the specific cost to dry clean your sheepskin rug, do not hesitate to contact us at any suitable time for you.</Typography>
-        </li>
+        </Typography>
       </ul>
+      <li>
+        <Typography variant="body">If you want to receive information on the specific cost to dry clean your sheepskin rug, do not hesitate to contact us at any suitable time for you.</Typography>
+      </li>
     </Entry>
   </Container>
 }

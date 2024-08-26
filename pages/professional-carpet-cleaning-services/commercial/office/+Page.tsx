@@ -82,232 +82,247 @@ export function FaqSection() {
   const { Container, Entry } = createCollapsable()
   return <Container>
     <Entry>
-      <ul>
-        <li>
-          <Typography variant="h3">Do you have a cancellation fee?</Typography>
-          <Typography variant="body">Yes, if you cancel on the day of the cleaning, you will lose your deposit.</Typography></li>
-        <li>
-          <Typography variant="h3">Will I be charged for the congestion / parking?</Typography>
-          <Typography variant="body">Yes, clients are requested to ensure convenient parking space near the property, and any associated parking or congestion charges are to be covered by the client.</Typography></li>
-        <li>
-          <Typography variant="h3">Do I need to move furniture before the professional office carpet cleaning?</Typography>
-          <Typography variant="body">We kindly request your assistance in relocating small, fragile, or valuable furniture items like lamps and ornaments before the commercial office carpet cleaning to a secure area for insurance reasons. We are more than happy to assist in moving lightweight furniture such as chairs, armchairs, and tables during the cleaning process. After the cleaning is finished, we will return them to their original positions. In cases where heavy furniture like sofas, beds, wardrobes, and cupboards needs to be moved, an additional fee will apply. This is due to the extra time and effort expended by our technician, who will be duly compensated. Our main objective is to ensure a hassle-free experience for you throughout the entire procedure.</Typography></li>
-        <li>
-          <Typography variant="h3">What if I need office carpet deep cleaning on the 4th floor and I have no lift?</Typography>
-          <Typography variant="body">If your office space is situated on an upper floor and does not have an elevator, an extra fee for the office carpet steam cleaning will be applied because our equipment is quite heavy, exceeding 50 kilograms. The reason for this is the increased time and effort required to manually carry the equipment up multiple flights of stairs, which may result in our technicians becoming fatigued more quickly. As a result, our overall productivity for the day may be lower compared to our usual level of output.</Typography></li>
-        <li>
-          <Typography variant="h3">Are you insured?</Typography>
-          <Typography variant="body">Yes, our office carpet cleaning services are fully insured to cover any accidents or damages.</Typography></li>
-      </ul>
+      <li>
+        <Typography variant="h3">1. Do you have a cancellation fee?</Typography>
+        <Typography variant="body">Yes, if you cancel on the day of the cleaning, you will lose your deposit.</Typography></li>
+      <li>
+        <Typography variant="h3">2. Will I be charged for the congestion / parking?</Typography>
+        <Typography variant="body">Yes, clients are requested to ensure convenient parking space near the property, and any associated parking or congestion charges are to be covered by the client.</Typography></li>
+      <li>
+        <Typography variant="h3">3. Do I need to move furniture before the professional office carpet cleaning?</Typography>
+        <Typography variant="body">We kindly request your assistance in relocating small, fragile, or valuable furniture items like lamps and ornaments before the commercial office carpet cleaning to a secure area for insurance reasons. We are more than happy to assist in moving lightweight furniture such as chairs, armchairs, and tables during the cleaning process. After the cleaning is finished, we will return them to their original positions. In cases where heavy furniture like sofas, beds, wardrobes, and cupboards needs to be moved, an additional fee will apply. This is due to the extra time and effort expended by our technician, who will be duly compensated. Our main objective is to ensure a hassle-free experience for you throughout the entire procedure.</Typography></li>
+      <li>
+        <Typography variant="h3">4. What if I need office carpet deep cleaning on the 4th floor and I have no lift?</Typography>
+        <Typography variant="body">If your office space is situated on an upper floor and does not have an elevator, an extra fee for the office carpet steam cleaning will be applied because our equipment is quite heavy, exceeding 50 kilograms. The reason for this is the increased time and effort required to manually carry the equipment up multiple flights of stairs, which may result in our technicians becoming fatigued more quickly. As a result, our overall productivity for the day may be lower compared to our usual level of output.</Typography></li>
+      <li>
+        <Typography variant="h3">5. Are you insured?</Typography>
+        <Typography variant="body">Yes, our office carpet cleaning services are fully insured to cover any accidents or damages.</Typography></li>
     </Entry>
     <Entry>
-      <ul>
-        <li>
-          <Typography variant="h3">What happens if your cleaner damages anything while performing office carpet cleaning in London?</Typography>
-          <Typography variant="body">Comprehensive insurance coverage is in place to protect the client in case of an accident.</Typography></li>
-        <li>
-          <Typography variant="h3">How long does the process of professional office carpet cleaning take?</Typography>
-          <Typography variant="body">The time needed for the commercial office carpet cleaning process primarily relies on the following factors:</Typography></li>
-        <li>
-          <p >The chosen method for office carpet deep cleaning;</p>
-        </li>
-        <li>
-          <p >The level of soiling on the carpet;</p>
-        </li>
-        <li>
-          <p >The dimensions and the quantity of carpets involved;</p>
-        </li>
-        <li>
-          <p >Whether any stain removal treatments are necessary;</p>
-        </li>
-        <li>
-          <p >The type of stains present.</p>
-        </li>
-        <li>
-          <Typography variant="h3">How long does it take for the carpet to get completely dry after an office carpet steam cleaning is performed?</Typography>
-          <Typography variant="body">The drying time after an office carpet cleaning in London varies based on the carpet and the cleaning technique employed. For example, if <strong>steam cleaning</strong> is the method of choice, the estimated drying period for the carpet is between 7 to 9 hours. However, when the <strong>dry cleaning</strong> method is applied, the carpet will typically dry immediately after the cleaning process or shortly thereafter.</Typography></li>
-        <li>
-          <Typography variant="h3">Do you guarantee that after a professional office carpet cleaning all stains will be removed?</Typography>
-          <Typography variant="body">Unfortunately, providing a guarantee is not possible due to various uncontrollable variables at play. These variables include:</Typography></li>
-        <li>
-          <p >The length of time the stains have been present;</p>
-        </li>
-        <li>
-          <p >The composition of the substance responsible for the stains;</p>
-        </li>
-        <li>
-          <p >The specific type and fabric of the carpet;</p>
-        </li>
-        <li>
-          <p >Any previous attempts made to remove the stains.</p>
-          <Typography variant="body">Nonetheless, our commitment is unwavering in striving to eliminate all stains from your carpet. Our approach involves:</Typography>
-        </li>
-        <li>
-          <p >Employing advanced cleaning equipment;</p>
-        </li>
-        <li>
-          <p >Applying carefully chosen high-quality detergents;</p>
-        </li>
-        <li>
-          <p >Customising our method to match the carpet type and the origin of the stains, aiming for the most favourable outcomes.</p>
-        </li>
-        <li>
-          <Typography variant="h3">How soon will a cleaner visit me?</Typography>
-          <Typography variant="body">We will do our best to schedule your appointment for a commercial office carpet cleaning as promptly as possible. Typically, our bookings are full for up to three days in advance, although occasional exceptions may occur.</Typography></li>
-        <li>
-          <Typography variant="h3">Can you give me a quote over the phone or do you need to visit my property?</Typography>
-          <Typography variant="body">To provide a price estimate for an office carpet deep cleaning, an in-person inspection is necessary. This is because attempting to estimate the cost over the phone, without a physical assessment, can be quite challenging, and, in most instances, the final office carpet cleaning price may lack precision. The scheduled viewing and the subsequent office carpet cleaning in London will be carried out to your benefit and in consideration of your busy schedule.</Typography></li>
-        <li>
-          <Typography variant="h3">What payment methods do you accept for your office carpet steam cleaning?</Typography>
-          <Typography variant="body">Debit / credit cards, bank transfers and cash payments handed to the team are accepted.</Typography></li>
-        <li>
-          <Typography variant="h3">Can you send me an invoice for the office carpet cleaning in London?</Typography>
-          <Typography variant="body">Yes, a receipt can be sent via email or a preferred method.</Typography></li>
-        <li>
-          <Typography variant="h3">Are you qualified?</Typography>
-          <Typography variant="body">Yes, our team has gone through full training and is qualified by the <a class="color-paper-link hover-color-paper-link-hover:hover" href="https://trustedlocalcleaners.ncca.co.uk/listing/fine-carpet-cleaning-ltd/" target="_blank" rel="noopener">NCCA</a> and <a class="color-paper-link hover-color-paper-link-hover:hover" href="https://www.checkatrade.com/trades/FineCarpetCleaning" target="_blank" rel="noopener">Checkatrade</a>.</Typography></li>
-        <li>
-          <Typography variant="h3">How long have you been in the professional office carpet cleaning business?</Typography>
-          <Typography variant="body">From 2012 onwards, we have been actively involved in the commercial office carpet cleaning sector, catering to both commercial and residential customers. Throughout this time, we have encountered a diverse range of carpets, rugs, upholstery, and various stain types, amassing valuable expertise. Our unwavering commitment to delivering excellence has motivated us to enhance our services through the following methods:</Typography></li>
-        <li>
-          <p >Continuously upgrading our equipment and machinery with superior alternatives whenever they are available;</p>
-        </li>
-        <li>
-          <p >Consistently assessing and refining our cleaning products to ensure the highest service quality;</p>
-        </li>
-        <li>
-          <p >Dedicating ourselves to expanding our knowledge and skills through ongoing professional courses and training, always striving to elevate our expertise and competence.</p>
-        </li>
-        <li>
-          <Typography variant="h3">Can you give me a discount for the office carpet deep cleaning services?</Typography>
-          <Typography variant="body">Our professional office carpet cleaning services are known for their top-quality results, thanks to the use of the most effective equipment and over 20 premium cleaning products. What further distinguishes us is the competitiveness of our office carpet cleaning pricing, which is one of the most attractive ones in the market. Bundling all the services you need is a more cost-effective option compared to individual visits. This is because of the initial high cost and additional charges for each technician visit, taking into account factors such as travel time, parking, and the handling of heavy equipment during loading and unloading.</Typography></li>
+      <li>
+        <Typography variant="h3">6. What happens if your cleaner damages anything while performing office carpet cleaning in London?</Typography>
+        <Typography variant="body">Comprehensive insurance coverage is in place to protect the client in case of an accident.</Typography></li>
+      <li>
+        <Typography variant="h3">7. How long does the process of professional office carpet cleaning take?</Typography>
+        <Typography variant="body">The time needed for the commercial office carpet cleaning process primarily relies on the following factors:</Typography></li>
+      <ul class="ml--5" style="list-style: initial;">
+        <Typography variant="li">
+          <p>The chosen method for office carpet deep cleaning;</p>
+        </Typography>
+        <Typography variant="li">
+          <p>The level of soiling on the carpet;</p>
+        </Typography>
+        <Typography variant="li">
+          <p>The dimensions and the quantity of carpets involved;</p>
+        </Typography>
+        <Typography variant="li">
+          <p>Whether any stain removal treatments are necessary;</p>
+        </Typography>
+        <Typography variant="li">
+          <p>The type of stains present.</p>
+        </Typography>
       </ul>
+      <li>
+        <Typography variant="h3">8. How long does it take for the carpet to get completely dry after an office carpet steam cleaning is performed?</Typography>
+        <Typography variant="body">The drying time after an office carpet cleaning in London varies based on the carpet and the cleaning technique employed. For example, if <strong>steam cleaning</strong> is the method of choice, the estimated drying period for the carpet is between 7 to 9 hours. However, when the <strong>dry cleaning</strong> method is applied, the carpet will typically dry immediately after the cleaning process or shortly thereafter.</Typography></li>
+      <li>
+        <Typography variant="h3">9. Do you guarantee that after a professional office carpet cleaning all stains will be removed?</Typography>
+        <Typography variant="body">Unfortunately, providing a guarantee is not possible due to various uncontrollable variables at play. These variables include:</Typography></li>
+      <ul class="ml--5" style="list-style: initial;">
+        <Typography variant="li">
+          <p>The length of time the stains have been present;</p>
+        </Typography>
+        <Typography variant="li">
+          <p>The composition of the substance responsible for the stains;</p>
+        </Typography>
+        <Typography variant="li">
+          <p>The specific type and fabric of the carpet;</p>
+        </Typography>
+        <Typography variant="li">
+          <p>Any previous attempts made to remove the stains.</p>
+        </Typography>
+      </ul>
+      <li>
+        <Typography variant="body">Nonetheless, our commitment is unwavering in striving to eliminate all stains from your carpet. Our approach involves:</Typography>
+      </li>
+      <ul class="ml--5" style="list-style: initial;">
+        <Typography variant="li">
+          <p>Employing advanced cleaning equipment;</p>
+        </Typography>
+        <Typography variant="li">
+          <p>Applying carefully chosen high-quality detergents;</p>
+        </Typography>
+        <Typography variant="li">
+          <p>Customising our method to match the carpet type and the origin of the stains, aiming for the most favourable outcomes.</p>
+        </Typography>
+      </ul>
+      <li>
+        <Typography variant="h3">10. How soon will a cleaner visit me?</Typography>
+        <Typography variant="body">We will do our best to schedule your appointment for a commercial office carpet cleaning as promptly as possible. Typically, our bookings are full for up to three days in advance, although occasional exceptions may occur.</Typography></li>
+      <li>
+        <Typography variant="h3">11. Can you give me a quote over the phone or do you need to visit my property?</Typography>
+        <Typography variant="body">To provide a price estimate for an office carpet deep cleaning, an in-person inspection is necessary. This is because attempting to estimate the cost over the phone, without a physical assessment, can be quite challenging, and, in most instances, the final office carpet cleaning price may lack precision. The scheduled viewing and the subsequent office carpet cleaning in London will be carried out to your benefit and in consideration of your busy schedule.</Typography></li>
+      <li>
+        <Typography variant="h3">12. What payment methods do you accept for your office carpet steam cleaning?</Typography>
+        <Typography variant="body">Debit / credit cards, bank transfers and cash payments handed to the team are accepted.</Typography></li>
+      <li>
+        <Typography variant="h3">13. Can you send me an invoice for the office carpet cleaning in London?</Typography>
+        <Typography variant="body">Yes, a receipt can be sent via email or a preferred method.</Typography></li>
+      <li>
+        <Typography variant="h3">14. Are you qualified?</Typography>
+        <Typography variant="body">Yes, our team has gone through full training and is qualified by the <a class="color-paper-link hover-color-paper-link-hover:hover" href="https://trustedlocalcleaners.ncca.co.uk/listing/fine-carpet-cleaning-ltd/" target="_blank" rel="noopener">NCCA</a> and <a class="color-paper-link hover-color-paper-link-hover:hover" href="https://www.checkatrade.com/trades/FineCarpetCleaning" target="_blank" rel="noopener">Checkatrade</a>.</Typography></li>
+      <li>
+        <Typography variant="h3">15. How long have you been in the professional office carpet cleaning business?</Typography>
+        <Typography variant="body">From 2012 onwards, we have been actively involved in the commercial office carpet cleaning sector, catering to both commercial and residential customers. Throughout this time, we have encountered a diverse range of carpets, rugs, upholstery, and various stain types, amassing valuable expertise. Our unwavering commitment to delivering excellence has motivated us to enhance our services through the following methods:</Typography></li>
+      <ul class="ml--5" style="list-style: initial;">
+        <Typography variant="li">
+          <p>Continuously upgrading our equipment and machinery with superior alternatives whenever they are available;</p>
+        </Typography>
+        <Typography variant="li">
+          <p>Consistently assessing and refining our cleaning products to ensure the highest service quality;</p>
+        </Typography>
+        <Typography variant="li">
+          <p>Dedicating ourselves to expanding our knowledge and skills through ongoing professional courses and training, always striving to elevate our expertise and competence.</p>
+        </Typography>
+      </ul>
+      <li>
+        <Typography variant="h3">16. Can you give me a discount for the office carpet deep cleaning services?</Typography>
+        <Typography variant="body">Our professional office carpet cleaning services are known for their top-quality results, thanks to the use of the most effective equipment and over 20 premium cleaning products. What further distinguishes us is the competitiveness of our office carpet cleaning pricing, which is one of the most attractive ones in the market. Bundling all the services you need is a more cost-effective option compared to individual visits. This is because of the initial high cost and additional charges for each technician visit, taking into account factors such as travel time, parking, and the handling of heavy equipment during loading and unloading.</Typography></li>
     </Entry>
     <Entry>
-      <ul>
-        <li>
-          <Typography variant="h3">How often should office carpets be cleaned?</Typography>
-          <Typography variant="body">The frequency of office carpet cleaning can vary depending on several factors, including:</Typography></li>
-        <li>
-          <p ><strong>The level of foot traffic</strong> - Entrance areas, hallways, and common spaces that experience heavy foot traffic should typically be cleaned more frequently.</p>
-        </li>
-        <li>
-          <p ><strong>The type of business</strong> - Certain businesses, such as healthcare facilities or food service establishments, may require more frequent cleaning to meet industry-specific hygiene standards.</p>
-        </li>
-        <li>
-          <p ><strong>The specific needs of the office space</strong> - For example, offices with employees who have allergies or sensitivities to dust and allergens may benefit from more frequent cleaning to maintain indoor air quality.</p>
-        </li>
-        <li>
-          <p >Does the entrance have a doormat?</p>
-        </li>
-        <li>
-          <p >On which floor it is located (generally the first level is dirtier because you enter the room straight from outside).</p>
-        </li>
-        <Typography variant="body">It's important to regularly vacuum your carpets or rugs to refresh and prolong the life of the carpet. Additionally, professional cleaning from an office carpet cleaning company should be scheduled based on the factors mentioned above.</Typography>
-        <Typography variant="body">We recommend hiring an office carpet cleaning company at least twice a year, or even more frequently, depending on your office’s situation. You can contact us at any time to consult with experts in cleaning commercial carpet tiles, carpets and rugs to determine what cleaning needs will be best for your specific office space.</Typography>
-        <li>
-          <Typography variant="h3">How to clean office carpet?</Typography>
-          <Typography variant="body">Office carpet cleaning involves a combination of routine maintenance and periodic deep cleaning to keep the space looking clean and professional. Here's a step-by-step guide on how to clean office carpets:</Typography>
-          <Typography variant="body"><strong>Routine maintenance:</strong></Typography>
-        </li>
-        <li>
-          <p ><strong>Regular vacuuming:</strong> Vacuuming the office carpet or rug on a daily or weekly basis, depending on the level of foot traffic, will ensure a cleaner and fresher environment and will prolong the lifespan of the carpet.</p>
-        </li>
-        <li>
-          <p ><strong>Bonnet cleaning:</strong> We recommend a bonnet cleaning every 3 months especially for offices. The advantages of this method are that the machine does not make noise and the carpet is dry instantly. This type of cleaning is only for routine maintenance because it is not as efficient as the steam cleaning and that is the reason why it is cheaper. You should know that we will need access to electricity, water and sewage connections, and provided parking places.</p>
-        </li>
-        <li>
-          <p ><strong>Use entrance mats:</strong> Place durable entrance mats at all entry points to trap dirt and debris before you reach the carpet. Clean and replace these mats as needed.</p>
-        </li>
-        <Typography variant="body"><strong>Deep cleaning:</strong></Typography>
-        <li>
+      <li>
+        <Typography variant="h3">17. How often should office carpets be cleaned?</Typography>
+        <Typography variant="body">The frequency of office carpet cleaning can vary depending on several factors, including:</Typography></li>
+      <ul class="ml--5" style="list-style: initial;">
+        <Typography variant="li">
+          <p><strong>The level of foot traffic</strong> - Entrance areas, hallways, and common spaces that experience heavy foot traffic should typically be cleaned more frequently.</p>
+        </Typography>
+        <Typography variant="li">
+          <p><strong>The type of business</strong> - Certain businesses, such as healthcare facilities or food service establishments, may require more frequent cleaning to meet industry-specific hygiene standards.</p>
+        </Typography>
+        <Typography variant="li">
+          <p><strong>The specific needs of the office space</strong> - For example, offices with employees who have allergies or sensitivities to dust and allergens may benefit from more frequent cleaning to maintain indoor air quality.</p>
+        </Typography>
+        <Typography variant="li">
+          <p>Does the entrance have a doormat?</p>
+        </Typography>
+        <Typography variant="li">
+          <p>On which floor it is located (generally the first level is dirtier because you enter the room straight from outside).</p>
+        </Typography>
+      </ul>
+      <Typography variant="body">It's important to regularly vacuum your carpets or rugs to refresh and prolong the life of the carpet. Additionally, professional cleaning from an office carpet cleaning company should be scheduled based on the factors mentioned above.</Typography>
+      <Typography variant="body">We recommend hiring an office carpet cleaning company at least twice a year, or even more frequently, depending on your office’s situation. You can contact us at any time to consult with experts in cleaning commercial carpet tiles, carpets and rugs to determine what cleaning needs will be best for your specific office space.</Typography>
+      <li>
+        <Typography variant="h3">18. How to clean office carpet?</Typography>
+        <Typography variant="body">Office carpet cleaning involves a combination of routine maintenance and periodic deep cleaning to keep the space looking clean and professional. Here's a step-by-step guide on how to clean office carpets:</Typography>
+        <Typography variant="body"><strong>Routine maintenance:</strong></Typography>
+      </li>
+      <ul class="ml--5" style="list-style: initial;">
+        <Typography variant="li">
+          <p><strong>Regular vacuuming:</strong> Vacuuming the office carpet or rug on a daily or weekly basis, depending on the level of foot traffic, will ensure a cleaner and fresher environment and will prolong the lifespan of the carpet.</p>
+        </Typography>
+        <Typography variant="li">
+          <p><strong>Bonnet cleaning:</strong> We recommend a bonnet cleaning every 3 months especially for offices. The advantages of this method are that the machine does not make noise and the carpet is dry instantly. This type of cleaning is only for routine maintenance because it is not as efficient as the steam cleaning and that is the reason why it is cheaper. You should know that we will need access to electricity, water and sewage connections, and provided parking places.</p>
+        </Typography>
+        <Typography variant="li">
+          <p><strong>Use entrance mats:</strong> Place durable entrance mats at all entry points to trap dirt and debris before you reach the carpet. Clean and replace these mats as needed.</p>
+        </Typography>
+      </ul>
+      <Typography variant="body"><strong>Deep cleaning:</strong></Typography>
+      <ul class="ml--5" style="list-style: initial;">
+        <Typography variant="li">
           <p ><strong>Office carpet cleaning services:</strong> Schedule a cleaning appointment with an office carpet cleaning company at regular intervals, typically every 6 months or more frequently, depending on the level of foot traffic and specific needs of your office.</p>
-        </li>
-        <li>
-          <p ><strong>Stain removal:</strong> We advise you to book stain removal services to eliminate stubborn stains so that they can be handled effectively.</p>
-        </li>
-        <li>
-          <p ><strong>Carpet protection:</strong> After cleaning, consider having a carpet stain protection service performed to repel future stains and make maintenance easier.</p>
-        </li>
-        <li>
-          <p ><strong>Drying:</strong> Ensure the carpet is thoroughly dried before using it. Proper ventilation can speed up the drying process.</p>
-        </li>
-        <Typography variant="body">By following these steps and maintaining a regular carpet cleaning office schedule, you can keep your carpet looking clean, extend its lifespan, and create a comfortable and professional work environment.</Typography>
-        <li>
-          <Typography variant="h3">How long do office carpets last?</Typography>
-          <Typography variant="body">The lifespan of office carpets can vary significantly depending on several factors, including the quality of the carpet, the level of foot traffic, and the maintenance practices. On average, office carpets can last anywhere from 5 to 15 years. Here are some of the key factors that influence the longevity of office carpets:</Typography>
-        </li>
-        <li>
-          <p >The quality and type of the carpet;</p>
-        </li>
-        <li>
-          <p >The amount of foot traffic the carpet receives;</p>
-        </li>
-        <li>
-          <p >Proper and consistent maintenance;</p>
-        </li>
-        <li>
-          <p >The frequency of professional deep cleaning;</p>
-        </li>
-        <li>
-          <p >Proper cleaning practices;</p>
-        </li>
-        <li>
-          <p >Promptly addressing spills and stains, preventing them from causing long-term damage.</p>
-        </li>
-        <Typography variant="body">It's important to note that while office carpets may last for many years, their appearance and condition can deteriorate over time, especially in high-traffic areas. Regular maintenance, including from a company experienced in cleaning commercial carpet tiles, carpets, rugs and upholstery, is essential for extending the life and maintaining the aesthetics of office carpets.</Typography>
-
-        <li>
-          <Typography variant="h3">Why office carpet cleaning is important?</Typography>
-          <Typography variant="body">Office carpet cleaning is important for several reasons, and it plays a significant role in maintaining a clean, healthy, and professional work environment. Some key reasons why cleaning commercial carpet tiles, carpets and rugs is essential are:</Typography></li>
-        <li>
-          <p >Appearance and aesthetics;</p>
-        </li>
-        <li>
-          <p >Employee health and well-being;</p>
-        </li>
-        <li>
-          <p >Prolonged carpet lifespan;</p>
-        </li>
-        <li>
-          <p >Stain and odour removal;</p>
-        </li>
-        <li>
-          <p >Professional image;</p>
-        </li>
-        <li>
-          <p >Reduced replacement costs.</p>
-        </li>
-        <Typography variant="body">Overall, office carpet cleaning is an integral part of facility management. Regular cleaning, combined with hiring an office carpet cleaning company, is essential for achieving these benefits and ensuring the longevity of your office carpets.</Typography>
-        <li>
-          <Typography variant="h3">What are your office carpet cleaning prices?</Typography>
-          <Typography variant="body">Our office carpet cleaning prices depend on a number of factors such as:</Typography></li>
-        <li>
-          <p >The quantity and size of the carpets;</p>
-        </li>
-        <li>
-          <p >How soiled they are;</p>
-        </li>
-        <li>
-          <p >The fabric and type of the carpets;</p>
-        </li>
-        <li>
-          <p >How easy the access to the carpets is.</p>
-        </li>
-        <p>To learn more, visit our <a class="color-paper-link hover-color-paper-link-hover:hover" href="#price_table">office carpet cleaning prices</a>.</p>
-        <li>
-          <Typography variant="h3">Are you cleaning commercial carpet tiles?</Typography>
-          <Typography variant="body">Yes, we are cleaning commercial carpet tiles. Our cleaners are able to handle any type of office carpet including commercial carpet tiles.</Typography></li>
-        <li>
-          <Typography variant="h3">Do the cleaning machines make a lot of noise? Will they disturb the progress of work?</Typography>
-          <Typography variant="body">Yes, the machines are noisy, but office carpet cleaning is intended to be effective, quick, and save downtime for your business. Our strong equipment and trained specialists ensure that cleaning is done fast, generally in a couple of hours, depending on the size and condition of the space. In addition, we provide flexible scheduling alternatives, such as after-hours and weekend visits, to reduce disturbance to your everyday operations.</Typography></li>
-        <li>
-          <Typography variant="h3">Will our employees block the work of your specialists?</Typography>
-          <Typography variant="body">Our crew is trained to operate swiftly and quietly to limit disruption to your employees and everyday activities. We realise the significance of maintaining a productive work atmosphere, therefore we recommend booking when there are no other people in the office to avoid interrupting each other's work. We may schedule office carpet cleaning outside of your typical working hours, including nights and weekends, to prevent affecting your business operations.</Typography></li>
-        <li>
-          <Typography variant="h3">Can you clean carpets outside of work hours and on weekends?</Typography>
-          <Typography variant="body">Yes, we can clean office carpets outside of usual business hours. We understand how crucial it is to limit disturbance to your business. That's why we provide flexible schedules that include evenings, weekends, and early mornings. Our objective is to meet your unique requirements and to guarantee that your carpets are cleaned at a time that is most suitable for you, so that your business can continue to operate undisturbed. Contact us to discuss your favourite time, and we will establish a cleaning plan that works for you.</Typography></li>
+        </Typography>
+        <Typography variant="li">
+          <p><strong>Stain removal:</strong> We advise you to book stain removal services to eliminate stubborn stains so that they can be handled effectively.</p>
+        </Typography>
+        <Typography variant="li">
+          <p><strong>Carpet protection:</strong> After cleaning, consider having a carpet stain protection service performed to repel future stains and make maintenance easier.</p>
+        </Typography>
+        <Typography variant="li">
+          <p><strong>Drying:</strong> Ensure the carpet is thoroughly dried before using it. Proper ventilation can speed up the drying process.</p>
+        </Typography>
       </ul>
+      <Typography variant="body">By following these steps and maintaining a regular carpet cleaning office schedule, you can keep your carpet looking clean, extend its lifespan, and create a comfortable and professional work environment.</Typography>
+      <li>
+        <Typography variant="h3">19. How long do office carpets last?</Typography>
+        <Typography variant="body">The lifespan of office carpets can vary significantly depending on several factors, including the quality of the carpet, the level of foot traffic, and the maintenance practices. On average, office carpets can last anywhere from 5 to 15 years. Here are some of the key factors that influence the longevity of office carpets:</Typography>
+      </li>
+      <ul class="ml--5" style="list-style: initial;">
+        <Typography variant="li">
+          <p>The quality and type of the carpet;</p>
+        </Typography>
+        <Typography variant="li">
+          <p>The amount of foot traffic the carpet receives;</p>
+        </Typography>
+        <Typography variant="li">
+          <p>Proper and consistent maintenance;</p>
+        </Typography>
+        <Typography variant="li">
+          <p>The frequency of professional deep cleaning;</p>
+        </Typography>
+        <Typography variant="li">
+          <p>Proper cleaning practices;</p>
+        </Typography>
+        <Typography variant="li">
+          <p>Promptly addressing spills and stains, preventing them from causing long-term damage.</p>
+        </Typography>
+      </ul>
+      <Typography variant="body">It's important to note that while office carpets may last for many years, their appearance and condition can deteriorate over time, especially in high-traffic areas. Regular maintenance, including from a company experienced in cleaning commercial carpet tiles, carpets, rugs and upholstery, is essential for extending the life and maintaining the aesthetics of office carpets.</Typography>
+      <li>
+        <Typography variant="h3">20. Why office carpet cleaning is important?</Typography>
+        <Typography variant="body">Office carpet cleaning is important for several reasons, and it plays a significant role in maintaining a clean, healthy, and professional work environment. Some key reasons why cleaning commercial carpet tiles, carpets and rugs is essential are:</Typography></li>
+      <ul class="ml--5" style="list-style: initial;">
+        <Typography variant="li">
+          <p>Appearance and aesthetics;</p>
+        </Typography>
+        <Typography variant="li">
+          <p>Employee health and well-being;</p>
+        </Typography>
+        <Typography variant="li">
+          <p>Prolonged carpet lifespan;</p>
+        </Typography>
+        <Typography variant="li">
+          <p>Stain and odour removal;</p>
+        </Typography>
+        <Typography variant="li">
+          <p>Professional image;</p>
+        </Typography>
+        <Typography variant="li">
+          <p>Reduced replacement costs.</p>
+        </Typography>
+      </ul>
+      <Typography variant="body">Overall, office carpet cleaning is an integral part of facility management. Regular cleaning, combined with hiring an office carpet cleaning company, is essential for achieving these benefits and ensuring the longevity of your office carpets.</Typography>
+      <li>
+        <Typography variant="h3">21. What are your office carpet cleaning prices?</Typography>
+        <Typography variant="body">Our office carpet cleaning prices depend on a number of factors such as:</Typography></li>
+      <ul class="ml--5" style="list-style: initial;">
+        <Typography variant="li">
+          <p>The quantity and size of the carpets;</p>
+        </Typography>
+        <Typography variant="li">
+          <p>How soiled they are;</p>
+        </Typography>
+        <Typography variant="li">
+          <p>The fabric and type of the carpets;</p>
+        </Typography>
+        <Typography variant="li">
+          <p>How easy the access to the carpets is.</p>
+        </Typography>
+      </ul>
+      <Typography variant="body">To learn more, visit our <a class="color-paper-link hover-color-paper-link-hover:hover" href="#price_table">office carpet cleaning prices</a>.</Typography>
+      <li>
+        <Typography variant="h3">22. Are you cleaning commercial carpet tiles?</Typography>
+        <Typography variant="body">Yes, we are cleaning commercial carpet tiles. Our cleaners are able to handle any type of office carpet including commercial carpet tiles.</Typography></li>
+      <li>
+        <Typography variant="h3">23. Do the cleaning machines make a lot of noise? Will they disturb the progress of work?</Typography>
+        <Typography variant="body">Yes, the machines are noisy, but office carpet cleaning is intended to be effective, quick, and save downtime for your business. Our strong equipment and trained specialists ensure that cleaning is done fast, generally in a couple of hours, depending on the size and condition of the space. In addition, we provide flexible scheduling alternatives, such as after-hours and weekend visits, to reduce disturbance to your everyday operations.</Typography></li>
+      <li>
+        <Typography variant="h3">24. Will our employees block the work of your specialists?</Typography>
+        <Typography variant="body">Our crew is trained to operate swiftly and quietly to limit disruption to your employees and everyday activities. We realise the significance of maintaining a productive work atmosphere, therefore we recommend booking when there are no other people in the office to avoid interrupting each other's work. We may schedule office carpet cleaning outside of your typical working hours, including nights and weekends, to prevent affecting your business operations.</Typography></li>
+      <li>
+        <Typography variant="h3">25. Can you clean carpets outside of work hours and on weekends?</Typography>
+        <Typography variant="body">Yes, we can clean office carpets outside of usual business hours. We understand how crucial it is to limit disturbance to your business. That's why we provide flexible schedules that include evenings, weekends, and early mornings. Our objective is to meet your unique requirements and to guarantee that your carpets are cleaned at a time that is most suitable for you, so that your business can continue to operate undisturbed. Contact us to discuss your favourite time, and we will establish a cleaning plan that works for you.</Typography></li>
     </Entry>
   </Container>
 }

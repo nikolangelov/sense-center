@@ -131,7 +131,7 @@ export function FaqSection() {
 	return <Container>
 		<Entry>
 			<li>
-				<Typography variant="h3"><span >1.</span> How long have you been in the carpet cleaning business?</Typography>
+				<Typography variant="h3">1. How long have you been in the carpet cleaning business?</Typography>
 				<Typography variant="body">"Fine Carpet Cleaning" Ltd. has been operating in the carpet cleaning industry since 2012. We serve both commercial and residential clients, and over the years, we've cleaned all kinds of carpets, rugs, upholstery, and stains. Through these experiences, we've acquired valuable knowledge and expertise. Our commitment to delivering top-notch service has driven us to improve our services in the following ways:</Typography>
 				<ul class="ml--5" style="list-style: initial;">
 					<Typography variant="li">
@@ -146,7 +146,7 @@ export function FaqSection() {
 				</ul>
 			</li>
 			<li>
-				<Typography variant="h3">When do you need professional carpet cleaning?</Typography>
+				<Typography variant="h3">2. When do you need professional carpet cleaning?</Typography>
 				<Typography variant="body">In our experience, the majority of our clients have sought our carpet cleaning services when:</Typography>
 				<ul class="ml--5" style="list-style: initial;">
 					<Typography variant="li">
@@ -176,7 +176,7 @@ export function FaqSection() {
 				</ul>
 			</li>
 			<li>
-				<Typography variant="h3">How frequently should a carpet be professionally cleaned?</Typography>
+				<Typography variant="h3">3. How frequently should a carpet be professionally cleaned?</Typography>
 				<Typography variant="body">How often your carpets should be deep cleaned depends on factors such as how fast the carpet becomes soiled. As a general guideline, it is advisable to have your carpet deep cleaned once every 12 months. However, we suggest considering professional carpet cleaning more often than once a year in the following situations:</Typography>
 				<ul class="ml--5" style="list-style: initial;">
 					<Typography variant="li">
@@ -197,7 +197,7 @@ export function FaqSection() {
 				</ul>
 			</li>
 			<li>
-				<Typography variant="h3">How much will a professional carpet cleaning cost?</Typography>
+				<Typography variant="h3">4. How much will a professional carpet cleaning cost?</Typography>
 				<Typography variant="body">The price of carpet cleaning depends on several factors. The most significant among them are:</Typography>
 				<ul class="ml--5" style="list-style: initial;">
 					<Typography variant="li">
@@ -215,7 +215,7 @@ export function FaqSection() {
 				</ul>
 			</li>
 			<li>
-				<Typography variant="h3">How fast will the carpet get dry after a cleaning service?</Typography>
+				<Typography variant="h3">5. How fast will the carpet get dry after a cleaning service?</Typography>
 				<Typography variant="body">The drying time of a carpet is determined by various factors. Among them are:</Typography>
 				<ul class="ml--5" style="list-style: initial;">
 					<Typography variant="li">
@@ -236,7 +236,7 @@ export function FaqSection() {
 		</Entry>
 		<Entry>
 			<li>
-				<Typography variant="h3">How long will the carpet cleaning service take?</Typography>
+				<Typography variant="h3">6. How long will the carpet cleaning service take?</Typography>
 				<Typography variant="body">The duration of our carpet cleaning service depends on the following factors:</Typography>
 				<ul class="ml--5" style="list-style: initial;">
 					<Typography variant="li">
@@ -253,26 +253,26 @@ export function FaqSection() {
 			</li>
 
 			<li>
-				<Typography variant="h3">Will carpet cleaning remove the stains on my carpet?</Typography>
+				<Typography variant="h3">7. Will carpet cleaning remove the stains on my carpet?</Typography>
 				<Typography variant="body"><strong>In summary, yes</strong>, professional carpet cleaning is very effective in removing stubborn stains, dirt, grime, bacteria, dust mites, allergens, mould, pet dander, and odours. However, some particularly tough stains, especially very old or improperly treated ones, can present challenges for complete removal, even with professional assistance.</Typography>
 				<Typography variant="body">Thankfully, our extensive experience and high-quality equipment at "Fine Carpet Cleaning” Ltd. have led to our high-rates of successful stain removal. Nevertheless, we cannot guarantee the complete removal of every stain. We will thoroughly assess the stain and let you know during the quotation process whether or not the stain can be successfully eliminated.</Typography></li>
 			<li>
-				<Typography variant="h3">Are you able to give me a carpet cleaning quote over the phone, or do you need to visit my property?</Typography>
+				<Typography variant="h3">8. Are you able to give me a carpet cleaning quote over the phone, or do you need to visit my property?</Typography>
 				<Typography variant="body"><strong>Yes</strong>, we can provide you with a cost estimate over the phone without the necessity of an in-person visit. For commercial properties, a site visit may be necessary. You have the option to get a carpet cleaning quote online as well.</Typography></li>
 			<li>
-				<Typography variant="h3">How soon can I expect a carpet cleaner to visit me?</Typography>
+				<Typography variant="h3">9. How soon can I expect a carpet cleaner to visit me?</Typography>
 				<Typography variant="body">We will make every effort to schedule your appointment as soon as possible. Typically, our schedule is booked up to three days in advance, although occasional exceptions may be possible.</Typography></li>
 			<li>
-				<Typography variant="h3">What payment methods do you accept?</Typography>
+				<Typography variant="h3">10. What payment methods do you accept?</Typography>
 				<Typography variant="body">We accept payment via debit/credit cards as well as cash, directly to our team.</Typography></li>
 			<li>
-				<Typography variant="h3">Can you provide me with an invoice for the carpet cleaning services?</Typography>
+				<Typography variant="h3">11. Can you provide me with an invoice for the carpet cleaning services?</Typography>
 				<Typography variant="body">Yes, we will provide you with a receipt via email.</Typography></li>
 			<li>
-				<Typography variant="h3">Are you insured?</Typography>
+				<Typography variant="h3">12. Are you insured?</Typography>
 				<Typography variant="body">Yes, we are fully insured.</Typography></li>
 			<li>
-				<Typography variant="h3">What happens if your cleaner damages anything while performing carpet cleaning at my property?</Typography>
+				<Typography variant="h3">13. What happens if your cleaner damages anything while performing carpet cleaning at my property?</Typography>
 				<Typography variant="body">We are fully insured, and if an accident happens, we are fully covered.</Typography></li>
 		</Entry>
 	</Container>

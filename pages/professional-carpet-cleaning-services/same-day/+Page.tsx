@@ -51,21 +51,21 @@ const GalerrySliderMobile = () => {
 };
 
 const VideoPlayer = () => {
-	return (
-		<div class="flex flex-justify-center flex-items-center mt-20">
-			<video
-				class="mt-10 b-rd-3" style="width: 100%; width: -moz-available; width: -webkit-fill-available; width: fill-available;"
-				autoplay
-				controls
-				muted
-			>
-				<source
-					src="/assets/Professional Carpet Cleaning London - Fine Carpet Cleaning (1).mp4"
-					type="video/mp4"
-				/>
-			</video>
-		</div>
-	);
+  return (
+    <div class="flex flex-justify-center flex-items-center mt-20">
+      <video
+        class="mt-10 b-rd-3" style="width: 100%; width: -moz-available; width: -webkit-fill-available; width: fill-available;"
+        autoplay
+        controls
+        muted
+      >
+        <source
+          src="/assets/Professional Carpet Cleaning London - Fine Carpet Cleaning (1).mp4"
+          type="video/mp4"
+        />
+      </video>
+    </div>
+  );
 };
 
 function FleurDivider() {
@@ -81,87 +81,89 @@ export function FaqSection() {
   const { Container, Entry } = createCollapsable()
   return <Container>
     <Entry>
-    <ul>
-          <li>
-            <Typography variant="h3">Do you have a cancellation fee?</Typography>
-            <Typography variant="body">Yes, you will lose your money if you cancel on the day of the cleaning.</Typography></li>
-          <li>
-            <Typography variant="h3">Do I need to pay for congestion / parking charges?</Typography>
-            <Typography variant="body">Yes, the customer is expected to provide appropriate parking arrangements for our cars near to the location and to pay for any additional parking or traffic costs.</Typography></li>
-          <li>
-            <Typography variant="h3">Do carpet cleaning services move furniture?</Typography>
-            <Typography variant="body">For insurance purposes, we would appreciate it if you could move tiny, delicate, or expensive furniture pieces, including lamps and decorations. If at all possible, please move them to a spot where cleaning won't bother them long before we arrive. We want flooring that is free of any obstacles. During the cleaning, we will assist with moving and rearranging other light furniture, such as chairs, tables, and armchairs. We will charge you more if heavy furniture needs to be moved (such as couches, beds, closets, cabinets, etc.) relocated.The reason is that our professionals will be compensated more for spending more time and energy on this.</Typography></li>
-          <li>
-            <Typography variant="h3">What if I live on the 4th floor or higher and I have no lift?</Typography>
-            <Typography variant="body">Our equipment is quite heavy (50kg and more), so we charge an extra fee for each additional level that our technician must carry by hand. The reason for this is that it generally takes a lot of energy and time, and after that, our professionals can't perform as much work as they normally do.</Typography></li>
-          <li>
-            <Typography variant="h3">Are you insured?</Typography>
-            <Typography variant="body">Yes, we are fully insured.</Typography></li>
-        </ul>
+      <li>
+        <Typography variant="h3">1. Do you have a cancellation fee?</Typography>
+        <Typography variant="body">Yes, you will lose your money if you cancel on the day of the cleaning.</Typography></li>
+      <li>
+        <Typography variant="h3">2. Do I need to pay for congestion / parking charges?</Typography>
+        <Typography variant="body">Yes, the customer is expected to provide appropriate parking arrangements for our cars near to the location and to pay for any additional parking or traffic costs.</Typography></li>
+      <li>
+        <Typography variant="h3">3. Do carpet cleaning services move furniture?</Typography>
+        <Typography variant="body">For insurance purposes, we would appreciate it if you could move tiny, delicate, or expensive furniture pieces, including lamps and decorations. If at all possible, please move them to a spot where cleaning won't bother them long before we arrive. We want flooring that is free of any obstacles. During the cleaning, we will assist with moving and rearranging other light furniture, such as chairs, tables, and armchairs. We will charge you more if heavy furniture needs to be moved (such as couches, beds, closets, cabinets, etc.) relocated.The reason is that our professionals will be compensated more for spending more time and energy on this.</Typography></li>
+      <li>
+        <Typography variant="h3">4. What if I live on the 4th floor or higher and I have no lift?</Typography>
+        <Typography variant="body">Our equipment is quite heavy (50kg and more), so we charge an extra fee for each additional level that our technician must carry by hand. The reason for this is that it generally takes a lot of energy and time, and after that, our professionals can't perform as much work as they normally do.</Typography></li>
+      <li>
+        <Typography variant="h3">5. Are you insured?</Typography>
+        <Typography variant="body">Yes, we are fully insured.</Typography></li>
     </Entry>
     <Entry>
-    <ul>
-          <li>
-            <Typography variant="h3">What happens if your cleaner damages anything while performing same day carpet cleaning services?</Typography>
-            <Typography variant="body">We have full coverage, so don’t worry if an accident happens, we have full coverage.</Typography></li>
-          <li>
-            <Typography variant="h3">How long does the process of a same day carpet cleaning service take?</Typography>
-            <Typography variant="body">The same day carpet cleaning process is determined by how filthy the carpet is and if it requires stain removal treatments.Usually, it takes from 20 to 60 minutes per room.</Typography></li>
-          <li>
-            <Typography variant="h3">How long does it take for the carpet to get dry?</Typography>
-            <Typography variant="body">It can be affected by a variety of elements, including the type of carpet, what condition it is in, the thickness of the pile, and whether or not it requires stain removal services.</Typography>
+      <li>
+        <Typography variant="h3">6. What happens if your cleaner damages anything while performing same day carpet cleaning services?</Typography>
+        <Typography variant="body">We have full coverage, so don’t worry if an accident happens, we have full coverage.</Typography></li>
+      <li>
+        <Typography variant="h3">7. How long does the process of a same day carpet cleaning service take?</Typography>
+        <Typography variant="body">The same day carpet cleaning process is determined by how filthy the carpet is and if it requires stain removal treatments.Usually, it takes from 20 to 60 minutes per room.</Typography></li>
+      <li>
+        <Typography variant="h3">8. How long does it take for the carpet to get dry?</Typography>
+        <Typography variant="body">It can be affected by a variety of elements, including the type of carpet, what condition it is in, the thickness of the pile, and whether or not it requires stain removal services.</Typography>
 
-            <Typography variant="body">Wool carpets retain more water and dry slower, often between 10 and 12 hours. If the carpet is really dirty and needs to be treated several times, the drying period may be significantly longer.</Typography>
+        <Typography variant="body">Wool carpets retain more water and dry slower, often between 10 and 12 hours. If the carpet is really dirty and needs to be treated several times, the drying period may be significantly longer.</Typography>
 
-            <Typography variant="body">Synthetic carpets dry faster, between 7 and 10 hours, and the above is still valid (it depends on how dirty it is and the number of required treatments).</Typography></li>
-          <li>
-            <Typography variant="h3">Do you guarantee that after cleaning my carpet, all stains will be removed?</Typography>
-            <Typography variant="body">No, since there are elements involved that are beyond our control. Among these aspects are:</Typography></li>
-          <li>
-            <p>How old are the stains?</p>
-          </li>
-          <li>
-            <p>What polluting agent created the stains?</p>
-          </li>
-          <li>
-            <p>What's the carpet composed of?</p>
-          </li>
-          <li>
-            <p>Have the stains not been properly treated in the past?</p>
-            <Typography variant="body">Nonetheless, we promise that we will try our best to remove all of the stains from your carpet. This includes:</Typography>
-            </li>
-          <li>
-            <p>The usage of high-quality cleaning equipment;</p>
-          </li>
-          <li>
-            <p>The use of effective and eco-friendly detergents.</p>
-          </li>
-          <li>
-            <Typography variant="h3">How soon can I expect a cleaner to visit me?</Typography>
-            <Typography variant="body">We will attempt to schedule your appointment as soon as possible. We are usually completely booked three days in advance, although there are occasional exceptions. 
-            <br></br>
-            However, if you are in a hurry, we suggest you use the same day carpet cleaning that we offer. Call us, and we will send you professionals as soon as possible.</Typography></li>
-          <li>
-            <Typography variant="h3">What is next day carpet cleaning?</Typography>
-            <Typography variant="body">Next day carpet cleaning is an excellent option for situations where accidents happen and you need your carpets right away. We offer carpet cleaning in London, which can be on the same day, the following day, or whenever it is convenient for you. It is a good choice in case of unexpected spills or stains, preparing for guests, or moving out. If you need routine cleaning, we suggest you choose from some of our cleaning services in London and schedule a standard appointment.</Typography></li>
-          <li>
-            <Typography variant="h3">Can I schedule carpet cleaning today?</Typography>
-            <Typography variant="body">Absolutely! We offer emergency carpet cleaning services. Contact us as soon as the stain appears. Tell us more details about the carpet situation, and we will discuss the potential solutions to your problem. Hurry up to check availability and book your appointment.</Typography></li>
-          <li>
-            <Typography variant="h3">I spilled coffee on the white, fluffy carpet. Is it possible to send me a technician for this morning carpet cleaning?</Typography>
-            <Typography variant="body">Yes, usually it is possible. We offer same day carpet cleaning service for cases like this. You have to just make sure to contact us in order to check our availability.
-            <br></br>
-            Contact us online or by phone, and we will make an appointment at the most convenient time for you. Booking a carpet cleaning company like us is simple and convenient, resulting in an efficient and quick experience.</Typography></li>
-          <li>
-            <Typography variant="h3">Do you offer any kind of instant carpet cleaning service?</Typography>
-            <Typography variant="body">We cannot clean your carpet instantly. But yes, we do offer instant carpet cleaning services. While availability depends on our current timetable, we try to respond to urgent requests. Please contact us as soon as possible to discuss your urgent needs, and we will do our best to give you a fast and effective service.</Typography></li>
-          <li>
-            <Typography variant="h3">Can you provide last minute carpet cleaning services on short notice?</Typography>
-            <Typography variant="body">For sure, we are people as well, and we know that unexpected situations arise. The availability of our urgent carpet cleaning depends on the scheduling program. But don’t worry,  we provide flexible scheduling choices and a dedicated customer support team that responds quickly and prioritises emergencies. Your happiness is our first priority, and we are dedicated to providing rapid and efficient service to satisfy your needs. No matter what happens, contact us, and we will find a solution together.</Typography></li>
-          <li>
-            <Typography variant="h3">What is the price of carpet cleaning in London?</Typography>
-            <Typography variant="body">The London carpet cleaning price varies depending on the size of the area, the type of carpet, and special cleaning procedures. Pricing can be affected by factors such as dirt level, stain type, and carpet material. Please contact us for further information and an exact estimate of your carpet cleaning needs. Our staff will offer you an accurate price based on your individual needs, providing pricing transparency and clarity.</Typography></li>
-        </ul>
+        <Typography variant="body">Synthetic carpets dry faster, between 7 and 10 hours, and the above is still valid (it depends on how dirty it is and the number of required treatments).</Typography></li>
+      <li>
+        <Typography variant="h3">9. Do you guarantee that after cleaning my carpet, all stains will be removed?</Typography>
+        <Typography variant="body">No, since there are elements involved that are beyond our control. Among these aspects are:</Typography></li>
+      <ul class="ml--5" style="list-style: initial;">
+        <Typography variant="li">
+          <p>How old are the stains?</p>
+        </Typography>
+        <Typography variant="li">
+          <p>What polluting agent created the stains?</p>
+        </Typography>
+        <Typography variant="li">
+          <p>What's the carpet composed of?</p>
+        </Typography>
+        <Typography variant="li">
+          <p>Have the stains not been properly treated in the past?</p>
+        </Typography>
+      </ul>
+      <li>
+        <Typography variant="body">Nonetheless, we promise that we will try our best to remove all of the stains from your carpet. This includes:</Typography>
+      </li>
+      <ul class="ml--5" style="list-style: initial;">
+        <Typography variant="li">
+          <p>The usage of high-quality cleaning equipment;</p>
+        </Typography>
+        <Typography variant="li">
+          <p>The use of effective and eco-friendly detergents.</p>
+        </Typography>
+      </ul>
+      <li>
+        <Typography variant="h3">10. How soon can I expect a cleaner to visit me?</Typography>
+        <Typography variant="body">We will attempt to schedule your appointment as soon as possible. We are usually completely booked three days in advance, although there are occasional exceptions.
+          <br></br>
+          However, if you are in a hurry, we suggest you use the same day carpet cleaning that we offer. Call us, and we will send you professionals as soon as possible.</Typography></li>
+      <li>
+        <Typography variant="h3">11. What is next day carpet cleaning?</Typography>
+        <Typography variant="body">Next day carpet cleaning is an excellent option for situations where accidents happen and you need your carpets right away. We offer carpet cleaning in London, which can be on the same day, the following day, or whenever it is convenient for you. It is a good choice in case of unexpected spills or stains, preparing for guests, or moving out. If you need routine cleaning, we suggest you choose from some of our cleaning services in London and schedule a standard appointment.</Typography></li>
+      <li>
+        <Typography variant="h3">12. Can I schedule carpet cleaning today?</Typography>
+        <Typography variant="body">Absolutely! We offer emergency carpet cleaning services. Contact us as soon as the stain appears. Tell us more details about the carpet situation, and we will discuss the potential solutions to your problem. Hurry up to check availability and book your appointment.</Typography></li>
+      <li>
+        <Typography variant="h3">13. I spilled coffee on the white, fluffy carpet. Is it possible to send me a technician for this morning carpet cleaning?</Typography>
+        <Typography variant="body">Yes, usually it is possible. We offer same day carpet cleaning service for cases like this. You have to just make sure to contact us in order to check our availability.
+          <br></br>
+          Contact us online or by phone, and we will make an appointment at the most convenient time for you. Booking a carpet cleaning company like us is simple and convenient, resulting in an efficient and quick experience.</Typography></li>
+      <li>
+        <Typography variant="h3">14. Do you offer any kind of instant carpet cleaning service?</Typography>
+        <Typography variant="body">We cannot clean your carpet instantly. But yes, we do offer instant carpet cleaning services. While availability depends on our current timetable, we try to respond to urgent requests. Please contact us as soon as possible to discuss your urgent needs, and we will do our best to give you a fast and effective service.</Typography></li>
+      <li>
+        <Typography variant="h3">15. Can you provide last minute carpet cleaning services on short notice?</Typography>
+        <Typography variant="body">For sure, we are people as well, and we know that unexpected situations arise. The availability of our urgent carpet cleaning depends on the scheduling program. But don’t worry,  we provide flexible scheduling choices and a dedicated customer support team that responds quickly and prioritises emergencies. Your happiness is our first priority, and we are dedicated to providing rapid and efficient service to satisfy your needs. No matter what happens, contact us, and we will find a solution together.</Typography></li>
+      <li>
+        <Typography variant="h3">16. What is the price of carpet cleaning in London?</Typography>
+        <Typography variant="body">The London carpet cleaning price varies depending on the size of the area, the type of carpet, and special cleaning procedures. Pricing can be affected by factors such as dirt level, stain type, and carpet material. Please contact us for further information and an exact estimate of your carpet cleaning needs. Our staff will offer you an accurate price based on your individual needs, providing pricing transparency and clarity.</Typography></li>
     </Entry>
   </Container>
 }
@@ -270,14 +272,14 @@ export default function Page() {
       <h2 class="line-height-12 md-line-height-14">Prices of our professional carpet cleaning services</h2>
 
       <div class="my-20 pt-8 pb-6 px-8 md-px-14 b-rd-3 bg-paper line-height-7.5 md-line-height-8 text-justify font-size-4 md-font-size-4.4"
-                style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 18%);">
-                <div class="mb--3 font-size-5.5"><strong>Are you pissed off by the pet hair?</strong></div>
-                <br></br>
-                Now you can request pet hair removal as an additional service to the booked cleaning for a small extra
-                charge. Don't forget to request it when booking because telling us at the moment of cleaning causes
-                delays for the technicians and messes up the schedule.
-                <br></br>
-                <strong>Deising - Free of charge - just notify us when booking.</strong></div>
+        style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 18%);">
+        <div class="mb--3 font-size-5.5"><strong>Are you pissed off by the pet hair?</strong></div>
+        <br></br>
+        Now you can request pet hair removal as an additional service to the booked cleaning for a small extra
+        charge. Don't forget to request it when booking because telling us at the moment of cleaning causes
+        delays for the technicians and messes up the schedule.
+        <br></br>
+        <strong>Deising - Free of charge - just notify us when booking.</strong></div>
 
       <table class="w-full m-auto font-sans">
         <thead style="box-shadow: 0px 20px 20px 1px rgb(84 89 95 / 10%);">
@@ -359,8 +361,8 @@ export default function Page() {
           <li class="ml--5">
             <h3 class="ml--5 font-size-6 md-font-size-7">Quick action for Fresh Stains</h3>
             <Typography variant="body">Accidents happen! With same day carpet cleaning, the quicker you act, the better.
-            <br></br>
-            Reach out to us right after a spill happens to prevent the stain from becoming permanent. If you treat new stains as quickly as possible, it is possible to remove them completely with just a few cleaning products. If there are already stains, you should inform us in advance so that our experts can assess the problem and bring any special stain removal that may be required.</Typography>
+              <br></br>
+              Reach out to us right after a spill happens to prevent the stain from becoming permanent. If you treat new stains as quickly as possible, it is possible to remove them completely with just a few cleaning products. If there are already stains, you should inform us in advance so that our experts can assess the problem and bring any special stain removal that may be required.</Typography>
           </li>
           <li class="ml--5">
             <h3 class="ml--5 font-size-6 md-font-size-7">Tell us more about the carpet</h3>
@@ -395,7 +397,7 @@ export default function Page() {
 
       <h2 class="line-height-12 md-line-height-14">FAQ regarding our carpet cleaning services</h2>
 
-<FaqSection/>
+      <FaqSection />
 
       <FleurDivider></FleurDivider>
 

@@ -52,21 +52,21 @@ const GalerrySliderMobile = () => {
 };
 
 const VideoPlayer = () => {
-	return (
-		<div class="flex flex-justify-center flex-items-center mt-20">
-			<video
-				class="mt-10 b-rd-3" style="width: 100%; width: -moz-available; width: -webkit-fill-available; width: fill-available;"
-				autoplay
-				controls
-				muted
-			>
-				<source
-					src="/assets/Professional Carpet Cleaning London - Fine Carpet Cleaning (1).mp4"
-					type="video/mp4"
-				/>
-			</video>
-		</div>
-	);
+  return (
+    <div class="flex flex-justify-center flex-items-center mt-20">
+      <video
+        class="mt-10 b-rd-3" style="width: 100%; width: -moz-available; width: -webkit-fill-available; width: fill-available;"
+        autoplay
+        controls
+        muted
+      >
+        <source
+          src="/assets/Professional Carpet Cleaning London - Fine Carpet Cleaning (1).mp4"
+          type="video/mp4"
+        />
+      </video>
+    </div>
+  );
 };
 
 function FleurDivider() {
@@ -82,152 +82,158 @@ export function FaqSection() {
   const { Container, Entry } = createCollapsable()
   return <Container>
     <Entry>
-      <ul>
-        <li>
-          <Typography variant="h3">Do you fee for cancellation?</Typography>
-          <Typography variant="body">We require a deposit before performing the cleaning service. If you cancel the pillow cleaning service on the day of the cleaning you will unfortunately lose that deposit.</Typography></li>
-        <li>
-          <Typography variant="h3">Should I pay for the congestion / parking charge?</Typography>
-          <Typography variant="body">Yes, we kindly ask that the client arrange a suitable parking space for our vehicles within close proximity of the property and to cover any parking / congestion expenses.</Typography></li>
-        <li>
-          <Typography variant="h3">What if I live on the 4th floor or above and I have no lift?</Typography>
-          <Typography variant="body">An additional charge will be included for each additional floor that necessitates manual transportation due to the substantial weight of our equipment, surpassing 50 kilograms. This is because it typically consumes a considerable amount of time and can result in quicker fatigue among our technicians. As a consequence, this may diminish our overall productivity for the day compared to our standard output.</Typography></li>
-        <li>
-          <Typography variant="h3">Are you insured?</Typography>
-          <Typography variant="body">Yes, our company is completely insured.</Typography></li>
-        <li>
-          <Typography variant="h3">What happens if your pillow dry cleaning near me damages anything?</Typography>
-          <Typography variant="body">We are fully insured and if any accidents occur they will be covered by us.</Typography></li>
-      </ul>
+      <li>
+        <Typography variant="h3">1. Do you fee for cancellation?</Typography>
+        <Typography variant="body">We require a deposit before performing the cleaning service. If you cancel the pillow cleaning service on the day of the cleaning you will unfortunately lose that deposit.</Typography></li>
+      <li>
+        <Typography variant="h3">2. Should I pay for the congestion / parking charge?</Typography>
+        <Typography variant="body">Yes, we kindly ask that the client arrange a suitable parking space for our vehicles within close proximity of the property and to cover any parking / congestion expenses.</Typography></li>
+      <li>
+        <Typography variant="h3">3. What if I live on the 4th floor or above and I have no lift?</Typography>
+        <Typography variant="body">An additional charge will be included for each additional floor that necessitates manual transportation due to the substantial weight of our equipment, surpassing 50 kilograms. This is because it typically consumes a considerable amount of time and can result in quicker fatigue among our technicians. As a consequence, this may diminish our overall productivity for the day compared to our standard output.</Typography></li>
+      <li>
+        <Typography variant="h3">4. Are you insured?</Typography>
+        <Typography variant="body">Yes, our company is completely insured.</Typography></li>
+      <li>
+        <Typography variant="h3">5. What happens if your pillow dry cleaning near me damages anything?</Typography>
+        <Typography variant="body">We are fully insured and if any accidents occur they will be covered by us.</Typography></li>
     </Entry>
     <Entry>
-      <ul>
-        <li>
-          <Typography variant="h3">How long does the process of professional pillow cleaning take?</Typography>
-          <Typography variant="body">Usually, a pillow cleaning will take 5-10 minutes for each pillow, but that may vary due to factors such as:</Typography></li>
-        <li>
+      <li>
+        <Typography variant="h3">6. How long does the process of professional pillow cleaning take?</Typography>
+        <Typography variant="body">Usually, a pillow cleaning will take 5-10 minutes for each pillow, but that may vary due to factors such as:</Typography></li>
+      <ul class="ml--5" style="list-style: initial;">
+        <Typography variant="li">
           <p>How soiled the pillows are;</p>
-        </li>
-        <li>
+        </Typography>
+        <Typography variant="li">
           <p>The quantity and size of the pillows;</p>
-        </li>
-        <li>
+        </Typography>
+        <Typography variant="li">
           <p>If they need any stain removal treatments;</p>
-        </li>
-        <li>
+        </Typography>
+        <Typography variant="li">
           <p>What cleaning method will be used for the pillows?</p>
-        </li>
-        <li>
-          <Typography variant="h3">How long does it take for the pillows to get dry after pillow cleaning services?</Typography>
-          <Typography variant="body">The drying time varies depending on the fabric type of the pillows and the cleaning method employed. For instance, when steam cleaning services are utilised, the approximate drying time typically ranges from 5 to 7 hours. On the other hand, if dry cleaning services are used, the pillows will be dry immediately after the cleaning process or shortly thereafter.</Typography></li>
-        <li>
-          <Typography variant="h3">Do you guarantee that after pillow dry cleaning near me, all stains will be removed?</Typography>
-          <Typography variant="body">Due to our extensive experience and ownership of some of the best equipment in the industry, we achieve high success rates in stain removal. However we cannot offer an absolute guarantee due to various factors beyond our control. These factors include:</Typography></li>
-        <li>
-          <p>The age of the stains;</p>
-        </li>
-        <li>
-          <p>The nature of the substances responsible for the stains;</p>
-        </li>
-        <li>
-          <p>Any prior mishandling of the stains.</p>
-        </li>
-        <Typography variant="body">Nevertheless, we are fully committed to exerting every possible effort to eliminate all stains from your pillows. Our methodology involves:</Typography>
-        <li>
-          <p>Utilising the best possible cleaning equipment;</p>
-        </li>
-        <li>
-          <p>Applying a carefully selected range of premium detergents;</p>
-        </li>
-        <li>
-          <p>Customising our approach to suit the specific type of pillow and the staining agent to ensure the best outcome.</p>
-        </li>
-        <li>
-          <Typography variant="h3">How soon can I expect your cleaners to visit me?</Typography>
-          <Typography variant="body">We will try to book you an appointment for a pillow cleaning service as soon as possible. Usually, we are fully booked for the following three days, but there are exceptions at times.</Typography></li>
-        <li>
-          <Typography variant="h3">Can you give me a dry cleaning pillows price over the phone or do you need a viewing in person?</Typography>
-          <Typography variant="body">Yes, we can give you a quote over the phone, there is no need for us to visit your property. You can also receive a quote for the pillow cleaning services online.</Typography></li>
-        <li>
-          <Typography variant="h3">What payment methods do you accept for your pillow dry cleaning near me?</Typography>
-          <Typography variant="body">We accept debit / credit cards, bank transfers and cash payments directly handed to our team.</Typography></li>
-        <li>
-          <Typography variant="h3">Can your company provide me with an invoice?</Typography>
-          <Typography variant="body">Yes, we will either send you an invoice via email or any method of your choice.</Typography></li>
-        <li>
-          <Typography variant="h3">Are you qualified for professional pillow cleaning?</Typography>
-          <Typography variant="body">Yes, we are qualified and fully trained members of <a class="color-paper-link hover-color-paper-link-hover:hover" href="https://www.checkatrade.com/trades/FineCarpetCleaning" target="_blank" rel="noopener">Checkatrade</a> and of <a class="color-paper-link hover-color-paper-link-hover:hover" href="https://trustedlocalcleaners.ncca.co.uk/listing/fine-carpet-cleaning-ltd/" target="_blank" rel="noopener">NCCA</a> (National Carpet Cleaners Association) – the UK’s acknowledged industry qualification.</Typography></li>
-        <li>
-          <Typography variant="h3">How long have you been in the pillow cleaning business?</Typography>
-          <Typography variant="body">Since 2012, we've actively participated in the pillow and upholstery cleaning industry. Over the years, we've encountered various types of carpets, rugs, upholstery, and stains from both commercial and residential clients, accumulating valuable experience. Our commitment to delivering top-notch upholstery cleaning services has driven us to enhance our performance through the following:</Typography></li>
-        <li>
-          <p>Continuously upgrading our equipment and machinery with superior alternatives whenever available;</p>
-        </li>
-        <li>
-          <p>Consistently evaluating and improving our cleaning products to ensure the highest quality of service;</p>
-        </li>
-        <li>
-          <p>Dedication to expanding our knowledge and skills through ongoing professional courses and training, always seeking to enhance our competence.</p>
-        </li>
-        <li>
-          <Typography variant="h3">Can you add a discount on the dry clean pillow cost?</Typography>
-          <Typography variant="body">Our professional pillow cleaning services are known for their top quality, utilising the most effective equipment and a range of premium cleaning products. What sets us apart even further is that our dry cleaning pillows prices are not only highly competitive but also rank among the most attractive in the market.</Typography>
-          <Typography variant="body">We strongly recommend combining services in order to see the most favourable dry-cleaning pillows prices. You will find out that bundling all the services you require is more cost-efficient compared to individual service requests. This cost-effectiveness is due to the initial cost and extra charges with each technician visit, because of factors like travel time, parking, and the handling of heavy equipment during loading and unloading.</Typography></li>
-        <li>
-          <Typography variant="h3">Can you get pillows dry-cleaned?</Typography>
-          <Typography variant="body">Yes, pillows can be dry-cleaned. Particular types of pillows, including down and synthetic-filled pillows, can be dry cleaned. Although not as efficient as steam cleaning, dry cleaning is a suitable method for cleaning pillows when they have delicate fabrics or intricate designs, or are filled with materials that may not fare well with a water-based cleaning method.</Typography>
-        </li>
+        </Typography>
       </ul>
+      <li>
+        <Typography variant="h3">7. How long does it take for the pillows to get dry after pillow cleaning services?</Typography>
+        <Typography variant="body">The drying time varies depending on the fabric type of the pillows and the cleaning method employed. For instance, when steam cleaning services are utilised, the approximate drying time typically ranges from 5 to 7 hours. On the other hand, if dry cleaning services are used, the pillows will be dry immediately after the cleaning process or shortly thereafter.</Typography></li>
+      <li>
+        <Typography variant="h3">8. Do you guarantee that after pillow dry cleaning near me, all stains will be removed?</Typography>
+        <Typography variant="body">Due to our extensive experience and ownership of some of the best equipment in the industry, we achieve high success rates in stain removal. However we cannot offer an absolute guarantee due to various factors beyond our control. These factors include:</Typography></li>
+      <ul class="ml--5" style="list-style: initial;">
+        <Typography variant="li">
+          <p>The age of the stains;</p>
+        </Typography>
+        <Typography variant="li">
+          <p>The nature of the substances responsible for the stains;</p>
+        </Typography>
+        <Typography variant="li">
+          <p>Any prior mishandling of the stains.</p>
+        </Typography>
+      </ul>
+      <Typography variant="body">Nevertheless, we are fully committed to exerting every possible effort to eliminate all stains from your pillows. Our methodology involves:</Typography>
+      <ul class="ml--5" style="list-style: initial;">
+        <Typography variant="li">
+          <p>Utilising the best possible cleaning equipment;</p>
+        </Typography>
+        <Typography variant="li">
+          <p>Applying a carefully selected range of premium detergents;</p>
+        </Typography>
+        <Typography variant="li">
+          <p>Customising our approach to suit the specific type of pillow and the staining agent to ensure the best outcome.</p>
+        </Typography>
+      </ul>
+      <li>
+        <Typography variant="h3">9. How soon can I expect your cleaners to visit me?</Typography>
+        <Typography variant="body">We will try to book you an appointment for a pillow cleaning service as soon as possible. Usually, we are fully booked for the following three days, but there are exceptions at times.</Typography></li>
+      <li>
+        <Typography variant="h3">10. Can you give me a dry cleaning pillows price over the phone or do you need a viewing in person?</Typography>
+        <Typography variant="body">Yes, we can give you a quote over the phone, there is no need for us to visit your property. You can also receive a quote for the pillow cleaning services online.</Typography></li>
+      <li>
+        <Typography variant="h3">11. What payment methods do you accept for your pillow dry cleaning near me?</Typography>
+        <Typography variant="body">We accept debit / credit cards, bank transfers and cash payments directly handed to our team.</Typography></li>
+      <li>
+        <Typography variant="h3">12. Can your company provide me with an invoice?</Typography>
+        <Typography variant="body">Yes, we will either send you an invoice via email or any method of your choice.</Typography></li>
+      <li>
+        <Typography variant="h3">13. Are you qualified for professional pillow cleaning?</Typography>
+        <Typography variant="body">Yes, we are qualified and fully trained members of <a class="color-paper-link hover-color-paper-link-hover:hover" href="https://www.checkatrade.com/trades/FineCarpetCleaning" target="_blank" rel="noopener">Checkatrade</a> and of <a class="color-paper-link hover-color-paper-link-hover:hover" href="https://trustedlocalcleaners.ncca.co.uk/listing/fine-carpet-cleaning-ltd/" target="_blank" rel="noopener">NCCA</a> (National Carpet Cleaners Association) – the UK’s acknowledged industry qualification.</Typography></li>
+      <li>
+        <Typography variant="h3">14. How long have you been in the pillow cleaning business?</Typography>
+        <Typography variant="body">Since 2012, we've actively participated in the pillow and upholstery cleaning industry. Over the years, we've encountered various types of carpets, rugs, upholstery, and stains from both commercial and residential clients, accumulating valuable experience. Our commitment to delivering top-notch upholstery cleaning services has driven us to enhance our performance through the following:</Typography></li>
+      <ul class="ml--5" style="list-style: initial;">
+        <Typography variant="li">
+          <p>Continuously upgrading our equipment and machinery with superior alternatives whenever available;</p>
+        </Typography>
+        <Typography variant="li">
+          <p>Consistently evaluating and improving our cleaning products to ensure the highest quality of service;</p>
+        </Typography>
+        <Typography variant="li">
+          <p>Dedication to expanding our knowledge and skills through ongoing professional courses and training, always seeking to enhance our competence.</p>
+        </Typography>
+      </ul>
+      <li>
+        <Typography variant="h3">15. Can you add a discount on the dry clean pillow cost?</Typography>
+        <Typography variant="body">Our professional pillow cleaning services are known for their top quality, utilising the most effective equipment and a range of premium cleaning products. What sets us apart even further is that our dry cleaning pillows prices are not only highly competitive but also rank among the most attractive in the market.</Typography>
+        <Typography variant="body">We strongly recommend combining services in order to see the most favourable dry-cleaning pillows prices. You will find out that bundling all the services you require is more cost-efficient compared to individual service requests. This cost-effectiveness is due to the initial cost and extra charges with each technician visit, because of factors like travel time, parking, and the handling of heavy equipment during loading and unloading.</Typography></li>
+      <li>
+        <Typography variant="h3">16. Can you get pillows dry-cleaned?</Typography>
+        <Typography variant="body">Yes, pillows can be dry-cleaned. Particular types of pillows, including down and synthetic-filled pillows, can be dry cleaned. Although not as efficient as steam cleaning, dry cleaning is a suitable method for cleaning pillows when they have delicate fabrics or intricate designs, or are filled with materials that may not fare well with a water-based cleaning method.</Typography>
+      </li>
     </Entry>
     <Entry>
-      <ul>
-        <li>
-          <Typography variant="h3">Is it better to dry clean or wash down pillows?</Typography>
-          <Typography variant="body">Although a water-based washing method is the most efficient way to clean pillows, as it can remove dirt, dust, and allergens, pillows made from delicate fabrics, such as silk and velvet, will require dry cleaning. You can check the specific materials used in the pillows and contact a professional pillow cleaning company to decide what method should be used on your pillows.</Typography></li>
-        <li>
-          <Typography variant="h3">How do you deep clean pillows?</Typography>
-          <Typography variant="body">We recommend that you consider booking pillow cleaning services. Such services will ensure that your pillows will be free of dust, dirt, pollen, germs and mites, which can lead to potential health problems. Due to our powerful equipment, we are able to deliver the results you desire within a fraction of time.</Typography>
-          <Typography variant="body">If you are wondering which services best suit you or are looking forward to booking professional pillow cleaning services, feel free to contact us at any suitable time for you.</Typography></li>
-        <li>
-          <Typography variant="h3">How often should you wash pillows?</Typography>
-          <Typography variant="body">The frequency of cleaning your pillows depends mainly on factors like how fast the pillows soil and how often they are being used. On average, pillows should be cleaned at least twice a year. However, if you have pets or children, or if they easily stain, we recommend using pillow cleaning services more often. Regular professional cleaning not only keeps your pillows looking their best but also helps maintain a healthy and clean living atmosphere in your home.</Typography></li>
-        <li>
-          <Typography variant="h3">Can you put pillows in the washing machine?</Typography>
-          <Typography variant="body">Most pillows can be put in the washing machine. Cool water and a mild detergent should be used for minimum risk of damage. then dry on low heat. High temperatures can also damage the pillow, depending on the type of the fabric in the pillow. In that case, it should be dried on low, to no heat. For best results and a stress-free process it’s advisable to hire a professional cleaning company to take care of your pillows.</Typography></li>
-        <li>
-          <Typography variant="h3">How much does it cost to get pillows dry-cleaned?</Typography>
-          <Typography variant="body">How much to dry clean a pillow costs depends on a number of factors. Some of them are:</Typography></li>
-        <li>
+      <li>
+        <Typography variant="h3">17. Is it better to dry clean or wash down pillows?</Typography>
+        <Typography variant="body">Although a water-based washing method is the most efficient way to clean pillows, as it can remove dirt, dust, and allergens, pillows made from delicate fabrics, such as silk and velvet, will require dry cleaning. You can check the specific materials used in the pillows and contact a professional pillow cleaning company to decide what method should be used on your pillows.</Typography></li>
+      <li>
+        <Typography variant="h3">18. How do you deep clean pillows?</Typography>
+        <Typography variant="body">We recommend that you consider booking pillow cleaning services. Such services will ensure that your pillows will be free of dust, dirt, pollen, germs and mites, which can lead to potential health problems. Due to our powerful equipment, we are able to deliver the results you desire within a fraction of time.</Typography>
+        <Typography variant="body">If you are wondering which services best suit you or are looking forward to booking professional pillow cleaning services, feel free to contact us at any suitable time for you.</Typography></li>
+      <li>
+        <Typography variant="h3">19. How often should you wash pillows?</Typography>
+        <Typography variant="body">The frequency of cleaning your pillows depends mainly on factors like how fast the pillows soil and how often they are being used. On average, pillows should be cleaned at least twice a year. However, if you have pets or children, or if they easily stain, we recommend using pillow cleaning services more often. Regular professional cleaning not only keeps your pillows looking their best but also helps maintain a healthy and clean living atmosphere in your home.</Typography></li>
+      <li>
+        <Typography variant="h3">20. Can you put pillows in the washing machine?</Typography>
+        <Typography variant="body">Most pillows can be put in the washing machine. Cool water and a mild detergent should be used for minimum risk of damage. then dry on low heat. High temperatures can also damage the pillow, depending on the type of the fabric in the pillow. In that case, it should be dried on low, to no heat. For best results and a stress-free process it’s advisable to hire a professional cleaning company to take care of your pillows.</Typography></li>
+      <li>
+        <Typography variant="h3">21. How much does it cost to get pillows dry-cleaned?</Typography>
+        <Typography variant="body">How much to dry clean a pillow costs depends on a number of factors. Some of them are:</Typography></li>
+      <ul class="ml--5" style="list-style: initial;">
+        <Typography variant="li">
           <p>The quantity and size of the pillows;</p>
-        </li>
-        <li>
+        </Typography>
+        <Typography variant="li">
           <p>How soiled they are;</p>
-        </li>
-        <li>
+        </Typography>
+        <Typography variant="li">
           <p>The fabric of the pillows.</p>
-        </li>
-          <Typography variant="body">To learn more, check out our <a class="color-paper-link hover-color-paper-link-hover:hover" href="#price_table">dry cleaning pillows prices</a>.</Typography>
-        <li>
-          <Typography variant="h3">Are pillows worth washing?</Typography>
-          <Typography variant="body">Yes, it is very advisable to wash your pillows at least every six months. Professional pillow cleaning is highly effective and works exceptionally well. This is made possible by the expertise, equipment, products, and methods employed by expert companies. A professional pillow cleaning company like "Fine Carpet Cleaning Ltd." offers top-quality cleaning services that are particularly effective in tackling stubborn stains, eliminating odours, and eradicating germ buildup. These results are often unattainable through regular cleaning methods.</Typography></li>
-        <li>
-          <Typography variant="h3">What happens if you don't wash your pillow?</Typography>
-          <Typography variant="body">Pet dander, dust mites, dirt and oils from your skin easily build up on your pillow. These things can possibly trigger allergies. Pillows can double in weight over their lifespan, due to everything they absorb. Many people throw out their old pillows when it can be more cost-effective to have them professionally cleaned instead. Our professional pillow cleaning process includes fluffing, sanitising and deodorising.</Typography></li>
-        <li>
-          <Typography variant="h3">How do you wash a pillow without ruining it?</Typography>
-          <Typography variant="body">The quickest and safest way is to call in a professional pillow cleaning company. Due to their years of experience and professional equipment, professionals will know how to take the best care of your pillows. We at “Fine Carpet Cleaning” Ltd. use special equipment and premium products and have undergone professional training to ensure that your pillows will be taken care of in the best way possible.</Typography></li>
-        <li>
-          <Typography variant="h3">What is the easiest way to clean a pillow?</Typography>
-          <Typography variant="body">The most expedient and secure approach is to contact a professional pillow cleaning company. With their extensive experience and specialised equipment, experts will adeptly attend to your pillows. At “Fine Carpet Cleaning” Ltd. use the following methods to guarantee optimal care for your pillows:</Typography></li>
-        <li>
+        </Typography>
+      </ul>
+      <Typography variant="body">To learn more, check out our <a class="color-paper-link hover-color-paper-link-hover:hover" href="#price_table">dry cleaning pillows prices</a>.</Typography>
+      <li>
+        <Typography variant="h3">22. Are pillows worth washing?</Typography>
+        <Typography variant="body">Yes, it is very advisable to wash your pillows at least every six months. Professional pillow cleaning is highly effective and works exceptionally well. This is made possible by the expertise, equipment, products, and methods employed by expert companies. A professional pillow cleaning company like "Fine Carpet Cleaning Ltd." offers top-quality cleaning services that are particularly effective in tackling stubborn stains, eliminating odours, and eradicating germ buildup. These results are often unattainable through regular cleaning methods.</Typography></li>
+      <li>
+        <Typography variant="h3">23. What happens if you don't wash your pillow?</Typography>
+        <Typography variant="body">Pet dander, dust mites, dirt and oils from your skin easily build up on your pillow. These things can possibly trigger allergies. Pillows can double in weight over their lifespan, due to everything they absorb. Many people throw out their old pillows when it can be more cost-effective to have them professionally cleaned instead. Our professional pillow cleaning process includes fluffing, sanitising and deodorising.</Typography></li>
+      <li>
+        <Typography variant="h3">24. How do you wash a pillow without ruining it?</Typography>
+        <Typography variant="body">The quickest and safest way is to call in a professional pillow cleaning company. Due to their years of experience and professional equipment, professionals will know how to take the best care of your pillows. We at “Fine Carpet Cleaning” Ltd. use special equipment and premium products and have undergone professional training to ensure that your pillows will be taken care of in the best way possible.</Typography></li>
+      <li>
+        <Typography variant="h3">25. What is the easiest way to clean a pillow?</Typography>
+        <Typography variant="body">The most expedient and secure approach is to contact a professional pillow cleaning company. With their extensive experience and specialised equipment, experts will adeptly attend to your pillows. At “Fine Carpet Cleaning” Ltd. use the following methods to guarantee optimal care for your pillows:</Typography></li>
+      <ul class="ml--5" style="list-style: initial;">
+        <Typography variant="li">
           <p>We employ special equipment;</p>
-        </li>
-        <li>
+        </Typography>
+        <Typography variant="li">
           <p>We use premium products;</p>
-        </li>
-        <li>
+        </Typography>
+        <Typography variant="li">
           <p>We have undergone professional training.</p>
-        </li>
+        </Typography>
       </ul>
     </Entry>
   </Container>
@@ -303,12 +309,12 @@ export default function Page() {
           <li class="ml--5"><a class="color-paper-link-hover hover-color-paper-link:hover font-size-17.5px line-height-8 word-spacing--0.12 tracking--0.04" href="/professional-stain-removal-services">Upholstery stain removal</a></li>
           <li class="ml--5"><a class="color-paper-link-hover hover-color-paper-link:hover font-size-17.5px line-height-8 word-spacing--0.12 tracking--0.04" href="/stain-protection-services">Upholstery stain protector</a></li>
         </ul>
-        </div>
+      </div>
 
-        <FleurDivider></FleurDivider>
+      <FleurDivider></FleurDivider>
 
-        <h2>The process of our pillow cleaning services:</h2>
-        <div class="mt-20 py-8 px-8 md-px-14 bg-paper b-rd-3" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 18%);">
+      <h2>The process of our pillow cleaning services:</h2>
+      <div class="mt-20 py-8 px-8 md-px-14 bg-paper b-rd-3" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 18%);">
         <ol style="counter-reset: ordered; list-style: none;">
           <li class="ml--5"><Typography variant="body">First, we establish exactly what cleaning detergents and tools need to be used for the specific fabric and type of pillow.</Typography></li>
           <li class="ml--5"><Typography variant="body">Second, we use a vacuum cleaner to clean the fabric. This removes any loose dirt, dry soils and dust.</Typography></li>
@@ -347,7 +353,7 @@ export default function Page() {
           <li class="ml--5">
             <p>The type of stains to be treated.</p>
             <Typography variant="body">With our cutting-edge cleaning equipment and premium products, we assure a professional pillow cleaning of the highest quality.</Typography>
-            </li>
+          </li>
         </ul>
       </div>
 
