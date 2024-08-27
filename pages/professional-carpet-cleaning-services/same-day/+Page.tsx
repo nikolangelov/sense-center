@@ -172,7 +172,7 @@ export default function Page() {
   return (
     <>
       <h1 class="mt-10 md-mt-17 font-size-12.5 md-font-size-16 md-line-height-18 line-height-16">Same day carpet cleaning services</h1>
-      <div class="flex flex-justify-center"><img class="b-rd-3 md-mt-10 mt-2 max-w-full" src="/assets/Професионално почистване на заведения.jpg" alt="" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 30%);" /></div>
+      <div class="flex flex-justify-center"><img class="b-rd-3 md-mt-10 mt-2 max-w-full" src="/assets/service-pics/same-day/same-day-carpet-cleaning-7.jpg" alt="same-day-carpet-cleaning-7" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 30%);" /></div>
 
       <FleurDivider></FleurDivider>
 
@@ -252,13 +252,20 @@ export default function Page() {
       <h2 class="line-height-12 md-line-height-14">Pictures from our same day carpet cleaning services in London</h2>
 
       <FacebookLikeGallery imgs={[
-        { src: "/assets/Професионално почистване на заведения.jpg", alt: "" },
-        { src: "/assets/Професионално почистване на заведения.jpg", alt: "" },
-        { src: "/assets/Професионално почистване на заведения.jpg", alt: "" },
-        { src: "/assets/Професионално почистване на заведения.jpg", alt: "" },
-        { src: "/assets/Професионално почистване на заведения.jpg", alt: "" },
-        { src: "/assets/Професионално почистване на заведения.jpg", alt: "" },
-        { src: "/assets/Професионално почистване на заведения.jpg", alt: "" },
+        { src: "/assets/service-pics/same-day/same-day-carpet-cleaning-ba-1.jpeg", alt: "same-day-carpet-cleaning-ba-1" },
+        { src: "/assets/service-pics/same-day/same-day-carpet-cleaning-ba-2.jpg", alt: "same-day-carpet-cleaning-ba-2" },
+        { src: "/assets/service-pics/same-day/same-day-carpet-cleaning-ba-3.jpg", alt: "same-day-carpet-cleaning-ba-3" },
+        { src: "/assets/service-pics/same-day/same-day-carpet-cleaning-ba-4.jpg", alt: "same-day-carpet-cleaning-ba-4" },
+        { src: "/assets/service-pics/same-day/same-day-carpet-cleaning-ba-5.jpg", alt: "same-day-carpet-cleaning-ba-5" },
+        { src: "/assets/service-pics/same-day/same-day-carpet-cleaning-ba-6.jpg", alt: "same-day-carpet-cleaning-ba-6" },
+        { src: "/assets/service-pics/same-day/same-day-carpet-cleaning-1.jpg", alt: "same-day-carpet-cleaning-1" },
+        { src: "/assets/service-pics/same-day/same-day-carpet-cleaning-2.jpg", alt: "same-day-carpet-cleaning-2" },
+        { src: "/assets/service-pics/same-day/same-day-carpet-cleaning-3.jpg", alt: "same-day-carpet-cleaning-3" },
+        { src: "/assets/service-pics/same-day/same-day-carpet-cleaning-4.jpg", alt: "same-day-carpet-cleaning-4" },
+        { src: "/assets/service-pics/same-day/same-day-carpet-cleaning-5.jpg", alt: "same-day-carpet-cleaning-5" },
+        { src: "/assets/service-pics/same-day/same-day-carpet-cleaning-6.jpg", alt: "same-day-carpet-cleaning-6" },
+        { src: "/assets/service-pics/same-day/same-day-carpet-cleaning-8.jpg", alt: "same-day-carpet-cleaning-8" },
+
       ]} />
 
       <FleurDivider></FleurDivider>

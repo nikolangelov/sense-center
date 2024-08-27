@@ -342,7 +342,7 @@ export default function Page() {
 
 			<FleurDivider />
 
-			<h2 class="mb--5 md-mb-0">“Fine Carpet Cleaning” Ltd. Accreditations</h2>
+			<h2 class="mb--5 md-mb-0">Fine Carpet Cleaning Accreditations</h2>
 			<h3 class="mt-25 mb-15">“Fine Carpet Cleaning” Ltd. is a qualified member of <a class="color-paper-link hover-color-paper-link-hover:hover" href="https://trustedlocalcleaners.ncca.co.uk/listing/fine-carpet-cleaning-ltd/" target="_blank" rel="noopener">"NCCA"</a> (National Carpet Cleaners Association)</h3>
 
 			<GallerySlider>

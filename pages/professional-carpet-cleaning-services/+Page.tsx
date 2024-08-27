@@ -73,7 +73,7 @@ const VideoPlayer = () => {
                 muted
             >
                 <source
-                    src="/assets/Professional Carpet Cleaning London - Fine Carpet Cleaning (1).mp4"
+                    src="/assets/service-pics/professional-carpet-cleaning-services-video.MP4"
                     type="video/mp4"
                 />
             </video>
@@ -676,12 +676,13 @@ export default function Page() {
 
             <FacebookLikeGallery imgs={[
                 { src: "/assets/service-pics/carpet-cleaning-specialists-3.jpg", alt: "carpet-cleaning-specialists-1" },
-                { src: "/assets/service-pics/carpet-cleaning-specialists-2.jpg", alt: "carpet-cleaning-specialists-2" },
+                { src: "/assets/service-pics/professional-carpet-cleaning-services-ba-1.jpeg", alt: "professional-carpet-cleaning-services-ba-1" },
+                { src: "/assets/service-pics/professional-carpet-cleaning-services-ba-2.jpg", alt: "professional-carpet-cleaning-services-ba-2" },
                 { src: "/assets/service-pics/carpet-cleaning-specialists-1.jpg", alt: "carpet-cleaning-specialists-3" },
-                { src: "/assets/service-pics/carpet-cleaning-specialists-3.jpg", alt: "" },
-                { src: "/assets/service-pics/carpet-cleaning-specialists-3.jpg", alt: "" },
-                { src: "/assets/service-pics/carpet-cleaning-specialists-3.jpg", alt: "" },
-                { src: "/assets/service-pics/carpet-cleaning-specialists-3.jpg", alt: "" },
+                { src: "/assets/service-pics/professional-carpet-cleaning-services-ba-3.jpg", alt: "professional-carpet-cleaning-services-ba-3" },
+                { src: "/assets/service-pics/carpet-cleaning-specialists-2.jpg", alt: "carpet-cleaning-specialists-2" },
+                { src: "/assets/service-pics/professional-carpet-cleaning-services-ba-4.jpg", alt: "professional-carpet-cleaning-services-ba-4" },
+                { src: "/assets/service-pics/professional-carpet-cleaning-services-ba-5.jpg", alt: "professional-carpet-cleaning-services-ba-5" },
             ]} />
 
             <FleurDivider></FleurDivider>
