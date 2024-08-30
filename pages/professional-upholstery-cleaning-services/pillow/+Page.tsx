@@ -1,55 +1,9 @@
-import RiArrowRightSLine from '~icons/ri/arrow-right-s-line';
-import RiArrowLeftSLine from '~icons/ri/arrow-left-s-line';
 import "solid-slider/slider.css";
-import { Component, createSignal, Show } from 'solid-js';
-import RiYoutubeFill from '~icons/ri/youtube-fill';
 import { FacebookLikeGallery } from '../../../components/FacebookLikeGallery';
-import { createSlider, Slider, SliderButton, SliderProvider } from 'solid-slider';
-import { RotatingBanners } from '../../../components/RotatingBanners';
 import { createCollapsable } from '../../../components/Collapsable';
 import { Typography } from '../../../components/Typography';
-
-const GalerrySliderDesktop = () => {
-  const options = { duration: 1000 };
-  const [slider, { current, next, prev, moveTo }] = createSlider(options);
-  return (
-    <SliderProvider>
-      <div class="max-w-1000px m-auto position-relative hidden md-block">
-        <Slider options={{ loop: true, slides: { perView: 3, spacing: 10 } }}>
-          <img src="/assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" />
-          <img src="/assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" />
-          <img src="/assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" />
-          <img src="/assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" />
-          <img src="/assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" />
-          <img src="/assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" />
-        </Slider>
-        <SliderButton class="cursor-pointer position-absolute top-41% left-0 bg-paper-inv bg-op-50 b-rd-bl-1 b-rd-tl-1 b-none px-0 py-1.5" prev><RiArrowLeftSLine class="-ml-1 font-size-10 c-paper hover-c-brand-light:hover transition-colors" /></SliderButton>
-        <SliderButton class="cursor-pointer position-absolute top-41% right-0 bg-paper-inv bg-op-50 b-rd-br-1 b-rd-tr-1 b-none px-0 py-1.5" next><RiArrowRightSLine class="-mr-1 font-size-10 c-paper hover-c-brand-light:hover transition-colors" /></SliderButton>
-      </div>
-    </SliderProvider>
-  );
-};
-
-const GalerrySliderMobile = () => {
-  const options = { duration: 1000 };
-  const [slider, { current, next, prev, moveTo }] = createSlider(options);
-  return (
-    <SliderProvider>
-      <div class="max-w-1000px m-auto position-relative md-hidden block">
-        <Slider options={{ loop: true }}>
-          <img src="/assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" />
-          <img src="/assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" />
-          <img src="/assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" />
-          <img src="/assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" />
-          <img src="/assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" />
-          <img src="/assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" />
-        </Slider>
-        <SliderButton class="cursor-pointer position-absolute top-41% left-0 bg-paper-inv bg-op-50 b-rd-bl-1 b-rd-tl-1 b-none px-0 py-1.5" prev><RiArrowLeftSLine class="-ml-1 font-size-10 c-paper hover-c-brand-light:hover transition-colors" /></SliderButton>
-        <SliderButton class="cursor-pointer position-absolute top-41% right-0 bg-paper-inv bg-op-50 b-rd-br-1 b-rd-tr-1 b-none px-0 py-1.5" next><RiArrowRightSLine class="-mr-1 font-size-10 c-paper hover-c-brand-light:hover transition-colors" /></SliderButton>
-      </div>
-    </SliderProvider>
-  );
-};
+import { ReviewSlider, StarReview } from '../../../components/ReviewSlider';
+import { FOTSlider, FOTSliderContainer } from '../../../components/FrequentlyOrderedTogether';
 
 const VideoPlayer = () => {
   return (
@@ -243,7 +197,7 @@ export default function Page() {
   return (
     <>
       <h1 class="mt-10 md-mt-17 font-size-12.5 md-font-size-16 md-line-height-18 line-height-16">Pillow cleaning services</h1>
-      <div class="flex flex-justify-center"><img class="b-rd-3 md-mt-10 mt-2 max-w-full" src="/assets/Професионално почистване на заведения.jpg" alt="" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 30%);" /></div>
+      <div class="flex flex-justify-center"><img class="b-rd-3 md-mt-10 mt-2 max-w-full" src="/assets/service-pics/pillow-cleaning/pillow-cleaning-service-7.jpg" alt="pillow-cleaning-service-7" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 30%);" /></div>
 
       <FleurDivider></FleurDivider>
 
@@ -362,13 +316,12 @@ export default function Page() {
       <h2 class="line-height-12 md-line-height-14">Pictures from our pillow cleaning services</h2>
 
       <FacebookLikeGallery imgs={[
-        { src: "/assets/Професионално почистване на заведения.jpg", alt: "" },
-        { src: "/assets/Професионално почистване на заведения.jpg", alt: "" },
-        { src: "/assets/Професионално почистване на заведения.jpg", alt: "" },
-        { src: "/assets/Професионално почистване на заведения.jpg", alt: "" },
-        { src: "/assets/Професионално почистване на заведения.jpg", alt: "" },
-        { src: "/assets/Професионално почистване на заведения.jpg", alt: "" },
-        { src: "/assets/Професионално почистване на заведения.jpg", alt: "" },
+        { src: "/assets/service-pics/pillow-cleaning/pillow-cleaning-service-4.jpg", alt: "pillow-cleaning-service-4" },
+        { src: "/assets/service-pics/pillow-cleaning/pillow-cleaning-service-1.jpg", alt: "pillow-cleaning-service-1" },
+        { src: "/assets/service-pics/pillow-cleaning/pillow-cleaning-service-2.jpg", alt: "pillow-cleaning-service-2" },
+        { src: "/assets/service-pics/pillow-cleaning/pillow-cleaning-service-3.jpg", alt: "pillow-cleaning-service-3" },
+        { src: "/assets/service-pics/pillow-cleaning/pillow-cleaning-service-5.jpg", alt: "pillow-cleaning-service-5" },
+        { src: "/assets/service-pics/pillow-cleaning/pillow-cleaning-service-6.jpg", alt: "pillow-cleaning-service-6" },
       ]} />
 
       <FleurDivider></FleurDivider>
@@ -460,8 +413,50 @@ export default function Page() {
 
       <h2 class="line-height-12 md-line-height-14">Frequently ordered together</h2>
 
-      <GalerrySliderDesktop />
-      <GalerrySliderMobile />
+      <FOTSlider>
+        <FOTSliderContainer
+          img="/assets/service-pics/stain-protection-services/stain-protection-services-7.jpg"
+          alt="stain-protection-services-7"
+          title="Stain protection services"
+          href="/stain-protection-services"
+          description="The main purpose of the stain protector is to guard the fabric against penetration of liquids that lead to lasting stains and permanent damage to the carpet and upholstery."
+        />
+        <FOTSliderContainer
+          img="/assets/Професионално почистване на заведения.jpg"
+          alt=""
+          title="Professional carpet cleaning services"
+          href="/professional-carpet-cleaning-services"
+          description="We offer a variety of professional carpet cleaning services. They will prolong the life of your carpet and is cheaper to do regular maintenance than buying a new carpet."
+        />
+        <FOTSliderContainer
+          img="/assets/service-pics/sofa-cleaning/sofa-cleaning-services-13.jpg"
+          alt="sofa-cleaning-services-13"
+          title="Professional sofa cleaning services"
+          href="/professional-upholstery-cleaning-services/sofa"
+          description="Our expert sofa cleaning uses steam and hot water extraction to eliminate 99% of microorganisms, revitalizing your space for a healthier home."
+        />
+        <FOTSliderContainer
+          img="/assets/service-pics/furniture-cleaning/furniture-cleaning-12.jpg"
+          alt="furniture-cleaning-12"
+          title="Professional furniture cleaning services"
+          href="/professional-upholstery-cleaning-services/furniture"
+          description="Furniture upholstery cleaning services can extend the life of your furniture, saving you money on purchasing new items."
+        />
+        <FOTSliderContainer
+          img="/assets/service-pics/mattress-cleaning/mattress-cleaning-services-9.jpg"
+          alt="mattress-cleaning-services-9"
+          title="Mattress cleaning services"
+          href="/professional-upholstery-cleaning-services/mattress"
+          description="Mattress cleaning removes unwanted guests and fluids, creating a cleaner environment. It enhances sleep quality and extends the life of your mattress."
+        />
+        <FOTSliderContainer
+          img="/assets/service-pics/rug-cleaning/professional-rug-cleaning-12.jpg"
+          alt="professional-rug-cleaning-12"
+          title="Professional rug cleaning services"
+          href="/professional-rug-cleaning-services"
+          description="Professional rug cleaning removes stains and extends rug life. Our experts use advanced tools to refresh your rug and ensure a healthy, allergy-free environment."
+        />
+      </FOTSlider>
 
       <FleurDivider></FleurDivider>
 
@@ -495,8 +490,33 @@ export default function Page() {
 
       <h2 class="line-height-12 md-line-height-14">Reviews of our pillow cleaning services</h2>
 
-      <GalerrySliderDesktop />
-      <GalerrySliderMobile />
+      <ReviewSlider>
+        <StarReview
+          src="/assets/profile-pics-reviews/unnamed90.png"
+          reviewText="Professional, quick to respond. I'm very happy with their service."
+          name="Zaneta Priscepionkaite"
+          date="July 2024"
+          stars={5}
+          hrefGoogleReview="https://g.co/kgs/c4A87Ud"
+        />
+        <StarReview
+          src="/assets/profile-pics-reviews/unnamed90.png"
+          reviewText="FANTASTIC STAFF, FANTASTIC SERVICE, FANTASTIC WORK & MOST IMPORTANTLY FANTASTIC PRICE, Cannot be beaten if you want your carpets cleaned,,, one quick call and everything was taken care of.. IF YOU ARE GETTING YOUR CARPETS CLEANED MAKE SURR YOU USE THESE GUYS 100%👍"
+          name="Zaneta Priscepionkaite"
+          date="July 2024"
+          stars={5}
+          hrefGoogleReview="https://g.co/kgs/c4A87Ud"
+        />
+        <StarReview
+          src="/assets/profile-pics-reviews/unnamed90.png"
+          reviewText="Professional, quick to respond. I'm very happy with their service."
+          name="Zaneta Priscepionkaite"
+          date="July 2024"
+          stars={5}
+          hrefGoogleReview="https://g.co/kgs/c4A87Ud"
+        />
+
+      </ReviewSlider>
 
       <FleurDivider></FleurDivider>
 

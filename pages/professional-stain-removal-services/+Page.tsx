@@ -1,72 +1,27 @@
-import RiArrowRightSLine from '~icons/ri/arrow-right-s-line';
-import RiArrowLeftSLine from '~icons/ri/arrow-left-s-line';
 import "solid-slider/slider.css";
-import { Component, createSignal, Show } from 'solid-js';
-import RiYoutubeFill from '~icons/ri/youtube-fill';
 import { FacebookLikeGallery } from '../../components/FacebookLikeGallery';
-import { createSlider, Slider, SliderButton, SliderProvider } from 'solid-slider';
-import { RotatingBanners } from '../../components/RotatingBanners';
 import { createCollapsable } from '../../components/Collapsable';
 import { Typography } from '../../components/Typography';
+import { ReviewSlider, StarReview } from '../../components/ReviewSlider';
+import { FOTSlider, FOTSliderContainer } from '../../components/FrequentlyOrderedTogether';
 
-const GalerrySliderDesktop = () => {
-  const options = { duration: 1000 };
-  const [slider, { current, next, prev, moveTo }] = createSlider(options);
-  return (
-    <SliderProvider>
-      <div class="max-w-1000px m-auto position-relative hidden md-block">
-        <Slider options={{ loop: true, slides: { perView: 3, spacing: 10 } }}>
-          <img src="/assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" />
-          <img src="/assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" />
-          <img src="/assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" />
-          <img src="/assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" />
-          <img src="/assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" />
-          <img src="/assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" />
-        </Slider>
-        <SliderButton class="cursor-pointer position-absolute top-41% left-0 bg-paper-inv bg-op-50 b-rd-bl-1 b-rd-tl-1 b-none px-0 py-1.5" prev><RiArrowLeftSLine class="-ml-1 font-size-10 c-paper hover-c-brand-light:hover transition-colors" /></SliderButton>
-        <SliderButton class="cursor-pointer position-absolute top-41% right-0 bg-paper-inv bg-op-50 b-rd-br-1 b-rd-tr-1 b-none px-0 py-1.5" next><RiArrowRightSLine class="-mr-1 font-size-10 c-paper hover-c-brand-light:hover transition-colors" /></SliderButton>
-      </div>
-    </SliderProvider>
-  );
-};
-
-const GalerrySliderMobile = () => {
-  const options = { duration: 1000 };
-  const [slider, { current, next, prev, moveTo }] = createSlider(options);
-  return (
-    <SliderProvider>
-      <div class="max-w-1000px m-auto position-relative md-hidden block">
-        <Slider options={{ loop: true }}>
-          <img src="/assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" />
-          <img src="/assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" />
-          <img src="/assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" />
-          <img src="/assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" />
-          <img src="/assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" />
-          <img src="/assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" />
-        </Slider>
-        <SliderButton class="cursor-pointer position-absolute top-41% left-0 bg-paper-inv bg-op-50 b-rd-bl-1 b-rd-tl-1 b-none px-0 py-1.5" prev><RiArrowLeftSLine class="-ml-1 font-size-10 c-paper hover-c-brand-light:hover transition-colors" /></SliderButton>
-        <SliderButton class="cursor-pointer position-absolute top-41% right-0 bg-paper-inv bg-op-50 b-rd-br-1 b-rd-tr-1 b-none px-0 py-1.5" next><RiArrowRightSLine class="-mr-1 font-size-10 c-paper hover-c-brand-light:hover transition-colors" /></SliderButton>
-      </div>
-    </SliderProvider>
-  );
-};
 
 const VideoPlayer = () => {
-	return (
-		<div class="flex flex-justify-center flex-items-center mt-20">
-			<video
-				class="mt-10 b-rd-3" style="width: 100%; width: -moz-available; width: -webkit-fill-available; width: fill-available;"
-				autoplay
-				controls
-				muted
-			>
-				<source
-					src="/assets/Professional Carpet Cleaning London - Fine Carpet Cleaning (1).mp4"
-					type="video/mp4"
-				/>
-			</video>
-		</div>
-	);
+  return (
+    <div class="flex flex-justify-center flex-items-center mt-20">
+      <video
+        class="mt-10 b-rd-3" style="width: 100%; width: -moz-available; width: -webkit-fill-available; width: fill-available;"
+        autoplay
+        controls
+        muted
+      >
+        <source
+          src="/assets/Professional Carpet Cleaning London - Fine Carpet Cleaning (1).mp4"
+          type="video/mp4"
+        />
+      </video>
+    </div>
+  );
 };
 
 function FleurDivider() {
@@ -82,28 +37,28 @@ export function FaqSection() {
   const { Container, Entry } = createCollapsable()
   return <Container>
     <Entry>
-        <li>
-          <Typography variant="h3">1. Will you fee me if I cancel the stain removal in London?</Typography>
-          <Typography variant="body">Yes, there is a cancellation fee; however, it only applies in the event that you cancel on the day of the professional stain removal service. You will lose your deposit in that scenario.</Typography></li>
-        <li>
-          <Typography variant="h3">2. Should I pay for the congestion / parking charge?</Typography>
-          <Typography variant="body">Yes, we respectfully request that the client provide us with an appropriate parking area close to the property or pay for any costs associated with parking or traffic.</Typography></li>
-        <li>
-          <Typography variant="h3">3. What if I live on the 4th floor or above and I have no lift?</Typography>
-          <Typography variant="body">Because our equipment weighs more than fifty kilograms, there will be an extra fee for each floor that needs to be transported by hand. This is due to the fact that it frequently takes a long time and may lead our technicians to become fatigued more quickly. This could therefore lower our daily productivity in comparison to our average output.</Typography></li>
-        <li>
-          <Typography variant="h3">4. Are you insured?</Typography>
-          <Typography variant="body">Yes, our company is completely insured.</Typography></li>
-        <li>
-          <Typography variant="h3">5. What happens if your technician damages anything?</Typography>
-          <Typography variant="body">We are fully insured and if an accident happens it will be covered by us.</Typography></li>
+      <li>
+        <Typography variant="h3">1. Will you fee me if I cancel the stain removal in London?</Typography>
+        <Typography variant="body">Yes, there is a cancellation fee; however, it only applies in the event that you cancel on the day of the professional stain removal service. You will lose your deposit in that scenario.</Typography></li>
+      <li>
+        <Typography variant="h3">2. Should I pay for the congestion / parking charge?</Typography>
+        <Typography variant="body">Yes, we respectfully request that the client provide us with an appropriate parking area close to the property or pay for any costs associated with parking or traffic.</Typography></li>
+      <li>
+        <Typography variant="h3">3. What if I live on the 4th floor or above and I have no lift?</Typography>
+        <Typography variant="body">Because our equipment weighs more than fifty kilograms, there will be an extra fee for each floor that needs to be transported by hand. This is due to the fact that it frequently takes a long time and may lead our technicians to become fatigued more quickly. This could therefore lower our daily productivity in comparison to our average output.</Typography></li>
+      <li>
+        <Typography variant="h3">4. Are you insured?</Typography>
+        <Typography variant="body">Yes, our company is completely insured.</Typography></li>
+      <li>
+        <Typography variant="h3">5. What happens if your technician damages anything?</Typography>
+        <Typography variant="body">We are fully insured and if an accident happens it will be covered by us.</Typography></li>
     </Entry>
     <Entry>
-        <li>
-          <Typography variant="h3">6. How long does the process of stain removal London take?</Typography>
-          <Typography variant="body">The duration of the stain removal London process might take anywhere from 5 to 60 minutes, mainly depending on:</Typography></li>
-          <ul class="ml--5" style="list-style: initial;">
-          <Typography variant="li">
+      <li>
+        <Typography variant="h3">6. How long does the process of stain removal London take?</Typography>
+        <Typography variant="body">The duration of the stain removal London process might take anywhere from 5 to 60 minutes, mainly depending on:</Typography></li>
+      <ul class="ml--5" style="list-style: initial;">
+        <Typography variant="li">
           <p>The material of the carpet or upholstery that has been stained;</p>
         </Typography>
         <Typography variant="li">
@@ -118,15 +73,15 @@ export function FaqSection() {
         <Typography variant="li">
           <p>Did someone try to clean it already.</p>
         </Typography>
-        </ul>
-        <li>
-          <Typography variant="h3">7. How long does it take for the rug to get dry after a stain removal London?</Typography>
-          <Typography variant="body">Our team will instruct you on the drying time. It depends on the carpet material, the type of stains, and how bad they are. The condition of the stain determines the drying hours, as well as the cleaning and drying.</Typography></li>
-        <li>
-          <Typography variant="h3">8. Do you guarantee that after stain removal London all stains will be removed?</Typography>
-          <Typography variant="body">We obtain high stain removal success rates because of our vast experience and use of some of the best stain removal technology available. It's important to remember, though, that due to a number of uncontrollable circumstances, we are unable to offer an absolute guarantee. Among these are:</Typography></li>
-          <ul class="ml--5" style="list-style: initial;">
-          <Typography variant="li">
+      </ul>
+      <li>
+        <Typography variant="h3">7. How long does it take for the rug to get dry after a stain removal London?</Typography>
+        <Typography variant="body">Our team will instruct you on the drying time. It depends on the carpet material, the type of stains, and how bad they are. The condition of the stain determines the drying hours, as well as the cleaning and drying.</Typography></li>
+      <li>
+        <Typography variant="h3">8. Do you guarantee that after stain removal London all stains will be removed?</Typography>
+        <Typography variant="body">We obtain high stain removal success rates because of our vast experience and use of some of the best stain removal technology available. It's important to remember, though, that due to a number of uncontrollable circumstances, we are unable to offer an absolute guarantee. Among these are:</Typography></li>
+      <ul class="ml--5" style="list-style: initial;">
+        <Typography variant="li">
           <p>How much time have the stains been there;</p>
         </Typography>
         <Typography variant="li">
@@ -138,9 +93,9 @@ export function FaqSection() {
         <Typography variant="li">
           <p>Any past incorrect treatment of the stains.</p>
         </Typography>
-        </ul>
-        <Typography variant="body">However, we promise to use every resource at our disposal to get rid of any stains on your belongings. Our process includes:</Typography>
-        <ul class="ml--5" style="list-style: initial;">
+      </ul>
+      <Typography variant="body">However, we promise to use every resource at our disposal to get rid of any stains on your belongings. Our process includes:</Typography>
+      <ul class="ml--5" style="list-style: initial;">
         <Typography variant="li">
           <p>Using the greatest cleaning tools available;</p>
         </Typography>
@@ -150,27 +105,27 @@ export function FaqSection() {
         <Typography variant="li">
           <p>Tailoring our strategy to the particular fabric type and staining agent to guarantee the best results.</p>
         </Typography>
-        </ul>
-        <li>
-          <Typography variant="h3">9. How soon can I expect your cleaner to visit me?</Typography>
-          <Typography variant="body">We'll do our best to schedule an appointment for you as quickly as we can. We are usually completely full for the next three days, but occasionally there are openings.</Typography></li>
-        <li>
-          <Typography variant="h3">10. Can you give me a quote for the pet stain removal service over the phone or do you need a viewing in person?</Typography>
-          <Typography variant="body">Yes, we can give you a quote for the pet stain removal service over the phone, there is no need for us to visit your property. You can also receive a pet stain removal service quote online.</Typography></li>
-        <li>
-          <Typography variant="h3">11. What payment methods do you accept?</Typography>
-          <Typography variant="body">We accept debit / credit cards, bank transfers and cash payments given directly to our team.</Typography></li>
-        <li>
-          <Typography variant="h3">12. Can you provide me with an invoice for the pet stain removal service?</Typography>
-          <Typography variant="body">Yes, we will send you a receipt via email.</Typography></li>
-        <li>
-          <Typography variant="h3">13. Are you qualified for stain removal in London?</Typography>
-          <Typography variant="body">Yes, we meet the requirements to join <a class="color-paper-link hover-color-paper-link-hover:hover" href="https://www.checkatrade.com/trades/FineCarpetCleaning" target="_blank" rel="noopener">Checkatrade</a> and the National Carpet Cleaners Association (<a class="color-paper-link hover-color-paper-link-hover:hover" href="https://trustedlocalcleaners.ncca.co.uk/listing/fine-carpet-cleaning-ltd/" target="_blank" rel="noopener">NCCA</a>), the UK's recognised industry association, and we are fully trained members of both organisations.</Typography></li>
-        <li>
-          <Typography variant="h3">14. How long have you been in the cleaning business?</Typography>
-          <Typography variant="body">Since 2012, we have been active in the carpet cleaning and stain removal industry. Throughout the years, we've encountered various types of carpets, rugs, upholstery, and stains while performing our services, accumulating valuable experience. Our commitment to being one of the best cleaning and stain removal companies has led us to enhance our performance through the following means:</Typography></li>
-          <ul class="ml--5" style="list-style: initial;">
-          <Typography variant="li">
+      </ul>
+      <li>
+        <Typography variant="h3">9. How soon can I expect your cleaner to visit me?</Typography>
+        <Typography variant="body">We'll do our best to schedule an appointment for you as quickly as we can. We are usually completely full for the next three days, but occasionally there are openings.</Typography></li>
+      <li>
+        <Typography variant="h3">10. Can you give me a quote for the pet stain removal service over the phone or do you need a viewing in person?</Typography>
+        <Typography variant="body">Yes, we can give you a quote for the pet stain removal service over the phone, there is no need for us to visit your property. You can also receive a pet stain removal service quote online.</Typography></li>
+      <li>
+        <Typography variant="h3">11. What payment methods do you accept?</Typography>
+        <Typography variant="body">We accept debit / credit cards, bank transfers and cash payments given directly to our team.</Typography></li>
+      <li>
+        <Typography variant="h3">12. Can you provide me with an invoice for the pet stain removal service?</Typography>
+        <Typography variant="body">Yes, we will send you a receipt via email.</Typography></li>
+      <li>
+        <Typography variant="h3">13. Are you qualified for stain removal in London?</Typography>
+        <Typography variant="body">Yes, we meet the requirements to join <a class="color-paper-link hover-color-paper-link-hover:hover" href="https://www.checkatrade.com/trades/FineCarpetCleaning" target="_blank" rel="noopener">Checkatrade</a> and the National Carpet Cleaners Association (<a class="color-paper-link hover-color-paper-link-hover:hover" href="https://trustedlocalcleaners.ncca.co.uk/listing/fine-carpet-cleaning-ltd/" target="_blank" rel="noopener">NCCA</a>), the UK's recognised industry association, and we are fully trained members of both organisations.</Typography></li>
+      <li>
+        <Typography variant="h3">14. How long have you been in the cleaning business?</Typography>
+        <Typography variant="body">Since 2012, we have been active in the carpet cleaning and stain removal industry. Throughout the years, we've encountered various types of carpets, rugs, upholstery, and stains while performing our services, accumulating valuable experience. Our commitment to being one of the best cleaning and stain removal companies has led us to enhance our performance through the following means:</Typography></li>
+      <ul class="ml--5" style="list-style: initial;">
+        <Typography variant="li">
           <p>Regularly assessing and refining our cleaning materials to guarantee the best possible service;</p>
         </Typography>
         <Typography variant="li">
@@ -179,15 +134,15 @@ export function FaqSection() {
         <Typography variant="li">
           <p>A commitment to lifelong learning and professional development via training and courses, constantly aiming to improve our proficiency in providing cleaning services.</p>
         </Typography>
-        </ul>
-        <li>
-          <Typography variant="h3">15. Can you add a discount to the carpet stain removal cost?</Typography>
-          <Typography variant="body">Using the best tools and a range of high-grade cleaning supplies, our cleaning services are well-known for their outstanding excellence. Our pricing is not only extremely competitive but also among the most appealing on the market, which sets us apart even more. It is highly recommended that you combine the cleaning services that you need in order to get the best deals. When you do this, you'll find that it's less expensive to bundle all of the services you require than to request each one separately. This cost-effectiveness is ascribed to the starting price and extra fees for every cleaning appointment, accounting for things like parking, travel time, and the handling of bulky items when loading and unloading.</Typography></li>
-        <li>
-          <Typography variant="h3">16. How much does your carpet stain removal cost?</Typography>
-          <Typography variant="body">How much the carpet stain removal costs depends on a number of factors. Some of them are:</Typography></li>
-          <ul class="ml--5" style="list-style: initial;">
-          <Typography variant="li">
+      </ul>
+      <li>
+        <Typography variant="h3">15. Can you add a discount to the carpet stain removal cost?</Typography>
+        <Typography variant="body">Using the best tools and a range of high-grade cleaning supplies, our cleaning services are well-known for their outstanding excellence. Our pricing is not only extremely competitive but also among the most appealing on the market, which sets us apart even more. It is highly recommended that you combine the cleaning services that you need in order to get the best deals. When you do this, you'll find that it's less expensive to bundle all of the services you require than to request each one separately. This cost-effectiveness is ascribed to the starting price and extra fees for every cleaning appointment, accounting for things like parking, travel time, and the handling of bulky items when loading and unloading.</Typography></li>
+      <li>
+        <Typography variant="h3">16. How much does your carpet stain removal cost?</Typography>
+        <Typography variant="body">How much the carpet stain removal costs depends on a number of factors. Some of them are:</Typography></li>
+      <ul class="ml--5" style="list-style: initial;">
+        <Typography variant="li">
           <p>The material of the carpet or upholstery that has been stained;</p>
         </Typography>
         <Typography variant="li">
@@ -195,41 +150,41 @@ export function FaqSection() {
         </Typography>
         <Typography variant="li">
           <p>The quantity and size of the stain.</p>
-          </Typography>
-          </ul>
-          <li>
-          <Typography variant="body">To learn more, check out our <a class="color-paper-link hover-color-paper-link-hover:hover" href="#price_table">stain removal prices</a>.</Typography>
-        </li>
-        <li>
-          <Typography variant="h3">17. What stains cannot be removed from carpet?</Typography>
-          <Typography variant="body">Stains that have been left to dry and settle for a long period of time and stains that have been attempted to be cleaned with improper methods and detergents are some cases where the stain will be harder to remove. Curtain substances are harder to eliminate as well, but thanks to our experience and professional equipment we are able to achieve high success in stain removal and carpet care.</Typography>
-        </li>
+        </Typography>
+      </ul>
+      <li>
+        <Typography variant="body">To learn more, check out our <a class="color-paper-link hover-color-paper-link-hover:hover" href="#price_table">stain removal prices</a>.</Typography>
+      </li>
+      <li>
+        <Typography variant="h3">17. What stains cannot be removed from carpet?</Typography>
+        <Typography variant="body">Stains that have been left to dry and settle for a long period of time and stains that have been attempted to be cleaned with improper methods and detergents are some cases where the stain will be harder to remove. Curtain substances are harder to eliminate as well, but thanks to our experience and professional equipment we are able to achieve high success in stain removal and carpet care.</Typography>
+      </li>
     </Entry>
     <Entry>
-        <li>
-          <Typography variant="h3">18. Is it possible to get rid of old stains?</Typography>
-          <Typography variant="body">Old stains might come out, but we cannot offer any guarantee. Factors like the contents that have caused the stain, the kind of fabric that has been stained or spilled and the period of time that the stain has been left to settle greatly impact the chance of its removal. If you want to receive information for your specific situation, feel free to contact us at any suitable time for you and we will give you a professional estimate on whether your stain or spill can be eliminated.</Typography></li>
-        <li>
-          <Typography variant="h3">19. Can professional carpet cleaners remove stains?</Typography>
-          <Typography variant="body">Yes, since professionals have undergone special training, booking services from stain removal companies is the most effective choice to remove stains. Due to our powerful equipment, we at “Fine Carpet Cleaning” Ltd. are able to deliver the results you desire within a fraction of time. Unfortunately we cannot guarantee you that all stains will be entirely removed. This is due to the fact that some situations are harder to handle. For example, if a stain has been improperly treated it might settle even deeper into the fibres of your carpet or upholstery. If the stain has been left to dry out completely or if it is a very old stain, its removal will require a lot more attention, which still does not guarantee that it will be entirely removed. We strongly advise to react as quickly as possible if a stain has occurred and to take advantage of services provided by stain removal companies for the best and safest results.</Typography>
-          <Typography variant="body">Our stain removal London services include professional carpet stain removal, sofa stain removal services, mattress stain removal services, rug stain removal services, couch stain removal services, upholstery stain removal London and more.</Typography>
-        </li>
-        <li>
-          <Typography variant="h3">20. Do all stains eventually come out?</Typography>
-          <Typography variant="body">Most stains can be removed. However, in some cases, stains can become permanent and a lot harder to come out completely. Such cases include improperly addressing the stains and leaving them to set for a long period of time. In these situations, the substance that caused the stains will set deeper into the fabric. We recommend that if stains or spills occur, address them as quickly as possible, advisably with the help of professional stain removal companies for the best and quickest results.</Typography></li>
-        <li>
-          <Typography variant="h3">21. Do stains become permanent?</Typography>
-          <Typography variant="body">If stains are addressed fast enough, they can be almost entirely eliminated. But if neglected for too long, stains will usually become permanent. Most stains initially stay on the fabric's surface when they come into touch with it and are quite easy to remove. If left to dry out completely, stains will become further sealed into the fibres, making their complete removal a lot harder.</Typography></li>
-        <li>
-          <Typography variant="h3">22. How do I remove deep stains?</Typography>
-          <Typography variant="body">Deep stains can be easily removed through professional stain removal services. We strongly advise you not to attempt to clean the stain yourself, as such attempts may seal the stain even further, rather than remove it. Our approach includes a pre-survey, so we can establish which cleaning methods and detergents will be best suited for your specific situation.</Typography>
-          <Typography variant="body">Our stain removal London services include professional carpet stain removal, sofa stain removal services, mattress stain removal services, rug stain removal services, couch stain removal services, upholstery stain removal London and more.</Typography>
-        </li>
-        <li>
-          <Typography variant="h3">23. How much does it cost to get a stain out of carpet?</Typography>
-          <Typography variant="body">How much the carpet stain removal costs depends on a number of factors, including:</Typography></li>
-          <ul class="ml--5" style="list-style: initial;">
-          <Typography variant="li">
+      <li>
+        <Typography variant="h3">18. Is it possible to get rid of old stains?</Typography>
+        <Typography variant="body">Old stains might come out, but we cannot offer any guarantee. Factors like the contents that have caused the stain, the kind of fabric that has been stained or spilled and the period of time that the stain has been left to settle greatly impact the chance of its removal. If you want to receive information for your specific situation, feel free to contact us at any suitable time for you and we will give you a professional estimate on whether your stain or spill can be eliminated.</Typography></li>
+      <li>
+        <Typography variant="h3">19. Can professional carpet cleaners remove stains?</Typography>
+        <Typography variant="body">Yes, since professionals have undergone special training, booking services from stain removal companies is the most effective choice to remove stains. Due to our powerful equipment, we at “Fine Carpet Cleaning” Ltd. are able to deliver the results you desire within a fraction of time. Unfortunately we cannot guarantee you that all stains will be entirely removed. This is due to the fact that some situations are harder to handle. For example, if a stain has been improperly treated it might settle even deeper into the fibres of your carpet or upholstery. If the stain has been left to dry out completely or if it is a very old stain, its removal will require a lot more attention, which still does not guarantee that it will be entirely removed. We strongly advise to react as quickly as possible if a stain has occurred and to take advantage of services provided by stain removal companies for the best and safest results.</Typography>
+        <Typography variant="body">Our stain removal London services include professional carpet stain removal, sofa stain removal services, mattress stain removal services, rug stain removal services, couch stain removal services, upholstery stain removal London and more.</Typography>
+      </li>
+      <li>
+        <Typography variant="h3">20. Do all stains eventually come out?</Typography>
+        <Typography variant="body">Most stains can be removed. However, in some cases, stains can become permanent and a lot harder to come out completely. Such cases include improperly addressing the stains and leaving them to set for a long period of time. In these situations, the substance that caused the stains will set deeper into the fabric. We recommend that if stains or spills occur, address them as quickly as possible, advisably with the help of professional stain removal companies for the best and quickest results.</Typography></li>
+      <li>
+        <Typography variant="h3">21. Do stains become permanent?</Typography>
+        <Typography variant="body">If stains are addressed fast enough, they can be almost entirely eliminated. But if neglected for too long, stains will usually become permanent. Most stains initially stay on the fabric's surface when they come into touch with it and are quite easy to remove. If left to dry out completely, stains will become further sealed into the fibres, making their complete removal a lot harder.</Typography></li>
+      <li>
+        <Typography variant="h3">22. How do I remove deep stains?</Typography>
+        <Typography variant="body">Deep stains can be easily removed through professional stain removal services. We strongly advise you not to attempt to clean the stain yourself, as such attempts may seal the stain even further, rather than remove it. Our approach includes a pre-survey, so we can establish which cleaning methods and detergents will be best suited for your specific situation.</Typography>
+        <Typography variant="body">Our stain removal London services include professional carpet stain removal, sofa stain removal services, mattress stain removal services, rug stain removal services, couch stain removal services, upholstery stain removal London and more.</Typography>
+      </li>
+      <li>
+        <Typography variant="h3">23. How much does it cost to get a stain out of carpet?</Typography>
+        <Typography variant="body">How much the carpet stain removal costs depends on a number of factors, including:</Typography></li>
+      <ul class="ml--5" style="list-style: initial;">
+        <Typography variant="li">
           <p>The material of the carpet or upholstery that has been stained;</p>
         </Typography>
         <Typography variant="li">
@@ -237,24 +192,24 @@ export function FaqSection() {
         </Typography>
         <Typography variant="li">
           <p>The quantity and size of the stain.</p>
-          </Typography>
-          </ul>
-          <li>
-          <Typography variant="body">To learn more, view our <a class="color-paper-link hover-color-paper-link-hover:hover" href="#price_table">stain removal prices</a>.</Typography>
-        </li>
-        <li>
-          <Typography variant="h3">24. How do professionals clean carpet stains?</Typography>
-          <Typography variant="body">This is made achievable by the knowledge, tools, supplies, and techniques used by experienced stain removal companies. A reputable cleaning business such as "Fine Carpet Cleaning Ltd." provides excellent cleaning services that work especially well on various types of stains. Often, normal cleaning techniques fail to achieve these outcomes. In addition, we provide a customised approach, use only the best cleaning solutions and state-of-the-art commercial appliances, and further safeguard your possessions when providing a professional stain removal service.</Typography>
-          <Typography variant="body">Our stain removal London services include professional carpet stain removal, sofa stain removal services, mattress stain removal services, rug stain removal services, couch stain removal services, upholstery stain removal London and more.</Typography>
-        </li>
-        <li>
-          <Typography variant="h3">25. Do carpet stains reappear after cleaning?</Typography>
-          <Typography variant="body">Stains that reappear may be a result of left residue within the carpet fibers themselves. In these cases, some of the cleaning agent used in the cleaning process was left behind in the carpet. Even after the carpet dries, the residue will remain. Our professional stain removal services will assure that no residue will be left behind and will make sure to eliminate any stain as much as possible. This is due to our use of high-quality tools and our expertise, helping us make sure that no residue or moisture will be left on your carpet, rug or upholstery.</Typography></li>
-        <li>
-          <Typography variant="h3">26. Do you perform professional removal of a red wine stain from a beige carpet?</Typography>
-          <Typography variant="body">It is advised to contact our expert carpet cleaners for the professional removal of a red wine stain from your beige carpet. We can restore your carpet after such an unintentional accident and know just how to handle stubborn stains.</Typography>
-          <Typography variant="body">Our expert carpet cleaners have received extensive training and are proficient in their field. Professional removal of a red wine stain from a beige carpet is far more successful when professional-grade equipment is used. We take care to make sure that the stain removal procedure won't harm your carpet by using a tried-and-true method. We cannot give you a guarantee that all stains will be completely removed, due to factors out of our control, but we will use every possible means to get the job done and leave your carpet fresh and clean.</Typography>
-          <Typography variant="body">Apart from professional carpet stain removal, our services include sofa stain removal services, mattress stain removal services, rug stain removal services, couch stain removal services, upholstery stain removal London and more.</Typography></li>
+        </Typography>
+      </ul>
+      <li>
+        <Typography variant="body">To learn more, view our <a class="color-paper-link hover-color-paper-link-hover:hover" href="#price_table">stain removal prices</a>.</Typography>
+      </li>
+      <li>
+        <Typography variant="h3">24. How do professionals clean carpet stains?</Typography>
+        <Typography variant="body">This is made achievable by the knowledge, tools, supplies, and techniques used by experienced stain removal companies. A reputable cleaning business such as "Fine Carpet Cleaning Ltd." provides excellent cleaning services that work especially well on various types of stains. Often, normal cleaning techniques fail to achieve these outcomes. In addition, we provide a customised approach, use only the best cleaning solutions and state-of-the-art commercial appliances, and further safeguard your possessions when providing a professional stain removal service.</Typography>
+        <Typography variant="body">Our stain removal London services include professional carpet stain removal, sofa stain removal services, mattress stain removal services, rug stain removal services, couch stain removal services, upholstery stain removal London and more.</Typography>
+      </li>
+      <li>
+        <Typography variant="h3">25. Do carpet stains reappear after cleaning?</Typography>
+        <Typography variant="body">Stains that reappear may be a result of left residue within the carpet fibers themselves. In these cases, some of the cleaning agent used in the cleaning process was left behind in the carpet. Even after the carpet dries, the residue will remain. Our professional stain removal services will assure that no residue will be left behind and will make sure to eliminate any stain as much as possible. This is due to our use of high-quality tools and our expertise, helping us make sure that no residue or moisture will be left on your carpet, rug or upholstery.</Typography></li>
+      <li>
+        <Typography variant="h3">26. Do you perform professional removal of a red wine stain from a beige carpet?</Typography>
+        <Typography variant="body">It is advised to contact our expert carpet cleaners for the professional removal of a red wine stain from your beige carpet. We can restore your carpet after such an unintentional accident and know just how to handle stubborn stains.</Typography>
+        <Typography variant="body">Our expert carpet cleaners have received extensive training and are proficient in their field. Professional removal of a red wine stain from a beige carpet is far more successful when professional-grade equipment is used. We take care to make sure that the stain removal procedure won't harm your carpet by using a tried-and-true method. We cannot give you a guarantee that all stains will be completely removed, due to factors out of our control, but we will use every possible means to get the job done and leave your carpet fresh and clean.</Typography>
+        <Typography variant="body">Apart from professional carpet stain removal, our services include sofa stain removal services, mattress stain removal services, rug stain removal services, couch stain removal services, upholstery stain removal London and more.</Typography></li>
     </Entry>
   </Container>
 }
@@ -263,7 +218,7 @@ export default function Page() {
   return (
     <>
       <h1 class="mt-10 md-mt-17 font-size-12.5 md-font-size-16 md-line-height-18 line-height-16">Professional stain removal service</h1>
-      <div class="flex flex-justify-center"><img class="b-rd-3 md-mt-10 mt-2 max-w-full" src="/assets/Професионално почистване на заведения.jpg" alt="" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 30%);" /></div>
+      <div class="flex flex-justify-center"><img class="b-rd-3 md-mt-10 mt-2 max-w-full" src="/assets/service-pics/stain-removal/professional-stain-removal-service-13.jpg" alt="professional-stain-removal-service-13" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 30%);" /></div>
 
       <FleurDivider></FleurDivider>
 
@@ -340,13 +295,18 @@ export default function Page() {
       <h2 class="line-height-12 md-line-height-14">Pictures from our professional stain removal service</h2>
 
       <FacebookLikeGallery imgs={[
-        { src: "/assets/Професионално почистване на заведения.jpg", alt: "" },
-        { src: "/assets/Професионално почистване на заведения.jpg", alt: "" },
-        { src: "/assets/Професионално почистване на заведения.jpg", alt: "" },
-        { src: "/assets/Професионално почистване на заведения.jpg", alt: "" },
-        { src: "/assets/Професионално почистване на заведения.jpg", alt: "" },
-        { src: "/assets/Професионално почистване на заведения.jpg", alt: "" },
-        { src: "/assets/Професионално почистване на заведения.jpg", alt: "" },
+        { src: "/assets/service-pics/stain-removal/professional-stain-removal-service-9.jpg", alt: "professional-stain-removal-service-9" },
+        { src: "/assets/service-pics/stain-removal/professional-stain-removal-service-7.jpg", alt: "professional-stain-removal-service-7" },
+        { src: "/assets/service-pics/stain-removal/professional-stain-removal-service-1.jpg", alt: "professional-stain-removal-service-1" },
+        { src: "/assets/service-pics/stain-removal/professional-stain-removal-service-8.jpg", alt: "professional-stain-removal-service-8" },
+        { src: "/assets/service-pics/stain-removal/professional-stain-removal-service-2.jpg", alt: "professional-stain-removal-service-2" },
+        { src: "/assets/service-pics/stain-removal/professional-stain-removal-service-3.jpg", alt: "professional-stain-removal-service-3" },
+        { src: "/assets/service-pics/stain-removal/professional-stain-removal-service-4.jpg", alt: "professional-stain-removal-service-4" },
+        { src: "/assets/service-pics/stain-removal/professional-stain-removal-service-5.jpg", alt: "professional-stain-removal-service-5" },
+        { src: "/assets/service-pics/stain-removal/professional-stain-removal-service-6.jpg", alt: "professional-stain-removal-service-6" },
+        { src: "/assets/service-pics/stain-removal/professional-stain-removal-service-10.jpg", alt: "professional-stain-removal-service-10" },
+        { src: "/assets/service-pics/stain-removal/professional-stain-removal-service-11.jpg", alt: "professional-stain-removal-service-11" },
+        { src: "/assets/service-pics/stain-removal/professional-stain-removal-service-12.jpg", alt: "professional-stain-removal-service-12" },
       ]} />
 
       <FleurDivider></FleurDivider>
@@ -438,8 +398,57 @@ export default function Page() {
 
       <h2 class="line-height-12 md-line-height-14">Frequently ordered together</h2>
 
-      <GalerrySliderDesktop />
-      <GalerrySliderMobile />
+      <FOTSlider>
+        <FOTSliderContainer
+          img="/assets/service-pics/stain-protection-services/stain-protection-services-7.jpg"
+          alt="stain-protection-services-7"
+          title="Stain protection services"
+          href="/stain-protection-services"
+          description="The main purpose of the stain protector is to guard the fabric against penetration of liquids that lead to lasting stains and permanent damage to the carpet and upholstery."
+        />
+        <FOTSliderContainer
+          img="/assets/Професионално почистване на заведения.jpg"
+          alt=""
+          title="Professional carpet cleaning services"
+          href="/professional-carpet-cleaning-services"
+          description="We offer a variety of professional carpet cleaning services. They will prolong the life of your carpet and is cheaper to do regular maintenance than buying a new carpet."
+        />
+        <FOTSliderContainer
+          img="/assets/service-pics/sofa-cleaning/sofa-cleaning-services-13.jpg"
+          alt="sofa-cleaning-services-13"
+          title="Professional sofa cleaning services"
+          href="/professional-upholstery-cleaning-services/sofa"
+          description="Our expert sofa cleaning uses steam and hot water extraction to eliminate 99% of microorganisms, revitalizing your space for a healthier home."
+        />
+        <FOTSliderContainer
+          img="/assets/service-pics/mattress-cleaning/mattress-cleaning-services-9.jpg"
+          alt="mattress-cleaning-services-9"
+          title="Mattress cleaning services"
+          href="/professional-upholstery-cleaning-services/mattress"
+          description="Mattress cleaning removes unwanted guests and fluids, creating a cleaner environment. It enhances sleep quality and extends the life of your mattress."
+        />
+        <FOTSliderContainer
+          img="/assets/service-pics/furniture-cleaning/furniture-cleaning-12.jpg"
+          alt="furniture-cleaning-12"
+          title="Professional furniture cleaning services"
+          href="/professional-upholstery-cleaning-services/furniture"
+          description="Furniture upholstery cleaning services can extend the life of your furniture, saving you money on purchasing new items."
+        />
+        <FOTSliderContainer
+          img="/assets/service-pics/pillow-cleaning/pillow-cleaning-7.jpg"
+          alt="pillow-cleaning-7"
+          title="Pillow cleaning services"
+          href="/professional-upholstery-cleaning-services/pillow"
+          description="Instead of tossing old pillows, consider our cost-effective professional cleaning. We fluff, sanitize, and deodorize, giving your pillows new life."
+        />
+        <FOTSliderContainer
+          img="/assets/service-pics/rug-cleaning/professional-rug-cleaning-12.jpg"
+          alt="professional-rug-cleaning-12"
+          title="Professional rug cleaning services"
+          href="/professional-rug-cleaning-services"
+          description="Professional rug cleaning removes stains and extends rug life. Our experts use advanced tools to refresh your rug and ensure a healthy, allergy-free environment."
+        />
+      </FOTSlider>
 
       <FleurDivider></FleurDivider>
 
@@ -473,8 +482,33 @@ export default function Page() {
 
       <h2 class="line-height-12 md-line-height-14">Reviews for our professional stain removal service</h2>
 
-      <GalerrySliderDesktop />
-      <GalerrySliderMobile />
+      <ReviewSlider>
+        <StarReview
+          src="/assets/profile-pics-reviews/unnamed90.png"
+          reviewText="Professional, quick to respond. I'm very happy with their service."
+          name="Zaneta Priscepionkaite"
+          date="July 2024"
+          stars={5}
+          hrefGoogleReview="https://g.co/kgs/c4A87Ud"
+        />
+        <StarReview
+          src="/assets/profile-pics-reviews/unnamed90.png"
+          reviewText="FANTASTIC STAFF, FANTASTIC SERVICE, FANTASTIC WORK & MOST IMPORTANTLY FANTASTIC PRICE, Cannot be beaten if you want your carpets cleaned,,, one quick call and everything was taken care of.. IF YOU ARE GETTING YOUR CARPETS CLEANED MAKE SURR YOU USE THESE GUYS 100%👍"
+          name="Zaneta Priscepionkaite"
+          date="July 2024"
+          stars={5}
+          hrefGoogleReview="https://g.co/kgs/c4A87Ud"
+        />
+        <StarReview
+          src="/assets/profile-pics-reviews/unnamed90.png"
+          reviewText="Professional, quick to respond. I'm very happy with their service."
+          name="Zaneta Priscepionkaite"
+          date="July 2024"
+          stars={5}
+          hrefGoogleReview="https://g.co/kgs/c4A87Ud"
+        />
+
+      </ReviewSlider>
 
       <FleurDivider></FleurDivider>
 

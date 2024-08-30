@@ -15,52 +15,52 @@ function FleurDivider() {
 }
 
 const GallerySliderDesktop = ({ children }: { children: JSX.Element | JSX.Element[] }) => {
-  const options = { duration: 1000 };
-  const [slider, { current, next, prev, moveTo }] = createSlider(options);
+	const options = { duration: 1000 };
+	const [slider, { current, next, prev, moveTo }] = createSlider(options);
 
-  return (
-    <SliderProvider>
-      <div class="max-w-1000px m-auto position-relative hidden md:block">
-        <Slider options={{ loop: true, slides: { perView: 3, spacing: 10 } }}>
-          {children}
-        </Slider>
-        <SliderButton class="cursor-pointer position-absolute top-41% left-0 bg-paper-inv bg-op-50 b-rd-bl-1 b-rd-tl-1 b-none px-0 py-1.5" prev>
-          <RiArrowLeftSLine class="-ml-1 font-size-10 c-paper hover-c-brand-light:hover transition-colors" />
-        </SliderButton>
-        <SliderButton class="cursor-pointer position-absolute top-41% right-0 bg-paper-inv bg-op-50 b-rd-br-1 b-rd-tr-1 b-none px-0 py-1.5" next>
-          <RiArrowRightSLine class="-mr-1 font-size-10 c-paper hover-c-brand-light:hover transition-colors" />
-        </SliderButton>
-        <div class="flex flex-justify-center">
-          <div class="flex flex-justify-center">
-            <div class={"flex w-3 h-3 rd-50% mx-2 mt-4 " + (current() === 0 ? "bg-brand-dark" : "bg-brand")}></div>
-            <div class={"flex w-3 h-3 rd-50% mx-2 mt-4 " + (current() === 1 ? "bg-brand-dark" : "bg-brand")}></div>
-            <div class={"flex w-3 h-3 rd-50% mx-2 mt-4 " + (current() === 2 ? "bg-brand-dark" : "bg-brand")}></div>
-          </div>
-        </div>
-      </div>
-    </SliderProvider>
-  );
+	return (
+		<SliderProvider>
+			<div class="max-w-1000px m-auto position-relative hidden md:block">
+				<Slider options={{ loop: true, slides: { perView: 3, spacing: 10 } }}>
+					{children}
+				</Slider>
+				<SliderButton class="cursor-pointer position-absolute top-45% left--15 bg-transparent b-none" prev>
+					<RiArrowLeftSLine class="-ml-1 font-size-10 c-brand-second-action hover-c-brand transition-colors" />
+				</SliderButton>
+				<SliderButton class="cursor-pointer position-absolute top-45% right--15 bg-transparent b-none" next>
+					<RiArrowRightSLine class="-mr-1 font-size-10 c-brand-second-action hover-c-brand transition-colors" />
+				</SliderButton>
+				<div class="flex flex-justify-center">
+					<div class="flex flex-justify-center">
+						<div class={"flex w-3 h-3 rd-50% mx-2 mt-4 " + (current() === 0 ? "bg-brand-dark" : "bg-brand")}></div>
+						<div class={"flex w-3 h-3 rd-50% mx-2 mt-4 " + (current() === 1 ? "bg-brand-dark" : "bg-brand")}></div>
+						<div class={"flex w-3 h-3 rd-50% mx-2 mt-4 " + (current() === 2 ? "bg-brand-dark" : "bg-brand")}></div>
+					</div>
+				</div>
+			</div>
+		</SliderProvider>
+	);
 };
 
 const GallerySliderMobile = ({ children }: { children: JSX.Element | JSX.Element[] }) => {
-  const options = { duration: 1000 };
-  const [slider, { current, next, prev, moveTo }] = createSlider(options);
+	const options = { duration: 1000 };
+	const [slider, { current, next, prev, moveTo }] = createSlider(options);
 
-  return (
-    <SliderProvider>
-      <div class="max-w-1000px m-auto position-relative md:hidden block">
-        <Slider options={{ loop: true }}>
-          {children}
-        </Slider>
-        <SliderButton class="cursor-pointer position-absolute top-41% left-0 bg-paper-inv bg-op-50 b-rd-bl-1 b-rd-tl-1 b-none px-0 py-1.5" prev>
-          <RiArrowLeftSLine class="-ml-1 font-size-10 c-paper hover-c-brand-light:hover transition-colors" />
-        </SliderButton>
-        <SliderButton class="cursor-pointer position-absolute top-41% right-0 bg-paper-inv bg-op-50 b-rd-br-1 b-rd-tr-1 b-none px-0 py-1.5" next>
-          <RiArrowRightSLine class="-mr-1 font-size-10 c-paper hover-c-brand-light:hover transition-colors" />
-        </SliderButton>
-      </div>
-    </SliderProvider>
-  );
+	return (
+		<SliderProvider>
+			<div class="max-w-1000px m-auto position-relative md:hidden block">
+				<Slider options={{ loop: true }}>
+					{children}
+				</Slider>
+				<SliderButton class="cursor-pointer position-absolute top-45% left-0 bg-transparent b-none" prev>
+					<RiArrowLeftSLine class="-ml-1 font-size-9 c-brand-second-action hover-c-brand transition-colors" />
+				</SliderButton>
+				<SliderButton class="cursor-pointer position-absolute top-45% right-0 bg-transparent b-none" next>
+					<RiArrowRightSLine class="-mr-1 font-size-9 c-brand-second-action hover-c-brand transition-colors" />
+				</SliderButton>
+			</div>
+		</SliderProvider>
+	);
 };
 
 export const GallerySlider = ({ children }: { children: JSX.Element | JSX.Element[] }) => {

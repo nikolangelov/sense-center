@@ -19,11 +19,11 @@ const GallerySliderDesktop = ({ children }: { children: JSX.Element | JSX.Elemen
 				<Slider options={{ loop: true, slides: { perView: 3, spacing: 10 } }}>
 					{children}
 				</Slider>
-				<SliderButton class="cursor-pointer position-absolute top-41% left-0 bg-paper-inv bg-op-50 b-rd-bl-1 b-rd-tl-1 b-none px-0 py-1.5" prev>
-					<RiArrowLeftSLine class="-ml-1 font-size-10 c-paper hover-c-brand-light:hover transition-colors" />
+				<SliderButton class="cursor-pointer position-absolute top-45% left--15 bg-transparent b-none" prev>
+					<RiArrowLeftSLine class="-ml-1 font-size-10 c-brand-second-action hover-c-brand transition-colors" />
 				</SliderButton>
-				<SliderButton class="cursor-pointer position-absolute top-41% right-0 bg-paper-inv bg-op-50 b-rd-br-1 b-rd-tr-1 b-none px-0 py-1.5" next>
-					<RiArrowRightSLine class="-mr-1 font-size-10 c-paper hover-c-brand-light:hover transition-colors" />
+				<SliderButton class="cursor-pointer position-absolute top-45% right--15 bg-transparent b-none" next>
+					<RiArrowRightSLine class="-mr-1 font-size-10 c-brand-second-action hover-c-brand transition-colors" />
 				</SliderButton>
 				<div class="flex flex-justify-center">
 					<div class="flex flex-justify-center">
@@ -47,11 +47,11 @@ const GallerySliderMobile = ({ children }: { children: JSX.Element | JSX.Element
 				<Slider options={{ loop: true }}>
 					{children}
 				</Slider>
-				<SliderButton class="cursor-pointer position-absolute top-41% left-0 bg-paper-inv bg-op-50 b-rd-bl-1 b-rd-tl-1 b-none px-0 py-1.5" prev>
-					<RiArrowLeftSLine class="-ml-1 font-size-10 c-paper hover-c-brand-light:hover transition-colors" />
+				<SliderButton class="cursor-pointer position-absolute top-45% left-0 bg-transparent b-none" prev>
+					<RiArrowLeftSLine class="-ml-1 font-size-9 c-brand-second-action hover-c-brand transition-colors" />
 				</SliderButton>
-				<SliderButton class="cursor-pointer position-absolute top-41% right-0 bg-paper-inv bg-op-50 b-rd-br-1 b-rd-tr-1 b-none px-0 py-1.5" next>
-					<RiArrowRightSLine class="-mr-1 font-size-10 c-paper hover-c-brand-light:hover transition-colors" />
+				<SliderButton class="cursor-pointer position-absolute top-45% right-0 bg-transparent b-none" next>
+					<RiArrowRightSLine class="-mr-1 font-size-9 c-brand-second-action hover-c-brand transition-colors" />
 				</SliderButton>
 			</div>
 		</SliderProvider>

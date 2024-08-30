@@ -8,6 +8,9 @@ import { createSlider, Slider, SliderButton, SliderProvider } from 'solid-slider
 import { RotatingBanners } from '../../components/RotatingBanners';
 import { createCollapsable } from '../../components/Collapsable';
 import { Typography } from '../../components/Typography';
+import { ReviewSlider, StarReview } from '../../components/ReviewSlider';
+import { FOTSlider, FOTSliderContainer } from '../../components/FrequentlyOrderedTogether';
+import { App } from '../../components/TransitionH2';
 
 const GalerrySliderDesktop = () => {
   const options = { duration: 1000 };
@@ -160,6 +163,8 @@ export default function Page() {
     <>
       <h1 class="mt-10 md-mt-17 font-size-12.5 md-font-size-16 md-line-height-18 line-height-16">Antiviral sanitisation services</h1>
       <div class="flex flex-justify-center"><img class="b-rd-3 md-mt-10 mt-2 max-w-full" src="/assets/Професионално почистване на заведения.jpg" alt="" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 30%);" /></div>
+
+<App></App>
 
       <FleurDivider></FleurDivider>
 
@@ -344,13 +349,6 @@ export default function Page() {
 
       <FleurDivider></FleurDivider>
 
-      <h2 class="line-height-12 md-line-height-14">Frequently ordered together</h2>
-
-      <GalerrySliderDesktop />
-      <GalerrySliderMobile />
-
-      <FleurDivider></FleurDivider>
-
       <h2 class="line-height-12 md-line-height-14">Our antiviral sanitisation services specialists advise:</h2>
       <div class="mt-20 py-8 px-12 md-px-14 bg-paper b-rd-3" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 18%);">
         <ol style="counter-reset: ordered; list-style: none;">
@@ -381,8 +379,33 @@ export default function Page() {
 
       <h2 class="line-height-12 md-line-height-14">Reviews of our antiviral sanitisation services</h2>
 
-      <GalerrySliderDesktop />
-      <GalerrySliderMobile />
+      <ReviewSlider>
+        <StarReview
+          src="/assets/profile-pics-reviews/unnamed90.png"
+          reviewText="Professional, quick to respond. I'm very happy with their service."
+          name="Zaneta Priscepionkaite"
+          date="July 2024"
+          stars={5}
+          hrefGoogleReview="https://g.co/kgs/c4A87Ud"
+        />
+        <StarReview
+          src="/assets/profile-pics-reviews/unnamed90.png"
+          reviewText="FANTASTIC STAFF, FANTASTIC SERVICE, FANTASTIC WORK & MOST IMPORTANTLY FANTASTIC PRICE, Cannot be beaten if you want your carpets cleaned,,, one quick call and everything was taken care of.. IF YOU ARE GETTING YOUR CARPETS CLEANED MAKE SURR YOU USE THESE GUYS 100%👍"
+          name="Zaneta Priscepionkaite"
+          date="July 2024"
+          stars={5}
+          hrefGoogleReview="https://g.co/kgs/c4A87Ud"
+        />
+        <StarReview
+          src="/assets/profile-pics-reviews/unnamed90.png"
+          reviewText="Professional, quick to respond. I'm very happy with their service."
+          name="Zaneta Priscepionkaite"
+          date="July 2024"
+          stars={5}
+          hrefGoogleReview="https://g.co/kgs/c4A87Ud"
+        />
+
+      </ReviewSlider>
 
       <FleurDivider></FleurDivider>
 

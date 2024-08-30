@@ -59,7 +59,7 @@ export default function Page() {
 
       <FleurDivider></FleurDivider>
 
-      <form action="https://formsubmit.co/nikol.angelov396@abv.bg" method="post">
+      <form action="https://formsubmit.co/office@finecarpetcleaning.co.uk" method="post">
         <input type="text" name="name" required></input>
         <input type="email" name="email" required></input>
         <button type="submit">Send</button>

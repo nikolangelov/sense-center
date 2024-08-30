@@ -31,9 +31,9 @@ function FullScreenImageGallery() {
   );
 }
 
-function AreaButton(props: { href: string; buttontitle: string }) {
+function AreaButton(props: { href: string, buttontitle: string }) {
   return (
-    <button class="outline-none bg-brand-second-action font-size-6 font-600 w-230px h-110px c-paper flex flex-items-center flex-justify-center relative b-solid b-rd-3 b-4 b-brand-second-action whitespace-normal line-height-6 word-spacing-0.5" style="box-shadow: 0 0 0 3px rgba(255, 255, 255, .9) inset; letter-spacing: 0.0rem;">{props.buttontitle}</button>
+    <a href={props.href}><button class="outline-none bg-brand-second-action font-size-6 font-600 w-230px h-110px c-paper flex flex-items-center flex-justify-center relative b-solid b-rd-3 b-4 b-brand-second-action whitespace-normal line-height-6 word-spacing-0.5" style="box-shadow: 0 0 0 3px rgba(255, 255, 255, .9) inset; letter-spacing: 0.0rem;">{props.buttontitle}</button></a>
   )
 }
 function ButtonContainer(props: { children: HTMLElement | any }) {
@@ -64,7 +64,7 @@ export default function Page() {
           buttontitle="Carpet cleaning City of London"
         />
         <AreaButton
-          href=""
+          href="/professional-carpet-cleaning-services/westminster"
           buttontitle="Carpet cleaning Westminster"
         />
         <AreaButton
