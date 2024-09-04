@@ -4,7 +4,7 @@
     "dev": "vite dev",
     "copyfiles": "copyfiles -u 1 \"assets/**/*.{html,css,scss,ttf,woff,woff2,eot,svg,jpg,png,js}\" dist/client/assets",
     "build": "vite build && npm run copyfiles",
-    "deploy": "cp -r -v ./dist/client/* /home/faluninfo-staging/htdocs/staging.faluninfo.bg",
+    "deploy": "cp -r -v ./dist/client/* /home/finecarpetcleaning/htdocs/finecarpetcleaning.co.uk",
     "preview": "vite preview",
     "test": "tsc --noEmit"
   },
