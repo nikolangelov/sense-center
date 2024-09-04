@@ -123,6 +123,12 @@ export default function Page() {
       <ContactUs />
 
       <FleurDivider></FleurDivider>
+      
+      <form action="https://formsubmit.co/office@finecarpetcleaning.co.uk" method="POST">
+				<input type="text" name="name" required />
+				<input type="email" name="email" required />
+				<button type="submit">Send</button>
+			</form>
 
       <h2>Contacts</h2>
 

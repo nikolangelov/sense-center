@@ -15,52 +15,52 @@ function FleurDivider() {
 }
 
 const GallerySliderDesktop = ({ children }: { children: JSX.Element | JSX.Element[] }) => {
-	const options = { duration: 1000 };
-	const [slider, { current, next, prev, moveTo }] = createSlider(options);
+  const options = { duration: 1000 };
+  const [slider, { current, next, prev, moveTo }] = createSlider(options);
 
-	return (
-		<SliderProvider>
-			<div class="max-w-1000px m-auto position-relative hidden md:block">
-				<Slider options={{ loop: true, slides: { perView: 3, spacing: 10 } }}>
-					{children}
-				</Slider>
-				<SliderButton class="cursor-pointer position-absolute top-45% left--15 bg-transparent b-none" prev>
-					<RiArrowLeftSLine class="-ml-1 font-size-10 c-brand-second-action hover-c-brand transition-colors" />
-				</SliderButton>
-				<SliderButton class="cursor-pointer position-absolute top-45% right--15 bg-transparent b-none" next>
-					<RiArrowRightSLine class="-mr-1 font-size-10 c-brand-second-action hover-c-brand transition-colors" />
-				</SliderButton>
-				<div class="flex flex-justify-center">
-					<div class="flex flex-justify-center">
-						<div class={"flex w-3 h-3 rd-50% mx-2 mt-4 " + (current() === 0 ? "bg-brand-dark" : "bg-brand")}></div>
-						<div class={"flex w-3 h-3 rd-50% mx-2 mt-4 " + (current() === 1 ? "bg-brand-dark" : "bg-brand")}></div>
-						<div class={"flex w-3 h-3 rd-50% mx-2 mt-4 " + (current() === 2 ? "bg-brand-dark" : "bg-brand")}></div>
-					</div>
-				</div>
-			</div>
-		</SliderProvider>
-	);
+  return (
+    <SliderProvider>
+      <div class="max-w-1000px m-auto position-relative hidden md:block">
+        <Slider options={{ loop: true, slides: { perView: 3, spacing: 10 } }}>
+          {children}
+        </Slider>
+        <SliderButton class="cursor-pointer position-absolute top-45% left--15 bg-transparent b-none" prev>
+          <RiArrowLeftSLine class="-ml-1 font-size-10 c-brand-second-action hover-c-brand transition-colors" />
+        </SliderButton>
+        <SliderButton class="cursor-pointer position-absolute top-45% right--15 bg-transparent b-none" next>
+          <RiArrowRightSLine class="-mr-1 font-size-10 c-brand-second-action hover-c-brand transition-colors" />
+        </SliderButton>
+        <div class="flex flex-justify-center">
+          <div class="flex flex-justify-center">
+            <div class={"flex w-3 h-3 rd-50% mx-2 mt-4 " + (current() === 0 ? "bg-brand-dark" : "bg-brand")}></div>
+            <div class={"flex w-3 h-3 rd-50% mx-2 mt-4 " + (current() === 1 ? "bg-brand-dark" : "bg-brand")}></div>
+            <div class={"flex w-3 h-3 rd-50% mx-2 mt-4 " + (current() === 2 ? "bg-brand-dark" : "bg-brand")}></div>
+          </div>
+        </div>
+      </div>
+    </SliderProvider>
+  );
 };
 
 const GallerySliderMobile = ({ children }: { children: JSX.Element | JSX.Element[] }) => {
-	const options = { duration: 1000 };
-	const [slider, { current, next, prev, moveTo }] = createSlider(options);
+  const options = { duration: 1000 };
+  const [slider, { current, next, prev, moveTo }] = createSlider(options);
 
-	return (
-		<SliderProvider>
-			<div class="max-w-1000px m-auto position-relative md:hidden block">
-				<Slider options={{ loop: true }}>
-					{children}
-				</Slider>
-				<SliderButton class="cursor-pointer position-absolute top-45% left-0 bg-transparent b-none" prev>
-					<RiArrowLeftSLine class="-ml-1 font-size-9 c-brand-second-action hover-c-brand transition-colors" />
-				</SliderButton>
-				<SliderButton class="cursor-pointer position-absolute top-45% right-0 bg-transparent b-none" next>
-					<RiArrowRightSLine class="-mr-1 font-size-9 c-brand-second-action hover-c-brand transition-colors" />
-				</SliderButton>
-			</div>
-		</SliderProvider>
-	);
+  return (
+    <SliderProvider>
+      <div class="max-w-1000px m-auto position-relative md:hidden block">
+        <Slider options={{ loop: true }}>
+          {children}
+        </Slider>
+        <SliderButton class="cursor-pointer position-absolute top-45% left-0 bg-transparent b-none" prev>
+          <RiArrowLeftSLine class="-ml-1 font-size-9 c-brand-second-action hover-c-brand transition-colors" />
+        </SliderButton>
+        <SliderButton class="cursor-pointer position-absolute top-45% right-0 bg-transparent b-none" next>
+          <RiArrowRightSLine class="-mr-1 font-size-9 c-brand-second-action hover-c-brand transition-colors" />
+        </SliderButton>
+      </div>
+    </SliderProvider>
+  );
 };
 
 export const GallerySlider = ({ children }: { children: JSX.Element | JSX.Element[] }) => {
@@ -91,12 +91,9 @@ export default function Page() {
 
       <div class="mt-20">
         <GallerySlider>
-          <img src="/assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" />
-          <img src="/assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" />
-          <img src="/assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" />
-          <img src="/assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" />
-          <img src="/assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" />
-          <img src="/assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" />
+          <img src="/assets/about-us/fine-carpet-cleaning-about-us1.jpg" alt="fine-carpet-cleaning-about-us1"/>
+          <img src="/assets/about-us/fine-carpet-cleaning-about-us2.jpg" alt="fine-carpet-cleaning-about-us2"/>
+          <img src="/assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" alt=""/>
         </GallerySlider>
       </div>
 
@@ -123,12 +120,11 @@ export default function Page() {
       <h3 style="font-family: 'Mona-Sans', sans-serif;" class="mt-15 mb-15">“Fine Carpet Cleaning” Ltd. is a qualified member of "<a class="color-paper-link hover-color-paper-link-hover:hover" href="https://trustedlocalcleaners.ncca.co.uk/listing/fine-carpet-cleaning-ltd/" target="_blank" rel="noopener">NCCA</a>" (National Carpet Cleaners Association)</h3>
 
       <GallerySlider>
-        <img src="/assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" />
-        <img src="/assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" />
-        <img src="/assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" />
-        <img src="/assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" />
-        <img src="/assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" />
-        <img src="/assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" />
+        <img src="/assets/about-us/fine-carpet-cleaning-checkatrade-certificate.jpg" alt="fine-carpet-cleaning-checkatrade-certificate"/>
+        <img src="/assets/about-us/fine-carpet-cleaning-ncca-certificate-1.jpg" alt="fine-carpet-cleaning-ncca-certificate-1"/>
+        <img src="/assets/about-us/fine-carpet-cleaning-ncca-certificate-2.jpg" alt="fine-carpet-cleaning-ncca-certificate-2"/>
+        <img src="/assets/about-us/fine-carpet-cleaning-ncca-certificate-3.jpg" alt="fine-carpet-cleaning-ncca-certificate-3"/>
+        <img src="/assets/about-us/fcc-infection-control-and-bio-hazard-fogging-certificate.jpg" alt="fcc-infection-control-and-bio-hazard-fogging-certificate"/>
       </GallerySlider>
 
       <div class="mt-20 py-8 px-8 md-px-14 b-rd-3 bg-paper line-height-8 text-justify font-size-4.4" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 18%);">
@@ -199,12 +195,10 @@ export default function Page() {
       <h2>Equipment and products we use</h2>
 
       <GallerySlider>
-        <img src="/assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" />
-        <img src="/assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" />
-        <img src="/assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" />
-        <img src="/assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" />
-        <img src="/assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" />
-        <img src="/assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" />
+        <img src="/assets/about-us/equipment-1.jpg" alt="equipment-1"/>
+        <img src="/assets/about-us/products-1.jpg" alt="products-1"/>
+        <img src="/assets/about-us/vehicles-1.jpg" alt="vehicles-1"/>
+        <img src="/assets/about-us/vehicles-2.jpg" alt="vehicles-2"/>
       </GallerySlider>
 
       <div class="mt-20 py-8 px-12 md-px-14 bg-paper b-rd-3" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 18%);">

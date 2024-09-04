@@ -282,7 +282,7 @@ export default function Page() {
 	return (
 		<>
 			<h1 class="mt-10 md-mt-20 font-size-14 md-font-size-21 md-line-height-18 line-height-16">Fine Carpet Cleaning</h1>
-			<div class="flex flex-justify-center"><img class="b-rd-3 md-my-20 my-10 md-mt-10 mt-2" src="/assets/service-pics/carpet-cleaning-specialists-3.jpg" alt="" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 30%); width: -moz-available; width: -webkit-fill-available; width: fill-available;" /></div>
+			<div class="flex flex-justify-center"><img class="b-rd-3 md-my-20 my-10 md-mt-10 mt-2" src="" alt="" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 30%); width: -moz-available; width: -webkit-fill-available; width: fill-available;" /></div>
 			<div class="mt-10 py-8 px-8 md-px-14 b-rd-3 bg-paper line-height-8 text-justify font-size-4.4" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 18%);">“Fine Carpet Cleaning” Ltd. is a carpet cleaning company that operates in all London boroughs. We provide a variety of commercial and domestic carpet cleaning services, tailoring them to our client's needs.</div>
 
 			<FleurDivider />
@@ -290,7 +290,7 @@ export default function Page() {
 			<h2 class="mb-15 md-mb-20">Our main cleaning services</h2>
 			<div class="p-6 pt-12 bg-paper b-rd-3 flex flex-justify-center" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 18%);">
 				<a href="/professional-carpet-cleaning-services">
-					<img class="md-mt-3 mt--6 mx-auto block md-w-650px xs-w-330px w-270px" src="/assets/service-pics/carpet-cleaning-specialists-3.jpg" alt="" />
+					<img class="md-mt-3 mt--6 mx-auto block md-w-650px xs-w-330px w-270px" src="/assets/Професионално почистване на заведения.jpg" alt="" />
 					<h3 class="flex flex-justify-center flex-content-center flex-wrap flex-items-center md-mt-16 md-mb-9 mb-4 text-center font-size-7 md-font-size-9">Professional carpet cleaning services</h3>
 				</a>
 			</div>
@@ -314,12 +314,10 @@ export default function Page() {
 			<h2>Equipment and products we use in “Fine Carpet Cleaning” Ltd.</h2>
 
 			<GallerySlider>
-				<img src="/assets/service-pics/carpet-professional-cleaning-1 (1).jpg" />
-				<img src="/assets/service-pics/carpet-professional-cleaning-2 (1).jpg" />
-				<img src="/assets/service-pics/carpet-professional-cleaning-3.jpg" />
-				<img src="/assets/service-pics/c6f1890a-f218-45ff-8543-754a9752f89c.jpeg" />
-				<img src="/assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" />
-				<img src="/assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" />
+				<img src="/assets/home/equipments-2.jpg" alt="equipments-2" />
+				<img src="/assets/home/equipments-4.jpg" alt="equipments-4" />
+				<img src="/assets/home/vehicles-3.jpg" alt="vehicles-3" />
+				<img src="/assets/home/vehicles-4.jpg" alt="vehicles-4" />
 			</GallerySlider>
 
 			<div class="mt-20 py-8 px-8 md-px-14 bg-paper b-rd-3" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 18%);">
@@ -428,7 +426,6 @@ export default function Page() {
 				<img src="/assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" />
 				<img src="/assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" />
 				<img src="/assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" />
-				<img src="/assets/service-pics/c6f1890a-f218-45ff-8543-754a9752f89c.jpeg" />
 				<img src="/assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" />
 				<img src="/assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" />
 			</GallerySlider>

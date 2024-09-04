@@ -354,7 +354,7 @@ function ServiceMenuItem(props: { href: string, children: JSX.Element, closeMenu
   );
 }
 
-function DropdownMenuItem(props: { href: string, children: JSX.Element, src: string, closeMenu: () => void }) {
+function DropdownMenuItem(props: { href: string, children: JSX.Element, src: string, alt: string, closeMenu: () => void }) {
   const handleClick = () => {
     props.closeMenu()
   };
@@ -362,7 +362,7 @@ function DropdownMenuItem(props: { href: string, children: JSX.Element, src: str
   return (
     <a href={props.href} onClick={handleClick} class="hidden flex flex-justify-center flex-items-center">
       <div class="flex-col flex-justify-center flex-items-center w-30 h-32 mt-2 mb-2">
-        <img class="w-18 h-18 block mx-auto b-rd-100%" src={props.src} />
+        <img class="w-18 h-18 block mx-auto b-rd-100%" src={props.src} alt={props.alt} />
         <p class="font-size-3 whitespace-normal mx-auto c-paper-inv text-center whitespace-normal uppercase font-sans hover-c-paper-link-hover:hover tracking-wide font-700 line-height-normal">
           {props.children}
         </p>
@@ -381,56 +381,56 @@ function DropDownMenuDesktop(props: { closeMenu: () => void }) {
       <div class="flex flex-col flex-justify-center">
         <a href="/professional-carpet-cleaning-services" onClick={handleClick}><h3 class="whitespace-normal text-center hover-c-brand:hover">Carpet cleaning services</h3></a>
         <div class="flex flex-row flex-wrap hidden flex-items-center flex-content-center">
-          <DropdownMenuItem href="/professional-carpet-cleaning-services/steam" src="/assets/Професионално почистване на заведения.jpg" closeMenu={props.closeMenu}>Carpet steam cleaning</DropdownMenuItem>
-          <DropdownMenuItem href="/professional-carpet-cleaning-services/dry" src="/assets/Професионално почистване на заведения.jpg" closeMenu={props.closeMenu}>Dry carpet cleaning</DropdownMenuItem>
-          <DropdownMenuItem href="/professional-carpet-cleaning-services/eco-friendly" src="/assets/Професионално почистване на заведения.jpg" closeMenu={props.closeMenu}>Eco-friendly carpet cleaning</DropdownMenuItem>
+          <DropdownMenuItem href="/professional-carpet-cleaning-services/steam" src="/assets/desktop-menu-images/same-day-carpet-cleaning-7.jpg" alt="professional-carpet-steam-cleaning-services-7" closeMenu={props.closeMenu}>Carpet steam cleaning</DropdownMenuItem>
+          <DropdownMenuItem href="/professional-carpet-cleaning-services/dry" src="/assets/Професионално почистване на заведения.jpg" alt="" closeMenu={props.closeMenu}>Dry carpet cleaning</DropdownMenuItem>
+          <DropdownMenuItem href="/professional-carpet-cleaning-services/eco-friendly" src="/assets/Професионално почистване на заведения.jpg" alt="" closeMenu={props.closeMenu}>Eco-friendly carpet cleaning</DropdownMenuItem>
         </div>
         <div class="flex flex-row flex-wrap hidden flex-items-center flex-content-center">
-          <DropdownMenuItem href="/professional-carpet-cleaning-services/same-day" src="/assets/Професионално почистване на заведения.jpg" closeMenu={props.closeMenu}>Same day carpet cleaning</DropdownMenuItem>
-          <DropdownMenuItem href="/professional-carpet-cleaning-services/fast-dry" src="/assets/Професионално почистване на заведения.jpg" closeMenu={props.closeMenu}>Fast dry carpet cleaning</DropdownMenuItem>
-          <DropdownMenuItem href="/professional-stain-removal-services" src="/assets/Професионално почистване на заведения.jpg" closeMenu={props.closeMenu}>Carpet stain removal</DropdownMenuItem>
+          <DropdownMenuItem href="/professional-carpet-cleaning-services/same-day" src="/assets/Професионално почистване на заведения.jpg" alt="" closeMenu={props.closeMenu}>Same day carpet cleaning</DropdownMenuItem>
+          <DropdownMenuItem href="/professional-carpet-cleaning-services/fast-dry" src="/assets/Професионално почистване на заведения.jpg" alt="" closeMenu={props.closeMenu}>Fast dry carpet cleaning</DropdownMenuItem>
+          <DropdownMenuItem href="/professional-stain-removal-services" src="/assets/Професионално почистване на заведения.jpg" alt="" closeMenu={props.closeMenu}>Carpet stain removal</DropdownMenuItem>
         </div>
         <div class="flex flex-row flex-wrap hidden flex-items-center flex-content-center">
-          <DropdownMenuItem href="/stain-protection-services" src="/assets/Професионално почистване на заведения.jpg" closeMenu={props.closeMenu}>Carpet stain protection</DropdownMenuItem>
-          <DropdownMenuItem href="/professional-carpet-cleaning-services/commercial" src="/assets/Професионално почистване на заведения.jpg" closeMenu={props.closeMenu}>Commercial carpet cleaning</DropdownMenuItem>
-          <DropdownMenuItem href="/professional-carpet-cleaning-services/residential" src="/assets/Професионално почистване на заведения.jpg" closeMenu={props.closeMenu}>Residential carpet cleaning</DropdownMenuItem>
+          <DropdownMenuItem href="/stain-protection-services" src="/assets/Професионално почистване на заведения.jpg" alt="" closeMenu={props.closeMenu}>Carpet stain protection</DropdownMenuItem>
+          <DropdownMenuItem href="/professional-carpet-cleaning-services/commercial" src="/assets/Професионално почистване на заведения.jpg" alt="" closeMenu={props.closeMenu}>Commercial carpet cleaning</DropdownMenuItem>
+          <DropdownMenuItem href="/professional-carpet-cleaning-services/residential" src="/assets/Професионално почистване на заведения.jpg" alt="" closeMenu={props.closeMenu}>Residential carpet cleaning</DropdownMenuItem>
         </div>
         <div class="flex flex-row flex-wrap hidden flex-items-center flex-content-center flex-justify-center">
-          <DropdownMenuItem href="/professional-carpet-cleaning-services/commercial/office" src="/assets/Професионално почистване на заведения.jpg" closeMenu={props.closeMenu}>Office carpet cleaning</DropdownMenuItem>
+          <DropdownMenuItem href="/professional-carpet-cleaning-services/commercial/office" src="/assets/Професионално почистване на заведения.jpg" alt="" closeMenu={props.closeMenu}>Office carpet cleaning</DropdownMenuItem>
         </div>
       </div>
       <div class="flex flex-col flex-wrap">
         <a href="/professional-upholstery-cleaning-services" onClick={handleClick}><h3 class="whitespace-normal text-center hover-c-brand:hover">Upholstery cleaning services</h3></a>
         <div class="flex flex-row flex-wrap hidden flex-items-center flex-content-center">
-          <DropdownMenuItem href="/professional-upholstery-cleaning-services/sofa" src="/assets/Професионално почистване на заведения.jpg" closeMenu={props.closeMenu}>Sofa cleaning</DropdownMenuItem>
-          <DropdownMenuItem href="/professional-upholstery-cleaning-services/sofa/leather" src="/assets/Професионално почистване на заведения.jpg" closeMenu={props.closeMenu}>Leather sofa cleaning</DropdownMenuItem>
-          <DropdownMenuItem href="/professional-upholstery-cleaning-services/furniture" src="/assets/Професионално почистване на заведения.jpg" closeMenu={props.closeMenu}>Furniture cleaning</DropdownMenuItem>
+          <DropdownMenuItem href="/professional-upholstery-cleaning-services/sofa" src="/assets/Професионално почистване на заведения.jpg" alt="" closeMenu={props.closeMenu}>Sofa cleaning</DropdownMenuItem>
+          <DropdownMenuItem href="/professional-upholstery-cleaning-services/sofa/leather" src="/assets/Професионално почистване на заведения.jpg" alt="" closeMenu={props.closeMenu}>Leather sofa cleaning</DropdownMenuItem>
+          <DropdownMenuItem href="/professional-upholstery-cleaning-services/furniture" src="/assets/Професионално почистване на заведения.jpg" alt="" closeMenu={props.closeMenu}>Furniture cleaning</DropdownMenuItem>
         </div>
         <div class="flex flex-row flex-wrap hidden flex-items-center flex-content-center">
-          <DropdownMenuItem href="/professional-upholstery-cleaning-services/mattress" src="/assets/Професионално почистване на заведения.jpg" closeMenu={props.closeMenu}>Mattress cleaning</DropdownMenuItem>
-          <DropdownMenuItem href="/professional-upholstery-cleaning-services/pillow" src="/assets/Професионално почистване на заведения.jpg" closeMenu={props.closeMenu}>Pillow cleaning</DropdownMenuItem>
-          <DropdownMenuItem href="/professional-stain-removal-services" src="/assets/Професионално почистване на заведения.jpg" closeMenu={props.closeMenu}>Upholstery stain removal</DropdownMenuItem>
+          <DropdownMenuItem href="/professional-upholstery-cleaning-services/mattress" src="/assets/desktop-menu-images/mattress-cleaning-services-9.jpg" alt="" closeMenu={props.closeMenu}>Mattress cleaning</DropdownMenuItem>
+          <DropdownMenuItem href="/professional-upholstery-cleaning-services/pillow" src="/assets/Професионално почистване на заведения.jpg" alt="" closeMenu={props.closeMenu}>Pillow cleaning</DropdownMenuItem>
+          <DropdownMenuItem href="/professional-stain-removal-services" src="/assets/Професионално почистване на заведения.jpg" alt="" closeMenu={props.closeMenu}>Upholstery stain removal</DropdownMenuItem>
         </div>
         <div class="flex flex-row flex-wrap hidden flex-items-center flex-content-center flex-justify-center">
-          <DropdownMenuItem href="/stain-protection-services" src="/assets/Професионално почистване на заведения.jpg" closeMenu={props.closeMenu}>Upholstery stain protection</DropdownMenuItem>
+          <DropdownMenuItem href="/stain-protection-services" src="/assets/Професионално почистване на заведения.jpg" alt="" closeMenu={props.closeMenu}>Upholstery stain protection</DropdownMenuItem>
         </div>
       </div>
       <div class="flex flex-col">
         <div class="flex flex-col flex-wrap">
           <a href="/professional-rug-cleaning-services" onClick={handleClick}><h3 class="whitespace-normal text-center hover-c-brand:hover">Rug cleaning services</h3></a>
           <div class="flex flex-row flex-wrap hidden flex-items-center flex-content-center">
-            <DropdownMenuItem href="/professional-rug-cleaning-services/steam" src="/assets/Професионално почистване на заведения.jpg" closeMenu={props.closeMenu}>Rug steam cleaning</DropdownMenuItem>
-            <DropdownMenuItem href="/professional-rug-cleaning-services/dry" src="/assets/Професионално почистване на заведения.jpg" closeMenu={props.closeMenu}>Dry rug cleaning</DropdownMenuItem>
-            <DropdownMenuItem href="/professional-stain-removal-services" src="/assets/Професионално почистване на заведения.jpg" closeMenu={props.closeMenu}>Rug stain removal</DropdownMenuItem>
+            <DropdownMenuItem href="/professional-rug-cleaning-services/steam" src="/assets/Професионално почистване на заведения.jpg" alt="" closeMenu={props.closeMenu}>Rug steam cleaning</DropdownMenuItem>
+            <DropdownMenuItem href="/professional-rug-cleaning-services/dry" src="/assets/Професионално почистване на заведения.jpg" alt="" closeMenu={props.closeMenu}>Dry rug cleaning</DropdownMenuItem>
+            <DropdownMenuItem href="/professional-stain-removal-services" src="/assets/Професионално почистване на заведения.jpg" alt="" closeMenu={props.closeMenu}>Rug stain removal</DropdownMenuItem>
           </div>
           <div class="flex flex-row flex-wrap hidden flex-items-center flex-content-center flex-justify-center">
-            <DropdownMenuItem href="/stain-protection-services" src="/assets/Професионално почистване на заведения.jpg" closeMenu={props.closeMenu}>Rug stain protection</DropdownMenuItem>
+            <DropdownMenuItem href="/stain-protection-services" src="/assets/Професионално почистване на заведения.jpg" alt="" closeMenu={props.closeMenu}>Rug stain protection</DropdownMenuItem>
           </div>
         </div>
         <div class="flex flex-col flex-wrap">
           <h3 class="whitespace-normal text-center">Other cleaning services</h3>
           <div class="flex flex-row flex-wrap hidden flex-items-center flex-content-center flex-justify-center">
-            <DropdownMenuItem href="/antiviral-sanitisation-services" src="/assets/Професионално почистване на заведения.jpg" closeMenu={props.closeMenu}>Antiviral sanitisation</DropdownMenuItem>
+            <DropdownMenuItem href="/antiviral-sanitisation-services" src="/assets/Професионално почистване на заведения.jpg" alt="" closeMenu={props.closeMenu}>Antiviral sanitisation</DropdownMenuItem>
           </div>
         </div>
       </div>
