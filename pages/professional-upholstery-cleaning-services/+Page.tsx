@@ -236,7 +236,7 @@ export default function Page() {
 	return (
 		<>
 			<h1 class="mt-10 md-mt-17 font-size-12.5 md-font-size-16 md-line-height-18 line-height-16">Professional upholstery cleaning services</h1>
-			<div class="flex flex-justify-center"><img class="b-rd-3 md-mt-10 mt-2 max-w-full" src="/assets/service-pics/upholstery-cleaning/professional-upholstery-cleaning-service-13.jpg" alt="professional-upholstery-cleaning-service-13" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 30%);" /></div>
+			<div class="flex flex-justify-center"><img class="b-rd-3 md-mt-10 mt-2 max-w-full" src="/assets/service-pics/upholstery-cleaning/upholstery-cleaners-london.jpg" alt="upholstery-cleaners-london" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 30%);" /></div>
 
 			<FleurDivider></FleurDivider>
 
@@ -346,22 +346,21 @@ export default function Page() {
 					</li>
 					<li class="ml--5">
 						<h3 class="ml--5 font-size-6 md-font-size-7">Carefully selected cleaning products</h3>
-						<Typography variant="body">Our huge selection of cleaning products has been carefully chosen after in-depth testing of almost all cleaning products available on the market. This extensive variety enables our technicians to choose the most appropriate detergents based on factors such as:</Typography>
+						<Typography variant="body">Our huge selection of cleaning products has been carefully chosen after in-depth testing of almost all cleaning products available on the market. This extensive variety enables our technicians to choose the most appropriate detergents based on factors such as:</Typography></li>
+						</ol>
 						<ul class="ml--5" style="list-style: initial;">
-							<li class="ml--5">
+							<li>
 								<p>The fabric of the upholstery;</p>
 							</li>
-							<li class="ml--5">
+							<li>
 								<p>The level of soiling;</p>
 							</li>
-							<li class="ml--5">
+							<li>
 								<p>The type of stains to be treated.</p>
 							</li>
 						</ul>
-						<Typography variant="body">Thanks to this selection, we have a variety of specialised detergents for all kinds of different fabrics and with it we are able to perform professional velvet upholstery cleaning, cotton upholstery cleaning, leather, wool, linen, hemp, silk upholstery cleaning and more.</Typography>
-						<Typography variant="body">With our state-of-the-art cleaning equipment and top-quality products, we guarantee a professional upholstery cleaning service in London of the utmost quality.</Typography>
-					</li>
-				</ol>
+						<p>Thanks to this selection, we have a variety of specialised detergents for all kinds of different fabrics and with it we are able to perform professional velvet upholstery cleaning, cotton upholstery cleaning, leather, wool, linen, hemp, silk upholstery cleaning and more.</p>
+						<p>With our state-of-the-art cleaning equipment and top-quality products, we guarantee a professional upholstery cleaning service in London of the utmost quality.</p>
 			</div>
 
 			<FleurDivider></FleurDivider>
@@ -369,18 +368,19 @@ export default function Page() {
 			<h2 class="line-height-12 md-line-height-14">Pictures from our professional upholstery cleaning services</h2>
 
 			<FacebookLikeGallery imgs={[
-				{ src: "/assets/service-pics/upholstery-cleaning/professional-upholstery-cleaning-service-11.jpg", alt: "professional-upholstery-cleaning-service-11" },
-				{ src: "/assets/service-pics/upholstery-cleaning/professional-upholstery-cleaning-service-7.jpg", alt: "professional-upholstery-cleaning-service-7" },
-				{ src: "/assets/service-pics/upholstery-cleaning/professional-upholstery-cleaning-service-1.jpg", alt: "professional-upholstery-cleaning-service-1" },
-				{ src: "/assets/service-pics/upholstery-cleaning/professional-upholstery-cleaning-service-8.jpg", alt: "professional-upholstery-cleaning-service-8" },
-				{ src: "/assets/service-pics/upholstery-cleaning/professional-upholstery-cleaning-service-2.jpg", alt: "professional-upholstery-cleaning-service-2" },
-				{ src: "/assets/service-pics/upholstery-cleaning/professional-upholstery-cleaning-service-3.jpg", alt: "professional-upholstery-cleaning-service-3" },
-				{ src: "/assets/service-pics/upholstery-cleaning/professional-upholstery-cleaning-service-4.jpg", alt: "professional-upholstery-cleaning-service-4" },
-				{ src: "/assets/service-pics/upholstery-cleaning/professional-upholstery-cleaning-service-5.jpg", alt: "professional-upholstery-cleaning-service-5" },
-				{ src: "/assets/service-pics/upholstery-cleaning/professional-upholstery-cleaning-service-6.jpg", alt: "professional-upholstery-cleaning-service-6" },
-				{ src: "/assets/service-pics/upholstery-cleaning/professional-upholstery-cleaning-service-9.jpg", alt: "professional-upholstery-cleaning-service-9" },
-				{ src: "/assets/service-pics/upholstery-cleaning/professional-upholstery-cleaning-service-10.jpg", alt: "professional-upholstery-cleaning-service-10" },
-				{ src: "/assets/service-pics/upholstery-cleaning/professional-upholstery-cleaning-service-12.jpg", alt: "professional-upholstery-cleaning-service-12" },
+				{ src: "/assets/service-pics/upholstery-cleaning/1-best-upholstery-cleaning-service.jpg", alt: "1-best-upholstery-cleaning-service" },
+				{ src: "/assets/service-pics/upholstery-cleaning/4-upholstery-cleaning-company.jpg", alt: "4-upholstery-cleaning-company" },
+				{ src: "/assets/service-pics/upholstery-cleaning/2-professional-upholstery-cleaning-1.jpg", alt: "2-professional-upholstery-cleaning-1" },
+				{ src: "/assets/service-pics/upholstery-cleaning/3-upholstery-cleaning-london.jpg", alt: "3-upholstery-cleaning-london" },
+				{ src: "/assets/service-pics/upholstery-cleaning/5-same-day-upholstery-cleaning.jpg", alt: "5-same-day-upholstery-cleaning" },
+				{ src: "/assets/service-pics/upholstery-cleaning/6-professional-upholstery-cleaning-service-1.jpg", alt: "6-professional-upholstery-cleaning-service-1" },
+				{ src: "/assets/service-pics/upholstery-cleaning/7-steam-cleaning-upholstery-services.jpg", alt: "7-steam-cleaning-upholstery-services" },
+				{ src: "/assets/service-pics/upholstery-cleaning/8-upholstery-cleaners-london-1.jpg", alt: "8-upholstery-cleaners-london-1" },
+				{ src: "/assets/service-pics/upholstery-cleaning/9-commercial-upholstery-cleaning.jpg", alt: "9-commercial-upholstery-cleaning" },
+				{ src: "/assets/service-pics/upholstery-cleaning/10-upholstery-cleaning-experts.jpg", alt: "10-upholstery-cleaning-experts" },
+				{ src: "/assets/service-pics/upholstery-cleaning/11-upholstery-cleaning-experts-1.jpg", alt: "11-upholstery-cleaning-experts-1" },
+				{ src: "/assets/service-pics/upholstery-cleaning/12-upholstery-cleaning-london-1.jpg", alt: "12-upholstery-cleaning-london-1" },
+				{ src: "/assets/service-pics/upholstery-cleaning/13-upholstery-deep-cleaning-service.jpg", alt: "13-upholstery-deep-cleaning-service" },
 			]} />
 
 			<FleurDivider></FleurDivider>

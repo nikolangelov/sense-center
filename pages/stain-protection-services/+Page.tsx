@@ -180,7 +180,7 @@ export default function Page() {
   return (
     <>
       <h1 class="mt-10 md-mt-17 font-size-12.5 md-font-size-16 md-line-height-18 line-height-16">Stain protection services</h1>
-      <div class="flex flex-justify-center"><img class="b-rd-3 md-mt-10 mt-2 max-w-full" src="/assets/service-pics/stain-protection-services/stain-protection-services-7.jpg" alt="stain-protection-services-7" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 30%);" /></div>
+      <div class="flex flex-justify-center"><img class="b-rd-3 md-mt-10 mt-2 max-w-full" src="/assets/service-pics/stain-protection-services/stain-protection-services.jpg" alt="stain-protection-services-7" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 30%);" /></div>
 
       <FleurDivider></FleurDivider>
 
@@ -292,10 +292,10 @@ export default function Page() {
       <h2 class="line-height-12 md-line-height-14">Pictures from our stain protection services</h2>
 
       <FacebookLikeGallery imgs={[
-        { src: "/assets/service-pics/stain-protection-services/stain-protection-services-2.jpg", alt: "stain-protection-services-2" },
-        { src: "/assets/service-pics/stain-protection-services/stain-protection-services-6.jpg", alt: "stain-protection-services-6" },
-        { src: "/assets/service-pics/stain-protection-services/stain-protection-services-1.jpg", alt: "stain-protection-services-1" },
-        { src: "/assets/service-pics/stain-protection-services/stain-protection-services-4.jpg", alt: "stain-protection-services-4" },
+        { src: "/assets/service-pics/stain-protection-services/1-sofa-stain-protection-service.jpg", alt: "1-sofa-stain-protection-service" },
+        { src: "/assets/service-pics/stain-protection-services/2-stain-protection-services.jpg", alt: "2-stain-protection-services" },
+        { src: "/assets/service-pics/stain-protection-services/3-carpet-stain-protection.jpg", alt: "3-carpet-stain-protection" },
+        { src: "/assets/service-pics/stain-protection-services/4-upholstery-stain-protection.jpg", alt: "4-upholstery-stain-protection" },
       ]} />
 
       <FleurDivider></FleurDivider>

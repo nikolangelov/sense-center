@@ -205,7 +205,7 @@ export default function Page() {
   return (
     <>
       <h1 class="mt-10 md-mt-17 font-size-12.5 md-font-size-16 md-line-height-18 line-height-16">Residential carpet cleaning services</h1>
-      <div class="flex flex-justify-center"><img class="b-rd-3 md-mt-10 mt-2 max-w-full" src="/assets/service-pics/residential-carpet/residential-carpet-cleaning-services-13.jpg" alt="residential-carpet-cleaning-services-13" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 30%);" /></div>
+      <div class="flex flex-justify-center"><img class="b-rd-3 md-mt-10 mt-2 max-w-full" src="/assets/service-pics/residential-carpet/residential-carpet-cleaning-services.jpg" alt="residential-carpet-cleaning-services" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 30%);" /></div>
 
       <FleurDivider></FleurDivider>
 
@@ -289,21 +289,20 @@ export default function Page() {
           </li>
           <li class="ml--5">
             <h3 class="ml--5 font-size-6 md-font-size-7">Thoughtfully chosen cleaning solutions</h3>
-            <Typography variant="body">Our inventory comprises over 20 diverse cleaning products sourced from renowned brands in both the UK and US markets for our whole house carpet cleaning. The selection process involves thorough testing, and we've handpicked products from names such as "Alltec," "Prochem," "Chemspec," "Solution World of Clean," and "TMF." This wide range empowers our technicians to select the most suitable detergents for each situation, considering factors such as:</Typography>
-            <ul class="ml--5" style="list-style: initial;">
-              <li class="ml--5">
-                <p>The fabric and type of the carpet;</p>
-              </li>
-              <li class="ml--5">
-                <p>The extent of soiling on the carpet;</p>
-              </li>
-              <li class="ml--5">
-                <p>The nature of stains requiring removal.</p>
-              </li>
-            </ul>
-            <Typography variant="body">This approach ensures the provision of the most professional house cleaning and carpet cleaning services.</Typography>
-          </li>
+            <Typography variant="body">Our inventory comprises over 20 diverse cleaning products sourced from renowned brands in both the UK and US markets for our whole house carpet cleaning. The selection process involves thorough testing, and we've handpicked products from names such as "Alltec," "Prochem," "Chemspec," "Solution World of Clean," and "TMF." This wide range empowers our technicians to select the most suitable detergents for each situation, considering factors such as:</Typography></li>
         </ol>
+        <ul class="ml--5" style="list-style: initial;">
+          <li>
+            <p>The fabric and type of the carpet;</p>
+          </li>
+          <li>
+            <p>The extent of soiling on the carpet;</p>
+          </li>
+          <li>
+            <p>The nature of stains requiring removal.</p>
+          </li>
+        </ul>
+        <p>This approach ensures the provision of the most professional house cleaning and carpet cleaning services.</p>
       </div>
 
       <FleurDivider></FleurDivider>
@@ -311,18 +310,17 @@ export default function Page() {
       <h2 class="line-height-12 md-line-height-14">Pictures from our residential carpet cleaning services in London</h2>
 
       <FacebookLikeGallery imgs={[
-        { src: "/assets/service-pics/residential-carpet/residential-carpet-cleaning-services-1.jpg", alt: "residential-carpet-cleaning-services-1" },
-        { src: "/assets/service-pics/residential-carpet/residential-carpet-cleaning-services-8.jpg", alt: "residential-carpet-cleaning-services-8" },
-        { src: "/assets/service-pics/residential-carpet/residential-carpet-cleaning-services-2.jpg", alt: "residential-carpet-cleaning-services-2" },
-        { src: "/assets/service-pics/residential-carpet/residential-carpet-cleaning-services-9.jpg", alt: "residential-carpet-cleaning-services-9" },
-        { src: "/assets/service-pics/residential-carpet/residential-carpet-cleaning-services-3.jpg", alt: "residential-carpet-cleaning-services-3" },
-        { src: "/assets/service-pics/residential-carpet/residential-carpet-cleaning-services-4.jpg", alt: "residential-carpet-cleaning-services-4" },
-        { src: "/assets/service-pics/residential-carpet/residential-carpet-cleaning-services-5.jpg", alt: "residential-carpet-cleaning-services-5" },
-        { src: "/assets/service-pics/residential-carpet/residential-carpet-cleaning-services-6.jpg", alt: "residential-carpet-cleaning-services-6" },
-        { src: "/assets/service-pics/residential-carpet/residential-carpet-cleaning-services-7.jpg", alt: "residential-carpet-cleaning-services-7" },
-        { src: "/assets/service-pics/residential-carpet/residential-carpet-cleaning-services-10.jpg", alt: "residential-carpet-cleaning-services-10" },
-        { src: "/assets/service-pics/residential-carpet/residential-carpet-cleaning-services-11.jpg", alt: "residential-carpet-cleaning-services-11" },
-        { src: "/assets/service-pics/residential-carpet/residential-carpet-cleaning-services-12.jpg", alt: "residential-carpet-cleaning-services-12" },
+        { src: "/assets/service-pics/residential-carpet/1-best-residential-carpet-cleaning-company.jpg", alt: "1-best-residential-carpet-cleaning-company" },
+        { src: "/assets/service-pics/residential-carpet/2-domestic-carpet-cleaning-services-1.jpg", alt: "2-domestic-carpet-cleaning-services-1" },
+        { src: "/assets/service-pics/residential-carpet/3-retail-carpet-cleaning.jpg", alt: "3-retail-carpet-cleaning" },
+        { src: "/assets/service-pics/residential-carpet/4-home-carpet-cleaning-services-1.jpg", alt: "4-home-carpet-cleaning-services-1" },
+        { src: "/assets/service-pics/residential-carpet/5-domestic-carpet-cleaning-services.jpg", alt: "5-domestic-carpet-cleaning-services" },
+        { src: "/assets/service-pics/residential-carpet/6-home-carpet-cleaning-services-2.jpg", alt: "6-home-carpet-cleaning-services-2" },
+        { src: "/assets/service-pics/residential-carpet/7-home-carpet-cleaning-services.jpg", alt: "7-home-carpet-cleaning-services" },
+        { src: "/assets/service-pics/residential-carpet/8-private-carpet-cleaning-services.jpg", alt: "8-private-carpet-cleaning-services" },
+        { src: "/assets/service-pics/residential-carpet/9-apartment-carpet-cleaning.jpg", alt: "9-apartment-carpet-cleaning" },
+        { src: "/assets/service-pics/residential-carpet/10-residential-carpet-cleaning-services-1.jpg", alt: "10-residential-carpet-cleaning-services-1" },
+        { src: "/assets/service-pics/residential-carpet/11-house-carpet-cleaning-services-1.jpg", alt: "11-house-carpet-cleaning-services-1" },
       ]} />
 
       <FleurDivider></FleurDivider>

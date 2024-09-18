@@ -219,7 +219,7 @@ export default function Page() {
   return (
     <>
       <h1 class="mt-10 md-mt-17 font-size-12.5 md-font-size-16 md-line-height-18 line-height-16">Professional carpet steam cleaning services</h1>
-      <div class="flex flex-justify-center"><img class="b-rd-3 md-mt-10 mt-2 max-w-full" src="/assets/service-pics/carpet-steam/professional-carpet-steam-cleaning-services-7.jpg" alt="professional-carpet-steam-cleaning-services-7" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 30%);" /></div>
+      <div class="flex flex-justify-center"><img class="b-rd-3 md-mt-10 mt-2 max-w-full" src="/assets/service-pics/carpet-steam/steam-clean-carpet-company.jpg" alt="steam-clean-carpet-company" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 30%);" /></div>
 
       <FleurDivider></FleurDivider>
 
@@ -325,15 +325,15 @@ export default function Page() {
       <h2 class="line-height-12 md-line-height-14">Pictures from our professional carpet steam cleaning services in London</h2>
 
       <FacebookLikeGallery imgs={[
-        { src: "/assets/service-pics/carpet-steam/professional-carpet-steam-cleaning-services-6.jpg", alt: "professional-carpet-steam-cleaning-services-6" },
-        { src: "/assets/service-pics/carpet-steam/professional-carpet-steam-cleaning-services-4.jpg", alt: "professional-carpet-steam-cleaning-services-4" },
-        { src: "/assets/service-pics/carpet-steam/professional-carpet-steam-cleaning-services-ba-1.jpg", alt: "professional-carpet-steam-cleaning-services-ba-1" },
-        { src: "/assets/service-pics/carpet-steam/professional-carpet-steam-cleaning-services-1.jpg", alt: "professional-carpet-steam-cleaning-services-1" },
-        { src: "/assets/service-pics/carpet-steam/professional-carpet-steam-cleaning-services-ba-2.jpg", alt: "professional-carpet-steam-cleaning-services-ba-2" },
-        { src: "/assets/service-pics/carpet-steam/professional-carpet-steam-cleaning-services-ba-3.jpg", alt: "professional-carpet-steam-cleaning-services-ba-3" },
-        { src: "/assets/service-pics/carpet-steam/professional-carpet-steam-cleaning-services-2.jpg", alt: "professional-carpet-steam-cleaning-services-2" },
-        { src: "/assets/service-pics/carpet-steam/professional-carpet-steam-cleaning-services-3.jpg", alt: "professional-carpet-steam-cleaning-services-3" },
-        { src: "/assets/service-pics/carpet-steam/professional-carpet-steam-cleaning-services-5.jpg", alt: "professional-carpet-steam-cleaning-services-5" },
+        { src: "/assets/service-pics/carpet-steam/1-professional-carpet-steam-cleaning-services.jpg", alt: "1-professional-carpet-steam-cleaning-services" },
+        { src: "/assets/service-pics/carpet-steam/2-professional-deep-carpet-cleaning-services-3.jpg", alt: "2-professional-deep-carpet-cleaning-services-3" },
+        { src: "/assets/service-pics/carpet-steam/3-steam-extraction-carpet-cleaning.jpg", alt: "3-steam-extraction-carpet-cleaning" },
+        { src: "/assets/service-pics/carpet-steam/4-carpet-steam-cleaning-london.jpg", alt: "4-carpet-steam-cleaning-london.jpg" },
+        { src: "/assets/service-pics/carpet-steam/5-deep-clean-carpet-company.jpg", alt: "5-deep-clean-carpet-company" },
+        { src: "/assets/service-pics/carpet-steam/6-hot-water-extraction-carpet-cleaning-companies.jpg", alt: "6-hot-water-extraction-carpet-cleaning-companies" },
+        { src: "/assets/service-pics/carpet-steam/7-professional-deep-carpet-cleaning-services-1.jpg", alt: "7-professional-deep-carpet-cleaning-services-1" },
+        { src: "/assets/service-pics/carpet-steam/8-steam-extraction-carpet-cleaning-1.jpg", alt: "8-steam-extraction-carpet-cleaning-1" },
+        { src: "/assets/service-pics/carpet-steam/9-professional-deep-carpet-cleaning-services.jpg", alt: "9-professional-deep-carpet-cleaning-services" },
       ]} />
 
       <FleurDivider></FleurDivider>

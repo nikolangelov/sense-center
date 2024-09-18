@@ -279,13 +279,13 @@ export default function Page() {
   return (
     <>
       <h1 class="mt-10 md-mt-17 font-size-12.5 md-font-size-16 md-line-height-18 line-height-16">Mattress cleaning services</h1>
-      <div class="flex flex-justify-center"><img class="b-rd-3 md-mt-10 mt-2 max-w-full" src="/assets/service-pics/mattress-cleaning/mattress-cleaning-services-9.jpg" alt="mattress-cleaning-services-9" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 30%);" /></div>
+      <div class="flex flex-justify-center"><img class="b-rd-3 md-mt-10 mt-2 max-w-full" src="/assets/service-pics/mattress-cleaning/mattress-cleaning-services.jpg" alt="mattress-cleaning-services" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 30%);" /></div>
 
       <FleurDivider></FleurDivider>
 
       <h2 class="line-height-12 md-line-height-14">What to expect from our mattress cleaning services</h2>
       <div class="mt-20 py-8 px-8 md-px-14 bg-paper b-rd-3" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 18%);">
-        <Typography variant="h3">Benefits:</Typography>
+        <h3>Benefits:</h3>
         <p>We at “Fine Carpet Cleaning” Ltd. perform mattress cleaning services. Apart from refreshing and leaving your bed feeling brand-new, mattress cleaning services have great health benefits. Studies reveal that a typical used mattress may have 100,000 to 10 million mites inside. Additionally, the human body loses about half a pint of fluid every night, most of which is absorbed into the fibres of the mattress. Mattress cleaning services and dust mite cleaning services will help exterminate any unwanted guests and fluids, leaving your environment significantly cleaner and healthier. A lot more advantages are gained through such services, such as:</p>
         <ul>
           <li class="ml--5">
@@ -320,7 +320,7 @@ export default function Page() {
           </li>
         </ul>
 
-        <Typography variant="h3">Simple booking process:</Typography>
+        <h3>Simple booking process:</h3>
         <p>The usual process of booking our mattress carpet cleaning services:</p>
 
         <ul>
@@ -341,7 +341,7 @@ export default function Page() {
           </li>
         </ul>
 
-        <Typography variant="h3">What do we offer:</Typography>
+        <h3>What do we offer:</h3>
         <p>Other cleaning services you might be interested in are:</p>
 
         <ul>
@@ -407,14 +407,17 @@ export default function Page() {
       <h2 class="line-height-12 md-line-height-14">Pictures from our mattress cleaning services</h2>
 
       <FacebookLikeGallery imgs={[
-        { src: "/assets/service-pics/mattress-cleaning/mattress-cleaning-services-6.jpg", alt: "/mattress-cleaning-services-6" },
-        { src: "/assets/service-pics/mattress-cleaning/mattress-cleaning-services-2.jpg", alt: "/mattress-cleaning-services-2" },
-        { src: "/assets/service-pics/mattress-cleaning/mattress-cleaning-services-1.jpg", alt: "/mattress-cleaning-services-1" },
-        { src: "/assets/service-pics/mattress-cleaning/mattress-cleaning-services-3.jpg", alt: "/mattress-cleaning-services-3" },
-        { src: "/assets/service-pics/mattress-cleaning/mattress-cleaning-services-4.jpg", alt: "/mattress-cleaning-services-4" },
-        { src: "/assets/service-pics/mattress-cleaning/mattress-cleaning-services-5.jpg", alt: "/mattress-cleaning-services-5" },
-        { src: "/assets/service-pics/mattress-cleaning/mattress-cleaning-services-7.jpg", alt: "/mattress-cleaning-services-7" },
-        { src: "/assets/service-pics/mattress-cleaning/mattress-cleaning-services-8.jpg", alt: "/mattress-cleaning-services-8" },
+        { src: "/assets/service-pics/mattress-cleaning/1-mattress-cleaning-service-london-3.jpg", alt: "1-mattress-cleaning-service-london-3" },
+        { src: "/assets/service-pics/mattress-cleaning/2-mattress-cleaning-service-london-4.jpg", alt: "2-mattress-cleaning-service-london-4" },
+        { src: "/assets/service-pics/mattress-cleaning/3-dust-mite-removal-services.jpg", alt: "3-dust-mite-removal-services" },
+        { src: "/assets/service-pics/mattress-cleaning/4-dust-mite-removal-services-1.jpg", alt: "4-dust-mite-removal-services-1" },
+        { src: "/assets/service-pics/mattress-cleaning/5-professional-mattress-cleaning.jpg", alt: "5-professional-mattress-cleaning" },
+        { src: "/assets/service-pics/mattress-cleaning/6-dust-mite-cleaning-services.jpg", alt: "6-dust-mite-cleaning-services" },
+        { src: "/assets/service-pics/mattress-cleaning/7-dust-mite-removal-company.jpg", alt: "7-dust-mite-removal-company" },
+        { src: "/assets/service-pics/mattress-cleaning/8-mattress-cleaning-service-london-2.jpg", alt: "8-mattress-cleaning-service-london-2" },
+        { src: "/assets/service-pics/mattress-cleaning/9-mattress-cleaning-services-1.jpg", alt: "9-mattress-cleaning-services-1" },
+        { src: "/assets/service-pics/mattress-cleaning/10-professional-mattress-cleaning-1.jpg", alt: "10-professional-mattress-cleaning-1" },
+        { src: "/assets/service-pics/mattress-cleaning/11-professional-mattress-cleaning-2.jpg", alt: "11-professional-mattress-cleaning-2" },
       ]} />
 
       <FleurDivider></FleurDivider>

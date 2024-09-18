@@ -124,6 +124,10 @@ export default function Page() {
   const [phone, setPhone] = createSignal('');
   const [text, setText] = createSignal('');
   const [attachments, setAttachments] = createSignal<File[]>([]);
+  const [selectedServices, setSelectedServices] = createSignal<string[]>([]);
+  const [howFound, setHowFound] = createSignal('');
+  const [isSubmitted, setIsSubmitted] = createSignal(false);
+  const [isModalOpen, setIsModalOpen] = createSignal(false);
 
   async function sendEmail(e: Event) {
     e.preventDefault();
@@ -135,12 +139,15 @@ export default function Page() {
     formData.append('postCode', postCode());
     formData.append('phone', phone());
     formData.append('text', text());
+    formData.append('howFound', howFound());
 
     if (attachments()) {
-      for (let i = 0; i < attachments()!.length; i++) {
-        formData.append('attachments', attachments()![i]);
+      for (let i = 0; i < attachments().length; i++) {
+        formData.append('attachments', attachments()[i]);
       }
     }
+
+    formData.append('services', selectedServices().join(', '));
 
     try {
       const response = await fetch('http://localhost:3015/send-email', {
@@ -149,115 +156,152 @@ export default function Page() {
       });
 
       if (response.ok) {
-        alert('Email sent successfully!');
+        setIsSubmitted(true); // Set form as submitted
+        setIsModalOpen(true); // Open the success modal
       } else {
-        alert('Error sending email.');
+        const errorMessage = await response.text();
+        alert(`Error sending email: ${errorMessage}`);
       }
     } catch (error) {
       console.error('Error:', error);
       alert('An error occurred while sending the email.');
     }
   }
-  const handleFileChange = (event: Event) => {
-    const files = event.target.files;
+
+  const handleFileChange: (event: Event) => void = (event) => {
+    const input = event.target as HTMLInputElement;
+    const files = input.files;
     if (files) {
-      setAttachments([...attachments(), ...files]);
+      setAttachments([...attachments(), ...Array.from(files)]);
     }
   };
+
+  const handleCheckboxChange = (event: { target: { value: string; checked: boolean; }; }) => {
+    const value = event.target.value;
+    const services = selectedServices();
+    if (event.target.checked) {
+      setSelectedServices([...services, value]);
+    } else {
+      setSelectedServices(services.filter(service => service !== value));
+    }
+  };
+
+  const handleRadioChange = (event: { target: { value: string; }; }) => {
+    setHowFound(event.target.value);
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false);
+    setIsSubmitted(false);
+  };
+
   return (
     <>
       <h1 class="mt-17 font-size-14 md-font-size-16 md-line-height-18 line-height-16 pb-8">Request a quote</h1>
 
-      <div class="mt-15 py-8 px-5 md-px-14 bg-paper b-rd-3 mx-auto" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 10%);">
+      {!isSubmitted() && !isModalOpen() && (
+        <div class="mt-15 mb-35 py-8 px-5 md-px-14 bg-paper b-rd-3 mx-auto" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 10%);">
 
-        <form class="flex-gap-5 flex flex-col py-5" onSubmit={sendEmail} method="post" enctype="multipart/form-data">
+          <form class="flex-gap-5 flex flex-col py-5" onSubmit={sendEmail} method="post" enctype="multipart/form-data">
+            <input type="email" value={email()} onChange={(e) => setEmail(e.target.value)} placeholder="E-mail:" class="bg-gray-1 b-none w-full p-3 b-rd-1 c-paper-inv font-serif font-size-4" style="box-shadow: 0 1px 2px rgba(0, 0, 0, .12) inset;" />
+            <input type="text" value={name()} onChange={(e) => setName(e.target.value)} placeholder="Name:" class="bg-gray-1 b-none w-full p-3 b-rd-1 c-paper-inv font-serif font-size-4" style="box-shadow: 0 1px 2px rgba(0, 0, 0, .12) inset;" />
+            <input type="text" value={postCode()} onChange={(e) => setPostCode(e.target.value)} placeholder="Post code:" class="bg-gray-1 b-none w-full p-3 b-rd-1 c-paper-inv font-serif font-size-4" style="box-shadow: 0 1px 2px rgba(0, 0, 0, .12) inset;" />
+            <input type="tel" value={phone()} onChange={(e) => setPhone(e.target.value)} placeholder="Phone:" class="bg-gray-1 b-none w-full p-3 b-rd-1 c-paper-inv font-serif font-size-4" style="box-shadow: 0 1px 2px rgba(0, 0, 0, .12) inset;" required />
 
-          <input type="email" value={email()} onChange={(e) => setEmail(e.target.value)} placeholder="E-mail:" class="bg-gray-1 b-none w-full p-3 b-rd-1 c-paper-inv font-serif font-size-4" style="box-shadow: 0 1px 2px rgba(0, 0, 0, .12) inset;" required />
+            <h4 class="mb-0 mt-6">Service required</h4>
 
-          <input type="text" value={subject()} onChange={(e) => setSubject(e.target.value)} placeholder="Subject:" class="bg-gray-1 b-none w-full p-3 b-rd-1 c-paper-inv font-serif font-size-4" style="box-shadow: 0 1px 2px rgba(0, 0, 0, .12) inset;" required />
+            <span class="flex flex-col md-flex-row md-gap-50" data-name="your-phone">
+              <div class="flex flex-col">
+                <label>
+                  <input type="checkbox" value="Carpet cleaning" onChange={handleCheckboxChange} />
+                  Carpet cleaning
+                </label>
+                <label>
+                  <input type="checkbox" value="Rug cleaning" onChange={handleCheckboxChange} />
+                  Rug cleaning
+                </label>
+                <label>
+                  <input type="checkbox" value="Sofa cleaning" onChange={handleCheckboxChange} />
+                  Sofa cleaning
+                </label>
+                <label>
+                  <input type="checkbox" value="Mattress cleaning" onChange={handleCheckboxChange} />
+                  Mattress cleaning
+                </label>
+                <label>
+                  <input type="checkbox" value="Leather sofa cleaning" onChange={handleCheckboxChange} />
+                  Leather sofa cleaning
+                </label>
+              </div>
 
-          <input type="text" value={name()} onChange={(e) => setName(e.target.value)} placeholder="Name:" class="bg-gray-1 b-none w-full p-3 b-rd-1 c-paper-inv font-serif font-size-4" style="box-shadow: 0 1px 2px rgba(0, 0, 0, .12) inset;" required />
+              <div class="flex flex-col">
+                <label>
+                  <input type="checkbox" value="Pillow cleaning" onChange={handleCheckboxChange} />
+                  Pillow cleaning
+                </label>
+                <label>
+                  <input type="checkbox" value="Stain removal cleaning" onChange={handleCheckboxChange} />
+                  Stain removal cleaning
+                </label>
+                <label>
+                  <input type="checkbox" value="Stain protection cleaning" onChange={handleCheckboxChange} />
+                  Stain protection cleaning
+                </label>
+                <label>
+                  <input type="checkbox" value="Antiviral sanitisation service" onChange={handleCheckboxChange} />
+                  Antiviral sanitisation service
+                </label>
+                <label>
+                  <input type="checkbox" value="Other" onChange={handleCheckboxChange} />
+                  Other
+                </label>
+              </div>
+            </span>
 
-          <input type="text" value={postCode()} onChange={(e) => setPostCode(e.target.value)} placeholder="Post code:" class="bg-gray-1 b-none w-full p-3 b-rd-1 c-paper-inv font-serif font-size-4" style="box-shadow: 0 1px 2px rgba(0, 0, 0, .12) inset;" required />
+            <textarea value={text()} onChange={(e) => setText(e.target.value)} placeholder="Message:" class="mt-2 bg-gray-1 b-none w-full pt-3 pl-3 pb-30 b-rd-1 c-paper-inv font-serif font-size-4" style="box-shadow: 0 1px 2px rgba(0, 0, 0, .12) inset;" required />
 
-          <input type="tel" value={phone()} onChange={(e) => setPhone(e.target.value)} placeholder="Phone:" class="bg-gray-1 b-none w-full p-3 b-rd-1 c-paper-inv font-serif font-size-4" style="box-shadow: 0 1px 2px rgba(0, 0, 0, .12) inset;" required />
+            <h4 class="mb-2">How did you find us</h4>
 
-
-          <h4 class="mb-0 mt-6">Service required</h4>
-        <span class="flex flex-col md-flex-row md-gap-50" data-name="your-phone">
-          <div class="flex flex-col">
-            <div>
-              <input type="checkbox" id="cleaningserviceID" name="cleaningserviceID" value=" Carpet cleaning" />
-              <label for="cleaningserviceID"> Carpet cleaning</label>
+            <div class="flex flex-col">
+              <label>
+                <input type="radio" name="howfound" value="Google" onChange={handleRadioChange} />
+                Google
+              </label>
+              <label>
+                <input type="radio" name="howfound" value="Gumtree" onChange={handleRadioChange} />
+                Gumtree
+              </label>
+              <label>
+                <input type="radio" name="howfound" value="Recommendation" onChange={handleRadioChange} />
+                Recommendation
+              </label>
+              <label>
+                <input type="radio" name="howfound" value="I've used Fine Carpet Cleaning before" onChange={handleRadioChange} />
+                I've used Fine Carpet Cleaning before
+              </label>
+              <label>
+                <input type="radio" name="howfound" value="Other" onChange={handleRadioChange} />
+                Other
+              </label>
             </div>
-            <div>
-              <input type="checkbox" id="cleaningserviceID" name="cleaningserviceID" value=" Rug cleaning" />
-              <label for="cleaningserviceID"> Rug cleaning</label>
-            </div>
-            <div>
-              <input type="checkbox" id="cleaningserviceID" name="cleaningserviceID" value=" Sofa cleaning" />
-              <label for="cleaningserviceID"> Sofa cleaning</label>
-            </div>
-            <div>
-              <input type="checkbox" id="cleaningserviceID" name="cleaningserviceID" value=" Mattress cleaning" />
-              <label for="cleaningserviceID"> Mattress cleaning</label>
-            </div>
-            <div>
-              <input type="checkbox" id="cleaningserviceID" name="cleaningserviceID" value=" Leather sofa cleaning" />
-              <label for="cleaningserviceID"> Leather sofa cleaning</label>
-            </div>
+
+            <label class="pt-3">Upload images (Optional):</label>
+            <input type="file" id="email-input" multiple onChange={handleFileChange} />
+
+            <button type="submit" class="cursor-pointer flex flex-justify-center text-center mx-auto py-4 mt-7 px-10 bg-brand hover:bg-brand-second-action-hover transition-colors b-none c-paper b-rd-2 w-full uppercase font-800 font-size-4.4 md-font-size-5" style="letter-spacing: 1px;">Request a quote</button>
+          </form>
+        </div>
+      )}
+
+      {isModalOpen() && (
+        <div class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-5">
+          <div class="bg-white p-8 rounded-lg shadow-lg max-w-md w-full">
+            <h2 class="text-2xl font-bold mb-4 mt-1">Success!</h2>
+            <p class="mb-5">The form has been sent successfully! We will get back to you as soon as possible.</p>
+            <button onClick={closeModal} class="bg-brand text-white px-5 py-3 b-none rounded hover:bg-brand-second-action-hover transition-colors">Close</button>
           </div>
-
-          <div class="flex flex-col">
-            <div>
-              <input type="checkbox" id="cleaningserviceID" name="cleaningserviceID" value=" Pillow cleaning" />
-              <label for="cleaningserviceID"> Pillow cleaning</label>
-            </div>
-            <div>
-              <input type="checkbox" id="cleaningserviceID" name="cleaningserviceID" value=" Stain removal cleaning" />
-              <label for="cleaningserviceID"> Stain removal cleaning</label>
-            </div>
-            <div>
-              <input type="checkbox" id="cleaningserviceID" name="cleaningserviceID" value=" Stain protection cleaning" />
-              <label for="cleaningserviceID"> Stain protection cleaning</label>
-            </div>
-            <div>
-              <input type="checkbox" id="cleaningserviceID" name="cleaningserviceID" value=" Antiviral sanitisation service" />
-              <label for="cleaningserviceID"> Antiviral sanitisation service</label>
-            </div>
-            <div>
-              <input type="checkbox" id="cleaningserviceID" name="cleaningserviceID" value=" Other" />
-              <label for="cleaningserviceID"> Other</label>
-            </div>
-          </div>
-        </span>
-
-        <h4 class="mb-2">How did you find us</h4>
-        <span data-name="menu-238">
-          <select class="bg-gray-1 b-none w-full p-3 b-rd-1 c-gray-5 font-serif font-size-4" style="box-shadow: 0 1px 2px rgba(0, 0, 0, .12) inset;" aria-invalid="false" name="menu-238">
-            <option value="Google" id="howfound">Google</option>
-            <option value="Gumtree" id="howfound">Gumtree</option>
-            <option value="Yahoo" id="howfound">Yahoo</option>
-            <option value="Bing" id="howfound">Bing</option>
-            <option value="Facebook" id="howfound">Facebook</option>
-            <option value="Twitter" id="howfound">Twitter</option>
-            <option value="Fine Carpet Cleaning vehicle" id="howfound">Fine Carpet Cleaning vehicle</option>
-            <option value="Recommendation" id="howfound">Recommendation</option>
-            <option value="I've used Fine Carpet Cleaning before" id="howfound">I've used Fine Carpet Cleaning before</option>
-          </select>
-        </span>
-
-        
-
-          <textarea value={text()} onChange={(e) => setText(e.target.value)} placeholder="Message:" class="mt-2 bg-gray-1 b-none w-full pt-3 pl-3 pb-30 b-rd-1 c-paper-inv font-serif font-size-4" style="box-shadow: 0 1px 2px rgba(0, 0, 0, .12) inset;" required />
-
-          <label class="pt-5" >Upload images (Optional):</label>
-          <input type="file" id="email-input" multiple onChange={handleFileChange} />
-
-          <button type="submit" class="cursor-pointer flex flex-justify-center text-center mx-auto py-4 mt-7 px-10 bg-brand hover-bg-brand-second-action-hover:hover transition-colors b-none c-paper b-rd-2 w-full uppercase font-800 font-size-4.4 md-font-size-5" style="letter-spacing: 1px;">Request a quote</button>
-        </form>
-      </div>
-
+        </div>
+      )}
 
       <h2>Contacts</h2>
 

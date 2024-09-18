@@ -195,7 +195,7 @@ export default function Page() {
   return (
     <>
       <h1 class="mt-10 md-mt-17 font-size-12.5 md-font-size-16 md-line-height-18 line-height-16">Fast dry carpet cleaning services</h1>
-      <div class="flex flex-justify-center"><img class="b-rd-3 md-mt-10 mt-2 max-w-full" src="/assets/service-pics/fast-dry-carpet/fast-dry-carpet-cleaning-service-7.jpg" alt="fast-dry-carpet-cleaning-service-7" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 30%);" /></div>
+      <div class="flex flex-justify-center"><img class="b-rd-3 md-mt-10 mt-2 max-w-full" src="/assets/service-pics/fast-dry-carpet/fast-dry-carpet-cleaning-service.jpg" alt="fast-dry-carpet-cleaning-service" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 30%);" /></div>
 
       <FleurDivider></FleurDivider>
 
@@ -341,15 +341,13 @@ export default function Page() {
       <h2 class="line-height-12 md-line-height-14">Pictures from our fast dry carpet cleaning services in London</h2>
 
       <FacebookLikeGallery imgs={[
-        { src: "/assets/service-pics/fast-dry-carpet/fast-dry-carpet-cleaning-service-1.jpg", alt: "fast-dry-carpet-cleaning-service-1" },
-        { src: "/assets/service-pics/fast-dry-carpet/fast-dry-carpet-cleaning-service-2.jpg", alt: "fast-dry-carpet-cleaning-service-2" },
-        { src: "/assets/service-pics/fast-dry-carpet/fast-dry-carpet-cleaning-service-3.jpg", alt: "fast-dry-carpet-cleaning-service-3" },
-        { src: "/assets/service-pics/fast-dry-carpet/fast-dry-carpet-cleaning-service-4.jpg", alt: "fast-dry-carpet-cleaning-service-4" },
-        { src: "/assets/service-pics/fast-dry-carpet/fast-dry-carpet-cleaning-service-5.jpg", alt: "fast-dry-carpet-cleaning-service-5" },
-        { src: "/assets/service-pics/fast-dry-carpet/fast-dry-carpet-cleaning-service-6.jpg", alt: "fast-dry-carpet-cleaning-service-6" },
-        { src: "/assets/service-pics/fast-dry-carpet/fast-dry-carpet-cleaning-service-8.jpg", alt: "fast-dry-carpet-cleaning-service-8" },
-        { src: "/assets/service-pics/fast-dry-carpet/fast-dry-carpet-cleaning-service-9.jpg", alt: "fast-dry-carpet-cleaning-service-9" },
-        { src: "/assets/service-pics/fast-dry-carpet/fast-dry-carpet-cleaning-service-10.jpg", alt: "fast-dry-carpet-cleaning-service-10" },
+        { src: "/assets/service-pics/fast-dry-carpet/1-quick-dry-carpet and-upholstery-cleaning.jpg", alt: "1-quick-dry-carpet and-upholstery-cleaning" },
+        { src: "/assets/service-pics/fast-dry-carpet/2-quick-dry-carpet-cleaning.jpg", alt: "2-quick-dry-carpet-cleaning" },
+        { src: "/assets/service-pics/fast-dry-carpet/3-rapid-dry-carpet-cleaning-1.jpg", alt: "3-rapid-dry-carpet-cleaning-1" },
+        { src: "/assets/service-pics/fast-dry-carpet/4-instant-dry-carpet-cleaning.jpg", alt: "4-instant-dry-carpet-cleaning" },
+        { src: "/assets/service-pics/fast-dry-carpet/5-fast-dry-carpet-cleaning-service-1.jpg", alt: "5-fast-dry-carpet-cleaning-service-1" },
+        { src: "/assets/service-pics/fast-dry-carpet/6-rapid-dry-carpet-cleaning.jpg", alt: "6-rapid-dry-carpet-cleaning" },
+        { src: "/assets/service-pics/fast-dry-carpet/7-fast-dry-carpet-cleaning-service-2.jpg", alt: "7-fast-dry-carpet-cleaning-service-2" },
       ]} />
 
       <FleurDivider></FleurDivider>

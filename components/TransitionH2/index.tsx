@@ -1,36 +1,41 @@
 import { createSignal, onCleanup, onMount } from "solid-js";
 
-export const App = () => {
-  let headingRef: HTMLHeadingElement | undefined;
+// H2 Component with transition on scroll
+export const AnimatedH2 = (props: {children: string}) => {
   const [isVisible, setIsVisible] = createSignal(false);
 
-  const handleScroll = () => {
-    if (headingRef) {
-      const headingPosition = headingRef.getBoundingClientRect().top;
-      const screenPosition = window.innerHeight / 1.3;
-
-      if (headingPosition < screenPosition) {
-        setIsVisible(true);
-      }
-    }
-  };
+  let headingRef: HTMLHeadingElement | undefined;
 
   onMount(() => {
-    window.addEventListener("scroll", handleScroll);
-  });
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setIsVisible(true);
+          }
+        });
+      },
+      { threshold: 0.5 } // Adjust threshold as needed (50% visibility in this case)
+    );
 
-  onCleanup(() => {
-    window.removeEventListener("scroll", handleScroll);
+    if (headingRef) {
+      observer.observe(headingRef);
+    }
+
+    // Cleanup observer when component unmounts
+    onCleanup(() => {
+      if (headingRef) {
+        observer.unobserve(headingRef);
+      }
+    });
   });
 
   return (
-    <div style={{ height: "10vh" }}> {/* To enable scrolling */}
-      <h2
-        ref={headingRef}
-        class={`animated-heading ${isVisible() ? "visible" : ""}`}
-      >
-        The process of our antiviral sanitisation services:
-      </h2>
-    </div>
+    <h2 style=""
+      ref={headingRef}
+      class={`transition-h2 ${isVisible() ? "visible" : "line-height-12 md-line-height-14"}`}
+    >
+      {props.children}
+    </h2>
   );
 };

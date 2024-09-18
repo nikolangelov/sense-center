@@ -163,7 +163,7 @@ export default function Page() {
   return (
     <>
       <h1 class="mt-10 md-mt-17 font-size-12.5 md-font-size-16 md-line-height-18 line-height-16">Professional furniture cleaning services</h1>
-      <div class="flex flex-justify-center"><img class="b-rd-3 md-mt-10 mt-2 max-w-full" src="/assets/service-pics/furniture-cleaning/professional-furniture-cleaning-services-12.jpg" alt="professional-furniture-cleaning-services-12" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 30%);" /></div>
+      <div class="flex flex-justify-center"><img class="b-rd-3 md-mt-10 mt-2 max-w-full" src="/assets/service-pics/furniture-cleaning/steam-cleaning-furniture-services.jpg" alt="steam-cleaning-furniture-services" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 30%);" /></div>
 
       <FleurDivider></FleurDivider>
 
@@ -288,16 +288,17 @@ export default function Page() {
       <h2 class="line-height-12 md-line-height-14">Pictures from our professional furniture cleaning services</h2>
 
       <FacebookLikeGallery imgs={[
-        { src: "/assets/service-pics/furniture-cleaning/professional-furniture-cleaning-services-7.jpg", alt: "professional-furniture-cleaning-services-7" },
-        { src: "/assets/service-pics/furniture-cleaning/professional-furniture-cleaning-services-8.jpg", alt: "professional-furniture-cleaning-services-8" },
-        { src: "/assets/service-pics/furniture-cleaning/professional-furniture-cleaning-services-1.jpg", alt: "professional-furniture-cleaning-services-1" },
-        { src: "/assets/service-pics/furniture-cleaning/professional-furniture-cleaning-services-6.jpg", alt: "professional-furniture-cleaning-services-6" },
-        { src: "/assets/service-pics/furniture-cleaning/professional-furniture-cleaning-services-2.jpg", alt: "professional-furniture-cleaning-services-2" },
-        { src: "/assets/service-pics/furniture-cleaning/professional-furniture-cleaning-services-3.jpg", alt: "professional-furniture-cleaning-services-3" },
-        { src: "/assets/service-pics/furniture-cleaning/professional-furniture-cleaning-services-4.jpg", alt: "professional-furniture-cleaning-services-4" },
-        { src: "/assets/service-pics/furniture-cleaning/professional-furniture-cleaning-services-5.jpg", alt: "professional-furniture-cleaning-services-5" },
-        { src: "/assets/service-pics/furniture-cleaning/professional-furniture-cleaning-services-9.jpg", alt: "professional-furniture-cleaning-services-9" },
-        { src: "/assets/service-pics/furniture-cleaning/professional-furniture-cleaning-services-10.jpg", alt: "professional-furniture-cleaning-services-10" },
+        { src: "/assets/service-pics/furniture-cleaning/1-furniture-cleaning-specialist.jpg", alt: "1-furniture-cleaning-specialist" },
+        { src: "/assets/service-pics/furniture-cleaning/2-furniture-deep-cleaning-2.jpg", alt: "2-furniture-deep-cleaning-2" },
+        { src: "/assets/service-pics/furniture-cleaning/4-office-furniture cleaning-service.jpg", alt: "4-office-furniture cleaning-service" },
+        { src: "/assets/service-pics/furniture-cleaning/3-soft-furniture-cleaning.jpg", alt: "3-soft-furniture-cleaning" },
+        { src: "/assets/service-pics/furniture-cleaning/5-organic-furniture-cleaning.jpg", alt: "5-organic-furniture-cleaning" },
+        { src: "/assets/service-pics/furniture-cleaning/6-furniture-cleaning-business.jpg", alt: "6-furniture-cleaning-business" },
+        { src: "/assets/service-pics/furniture-cleaning/7-furniture-deep-cleaning.jpg", alt: "7-furniture-deep-cleaning" },
+        { src: "/assets/service-pics/furniture-cleaning/8-furniture-steam-cleaning-companies-near me.jpg", alt: "8-furniture-steam-cleaning-companies-near me" },
+        { src: "/assets/service-pics/furniture-cleaning/9-furniture-upholstery-cleaning-services.jpg", alt: "9-furniture-upholstery-cleaning-services" },
+        { src: "/assets/service-pics/furniture-cleaning/10-furniture-steam-cleaning-companies-near me-1.jpg", alt: "10-furniture-steam-cleaning-companies-near me-1" },
+        { src: "/assets/service-pics/furniture-cleaning/11-furniture-deep-cleaning-1.jpg", alt: "11-furniture-deep-cleaning-1" },
       ]} />
 
       <FleurDivider></FleurDivider>

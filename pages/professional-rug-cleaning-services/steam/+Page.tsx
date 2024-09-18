@@ -206,7 +206,7 @@ export default function Page() {
   return (
     <>
       <h1 class="mt-10 md-mt-17 font-size-12.5 md-font-size-16 md-line-height-18 line-height-16">Rug steam cleaning service</h1>
-      <div class="flex flex-justify-center"><img class="b-rd-3 md-mt-10 mt-2 max-w-full" src="/assets/service-pics/rug-steam-cleaning/rug-steam-cleaning-service-6.jpg" alt="rug-steam-cleaning-service-6" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 30%);" /></div>
+      <div class="flex flex-justify-center"><img class="b-rd-3 md-mt-10 mt-2 max-w-full" src="/assets/service-pics/rug-steam-cleaning/rug-steam-cleaning-service.jpg" alt="rug-steam-cleaning-service" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 30%);" /></div>
 
       <FleurDivider></FleurDivider>
 
@@ -300,11 +300,13 @@ export default function Page() {
       <h2 class="line-height-12 md-line-height-14">Pictures from our rug steam cleaning service</h2>
 
       <FacebookLikeGallery imgs={[
-        { src: "/assets/service-pics/rug-steam-cleaning/rug-steam-cleaning-service-1.jpg", alt: "rug-steam-cleaning-service-1" },
-        { src: "/assets/service-pics/rug-steam-cleaning/rug-steam-cleaning-service-2.jpg", alt: "rug-steam-cleaning-service-2" },
-        { src: "/assets/service-pics/rug-steam-cleaning/rug-steam-cleaning-service-3.jpg", alt: "rug-steam-cleaning-service-3" },
-        { src: "/assets/service-pics/rug-steam-cleaning/rug-steam-cleaning-service-4.jpg", alt: "rug-steam-cleaning-service-4" },
-        { src: "/assets/service-pics/rug-steam-cleaning/rug-steam-cleaning-service-5.jpg", alt: "rug-steam-cleaning-service-5" },
+        { src: "/assets/service-pics/rug-steam-cleaning/1-rug-steam-cleaning-service-3.jpg", alt: "1-rug-steam-cleaning-service-3" },
+        { src: "/assets/service-pics/rug-steam-cleaning/2-deep-rug-cleaning.jpg", alt: "2-deep-rug-cleaning" },
+        { src: "/assets/service-pics/rug-steam-cleaning/3-deep-rug-cleaning-2.jpg", alt: "3-deep-rug-cleaning-2" },
+        { src: "/assets/service-pics/rug-steam-cleaning/4-rug-steam-cleaning-service-1.jpg", alt: "4-rug-steam-cleaning-service-1" },
+        { src: "/assets/service-pics/rug-steam-cleaning/5-rug-steam-cleaning-service-4.jpg", alt: "5-rug-steam-cleaning-service-4" },
+        { src: "/assets/service-pics/rug-steam-cleaning/6-rug-steam-cleaning-service-2.jpg", alt: "rug-steam-cleaning-service-5" },
+        { src: "/assets/service-pics/rug-steam-cleaning/7-deep-rug-cleaning-1.jpg", alt: "7-deep-rug-cleaning-1" },
       ]} />
 
       <FleurDivider></FleurDivider>

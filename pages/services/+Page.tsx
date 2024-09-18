@@ -1,3 +1,5 @@
+import { MetaProvider, Meta } from "solid-meta";
+
 function FleurDivider() {
   return (
     <div class="m-auto my-30 md-my-36 position-relative w-80%">
@@ -29,199 +31,201 @@ function AllServicesButtonContainer(props: { children: HTMLElement | any }) {
 export default function Page() {
   return (
     <>
-      <h1 class="md-mt-20 mt-10 md-mb-25 mb-0">All services we offer</h1>
-      <a href="/professional-carpet-cleaning-services"><h2 class="hover-c-brand:hover md-mb-15 mb-5">Carpet cleaning services</h2></a>
 
-      <AllServicesButtonContainer>
-        <AllServicesButton
-          href="/professional-carpet-cleaning-services/steam"
-          src="/assets/service-pics/carpet-steam/professional-carpet-steam-cleaning-services-7.jpg"
-          alt="professional-carpet-steam-cleaning-services-7"
-        >Carpet steam cleaning
-        </AllServicesButton>
+        <h1 class="md-mt-20 mt-10 md-mb-25 mb-0">All services we offer</h1>
+        <a href="/professional-carpet-cleaning-services"><h2 class="hover-c-brand:hover md-mb-15 mb-5">Carpet cleaning services</h2></a>
 
-        <AllServicesButton
-          href="/professional-carpet-cleaning-services/dry"
-          src="/assets/service-pics/dry-carpet/dry-carpet-cleaning-services-7.jpg"
-          alt="dry-carpet-cleaning-services-7"
-        >Dry carpet cleaning
-        </AllServicesButton>
-      </AllServicesButtonContainer>
+        <AllServicesButtonContainer>
+          <AllServicesButton
+            href="/professional-carpet-cleaning-services/steam"
+            src="/assets/service-pics/carpet-steam/professional-carpet-steam-cleaning-services-7.jpg"
+            alt="professional-carpet-steam-cleaning-services-7"
+          >Carpet steam cleaning
+          </AllServicesButton>
 
-      <AllServicesButtonContainer>
-        <AllServicesButton
-          href="/professional-carpet-cleaning-services/eco-friendly"
-          src="/assets/Професионално почистване на заведения.jpg"
-          alt=""
-        >Eco-friendly carpet cleaning
-        </AllServicesButton>
-        <AllServicesButton
-          href="/professional-carpet-cleaning-services/same-day"
-          src="/assets/service-pics/same-day/same-day-carpet-cleaning-7.jpg"
-          alt="same-day-carpet-cleaning-7"
-        >Same day carpet cleaning
-        </AllServicesButton>
-      </AllServicesButtonContainer>
+          <AllServicesButton
+            href="/professional-carpet-cleaning-services/dry"
+            src="/assets/service-pics/dry-carpet/dry-carpet-cleaning-services-7.jpg"
+            alt="dry-carpet-cleaning-services-7"
+          >Dry carpet cleaning
+          </AllServicesButton>
+        </AllServicesButtonContainer>
 
-      <AllServicesButtonContainer>
-        <AllServicesButton
-          href="/professional-carpet-cleaning-services/fast-dry"
-          src="/assets/service-pics/fast-dry-carpet/fast-dry-carpet-cleaning-service-7.jpg"
-          alt="fast-dry-carpet-cleaning-service-7"
-        >Fast dry carpet cleaning
-        </AllServicesButton>
-        <AllServicesButton
-          href="/professional-stain-removal-services"
-          src="/assets/Професионално почистване на заведения.jpg"
-          alt=""
-        >Carpet stain removal
-        </AllServicesButton>
-      </AllServicesButtonContainer>
+        <AllServicesButtonContainer>
+          <AllServicesButton
+            href="/professional-carpet-cleaning-services/eco-friendly"
+            src="/assets/Професионално почистване на заведения.jpg"
+            alt=""
+          >Eco-friendly carpet cleaning
+          </AllServicesButton>
+          <AllServicesButton
+            href="/professional-carpet-cleaning-services/same-day"
+            src="/assets/service-pics/same-day/same-day-carpet-cleaning-7.jpg"
+            alt="same-day-carpet-cleaning-7"
+          >Same day carpet cleaning
+          </AllServicesButton>
+        </AllServicesButtonContainer>
 
-      <AllServicesButtonContainer>
-        <AllServicesButton
-          href="/stain-protection-services"
-          src="/assets/Професионално почистване на заведения.jpg"
-          alt=""
-        >Carpet stain protection
-        </AllServicesButton>
-        <AllServicesButton
-          href="/professional-carpet-cleaning-services/commercial"
-          src="/assets/service-pics/commercial-carpet/commercial-carpet-cleaning-services-7.jpg"
-          alt="commercial-carpet-cleaning-services-7"
-        >Commercial carpet cleaning
-        </AllServicesButton>
-      </AllServicesButtonContainer>
+        <AllServicesButtonContainer>
+          <AllServicesButton
+            href="/professional-carpet-cleaning-services/fast-dry"
+            src="/assets/service-pics/fast-dry-carpet/fast-dry-carpet-cleaning-service-7.jpg"
+            alt="fast-dry-carpet-cleaning-service-7"
+          >Fast dry carpet cleaning
+          </AllServicesButton>
+          <AllServicesButton
+            href="/professional-stain-removal-services"
+            src="/assets/Професионално почистване на заведения.jpg"
+            alt=""
+          >Carpet stain removal
+          </AllServicesButton>
+        </AllServicesButtonContainer>
 
-      <AllServicesButtonContainer>
-        <AllServicesButton
-          href="/professional-carpet-cleaning-services/residential"
-          src="/assets/service-pics/residential-carpet/residential-carpet-cleaning-6.jpg"
-          alt="residential-carpet-cleaning-6"
-        >Residential carpet cleaning
-        </AllServicesButton>
+        <AllServicesButtonContainer>
+          <AllServicesButton
+            href="/stain-protection-services"
+            src="/assets/Професионално почистване на заведения.jpg"
+            alt=""
+          >Carpet stain protection
+          </AllServicesButton>
+          <AllServicesButton
+            href="/professional-carpet-cleaning-services/commercial"
+            src="/assets/service-pics/commercial-carpet/commercial-carpet-cleaning-services-7.jpg"
+            alt="commercial-carpet-cleaning-services-7"
+          >Commercial carpet cleaning
+          </AllServicesButton>
+        </AllServicesButtonContainer>
 
-        <AllServicesButton
-          href="/professional-carpet-cleaning-services/commercial/office"
-          src="/assets/service-pics/office-carpet/office-carpet-cleaning-services-7.jpg"
-          alt="office-carpet-cleaning-services-7"
-        >Office carpet cleaning
-        </AllServicesButton>
-      </AllServicesButtonContainer>
+        <AllServicesButtonContainer>
+          <AllServicesButton
+            href="/professional-carpet-cleaning-services/residential"
+            src="/assets/service-pics/residential-carpet/residential-carpet-cleaning-6.jpg"
+            alt="residential-carpet-cleaning-6"
+          >Residential carpet cleaning
+          </AllServicesButton>
 
-      <FleurDivider></FleurDivider>
+          <AllServicesButton
+            href="/professional-carpet-cleaning-services/commercial/office"
+            src="/assets/service-pics/office-carpet/office-carpet-cleaning-services-7.jpg"
+            alt="office-carpet-cleaning-services-7"
+          >Office carpet cleaning
+          </AllServicesButton>
+        </AllServicesButtonContainer>
 
-      <a href="/professional-upholstery-cleaning-services"><h2 class="hover-c-brand:hover md-mb-15 mb-5">Upholstery cleaning services</h2></a>
+        <FleurDivider></FleurDivider>
 
-      <AllServicesButtonContainer>
-        <AllServicesButton
-          href="/professional-upholstery-cleaning-services/sofa"
-          src="/assets/service-pics/sofa-cleaning/sofa-cleaning-services-13.jpg"
-          alt="sofa-cleaning-services-13"
-        >Sofa cleaning
-        </AllServicesButton>
+        <a href="/professional-upholstery-cleaning-services"><h2 class="hover-c-brand:hover md-mb-15 mb-5">Upholstery cleaning services</h2></a>
 
-        <AllServicesButton
-          href="/professional-upholstery-cleaning-services/sofa/leather"
-          src="/assets/Професионално почистване на заведения.jpg"
-          alt=""
-        >Leather sofa cleaning
-        </AllServicesButton>
-      </AllServicesButtonContainer>
+        <AllServicesButtonContainer>
+          <AllServicesButton
+            href="/professional-upholstery-cleaning-services/sofa"
+            src="/assets/service-pics/sofa-cleaning/sofa-cleaning-services-13.jpg"
+            alt="sofa-cleaning-services-13"
+          >Sofa cleaning
+          </AllServicesButton>
 
-      <AllServicesButtonContainer>
-        <AllServicesButton
-          href="/professional-upholstery-cleaning-services/furniture"
-          src="/assets/service-pics/furniture-cleaning/furniture-cleaning-12.jpg"
-          alt="furniture-cleaning-12"
-        >Furniture cleaning
-        </AllServicesButton>
-        
-        <AllServicesButton
-          href="/professional-upholstery-cleaning-services/mattress"
-          src="/assets/service-pics/mattress-cleaning/mattress-cleaning-services-9.jpg"
-          alt="mattress-cleaning-services-9"
-        >Mattress cleaning
-        </AllServicesButton>
-      </AllServicesButtonContainer>
+          <AllServicesButton
+            href="/professional-upholstery-cleaning-services/sofa/leather"
+            src="/assets/Професионално почистване на заведения.jpg"
+            alt=""
+          >Leather sofa cleaning
+          </AllServicesButton>
+        </AllServicesButtonContainer>
 
-      <AllServicesButtonContainer>
-        <AllServicesButton
-          href="/professional-upholstery-cleaning-services/pillow"
-          src="/assets/service-pics/pillow-cleaning/pillow-cleaning-7.jpg"
-          alt="pillow-cleaning-7"
-        >Pillow cleaning
-        </AllServicesButton>
-        <AllServicesButton
-          href="/professional-stain-removal-services"
-          src="/assets/Професионално почистване на заведения.jpg"
-          alt=""
-        >Upholstery stain removal
-        </AllServicesButton>
-      </AllServicesButtonContainer>
+        <AllServicesButtonContainer>
+          <AllServicesButton
+            href="/professional-upholstery-cleaning-services/furniture"
+            src="/assets/service-pics/furniture-cleaning/furniture-cleaning-12.jpg"
+            alt="furniture-cleaning-12"
+          >Furniture cleaning
+          </AllServicesButton>
 
-      <AllServicesButtonContainer>
-        <AllServicesButton
-          href="/stain-protection-services"
-          src="/assets/Професионално почистване на заведения.jpg"
-          alt=""
-        >Upholstery stain protection
-        </AllServicesButton>
-      </AllServicesButtonContainer>
+          <AllServicesButton
+            href="/professional-upholstery-cleaning-services/mattress"
+            src="/assets/service-pics/mattress-cleaning/mattress-cleaning-services-9.jpg"
+            alt="mattress-cleaning-services-9"
+          >Mattress cleaning
+          </AllServicesButton>
+        </AllServicesButtonContainer>
 
-      <FleurDivider></FleurDivider>
+        <AllServicesButtonContainer>
+          <AllServicesButton
+            href="/professional-upholstery-cleaning-services/pillow"
+            src="/assets/service-pics/pillow-cleaning/pillow-cleaning-7.jpg"
+            alt="pillow-cleaning-7"
+          >Pillow cleaning
+          </AllServicesButton>
+          <AllServicesButton
+            href="/professional-stain-removal-services"
+            src="/assets/Професионално почистване на заведения.jpg"
+            alt=""
+          >Upholstery stain removal
+          </AllServicesButton>
+        </AllServicesButtonContainer>
 
-      <a href="/professional-rug-cleaning-services"><h2 class="hover-c-brand:hover md-mb-15 mb-5">Rug cleaning services</h2></a>
+        <AllServicesButtonContainer>
+          <AllServicesButton
+            href="/stain-protection-services"
+            src="/assets/Професионално почистване на заведения.jpg"
+            alt=""
+          >Upholstery stain protection
+          </AllServicesButton>
+        </AllServicesButtonContainer>
 
-      <AllServicesButtonContainer>
-        <AllServicesButton
-          href="/professional-rug-cleaning-services/steam"
-          src="/assets/service-pics/rug-steam-cleaning/rug-steam-cleaning-6.jpg"
-          alt=""
-        >Rug steam cleaning
-        </AllServicesButton>
-        <AllServicesButton
-          href="/professional-rug-cleaning-services/dry"
-          src="/assets/service-pics/dry-rug-cleaning/dry-rug-cleaning-7.jpg"
-          alt=""
-        >Dry rug cleaning
-        </AllServicesButton>
-      </AllServicesButtonContainer>
+        <FleurDivider></FleurDivider>
 
-      <AllServicesButtonContainer>
-        <AllServicesButton
-          href="/professional-stain-removal-services"
-          src="/assets/Професионално почистване на заведения.jpg"
-          alt=""
-        >Rug stain removal
-        </AllServicesButton>
-        <AllServicesButton
-          href="/stain-protection-services"
-          src="/assets/Професионално почистване на заведения.jpg"
-          alt=""
-        >Rug stain protection
-        </AllServicesButton>
-      </AllServicesButtonContainer>
+        <a href="/professional-rug-cleaning-services"><h2 class="hover-c-brand:hover md-mb-15 mb-5">Rug cleaning services</h2></a>
 
-      <FleurDivider></FleurDivider>
+        <AllServicesButtonContainer>
+          <AllServicesButton
+            href="/professional-rug-cleaning-services/steam"
+            src="/assets/service-pics/rug-steam-cleaning/rug-steam-cleaning-6.jpg"
+            alt=""
+          >Rug steam cleaning
+          </AllServicesButton>
+          <AllServicesButton
+            href="/professional-rug-cleaning-services/dry"
+            src="/assets/service-pics/dry-rug-cleaning/dry-rug-cleaning-7.jpg"
+            alt=""
+          >Dry rug cleaning
+          </AllServicesButton>
+        </AllServicesButtonContainer>
 
-      <h2>Other services</h2>
+        <AllServicesButtonContainer>
+          <AllServicesButton
+            href="/professional-stain-removal-services"
+            src="/assets/Професионално почистване на заведения.jpg"
+            alt=""
+          >Rug stain removal
+          </AllServicesButton>
+          <AllServicesButton
+            href="/stain-protection-services"
+            src="/assets/Професионално почистване на заведения.jpg"
+            alt=""
+          >Rug stain protection
+          </AllServicesButton>
+        </AllServicesButtonContainer>
 
-      <AllServicesButtonContainer>
-        <AllServicesButton
-          href="/antiviral-sanitisation-services"
-          src="/assets/Професионално почистване на заведения.jpg"
-          alt=""
-        >Antiviral sanitisation
-        </AllServicesButton>
-      </AllServicesButtonContainer>
+        <FleurDivider></FleurDivider>
 
-      <FleurDivider></FleurDivider>
+        <h2>Other services</h2>
 
-      <div class="m-10% mb-3% flex flex-wrap flex-justify-center md-gap-15 gap-10">
-        <a href="/prices"><button class="cursor-pointer outline-none bg-brand-second-action hover-bg-brand-second-action-hover:hover font-size-5 font-600 w-200px h-60px c-paper flex flex-items-center flex-justify-center relative b-solid b-rd-3 b-4 b-brand-second-action hover-b-brand-second-action-hover:hover whitespace-normal line-height-6 word-spacing-0.5 py-9" style="box-shadow: 0 0 0 3px rgba(255, 255, 255, .9) inset; letter-spacing: 0.05rem;">PRICES</button></a>
-        <a href="/contact-us"><button class="cursor-pointer outline-none bg-brand-action hover-bg-brand-action-hover:hover font-size-5 font-600 w-200px h-60px c-paper flex flex-items-center flex-justify-center relative b-solid b-rd-3 b-4 b-brand-action hover-b-brand-action-hover:hover whitespace-normal line-height-6 word-spacing-0.5 py-9" style="box-shadow: 0 0 0 3px rgba(255, 255, 255, .9) inset; letter-spacing: 0.05rem;">REQUEST A QUOTE</button></a>
-      </div>
+        <AllServicesButtonContainer>
+          <AllServicesButton
+            href="/antiviral-sanitisation-services"
+            src="/assets/Професионално почистване на заведения.jpg"
+            alt=""
+          >Antiviral sanitisation
+          </AllServicesButton>
+        </AllServicesButtonContainer>
+
+        <FleurDivider></FleurDivider>
+
+        <div class="m-10% mb-3% flex flex-wrap flex-justify-center md-gap-15 gap-10">
+          <a href="/prices"><button class="cursor-pointer outline-none bg-brand-second-action hover-bg-brand-second-action-hover:hover font-size-5 font-600 w-200px h-60px c-paper flex flex-items-center flex-justify-center relative b-solid b-rd-3 b-4 b-brand-second-action hover-b-brand-second-action-hover:hover whitespace-normal line-height-6 word-spacing-0.5 py-9" style="box-shadow: 0 0 0 3px rgba(255, 255, 255, .9) inset; letter-spacing: 0.05rem;">PRICES</button></a>
+          <a href="/contact-us"><button class="cursor-pointer outline-none bg-brand-action hover-bg-brand-action-hover:hover font-size-5 font-600 w-200px h-60px c-paper flex flex-items-center flex-justify-center relative b-solid b-rd-3 b-4 b-brand-action hover-b-brand-action-hover:hover whitespace-normal line-height-6 word-spacing-0.5 py-9" style="box-shadow: 0 0 0 3px rgba(255, 255, 255, .9) inset; letter-spacing: 0.05rem;">REQUEST A QUOTE</button></a>
+        </div>
+
     </>
   );
 }

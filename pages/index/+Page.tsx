@@ -8,6 +8,7 @@ import { createCollapsable } from "../../components/Collapsable";
 import { Typography } from '../../components/Typography';
 import { ReviewSlider, StarReview } from '../../components/ReviewSlider';
 import { onMount } from "solid-js";
+import { AnimatedH2 } from '../../components/TransitionH2';
 
 const GallerySliderDesktop = ({ children }: { children: JSX.Element | JSX.Element[] }) => {
 	const options = { duration: 1000 };
@@ -25,13 +26,13 @@ const GallerySliderDesktop = ({ children }: { children: JSX.Element | JSX.Elemen
 				<SliderButton class="cursor-pointer position-absolute top-45% right--15 bg-transparent b-none" next>
 					<RiArrowRightSLine class="-mr-1 font-size-10 c-brand-second-action hover-c-brand transition-colors" />
 				</SliderButton>
-				<div class="flex flex-justify-center">
+				{ /* <div class="flex flex-justify-center">
 					<div class="flex flex-justify-center">
 						<div class={"flex w-3 h-3 rd-50% mx-2 mt-4 " + (current() === 0 ? "bg-brand-dark" : "bg-brand")}></div>
 						<div class={"flex w-3 h-3 rd-50% mx-2 mt-4 " + (current() === 1 ? "bg-brand-dark" : "bg-brand")}></div>
 						<div class={"flex w-3 h-3 rd-50% mx-2 mt-4 " + (current() === 2 ? "bg-brand-dark" : "bg-brand")}></div>
-					</div>
-				</div>
+					</div> 
+				</div> */}
 			</div>
 		</SliderProvider>
 	);
@@ -287,7 +288,7 @@ export default function Page() {
 
 			<FleurDivider />
 
-			<h2 class="mb-15 md-mb-20">Our main cleaning services</h2>
+			<AnimatedH2>Our main cleaning services</AnimatedH2>
 			<div class="p-6 pt-12 bg-paper b-rd-3 flex flex-justify-center" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 18%);">
 				<a href="/professional-carpet-cleaning-services">
 					<img class="md-mt-3 mt--6 mx-auto block md-w-650px xs-w-330px w-270px" src="/assets/Професионално почистване на заведения.jpg" alt="" />
@@ -311,7 +312,7 @@ export default function Page() {
 
 			<FleurDivider />
 
-			<h2>Equipment and products we use in “Fine Carpet Cleaning” Ltd.</h2>
+			<AnimatedH2>Equipment and products we use in “Fine Carpet Cleaning” Ltd.</AnimatedH2>
 
 			<GallerySlider>
 				<img src="/assets/home/equipments-2.jpg" alt="equipments-2" />
@@ -340,16 +341,13 @@ export default function Page() {
 
 			<FleurDivider />
 
-			<h2 class="mb--5 md-mb-0">Fine Carpet Cleaning Accreditations</h2>
+			<AnimatedH2>Fine Carpet Cleaning Accreditations</AnimatedH2>
 			<h3 class="mt-25 mb-15">“Fine Carpet Cleaning” Ltd. is a qualified member of <a class="color-paper-link hover-color-paper-link-hover:hover" href="https://trustedlocalcleaners.ncca.co.uk/listing/fine-carpet-cleaning-ltd/" target="_blank" rel="noopener">"NCCA"</a> (National Carpet Cleaners Association)</h3>
 
 			<GallerySlider>
-				<img src="/assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" />
-				<img src="/assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" />
-				<img src="/assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" />
-				<img src="/assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" />
-				<img src="/assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" />
-				<img src="/assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" />
+				<img src="/assets/home/fine-carpet-cleaning-ncca-certificate-1.jpg" alt="fine-carpet-cleaning-ncca-certificate-1" />
+				<img src="/assets/home/fine-carpet-cleaning-ncca-certificate-2.jpg" alt="fine-carpet-cleaning-ncca-certificate-2" />
+				<img src="/assets/home/fine-carpet-cleaning-ncca-certificate-3.jpg" alt="fine-carpet-cleaning-ncca-certificate-3" />
 			</GallerySlider>
 
 			<div class="mt-20 py-8 px-8 md-px-14 bg-paper b-rd-3" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 18%);">
@@ -359,14 +357,7 @@ export default function Page() {
 
 			<h3 class="mt-25 mb-15">“Fine Carpet Cleaning” Ltd. is listed on “<a class="color-paper-link hover-color-paper-link-hover:hover" href="https://www.checkatrade.com/trades/FineCarpetCleaning" target="_blank" rel="noopener">Checkatrade</a>"</h3>
 
-			<GallerySlider>
-				<img src="/assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" />
-				<img src="/assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" />
-				<img src="/assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" />
-				<img src="/assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" />
-				<img src="/assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" />
-				<img src="/assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" />
-			</GallerySlider>
+			<div class="flex flex-justify-center"><img class="b-rd-3 md-my-20 my-10 md-mt-10 mt-2" src="/assets/home/fine-carpet-cleaning-checkatrade-certificate.jpg" alt="fine-carpet-cleaning-checkatrade-certificate" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 30%); width: -moz-available; width: -webkit-fill-available; width: fill-available;" /></div>
 
 			<div class="mt-20 py-8 px-8 md-px-14 bg-paper b-rd-3" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 18%);">
 
@@ -420,21 +411,36 @@ export default function Page() {
 
 			<FleurDivider />
 
-			<h2>Results from our services in “Fine Carpet Cleaning” Ltd.</h2>
+			<AnimatedH2>Results from our services in “Fine Carpet Cleaning” Ltd.</AnimatedH2>
 
 			<GallerySlider>
-				<img src="/assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" />
-				<img src="/assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" />
-				<img src="/assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" />
-				<img src="/assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" />
-				<img src="/assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" />
+				<img src="/assets/home/1-same-day-carpet-cleaning.jpg" alt="1-same-day-carpet-cleaning" />
+				<img src="/assets/home/2-professional-upholstery-cleaning-service.jpg" alt="2-professional-upholstery-cleaning-service" />
+				<img src="/assets/home/3-professional-rug-cleaning-services.jpg" alt="3-professional-rug-cleaning-services" />
+				<img src="/assets/home/4-professional-leather-sofa-cleaning-services.jpg" alt="4-professional-leather-sofa-cleaning-services" />
+				<img src="/assets/home/5-house-carpet-cleaning-services.jpg" alt="5-house-carpet-cleaning-services" />
+				<img src="/assets/home/6-professional-upholstery-cleaning.jpg" alt="6-professional-upholstery-cleaning" />
+				<img src="/assets/home/7-restaurant-carpet-cleaning.jpg" alt="7-restaurant-carpet-cleaning" />
+				<img src="/assets/home/8-mattress-cleaning-service-london.jpg" alt="8-mattress-cleaning-service-london" />
+				<img src="/assets/home/9-professional-carpet-cleaning-services.jpg" alt="9-professional-carpet-cleaning-services" />
+				<img src="/assets/home/10-dry-carpet-cleaning-services.jpg" alt="10-dry-carpet-cleaning-services" />
+				<img src="/assets/home/11-office-carpet-cleaning-services.jpg" alt="11-office-carpet-cleaning-services" />
+				<img src="/assets/home/12-professional-leather-sofa-cleaning.jpg" alt="12-professional-leather-sofa-cleaning" />
+				<img src="/assets/home/13-professional-deep-carpet-cleaning-services.jpg" alt="13-professional-deep-carpet-cleaning-services" />
+				<img src="/assets/home/14-professional-office-carpet-cleaning.jpg" alt="14-professional-office-carpet-cleaning" />
+				<img src="/assets/home/15-water-free-carpet-cleaning.jpg" alt="15-water-free-carpet-cleaning" />
+				<img src="/assets/home/16-rug-cleaning-london.jpg" alt="16-rug-cleaning-london" />
+				<img src="/assets/home/17-professional-carpet-stain-removal.jpg" alt="17-professional-carpet-stain-removal" />
+				<img src="/assets/home/18-professional-furniture-cleaning-services.jpg" alt="18-professional-furniture-cleaning-services" />
+				<img src="/assets/home/19-professional-pillow-cleaning.jpg" alt="19-professional-pillow-cleaning" />
+				<img src="/assets/home/20-professional-sofa-cleaning-services.jpg" alt="/20-professional-sofa-cleaning-services" />
 			</GallerySlider>
 
 			<VideoPlayer />
 
 			<FleurDivider />
 
-			<h2>Reviews for our services</h2>
+			<AnimatedH2>Reviews for our services</AnimatedH2>
 
 			<ReviewSlider>
 				<StarReview
@@ -466,7 +472,7 @@ export default function Page() {
 
 			<FleurDivider />
 
-			<h2 class="mb-10 md-mb-20">Areas we cover</h2>
+			<AnimatedH2>Areas we cover</AnimatedH2>
 
 			<FullScreenImageGallery />
 
@@ -475,7 +481,7 @@ export default function Page() {
 
 			<FleurDivider />
 
-			<h2>Working hours</h2>
+			<AnimatedH2>Working hours</AnimatedH2>
 			<table class="w-full m-auto font-sans">
 				<thead style="box-shadow: 0px 20px 20px 1px rgb(84 89 95 / 10%);">
 					<tr class="h-20">
@@ -520,7 +526,7 @@ export default function Page() {
 
 			<FleurDivider></FleurDivider>
 
-			<h2>Frequently asked questions</h2>
+			<AnimatedH2>Frequently asked questions</AnimatedH2>
 
 			<FaqSection />
 

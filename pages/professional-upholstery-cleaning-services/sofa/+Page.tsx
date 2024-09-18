@@ -200,7 +200,7 @@ export default function Page() {
   return (
     <>
       <h1 class="mt-10 md-mt-17 font-size-12.5 md-font-size-16 md-line-height-18 line-height-16">Professional sofa cleaning services</h1>
-      <div class="flex flex-justify-center"><img class="b-rd-3 md-mt-10 mt-2 max-w-full" src="/assets/service-pics/sofa-cleaning/professional-sofa-cleaning-services-13.jpg" alt="professional-sofa-cleaning-services-13" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 30%);" /></div>
+      <div class="flex flex-justify-center"><img class="b-rd-3 md-mt-10 mt-2 max-w-full" src="/assets/service-pics/sofa-cleaning/sofa-upholstery-cleaning-service.jpg" alt="sofa-upholstery-cleaning-service" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 30%);" /></div>
 
       <FleurDivider></FleurDivider>
 
@@ -337,18 +337,19 @@ export default function Page() {
       <h2 class="line-height-12 md-line-height-14">Pictures from our professional sofa cleaning services</h2>
 
       <FacebookLikeGallery imgs={[
-        { src: "/assets/service-pics/sofa-cleaning/professional-sofa-cleaning-services-10.jpg", alt: "professional-sofa-cleaning-services-10" },
-        { src: "/assets/service-pics/sofa-cleaning/professional-sofa-cleaning-services-8.jpg", alt: "professional-sofa-cleaning-services-8" },
-        { src: "/assets/service-pics/sofa-cleaning/professional-sofa-cleaning-services-1.jpg", alt: "professional-sofa-cleaning-services-1" },
-        { src: "/assets/service-pics/sofa-cleaning/professional-sofa-cleaning-services-9.jpg", alt: "professional-sofa-cleaning-services-9" },
-        { src: "/assets/service-pics/sofa-cleaning/professional-sofa-cleaning-services-2.jpg", alt: "professional-sofa-cleaning-services-2" },
-        { src: "/assets/service-pics/sofa-cleaning/professional-sofa-cleaning-services-3.jpg", alt: "professional-sofa-cleaning-services-3" },
-        { src: "/assets/service-pics/sofa-cleaning/professional-sofa-cleaning-services-4.jpg", alt: "professional-sofa-cleaning-services-4" },
-        { src: "/assets/service-pics/sofa-cleaning/professional-sofa-cleaning-services-5.jpg", alt: "professional-sofa-cleaning-services-5" },
-        { src: "/assets/service-pics/sofa-cleaning/professional-sofa-cleaning-services-6.jpg", alt: "professional-sofa-cleaning-services-6" },
-        { src: "/assets/service-pics/sofa-cleaning/professional-sofa-cleaning-services-7.jpg", alt: "professional-sofa-cleaning-services-7" },
-        { src: "/assets/service-pics/sofa-cleaning/professional-sofa-cleaning-services-11.jpg", alt: "professional-sofa-cleaning-services-11" },
-        { src: "/assets/service-pics/sofa-cleaning/professional-sofa-cleaning-services-12.jpg", alt: "professional-sofa-cleaning-services-12" },
+        { src: "/assets/service-pics/sofa-cleaning/1-sectional-cleaning-service.jpg", alt: "1-sectional-cleaning-service" },
+        { src: "/assets/service-pics/sofa-cleaning/2-sofa-upholstery-cleaning-service-2.jpg", alt: "2-sofa-upholstery-cleaning-service-2" },
+        { src: "/assets/service-pics/sofa-cleaning/3-sofa-cover-cleaning-services.jpg", alt: "3-sofa-cover-cleaning-services" },
+        { src: "/assets/service-pics/sofa-cleaning/4-london-sofa-cleaning.jpg", alt: "4-london-sofa-cleaning" },
+        { src: "/assets/service-pics/sofa-cleaning/5-best-sofa-cleaning-services.jpg", alt: "5-best-sofa-cleaning-services" },
+        { src: "/assets/service-pics/sofa-cleaning/6-couch-cleaning-services-2.jpg", alt: "6-couch-cleaning-services-2" },
+        { src: "/assets/service-pics/sofa-cleaning/7-couch-cleaning-services.jpg", alt: "7-couch-cleaning-services" },
+        { src: "/assets/service-pics/sofa-cleaning/8-couch-cleaning-services-1.jpg", alt: "8-couch-cleaning-services-1" },
+        { src: "/assets/service-pics/sofa-cleaning/9-home-sofa-cleaning-services.jpg", alt: "9-home-sofa-cleaning-services" },
+        { src: "/assets/service-pics/sofa-cleaning/10-professional-sofa-cleaning-services-1.jpg", alt: "10-professional-sofa-cleaning-services-1" },
+        { src: "/assets/service-pics/sofa-cleaning/11-professional-sofa-cleaning-services-2.jpg", alt: "11-professional-sofa-cleaning-services-2" },
+        { src: "/assets/service-pics/sofa-cleaning/12-sofa-set-cleaning-services.jpg", alt: "12-sofa-set-cleaning-services" },
+        { src: "/assets/service-pics/sofa-cleaning/13-sofa-upholstery-cleaning-service.jpg", alt: "13-sofa-upholstery-cleaning-service" },
       ]} />
 
       <FleurDivider></FleurDivider>

@@ -250,7 +250,7 @@ export default function Page() {
   return (
     <>
       <h1 class="mt-10 md-mt-17 font-size-12.5 md-font-size-16 md-line-height-18 line-height-16">Professional rug cleaning services</h1>
-      <div class="flex flex-justify-center"><img class="b-rd-3 md-mt-10 mt-2 max-w-full" src="/assets/service-pics/rug-cleaning/professional-rug-cleaning-services-12.jpg" alt="professional-rug-cleaning-services-12" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 30%);" /></div>
+      <div class="flex flex-justify-center"><img class="b-rd-3 md-mt-10 mt-2 max-w-full" src="/assets/service-pics/rug-cleaning/rug-washing-service.jpg" alt="rug-washing-service" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 30%);" /></div>
 
       <FleurDivider></FleurDivider>
 
@@ -351,19 +351,19 @@ export default function Page() {
       <h2 class="line-height-12 md-line-height-14">Photos from our professional rug cleaning services</h2>
 
       <FacebookLikeGallery imgs={[
-        { src: "/assets/service-pics/rug-cleaning/professional-rug-cleaning-services-10.jpg", alt: "professional-rug-cleaning-services-10" },
-        { src: "/assets/service-pics/rug-cleaning/professional-rug-cleaning-services-6.jpg", alt: "professional-rug-cleaning-services-6" },
-        { src: "/assets/service-pics/rug-cleaning/professional-rug-cleaning-services-1.jpg", alt: "professional-rug-cleaning-services-1" },
-        { src: "/assets/service-pics/rug-cleaning/professional-rug-cleaning-services-8.jpg", alt: "professional-rug-cleaning-services-8" },
-        { src: "/assets/service-pics/rug-cleaning/professional-rug-cleaning-services-2.jpg", alt: "professional-rug-cleaning-services-2" },
-        { src: "/assets/service-pics/rug-cleaning/professional-rug-cleaning-services-3.jpg", alt: "professional-rug-cleaning-services-3" },
-        { src: "/assets/service-pics/rug-cleaning/professional-rug-cleaning-services-4.jpg", alt: "professional-rug-cleaning-services-4" },
-        { src: "/assets/service-pics/rug-cleaning/professional-rug-cleaning-services-5.jpg", alt: "professional-rug-cleaning-services-5" },
-        { src: "/assets/service-pics/rug-cleaning/professional-rug-cleaning-services-6.jpg", alt: "professional-rug-cleaning-services-6" },
-        { src: "/assets/service-pics/rug-cleaning/professional-rug-cleaning-services-7.jpg", alt: "professional-rug-cleaning-services-7" },
-        { src: "/assets/service-pics/rug-cleaning/professional-rug-cleaning-services-9.jpg", alt: "professional-rug-cleaning-services-9" },
-        { src: "/assets/service-pics/rug-cleaning/professional-rug-cleaning-services-11.jpg", alt: "professional-rug-cleaning-services-11" },
-        { src: "/assets/service-pics/rug-cleaning/professional-rug-cleaning-services-13.jpg", alt: "professional-rug-cleaning-services-13" },
+        { src: "/assets/service-pics/rug-cleaning/1-residential-rug-cleaning.jpg", alt: "1-residential-rug-cleaning" },
+        { src: "/assets/service-pics/rug-cleaning/3-professional-area-rug-cleaning.jpg", alt: "professional-rug-cleaning-services-1" },
+        { src: "/assets/service-pics/rug-cleaning/2-vintage-rug-cleaning.jpg", alt: "2-vintage-rug-cleaning.jpg" },
+        { src: "/assets/service-pics/rug-cleaning/4-emergency-rug-cleaning.jpg", alt: "4-emergency-rug-cleaning" },
+        { src: "/assets/service-pics/rug-cleaning/5-home-rug-cleaning-service.jpg", alt: "5-home-rug-cleaning-service" },
+        { src: "/assets/service-pics/rug-cleaning/6-eco-rug-cleaning.jpg", alt: "6-eco-rug-cleaning" },
+        { src: "/assets/service-pics/rug-cleaning/7-same-day-rug-cleaning.jpg", alt: "7-same-day-rug-cleaning" },
+        { src: "/assets/service-pics/rug-cleaning/8-professional-rug-cleaning-services-1.jpg", alt: "8-professional-rug-cleaning-services-1" },
+        { src: "/assets/service-pics/rug-cleaning/9-quality-rug-cleaning.jpg", alt: "9-quality-rug-cleaning" },
+        { src: "/assets/service-pics/rug-cleaning/10-rug-cleaning-company.jpg", alt: "10-rug-cleaning-company" },
+        { src: "/assets/service-pics/rug-cleaning/11-rug-cleaning-london-1.jpg", alt: "11-rug-cleaning-london-1" },
+        { src: "/assets/service-pics/rug-cleaning/12-rug-washing-service-1.jpg", alt: "12-rug-washing-service-1" },
+        { src: "/assets/service-pics/rug-cleaning/13-specialist-rug-cleaning-london.jpg", alt: "13-specialist-rug-cleaning-london" },
       ]} />
 
       <FleurDivider></FleurDivider>

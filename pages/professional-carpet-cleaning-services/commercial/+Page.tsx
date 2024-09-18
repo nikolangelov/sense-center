@@ -271,13 +271,13 @@ export default function Page() {
   return (
     <>
       <h1 class="mt-10 md-mt-17 font-size-12.5 md-font-size-16 md-line-height-18 line-height-16">Commercial carpet cleaning services</h1>
-      <div class="flex flex-justify-center"><img class="b-rd-3 md-mt-10 mt-2 max-w-full" src="/assets/service-pics/commercial-carpet/commercial-carpet-cleaning-services-7.jpg" alt="commercial-carpet-cleaning-services-7" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 30%);" /></div>
+      <div class="flex flex-justify-center"><img class="b-rd-3 md-mt-10 mt-2 max-w-full" src="/assets/service-pics/commercial-carpet/commercial-carpet-cleaning-services.jpg" alt="commercial-carpet-cleaning-services" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 30%);" /></div>
 
       <FleurDivider></FleurDivider>
 
       <h2 class="line-height-12 md-line-height-14">What to expect from our commercial carpet cleaning services</h2>
       <div class="mt-20 py-8 px-8 md-px-14 bg-paper b-rd-3" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 18%);">
-        <Typography variant="h3">Benefits:</Typography>
+        <h3>Benefits:</h3>
         <p>Fine Carpet Cleaning” Ltd. performs commercial carpet cleaning services in all of London. We have years of experience in commercial carpet cleaning for businesses of all sizes. We deliver a deeper clean that is healthier for your employees and customers without interfering with your business activities. The benefits of using commercial carpet cleaning services are:</p>
         <ul>
           <li class="ml--5">
@@ -291,7 +291,7 @@ export default function Page() {
           </li>
         </ul>
 
-        <Typography variant="h3">Simple booking process:</Typography>
+        <h3>Simple booking process:</h3>
         <p>The usual process of booking our commercial carpet cleaning services:</p>
 
         <ul>
@@ -311,7 +311,7 @@ export default function Page() {
             <p>One of our skilled technicians will then visit your property to perform the carpet cleaning.</p>
           </li>
         </ul>
-        <Typography variant="h3">What do we offer:</Typography>
+        <h3>What do we offer:</h3>
         <p><strong>Specialised carpet cleaning for every business need:</strong></p>
 
         <ul>
@@ -374,18 +374,14 @@ export default function Page() {
       <h2 class="line-height-12 md-line-height-14">Pictures from our Commercial carpet cleaning services in London</h2>
 
       <FacebookLikeGallery imgs={[
-        { src: "/assets/service-pics/commercial-carpet/commercial-carpet-cleaning-services-6.jpg", alt: "commercial-carpet-cleaning-services-ba-6" },
-        { src: "/assets/service-pics/commercial-carpet/commercial-carpet-cleaning-services-1.jpg", alt: "commercial-carpet-cleaning-services-ba-1" },
-        { src: "/assets/service-pics/commercial-carpet/commercial-carpet-cleaning-services-ba-1.jpg", alt: "commercial-carpet-cleaning-services-1" },
-        { src: "/assets/service-pics/commercial-carpet/commercial-carpet-cleaning-services-2.jpg", alt: "commercial-carpet-cleaning-services-ba-2" },
-        { src: "/assets/service-pics/commercial-carpet/commercial-carpet-cleaning-services-3.jpg", alt: "commercial-carpet-cleaning-services-ba-3" },
-        { src: "/assets/service-pics/commercial-carpet/commercial-carpet-cleaning-services-4.jpg", alt: "commercial-carpet-cleaning-services-ba-4" },
-        { src: "/assets/service-pics/commercial-carpet/commercial-carpet-cleaning-services-5.jpg", alt: "commercial-carpet-cleaning-services-ba-5" },
-        { src: "/assets/service-pics/commercial-carpet/commercial-carpet-cleaning-services-ba-2.jpg", alt: "commercial-carpet-cleaning-services-2" },
-        { src: "/assets/service-pics/commercial-carpet/commercial-carpet-cleaning-services-ba-3.jpg", alt: "commercial-carpet-cleaning-services-3" },
-        { src: "/assets/service-pics/commercial-carpet/commercial-carpet-cleaning-services-ba-4.jpg", alt: "commercial-carpet-cleaning-services-4" },
-        { src: "/assets/service-pics/commercial-carpet/commercial-carpet-cleaning-services-ba-5.jpg", alt: "commercial-carpet-cleaning-services-5" },
-        { src: "/assets/service-pics/commercial-carpet/commercial-carpet-cleaning-services-ba-6.jpg", alt: "commercial-carpet-cleaning-services-6" },
+        { src: "/assets/service-pics/commercial-carpet/1-commercial-carpet-cleaning-london.jpg", alt: "1-commercial-carpet-cleaning-london" },
+        { src: "/assets/service-pics/commercial-carpet/2-commercial-carpet-cleaning-process.jpg", alt: "2-commercial-carpet-cleaning-process" },
+        { src: "/assets/service-pics/commercial-carpet/3-commercial-carpet-cleaning-methods.jpg", alt: "3-commercial-carpet-cleaning-methods" },
+        { src: "/assets/service-pics/commercial-carpet/4-commercial-carpet-cleaning-services.jpg", alt: "4-commercial-carpet-cleaning-services" },
+        { src: "/assets/service-pics/commercial-carpet/5-business-carpet-cleaning.jpg", alt: "5-business-carpet-cleaning" },
+        { src: "/assets/service-pics/commercial-carpet/6-carpet-cleaning-for-commercial-buildings.jpg", alt: "6-carpet-cleaning-for-commercial-buildings" },
+        { src: "/assets/service-pics/commercial-carpet/7-industrial-carpet-cleaning-services.jpg", alt: "7-industrial-carpet-cleaning-services" },
+        { src: "/assets/service-pics/commercial-carpet/8-commercial-carpet-cleaning-company.jpg", alt: "8-commercial-carpet-cleaning-company" },
       ]} />
 
       <FleurDivider></FleurDivider>

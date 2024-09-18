@@ -285,7 +285,7 @@ export default function Page() {
   return (
     <>
       <h1 class="mt-10 md-mt-17 font-size-12.5 md-font-size-16 md-line-height-18 line-height-16">Office carpet cleaning services</h1>
-      <div class="flex flex-justify-center"><img class="b-rd-3 md-mt-10 mt-2 max-w-full" src="/assets/service-pics/office-carpet/office-carpet-cleaning-services-7.jpg" alt="office-carpet-cleaning-services-7" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 30%);" /></div>
+      <div class="flex flex-justify-center"><img class="b-rd-3 md-mt-10 mt-2 max-w-full" src="/assets/service-pics/office-carpet/commercial-office-carpet-cleaning.jpg" alt="commercial-office-carpet-cleaning" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 30%);" /></div>
 
       <FleurDivider></FleurDivider>
 
@@ -363,13 +363,16 @@ export default function Page() {
       <h2 class="line-height-12 md-line-height-14">Pictures from our office carpet cleaning services in London</h2>
 
       <FacebookLikeGallery imgs={[
-        { src: "/assets/service-pics/office-carpet/office-carpet-cleaning-services-4.jpg", alt: "office-carpet-cleaning-services-4" },
-        { src: "/assets/service-pics/office-carpet/office-carpet-cleaning-services-2.jpg", alt: "office-carpet-cleaning-services-2" },
-        { src: "/assets/service-pics/office-carpet/office-carpet-cleaning-services-ba.jpg", alt: "office-carpet-cleaning-services-ba" },
-        { src: "/assets/service-pics/office-carpet/office-carpet-cleaning-services-3.jpg", alt: "office-carpet-cleaning-services-3" },
-        { src: "/assets/service-pics/office-carpet/office-carpet-cleaning-services-1.jpg", alt: "office-carpet-cleaning-services-1" },
-        { src: "/assets/service-pics/office-carpet/office-carpet-cleaning-services-5.jpg", alt: "office-carpet-cleaning-services-5" },
-        { src: "/assets/service-pics/office-carpet/office-carpet-cleaning-services-6.jpg", alt: "office-carpet-cleaning-services-6" },
+        { src: "/assets/service-pics/office-carpet/1-office-carpet-steam-cleaning-2.jpg", alt: "1-office-carpet-steam-cleaning-2" },
+        { src: "/assets/service-pics/office-carpet/2-office-carpet-steam-cleaning.jpg", alt: "2-office-carpet-steam-cleaning" },
+        { src: "/assets/service-pics/office-carpet/3-office-carpet-cleaning-london.jpg", alt: "3-office-carpet-cleaning-london" },
+        { src: "/assets/service-pics/office-carpet/4-office-carpet-cleaning-company.jpg", alt: "4-office-carpet-cleaning-company" },
+        { src: "/assets/service-pics/office-carpet/5-office-carpet-steam-cleaning-1.jpg", alt: "5-office-carpet-steam-cleaning-1" },
+        { src: "/assets/service-pics/office-carpet/6-office-carpet-cleaning-company-1.jpg", alt: "6-office-carpet-cleaning-company-1" },
+        { src: "/assets/service-pics/office-carpet/7-office-carpet-deep-cleaning.jpg", alt: "7-office-carpet-deep-cleaning" },
+        { src: "/assets/service-pics/office-carpet/8-office-carpet-cleaning-london-1.jpg", alt: "8-office-carpet-cleaning-london-1" },
+        { src: "/assets/service-pics/office-carpet/9-office-carpet-deep-cleaning-1.jpg", alt: "9-office-carpet-deep-cleaning-1" },
+        { src: "/assets/service-pics/office-carpet/10-office-carpet-deep-cleaning-2.jpg", alt: "10-office-carpet-deep-cleaning-2" },
       ]} />
 
       <FleurDivider></FleurDivider>

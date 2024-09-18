@@ -507,7 +507,7 @@ export default function Page() {
             <h1 class="mt-10 md-mt-17 font-size-12.5 md-font-size-16 md-line-height-18 line-height-16">Professional
                 carpet cleaning services</h1>
             <div class="flex flex-justify-center"><img class="b-rd-3 md-mt-10 mt-2 max-w-full"
-                src="/assets/service-pics/carpet-cleaning/professional-carpet-cleaning-services-13.jpg" alt="professional-carpet-cleaning-services-13"
+                src="/assets/service-pics/carpet-cleaning/carpet-cleaning-specialists.jpg" alt="carpet-cleaning-specialists"
                 style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 30%);" /></div>
 
             <FleurDivider></FleurDivider>
@@ -619,21 +619,19 @@ export default function Page() {
                 London</h2>
 
             <FacebookLikeGallery imgs={[
-                { src: "/assets/service-pics/carpet-cleaning/professional-carpet-cleaning-services-10.jpg", alt: "professional-carpet-cleaning-services-10" },
-                { src: "/assets/service-pics/carpet-cleaning/professional-carpet-cleaning-services-15.jpg", alt: "professional-carpet-cleaning-services-15" },
-                { src: "/assets/service-pics/carpet-cleaning/professional-carpet-cleaning-services-1.jpeg", alt: "professional-carpet-cleaning-services-1" },
-                { src: "/assets/service-pics/carpet-cleaning/professional-carpet-cleaning-services-7.jpg", alt: "professional-carpet-cleaning-services-7" },
-                { src: "/assets/service-pics/carpet-cleaning/professional-carpet-cleaning-services-2.jpg", alt: "professional-carpet-cleaning-services-2" },
-                { src: "/assets/service-pics/carpet-cleaning/professional-carpet-cleaning-services-3.jpg", alt: "professional-carpet-cleaning-services-3" },
-                { src: "/assets/service-pics/carpet-cleaning/professional-carpet-cleaning-services-4.jpg", alt: "professional-carpet-cleaning-services-4" },
-                { src: "/assets/service-pics/carpet-cleaning/professional-carpet-cleaning-services-5.jpg", alt: "professional-carpet-cleaning-services-5" },
-                { src: "/assets/service-pics/carpet-cleaning/professional-carpet-cleaning-services-6.jpg", alt: "professional-carpet-cleaning-services-6" },
-                { src: "/assets/service-pics/carpet-cleaning/professional-carpet-cleaning-services-8.jpg", alt: "professional-carpet-cleaning-services-8" },
-                { src: "/assets/service-pics/carpet-cleaning/professional-carpet-cleaning-services-9.jpg", alt: "professional-carpet-cleaning-services-9" },
-                { src: "/assets/service-pics/carpet-cleaning/professional-carpet-cleaning-services-11.jpg", alt: "professional-carpet-cleaning-services-11" },
-                { src: "/assets/service-pics/carpet-cleaning/professional-carpet-cleaning-services-12.jpg", alt: "professional-carpet-cleaning-services-12" },
-                { src: "/assets/service-pics/carpet-cleaning/professional-carpet-cleaning-services-14.jpg", alt: "professional-carpet-cleaning-services-14" },
-                { src: "/assets/service-pics/carpet-cleaning/professional-carpet-cleaning-services-16.jpg", alt: "professional-carpet-cleaning-services-16" },
+                { src: "/assets/service-pics/carpet-cleaning/1-best-carpet-cleaning-london-2.jpg", alt: "1-best-carpet-cleaning-london-2" },
+                { src: "/assets/service-pics/carpet-cleaning/2-stairs-carpet-cleaning-services.jpg", alt: "2-stairs-carpet-cleaning-services" },
+                { src: "/assets/service-pics/carpet-cleaning/3-quality-carpet-cleaning-services.jpg", alt: "3-quality-carpet-cleaning-services" },
+                { src: "/assets/service-pics/carpet-cleaning/4-carpet-cleaning-company.jpg", alt: "4-carpet-cleaning-company" },
+                { src: "/assets/service-pics/carpet-cleaning/5-carpet-cleaning-london.jpg", alt: "5-carpet-cleaning-london" },
+                { src: "/assets/service-pics/carpet-cleaning/6-best-carpet-cleaning-london.jpg", alt: "6-best-carpet-cleaning-london" },
+                { src: "/assets/service-pics/carpet-cleaning/7-professional-carpet-cleaning.jpg", alt: "7-professional-carpet-cleaning" },
+                { src: "/assets/service-pics/carpet-cleaning/8-carpet-cleaning services-london.jpg", alt: "8-carpet-cleaning services-london" },
+                { src: "/assets/service-pics/carpet-cleaning/9-carpet-cleaning-agency.jpeg", alt: "9-carpet-cleaning-agency" },
+                { src: "/assets/service-pics/carpet-cleaning/10-carpet-cleaning-agency.jpg", alt: "10-carpet-cleaning-agency" },
+                { src: "/assets/service-pics/carpet-cleaning/11-best-carpet-cleaning-london-1.jpg", alt: "11-best-carpet-cleaning-london-1" },
+                { src: "/assets/service-pics/carpet-cleaning/12-carpet-washing-service.jpg", alt: "12-carpet-washing-service" },
+                { src: "/assets/service-pics/carpet-cleaning/13-expert-carpet-cleaning-london.jpg", alt: "13-expert-carpet-cleaning-london" },
             ]} />
 
             <FleurDivider></FleurDivider>

@@ -152,26 +152,25 @@ ol li:before {
   content: counter(ordered);
   counter-increment: ordered;
   font-weight: 600;
-  margin-left: -60px;
-  margin-top: 2px;
+  margin-left: -64px;
+  margin-top: 1px;
   position: absolute;
   border-radius: 35px;
   background: -moz-linear-gradient(50deg, rgb(13, 46, 41) 0%, rgb(35, 170, 118) 70%);
   background: -webkit-linear-gradient(50deg, rgb(13, 46, 41) 0%, rgb(37, 187, 129) 70%);
   background: linear-gradient(50deg, rgb(13, 46, 41) 0%, rgb(37, 187, 129) 70%);
-  width: 47px;
-  height: 47px;
+  width: 36px;
+  height: 36px;
 }
 
 ol li:after {
   margin-left: -60px;
   z-index: 1;
   top: 5px;
-  left: 4px;
   font-size: 20px;
   font-family: 'Roboto';
-  width: 40px;
-  height: 40px;
+  width: 28px;
+  height: 28px;
   border-radius: 35px;
   content: counter(customlistcounter) " ";
   position: absolute;
@@ -183,13 +182,20 @@ ol li:after {
   color: #1A6142;
 }
 
+ul li:after {
+list-style: initial; counter-increment: none !important;
+}
+
 ol li {
   counter-increment: customlistcounter;
   position: relative;
 }
 
-ol li p{
-margin-left: 0px !important;
+.bullet::before {
+  content: "•";
+  color: #1A6142;
+  margin-left: -5px ;
+
 }
 
 .facebook-like-gallery .keen-slider {
@@ -244,23 +250,14 @@ ol>li>ul>li:before {
   transform: translateY(-15px) rotate(-45deg);
 }
 
-.animated-heading {
-  font-weight: 800;
-  font-size: 2.5rem;
-  margin: 80px 0px;
-  letter-spacing: -0.02rem;
-  line-height: 3.5rem;
+
+.transition-h2 {
   opacity: 0;
-  /* Start hidden */
-  transform: translateY(50px);
-  /* Start slightly lower */
-  transition: transform 500ms cubic-bezier(0, 0, 0.5, 1),
-    opacity 500ms cubic-bezier(0, 0, 0.5, 1);
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
 }
 
-.animated-heading.visible {
+.transition-h2.visible {
   opacity: 1;
-  /* Fade in */
   transform: translateY(0);
-  /* Move to original position */
 }

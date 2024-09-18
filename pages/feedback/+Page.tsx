@@ -1,4 +1,5 @@
 import emailjs from '@emailjs/browser';
+import { AnimatedH2 } from '../../components/TransitionH2';
 
 function FleurDivider() {
   return (
@@ -57,7 +58,7 @@ export default function Page() {
 
       <ContactUs />
 
-      <FleurDivider></FleurDivider>
+      <FleurDivider />
 
       <form action="https://formsubmit.co/office@finecarpetcleaning.co.uk" method="post">
         <input type="text" name="name" required></input>

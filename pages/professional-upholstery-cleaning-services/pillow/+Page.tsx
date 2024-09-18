@@ -197,7 +197,7 @@ export default function Page() {
   return (
     <>
       <h1 class="mt-10 md-mt-17 font-size-12.5 md-font-size-16 md-line-height-18 line-height-16">Pillow cleaning services</h1>
-      <div class="flex flex-justify-center"><img class="b-rd-3 md-mt-10 mt-2 max-w-full" src="/assets/service-pics/pillow-cleaning/pillow-cleaning-service-7.jpg" alt="pillow-cleaning-service-7" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 30%);" /></div>
+      <div class="flex flex-justify-center"><img class="b-rd-3 md-mt-10 mt-2 max-w-full" src="/assets/service-pics/pillow-cleaning/pillow-cleaning-service.jpg" alt="pillow-cleaning-service" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 30%);" /></div>
 
       <FleurDivider></FleurDivider>
 
@@ -316,12 +316,15 @@ export default function Page() {
       <h2 class="line-height-12 md-line-height-14">Pictures from our pillow cleaning services</h2>
 
       <FacebookLikeGallery imgs={[
-        { src: "/assets/service-pics/pillow-cleaning/pillow-cleaning-service-4.jpg", alt: "pillow-cleaning-service-4" },
-        { src: "/assets/service-pics/pillow-cleaning/pillow-cleaning-service-1.jpg", alt: "pillow-cleaning-service-1" },
-        { src: "/assets/service-pics/pillow-cleaning/pillow-cleaning-service-2.jpg", alt: "pillow-cleaning-service-2" },
-        { src: "/assets/service-pics/pillow-cleaning/pillow-cleaning-service-3.jpg", alt: "pillow-cleaning-service-3" },
-        { src: "/assets/service-pics/pillow-cleaning/pillow-cleaning-service-5.jpg", alt: "pillow-cleaning-service-5" },
-        { src: "/assets/service-pics/pillow-cleaning/pillow-cleaning-service-6.jpg", alt: "pillow-cleaning-service-6" },
+        { src: "/assets/service-pics/pillow-cleaning/1-professional-pillow-cleaning-6.jpg", alt: "1-professional-pillow-cleaning-6" },
+        { src: "/assets/service-pics/pillow-cleaning/2-professional-pillow-cleaning-4.jpg", alt: "2-professional-pillow-cleaning-4" },
+        { src: "/assets/service-pics/pillow-cleaning/3-pillow-cleaning-service-2.jpg", alt: "3-pillow-cleaning-service-2" },
+        { src: "/assets/service-pics/pillow-cleaning/4-professional-pillow-cleaning-3.jpg", alt: "4-professional-pillow-cleaning-3" },
+        { src: "/assets/service-pics/pillow-cleaning/5-professional-pillow-cleaning-5.jpg", alt: "5-professional-pillow-cleaning-5" },
+        { src: "/assets/service-pics/pillow-cleaning/6-pillow-cleaning-service-3.jpg", alt: "6-pillow-cleaning-service-3" },
+        { src: "/assets/service-pics/pillow-cleaning/7-professional-pillow-cleaning-1.jpg", alt: "7-professional-pillow-cleaning-1" },
+        { src: "/assets/service-pics/pillow-cleaning/8-professional-pillow-cleaning-2.jpg", alt: "8-professional-pillow-cleaning-2" },
+        { src: "/assets/service-pics/pillow-cleaning/9-pillow-cleaning-service-1.jpg", alt: "9-pillow-cleaning-service-1" },
       ]} />
 
       <FleurDivider></FleurDivider>

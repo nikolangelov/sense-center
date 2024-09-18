@@ -220,7 +220,7 @@ export default function Page() {
   return (
     <>
       <h1 class="mt-10 md-mt-17 font-size-12.5 md-font-size-16 md-line-height-18 line-height-16">Eco-friendly carpet cleaning services</h1>
-      <div class="flex flex-justify-center"><img class="b-rd-3 md-mt-10 mt-2 max-w-full" src="/assets/Професионално почистване на заведения.jpg" alt="" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 30%);" /></div>
+      <div class="flex flex-justify-center"><img class="b-rd-3 md-mt-10 mt-2 max-w-full" src="/assets/service-pics/eco-friendly-carpet/eco-friendly-carpet-cleaning-service.jpg" alt="eco-friendly-carpet-cleaning-service" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 30%);" /></div>
 
       <FleurDivider></FleurDivider>
 
@@ -293,21 +293,20 @@ export default function Page() {
           <li class="ml--5">
             <h3 class="ml--5 font-size-6 md-font-size-7">Tailored Green Cleaning</h3>
             <Typography variant="body">Our chem-free carpet cleaning product inventory has been carefully selected to ensure the most eco-friendly carpet cleaning in London. The cleaning solution that we use has been thoroughly tested to verify that no hazardous or toxic substances are present.</Typography>
-            <Typography variant="body">The selection process involves thorough testing, and we've handpicked products from names such as "M-Power", "Solution World of Clean", and "TMF". This wide range empowers our technicians to select the most suitable detergents for each situation, considering factors such as:</Typography>
-            <ul class="ml--5" style="list-style: initial;">
-              <li class="ml--5">
-                <p>The fabric and type of the carpet;</p>
-              </li>
-              <li class="ml--5">
-                <p>The extent of soiling on the carpet;</p>
-              </li>
-              <li class="ml--5">
-                <p>The nature of stains requiring removal.</p>
-              </li>
-            </ul>
-            <Typography variant="body">This approach ensures the provision of the most professional eco-friendly carpet cleaning services.</Typography>
-          </li>
+            <Typography variant="body">The selection process involves thorough testing, and we've handpicked products from names such as "M-Power", "Solution World of Clean", and "TMF". This wide range empowers our technicians to select the most suitable detergents for each situation, considering factors such as:</Typography></li>
         </ol>
+        <ul class="ml--5" style="list-style: initial;">
+          <li>
+            <p>The fabric and type of the carpet;</p>
+          </li>
+          <li>
+            <p>The extent of soiling on the carpet;</p>
+          </li>
+          <li>
+            <p>The nature of stains requiring removal.</p>
+          </li>
+        </ul>
+        <p>This approach ensures the provision of the most professional eco-friendly carpet cleaning services.</p>
       </div>
 
       <FleurDivider></FleurDivider>
@@ -315,13 +314,12 @@ export default function Page() {
       <h2 class="line-height-12 md-line-height-14">Pictures from our eco-friendly carpet cleaning services in London</h2>
 
       <FacebookLikeGallery imgs={[
-        { src: "/assets/Професионално почистване на заведения.jpg", alt: "" },
-        { src: "/assets/Професионално почистване на заведения.jpg", alt: "" },
-        { src: "/assets/Професионално почистване на заведения.jpg", alt: "" },
-        { src: "/assets/Професионално почистване на заведения.jpg", alt: "" },
-        { src: "/assets/Професионално почистване на заведения.jpg", alt: "" },
-        { src: "/assets/Професионално почистване на заведения.jpg", alt: "" },
-        { src: "/assets/Професионално почистване на заведения.jpg", alt: "" },
+        { src: "/assets/service-pics/eco-friendly-carpet/1-organic-carpet-cleaning-service.jpg", alt: "1-organic-carpet-cleaning-service" },
+        { src: "/assets/service-pics/eco-friendly-carpet/2-natural-carpet-cleaning-service.jpg", alt: "2-natural-carpet-cleaning-service" },
+        { src: "/assets/service-pics/eco-friendly-carpet/3-chemical-free-carpet-cleaning.jpg", alt: "3-chemical-free-carpet-cleaning" },
+        { src: "/assets/service-pics/eco-friendly-carpet/4-environmentally-friendly-carpet-cleaning-services.jpg", alt: "4-environmentally-friendly-carpet-cleaning-services" },
+        { src: "/assets/service-pics/eco-friendly-carpet/5-eco-carpet-cleaning-company.jpg", alt: "5-eco-carpet-cleaning-company" },
+        { src: "/assets/service-pics/eco-friendly-carpet/6-green-carpet-cleaning-services.jpg", alt: "6-green-carpet-cleaning-services" },
       ]} />
 
       <FleurDivider></FleurDivider>

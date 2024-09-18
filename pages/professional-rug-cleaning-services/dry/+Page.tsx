@@ -169,7 +169,7 @@ export default function Page() {
   return (
     <>
       <h1 class="mt-10 md-mt-17 font-size-12.5 md-font-size-16 md-line-height-18 line-height-16">Dry rug cleaning service</h1>
-      <div class="flex flex-justify-center"><img class="b-rd-3 md-mt-10 mt-2 max-w-full" src="/assets/service-pics/dry-rug-cleaning/dry-rug-cleaning-service-7.jpg" alt="dry-rug-cleaning-service-7" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 30%);" /></div>
+      <div class="flex flex-justify-center"><img class="b-rd-3 md-mt-10 mt-2 max-w-full" src="/assets/service-pics/dry-rug-cleaning/dry-rug-cleaning-service.jpg" alt="dry-rug-cleaning-service" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 30%);" /></div>
 
       <FleurDivider></FleurDivider>
 
@@ -267,12 +267,15 @@ export default function Page() {
       <h2 class="line-height-12 md-line-height-14">Pictures from our dry rug cleaning service</h2>
 
       <FacebookLikeGallery imgs={[
-        { src: "/assets/service-pics/dry-rug-cleaning/dry-rug-cleaning-service-4.jpg", alt: "dry-rug-cleaning-service-4" },
-        { src: "/assets/service-pics/dry-rug-cleaning/dry-rug-cleaning-service-1.jpg", alt: "dry-rug-cleaning-service-1" },
-        { src: "/assets/service-pics/dry-rug-cleaning/dry-rug-cleaning-service-2.jpg", alt: "dry-rug-cleaning-service-2" },
-        { src: "/assets/service-pics/dry-rug-cleaning/dry-rug-cleaning-service-3.jpg", alt: "dry-rug-cleaning-service-3" },
-        { src: "/assets/service-pics/dry-rug-cleaning/dry-rug-cleaning-service-5.jpg", alt: "dry-rug-cleaning-service-5" },
-        { src: "/assets/service-pics/dry-rug-cleaning/dry-rug-cleaning-service-6.jpg", alt: "dry-rug-cleaning-service-6" },
+        { src: "/assets/service-pics/dry-rug-cleaning/1-rug-dry-cleaning-london-1.jpg", alt: "1-rug-dry-cleaning-london-1" },
+        { src: "/assets/service-pics/dry-rug-cleaning/2-area-rug-dry-cleaning-near-me-3.jpg", alt: "2-area-rug-dry-cleaning-near-me-3" },
+        { src: "/assets/service-pics/dry-rug-cleaning/3-area-rug-dry-cleaning-near-me.jpg", alt: "3-area-rug-dry-cleaning-near-me" },
+        { src: "/assets/service-pics/dry-rug-cleaning/4-dry-rug-cleaning-service-1.jpg", alt: "4-dry-rug-cleaning-service-1" },
+        { src: "/assets/service-pics/dry-rug-cleaning/5-rug-dry-cleaning-london.jpg", alt: "5-rug-dry-cleaning-london" },
+        { src: "/assets/service-pics/dry-rug-cleaning/7-area-rug-dry-cleaning-near-me-2.jpg", alt: "7-area-rug-dry-cleaning-near-me-2" },
+        { src: "/assets/service-pics/dry-rug-cleaning/8-rug-dry-cleaning-london-2.jpg", alt: "8-rug-dry-cleaning-london-2" },
+        { src: "/assets/service-pics/dry-rug-cleaning/9-rug-dry-cleaning-london-3.jpg", alt: "9-rug-dry-cleaning-london-3" },
+        { src: "/assets/service-pics/dry-rug-cleaning/10-area-rug-dry-cleaning-near-me-1.jpg", alt: "10-area-rug-dry-cleaning-near-me-1" },
       ]} />
 
       <FleurDivider></FleurDivider>
