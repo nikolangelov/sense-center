@@ -10,17 +10,12 @@ import { FOTSlider, FOTSliderContainer } from '../../components/FrequentlyOrdere
 const VideoPlayer = () => {
     return (
         <div class="flex flex-justify-center flex-items-center mt-20">
-            <video
-                class="mt-10 b-rd-3" style="width: 100%; width: -moz-available; width: -webkit-fill-available; width: fill-available;"
-                autoplay
-                controls
-                muted
-            >
-                <source
-                    src="/assets/Professional Carpet Cleaning London - Fine Carpet Cleaning (1).mp4"
-                    type="video/mp4"
-                />
-            </video>
+            <iframe
+                class="mt-10 b-rd-3"
+                style="width: 100%; height: 500px;"
+                src="https://www.youtube.com/embed/3MUTkOPfjEo?autoplay=1&mute=1"
+                allow="autoplay; encrypted-media"
+            ></iframe>
         </div>
     );
 };
@@ -733,43 +728,43 @@ export default function Page() {
 
             <FOTSlider>
                 <FOTSliderContainer
-                    img="/assets/service-pics/stain-protection-services/stain-protection-services-7.jpg"
-                    alt="stain-protection-services-7"
+                    img="/assets/service-pics/stain-protection-services/stain-protection-services.jpg"
+                    alt="stain-protection-services"
                     title="Stain protection services"
                     href="/stain-protection-services"
                     description="The main purpose of the stain protector is to guard the fabric against penetration of liquids that lead to lasting stains and permanent damage to the carpet and upholstery."
                 />
                 <FOTSliderContainer
-                    img="/assets/service-pics/sofa-cleaning/sofa-cleaning-services-13.jpg"
-                    alt="sofa-cleaning-services-13"
+                    img="/assets/service-pics/sofa-cleaning/sofa-upholstery-cleaning-service.jpg"
+                    alt="sofa-upholstery-cleaning-service"
                     title="Professional sofa cleaning services"
                     href="/professional-upholstery-cleaning-services/sofa"
                     description="Our expert sofa cleaning uses steam and hot water extraction to eliminate 99% of microorganisms, revitalizing your space for a healthier home."
                 />
                 <FOTSliderContainer
-                    img="/assets/service-pics/furniture-cleaning/furniture-cleaning-12.jpg"
-                    alt="furniture-cleaning-12"
+                    img="/assets/service-pics/furniture-cleaning/steam-cleaning-furniture-services.jpg"
+                    alt="steam-cleaning-furniture-services"
                     title="Professional furniture cleaning services"
                     href="/professional-upholstery-cleaning-services/furniture"
                     description="Furniture upholstery cleaning services can extend the life of your furniture, saving you money on purchasing new items."
                 />
                 <FOTSliderContainer
-                    img="/assets/service-pics/mattress-cleaning/mattress-cleaning-services-9.jpg"
-                    alt="mattress-cleaning-services-9"
+                    img="/assets/service-pics/mattress-cleaning/mattress-cleaning-services.jpg"
+                    alt="mattress-cleaning-services"
                     title="Mattress cleaning services"
                     href="/professional-upholstery-cleaning-services/mattress"
                     description="Mattress cleaning removes unwanted guests and fluids, creating a cleaner environment. It enhances sleep quality and extends the life of your mattress."
                 />
                 <FOTSliderContainer
-                    img="/assets/service-pics/rug-cleaning/professional-rug-cleaning-12.jpg"
-                    alt="professional-rug-cleaning-12"
+                    img="/assets/service-pics/rug-cleaning/rug-washing-service.jpg"
+                    alt="rug-washing-service"
                     title="Professional rug cleaning services"
                     href="/professional-rug-cleaning-services"
                     description="Professional rug cleaning removes stains and extends rug life. Our experts use advanced tools to refresh your rug and ensure a healthy, allergy-free environment."
                 />
                 <FOTSliderContainer
-                    img="/assets/service-pics/pillow-cleaning/pillow-cleaning-7.jpg"
-                    alt="pillow-cleaning-7"
+                    img="/assets/service-pics/pillow-cleaning/pillow-cleaning-service.jpg"
+                    alt="pillow-cleaning-service"
                     title="Pillow cleaning services"
                     href="/professional-upholstery-cleaning-services/pillow"
                     description="Instead of tossing old pillows, consider our cost-effective professional cleaning. We fluff, sanitize, and deodorize, giving your pillows new life."
@@ -881,7 +876,7 @@ export default function Page() {
                 <a href="/contact-us"><button class="cursor-pointer outline-none bg-brand-action hover-bg-brand-action-hover:hover font-size-5 font-600 w-200px h-60px c-paper flex flex-items-center flex-justify-center relative b-solid b-rd-3 b-4 b-brand-action hover-b-brand-action-hover:hover whitespace-normal line-height-6 word-spacing-0.5 py-9" style="box-shadow: 0 0 0 3px rgba(255, 255, 255, .9) inset; letter-spacing: 0.05rem;">REQUEST A QUOTE</button></a>
             </div>
 
-            <RotatingBanners
+            { /* <RotatingBanners
                 class="block md-hidden max-w-full mx-auto mt-20 mb-10"
                 imgs={[
                     {
@@ -931,7 +926,7 @@ export default function Page() {
                         url: ""
                     },
                 ]}
-            />
+            /> */ }
 
         </>
     );

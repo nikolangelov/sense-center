@@ -38,15 +38,15 @@ export default function Page() {
         <AllServicesButtonContainer>
           <AllServicesButton
             href="/professional-carpet-cleaning-services/steam"
-            src="/assets/service-pics/carpet-steam/professional-carpet-steam-cleaning-services-7.jpg"
-            alt="professional-carpet-steam-cleaning-services-7"
+            src="/assets/service-pics/carpet-steam/steam-clean-carpet-company.jpg"
+            alt="steam-clean-carpet-company"
           >Carpet steam cleaning
           </AllServicesButton>
 
           <AllServicesButton
             href="/professional-carpet-cleaning-services/dry"
-            src="/assets/service-pics/dry-carpet/dry-carpet-cleaning-services-7.jpg"
-            alt="dry-carpet-cleaning-services-7"
+            src="/assets/service-pics/dry-carpet/professional-dry-carpet-cleaning.jpg"
+            alt="professional-dry-carpet-cleaning"
           >Dry carpet cleaning
           </AllServicesButton>
         </AllServicesButtonContainer>
@@ -54,14 +54,14 @@ export default function Page() {
         <AllServicesButtonContainer>
           <AllServicesButton
             href="/professional-carpet-cleaning-services/eco-friendly"
-            src="/assets/Професионално почистване на заведения.jpg"
-            alt=""
+            src="/assets/service-pics/eco-friendly-carpet/eco-friendly-carpet-cleaning-service.jpg"
+            alt="eco-friendly-carpet-cleaning-service"
           >Eco-friendly carpet cleaning
           </AllServicesButton>
           <AllServicesButton
             href="/professional-carpet-cleaning-services/same-day"
-            src="/assets/service-pics/same-day/same-day-carpet-cleaning-7.jpg"
-            alt="same-day-carpet-cleaning-7"
+            src="/assets/service-pics/same-day/emergency-carpet-cleaning.jpg"
+            alt="emergency-carpet-cleaning"
           >Same day carpet cleaning
           </AllServicesButton>
         </AllServicesButtonContainer>
@@ -69,14 +69,14 @@ export default function Page() {
         <AllServicesButtonContainer>
           <AllServicesButton
             href="/professional-carpet-cleaning-services/fast-dry"
-            src="/assets/service-pics/fast-dry-carpet/fast-dry-carpet-cleaning-service-7.jpg"
-            alt="fast-dry-carpet-cleaning-service-7"
+            src="/assets/service-pics/fast-dry-carpet/fast-dry-carpet-cleaning-service.jpg"
+            alt="fast-dry-carpet-cleaning-service"
           >Fast dry carpet cleaning
           </AllServicesButton>
           <AllServicesButton
             href="/professional-stain-removal-services"
-            src="/assets/Професионално почистване на заведения.jpg"
-            alt=""
+            src="/assets/service-pics/stain-removal/professional-stain-removal-service.jpg"
+            alt="professional-stain-removal-service"
           >Carpet stain removal
           </AllServicesButton>
         </AllServicesButtonContainer>
@@ -84,14 +84,14 @@ export default function Page() {
         <AllServicesButtonContainer>
           <AllServicesButton
             href="/stain-protection-services"
-            src="/assets/Професионално почистване на заведения.jpg"
-            alt=""
+            src="/assets/service-pics/stain-protection-services/stain-protection-services.jpg"
+            alt="stain-protection-services"
           >Carpet stain protection
           </AllServicesButton>
           <AllServicesButton
             href="/professional-carpet-cleaning-services/commercial"
-            src="/assets/service-pics/commercial-carpet/commercial-carpet-cleaning-services-7.jpg"
-            alt="commercial-carpet-cleaning-services-7"
+            src="/assets/service-pics/commercial-carpet/commercial-carpet-cleaning-services.jpg"
+            alt="commercial-carpet-cleaning-services"
           >Commercial carpet cleaning
           </AllServicesButton>
         </AllServicesButtonContainer>
@@ -99,15 +99,15 @@ export default function Page() {
         <AllServicesButtonContainer>
           <AllServicesButton
             href="/professional-carpet-cleaning-services/residential"
-            src="/assets/service-pics/residential-carpet/residential-carpet-cleaning-6.jpg"
-            alt="residential-carpet-cleaning-6"
+            src="/assets/service-pics/residential-carpet/residential-carpet-cleaning-services.jpg"
+            alt="residential-carpet-cleaning-services"
           >Residential carpet cleaning
           </AllServicesButton>
 
           <AllServicesButton
             href="/professional-carpet-cleaning-services/commercial/office"
-            src="/assets/service-pics/office-carpet/office-carpet-cleaning-services-7.jpg"
-            alt="office-carpet-cleaning-services-7"
+            src="/assets/service-pics/office-carpet/commercial-office-carpet-cleaning.jpg"
+            alt="commercial-office-carpet-cleaning"
           >Office carpet cleaning
           </AllServicesButton>
         </AllServicesButtonContainer>
@@ -119,15 +119,15 @@ export default function Page() {
         <AllServicesButtonContainer>
           <AllServicesButton
             href="/professional-upholstery-cleaning-services/sofa"
-            src="/assets/service-pics/sofa-cleaning/sofa-cleaning-services-13.jpg"
-            alt="sofa-cleaning-services-13"
+            src="/assets/service-pics/sofa-cleaning/sofa-upholstery-cleaning-service.jpg"
+            alt="sofa-upholstery-cleaning-service"
           >Sofa cleaning
           </AllServicesButton>
 
           <AllServicesButton
             href="/professional-upholstery-cleaning-services/sofa/leather"
-            src="/assets/Професионално почистване на заведения.jpg"
-            alt=""
+            src="/assets/service-pics/leather-sofa-cleaning/leather-sofa-cleaning-services-1.jpg"
+            alt="leather-sofa-cleaning-services-1"
           >Leather sofa cleaning
           </AllServicesButton>
         </AllServicesButtonContainer>
@@ -135,15 +135,15 @@ export default function Page() {
         <AllServicesButtonContainer>
           <AllServicesButton
             href="/professional-upholstery-cleaning-services/furniture"
-            src="/assets/service-pics/furniture-cleaning/furniture-cleaning-12.jpg"
-            alt="furniture-cleaning-12"
+            src="/assets/service-pics/furniture-cleaning/steam-cleaning-furniture-services.jpg"
+            alt="steam-cleaning-furniture-services"
           >Furniture cleaning
           </AllServicesButton>
 
           <AllServicesButton
             href="/professional-upholstery-cleaning-services/mattress"
-            src="/assets/service-pics/mattress-cleaning/mattress-cleaning-services-9.jpg"
-            alt="mattress-cleaning-services-9"
+            src="/assets/service-pics/mattress-cleaning/mattress-cleaning-services.jpg"
+            alt="mattress-cleaning-services"
           >Mattress cleaning
           </AllServicesButton>
         </AllServicesButtonContainer>
@@ -151,14 +151,14 @@ export default function Page() {
         <AllServicesButtonContainer>
           <AllServicesButton
             href="/professional-upholstery-cleaning-services/pillow"
-            src="/assets/service-pics/pillow-cleaning/pillow-cleaning-7.jpg"
-            alt="pillow-cleaning-7"
+            src="/assets/service-pics/pillow-cleaning/pillow-cleaning-service.jpg"
+            alt="pillow-cleaning-service"
           >Pillow cleaning
           </AllServicesButton>
           <AllServicesButton
             href="/professional-stain-removal-services"
-            src="/assets/Професионално почистване на заведения.jpg"
-            alt=""
+            src="/assets/service-pics/stain-removal/professional-stain-removal-service.jpg"
+            alt="professional-stain-removal-service"
           >Upholstery stain removal
           </AllServicesButton>
         </AllServicesButtonContainer>
@@ -166,8 +166,8 @@ export default function Page() {
         <AllServicesButtonContainer>
           <AllServicesButton
             href="/stain-protection-services"
-            src="/assets/Професионално почистване на заведения.jpg"
-            alt=""
+            src="/assets/service-pics/stain-protection-services/stain-protection-services.jpg"
+            alt="stain-protection-services"
           >Upholstery stain protection
           </AllServicesButton>
         </AllServicesButtonContainer>
@@ -179,14 +179,14 @@ export default function Page() {
         <AllServicesButtonContainer>
           <AllServicesButton
             href="/professional-rug-cleaning-services/steam"
-            src="/assets/service-pics/rug-steam-cleaning/rug-steam-cleaning-6.jpg"
-            alt=""
+            src="/assets/service-pics/rug-steam-cleaning/rug-steam-cleaning-service.jpg"
+            alt="rug-steam-cleaning-service"
           >Rug steam cleaning
           </AllServicesButton>
           <AllServicesButton
             href="/professional-rug-cleaning-services/dry"
-            src="/assets/service-pics/dry-rug-cleaning/dry-rug-cleaning-7.jpg"
-            alt=""
+            src="/assets/service-pics/dry-rug-cleaning/dry-rug-cleaning-service.jpg"
+            alt="dry-rug-cleaning-service"
           >Dry rug cleaning
           </AllServicesButton>
         </AllServicesButtonContainer>
@@ -194,14 +194,14 @@ export default function Page() {
         <AllServicesButtonContainer>
           <AllServicesButton
             href="/professional-stain-removal-services"
-            src="/assets/Професионално почистване на заведения.jpg"
-            alt=""
+            src="/assets/service-pics/stain-removal/professional-stain-removal-service.jpg"
+            alt="professional-stain-removal-service"
           >Rug stain removal
           </AllServicesButton>
           <AllServicesButton
             href="/stain-protection-services"
-            src="/assets/Професионално почистване на заведения.jpg"
-            alt=""
+            src="/assets/service-pics/stain-protection-services/stain-protection-services.jpg"
+            alt="stain-protection-services"
           >Rug stain protection
           </AllServicesButton>
         </AllServicesButtonContainer>
@@ -213,8 +213,8 @@ export default function Page() {
         <AllServicesButtonContainer>
           <AllServicesButton
             href="/antiviral-sanitisation-services"
-            src="/assets/Професионално почистване на заведения.jpg"
-            alt=""
+            src="/assets/service-pics/antiviral-sanitisation/antiviral-sanitisation-services2.webp"
+            alt="antiviral-sanitisation-services2"
           >Antiviral sanitisation
           </AllServicesButton>
         </AllServicesButtonContainer>

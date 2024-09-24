@@ -9,6 +9,19 @@ import { Typography } from '../../components/Typography';
 import { ReviewSlider, StarReview } from '../../components/ReviewSlider';
 import { AnimatedH2 } from '../../components/TransitionH2';
 
+const VideoPlayer = () => {
+  return (
+      <div class="flex flex-justify-center flex-items-center mt-20">
+          <iframe
+              class="mt-10 b-rd-3"
+              style="width: 100%; height: 500px;"
+              src="https://www.youtube.com/embed/4_KISdoNiRw?autoplay=1&mute=1"
+              allow="autoplay; encrypted-media"
+          ></iframe>
+      </div>
+  );
+};
+
 const GalerrySliderDesktop = () => {
   const options = { duration: 1000 };
   const [slider, { current, next, prev, moveTo }] = createSlider(options);
@@ -48,24 +61,6 @@ const GalerrySliderMobile = () => {
         <SliderButton class="cursor-pointer position-absolute top-41% right-0 bg-paper-inv bg-op-50 b-rd-br-1 b-rd-tr-1 b-none px-0 py-1.5" next><RiArrowRightSLine class="-mr-1 font-size-10 c-paper hover-c-brand-light:hover transition-colors" /></SliderButton>
       </div>
     </SliderProvider>
-  );
-};
-
-const VideoPlayer = () => {
-  return (
-    <div class="flex flex-justify-center flex-items-center mt-20">
-      <video
-        class="mt-10 b-rd-3" style="width: 100%; width: -moz-available; width: -webkit-fill-available; width: fill-available;"
-        autoplay
-        controls
-        muted
-      >
-        <source
-          src="/assets/Professional Carpet Cleaning London - Fine Carpet Cleaning (1).mp4"
-          type="video/mp4"
-        />
-      </video>
-    </div>
   );
 };
 

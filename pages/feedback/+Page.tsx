@@ -1,5 +1,6 @@
 import emailjs from '@emailjs/browser';
 import { AnimatedH2 } from '../../components/TransitionH2';
+import { NoIndexComponent } from '../../components/NoindexTag';
 
 function FleurDivider() {
   return (
@@ -49,22 +50,36 @@ export const ContactUs = () => {
   );
 };
 
+import { MetaProvider, Title, Meta } from 'solid-meta';
+
 export default function Page() {
   return (
+    <MetaProvider tags={[]}> {/* Pass an empty array for server-side rendering */}
+      <Head />
+      <main>
+        <h1 class="mt-17 font-size-14 md-font-size-16 md-line-height-18 line-height-16">Feedback</h1>
+
+        <div class="mt-20 py-8 px-8 md-px-14 b-rd-3 bg-paper line-height-8 text-justify font-size-4.4" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 10%);">If you have suggestions on how we can improve, please do not hesitate to leave us feedback! Your opinion is very valuable to us and it will be read directly by the owner.</div>
+
+        <ContactUs />
+
+        <FleurDivider />
+
+        <form action="https://formsubmit.co/office@finecarpetcleaning.co.uk" method="post">
+          <input type="text" name="name" required></input>
+          <input type="email" name="email" required></input>
+          <button type="submit">Send</button>
+        </form>
+      </main>
+    </MetaProvider>
+  );
+}
+
+function Head() {
+  return (
     <>
-      <h1 class="mt-17 font-size-14 md-font-size-16 md-line-height-18 line-height-16">Feedback</h1>
-
-      <div class="mt-20 py-8 px-8 md-px-14 b-rd-3 bg-paper line-height-8 text-justify font-size-4.4" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 10%);">If you have suggestions on how we can improve, please do not hesitate to leave us feedback! Your opinion is very valuable to us and it will be read directly by the owner.</div>
-
-      <ContactUs />
-
-      <FleurDivider />
-
-      <form action="https://formsubmit.co/office@finecarpetcleaning.co.uk" method="post">
-        <input type="text" name="name" required></input>
-        <input type="email" name="email" required></input>
-        <button type="submit">Send</button>
-      </form>
+      {/* Meta tags */}
+      <Meta name="robots" content="noindex" />
     </>
   );
 }
