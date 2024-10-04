@@ -8,7 +8,7 @@ export default {
   Layout,
   Head,
   // <title>
-  title: "Фалун Дафа Информационен Център",
+  title: "Fine Carpet Cleaning",
   // <meta name="description">
   extends: vikeSolid,
 } satisfies Config;

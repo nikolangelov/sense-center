@@ -7,14 +7,14 @@ import { FOTSlider, FOTSliderContainer } from '../../../components/FrequentlyOrd
 
 const VideoPlayer = () => {
   return (
-      <div class="flex flex-justify-center flex-items-center mt-20">
-          <iframe
-              class="mt-10 b-rd-3"
-              style="width: 100%; height: 500px;"
-              src="https://www.youtube.com/embed/_KH1rkIGxGo?autoplay=1&mute=1"
-              allow="autoplay; encrypted-media"
-          ></iframe>
-      </div>
+    <div class="flex flex-justify-center flex-items-center mt-20">
+      <iframe
+				class="mt-10 b-rd-3 h-200px md-h-500px"
+				style="width: 100%;"
+        src="https://www.youtube.com/embed/_KH1rkIGxGo?autoplay=1&mute=1"
+        allow="autoplay; encrypted-media"
+      ></iframe>
+    </div>
   );
 };
 
@@ -221,7 +221,7 @@ export default function Page() {
 
       <FleurDivider></FleurDivider>
 
-      <h2 class="line-height-12 md-line-height-14">Prices of our professional carpet cleaning services</h2>
+      { /* <h2 class="line-height-12 md-line-height-14">Prices of our professional carpet cleaning services</h2>
 
       <div class="my-20 pt-8 pb-6 px-8 md-px-14 b-rd-3 bg-paper line-height-7.5 md-line-height-8 text-justify font-size-4 md-font-size-4.4"
         style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 18%);">
@@ -298,7 +298,7 @@ export default function Page() {
 
       <button class="outline-none bg-brand-second-action hover-bg-brand-second-action-hover:hover font-size-6 font-600 w-250px h-60px c-paper flex flex-items-center flex-justify-center relative b-solid b-rd-3 b-4 b-brand-second-action hover-b-brand-second-action-hover:hover whitespace-normal line-height-6 word-spacing-0.5 py-9 my-20 mx-auto" style="box-shadow: 0 0 0 3px rgba(255, 255, 255, .9) inset; letter-spacing: 0.05rem;"><a href="/contact-us" class="c-paper font-size-5">REQUEST A QUOTE</a></button>
 
-      <FleurDivider></FleurDivider>
+      <FleurDivider></FleurDivider> */}
 
       <h2 class="line-height-12 md-line-height-14">Frequently ordered together</h2>
 
@@ -386,28 +386,56 @@ export default function Page() {
 
       <ReviewSlider>
         <StarReview
-          src="/assets/profile-pics-reviews/unnamed90.png"
-          reviewText="Professional, quick to respond. I'm very happy with their service."
-          name="Zaneta Priscepionkaite"
-          date="July 2024"
+          src="/assets/profile-pics-reviews/unnamed1112.png"
+          reviewText="I received excellent communications throughout the whole process. On the day, the cleaning experience was efficient with a considerate and friendly member of staff. Very competitive pricing."
+          name="Elizabeth Maurice"
+          date="June 2024"
           stars={5}
-          hrefGoogleReview="https://g.co/kgs/c4A87Ud"
+          hrefGoogleReview="https://g.co/kgs/HPqEYvL"
         />
         <StarReview
-          src="/assets/profile-pics-reviews/unnamed90.png"
-          reviewText="FANTASTIC STAFF, FANTASTIC SERVICE, FANTASTIC WORK & MOST IMPORTANTLY FANTASTIC PRICE, Cannot be beaten if you want your carpets cleaned,,, one quick call and everything was taken care of.. IF YOU ARE GETTING YOUR CARPETS CLEANED MAKE SURR YOU USE THESE GUYS 100%👍"
-          name="Zaneta Priscepionkaite"
-          date="July 2024"
+          src="/assets/profile-pics-reviews/unnamed (1).png"
+          reviewText="The best carpet cleaning service I have ever experienced. From start to finish was unbelievably smooth. The staff that attended extremely polite and moved all the items with utmost care. Would recommend using them as they are simply the best one has come across. Maya was absolutely fantastic in arranging this as the request was done at such a short notice."
+          name="Gen Tiski"
+          date="March 2024"
           stars={5}
-          hrefGoogleReview="https://g.co/kgs/c4A87Ud"
+          hrefGoogleReview="https://g.co/kgs/H3NeADN"
         />
         <StarReview
-          src="/assets/profile-pics-reviews/unnamed90.png"
-          reviewText="Professional, quick to respond. I'm very happy with their service."
-          name="Zaneta Priscepionkaite"
-          date="July 2024"
+          src="/assets/profile-pics-reviews/unnamed-49.png"
+          reviewText="I had my carpet cleaned by Nikolay from Fine Carpet Cleaning. What a fantastic job he did ! He is very professional, efficient and organised in the way he works. My carpet looks new again. I highly recommend."
+          name="Samanta Federico"
+          date="January 2024"
           stars={5}
-          hrefGoogleReview="https://g.co/kgs/c4A87Ud"
+          hrefGoogleReview="https://g.co/kgs/WxWf2Bm"
+        />
+        <StarReview
+          src="/assets/profile-pics-reviews/unnamed3434.png"
+          reviewText="Really happy with the service and i come across a-lot of carpet cleaners in my job property inventory .
+        I was not sure how the carpet would come up , as it is an old carpet in a communal lobby . Wow, so much better-stains removed .
+        A really quality service from start to finish , nothing was too much trouble . I managed to get a slot the same day . I would definitely recommend 😁"
+          name="Yasmin"
+          date="June 2024"
+          stars={5}
+          hrefGoogleReview="https://g.co/kgs/A7AyWZi"
+        />
+        <StarReview
+          src="/assets/profile-pics-reviews/unnamed (3).png"
+          reviewText="Had a great experience with Fine Carpet Cleaning yesterday. I phoned at 9am for help with a stained carpet, and within 2 hours someone was at my house doing the job. Communications were very clear and slick, and the cleaning was done briskly and to the highest standard. Highly recommended."
+          name="Peter O'Donoghue"
+          date="April 2024"
+          stars={5}
+          hrefGoogleReview="https://g.co/kgs/vnLrPA1"
+        />
+        <StarReview
+          src="/assets/profile-pics-reviews/unnamed (2).png"
+          reviewText="Good service at a reasonable price, had my mattress and small rug cleaned and can say that I'm satisfied with the result.
+        The company representative was professional, arrived on time and did a very good job, quickly and efficiently.
+        Definitely would recommend."
+          name="Nikolay Dimitrov"
+          date="April 2024"
+          stars={5}
+          hrefGoogleReview="https://g.co/kgs/jWDWU8Z"
         />
 
       </ReviewSlider>

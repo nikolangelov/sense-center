@@ -32,7 +32,7 @@ app.post('/send-email', upload.array('attachments', 10), (req, res) => {
     const emailContent = `
         You have received a new message from your website contact form.
         
-    Sender: ${senderEmail}
+    Sender: ${<b>senderEmail</b>}
     Name: ${name}
     Post code: ${postCode}
     Phone: ${phone}

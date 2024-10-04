@@ -6,12 +6,13 @@ import { ReviewSlider, StarReview } from '../../components/ReviewSlider';
 import { createSignal, JSX, onCleanup, onMount } from 'solid-js';
 import { MetaProvider, Meta } from 'solid-meta';
 import { createEffect } from 'solid-js';
+import { AnimatedH2 } from '../../components/TransitionH2';
 
 function FleurDivider() {
   return (
-    <div class="m-auto my-30 md-my-36 position-relative w-80%">
+    <div class="m-auto pr-2 my-30 md-my-36 position-relative w-80%">
       <div class="divider-shadow overflow-hidden h-0.5 after-block::after after-w-full::after after-h-6::after after-mx-auto::after after-mt--6::after"></div>
-      <div class="w-11 h-11 position-absolute position-bottom--6 left-47% bg-#f7f7f7"><img class="position-absolute max-w-7 mx-1.8" src="/assets/output-onlinepngtools.png" /></div>
+      <div class="w-11 h-11 position-absolute position-bottom--6 md-left-47% left-43% bg-#f7f7f7"><img class="position-absolute max-w-7 mx-1.8" src="/assets/output-onlinepngtools.png" /></div>
     </div>
   );
 }
@@ -85,182 +86,211 @@ export default function Page() {
 
   return (
     <>
+      <MetaProvider>
+        <Meta name="robots" content="noindex" />
+        <h1 class="mt-10 md-mt-17 font-size-14 md-font-size-16 md-line-height-18 line-height-16">Who are we?</h1>
 
-      <h1 class="mt-10 md-mt-17 font-size-14 md-font-size-16 md-line-height-18 line-height-16">Who are we?</h1>
+        <div class="mt-20">
+          <GallerySlider>
+          <img src="/assets/about-us/vehicles-2.jpg" alt="vehicles-2" />
+            <img src="/assets/about-us/fine-carpet-cleaning-about-us1.jpg" alt="fine-carpet-cleaning-about-us1" />
+            <img src="/assets/about-us/fine-carpet-cleaning-about-us2.jpg" alt="fine-carpet-cleaning-about-us2" />
+            <img src="/assets/about-us/products-1.jpg" alt="products-1" />
+            <img src="/assets/about-us/vehicles-1.jpg" alt="vehicles-1" />
+            <img src="/assets/about-us/equipment-1.jpg" alt="equipment-1" />
+          </GallerySlider>
+        </div>
 
-      <div class="mt-20">
+        <div class="mt-20 py-8 px-8 md-px-14 b-rd-3 bg-paper line-height-8 text-justify font-size-4.4" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 18%);">
+
+          <p>“Fine Carpet Cleaning'' Ltd. is a London-based carpet cleaning company that has been in the industry since 2012. It was founded with the commitment to provide our customers with the highest quality carpet cleaning services. Today, we are proud to have established a reputation as a trusted and high-performing agency.</p>
+
+          <p>In our company, we follow the philosophy of always thinking about our clients first. We don’t just do cleaning jobs – we strive to be the most reliable and quality-focused carpet cleaning company. Our core value is customer satisfaction, and we are dedicated to providing the best possible services.</p>
+
+          <p>With years of experience serving both residential and commercial customers, we have expertise in handling various types of carpets, rugs, upholstery, and stains. Throughout our journey, we have continuously improved our services by:</p>
+
+          <ul>
+            <li class="ml--5"><p>Always using the most top-grade equipment and machinery;</p></li>
+            <li class="ml--5"><p>Regularly testing and selecting new cleaning products;</p></li>
+            <li class="ml--5"><p>Improving our expertise at every opportunity by going through professional courses and special training.</p></li>
+          </ul>
+
+        </div>
+
+        <FleurDivider></FleurDivider>
+
+        <AnimatedH2>Our accreditations</AnimatedH2>
+
+        <h3 style="font-family: 'Mona-Sans', sans-serif;" class="mt-15 mb-15">“Fine Carpet Cleaning” Ltd. is a qualified member of "<a class="color-paper-link hover-color-paper-link-hover:hover" href="https://trustedlocalcleaners.ncca.co.uk/listing/fine-carpet-cleaning-ltd/" target="_blank" rel="noopener">NCCA</a>" (National Carpet Cleaners Association)</h3>
+
+        <GallerySlider>
+          <img src="/assets/about-us/fine-carpet-cleaning-ncca-certificate-1.jpg" alt="fine-carpet-cleaning-ncca-certificate-1" />
+          <img src="/assets/about-us/fine-carpet-cleaning-ncca-certificate-2.jpg" alt="fine-carpet-cleaning-ncca-certificate-2" />
+          <img src="/assets/about-us/fine-carpet-cleaning-ncca-certificate-3.jpg" alt="fine-carpet-cleaning-ncca-certificate-3" />
+          <img src="/assets/about-us/fine-carpet-cleaning-checkatrade-certificate.jpg" alt="fine-carpet-cleaning-checkatrade-certificate" />
+        </GallerySlider>
+
+        <div class="mt-20 py-8 px-8 md-px-14 b-rd-3 bg-paper line-height-8 text-justify font-size-4.4" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 18%);">
+
+          <p>“NCCA” is one of the most respected and authoritative associations for training carpet cleaners. It was founded in 1968 and is devoted entirely to the cleaning, maintenance, and restoration of carpets.</p>
+
+          <p>The main objective of the association is to provide certificates of professionalism and high standards to partner companies that have passed a special test for practical knowledge and skills. This ensures the quality of the certified companies services.</p>
+
+        </div>
+
+        <h3 style="font-family: 'Mona-Sans', sans-serif;" class="mt-25 mb--5">“Fine Carpet Cleaning” Ltd. is listed on “<a class="color-paper-link hover-color-paper-link-hover:hover" href="https://www.checkatrade.com/trades/FineCarpetCleaning" target="_blank" rel="noopener">Checkatrade</a>"</h3>
+
+        <div class="mt-20 py-8 px-8 md-px-14 b-rd-3 bg-paper line-height-8 text-justify font-size-4.4" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 18%);">
+
+          <p>“Checkatrade” is an organisation founded in 1998 to help consumers in the UK to find their specialist in a particular area, such as quality carpet cleaning. The main goal of the organisation is the collection of all quality companies in one place, covering high standards, transparency in customer service and prices.</p>
+
+          <p>In order to be accredited by “Checkatrade”, “Fine Carpet Cleaning” Ltd. had to pass a detailed inspection covering more than 20 aspects, such as:</p>
+
+          <ul>
+            <li class="ml--5">
+              <p>ID.</p>
+            </li>
+            <li class="ml--5">
+              <p>Reviews.</p>
+            </li>
+            <li class="ml--5">
+              <p>Insurance.</p>
+            </li>
+            <li class="ml--5">
+              <p>Qualifications.</p>
+            </li>
+            <li class="ml--5">
+              <p>Membership in professional organisations.</p>
+            </li>
+            <li class="ml--5">
+              <p>And many more.</p>
+            </li>
+          </ul>
+
+          <p>Once listed on Checkatrade, companies are continuously monitored based on user feedback posted on the organisation's website. This ongoing evaluation ensures that accredited companies maintain their high standards of service.</p>
+
+        </div>
+
+        <h3 style="font-family: 'Mona-Sans', sans-serif;" class="mt-25 mb--5">“Fine Carpet Cleaning” Ltd. staff members are trained and certified</h3>
+
+        <div class="mt-20 py-8 px-8 md-px-14 b-rd-3 bg-paper line-height-8 text-justify font-size-4.4" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 18%);">
+
+          <p>At Fine Carpet Cleaning Ltd., we are driven by two key principles: fully satisfying our customers' needs and fostering a company culture that encourages constant striving for excellence. As a result, our staff members have successfully completed numerous specialised professional courses, including:</p>
+
+          <ul>
+            <li class="ml--5">
+              <p>Professional carpet and upholstery cleaning;</p>
+            </li>
+            <li class="ml--5">
+              <p>Advanced spot and stain treatment and removal;</p>
+            </li>
+            <li class="ml--5">
+              <p>Various other relevant certifications.</p>
+            </li>
+          </ul>
+
+          <p>Our goal is to be prepared for any situation, no matter how challenging it is, and leave nothing to chance.</p>
+
+        </div>
+
+        <FleurDivider></FleurDivider>
+
+        <AnimatedH2>Equipment and products we use</AnimatedH2>
+
         <GallerySlider>
           <img src="/assets/about-us/equipment-1.jpg" alt="equipment-1" />
-          <img src="/assets/about-us/fine-carpet-cleaning-about-us1.jpg" alt="fine-carpet-cleaning-about-us1" />
-          <img src="/assets/about-us/fine-carpet-cleaning-about-us2.jpg" alt="fine-carpet-cleaning-about-us2" />
           <img src="/assets/about-us/products-1.jpg" alt="products-1" />
           <img src="/assets/about-us/vehicles-1.jpg" alt="vehicles-1" />
           <img src="/assets/about-us/vehicles-2.jpg" alt="vehicles-2" />
         </GallerySlider>
-      </div>
 
-      <div class="mt-20 py-8 px-8 md-px-14 b-rd-3 bg-paper line-height-8 text-justify font-size-4.4" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 18%);">
+        <div class="mt-20 py-8 px-12 md-px-14 bg-paper b-rd-3" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 18%);">
 
-        <p>“Fine Carpet Cleaning'' Ltd. is a London-based carpet cleaning company that has been in the industry since 2012. It was founded with the commitment to provide our customers with the highest quality carpet cleaning services. Today, we are proud to have established a reputation as a trusted and high-performing agency.</p>
+          <p>At “Fine Carpet Cleaning” Ltd., we utilise top-grade cleaning equipment and premium products to ensure the highest quality service. Our approach includes:</p>
 
-        <p>In our company, we follow the philosophy of always thinking about our clients first. We don’t just do cleaning jobs – we strive to be the most reliable and quality-focused carpet cleaning company. Our core value is customer satisfaction, and we are dedicated to providing the best possible services.</p>
+          <ol style="counter-reset: ordered; list-style: none;">
+            <li class="ml--5">
+              <p class="ml--5"><strong>Highly Developed Machinery:</strong> We employ some of the most powerful and effective portable machines worldwide. After extensive testing of various machine brands available in the UK market, we have chosen the finest, including "Mytee" (a leading US manufacturer) and "Airflex" (one of the top UK manufacturers). Our team engineer has further enhanced and fine-tuned these machines to ensure peak performance.</p>
+            </li>
+            <li class="ml--5">
+              <p class="ml--5"><strong>High-Filtration Vacuum Cleaner:</strong> Our high-filtration twin-motor vacuum cleaner is the best in the market, from what we have seen and experienced. It's purposefully designed for high-performance expert carpet cleaning. One of the twin motors vigorously agitates the carpet, while the other effectively suctions away loose dirt, dry soil, and dust.</p>
+            </li>
+            <li class="ml--5">
+              <p class="ml--5"><strong>Premium Cleaning Products:</strong> We utilise a comprehensive range of cleaning products from over 20 renowned brands in both the UK and US markets. Thorough testing has allowed us to select the most effective cleaning detergents available. Among these brands are "Alltec," "Prochem," "Chemspec," "Solution World of Clean," "TMF," and more. This diverse selection allows our technicians to choose the most suitable detergents for each unique situation, considering factors like the carpet's fabric, level of soiling, and the type of stains that require treatment.</p>
+            </li>
+          </ol>
 
-        <p>With years of experience serving both residential and commercial customers, we have expertise in handling various types of carpets, rugs, upholstery, and stains. Throughout our journey, we have continuously improved our services by:</p>
+          <p>By combining these advanced cleaning tools and premium products with our expertise, we ensure top-quality professional carpet cleaning that meets and exceeds your expectations.</p>
 
-        <ul>
-          <li class="ml--5"><p>Always using the most top-grade equipment and machinery;</p></li>
-          <li class="ml--5"><p>Regularly testing and selecting new cleaning products;</p></li>
-          <li class="ml--5"><p>Improving our expertise at every opportunity by going through professional courses and special training.</p></li>
-        </ul>
+        </div>
 
-      </div>
+        <FleurDivider></FleurDivider>
 
-      <FleurDivider></FleurDivider>
+        <AnimatedH2>What our customers say about us</AnimatedH2>
 
-      <h2>Our accreditations</h2>
+        <ReviewSlider>
+          <StarReview
+            src="/assets/profile-pics-reviews/unnamed1112.png"
+            reviewText="I received excellent communications throughout the whole process. On the day, the cleaning experience was efficient with a considerate and friendly member of staff. Very competitive pricing."
+            name="Elizabeth Maurice"
+            date="June 2024"
+            stars={5}
+            hrefGoogleReview="https://g.co/kgs/HPqEYvL"
+          />
+          <StarReview
+            src="/assets/profile-pics-reviews/unnamed (1).png"
+            reviewText="The best carpet cleaning service I have ever experienced. From start to finish was unbelievably smooth. The staff that attended extremely polite and moved all the items with utmost care. Would recommend using them as they are simply the best one has come across. Maya was absolutely fantastic in arranging this as the request was done at such a short notice."
+            name="Gen Tiski"
+            date="March 2024"
+            stars={5}
+            hrefGoogleReview="https://g.co/kgs/H3NeADN"
+          />
+          <StarReview
+            src="/assets/profile-pics-reviews/unnamed-49.png"
+            reviewText="I had my carpet cleaned by Nikolay from Fine Carpet Cleaning. What a fantastic job he did ! He is very professional, efficient and organised in the way he works. My carpet looks new again. I highly recommend."
+            name="Samanta Federico"
+            date="January 2024"
+            stars={5}
+            hrefGoogleReview="https://g.co/kgs/WxWf2Bm"
+          />
+          <StarReview
+            src="/assets/profile-pics-reviews/unnamed3434.png"
+            reviewText="Really happy with the service and i come across a-lot of carpet cleaners in my job property inventory .
+        I was not sure how the carpet would come up , as it is an old carpet in a communal lobby . Wow, so much better-stains removed .
+        A really quality service from start to finish , nothing was too much trouble . I managed to get a slot the same day . I would definitely recommend 😁"
+            name="Yasmin"
+            date="June 2024"
+            stars={5}
+            hrefGoogleReview="https://g.co/kgs/A7AyWZi"
+          />
+          <StarReview
+            src="/assets/profile-pics-reviews/unnamed (3).png"
+            reviewText="Had a great experience with Fine Carpet Cleaning yesterday. I phoned at 9am for help with a stained carpet, and within 2 hours someone was at my house doing the job. Communications were very clear and slick, and the cleaning was done briskly and to the highest standard. Highly recommended."
+            name="Peter O'Donoghue"
+            date="April 2024"
+            stars={5}
+            hrefGoogleReview="https://g.co/kgs/vnLrPA1"
+          />
+          <StarReview
+            src="/assets/profile-pics-reviews/unnamed (2).png"
+            reviewText="Good service at a reasonable price, had my mattress and small rug cleaned and can say that I'm satisfied with the result.
+        The company representative was professional, arrived on time and did a very good job, quickly and efficiently.
+        Definitely would recommend."
+            name="Nikolay Dimitrov"
+            date="April 2024"
+            stars={5}
+            hrefGoogleReview="https://g.co/kgs/jWDWU8Z"
+          />
 
-      <h3 style="font-family: 'Mona-Sans', sans-serif;" class="mt-15 mb-15">“Fine Carpet Cleaning” Ltd. is a qualified member of "<a class="color-paper-link hover-color-paper-link-hover:hover" href="https://trustedlocalcleaners.ncca.co.uk/listing/fine-carpet-cleaning-ltd/" target="_blank" rel="noopener">NCCA</a>" (National Carpet Cleaners Association)</h3>
+        </ReviewSlider>
 
-      <GallerySlider>
-        <img src="/assets/about-us/fine-carpet-cleaning-checkatrade-certificate.jpg" alt="fine-carpet-cleaning-checkatrade-certificate" />
-        <img src="/assets/about-us/fine-carpet-cleaning-ncca-certificate-1.jpg" alt="fine-carpet-cleaning-ncca-certificate-1" />
-        <img src="/assets/about-us/fine-carpet-cleaning-ncca-certificate-2.jpg" alt="fine-carpet-cleaning-ncca-certificate-2" />
-        <img src="/assets/about-us/fine-carpet-cleaning-ncca-certificate-3.jpg" alt="fine-carpet-cleaning-ncca-certificate-3" />
-      </GallerySlider>
+        <FleurDivider></FleurDivider>
 
-      <div class="mt-20 py-8 px-8 md-px-14 b-rd-3 bg-paper line-height-8 text-justify font-size-4.4" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 18%);">
-
-        <p>“NCCA” is one of the most respected and authoritative associations for training carpet cleaners. It was founded in 1968 and is devoted entirely to the cleaning, maintenance, and restoration of carpets.</p>
-
-        <p>The main objective of the association is to provide certificates of professionalism and high standards to partner companies that have passed a special test for practical knowledge and skills. This ensures the quality of the certified companies services.</p>
-
-      </div>
-
-      <h3 style="font-family: 'Mona-Sans', sans-serif;" class="mt-25 mb--5">“Fine Carpet Cleaning” Ltd. is listed on “<a class="color-paper-link hover-color-paper-link-hover:hover" href="https://www.checkatrade.com/trades/FineCarpetCleaning" target="_blank" rel="noopener">Checkatrade</a>"</h3>
-
-      <div class="mt-20 py-8 px-8 md-px-14 b-rd-3 bg-paper line-height-8 text-justify font-size-4.4" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 18%);">
-
-        <p>“Checkatrade” is an organisation founded in 1998 to help consumers in the UK to find their specialist in a particular area, such as quality carpet cleaning. The main goal of the organisation is the collection of all quality companies in one place, covering high standards, transparency in customer service and prices.</p>
-
-        <p>In order to be accredited by “Checkatrade”, “Fine Carpet Cleaning” Ltd. had to pass a detailed inspection covering more than 20 aspects, such as:</p>
-
-        <ul>
-          <li class="ml--5">
-            <p>ID.</p>
-          </li>
-          <li class="ml--5">
-            <p>Reviews.</p>
-          </li>
-          <li class="ml--5">
-            <p>Insurance.</p>
-          </li>
-          <li class="ml--5">
-            <p>Qualifications.</p>
-          </li>
-          <li class="ml--5">
-            <p>Membership in professional organisations.</p>
-          </li>
-          <li class="ml--5">
-            <p>And many more.</p>
-          </li>
-        </ul>
-
-        <p>Once listed on Checkatrade, companies are continuously monitored based on user feedback posted on the organisation's website. This ongoing evaluation ensures that accredited companies maintain their high standards of service.</p>
-
-      </div>
-
-      <h3 style="font-family: 'Mona-Sans', sans-serif;" class="mt-25 mb--5">“Fine Carpet Cleaning” Ltd. staff members are trained and certified</h3>
-
-      <div class="mt-20 py-8 px-8 md-px-14 b-rd-3 bg-paper line-height-8 text-justify font-size-4.4" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 18%);">
-
-        <p>At Fine Carpet Cleaning Ltd., we are driven by two key principles: fully satisfying our customers' needs and fostering a company culture that encourages constant striving for excellence. As a result, our staff members have successfully completed numerous specialised professional courses, including:</p>
-
-        <ul>
-          <li class="ml--5">
-            <p>Professional carpet and upholstery cleaning;</p>
-          </li>
-          <li class="ml--5">
-            <p>Advanced spot and stain treatment and removal;</p>
-          </li>
-          <li class="ml--5">
-            <p>Various other relevant certifications.</p>
-          </li>
-        </ul>
-
-        <p>Our goal is to be prepared for any situation, no matter how challenging it is, and leave nothing to chance.</p>
-
-      </div>
-
-      <FleurDivider></FleurDivider>
-
-      <h2>Equipment and products we use</h2>
-
-      <GallerySlider>
-        <img src="/assets/about-us/equipment-1.jpg" alt="equipment-1" />
-        <img src="/assets/about-us/products-1.jpg" alt="products-1" />
-        <img src="/assets/about-us/vehicles-1.jpg" alt="vehicles-1" />
-        <img src="/assets/about-us/vehicles-2.jpg" alt="vehicles-2" />
-      </GallerySlider>
-
-      <div class="mt-20 py-8 px-12 md-px-14 bg-paper b-rd-3" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 18%);">
-
-        <p>At “Fine Carpet Cleaning” Ltd., we utilise top-grade cleaning equipment and premium products to ensure the highest quality service. Our approach includes:</p>
-
-        <ol style="counter-reset: ordered; list-style: none;">
-          <li class="ml--5">
-            <p class="ml--5"><strong>Highly Developed Machinery:</strong> We employ some of the most powerful and effective portable machines worldwide. After extensive testing of various machine brands available in the UK market, we have chosen the finest, including "Mytee" (a leading US manufacturer) and "Airflex" (one of the top UK manufacturers). Our team engineer has further enhanced and fine-tuned these machines to ensure peak performance.</p>
-          </li>
-          <li class="ml--5">
-            <p class="ml--5"><strong>High-Filtration Vacuum Cleaner:</strong> Our high-filtration twin-motor vacuum cleaner is the best in the market, from what we have seen and experienced. It's purposefully designed for high-performance expert carpet cleaning. One of the twin motors vigorously agitates the carpet, while the other effectively suctions away loose dirt, dry soil, and dust.</p>
-          </li>
-          <li class="ml--5">
-            <p class="ml--5"><strong>Premium Cleaning Products:</strong> We utilise a comprehensive range of cleaning products from over 20 renowned brands in both the UK and US markets. Thorough testing has allowed us to select the most effective cleaning detergents available. Among these brands are "Alltec," "Prochem," "Chemspec," "Solution World of Clean," "TMF," and more. This diverse selection allows our technicians to choose the most suitable detergents for each unique situation, considering factors like the carpet's fabric, level of soiling, and the type of stains that require treatment.</p>
-          </li>
-        </ol>
-
-        <p>By combining these advanced cleaning tools and premium products with our expertise, we ensure top-quality professional carpet cleaning that meets and exceeds your expectations.</p>
-
-      </div>
-
-      <FleurDivider></FleurDivider>
-
-      <h2>What our customers say about us</h2>
-
-      <ReviewSlider>
-        <StarReview
-          src="/assets/profile-pics-reviews/unnamed90.png"
-          reviewText="Professional, quick to respond. I'm very happy with their service."
-          name="Zaneta Priscepionkaite"
-          date="July 2024"
-          stars={5}
-          hrefGoogleReview="https://g.co/kgs/c4A87Ud"
-        />
-        <StarReview
-          src="/assets/profile-pics-reviews/unnamed90.png"
-          reviewText="FANTASTIC STAFF, FANTASTIC SERVICE, FANTASTIC WORK & MOST IMPORTANTLY FANTASTIC PRICE, Cannot be beaten if you want your carpets cleaned,,, one quick call and everything was taken care of.. IF YOU ARE GETTING YOUR CARPETS CLEANED MAKE SURR YOU USE THESE GUYS 100%👍"
-          name="Zaneta Priscepionkaite"
-          date="July 2024"
-          stars={5}
-          hrefGoogleReview="https://g.co/kgs/c4A87Ud"
-        />
-        <StarReview
-          src="/assets/profile-pics-reviews/unnamed90.png"
-          reviewText="Professional, quick to respond. I'm very happy with their service."
-          name="Zaneta Priscepionkaite"
-          date="July 2024"
-          stars={5}
-          hrefGoogleReview="https://g.co/kgs/c4A87Ud"
-        />
-
-      </ReviewSlider>
-
-      <FleurDivider></FleurDivider>
-
-      <div class="m-10% mb-3% flex flex-wrap flex-justify-center md-gap-15 gap-10">
-        <a href="/contact-us"><button class="cursor-pointer outline-none bg-brand-action hover-bg-brand-action-hover:hover font-size-5 font-600 w-200px h-60px c-paper flex flex-items-center flex-justify-center relative b-solid b-rd-3 b-4 b-brand-action hover-b-brand-action-hover:hover whitespace-normal line-height-6 word-spacing-0.5 py-9" style="box-shadow: 0 0 0 3px rgba(255, 255, 255, .9) inset; letter-spacing: 0.05rem;">REQUEST A QUOTE</button></a>
-        <a href="/services"><button class="cursor-pointer outline-none bg-brand-second-action hover-bg-brand-second-action-hover:hover font-size-5 font-600 w-200px h-60px c-paper flex flex-items-center flex-justify-center relative b-solid b-rd-3 b-4 b-brand-second-action hover-b-brand-second-action-hover:hover whitespace-normal line-height-6 word-spacing-0.5 py-9" style="box-shadow: 0 0 0 3px rgba(255, 255, 255, .9) inset; letter-spacing: 0.05rem;">SERVICES</button></a>
-      </div>
-
+        <div class="m-10% mb-3% flex flex-wrap flex-justify-center md-gap-15 gap-10">
+          <a href="/contact-us"><button class="cursor-pointer outline-none bg-brand-action hover-bg-brand-action-hover:hover font-size-5 font-600 w-200px h-60px c-paper flex flex-items-center flex-justify-center relative b-solid b-rd-3 b-4 b-brand-action hover-b-brand-action-hover:hover whitespace-normal line-height-6 word-spacing-0.5 py-9" style="box-shadow: 0 0 0 3px rgba(255, 255, 255, .9) inset; letter-spacing: 0.05rem;">REQUEST A QUOTE</button></a>
+          <a href="/services"><button class="cursor-pointer outline-none bg-brand-second-action hover-bg-brand-second-action-hover:hover font-size-5 font-600 w-200px h-60px c-paper flex flex-items-center flex-justify-center relative b-solid b-rd-3 b-4 b-brand-second-action hover-b-brand-second-action-hover:hover whitespace-normal line-height-6 word-spacing-0.5 py-9" style="box-shadow: 0 0 0 3px rgba(255, 255, 255, .9) inset; letter-spacing: 0.05rem;">SERVICES</button></a>
+        </div>
+      </MetaProvider>
     </>
   );
 }

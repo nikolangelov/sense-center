@@ -2,6 +2,7 @@ import "solid-slider/slider.css";
 import { createSignal, Show } from 'solid-js';
 import RiCloseFill from '~icons/ri/close-fill';
 import { MetaProvider, Meta } from "solid-meta";
+import { AnimatedH2 } from '../../components/TransitionH2';
 
 function FleurDivider() {
   return (
@@ -32,9 +33,9 @@ function FullScreenImageGallery() {
   );
 }
 
-function AreaButton(props: { href: string, buttontitle: string }) {
+function AreaButton(props: { buttontitle: string }) {
   return (
-    <a href={props.href}><button class="outline-none bg-brand-second-action font-size-6 font-600 w-230px h-110px c-paper flex flex-items-center flex-justify-center relative b-solid b-rd-3 b-4 b-brand-second-action whitespace-normal line-height-6 word-spacing-0.5" style="box-shadow: 0 0 0 3px rgba(255, 255, 255, .9) inset; letter-spacing: 0.0rem;">{props.buttontitle}</button></a>
+    <button class="outline-none bg-brand-second-action font-size-6 font-600 w-230px h-110px c-paper flex flex-items-center flex-justify-center relative b-solid b-rd-3 b-4 b-brand-second-action whitespace-normal line-height-6 word-spacing-0.5" style="box-shadow: 0 0 0 3px rgba(255, 255, 255, .9) inset; letter-spacing: 0.0rem;">{props.buttontitle}</button>
   )
 }
 function ButtonContainer(props: { children: HTMLElement | any }) {
@@ -48,6 +49,9 @@ function ButtonContainer(props: { children: HTMLElement | any }) {
 export default function Page() {
   return (
     <>
+      <MetaProvider>
+        <Meta name="robots" content="noindex" />
+        
         <h1 class="mt-17 font-size-14 md-font-size-16 md-line-height-18 line-height-16">Areas we cover</h1>
 
         <FullScreenImageGallery />
@@ -57,169 +61,169 @@ export default function Page() {
 
         <FleurDivider></FleurDivider>
 
-        <h2>Fine carpet cleaning operates in all London boroughs</h2>
+        <AnimatedH2>Fine carpet cleaning operates in all London boroughs</AnimatedH2>
 
         <ButtonContainer>
           <AreaButton
-            href=""
+            
             buttontitle="Carpet cleaning City of London"
           />
           <AreaButton
-            href="/professional-carpet-cleaning-services/westminster"
+            
             buttontitle="Carpet cleaning Westminster"
           />
           <AreaButton
-            href=""
+            
             buttontitle="Carpet cleaning Kensington and Chelsea"
           />
         </ButtonContainer>
 
         <ButtonContainer>
           <AreaButton
-            href=""
+            
             buttontitle="Carpet cleaning Hammersmith and Fulham"
           />
           <AreaButton
-            href=""
+            
             buttontitle="Carpet cleaning Wandsworth"
           />
           <AreaButton
-            href=""
+            
             buttontitle="Carpet cleaning Lambeth"
           />
         </ButtonContainer>
 
         <ButtonContainer>
           <AreaButton
-            href=""
+            
             buttontitle="Carpet cleaning Southwark"
           />
           <AreaButton
-            href=""
+            
             buttontitle="Carpet cleaning Tower Hamlets"
           />
           <AreaButton
-            href=""
+            
             buttontitle="Carpet cleaning Hackney"
           />
         </ButtonContainer>
 
         <ButtonContainer>
           <AreaButton
-            href=""
+            
             buttontitle="Carpet cleaning Islington"
           />
           <AreaButton
-            href=""
+            
             buttontitle="Carpet cleaning Camden"
           />
           <AreaButton
-            href=""
+            
             buttontitle="Carpet cleaning Brent"
           />
         </ButtonContainer>
 
         <ButtonContainer>
           <AreaButton
-            href=""
+            
             buttontitle="Carpet cleaning Ealing"
           />
           <AreaButton
-            href=""
+            
             buttontitle="Carpet cleaning Hounslow"
           />
           <AreaButton
-            href=""
+            
             buttontitle="Carpet cleaning Richmond upon Thames"
           />
         </ButtonContainer>
 
         <ButtonContainer>
           <AreaButton
-            href=""
+            
             buttontitle="Carpet cleaning Kingston upon Thames"
           />
           <AreaButton
-            href=""
+            
             buttontitle="Carpet cleaning Merton"
           />
           <AreaButton
-            href=""
+            
             buttontitle="Carpet cleaning Sutton"
           />
         </ButtonContainer>
 
         <ButtonContainer>
           <AreaButton
-            href=""
+            
             buttontitle="Carpet cleaning Croydon"
           />
           <AreaButton
-            href=""
+            
             buttontitle="Carpet cleaning Bromley"
           />
           <AreaButton
-            href=""
+            
             buttontitle="Carpet cleaning Lewisham"
           />
         </ButtonContainer>
 
         <ButtonContainer>
           <AreaButton
-            href=""
+            
             buttontitle="Carpet cleaning Greenwich"
           />
           <AreaButton
-            href=""
+            
             buttontitle="Carpet cleaning Bexley"
           />
           <AreaButton
-            href=""
+            
             buttontitle="Carpet cleaning Havering"
           />
         </ButtonContainer>
 
         <ButtonContainer>
           <AreaButton
-            href=""
+            
             buttontitle="Carpet cleaning Barking and Dagenham"
           />
           <AreaButton
-            href=""
+            
             buttontitle="Carpet cleaning Redbridge"
           />
           <AreaButton
-            href=""
+            
             buttontitle="Carpet cleaning Newham"
           />
         </ButtonContainer>
 
         <ButtonContainer>
           <AreaButton
-            href=""
+            
             buttontitle="Carpet cleaning Waltham Forest"
           />
           <AreaButton
-            href=""
+            
             buttontitle="Carpet cleaning Haringey"
           />
           <AreaButton
-            href=""
+            
             buttontitle="Carpet cleaning Enfield"
           />
         </ButtonContainer>
 
         <ButtonContainer>
           <AreaButton
-            href=""
+            
             buttontitle="Carpet cleaning Barnet"
           />
           <AreaButton
-            href=""
+            
             buttontitle="Carpet cleaning Harrow"
           />
           <AreaButton
-            href=""
+            
             buttontitle="Carpet cleaning Hillingdon"
           />
         </ButtonContainer>
@@ -230,7 +234,7 @@ export default function Page() {
           <a href="/contact-us"><button class="cursor-pointer outline-none bg-brand-action hover-bg-brand-action-hover:hover font-size-5 font-600 w-200px h-60px c-paper flex flex-items-center flex-justify-center relative b-solid b-rd-3 b-4 b-brand-action hover-b-brand-action-hover:hover whitespace-normal line-height-6 word-spacing-0.5 py-9" style="box-shadow: 0 0 0 3px rgba(255, 255, 255, .9) inset; letter-spacing: 0.05rem;">REQUEST A QUOTE</button></a>
           <a href="/services"><button class="cursor-pointer outline-none bg-brand-second-action hover-bg-brand-second-action-hover:hover font-size-5 font-600 w-200px h-60px c-paper flex flex-items-center flex-justify-center relative b-solid b-rd-3 b-4 b-brand-second-action hover-b-brand-second-action-hover:hover whitespace-normal line-height-6 word-spacing-0.5 py-9" style="box-shadow: 0 0 0 3px rgba(255, 255, 255, .9) inset; letter-spacing: 0.05rem;">SERVICES</button></a>
         </div>
-
+      </MetaProvider>
     </>
   );
 }

@@ -2,6 +2,7 @@
 @import url('https://fonts.cdnfonts.com/css/mona-sans');
 @import url('https://fonts.cdnfonts.com/css/georgia');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
 
 a {
   text-decoration: none;
@@ -51,21 +52,56 @@ h1,
 h2,
 h3,
 h4 {
-  font-family: 'Mona-Sans', sans-serif;
+  font-family: EuclidCircularB, sans-serif !important;
   color: #07111c;
   text-align: left;
 }
 
-h1 {
-  font-size: 4rem;
-  line-height: 4.5rem;
-  margin: 3rem 0;
-  letter-spacing: -0.1rem;
-  font-weight: 800;
+@media (max-width: 900px) {
+  h3 {
+    text-transform: capitalize;
+    font-family: "DM Sans", sans-serif !important;
+    font-size: 24px !important;
+    line-height: 35px !important;
+    font-weight: 900;
+    letter-spacing: 0px;
+  }
 }
 
+@media (max-width: 900px) {
+  h2 {
+    text-transform: capitalize;
+    font-family: "DM Sans", sans-serif !important;
+    font-size: 26px !important;
+    line-height: 35px !important;
+    font-weight: 900;
+    letter-spacing: 0px;
+  }
+}
+
+h1 {
+  font-family: EuclidCircularB, sans-serif !important;
+  text-transform: capitalize;
+  margin: 3rem 0;
+  font-weight: 700 !important;
+  font-size: 48px !important;
+    line-height: 4rem !important;
+}
+
+@media (max-width: 900px) {
+  h1 {
+    text-transform: capitalize;
+    font-family: 'Georgia', sans-serif !important;
+    font-size: 30px !important;
+    line-height: 40px !important;
+    font-weight: 900;
+    letter-spacing: 1px;
+  }
+}
+
+
 h2 {
-  font-weight: 800;
+  font-weight: 700;
   font-size: 2.5rem;
   margin: 80px 0px;
   letter-spacing: -0.02rem;
@@ -75,8 +111,8 @@ h2 {
 h3 {
   font-family: "Roboto", sans-serif;
   font-size: 1.7rem;
-  line-height: 2.5rem;
-  font-weight: 800;
+  line-height: 2.2rem;
+  font-weight: 700;
   letter-spacing: 0.5px;
 }
 
@@ -164,13 +200,13 @@ ol li:before {
 }
 
 ol li:after {
-  margin-left: -60px;
+  margin-left: -62px;
   z-index: 1;
-  top: 5px;
+  top: 3px;
   font-size: 20px;
   font-family: 'Roboto';
-  width: 28px;
-  height: 28px;
+  width: 32px;
+  height: 32px;
   border-radius: 35px;
   content: counter(customlistcounter) " ";
   position: absolute;
@@ -183,7 +219,8 @@ ol li:after {
 }
 
 ul li:after {
-list-style: initial; counter-increment: none !important;
+  list-style: initial;
+  counter-increment: none !important;
 }
 
 ol li {
@@ -194,7 +231,7 @@ ol li {
 .bullet::before {
   content: "•";
   color: #1A6142;
-  margin-left: -5px ;
+  margin-left: -5px;
 
 }
 

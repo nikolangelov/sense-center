@@ -16,12 +16,10 @@ export default defineConfig({
 		port: 4002,
 	},
 	envPrefix: "PUBLIC_",
-
 	plugins: [
-		solidPlugin(),
 		UnoCSS({
 			theme:
-			{
+			 {
 				colors: {
 					brand: "#1A6142",
 					"brand-dark": "#09321d",
@@ -43,7 +41,7 @@ export default defineConfig({
 				}
 			}
 		}),
-		vike({ prerender: true }),
+		vike({prerender: true}),
 		vikeSolid(),
 		// @ts-ignore
 		// only https://icon-sets.iconify.design/material-symbols/
@@ -53,7 +51,7 @@ export default defineConfig({
 		Icons({ compiler: "solid" }),
 		// markdownHotModuleReload(),
 	],
-
+	
 	resolve: {
 		alias: {
 			// must also be defined in tsconfig!
@@ -61,9 +59,6 @@ export default defineConfig({
 		},
 	},
 	build: {
-		rollupOptions: {
-			external: ['solid-meta'], // Add solid-meta to external
-		},
 		// target is es2022 to support top level await
 		// https://caniuse.com/?search=top%20level%20await
 		target: "es2022",

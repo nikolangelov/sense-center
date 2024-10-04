@@ -10,112 +10,6 @@ function FleurDivider() {
   );
 }
 
-export const ContactUs = () => {
-  let form: HTMLFormElement;
-
-  const sendEmail = (e: { preventDefault: () => void; }) => {
-    e.preventDefault();
-
-    emailjs
-      .sendForm('service_itrkdyn', 'template_sfx2ge6', form, 'THs2MxEeIfIAlmqdZ')
-      .then(
-        () => {
-          const element = document.getElementById("id01");
-          if (element) {
-            element.innerHTML = "Success!";
-          }
-        },
-        (error) => {
-          console.log('FAILED...', error.text);
-        }
-      );
-  };
-
-  return (
-    <div class="mt-15 py-8 px-5 md-px-14 bg-paper b-rd-3 mx-auto" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 10%);">
-
-      <form id="id01" class="flex-gap-5 flex flex-col py-5" ref={el => form = el as HTMLFormElement} onSubmit={sendEmail}>
-
-        <input type="text" name="from_name" placeholder="Name:" class="bg-gray-1 b-none w-full p-3 b-rd-1 c-paper-inv font-serif font-size-4" style="box-shadow: 0 1px 2px rgba(0, 0, 0, .12) inset;" required />
-
-        <input type="email" name="email_id" placeholder="E-mail:" class="bg-gray-1 b-none w-full p-3 b-rd-1 c-paper-inv font-serif font-size-4" style="box-shadow: 0 1px 2px rgba(0, 0, 0, .12) inset;" required />
-
-        <input type="text" name="postcode" id="postcode" placeholder="Post code:" class="bg-gray-1 b-none w-full p-3 b-rd-1 c-paper-inv font-serif font-size-4" style="box-shadow: 0 1px 2px rgba(0, 0, 0, .12) inset;" required></input>
-
-        <input type="text" name="phone" placeholder="Phone:" class="bg-gray-1 b-none w-full p-3 b-rd-1 c-paper-inv font-serif font-size-4" style="box-shadow: 0 1px 2px rgba(0, 0, 0, .12) inset;" required />
-
-        <h4 class="mb-0 mt-6">Service required</h4>
-        <span class="flex flex-col md-flex-row md-gap-50" data-name="your-phone">
-          <div class="flex flex-col">
-            <div>
-              <input type="checkbox" id="cleaningserviceID" name="cleaningserviceID" value=" Carpet cleaning" />
-              <label for="cleaningserviceID"> Carpet cleaning</label>
-            </div>
-            <div>
-              <input type="checkbox" id="cleaningserviceID" name="cleaningserviceID" value=" Rug cleaning" />
-              <label for="cleaningserviceID"> Rug cleaning</label>
-            </div>
-            <div>
-              <input type="checkbox" id="cleaningserviceID" name="cleaningserviceID" value=" Sofa cleaning" />
-              <label for="cleaningserviceID"> Sofa cleaning</label>
-            </div>
-            <div>
-              <input type="checkbox" id="cleaningserviceID" name="cleaningserviceID" value=" Mattress cleaning" />
-              <label for="cleaningserviceID"> Mattress cleaning</label>
-            </div>
-            <div>
-              <input type="checkbox" id="cleaningserviceID" name="cleaningserviceID" value=" Leather sofa cleaning" />
-              <label for="cleaningserviceID"> Leather sofa cleaning</label>
-            </div>
-          </div>
-
-          <div class="flex flex-col">
-            <div>
-              <input type="checkbox" id="cleaningserviceID" name="cleaningserviceID" value=" Pillow cleaning" />
-              <label for="cleaningserviceID"> Pillow cleaning</label>
-            </div>
-            <div>
-              <input type="checkbox" id="cleaningserviceID" name="cleaningserviceID" value=" Stain removal cleaning" />
-              <label for="cleaningserviceID"> Stain removal cleaning</label>
-            </div>
-            <div>
-              <input type="checkbox" id="cleaningserviceID" name="cleaningserviceID" value=" Stain protection cleaning" />
-              <label for="cleaningserviceID"> Stain protection cleaning</label>
-            </div>
-            <div>
-              <input type="checkbox" id="cleaningserviceID" name="cleaningserviceID" value=" Antiviral sanitisation service" />
-              <label for="cleaningserviceID"> Antiviral sanitisation service</label>
-            </div>
-            <div>
-              <input type="checkbox" id="cleaningserviceID" name="cleaningserviceID" value=" Other" />
-              <label for="cleaningserviceID"> Other</label>
-            </div>
-          </div>
-        </span>
-
-        <h4 class="mb-2">How did you find us</h4>
-        <span data-name="menu-238">
-          <select class="bg-gray-1 b-none w-full p-3 b-rd-1 c-gray-5 font-serif font-size-4" style="box-shadow: 0 1px 2px rgba(0, 0, 0, .12) inset;" aria-invalid="false" name="menu-238">
-            <option value="Google" id="howfound">Google</option>
-            <option value="Gumtree" id="howfound">Gumtree</option>
-            <option value="Yahoo" id="howfound">Yahoo</option>
-            <option value="Bing" id="howfound">Bing</option>
-            <option value="Facebook" id="howfound">Facebook</option>
-            <option value="Twitter" id="howfound">Twitter</option>
-            <option value="Fine Carpet Cleaning vehicle" id="howfound">Fine Carpet Cleaning vehicle</option>
-            <option value="Recommendation" id="howfound">Recommendation</option>
-            <option value="I've used Fine Carpet Cleaning before" id="howfound">I've used Fine Carpet Cleaning before</option>
-          </select>
-        </span>
-
-        <textarea name="message" placeholder="Message:" class="mt-2 bg-gray-1 b-none w-full pt-3 pl-3 pb-30 b-rd-1 c-paper-inv font-serif font-size-4" style="box-shadow: 0 1px 2px rgba(0, 0, 0, .12) inset;" />
-        <input type="submit" value="Request a quote" class="cursor-pointer flex flex-justify-center text-center mx-auto py-4 mt-7 px-10 bg-brand hover-bg-brand-second-action-hover:hover transition-colors b-none c-paper b-rd-2 w-full uppercase font-800 font-size-4.4 md-font-size-5" style="letter-spacing: 1px;" />
-      </form>
-
-    </div>
-  );
-};
-
 export default function Page() {
   const [email, setEmail] = createSignal('');
   const [subject, setSubject] = createSignal('');
@@ -306,34 +200,34 @@ export default function Page() {
       <h2>Contacts</h2>
 
       <div class="bg-paper b-rd-3" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 10%);">
-        <div class="flex flex-justify-between pb-2 pt-10 md-pt-8 px-2 w-90% m-auto">
-          <div class="font-sans font-500 font-size-4.5 md-font-size-5 uppercase">Call landline:</div>
-          <div class="font-sans font-500 font-size-4.5 md-font-size-5">098 0202 2050</div>
+        <div class="flex flex-col md-flex-row flex-justify-between flex-items-center pb-2 pt-7 md-pt-10 md-pt-8 px-2 w-90% m-auto">
+          <div class="font-sans font-500 font-size-4.5 md-font-size-5 uppercase flex-nowrap flex">Email us:</div>
+          <div class="font-sans font-500 font-size-4.5 md-font-size-5"><a class="color-paper-link-hover hover-color-paper-link:hover" href="mailto:office@finecarpetcleaning.co.uk" target="_blank" rel="noopener">office@finecarpetcleaning.co.uk</a></div>
         </div>
         <hr class="w-90% h-2px b-hidden bg-paper-border" />
         <div class="flex flex-justify-between py-3 md-py-2 px-1 w-90% m-auto">
           <div class="font-sans font-500 font-size-4.5 md-font-size-5 uppercase">Call mobile:</div>
-          <div class="font-sans font-500 font-size-4.5 md-font-size-5">098 0202 2050</div>
+          <div class="font-sans font-500 font-size-4.5 md-font-size-5">078 7433 3356</div>
+        </div>
+        <hr class="w-90% h-2px b-hidden bg-paper-border" />
+        <div class="flex flex-justify-between py-3 md-py-2 px-1 w-90% m-auto">
+          <div class="font-sans font-500 font-size-4.5 md-font-size-5 uppercase">Call landline:</div>
+          <div class="font-sans font-500 font-size-4.5 md-font-size-5">020 3637 0033</div>
         </div>
         <hr class="w-90% h-2px b-hidden bg-paper-border" />
         <div class="flex flex-justify-between py-3 md-py-2 px-1 w-90% m-auto">
           <div class="font-sans font-500 font-size-4.5 md-font-size-5 uppercase">Call Whatsapp:</div>
-          <div class="font-sans font-500 font-size-4.5 md-font-size-5">098 0202 2050</div>
+          <div class="font-sans font-500 font-size-4.5 md-font-size-5">078 7433 3356</div>
         </div>
         <hr class="w-90% h-2px b-hidden bg-paper-border" />
-        <div class="flex flex-justify-between py-3 md-py-2 px-1 w-90% m-auto">
-          <div class="font-sans font-500 font-size-4.5 md-font-size-5 uppercase">Email us:</div>
-          <div class="font-sans font-500 font-size-4.5 md-font-size-5">098 0202 2050</div>
-        </div>
-        <hr class="w-90% h-2px b-hidden bg-paper-border" />
-        <div class="flex flex-justify-between pt-3 pb-10 md-pb-3 md-py-2 px-1 w-90% m-auto">
+        <div class="flex flex-justify-between pt-3 pb-7 md-pb-3 md-py-2 px-1 w-90% m-auto">
           <div class="font-sans font-500 font-size-4.5 md-font-size-5 uppercase">Message Whatsapp:</div>
-          <div class="font-sans font-500 font-size-4.5 md-font-size-5 whitespace-nowrap">098 0202 2050</div>
+          <div class="font-sans font-500 font-size-4.5 md-font-size-5 whitespace-nowrap"><a class="color-paper-link-hover hover-color-paper-link:hover" href="https://wa.me/7874333356" target="_blank" rel="noopener">078 7433 3356</a></div>
         </div>
         <hr class="w-90% md-block hidden h-2px b-hidden bg-paper-border" />
         <div class="md-flex hidden flex-col flex-justify-center py-3 md-py-2 w-90% m-auto">
           <div class="font-sans font-500 font-size-4.5 md-font-size-5 uppercase mx-auto mb-7 mt-4">Message Whatsapp:</div>
-          <img src="/assets/QR_Code_example.png" alt="QR code" class="md-w-15% w-30% mx-auto mb-5" />
+          <img src="/assets/my-qr-code-2-1024.png" alt="QR code" class="md-w-15% w-30% mx-auto mb-5" />
         </div>
       </div>
 

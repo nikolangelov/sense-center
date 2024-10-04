@@ -1,9 +1,9 @@
 import "solid-slider/slider.css";
-import { FacebookLikeGallery } from '../../../components/FacebookLikeGallery';
-import { createCollapsable } from '../../../components/Collapsable';
-import { Typography } from '../../../components/Typography';
-import { ReviewSlider, StarReview } from '../../../components/ReviewSlider';
-import { FOTSlider, FOTSliderContainer } from '../../../components/FrequentlyOrderedTogether';
+import { FacebookLikeGallery } from '../../components/FacebookLikeGallery';
+import { createCollapsable } from '../../components/Collapsable';
+import { Typography } from '../../components/Typography';
+import { ReviewSlider, StarReview } from '../../components/ReviewSlider';
+import { FOTSlider, FOTSliderContainer } from '../../components/FrequentlyOrderedTogether';
 
 function FleurDivider() {
     return (
@@ -17,8 +17,8 @@ function FleurDivider() {
 export default function Page() {
     return (
         <>
-            <div class="flex flex-justify-center"><img class="b-rd-3 md-mt-10 mt-2 max-w-full" src="/assets/service-pics/stain-removal/professional-stain-removal-service.jpg" alt="professional-stain-removal-service" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 30%);" /></div>
-            <h1 class="mt-10 md-mt-17 md-mb-5 font-size-12.5 md-font-size-14 md-line-height-18 line-height-16">Professional sofa cleaning services: the ultimate choice for homes with pets</h1>
+            <div class="flex flex-justify-center"><img class="b-rd-3 md-mt-10 mt-2 max-w-full" src="/assets/blog/sofa-cleaning-services-02.jpg" alt="professional-stain-removal-service" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 30%);" /></div>
+            <h1 class="mt-10 md-mt-17 md-mb-5 font-size-12.5 md-font-size-14 md-line-height-18 line-height-16">Professional sofa cleaning services: <br></br>the ultimate choice for homes with pets</h1>
             <div class="font-sans font-size-3.5 font-500" style="letter-spacing: 1px;">POSTED ON FEBRUARY 11, 2021</div>
             <div class="mt-20 py-8 px-8 md-px-14 bg-paper b-rd-3" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 18%);">
                 <p>
@@ -53,7 +53,7 @@ export default function Page() {
                 <p>Our team of certified experts will determine the set of tools and solutions to use for your individual situation during a special pre-cleaning survey. They will be 100% tailored to your needs, preferences, site-specific details, and of course – your beloved pets.</p>
             </div>
 
-            <div class="flex flex-justify-center"><img class="b-rd-3 md-mt-15 mt-5 max-w-full" src="/assets/service-pics/stain-removal/professional-stain-removal-service.jpg" alt="professional-stain-removal-service" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 30%);" /></div>
+            <div class="flex flex-justify-center"><img class="b-rd-3 md-mt-15 mt-5 max-w-full" src="/assets/blog/sofa-cleaning-services-01.jpg" alt="professional-stain-removal-service" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 30%);" /></div>
 
             <FleurDivider></FleurDivider>
 

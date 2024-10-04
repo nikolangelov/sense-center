@@ -1,7 +1,7 @@
 import { createSignal, onCleanup, onMount } from "solid-js";
 
 // H2 Component with transition on scroll
-export const AnimatedH2 = (props: {children: string}) => {
+export const AnimatedH2 = (props: { children: string, class?: string }) => {
   const [isVisible, setIsVisible] = createSignal(false);
 
   let headingRef: HTMLHeadingElement | undefined;
@@ -31,9 +31,9 @@ export const AnimatedH2 = (props: {children: string}) => {
   });
 
   return (
-    <h2 style=""
+    <h2
       ref={headingRef}
-      class={`transition-h2 ${isVisible() ? "visible" : "line-height-12 md-line-height-14"}`}
+      class={`transition-h2 ${isVisible() ? "visible" : "line-height-12 md-line-height-14"} ${props.class || ""}`}
     >
       {props.children}
     </h2>

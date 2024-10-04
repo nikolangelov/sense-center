@@ -7,18 +7,18 @@ import { RotatingBanners } from '../../components/RotatingBanners';
 import { createCollapsable } from '../../components/Collapsable';
 import { Typography } from '../../components/Typography';
 import { ReviewSlider, StarReview } from '../../components/ReviewSlider';
-import { AnimatedH2 } from '../../components/TransitionH2';
+import { PriceTable } from '../../components/PriceTable';
 
 const VideoPlayer = () => {
   return (
-      <div class="flex flex-justify-center flex-items-center mt-20">
-          <iframe
-              class="mt-10 b-rd-3"
-              style="width: 100%; height: 500px;"
-              src="https://www.youtube.com/embed/4_KISdoNiRw?autoplay=1&mute=1"
-              allow="autoplay; encrypted-media"
-          ></iframe>
-      </div>
+    <div class="flex flex-justify-center flex-items-center mt-20">
+      <iframe
+				class="mt-10 b-rd-3 h-200px md-h-500px"
+				style="width: 100%;"
+        src="https://www.youtube.com/embed/4_KISdoNiRw?autoplay=1&mute=1"
+        allow="autoplay; encrypted-media"
+      ></iframe>
+    </div>
   );
 };
 
@@ -158,7 +158,7 @@ export default function Page() {
 
       <FleurDivider></FleurDivider>
 
-      <AnimatedH2>What to expect from our antiviral sanitisation services</AnimatedH2>
+      <h2>What to expect from our antiviral sanitisation services</h2>
       <div class="mt-20 py-8 px-8 md-px-14 bg-paper b-rd-3" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 18%);">
         <h3>Benefits:</h3>
         <p>We at “Fine Carpet Cleaning” Ltd. perform antiviral sanitisation services. It is important to keep your workplace and home sanitised in order to eliminate the spread of bacteria and viruses. For this reason, we provide specialised antiviral sanitisation services and disinfection cleaning. It kills 99.99% of all bacteria and viruses on all surfaces using a fogging method, which gives the best results and has an immediate effect. Our antiviral sanitisation services provide other advantages, such as:</p>
@@ -209,22 +209,22 @@ export default function Page() {
 
       <FleurDivider></FleurDivider>
 
-      <AnimatedH2>The process of our antiviral sanitisation services:</AnimatedH2>
+      <h2>The process of our antiviral sanitisation services:</h2>
       <div class="mt-20 py-8 px-8 md-px-14 bg-paper b-rd-3" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 18%);">
         <ol style="counter-reset: ordered; list-style: none;">
-          <li class="ml--5">
+          <li>
             <Typography variant="body"><strong>Survey:</strong> Once we arrive, the first thing to do is to determine what needs to be done and how the service will be performed.</Typography>
           </li>
-          <li class="ml--5">
+          <li>
             <Typography variant="body"><strong>Preparations:</strong> The preparations for our antiviral sanitisation are simple yet important. All electrical appliances must be switched off or unplugged. All fire alarm devices must be removed or fully covered.</Typography>
           </li>
-          <li class="ml--5">
+          <li>
             <Typography variant="body"><strong>Sanitisation:</strong> After the preparations are done, we will begin the sanitisation with a fogging machine using a top-tier, hospital-grade, bio detergent which is extremely efficient against all viruses and bacteria, especially COVID-19.</Typography>
           </li>
-          <li class="ml--5">
+          <li>
             <Typography variant="body"><strong>Ventilation:</strong> The next step is to leave the disinfected room to ventilate. Our technician will open the windows just a few inches so it can ventilate properly. Approximately 60 minutes are needed to achieve the best result.</Typography>
           </li>
-          <li class="ml--5">
+          <li>
             <Typography variant="body"><strong>Protection:</strong> Our antiviral bio detergent will leave an invisible protective layer on the surface killing any viruses and bacteria that will come into contact after the sanitisation. Please keep in mind that how long the protective layer will last depends on how often the surface is used.</Typography>
           </li>
         </ol>
@@ -232,7 +232,7 @@ export default function Page() {
 
       <FleurDivider></FleurDivider>
 
-      <AnimatedH2>Equipment and products we use for our antiviral sanitisation services</AnimatedH2>
+      <h2>Equipment and products we use for our antiviral sanitisation services</h2>
       <div class="mt-20 py-8 px-12 md-px-14 bg-paper b-rd-3" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 18%);">
         <p>"Fine Carpet Cleaning" Ltd uses high-quality products and machinery for cleaning.</p>
         <ol style="counter-reset: ordered; list-style: none;">
@@ -250,7 +250,7 @@ export default function Page() {
 
       <FleurDivider></FleurDivider>
 
-      <AnimatedH2>Pictures from our antiviral sanitisation services</AnimatedH2>
+      <h2>Pictures from our antiviral sanitisation services</h2>
 
       <FacebookLikeGallery imgs={[
         { src: "/assets/service-pics/antiviral-sanitisation/1-antiviral-sanitisation-services.jpg", alt: "1-antiviral-sanitisation-services.jpg" },
@@ -261,82 +261,50 @@ export default function Page() {
 
       <FleurDivider></FleurDivider>
 
-      <AnimatedH2>Video from our antiviral sanitisation services</AnimatedH2>
+      <h2>Video from our antiviral sanitisation services</h2>
 
       <VideoPlayer></VideoPlayer>
 
       <FleurDivider></FleurDivider>
 
-      <AnimatedH2>Prices of our antiviral sanitisation services</AnimatedH2>
+      <h2>Prices of our antiviral sanitisation services</h2>
 
-      <table class="w-full m-auto font-sans">
-        <thead style="box-shadow: 0px 20px 20px 1px rgb(84 89 95 / 10%);">
-          <tr class="h-20">
-            <td class="c-paper bg-#2e5c47 font-size-7 pl-5 b-rd-lt-3"><strong>Room type</strong></td>
-            <td class="c-paper bg-#2e5c47 font-size-7 pl-5 b-rd-rt-3"><strong>Price</strong></td>
-          </tr>
-        </thead>
-        <tbody style="box-shadow: 0px 20px 20px 1px rgb(84 89 95 / 10%);">
-          <tr>
-            <td class="bg-paper pl-5 py-2 font-500">Single Bedroom</td>
-            <td class="bg-paper pl-5 py-2 font-500">from £31.00</td>
-          </tr>
-          <tr>
-            <td class="bg-paper pl-5 py-2 font-500">Double Bedroom</td>
-            <td class="bg-paper pl-5 py-2 font-500">from £35.00</td>
-          </tr>
-          <tr>
-            <td class="bg-paper pl-5 py-2 font-500">Master Bedroom</td>
-            <td class="bg-paper pl-5 py-2 font-500">from £40.00</td>
-          </tr>
-          <tr>
-            <td class="bg-paper pl-5 py-2 font-500">Living Room</td>
-            <td class="bg-paper pl-5 py-2 font-500">from £43.00</td>
-          </tr>
-          <tr>
-            <td class="bg-paper pl-5 py-2 font-500">Through Lounge</td>
-            <td class="bg-paper pl-5 py-2 font-500">from £69.00</td>
-          </tr>
-          <tr>
-            <td class="bg-paper pl-5 py-2 font-500">Hallway</td>
-            <td class="bg-paper pl-5 py-2 font-500">from £21.00</td>
-          </tr>
-          <tr>
-            <td class="bg-paper pl-5 py-2 font-500">Flight of Stairs</td>
-            <td class="bg-paper pl-5 py-2 font-500">from £34.00</td>
-          </tr>
-          <tr>
-            <td class="bg-paper pl-5 py-2 font-500">Landing</td>
-            <td class="bg-paper pl-5 py-2 font-500">from £15.00</td>
-          </tr>
-          <tr>
-            <td class="bg-paper pl-5 py-2 font-500">Bathroom</td>
-            <td class="bg-paper pl-5 py-2 font-500">from £6.00</td>
-          </tr>
-          <tr>
-            <td class="bg-paper pl-5 py-2 font-500">Small rug</td>
-            <td class="bg-paper pl-5 py-2 font-500">from £14.00</td>
-          </tr>
-          <tr>
-            <td class="bg-paper pl-5 py-2 font-500">Medium rug</td>
-            <td class="bg-paper pl-5 py-2 font-500">from £20.00</td>
-          </tr>
-          <tr>
-            <td class="bg-paper pl-5 py-2 font-500">Large rug</td>
-            <td class="bg-paper pl-5 py-2 font-500">from £31.00</td>
-          </tr>
-          <tr>
-            <td class="b-rd-lb-3 b-rd-rb-3 bg-#2e5c47" colspan="3" style="box-shadow: 0px 20px 20px 1px rgb(247 247 247/ 100%);"><p class="font-size-3.5 md-font-size-4 px-5 md-my-7 c-paper line-height-6 word-spacing-0.5">*All prices depend on the quantity of the order, degree of contamination, access and location.
-              <br></br>**Final price after contacting us.</p></td>
-          </tr>
-        </tbody>
-      </table>
+      <PriceTable title="Room type">
+        <tr>
+          <td class="bg-paper pl-5 py-2 font-500">Studio flat</td>
+          <td class="bg-paper pl-5 py-2 font-500">from £80.00</td>
+        </tr>
+        <tr>
+          <td class="bg-paper pl-5 py-2 font-500">One bedroom flat</td>
+          <td class="bg-paper pl-5 py-2 font-500">from £100.00</td>
+        </tr>
+        <tr>
+          <td class="bg-paper pl-5 py-2 font-500">Two bedroom flat</td>
+          <td class="bg-paper pl-5 py-2 font-500">from £120.00</td>
+        </tr>
+        <tr>
+          <td class="bg-paper pl-5 py-2 font-500">Two bedroom house</td>
+          <td class="bg-paper pl-5 py-2 font-500">from £140.00</td>
+        </tr>
+        <tr>
+          <td class="bg-paper pl-5 py-2 font-500">Three bedroom house</td>
+          <td class="bg-paper pl-5 py-2 font-500">from £180.00</td>
+        </tr>
+        <tr>
+          <td class="bg-paper pl-5 py-2 font-500">Four bedroom house</td>
+          <td class="bg-paper pl-5 py-2 font-500">from £200.00</td>
+        </tr>
+        <tr>
+          <td class="bg-paper pl-5 py-2 font-500">Office** m²</td>
+          <td class="bg-paper pl-5 py-2 font-500">from £1.50</td>
+        </tr>
+      </PriceTable>
 
       <button class="outline-none bg-brand-second-action hover-bg-brand-second-action-hover:hover font-size-6 font-600 w-250px h-60px c-paper flex flex-items-center flex-justify-center relative b-solid b-rd-3 b-4 b-brand-second-action hover-b-brand-second-action-hover:hover whitespace-normal line-height-6 word-spacing-0.5 py-9 my-20 mx-auto" style="box-shadow: 0 0 0 3px rgba(255, 255, 255, .9) inset; letter-spacing: 0.05rem;"><a href="/contact-us" class="c-paper font-size-5">REQUEST A QUOTE</a></button>
 
       <FleurDivider></FleurDivider>
 
-      <AnimatedH2>Our antiviral sanitisation services specialists advise:</AnimatedH2>
+      <h2>Our antiviral sanitisation services specialists advise:</h2>
       <div class="mt-20 py-8 px-12 md-px-14 bg-paper b-rd-3" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 18%);">
         <ol style="counter-reset: ordered; list-style: none;">
           <li class="ml--5">
@@ -364,39 +332,66 @@ export default function Page() {
 
       <FleurDivider></FleurDivider>
 
-      <AnimatedH2>Reviews of our antiviral sanitisation services</AnimatedH2>
+      <h2>Reviews of our antiviral sanitisation services</h2>
 
       <ReviewSlider>
         <StarReview
-          src="/assets/profile-pics-reviews/unnamed90.png"
-          reviewText="Professional, quick to respond. I'm very happy with their service."
-          name="Zaneta Priscepionkaite"
-          date="July 2024"
+          src="/assets/profile-pics-reviews/unnamed1112.png"
+          reviewText="I received excellent communications throughout the whole process. On the day, the cleaning experience was efficient with a considerate and friendly member of staff. Very competitive pricing."
+          name="Elizabeth Maurice"
+          date="June 2024"
           stars={5}
-          hrefGoogleReview="https://g.co/kgs/c4A87Ud"
+          hrefGoogleReview="https://g.co/kgs/HPqEYvL"
         />
         <StarReview
-          src="/assets/profile-pics-reviews/unnamed90.png"
-          reviewText="FANTASTIC STAFF, FANTASTIC SERVICE, FANTASTIC WORK & MOST IMPORTANTLY FANTASTIC PRICE, Cannot be beaten if you want your carpets cleaned,,, one quick call and everything was taken care of.. IF YOU ARE GETTING YOUR CARPETS CLEANED MAKE SURR YOU USE THESE GUYS 100%👍"
-          name="Zaneta Priscepionkaite"
-          date="July 2024"
+          src="/assets/profile-pics-reviews/unnamed (1).png"
+          reviewText="The best carpet cleaning service I have ever experienced. From start to finish was unbelievably smooth. The staff that attended extremely polite and moved all the items with utmost care. Would recommend using them as they are simply the best one has come across. Maya was absolutely fantastic in arranging this as the request was done at such a short notice."
+          name="Gen Tiski"
+          date="March 2024"
           stars={5}
-          hrefGoogleReview="https://g.co/kgs/c4A87Ud"
+          hrefGoogleReview="https://g.co/kgs/H3NeADN"
         />
         <StarReview
-          src="/assets/profile-pics-reviews/unnamed90.png"
-          reviewText="Professional, quick to respond. I'm very happy with their service."
-          name="Zaneta Priscepionkaite"
-          date="July 2024"
+          src="/assets/profile-pics-reviews/unnamed-49.png"
+          reviewText="I had my carpet cleaned by Nikolay from Fine Carpet Cleaning. What a fantastic job he did ! He is very professional, efficient and organised in the way he works. My carpet looks new again. I highly recommend."
+          name="Samanta Federico"
+          date="January 2024"
           stars={5}
-          hrefGoogleReview="https://g.co/kgs/c4A87Ud"
+          hrefGoogleReview="https://g.co/kgs/WxWf2Bm"
         />
-
+        <StarReview
+          src="/assets/profile-pics-reviews/unnamed3434.png"
+          reviewText="Really happy with the service and i come across a-lot of carpet cleaners in my job property inventory .
+        I was not sure how the carpet would come up , as it is an old carpet in a communal lobby . Wow, so much better-stains removed .
+        A really quality service from start to finish , nothing was too much trouble . I managed to get a slot the same day . I would definitely recommend 😁"
+          name="Yasmin"
+          date="June 2024"
+          stars={5}
+          hrefGoogleReview="https://g.co/kgs/A7AyWZi"
+        />
+        <StarReview
+          src="/assets/profile-pics-reviews/unnamed (3).png"
+          reviewText="Had a great experience with Fine Carpet Cleaning yesterday. I phoned at 9am for help with a stained carpet, and within 2 hours someone was at my house doing the job. Communications were very clear and slick, and the cleaning was done briskly and to the highest standard. Highly recommended."
+          name="Peter O'Donoghue"
+          date="April 2024"
+          stars={5}
+          hrefGoogleReview="https://g.co/kgs/vnLrPA1"
+        />
+        <StarReview
+          src="/assets/profile-pics-reviews/unnamed (2).png"
+          reviewText="Good service at a reasonable price, had my mattress and small rug cleaned and can say that I'm satisfied with the result.
+        The company representative was professional, arrived on time and did a very good job, quickly and efficiently.
+        Definitely would recommend."
+          name="Nikolay Dimitrov"
+          date="April 2024"
+          stars={5}
+          hrefGoogleReview="https://g.co/kgs/jWDWU8Z"
+        />
       </ReviewSlider>
 
       <FleurDivider></FleurDivider>
 
-      <AnimatedH2>FAQ regarding our antiviral sanitisation services</AnimatedH2>
+      <h2>FAQ regarding our antiviral sanitisation services</h2>
 
       <FaqSection />
 

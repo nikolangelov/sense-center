@@ -4,17 +4,18 @@ import { createCollapsable } from '../../../components/Collapsable';
 import { Typography } from '../../../components/Typography';
 import { ReviewSlider, StarReview } from '../../../components/ReviewSlider';
 import { FOTSlider, FOTSliderContainer } from '../../../components/FrequentlyOrderedTogether';
+import { PriceTable } from '../../../components/PriceTable';
 
 const VideoPlayer = () => {
   return (
-      <div class="flex flex-justify-center flex-items-center mt-20">
-          <iframe
-              class="mt-10 b-rd-3"
-              style="width: 100%; height: 500px;"
-              src="https://www.youtube.com/embed/_7AqoLFxc-0?autoplay=1&mute=1"
-              allow="autoplay; encrypted-media"
-          ></iframe>
-      </div>
+    <div class="flex flex-justify-center flex-items-center mt-20">
+      <iframe
+				class="mt-10 b-rd-3 h-200px md-h-500px"
+				style="width: 100%;"
+        src="https://www.youtube.com/embed/_7AqoLFxc-0?autoplay=1&mute=1"
+        allow="autoplay; encrypted-media"
+      ></iframe>
+    </div>
   );
 };
 
@@ -367,68 +368,91 @@ export default function Page() {
         <br></br>
         <strong id="price_table">Deising - Free of charge - just notify us when booking.</strong></div>
 
-      <table class="w-full m-auto font-sans">
-        <thead style="box-shadow: 0px 20px 20px 1px rgb(84 89 95 / 10%);">
-          <tr class="h-20">
-            <td class="c-paper bg-#2e5c47 font-size-7 pl-5 b-rd-lt-3"><strong>Room type</strong></td>
-            <td class="c-paper bg-#2e5c47 font-size-7 pl-5 b-rd-rt-3"><strong>Price</strong></td>
-          </tr>
-        </thead>
-        <tbody style="box-shadow: 0px 20px 20px 1px rgb(84 89 95 / 10%);">
-          <tr>
-            <td class="bg-paper pl-5 py-2 font-500">Single Bedroom</td>
-            <td class="bg-paper pl-5 py-2 font-500">from £31.00</td>
-          </tr>
-          <tr>
-            <td class="bg-paper pl-5 py-2 font-500">Double Bedroom</td>
-            <td class="bg-paper pl-5 py-2 font-500">from £35.00</td>
-          </tr>
-          <tr>
-            <td class="bg-paper pl-5 py-2 font-500">Master Bedroom</td>
-            <td class="bg-paper pl-5 py-2 font-500">from £40.00</td>
-          </tr>
-          <tr>
-            <td class="bg-paper pl-5 py-2 font-500">Living Room</td>
-            <td class="bg-paper pl-5 py-2 font-500">from £43.00</td>
-          </tr>
-          <tr>
-            <td class="bg-paper pl-5 py-2 font-500">Through Lounge</td>
-            <td class="bg-paper pl-5 py-2 font-500">from £69.00</td>
-          </tr>
-          <tr>
-            <td class="bg-paper pl-5 py-2 font-500">Hallway</td>
-            <td class="bg-paper pl-5 py-2 font-500">from £21.00</td>
-          </tr>
-          <tr>
-            <td class="bg-paper pl-5 py-2 font-500">Flight of Stairs</td>
-            <td class="bg-paper pl-5 py-2 font-500">from £34.00</td>
-          </tr>
-          <tr>
-            <td class="bg-paper pl-5 py-2 font-500">Landing</td>
-            <td class="bg-paper pl-5 py-2 font-500">from £15.00</td>
-          </tr>
-          <tr>
-            <td class="bg-paper pl-5 py-2 font-500">Bathroom</td>
-            <td class="bg-paper pl-5 py-2 font-500">from £6.00</td>
-          </tr>
-          <tr>
-            <td class="bg-paper pl-5 py-2 font-500">Small rug</td>
-            <td class="bg-paper pl-5 py-2 font-500">from £14.00</td>
-          </tr>
-          <tr>
-            <td class="bg-paper pl-5 py-2 font-500">Medium rug</td>
-            <td class="bg-paper pl-5 py-2 font-500">from £20.00</td>
-          </tr>
-          <tr>
-            <td class="bg-paper pl-5 py-2 font-500">Large rug</td>
-            <td class="bg-paper pl-5 py-2 font-500">from £31.00</td>
-          </tr>
-          <tr>
-            <td class="b-rd-lb-3 b-rd-rb-3 bg-#2e5c47" colspan="3" style="box-shadow: 0px 20px 20px 1px rgb(247 247 247/ 100%);"><p class="font-size-3.5 md-font-size-4 px-5 md-my-7 c-paper line-height-6 word-spacing-0.5">*All prices depend on the quantity of the order, degree of contamination, access and location.
-              <br></br>**Final price after contacting us.</p></td>
-          </tr>
-        </tbody>
-      </table>
+      <PriceTable title="Sofa type">
+        <tr>
+          <td class="bg-paper pl-5 py-2 font-500">Footstool (Puff)</td>
+          <td class="bg-paper pl-5 py-2 font-500">from £10.00</td>
+        </tr>
+        <tr>
+          <td class="bg-paper pl-5 py-2 font-500">Two seated sofa</td>
+          <td class="bg-paper pl-5 py-2 font-500">from £44.20</td>
+        </tr>
+        <tr>
+          <td class="bg-paper pl-5 py-2 font-500">Two seated L shaped sofa</td>
+          <td class="bg-paper pl-5 py-2 font-500">from £52.00</td>
+        </tr>
+        <tr>
+          <td class="bg-paper pl-5 py-2 font-500">Three seated sofa</td>
+          <td class="bg-paper pl-5 py-2 font-500">from £52.00</td>
+        </tr>
+        <tr>
+          <td class="bg-paper pl-5 py-2 font-500">Three seated L shaped sofa</td>
+          <td class="bg-paper pl-5 py-2 font-500">from £65.00</td>
+        </tr>
+        <tr>
+          <td class="bg-paper pl-5 py-2 font-500">Four seated sofa</td>
+          <td class="bg-paper pl-5 py-2 font-500">from £65.00</td>
+        </tr>
+        <tr>
+          <td class="bg-paper pl-5 py-2 font-500">Four seated L shaped sofa</td>
+          <td class="bg-paper pl-5 py-2 font-500">from £76.00</td>
+        </tr>
+        <tr>
+          <td class="bg-paper pl-5 py-2 font-500">Five seated sofa</td>
+          <td class="bg-paper pl-5 py-2 font-500">from £76.00</td>
+        </tr>
+        <tr>
+          <td class="bg-paper pl-5 py-2 font-500">Five seated L shaped sofa</td>
+          <td class="bg-paper pl-5 py-2 font-500">from £95.00</td>
+        </tr>
+        <tr>
+          <td class="bg-paper pl-5 py-2 font-500">For others, please contact us</td>
+          <td class="bg-paper pl-5 py-2 font-500">-</td>
+        </tr>
+        <tr>
+          <td colspan="2"><h3 class="bg-paper pl-5 py-6 font-700 my-0">Velvet sofa cleaning</h3></td>
+        </tr>
+        <tr>
+          <td class="bg-paper pl-5 py-2 font-500">Footstool (Puff)</td>
+          <td class="bg-paper pl-5 py-2 font-500">from £15.00</td>
+        </tr>
+        <tr>
+          <td class="bg-paper pl-5 py-2 font-500">Two seated velvet sofa</td>
+          <td class="bg-paper pl-5 py-2 font-500">from £54.00</td>
+        </tr>
+        <tr>
+          <td class="bg-paper pl-5 py-2 font-500">Two seated L shaped velvet sofa</td>
+          <td class="bg-paper pl-5 py-2 font-500">from £65.00</td>
+        </tr>
+        <tr>
+          <td class="bg-paper pl-5 py-2 font-500">Three seated velvet sofa</td>
+          <td class="bg-paper pl-5 py-2 font-500">from £65.00</td>
+        </tr>
+        <tr>
+          <td class="bg-paper pl-5 py-2 font-500">Three seated L shaped velvet sofa</td>
+          <td class="bg-paper pl-5 py-2 font-500">from £84.00</td>
+        </tr>
+        <tr>
+          <td class="bg-paper pl-5 py-2 font-500">Four seated velvet sofa</td>
+          <td class="bg-paper pl-5 py-2 font-500">from £84.00</td>
+        </tr>
+        <tr>
+          <td class="bg-paper pl-5 py-2 font-500">Four seated L shaped velvet sofa</td>
+          <td class="bg-paper pl-5 py-2 font-500">from £95.00</td>
+        </tr>
+        <tr>
+          <td class="bg-paper pl-5 py-2 font-500">Five seated velvet sofa</td>
+          <td class="bg-paper pl-5 py-2 font-500">from £95.00</td>
+        </tr>
+        <tr>
+          <td class="bg-paper pl-5 py-2 font-500">Five seated L shaped velvet sofa</td>
+          <td class="bg-paper pl-5 py-2 font-500">from £106.00</td>
+        </tr>
+        <tr>
+          <td class="bg-paper pl-5 py-2 font-500">For others, please contact us</td>
+          <td class="bg-paper pl-5 py-2 font-500">-</td>
+        </tr>
+      </PriceTable>
 
       <button class="outline-none bg-brand-second-action hover-bg-brand-second-action-hover:hover font-size-6 font-600 w-250px h-60px c-paper flex flex-items-center flex-justify-center relative b-solid b-rd-3 b-4 b-brand-second-action hover-b-brand-second-action-hover:hover whitespace-normal line-height-6 word-spacing-0.5 py-9 my-20 mx-auto" style="box-shadow: 0 0 0 3px rgba(255, 255, 255, .9) inset; letter-spacing: 0.05rem;"><a href="/contact-us" class="c-paper font-size-5">REQUEST A QUOTE</a></button>
 
@@ -515,30 +539,57 @@ export default function Page() {
 
       <ReviewSlider>
         <StarReview
-          src="/assets/profile-pics-reviews/unnamed90.png"
-          reviewText="Professional, quick to respond. I'm very happy with their service."
-          name="Zaneta Priscepionkaite"
-          date="July 2024"
+          src="/assets/profile-pics-reviews/unnamed1112.png"
+          reviewText="I received excellent communications throughout the whole process. On the day, the cleaning experience was efficient with a considerate and friendly member of staff. Very competitive pricing."
+          name="Elizabeth Maurice"
+          date="June 2024"
           stars={5}
-          hrefGoogleReview="https://g.co/kgs/c4A87Ud"
+          hrefGoogleReview="https://g.co/kgs/HPqEYvL"
         />
         <StarReview
-          src="/assets/profile-pics-reviews/unnamed90.png"
-          reviewText="FANTASTIC STAFF, FANTASTIC SERVICE, FANTASTIC WORK & MOST IMPORTANTLY FANTASTIC PRICE, Cannot be beaten if you want your carpets cleaned,,, one quick call and everything was taken care of.. IF YOU ARE GETTING YOUR CARPETS CLEANED MAKE SURR YOU USE THESE GUYS 100%👍"
-          name="Zaneta Priscepionkaite"
-          date="July 2024"
+          src="/assets/profile-pics-reviews/unnamed (1).png"
+          reviewText="The best carpet cleaning service I have ever experienced. From start to finish was unbelievably smooth. The staff that attended extremely polite and moved all the items with utmost care. Would recommend using them as they are simply the best one has come across. Maya was absolutely fantastic in arranging this as the request was done at such a short notice."
+          name="Gen Tiski"
+          date="March 2024"
           stars={5}
-          hrefGoogleReview="https://g.co/kgs/c4A87Ud"
+          hrefGoogleReview="https://g.co/kgs/H3NeADN"
         />
         <StarReview
-          src="/assets/profile-pics-reviews/unnamed90.png"
-          reviewText="Professional, quick to respond. I'm very happy with their service."
-          name="Zaneta Priscepionkaite"
-          date="July 2024"
+          src="/assets/profile-pics-reviews/unnamed-49.png"
+          reviewText="I had my carpet cleaned by Nikolay from Fine Carpet Cleaning. What a fantastic job he did ! He is very professional, efficient and organised in the way he works. My carpet looks new again. I highly recommend."
+          name="Samanta Federico"
+          date="January 2024"
           stars={5}
-          hrefGoogleReview="https://g.co/kgs/c4A87Ud"
+          hrefGoogleReview="https://g.co/kgs/WxWf2Bm"
         />
-
+        <StarReview
+          src="/assets/profile-pics-reviews/unnamed3434.png"
+          reviewText="Really happy with the service and i come across a-lot of carpet cleaners in my job property inventory .
+        I was not sure how the carpet would come up , as it is an old carpet in a communal lobby . Wow, so much better-stains removed .
+        A really quality service from start to finish , nothing was too much trouble . I managed to get a slot the same day . I would definitely recommend 😁"
+          name="Yasmin"
+          date="June 2024"
+          stars={5}
+          hrefGoogleReview="https://g.co/kgs/A7AyWZi"
+        />
+        <StarReview
+          src="/assets/profile-pics-reviews/unnamed (3).png"
+          reviewText="Had a great experience with Fine Carpet Cleaning yesterday. I phoned at 9am for help with a stained carpet, and within 2 hours someone was at my house doing the job. Communications were very clear and slick, and the cleaning was done briskly and to the highest standard. Highly recommended."
+          name="Peter O'Donoghue"
+          date="April 2024"
+          stars={5}
+          hrefGoogleReview="https://g.co/kgs/vnLrPA1"
+        />
+        <StarReview
+          src="/assets/profile-pics-reviews/unnamed (2).png"
+          reviewText="Good service at a reasonable price, had my mattress and small rug cleaned and can say that I'm satisfied with the result.
+        The company representative was professional, arrived on time and did a very good job, quickly and efficiently.
+        Definitely would recommend."
+          name="Nikolay Dimitrov"
+          date="April 2024"
+          stars={5}
+          hrefGoogleReview="https://g.co/kgs/jWDWU8Z"
+        />
       </ReviewSlider>
 
       <FleurDivider></FleurDivider>

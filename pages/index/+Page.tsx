@@ -92,20 +92,15 @@ function FleurDivider() {
 const VideoPlayer = () => {
 	return (
 		<div class="flex flex-justify-center flex-items-center mt-20">
-			<video
-				class="mt-10 b-rd-3" style="width: 100%; width: -moz-available; width: -webkit-fill-available; width: fill-available;"
-				autoplay
-				controls
-				muted
-			>
-				<source
-					src="/assets/Professional Carpet Cleaning London - Fine Carpet Cleaning (1).mp4"
-					type="video/mp4"
-				/>
-			</video>
+			<iframe
+				class="mt-10 b-rd-3 h-200px md-h-500px"
+				style="width: 100%;"
+				src="https://www.youtube.com/embed/gXHR4DFbn4s?autoplay=1&mute=1"
+				allow="autoplay; encrypted-media"
+			></iframe>
 		</div>
 	);
-};
+  };
 
 function FullScreenImageGallery() {
 	const [open, setOpen] = createSignal(false);
@@ -283,7 +278,7 @@ export default function Page() {
 	return (
 		<>
 			<h1 class="mt-10 md-mt-20 font-size-14 md-font-size-21 md-line-height-18 line-height-16">Fine Carpet Cleaning</h1>
-			<div class="flex flex-justify-center"><img class="b-rd-3 md-my-20 my-10 md-mt-10 mt-2" src="" alt="" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 30%); width: -moz-available; width: -webkit-fill-available; width: fill-available;" /></div>
+			<div class="flex flex-justify-center"><img class="b-rd-3 md-my-20 my-10 md-mt-10 mt-2" src="/assets/home/quality-rug-cleaning-10.jpg" alt="quality-rug-cleaning-10" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 30%); width: -moz-available; width: -webkit-fill-available; width: fill-available;" /></div>
 			<div class="mt-10 py-8 px-8 md-px-14 b-rd-3 bg-paper line-height-8 text-justify font-size-4.4" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 18%);">“Fine Carpet Cleaning” Ltd. is a carpet cleaning company that operates in all London boroughs. We provide a variety of commercial and domestic carpet cleaning services, tailoring them to our client's needs.</div>
 
 			<FleurDivider />
@@ -291,21 +286,21 @@ export default function Page() {
 			<AnimatedH2>Our main cleaning services</AnimatedH2>
 			<div class="p-6 pt-12 bg-paper b-rd-3 flex flex-justify-center" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 18%);">
 				<a href="/professional-carpet-cleaning-services">
-					<img class="md-mt-3 mt--6 mx-auto block md-w-650px xs-w-330px w-270px" src="/assets/Професионално почистване на заведения.jpg" alt="" />
+					<img class="md-mt-3 mt--6 mx-auto block md-w-650px xs-w-330px w-270px" src="/assets/service-pics/carpet-cleaning/carpet-cleaning-specialists.jpg" alt="carpet-cleaning-specialists" />
 					<h3 class="flex flex-justify-center flex-content-center flex-wrap flex-items-center md-mt-16 md-mb-9 mb-4 text-center font-size-7 md-font-size-9">Professional carpet cleaning services</h3>
 				</a>
 			</div>
 
 			<div class="p-6 pt-12 bg-paper mt-20 b-rd-3 flex flex-justify-center" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 18%);">
 				<a href="/professional-upholstery-cleaning-services">
-					<img class="md-mt-3 mt--6 mx-auto block md-w-650px xs-w-330px w-270px" src="/assets/Професионално почистване на заведения.jpg" alt="" />
+					<img class="md-mt-3 mt--6 mx-auto block md-w-650px xs-w-330px w-270px" src="/assets/service-pics/upholstery-cleaning/upholstery-cleaners-london.jpg" alt="upholstery-cleaners-london" />
 					<h3 class="flex flex-justify-center flex-content-center flex-wrap flex-items-center md-mt-16 md-mb-9 mb-4 text-center font-size-7 md-font-size-9">Professional upholstery cleaning services</h3>
 				</a>
 			</div>
 
 			<div class="p-6 pt-12 bg-paper mt-20 b-rd-3 flex flex-justify-center" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 18%);">
 				<a href="/professional-rug-cleaning-services">
-					<img class="md-mt-3 mt--6 mx-auto block md-w-650px xs-w-330px w-270px" src="/assets/Професионално почистване на заведения.jpg" alt="" />
+					<img class="md-mt-3 mt--6 mx-auto block md-w-650px xs-w-330px w-270px" src="/assets/service-pics/rug-cleaning/rug-washing-service.jpg" alt="" />
 					<h3 class="flex flex-justify-center flex-content-center flex-wrap flex-items-center md-mt-16 md-mb-9 mb-4 text-center font-size-7 md-font-size-9">Professional rug cleaning services</h3>
 				</a>
 			</div>
@@ -342,7 +337,7 @@ export default function Page() {
 			<FleurDivider />
 
 			<AnimatedH2>Fine Carpet Cleaning Accreditations</AnimatedH2>
-			<h3 class="mt-25 mb-15">“Fine Carpet Cleaning” Ltd. is a qualified member of <a class="color-paper-link hover-color-paper-link-hover:hover" href="https://trustedlocalcleaners.ncca.co.uk/listing/fine-carpet-cleaning-ltd/" target="_blank" rel="noopener">"NCCA"</a> (National Carpet Cleaners Association)</h3>
+			<h3 class="md-mt-25 mb-15">“Fine Carpet Cleaning” Ltd. is a qualified member of <a class="color-paper-link hover-color-paper-link-hover:hover" href="https://trustedlocalcleaners.ncca.co.uk/listing/fine-carpet-cleaning-ltd/" target="_blank" rel="noopener">"NCCA"</a> (National Carpet Cleaners Association)</h3>
 
 			<GallerySlider>
 				<img src="/assets/home/fine-carpet-cleaning-ncca-certificate-1.jpg" alt="fine-carpet-cleaning-ncca-certificate-1" />
