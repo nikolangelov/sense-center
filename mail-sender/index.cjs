@@ -57,7 +57,7 @@ app.post('/send-email', upload.array('attachments', 10), (req, res) => {
         to: 'office@finecarpetcleaning.co.uk',
         subject: 'New message from contact form',
         text: emailContent,
-        attachments: attachments.map(file => ({
+        attachments: attachments?.map(file => ({
             filename: file.originalname,
             path: file.path
         }))
