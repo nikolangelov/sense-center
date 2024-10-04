@@ -97,9 +97,9 @@ export default function Page() {
         <div class="mt-15 mb-35 py-8 px-5 md-px-14 bg-paper b-rd-3 mx-auto" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 10%);">
 
           <form class="flex-gap-5 flex flex-col py-5" onSubmit={sendEmail} method="post" enctype="multipart/form-data">
-            <input type="email" value={email()} onChange={(e) => setEmail(e.target.value)} placeholder="E-mail:" class="bg-gray-1 b-none w-full p-3 b-rd-1 c-paper-inv font-serif font-size-4" style="box-shadow: 0 1px 2px rgba(0, 0, 0, .12) inset;" />
-            <input type="text" value={name()} onChange={(e) => setName(e.target.value)} placeholder="Name:" class="bg-gray-1 b-none w-full p-3 b-rd-1 c-paper-inv font-serif font-size-4" style="box-shadow: 0 1px 2px rgba(0, 0, 0, .12) inset;" />
-            <input type="text" value={postCode()} onChange={(e) => setPostCode(e.target.value)} placeholder="Post code:" class="bg-gray-1 b-none w-full p-3 b-rd-1 c-paper-inv font-serif font-size-4" style="box-shadow: 0 1px 2px rgba(0, 0, 0, .12) inset;" />
+            <input type="email" value={email()} onChange={(e) => setEmail(e.target.value)} placeholder="E-mail:" class="bg-gray-1 b-none w-full p-3 b-rd-1 c-paper-inv font-serif font-size-4" style="box-shadow: 0 1px 2px rgba(0, 0, 0, .12) inset;" required />
+            <input type="text" value={name()} onChange={(e) => setName(e.target.value)} placeholder="Name:" class="bg-gray-1 b-none w-full p-3 b-rd-1 c-paper-inv font-serif font-size-4" style="box-shadow: 0 1px 2px rgba(0, 0, 0, .12) inset;" required />
+            <input type="text" value={postCode()} onChange={(e) => setPostCode(e.target.value)} placeholder="Post code:" class="bg-gray-1 b-none w-full p-3 b-rd-1 c-paper-inv font-serif font-size-4" style="box-shadow: 0 1px 2px rgba(0, 0, 0, .12) inset;" required />
             <input type="tel" value={phone()} onChange={(e) => setPhone(e.target.value)} placeholder="Phone:" class="bg-gray-1 b-none w-full p-3 b-rd-1 c-paper-inv font-serif font-size-4" style="box-shadow: 0 1px 2px rgba(0, 0, 0, .12) inset;" required />
 
             <h4 class="mb-0 mt-6">Service required</h4>
@@ -152,7 +152,7 @@ export default function Page() {
               </div>
             </span>
 
-            <textarea value={text()} onChange={(e) => setText(e.target.value)} placeholder="Message:" class="mt-2 bg-gray-1 b-none w-full pt-3 pl-3 pb-30 b-rd-1 c-paper-inv font-serif font-size-4" style="box-shadow: 0 1px 2px rgba(0, 0, 0, .12) inset;" required />
+            <textarea value={text()} onChange={(e) => setText(e.target.value)} placeholder="Message:" class="mt-2 bg-gray-1 b-none w-full pt-3 pl-3 pb-30 b-rd-1 c-paper-inv font-serif font-size-4" style="box-shadow: 0 1px 2px rgba(0, 0, 0, .12) inset;" />
 
             <h4 class="mb-2">How did you find us</h4>
 
