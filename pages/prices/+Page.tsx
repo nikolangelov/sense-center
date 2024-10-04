@@ -382,7 +382,9 @@ export default function Page() {
 					<td class="bg-paper pl-5 py-2 font-500">For others, please contact us</td>
 					<td class="bg-paper pl-5 py-2 font-500">-</td>
 				</tr>
-				<h3>Velvet sofa cleaning</h3>
+				<tr>
+					<td colspan="2"><h3 class="bg-paper pl-5 py-6 font-700 my-0">Velvet sofa cleaning</h3></td>
+				</tr>
 				<tr>
 					<td class="bg-paper pl-5 py-2 font-500">Footstool (Puff)</td>
 					<td class="bg-paper pl-5 py-2 font-500">from £15.00</td>
@@ -517,7 +519,9 @@ export default function Page() {
 					<td class="bg-paper pl-5 py-2 font-500">Dining chair - seat & back</td>
 					<td class="bg-paper pl-5 py-2 font-500">from £13.00</td>
 				</tr>
-				<h3>Velvet furniture cleaning</h3>
+				<tr>
+					<td colspan="2"><h3 class="bg-paper pl-5 py-6 font-700 my-0">Velvet furniture cleaning</h3></td>
+				</tr>
 				<tr>
 					<td class="bg-paper pl-5 py-2 font-500">Bed base - Velvet</td>
 					<td class="bg-paper pl-5 py-2 font-500">from £26.00</td>
