@@ -29,10 +29,18 @@ app.post('/send-email', upload.array('attachments', 10), (req, res) => {
     const { senderEmail, text, postCode, phone, name, services, howFound } = req.body;
     const attachments = req.files;
 
-    const emailContent = `
+    const emailContent = !attachments || attachments.length == 0 
+    ? `        
+    You have received a new message from your website contact form.
+        
+    Sender: <b>${senderEmail}</b>
+    Name: ${name}
+    Message: ${text}
+    `    
+    : `
         You have received a new message from your website contact form.
         
-    Sender: ${<b>senderEmail</b>}
+    Sender: <b>${senderEmail}</b>
     Name: ${name}
     Post code: ${postCode}
     Phone: ${phone}
@@ -65,11 +73,7 @@ app.post('/send-email', upload.array('attachments', 10), (req, res) => {
     });
 });
 
-app.get('/', (req, res) => {
-    res.sendFile(__dirname + '/index.html');
-});
-
-const port = 3015;
+const port = 3045;
 app.listen(port, () => {
     console.log(`Server is running on http://localhost:${port}`);
 });
