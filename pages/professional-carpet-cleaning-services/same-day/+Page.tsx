@@ -27,7 +27,7 @@ function FleurDivider() {
   );
 }
 
-export function FaqSection() {
+function FaqSection() {
   const { Container, Entry } = createCollapsable()
   return <Container>
     <Entry>

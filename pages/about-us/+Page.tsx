@@ -7,6 +7,7 @@ import { createSignal, JSX, onCleanup, onMount } from 'solid-js';
 import { MetaProvider, Meta } from 'solid-meta';
 import { createEffect } from 'solid-js';
 import { AnimatedH2 } from '../../components/TransitionH2';
+import { GallerySlider } from '../../components/GallerySlider';
 
 function FleurDivider() {
   return (
@@ -17,77 +18,10 @@ function FleurDivider() {
   );
 }
 
-const GallerySliderDesktop = ({ children }: { children: JSX.Element | JSX.Element[] }) => {
-  const options = { duration: 1000 };
-  const [slider, { current, next, prev, moveTo }] = createSlider(options);
-
-  return (
-    <SliderProvider>
-      <div class="max-w-1000px m-auto position-relative hidden md:block">
-        <Slider options={{ loop: true, slides: { perView: 3, spacing: 10 } }}>
-          {children}
-        </Slider>
-        <SliderButton class="cursor-pointer position-absolute top-45% left--15 bg-transparent b-none" prev>
-          <RiArrowLeftSLine class="-ml-1 font-size-10 c-brand-second-action hover-c-brand transition-colors" />
-        </SliderButton>
-        <SliderButton class="cursor-pointer position-absolute top-45% right--15 bg-transparent b-none" next>
-          <RiArrowRightSLine class="-mr-1 font-size-10 c-brand-second-action hover-c-brand transition-colors" />
-        </SliderButton>
-        <div class="flex flex-justify-center">
-        </div>
-      </div>
-    </SliderProvider>
-  );
-};
-
-const GallerySliderMobile = ({ children }: { children: JSX.Element | JSX.Element[] }) => {
-  const options = { duration: 1000 };
-  const [slider, { current, next, prev, moveTo }] = createSlider(options);
-
-  return (
-    <SliderProvider>
-      <div class="max-w-1000px m-auto position-relative md:hidden block">
-        <Slider options={{ loop: true }}>
-          {children}
-        </Slider>
-        <SliderButton class="cursor-pointer position-absolute top-45% left-0 bg-transparent b-none" prev>
-          <RiArrowLeftSLine class="-ml-1 font-size-9 c-brand-second-action hover-c-brand transition-colors" />
-        </SliderButton>
-        <SliderButton class="cursor-pointer position-absolute top-45% right-0 bg-transparent b-none" next>
-          <RiArrowRightSLine class="-mr-1 font-size-9 c-brand-second-action hover-c-brand transition-colors" />
-        </SliderButton>
-      </div>
-    </SliderProvider>
-  );
-};
-
-export const GallerySlider = ({ children }: { children: JSX.Element | JSX.Element[] }) => {
-  const [isDesktop, setIsDesktop] = createSignal(false);
-
-  onMount(() => {
-    const checkMediaQuery = () => setIsDesktop(window.matchMedia("(min-width: 768px)").matches);
-    checkMediaQuery();
-    window.addEventListener("resize", checkMediaQuery);
-    onCleanup(() => window.removeEventListener("resize", checkMediaQuery));
-  });
-
-  return (
-    <>
-      {isDesktop() ? (
-        <GallerySliderDesktop>{children}</GallerySliderDesktop>
-      ) : (
-        <GallerySliderMobile>{children}</GallerySliderMobile>
-      )}
-    </>
-  );
-};
-
 export default function Page() {
 
   return (
     <>
-      <MetaProvider>
-        <Meta name="robots" content="noindex" />
         <h1 class="mt-10 md-mt-17 font-size-14 md-font-size-16 md-line-height-18 line-height-16">Who are we?</h1>
 
         <div class="mt-20">
@@ -290,7 +224,6 @@ export default function Page() {
           <a href="/contact-us"><button class="cursor-pointer outline-none bg-brand-action hover-bg-brand-action-hover:hover font-size-5 font-600 w-200px h-60px c-paper flex flex-items-center flex-justify-center relative b-solid b-rd-3 b-4 b-brand-action hover-b-brand-action-hover:hover whitespace-normal line-height-6 word-spacing-0.5 py-9" style="box-shadow: 0 0 0 3px rgba(255, 255, 255, .9) inset; letter-spacing: 0.05rem;">REQUEST A QUOTE</button></a>
           <a href="/services"><button class="cursor-pointer outline-none bg-brand-second-action hover-bg-brand-second-action-hover:hover font-size-5 font-600 w-200px h-60px c-paper flex flex-items-center flex-justify-center relative b-solid b-rd-3 b-4 b-brand-second-action hover-b-brand-second-action-hover:hover whitespace-normal line-height-6 word-spacing-0.5 py-9" style="box-shadow: 0 0 0 3px rgba(255, 255, 255, .9) inset; letter-spacing: 0.05rem;">SERVICES</button></a>
         </div>
-      </MetaProvider>
     </>
   );
 }

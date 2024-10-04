@@ -31,202 +31,199 @@ function AllServicesButtonContainer(props: { children: HTMLElement | any }) {
 export default function Page() {
   return (
     <>
-      <MetaProvider>
-        <Meta name="robots" content="noindex" />
-        <h1 class="md-mt-20 mt-10 md-mb-25 mb-0">All services we offer</h1>
-        <a href="/professional-carpet-cleaning-services"><h2 class="hover-c-brand:hover md-mb-15 mb-5">Carpet cleaning services</h2></a>
+      <h1 class="md-mt-20 mt-10 md-mb-25 mb-0">All services we offer</h1>
+      <a href="/professional-carpet-cleaning-services"><h2 class="hover-c-brand:hover md-mb-15 mb-5">Carpet cleaning services</h2></a>
 
-        <AllServicesButtonContainer>
-          <AllServicesButton
-            href="/professional-carpet-cleaning-services/steam"
-            src="/assets/service-pics/carpet-steam/steam-clean-carpet-company.jpg"
-            alt="steam-clean-carpet-company"
-          >Carpet steam cleaning
-          </AllServicesButton>
+      <AllServicesButtonContainer>
+        <AllServicesButton
+          href="/professional-carpet-cleaning-services/steam"
+          src="/assets/service-pics/carpet-steam/steam-clean-carpet-company.jpg"
+          alt="steam-clean-carpet-company"
+        >Carpet steam cleaning
+        </AllServicesButton>
 
-          <AllServicesButton
-            href="/professional-carpet-cleaning-services/dry"
-            src="/assets/service-pics/dry-carpet/professional-dry-carpet-cleaning.jpg"
-            alt="professional-dry-carpet-cleaning"
-          >Dry carpet cleaning
-          </AllServicesButton>
-        </AllServicesButtonContainer>
+        <AllServicesButton
+          href="/professional-carpet-cleaning-services/dry"
+          src="/assets/service-pics/dry-carpet/professional-dry-carpet-cleaning.jpg"
+          alt="professional-dry-carpet-cleaning"
+        >Dry carpet cleaning
+        </AllServicesButton>
+      </AllServicesButtonContainer>
 
-        <AllServicesButtonContainer>
-          <AllServicesButton
-            href="/professional-carpet-cleaning-services/eco-friendly"
-            src="/assets/service-pics/eco-friendly-carpet/eco-friendly-carpet-cleaning-service.jpg"
-            alt="eco-friendly-carpet-cleaning-service"
-          >Eco-friendly carpet cleaning
-          </AllServicesButton>
-          <AllServicesButton
-            href="/professional-carpet-cleaning-services/same-day"
-            src="/assets/service-pics/same-day/emergency-carpet-cleaning.jpg"
-            alt="emergency-carpet-cleaning"
-          >Same day carpet cleaning
-          </AllServicesButton>
-        </AllServicesButtonContainer>
+      <AllServicesButtonContainer>
+        <AllServicesButton
+          href="/professional-carpet-cleaning-services/eco-friendly"
+          src="/assets/service-pics/eco-friendly-carpet/eco-friendly-carpet-cleaning-service.jpg"
+          alt="eco-friendly-carpet-cleaning-service"
+        >Eco-friendly carpet cleaning
+        </AllServicesButton>
+        <AllServicesButton
+          href="/professional-carpet-cleaning-services/same-day"
+          src="/assets/service-pics/same-day/emergency-carpet-cleaning.jpg"
+          alt="emergency-carpet-cleaning"
+        >Same day carpet cleaning
+        </AllServicesButton>
+      </AllServicesButtonContainer>
 
-        <AllServicesButtonContainer>
-          <AllServicesButton
-            href="/professional-carpet-cleaning-services/fast-dry"
-            src="/assets/service-pics/fast-dry-carpet/fast-dry-carpet-cleaning-service.jpg"
-            alt="fast-dry-carpet-cleaning-service"
-          >Fast dry carpet cleaning
-          </AllServicesButton>
-          <AllServicesButton
-            href="/professional-stain-removal-services"
-            src="/assets/service-pics/stain-removal/professional-stain-removal-service.jpg"
-            alt="professional-stain-removal-service"
-          >Carpet stain removal
-          </AllServicesButton>
-        </AllServicesButtonContainer>
+      <AllServicesButtonContainer>
+        <AllServicesButton
+          href="/professional-carpet-cleaning-services/fast-dry"
+          src="/assets/service-pics/fast-dry-carpet/fast-dry-carpet-cleaning-service.jpg"
+          alt="fast-dry-carpet-cleaning-service"
+        >Fast dry carpet cleaning
+        </AllServicesButton>
+        <AllServicesButton
+          href="/professional-stain-removal-services"
+          src="/assets/service-pics/stain-removal/professional-stain-removal-service.jpg"
+          alt="professional-stain-removal-service"
+        >Carpet stain removal
+        </AllServicesButton>
+      </AllServicesButtonContainer>
 
-        <AllServicesButtonContainer>
-          <AllServicesButton
-            href="/stain-protection-services"
-            src="/assets/service-pics/stain-protection-services/stain-protection-services.jpg"
-            alt="stain-protection-services"
-          >Carpet stain protection
-          </AllServicesButton>
-          <AllServicesButton
-            href="/professional-carpet-cleaning-services/commercial"
-            src="/assets/service-pics/commercial-carpet/commercial-carpet-cleaning-services.jpg"
-            alt="commercial-carpet-cleaning-services"
-          >Commercial carpet cleaning
-          </AllServicesButton>
-        </AllServicesButtonContainer>
+      <AllServicesButtonContainer>
+        <AllServicesButton
+          href="/stain-protection-services"
+          src="/assets/service-pics/stain-protection-services/stain-protection-services.jpg"
+          alt="stain-protection-services"
+        >Carpet stain protection
+        </AllServicesButton>
+        <AllServicesButton
+          href="/professional-carpet-cleaning-services/commercial"
+          src="/assets/service-pics/commercial-carpet/commercial-carpet-cleaning-services.jpg"
+          alt="commercial-carpet-cleaning-services"
+        >Commercial carpet cleaning
+        </AllServicesButton>
+      </AllServicesButtonContainer>
 
-        <AllServicesButtonContainer>
-          <AllServicesButton
-            href="/professional-carpet-cleaning-services/residential"
-            src="/assets/service-pics/residential-carpet/residential-carpet-cleaning-services.jpg"
-            alt="residential-carpet-cleaning-services"
-          >Residential carpet cleaning
-          </AllServicesButton>
+      <AllServicesButtonContainer>
+        <AllServicesButton
+          href="/professional-carpet-cleaning-services/residential"
+          src="/assets/service-pics/residential-carpet/residential-carpet-cleaning-services.jpg"
+          alt="residential-carpet-cleaning-services"
+        >Residential carpet cleaning
+        </AllServicesButton>
 
-          <AllServicesButton
-            href="/professional-carpet-cleaning-services/commercial/office"
-            src="/assets/service-pics/office-carpet/commercial-office-carpet-cleaning.jpg"
-            alt="commercial-office-carpet-cleaning"
-          >Office carpet cleaning
-          </AllServicesButton>
-        </AllServicesButtonContainer>
+        <AllServicesButton
+          href="/professional-carpet-cleaning-services/commercial/office"
+          src="/assets/service-pics/office-carpet/commercial-office-carpet-cleaning.jpg"
+          alt="commercial-office-carpet-cleaning"
+        >Office carpet cleaning
+        </AllServicesButton>
+      </AllServicesButtonContainer>
 
-        <FleurDivider></FleurDivider>
+      <FleurDivider></FleurDivider>
 
-        <a href="/professional-upholstery-cleaning-services"><h2 class="hover-c-brand:hover md-mb-15 mb-5">Upholstery cleaning services</h2></a>
+      <a href="/professional-upholstery-cleaning-services"><h2 class="hover-c-brand:hover md-mb-15 mb-5">Upholstery cleaning services</h2></a>
 
-        <AllServicesButtonContainer>
-          <AllServicesButton
-            href="/professional-upholstery-cleaning-services/sofa"
-            src="/assets/service-pics/sofa-cleaning/sofa-upholstery-cleaning-service.jpg"
-            alt="sofa-upholstery-cleaning-service"
-          >Sofa cleaning
-          </AllServicesButton>
+      <AllServicesButtonContainer>
+        <AllServicesButton
+          href="/professional-upholstery-cleaning-services/sofa"
+          src="/assets/service-pics/sofa-cleaning/sofa-upholstery-cleaning-service.jpg"
+          alt="sofa-upholstery-cleaning-service"
+        >Sofa cleaning
+        </AllServicesButton>
 
-          <AllServicesButton
-            href="/professional-upholstery-cleaning-services/sofa/leather"
-            src="/assets/service-pics/leather-sofa-cleaning/leather-sofa-cleaning-services-1.jpg"
-            alt="leather-sofa-cleaning-services-1"
-          >Leather sofa cleaning
-          </AllServicesButton>
-        </AllServicesButtonContainer>
+        <AllServicesButton
+          href="/professional-upholstery-cleaning-services/sofa/leather"
+          src="/assets/service-pics/leather-sofa-cleaning/leather-sofa-cleaning-services-1.jpg"
+          alt="leather-sofa-cleaning-services-1"
+        >Leather sofa cleaning
+        </AllServicesButton>
+      </AllServicesButtonContainer>
 
-        <AllServicesButtonContainer>
-          <AllServicesButton
-            href="/professional-upholstery-cleaning-services/furniture"
-            src="/assets/service-pics/furniture-cleaning/steam-cleaning-furniture-services.jpg"
-            alt="steam-cleaning-furniture-services"
-          >Furniture cleaning
-          </AllServicesButton>
+      <AllServicesButtonContainer>
+        <AllServicesButton
+          href="/professional-upholstery-cleaning-services/furniture"
+          src="/assets/service-pics/furniture-cleaning/steam-cleaning-furniture-services.jpg"
+          alt="steam-cleaning-furniture-services"
+        >Furniture cleaning
+        </AllServicesButton>
 
-          <AllServicesButton
-            href="/professional-upholstery-cleaning-services/mattress"
-            src="/assets/service-pics/mattress-cleaning/mattress-cleaning-services.jpg"
-            alt="mattress-cleaning-services"
-          >Mattress cleaning
-          </AllServicesButton>
-        </AllServicesButtonContainer>
+        <AllServicesButton
+          href="/professional-upholstery-cleaning-services/mattress"
+          src="/assets/service-pics/mattress-cleaning/mattress-cleaning-services.jpg"
+          alt="mattress-cleaning-services"
+        >Mattress cleaning
+        </AllServicesButton>
+      </AllServicesButtonContainer>
 
-        <AllServicesButtonContainer>
-          <AllServicesButton
-            href="/professional-upholstery-cleaning-services/pillow"
-            src="/assets/service-pics/pillow-cleaning/pillow-cleaning-service.jpg"
-            alt="pillow-cleaning-service"
-          >Pillow cleaning
-          </AllServicesButton>
-          <AllServicesButton
-            href="/professional-stain-removal-services"
-            src="/assets/service-pics/stain-removal/professional-stain-removal-service.jpg"
-            alt="professional-stain-removal-service"
-          >Upholstery stain removal
-          </AllServicesButton>
-        </AllServicesButtonContainer>
+      <AllServicesButtonContainer>
+        <AllServicesButton
+          href="/professional-upholstery-cleaning-services/pillow"
+          src="/assets/service-pics/pillow-cleaning/pillow-cleaning-service.jpg"
+          alt="pillow-cleaning-service"
+        >Pillow cleaning
+        </AllServicesButton>
+        <AllServicesButton
+          href="/professional-stain-removal-services"
+          src="/assets/service-pics/stain-removal/professional-stain-removal-service.jpg"
+          alt="professional-stain-removal-service"
+        >Upholstery stain removal
+        </AllServicesButton>
+      </AllServicesButtonContainer>
 
-        <AllServicesButtonContainer>
-          <AllServicesButton
-            href="/stain-protection-services"
-            src="/assets/service-pics/stain-protection-services/stain-protection-services.jpg"
-            alt="stain-protection-services"
-          >Upholstery stain protection
-          </AllServicesButton>
-        </AllServicesButtonContainer>
+      <AllServicesButtonContainer>
+        <AllServicesButton
+          href="/stain-protection-services"
+          src="/assets/service-pics/stain-protection-services/stain-protection-services.jpg"
+          alt="stain-protection-services"
+        >Upholstery stain protection
+        </AllServicesButton>
+      </AllServicesButtonContainer>
 
-        <FleurDivider></FleurDivider>
+      <FleurDivider></FleurDivider>
 
-        <a href="/professional-rug-cleaning-services"><h2 class="hover-c-brand:hover md-mb-15 mb-5">Rug cleaning services</h2></a>
+      <a href="/professional-rug-cleaning-services"><h2 class="hover-c-brand:hover md-mb-15 mb-5">Rug cleaning services</h2></a>
 
-        <AllServicesButtonContainer>
-          <AllServicesButton
-            href="/professional-rug-cleaning-services/steam"
-            src="/assets/service-pics/rug-steam-cleaning/rug-steam-cleaning-service.jpg"
-            alt="rug-steam-cleaning-service"
-          >Rug steam cleaning
-          </AllServicesButton>
-          <AllServicesButton
-            href="/professional-rug-cleaning-services/dry"
-            src="/assets/service-pics/dry-rug-cleaning/dry-rug-cleaning-service.jpg"
-            alt="dry-rug-cleaning-service"
-          >Dry rug cleaning
-          </AllServicesButton>
-        </AllServicesButtonContainer>
+      <AllServicesButtonContainer>
+        <AllServicesButton
+          href="/professional-rug-cleaning-services/steam"
+          src="/assets/service-pics/rug-steam-cleaning/rug-steam-cleaning-service.jpg"
+          alt="rug-steam-cleaning-service"
+        >Rug steam cleaning
+        </AllServicesButton>
+        <AllServicesButton
+          href="/professional-rug-cleaning-services/dry"
+          src="/assets/service-pics/dry-rug-cleaning/dry-rug-cleaning-service.jpg"
+          alt="dry-rug-cleaning-service"
+        >Dry rug cleaning
+        </AllServicesButton>
+      </AllServicesButtonContainer>
 
-        <AllServicesButtonContainer>
-          <AllServicesButton
-            href="/professional-stain-removal-services"
-            src="/assets/service-pics/stain-removal/professional-stain-removal-service.jpg"
-            alt="professional-stain-removal-service"
-          >Rug stain removal
-          </AllServicesButton>
-          <AllServicesButton
-            href="/stain-protection-services"
-            src="/assets/service-pics/stain-protection-services/stain-protection-services.jpg"
-            alt="stain-protection-services"
-          >Rug stain protection
-          </AllServicesButton>
-        </AllServicesButtonContainer>
+      <AllServicesButtonContainer>
+        <AllServicesButton
+          href="/professional-stain-removal-services"
+          src="/assets/service-pics/stain-removal/professional-stain-removal-service.jpg"
+          alt="professional-stain-removal-service"
+        >Rug stain removal
+        </AllServicesButton>
+        <AllServicesButton
+          href="/stain-protection-services"
+          src="/assets/service-pics/stain-protection-services/stain-protection-services.jpg"
+          alt="stain-protection-services"
+        >Rug stain protection
+        </AllServicesButton>
+      </AllServicesButtonContainer>
 
-        <FleurDivider></FleurDivider>
+      <FleurDivider></FleurDivider>
 
-        <h2>Other services</h2>
+      <h2>Other services</h2>
 
-        <AllServicesButtonContainer>
-          <AllServicesButton
-            href="/antiviral-sanitisation-services"
-            src="/assets/service-pics/antiviral-sanitisation/antiviral-sanitisation-services2.webp"
-            alt="antiviral-sanitisation-services2"
-          >Antiviral sanitisation
-          </AllServicesButton>
-        </AllServicesButtonContainer>
+      <AllServicesButtonContainer>
+        <AllServicesButton
+          href="/antiviral-sanitisation-services"
+          src="/assets/service-pics/antiviral-sanitisation/antiviral-sanitisation-services2.webp"
+          alt="antiviral-sanitisation-services2"
+        >Antiviral sanitisation
+        </AllServicesButton>
+      </AllServicesButtonContainer>
 
-        <FleurDivider></FleurDivider>
+      <FleurDivider></FleurDivider>
 
-        <div class="m-10% mb-3% flex flex-wrap flex-justify-center md-gap-15 gap-10">
-          <a href="/prices"><button class="cursor-pointer outline-none bg-brand-second-action hover-bg-brand-second-action-hover:hover font-size-5 font-600 w-200px h-60px c-paper flex flex-items-center flex-justify-center relative b-solid b-rd-3 b-4 b-brand-second-action hover-b-brand-second-action-hover:hover whitespace-normal line-height-6 word-spacing-0.5 py-9" style="box-shadow: 0 0 0 3px rgba(255, 255, 255, .9) inset; letter-spacing: 0.05rem;">PRICES</button></a>
-          <a href="/contact-us"><button class="cursor-pointer outline-none bg-brand-action hover-bg-brand-action-hover:hover font-size-5 font-600 w-200px h-60px c-paper flex flex-items-center flex-justify-center relative b-solid b-rd-3 b-4 b-brand-action hover-b-brand-action-hover:hover whitespace-normal line-height-6 word-spacing-0.5 py-9" style="box-shadow: 0 0 0 3px rgba(255, 255, 255, .9) inset; letter-spacing: 0.05rem;">REQUEST A QUOTE</button></a>
-        </div>
-      </MetaProvider>
+      <div class="m-10% mb-3% flex flex-wrap flex-justify-center md-gap-15 gap-10">
+        <a href="/prices"><button class="cursor-pointer outline-none bg-brand-second-action hover-bg-brand-second-action-hover:hover font-size-5 font-600 w-200px h-60px c-paper flex flex-items-center flex-justify-center relative b-solid b-rd-3 b-4 b-brand-second-action hover-b-brand-second-action-hover:hover whitespace-normal line-height-6 word-spacing-0.5 py-9" style="box-shadow: 0 0 0 3px rgba(255, 255, 255, .9) inset; letter-spacing: 0.05rem;">PRICES</button></a>
+        <a href="/contact-us"><button class="cursor-pointer outline-none bg-brand-action hover-bg-brand-action-hover:hover font-size-5 font-600 w-200px h-60px c-paper flex flex-items-center flex-justify-center relative b-solid b-rd-3 b-4 b-brand-action hover-b-brand-action-hover:hover whitespace-normal line-height-6 word-spacing-0.5 py-9" style="box-shadow: 0 0 0 3px rgba(255, 255, 255, .9) inset; letter-spacing: 0.05rem;">REQUEST A QUOTE</button></a>
+      </div>
     </>
   );
 }

@@ -1,84 +1,12 @@
-import RiArrowRightSLine from '~icons/ri/arrow-right-s-line';
-import RiArrowLeftSLine from '~icons/ri/arrow-left-s-line';
+
 import RiCloseFill from '~icons/ri/close-fill';
 import "solid-slider/slider.css";
-import { Slider, createSlider, SliderButton, SliderProvider } from "solid-slider";
 import { createSignal, JSX, onCleanup, Show } from 'solid-js';
 import { createCollapsable } from "../../components/Collapsable";
 import { Typography } from '../../components/Typography';
 import { ReviewSlider, StarReview } from '../../components/ReviewSlider';
-import { onMount } from "solid-js";
 import { AnimatedH2 } from '../../components/TransitionH2';
-
-const GallerySliderDesktop = ({ children }: { children: JSX.Element | JSX.Element[] }) => {
-	const options = { duration: 1000 };
-	const [slider, { current, next, prev, moveTo }] = createSlider(options);
-
-	return (
-		<SliderProvider>
-			<div class="max-w-1000px m-auto position-relative hidden md:block">
-				<Slider options={{ loop: true, slides: { perView: 3, spacing: 10 } }}>
-					{children}
-				</Slider>
-				<SliderButton class="cursor-pointer position-absolute top-45% left--15 bg-transparent b-none" prev>
-					<RiArrowLeftSLine class="-ml-1 font-size-10 c-brand-second-action hover-c-brand transition-colors" />
-				</SliderButton>
-				<SliderButton class="cursor-pointer position-absolute top-45% right--15 bg-transparent b-none" next>
-					<RiArrowRightSLine class="-mr-1 font-size-10 c-brand-second-action hover-c-brand transition-colors" />
-				</SliderButton>
-				{ /* <div class="flex flex-justify-center">
-					<div class="flex flex-justify-center">
-						<div class={"flex w-3 h-3 rd-50% mx-2 mt-4 " + (current() === 0 ? "bg-brand-dark" : "bg-brand")}></div>
-						<div class={"flex w-3 h-3 rd-50% mx-2 mt-4 " + (current() === 1 ? "bg-brand-dark" : "bg-brand")}></div>
-						<div class={"flex w-3 h-3 rd-50% mx-2 mt-4 " + (current() === 2 ? "bg-brand-dark" : "bg-brand")}></div>
-					</div> 
-				</div> */}
-			</div>
-		</SliderProvider>
-	);
-};
-
-const GallerySliderMobile = ({ children }: { children: JSX.Element | JSX.Element[] }) => {
-	const options = { duration: 1000 };
-	const [slider, { current, next, prev, moveTo }] = createSlider(options);
-
-	return (
-		<SliderProvider>
-			<div class="max-w-1000px m-auto position-relative md:hidden block">
-				<Slider options={{ loop: true }}>
-					{children}
-				</Slider>
-				<SliderButton class="cursor-pointer position-absolute top-45% left-0 bg-transparent b-none" prev>
-					<RiArrowLeftSLine class="-ml-1 font-size-9 c-brand-second-action hover-c-brand transition-colors" />
-				</SliderButton>
-				<SliderButton class="cursor-pointer position-absolute top-45% right-0 bg-transparent b-none" next>
-					<RiArrowRightSLine class="-mr-1 font-size-9 c-brand-second-action hover-c-brand transition-colors" />
-				</SliderButton>
-			</div>
-		</SliderProvider>
-	);
-};
-
-export const GallerySlider = ({ children }: { children: JSX.Element | JSX.Element[] }) => {
-	const [isDesktop, setIsDesktop] = createSignal(false);
-
-	onMount(() => {
-		const checkMediaQuery = () => setIsDesktop(window.matchMedia("(min-width: 768px)").matches);
-		checkMediaQuery();
-		window.addEventListener("resize", checkMediaQuery);
-		onCleanup(() => window.removeEventListener("resize", checkMediaQuery));
-	});
-
-	return (
-		<>
-			{isDesktop() ? (
-				<GallerySliderDesktop>{children}</GallerySliderDesktop>
-			) : (
-				<GallerySliderMobile>{children}</GallerySliderMobile>
-			)}
-		</>
-	);
-};
+import { GallerySlider } from '../../components/GallerySlider';
 
 function FleurDivider() {
 	return (
@@ -122,7 +50,7 @@ function FullScreenImageGallery() {
 	);
 }
 
-export function FaqSection() {
+function FaqSection() {
 	const { Container, Entry } = createCollapsable()
 	return <Container>
 		<Entry>
@@ -283,7 +211,7 @@ export default function Page() {
 
 			<FleurDivider />
 
-			<AnimatedH2>Our main cleaning services</AnimatedH2>
+			<h2>Our main cleaning services</h2>
 			<div class="p-6 pt-12 bg-paper b-rd-3 flex flex-justify-center" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 18%);">
 				<a href="/professional-carpet-cleaning-services">
 					<img class="md-mt-3 mt--6 mx-auto block md-w-650px xs-w-330px w-270px" src="/assets/service-pics/carpet-cleaning/carpet-cleaning-specialists.jpg" alt="carpet-cleaning-specialists" />
@@ -307,7 +235,7 @@ export default function Page() {
 
 			<FleurDivider />
 
-			<AnimatedH2>Equipment and products we use in “Fine Carpet Cleaning” Ltd.</AnimatedH2>
+			<h2>Equipment and products we use in “Fine Carpet Cleaning” Ltd.</h2>
 
 			<GallerySlider>
 				<img src="/assets/home/equipments-2.jpg" alt="equipments-2" />
@@ -336,7 +264,7 @@ export default function Page() {
 
 			<FleurDivider />
 
-			<AnimatedH2>Fine Carpet Cleaning Accreditations</AnimatedH2>
+			<h2>Fine Carpet Cleaning Accreditations</h2>
 			<h3 class="md-mt-25 mb-15">“Fine Carpet Cleaning” Ltd. is a qualified member of <a class="color-paper-link hover-color-paper-link-hover:hover" href="https://trustedlocalcleaners.ncca.co.uk/listing/fine-carpet-cleaning-ltd/" target="_blank" rel="noopener">"NCCA"</a> (National Carpet Cleaners Association)</h3>
 
 			<GallerySlider>
@@ -406,7 +334,7 @@ export default function Page() {
 
 			<FleurDivider />
 
-			<AnimatedH2>Results from our services in “Fine Carpet Cleaning” Ltd.</AnimatedH2>
+			<h2>Results from our services in “Fine Carpet Cleaning” Ltd.</h2>
 
 			<GallerySlider>
 				<img src="/assets/home/1-same-day-carpet-cleaning.jpg" alt="1-same-day-carpet-cleaning" />
@@ -435,7 +363,7 @@ export default function Page() {
 
 			<FleurDivider />
 
-			<AnimatedH2>Reviews for our services</AnimatedH2>
+			<h2>Reviews for our services</h2>
 
 			<ReviewSlider>
 				<StarReview
@@ -467,7 +395,7 @@ export default function Page() {
 
 			<FleurDivider />
 
-			<AnimatedH2>Areas we cover</AnimatedH2>
+			<h2>Areas we cover</h2>
 
 			<FullScreenImageGallery />
 
@@ -476,7 +404,7 @@ export default function Page() {
 
 			<FleurDivider />
 
-			<AnimatedH2>Working hours</AnimatedH2>
+			<h2>Working hours</h2>
 			<table class="w-full m-auto font-sans">
 				<thead style="box-shadow: 0px 20px 20px 1px rgb(84 89 95 / 10%);">
 					<tr class="h-20">
@@ -521,7 +449,7 @@ export default function Page() {
 
 			<FleurDivider></FleurDivider>
 
-			<AnimatedH2>Frequently asked questions</AnimatedH2>
+			<h2>Frequently asked questions</h2>
 
 			<FaqSection />
 
