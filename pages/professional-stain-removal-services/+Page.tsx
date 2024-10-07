@@ -292,10 +292,11 @@ export default function Page() {
 
       <FacebookLikeGallery imgs={[
         { src: "/assets/service-pics/stain-removal/1-pet-stain-removal-service.jpg", alt: "1-pet-stain-removal-service" },
+        { src: "/assets/service-pics/stain-removal/3-stain-removal-companies.jpg", alt: "3-stain-removal-companies" },
         { src: "/assets/service-pics/stain-removal/2-red-wine-stain-beige-carpet-professional-removal.jpg", alt: "2-red-wine-stain-beige-carpet-professional-removal" },
+        { src: "/assets/service-pics/stain-removal/5-professional-stain-removal-service-3.jpg", alt: "5-professional-stain-removal-service-3" },
         { src: "/assets/service-pics/stain-removal/3-stain-removal-companies.jpg", alt: "3-stain-removal-companies" },
         { src: "/assets/service-pics/stain-removal/4-professional-carpet-stain-removal-3.jpg", alt: "4-professional-carpet-stain-removal-3" },
-        { src: "/assets/service-pics/stain-removal/5-professional-stain-removal-service-3.jpg", alt: "5-professional-stain-removal-service-3" },
         { src: "/assets/service-pics/stain-removal/6-professional-carpet-stain-removal-4.jpg", alt: "6-professional-carpet-stain-removal-4" },
         { src: "/assets/service-pics/stain-removal/7-professional-carpet-stain-removal-2.jpg", alt: "7-professional-carpet-stain-removal-2" },
         { src: "/assets/service-pics/stain-removal/8-professional-carpet-stain-removal-5.jpg", alt: "8-professional-carpet-stain-removal-5" },

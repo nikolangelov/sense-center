@@ -616,9 +616,9 @@ export default function Page() {
 
             <FacebookLikeGallery imgs={[
                 { src: "/assets/service-pics/carpet-cleaning/1-best-carpet-cleaning-london-2.jpg", alt: "1-best-carpet-cleaning-london-2" },
+                { src: "/assets/service-pics/carpet-cleaning/4-carpet-cleaning-company.jpg", alt: "4-carpet-cleaning-company" },
                 { src: "/assets/service-pics/carpet-cleaning/2-stairs-carpet-cleaning-services.jpg", alt: "2-stairs-carpet-cleaning-services" },
                 { src: "/assets/service-pics/carpet-cleaning/3-quality-carpet-cleaning-services.jpg", alt: "3-quality-carpet-cleaning-services" },
-                { src: "/assets/service-pics/carpet-cleaning/4-carpet-cleaning-company.jpg", alt: "4-carpet-cleaning-company" },
                 { src: "/assets/service-pics/carpet-cleaning/5-carpet-cleaning-london.jpg", alt: "5-carpet-cleaning-london" },
                 { src: "/assets/service-pics/carpet-cleaning/6-best-carpet-cleaning-london.jpg", alt: "6-best-carpet-cleaning-london" },
                 { src: "/assets/service-pics/carpet-cleaning/7-professional-carpet-cleaning.jpg", alt: "7-professional-carpet-cleaning" },

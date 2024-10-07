@@ -204,11 +204,11 @@ export default function Page() {
       <FacebookLikeGallery imgs={[
         { src: "/assets/service-pics/same-day/1-instant-carpet-cleaning.jpg", alt: "1-instant-carpet-cleaning" },
         { src: "/assets/service-pics/same-day/2-carpet-cleaning-today.jpg", alt: "2-carpet-cleaning-today" },
+        { src: "/assets/service-pics/same-day/7-same-day-carpet-cleaning-1.jpg", alt: "7-same-day-carpet-cleaning-1" },
         { src: "/assets/service-pics/same-day/3-last-minute-carpet-cleaning.jpg", alt: "3-last-minute-carpet-cleaning" },
         { src: "/assets/service-pics/same-day/4-this-morning-carpet-cleaning-1.jpg", alt: "4-this-morning-carpet-cleaning-1" },
         { src: "/assets/service-pics/same-day/5-next-day-carpet-cleaning.jpg", alt: "5-next-day-carpet-cleaning" },
         { src: "/assets/service-pics/same-day/6-last-minute-carpet-cleaning-1.jpg", alt: "6-last-minute-carpet-cleaning-1" },
-        { src: "/assets/service-pics/same-day/7-same-day-carpet-cleaning-1.jpg", alt: "7-same-day-carpet-cleaning-1" },
         { src: "/assets/service-pics/same-day/8-this-morning-carpet-cleaning.jpg", alt: "8-this-morning-carpet-cleaning" },
 
       ]} />

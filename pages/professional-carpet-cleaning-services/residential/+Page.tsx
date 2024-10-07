@@ -307,13 +307,13 @@ export default function Page() {
 
       <FacebookLikeGallery imgs={[
         { src: "/assets/service-pics/residential-carpet/1-best-residential-carpet-cleaning-company.jpg", alt: "1-best-residential-carpet-cleaning-company" },
-        { src: "/assets/service-pics/residential-carpet/2-domestic-carpet-cleaning-services-1.jpg", alt: "2-domestic-carpet-cleaning-services-1" },
         { src: "/assets/service-pics/residential-carpet/3-retail-carpet-cleaning.jpg", alt: "3-retail-carpet-cleaning" },
+        { src: "/assets/service-pics/residential-carpet/2-domestic-carpet-cleaning-services-1.jpg", alt: "2-domestic-carpet-cleaning-services-1" },
+        { src: "/assets/service-pics/residential-carpet/8-private-carpet-cleaning-services.jpg", alt: "8-private-carpet-cleaning-services" },
         { src: "/assets/service-pics/residential-carpet/4-home-carpet-cleaning-services-1.jpg", alt: "4-home-carpet-cleaning-services-1" },
         { src: "/assets/service-pics/residential-carpet/5-domestic-carpet-cleaning-services.jpg", alt: "5-domestic-carpet-cleaning-services" },
         { src: "/assets/service-pics/residential-carpet/6-home-carpet-cleaning-services-2.jpg", alt: "6-home-carpet-cleaning-services-2" },
         { src: "/assets/service-pics/residential-carpet/7-home-carpet-cleaning-services.jpg", alt: "7-home-carpet-cleaning-services" },
-        { src: "/assets/service-pics/residential-carpet/8-private-carpet-cleaning-services.jpg", alt: "8-private-carpet-cleaning-services" },
         { src: "/assets/service-pics/residential-carpet/9-apartment-carpet-cleaning.jpg", alt: "9-apartment-carpet-cleaning" },
         { src: "/assets/service-pics/residential-carpet/10-residential-carpet-cleaning-services-1.jpg", alt: "10-residential-carpet-cleaning-services-1" },
         { src: "/assets/service-pics/residential-carpet/11-house-carpet-cleaning-services-1.jpg", alt: "11-house-carpet-cleaning-services-1" },

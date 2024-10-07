@@ -12,9 +12,9 @@ function FleurDivider() {
 function AllServicesButton(props: { href: string; src: string; alt: string; children: HTMLElement | any }) {
   return (
     <a href={props.href}>
-      <div class="bg-paper mt-7 mb-2 max-w-350px md-max-w-800px b-rd-3 md-px-7 pt-7 pb-2 flex flex-col flex-justify-center mx-auto" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 18%); ">
-        <img class="lg-max-w-400px max-w-250px mx-auto mx-auto md-mx-auto" src={props.src} alt={props.alt} />
-        <h3 class="flex flex-justify-center flex-content-center flex-wrap flex-items-center font-size-7 md-font-size-9 h-60px md-w-400px hover-c-brand:hover text-center">{props.children}</h3>
+      <div class="bg-paper mt-7 mb-2 max-w-320px md-max-w-450px b-rd-3 md-px-7 pt-7 pb-2 flex flex-col flex-justify-center " style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 18%); ">
+        <img class="md-max-w-400px w-auto mx-7" src={props.src} alt={props.alt} />
+        <h3 class="flex flex-justify-center flex-content-center flex-wrap flex-items-center font-size-7 md-font-size-8 h-60px mx-auto w-200px md-w-400px hover-c-brand:hover text-center">{props.children}</h3>
       </div>
     </a>
   )

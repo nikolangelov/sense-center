@@ -60,7 +60,7 @@ export function StarReview(props: { src: string; stars: number; hrefGoogleReview
                         {range(5 - props.stars).map((_: any) => <img class="w-5 m-r-2" src="/assets/output-onlinepngtools-e1707480352597.png" alt="star" />)}
                     </div>
 
-                    <div class="p-b-5 font-300 font-size-5 px-7" style="font-family:'Roboto', sans-serif; text-align: left;">{props.reviewText}</div>
+                    <div class="p-b-6 font-300 font-size-4.5 md-font-size-5 px-4 md-px-7" style="font-family:'Roboto', sans-serif; text-align: left;">{props.reviewText}</div>
                 </div>
         </div>
         </a>

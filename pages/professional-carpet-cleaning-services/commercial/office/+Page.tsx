@@ -361,8 +361,8 @@ export default function Page() {
       <FacebookLikeGallery imgs={[
         { src: "/assets/service-pics/office-carpet/1-office-carpet-steam-cleaning-2.jpg", alt: "1-office-carpet-steam-cleaning-2" },
         { src: "/assets/service-pics/office-carpet/2-office-carpet-steam-cleaning.jpg", alt: "2-office-carpet-steam-cleaning" },
-        { src: "/assets/service-pics/office-carpet/3-office-carpet-cleaning-london.jpg", alt: "3-office-carpet-cleaning-london" },
         { src: "/assets/service-pics/office-carpet/4-office-carpet-cleaning-company.jpg", alt: "4-office-carpet-cleaning-company" },
+        { src: "/assets/service-pics/office-carpet/3-office-carpet-cleaning-london.jpg", alt: "3-office-carpet-cleaning-london" },
         { src: "/assets/service-pics/office-carpet/5-office-carpet-steam-cleaning-1.jpg", alt: "5-office-carpet-steam-cleaning-1" },
         { src: "/assets/service-pics/office-carpet/6-office-carpet-cleaning-company-1.jpg", alt: "6-office-carpet-cleaning-company-1" },
         { src: "/assets/service-pics/office-carpet/7-office-carpet-deep-cleaning.jpg", alt: "7-office-carpet-deep-cleaning" },

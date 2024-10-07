@@ -404,9 +404,9 @@ export default function Page() {
 
       <FacebookLikeGallery imgs={[
         { src: "/assets/service-pics/mattress-cleaning/1-mattress-cleaning-service-london-3.jpg", alt: "1-mattress-cleaning-service-london-3" },
-        { src: "/assets/service-pics/mattress-cleaning/2-mattress-cleaning-service-london-4.jpg", alt: "2-mattress-cleaning-service-london-4" },
         { src: "/assets/service-pics/mattress-cleaning/3-dust-mite-removal-services.jpg", alt: "3-dust-mite-removal-services" },
         { src: "/assets/service-pics/mattress-cleaning/4-dust-mite-removal-services-1.jpg", alt: "4-dust-mite-removal-services-1" },
+        { src: "/assets/service-pics/mattress-cleaning/2-mattress-cleaning-service-london-4.jpg", alt: "2-mattress-cleaning-service-london-4" },
         { src: "/assets/service-pics/mattress-cleaning/5-professional-mattress-cleaning.jpg", alt: "5-professional-mattress-cleaning" },
         { src: "/assets/service-pics/mattress-cleaning/6-dust-mite-cleaning-services.jpg", alt: "6-dust-mite-cleaning-services" },
         { src: "/assets/service-pics/mattress-cleaning/7-dust-mite-removal-company.jpg", alt: "7-dust-mite-removal-company" },

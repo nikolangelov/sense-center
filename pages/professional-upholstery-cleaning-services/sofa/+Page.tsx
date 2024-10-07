@@ -334,9 +334,9 @@ export default function Page() {
 
       <FacebookLikeGallery imgs={[
         { src: "/assets/service-pics/sofa-cleaning/1-sectional-cleaning-service.jpg", alt: "1-sectional-cleaning-service" },
+        { src: "/assets/service-pics/sofa-cleaning/4-london-sofa-cleaning.jpg", alt: "4-london-sofa-cleaning" },
         { src: "/assets/service-pics/sofa-cleaning/2-sofa-upholstery-cleaning-service-2.jpg", alt: "2-sofa-upholstery-cleaning-service-2" },
         { src: "/assets/service-pics/sofa-cleaning/3-sofa-cover-cleaning-services.jpg", alt: "3-sofa-cover-cleaning-services" },
-        { src: "/assets/service-pics/sofa-cleaning/4-london-sofa-cleaning.jpg", alt: "4-london-sofa-cleaning" },
         { src: "/assets/service-pics/sofa-cleaning/5-best-sofa-cleaning-services.jpg", alt: "5-best-sofa-cleaning-services" },
         { src: "/assets/service-pics/sofa-cleaning/6-couch-cleaning-services-2.jpg", alt: "6-couch-cleaning-services-2" },
         { src: "/assets/service-pics/sofa-cleaning/7-couch-cleaning-services.jpg", alt: "7-couch-cleaning-services" },

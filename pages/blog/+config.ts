@@ -8,7 +8,7 @@ export default {
   Head,
   // <title>
   title: "Carpet cleaning blog - Fine carpet cleaning",
-  description: "Welcome to the Fine Carpet Cleaning blog. Unrivaled service, advice, specialed techniques and premium product recommendations.",
+  description: "Fine carpet cleaning has carried out cleaning services for dozens of carpets throughout London. You can see their reviews of our work here.",
   // <meta name="description">
   extends: vikeSolid,
 } satisfies Config;

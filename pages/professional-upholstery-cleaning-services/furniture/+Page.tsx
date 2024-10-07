@@ -10,8 +10,8 @@ const VideoPlayer = () => {
   return (
     <div class="flex flex-justify-center flex-items-center mt-20">
       <iframe
-				class="mt-10 b-rd-3 h-200px md-h-500px"
-				style="width: 100%;"
+        class="mt-10 b-rd-3 h-200px md-h-500px"
+        style="width: 100%;"
         src="https://www.youtube.com/embed/vuDflQLPHmg?autoplay=1&mute=1"
         allow="autoplay; encrypted-media"
       ></iframe>
@@ -283,10 +283,10 @@ export default function Page() {
       <h2 class="line-height-12 md-line-height-14">Pictures from our professional furniture cleaning services</h2>
 
       <FacebookLikeGallery imgs={[
-        { src: "/assets/service-pics/furniture-cleaning/1-furniture-cleaning-specialist.jpg", alt: "1-furniture-cleaning-specialist" },
+        { src: "/assets/service-pics/furniture-cleaning/3-soft-furniture-cleaning.jpg", alt: "3-soft-furniture-cleaning" },
         { src: "/assets/service-pics/furniture-cleaning/2-furniture-deep-cleaning-2.jpg", alt: "2-furniture-deep-cleaning-2" },
         { src: "/assets/service-pics/furniture-cleaning/4-office-furniture cleaning-service.jpg", alt: "4-office-furniture cleaning-service" },
-        { src: "/assets/service-pics/furniture-cleaning/3-soft-furniture-cleaning.jpg", alt: "3-soft-furniture-cleaning" },
+        { src: "/assets/service-pics/furniture-cleaning/1-furniture-cleaning-specialist.jpg", alt: "1-furniture-cleaning-specialist" },
         { src: "/assets/service-pics/furniture-cleaning/5-organic-furniture-cleaning.jpg", alt: "5-organic-furniture-cleaning" },
         { src: "/assets/service-pics/furniture-cleaning/6-furniture-cleaning-business.jpg", alt: "6-furniture-cleaning-business" },
         { src: "/assets/service-pics/furniture-cleaning/7-furniture-deep-cleaning.jpg", alt: "7-furniture-deep-cleaning" },

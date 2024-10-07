@@ -371,8 +371,8 @@ export default function Page() {
 
       <FacebookLikeGallery imgs={[
         { src: "/assets/service-pics/commercial-carpet/1-commercial-carpet-cleaning-london.jpg", alt: "1-commercial-carpet-cleaning-london" },
-        { src: "/assets/service-pics/commercial-carpet/2-commercial-carpet-cleaning-process.jpg", alt: "2-commercial-carpet-cleaning-process" },
         { src: "/assets/service-pics/commercial-carpet/3-commercial-carpet-cleaning-methods.jpg", alt: "3-commercial-carpet-cleaning-methods" },
+        { src: "/assets/service-pics/commercial-carpet/2-commercial-carpet-cleaning-process.jpg", alt: "2-commercial-carpet-cleaning-process" },
         { src: "/assets/service-pics/commercial-carpet/4-commercial-carpet-cleaning-services.jpg", alt: "4-commercial-carpet-cleaning-services" },
         { src: "/assets/service-pics/commercial-carpet/5-business-carpet-cleaning.jpg", alt: "5-business-carpet-cleaning" },
         { src: "/assets/service-pics/commercial-carpet/6-carpet-cleaning-for-commercial-buildings.jpg", alt: "6-carpet-cleaning-for-commercial-buildings" },
