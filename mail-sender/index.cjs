@@ -60,7 +60,7 @@ app.post('/send-email', upload.array('attachments', 10), (req, res) => {
         attachments: attachments ? attachments.map(file => ({
             filename: file.originalname,
             path: file.path
-        })) : undefined
+        })) : []
     };
 
     transporter.sendMail(mailOptions, (error, info) => {
