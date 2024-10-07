@@ -44,7 +44,7 @@ export default function Page() {
     formData.append('services', selectedServices().join(', '));
 
     try {
-      const response = await fetch('http://localhost:3015/send-email', {
+      const response = await fetch('/api/send-email', {
         method: 'POST',
         body: formData,
       });
