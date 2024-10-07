@@ -25,7 +25,7 @@ const transporter = nodemailer.createTransport({
     }
 });
 
-app.post('/send-email', upload.array('attachments', 10), (req, res) => {
+app.post('/api/send-email', upload.array('attachments', 10), (req, res) => {
     const { senderEmail, text, postCode, phone, name, services, howFound } = req.body;
     const attachments = req.files;
 
@@ -52,7 +52,7 @@ app.post('/send-email', upload.array('attachments', 10), (req, res) => {
     How did they find us: ${howFound || 'Not specified'}
     `;
 
-    const mailOptions = {
+    const mailOptions = { 
         from: 'office@finecarpetcleaning.co.uk',
         to: 'office@finecarpetcleaning.co.uk',
         subject: 'New message from contact form',
