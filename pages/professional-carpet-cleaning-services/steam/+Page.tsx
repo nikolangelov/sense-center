@@ -274,22 +274,22 @@ export default function Page() {
       <h2>The process of our professional carpet steam cleaning in London</h2>
       <div class="mt-20 py-8 px-8 md-px-14 bg-paper b-rd-3" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 18%);">
         <ol style="counter-reset: ordered; list-style: none;">
-          <li class="ml--5">
+          <li class="md-ml--5">
             <Typography variant="body">First, we carry out a pre-cleaning survey. We do this because we use an individual approach for every carpet, based on its type, condition, and degree of pollution. This is necessary to estimate what detergents and tools need to be used to steam clean the carpet.</Typography>
           </li>
-          <li class="ml--5">
+          <li class="md-ml--5">
             <Typography variant="body">The second step is to use a high-filtration twin-motor vacuum cleaner that has been specifically designed for high-performance steam cleaning of carpets. This removes any loose dirt, dry soiling, and dust.</Typography>
           </li>
-          <li class="ml--5">
+          <li class="md-ml--5">
             <Typography variant="body">Third, we apply heavy-duty pre-spray, designed to lift oily dirt and pollutants from your carpet so they can be safely extracted using our high-performance extraction machines.</Typography>
           </li>
-          <li class="ml--5">
+          <li class="md-ml--5">
             <Typography variant="body">Fourth, we introduce the cleaning solution to the carpet fibres. This loosens the soil and gets it ready for extraction.</Typography>
           </li>
-          <li class="ml--5">
+          <li class="md-ml--5">
             <Typography variant="body">Fifth, pure, softened hot water is gently injected deep into the carpet fibres, releasing soil for effective removal by our powerful machine. Any remaining spots and stains are treated individually with specially selected cleaning products.</Typography>
           </li>
-          <li class="ml--5">
+          <li class="md-ml--5">
             <Typography variant="body">Last, we rinse and extract again to ensure no chemical residues remain from the steam cleaning of carpets.</Typography>
           </li>
         </ol>

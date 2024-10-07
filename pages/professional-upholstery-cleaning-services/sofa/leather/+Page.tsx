@@ -228,14 +228,14 @@ export default function Page() {
 
       <h2>The process of our professional leather sofa cleaning services:</h2>
       <div class="mt-20 py-8 px-8 md-px-14 bg-paper b-rd-3" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 18%);">
-        <p>Professional leather sofa cleaning is essential to maintain its elegance and longevity.</p>
+        <p class="ml-5 md-ml-0">Professional leather sofa cleaning is essential to maintain its elegance and longevity.</p>
         <ol style="counter-reset: ordered; list-style: none;">
-          <li class="ml--5"><Typography variant="body">First, we will carry out a pre-cleaning survey, to establish exactly what cleaning detergents and tools need to be used for the specific fabric. We will inspect the leather furniture assessing the leather type and checking for any splitting, scratches, soiling, colour loss and other areas of concern.</Typography></li>
-          <li class="ml--5"><Typography variant="body">Our process begins with carefully dusting the sofa to remove any loose particles.</Typography></li>
-          <li class="ml--5"><Typography variant="body">Next, we apply a specialised detergent, gently agitate it to lift dirt, and then wipe it off, ensuring a thorough clean.</Typography></li>
-          <li class="ml--5"><Typography variant="body">We then allow the sofa to dry for about 10 minutes.</Typography></li>
-          <li class="ml--5"><Typography variant="body">Finally, we apply a protective cream to nourish the leather and shield it from future damage.</Typography></li>
-          <li class="ml--5"><Typography variant="body">This meticulous approach keeps your leather sofa looking pristine and extends its lifespan.</Typography></li>
+          <li class="md-ml--5"><Typography variant="body">First, we will carry out a pre-cleaning survey, to establish exactly what cleaning detergents and tools need to be used for the specific fabric. We will inspect the leather furniture assessing the leather type and checking for any splitting, scratches, soiling, colour loss and other areas of concern.</Typography></li>
+          <li class="md-ml--5"><Typography variant="body">Our process begins with carefully dusting the sofa to remove any loose particles.</Typography></li>
+          <li class="md-ml--5"><Typography variant="body">Next, we apply a specialised detergent, gently agitate it to lift dirt, and then wipe it off, ensuring a thorough clean.</Typography></li>
+          <li class="md-ml--5"><Typography variant="body">We then allow the sofa to dry for about 10 minutes.</Typography></li>
+          <li class="md-ml--5"><Typography variant="body">Finally, we apply a protective cream to nourish the leather and shield it from future damage.</Typography></li>
+          <li class="md-ml--5"><Typography variant="body">This meticulous approach keeps your leather sofa looking pristine and extends its lifespan.</Typography></li>
         </ol>
       </div>
 

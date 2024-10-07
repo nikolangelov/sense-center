@@ -452,7 +452,7 @@ export default function Page() {
         <ol style="counter-reset: ordered; list-style: none;">
           <li class="ml--5">
             <h3 class="ml--5 font-size-6 md-font-size-7">Smart investment for long-term carpet care</h3>
-            <p>Our office carpet cleaning expert suggests considering the addition of a stain protector for your carpet, rug and upholstery whenever possible. This step will very efficiently protect your carpet from any accidental stains and can lead to substantial cost savings on professional stain removal services. If you're interested, we encourage you to <a class="color-paper-link hover-color-paper-link-hover:hover" href="/stain-protection-services">explore the benefits of utilizing stain protection services</a>.</p>
+            <Typography variant="body">Our office carpet cleaning expert suggests considering the addition of a stain protector for your carpet, rug and upholstery whenever possible. This step will very efficiently protect your carpet from any accidental stains and can lead to substantial cost savings on professional stain removal services. If you're interested, we encourage you to <a class="color-paper-link hover-color-paper-link-hover:hover" href="/stain-protection-services">explore the benefits of utilizing stain protection services</a>.</Typography>
           </li>
           <li class="ml--5">
             <h3 class="ml--5 font-size-6 md-font-size-7">Give the stain removal service a try</h3>

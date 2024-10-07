@@ -276,19 +276,19 @@ export default function Page() {
       <h2>The process of our dry carpet cleaning in London</h2>
       <div class="mt-20 py-8 px-8 md-px-14 bg-paper b-rd-3" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 18%);">
         <ol style="counter-reset: ordered; list-style: none;">
-          <li class="ml--5">
+          <li class="md-ml--5">
             <Typography variant="body">The carpet is thoroughly vacuumed with a powerful cleaner to extract most of the dirt and grime particles.</Typography>
           </li>
-          <li class="ml--5">
+          <li class="md-ml--5">
             <Typography variant="body">A biodegradable cleaning compound is applied to the carpet, which attracts dirt and grime.</Typography>
           </li>
-          <li class="ml--5">
+          <li class="md-ml--5">
             <Typography variant="body">After that, a machine is used for its agitation into the fibres.</Typography>
           </li>
-          <li class="ml--5">
+          <li class="md-ml--5">
             <Typography variant="body">Finally, everything is vacuumed off, leaving the carpet both clean and dry. This leaves the carpet shinier, refreshed and clean.</Typography>
           </li>
-          <li class="ml--5">
+          <li class="md-ml--5">
             <Typography variant="body">For smaller areas, we may brush the cleaning powder into the carpet by hand using a large brush, then vacuum it off. We use this method for small spaces that don’t need the large equipment we normally would use, and the effect is the same, leaving the carpet clean and fresh.</Typography>
           </li>
         </ol>

@@ -28,7 +28,7 @@ const VideoPlayer = () => {
 			></iframe>
 		</div>
 	);
-  };
+};
 
 function FullScreenImageGallery() {
 	const [open, setOpen] = createSignal(false);
@@ -367,28 +367,56 @@ export default function Page() {
 
 			<ReviewSlider>
 				<StarReview
-					src="/assets/profile-pics-reviews/unnamed90.png"
-					reviewText="Professional, quick to respond. I'm very happy with their service."
-					name="Zaneta Priscepionkaite"
-					date="July 2024"
+					src="/assets/profile-pics-reviews/unnamed1112.png"
+					reviewText="I received excellent communications throughout the whole process. On the day, the cleaning experience was efficient with a considerate and friendly member of staff. Very competitive pricing."
+					name="Elizabeth Maurice"
+					date="June 2024"
 					stars={5}
-					hrefGoogleReview="https://g.co/kgs/c4A87Ud"
+					hrefGoogleReview="https://g.co/kgs/HPqEYvL"
 				/>
 				<StarReview
-					src="/assets/profile-pics-reviews/unnamed90.png"
-					reviewText="FANTASTIC STAFF, FANTASTIC SERVICE, FANTASTIC WORK & MOST IMPORTANTLY FANTASTIC PRICE, Cannot be beaten if you want your carpets cleaned,,, one quick call and everything was taken care of.. IF YOU ARE GETTING YOUR CARPETS CLEANED MAKE SURR YOU USE THESE GUYS 100%👍"
-					name="Zaneta Priscepionkaite"
-					date="July 2024"
+					src="/assets/profile-pics-reviews/unnamed (1).png"
+					reviewText="The best carpet cleaning service I have ever experienced. From start to finish was unbelievably smooth. The staff that attended extremely polite and moved all the items with utmost care. Would recommend using them as they are simply the best one has come across. Maya was absolutely fantastic in arranging this as the request was done at such a short notice."
+					name="Gen Tiski"
+					date="March 2024"
 					stars={5}
-					hrefGoogleReview="https://g.co/kgs/c4A87Ud"
+					hrefGoogleReview="https://g.co/kgs/H3NeADN"
 				/>
 				<StarReview
-					src="/assets/profile-pics-reviews/unnamed90.png"
-					reviewText="Professional, quick to respond. I'm very happy with their service."
-					name="Zaneta Priscepionkaite"
-					date="July 2024"
+					src="/assets/profile-pics-reviews/unnamed-49.png"
+					reviewText="I had my carpet cleaned by Nikolay from Fine Carpet Cleaning. What a fantastic job he did ! He is very professional, efficient and organised in the way he works. My carpet looks new again. I highly recommend."
+					name="Samanta Federico"
+					date="January 2024"
 					stars={5}
-					hrefGoogleReview="https://g.co/kgs/c4A87Ud"
+					hrefGoogleReview="https://g.co/kgs/WxWf2Bm"
+				/>
+				<StarReview
+					src="/assets/profile-pics-reviews/unnamed3434.png"
+					reviewText="Really happy with the service and i come across a-lot of carpet cleaners in my job property inventory .
+        I was not sure how the carpet would come up , as it is an old carpet in a communal lobby . Wow, so much better-stains removed .
+        A really quality service from start to finish , nothing was too much trouble . I managed to get a slot the same day . I would definitely recommend 😁"
+					name="Yasmin"
+					date="June 2024"
+					stars={5}
+					hrefGoogleReview="https://g.co/kgs/A7AyWZi"
+				/>
+				<StarReview
+					src="/assets/profile-pics-reviews/unnamed (3).png"
+					reviewText="Had a great experience with Fine Carpet Cleaning yesterday. I phoned at 9am for help with a stained carpet, and within 2 hours someone was at my house doing the job. Communications were very clear and slick, and the cleaning was done briskly and to the highest standard. Highly recommended."
+					name="Peter O'Donoghue"
+					date="April 2024"
+					stars={5}
+					hrefGoogleReview="https://g.co/kgs/vnLrPA1"
+				/>
+				<StarReview
+					src="/assets/profile-pics-reviews/unnamed (2).png"
+					reviewText="Good service at a reasonable price, had my mattress and small rug cleaned and can say that I'm satisfied with the result.
+        The company representative was professional, arrived on time and did a very good job, quickly and efficiently.
+        Definitely would recommend."
+					name="Nikolay Dimitrov"
+					date="April 2024"
+					stars={5}
+					hrefGoogleReview="https://g.co/kgs/jWDWU8Z"
 				/>
 
 			</ReviewSlider>

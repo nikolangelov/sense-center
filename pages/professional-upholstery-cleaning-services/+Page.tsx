@@ -306,22 +306,22 @@ export default function Page() {
 			<h2>The process of our professional upholstery cleaning services:</h2>
 			<div class="mt-20 py-8 px-8 md-px-14 bg-paper b-rd-3" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 18%);">
 				<ol style="counter-reset: ordered; list-style: none;">
-					<li class="ml--5">
+					<li class="md-ml--5">
 						<Typography variant="body">First, we will carry out a pre-cleaning survey, to establish exactly what cleaning detergents and tools need to be used for the specific fabric.</Typography>
 					</li>
-					<li class="ml--5">
+					<li class="md-ml--5">
 						<Typography variant="body">Second, we dry vacuum the fabric. This removes any loose dirt, dry soils and dust.</Typography>
 					</li>
-					<li class="ml--5">
+					<li class="md-ml--5">
 						<Typography variant="body">We then apply heavy duty pre-spray, designed to lift oily dirt and pollutants from your upholstery, so they can be safely extracted using our high performance extraction machines.</Typography>
 					</li>
-					<li class="ml--5">
+					<li class="md-ml--5">
 						<Typography variant="body">The cleaning solution is worked onto the upholstery. This loosens the soiling, ready for extraction.</Typography>
 					</li>
-					<li class="ml--5">
+					<li class="md-ml--5">
 						<Typography variant="body">Pure softened hot water (reaches a maximum 135 Degrees) is gently injected deeply into the fibres. This releases the soil and allows our powerful hot water extraction machine to effectively remove it. Any remaining spots and stains are worked on individually using special products.</Typography>
 					</li>
-					<li class="ml--5">
+					<li class="md-ml--5">
 						<Typography variant="body">Finally, we rinse and extract again to ensure no chemical residues are left behind.</Typography>
 					</li>
 				</ol>
