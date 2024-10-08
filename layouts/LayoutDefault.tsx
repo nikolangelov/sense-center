@@ -453,7 +453,7 @@ export default function LayoutDefault(props: { children?: JSX.Element }) {
           <a href="/contact-us">
             <button
               class="get-a-quote-button whitespace-nowrap md-ml-2 xl-ml-10 font-serif uppercase font-500 c-paper overflow-hidden relative bg-paper b-double b-rd-1 b-4 b-transparent h-13 w-45 cursor-pointer font-size-3.5 tracking-wide"
-              style="min-width: fit-content; background-origin: border-box; background-clip: padding-box, border-box; box-shadow: 0 0 0 2.5px rgba(255, 255, 255, 1) inset; background-image: linear-gradient(90deg, rgb(13, 46, 41) 0%, rgb(26, 135, 94) 50%), radial-gradient(circle at left top, rgb(13, 46, 41), rgb(26, 135, 94));"
+              style="  font-family: DM Sans !important; min-width: fit-content; background-origin: border-box; background-clip: padding-box, border-box; box-shadow: 0 0 0 2.5px rgba(255, 255, 255, 1) inset; background-image: linear-gradient(90deg, rgb(13, 46, 41) 0%, rgb(26, 135, 94) 50%), radial-gradient(circle at left top, rgb(13, 46, 41), rgb(26, 135, 94));"
             >
               Request a quote
             </button>
