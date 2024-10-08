@@ -12,7 +12,7 @@ const VideoPlayer = () => {
       <iframe
 				class="mt-10 b-rd-3 h-200px md-h-500px"
 				style="width: 100%;"
-        src="https://www.youtube.com/embed/Hqp9Var0zb8?autoplay=1&mute=1"
+        src="https://www.youtube.com/embed/Bj1lo9JMZok?autoplay=1&mute=1"
         allow="autoplay; encrypted-media"
       ></iframe>
     </div>
