@@ -380,22 +380,22 @@ function DropDownMenuDesktop(props: { closeMenu: () => void }) {
       <div class="flex flex-col flex-justify-center">
         <a href="/professional-carpet-cleaning-services" onClick={handleClick}><h3 class="whitespace-normal text-center hover-c-brand:hover">Carpet cleaning services</h3></a>
         <div class="flex flex-row flex-wrap hidden flex-items-center flex-content-center">
-          <DropdownMenuItem href="/professional-carpet-cleaning-services/steam" src="/assets/desktop-menu-images/steam-clean-carpet-company.jpg" alt="steam-clean-carpet-company" closeMenu={props.closeMenu}>Carpet steam cleaning</DropdownMenuItem>
-          <DropdownMenuItem href="/professional-carpet-cleaning-services/dry" src="/assets/desktop-menu-images/professional-dry-carpet-cleaning.jpg" alt="professional-dry-carpet-cleaning" closeMenu={props.closeMenu}>Dry carpet cleaning</DropdownMenuItem>
-          <DropdownMenuItem href="/professional-carpet-cleaning-services/eco-friendly" src="/assets/desktop-menu-images/eco-friendly-carpet-cleaning-service.jpg" alt="eco-friendly-carpet-cleaning-service" closeMenu={props.closeMenu}>Eco-friendly carpet cleaning</DropdownMenuItem>
+          <DropdownMenuItem href="/professional-carpet-cleaning-services/steam" src="/assets/desktop-menu-images/steam-clean-carpet-company.jpeg" alt="steam-clean-carpet-company" closeMenu={props.closeMenu}>Carpet steam cleaning</DropdownMenuItem>
+          <DropdownMenuItem href="/professional-carpet-cleaning-services/dry" src="/assets/desktop-menu-images/professional-dry-carpet-cleaning.jpeg" alt="professional-dry-carpet-cleaning" closeMenu={props.closeMenu}>Dry carpet cleaning</DropdownMenuItem>
+          <DropdownMenuItem href="/professional-carpet-cleaning-services/eco-friendly" src="/assets/desktop-menu-images/eco-friendly-carpet-cleaning-service.jpeg" alt="eco-friendly-carpet-cleaning-service" closeMenu={props.closeMenu}>Eco-friendly carpet cleaning</DropdownMenuItem>
         </div>
         <div class="flex flex-row flex-wrap hidden flex-items-center flex-content-center">
-          <DropdownMenuItem href="/professional-carpet-cleaning-services/same-day" src="/assets/desktop-menu-images/emergency-carpet-cleaning.jpg" alt="emergency-carpet-cleaning" closeMenu={props.closeMenu}>Same day carpet cleaning</DropdownMenuItem>
-          <DropdownMenuItem href="/professional-carpet-cleaning-services/fast-dry" src="/assets/desktop-menu-images/fast-dry-carpet-cleaning-service.jpg" alt="fast-dry-carpet-cleaning-service" closeMenu={props.closeMenu}>Fast dry carpet cleaning</DropdownMenuItem>
-          <DropdownMenuItem href="/professional-stain-removal-services" src="/assets/desktop-menu-images/professional-stain-removal-service.jpg" alt="professional-stain-removal-service" closeMenu={props.closeMenu}>Carpet stain removal</DropdownMenuItem>
+          <DropdownMenuItem href="/professional-carpet-cleaning-services/same-day" src="/assets/desktop-menu-images/emergency-carpet-cleaning.jpeg" alt="emergency-carpet-cleaning" closeMenu={props.closeMenu}>Same day carpet cleaning</DropdownMenuItem>
+          <DropdownMenuItem href="/professional-carpet-cleaning-services/fast-dry" src="/assets/desktop-menu-images/fast-dry-carpet-cleaning-service.jpeg" alt="fast-dry-carpet-cleaning-service" closeMenu={props.closeMenu}>Fast dry carpet cleaning</DropdownMenuItem>
+          <DropdownMenuItem href="/professional-stain-removal-services" src="/assets/desktop-menu-images/professional-stain-removal-service.jpeg" alt="professional-stain-removal-service" closeMenu={props.closeMenu}>Carpet stain removal</DropdownMenuItem>
         </div>
         <div class="flex flex-row flex-wrap hidden flex-items-center flex-content-center">
-          <DropdownMenuItem href="/stain-protection-services" src="/assets/desktop-menu-images/stain-protection-services.jpg" alt="stain-protection-services" closeMenu={props.closeMenu}>Carpet stain protection</DropdownMenuItem>
-          <DropdownMenuItem href="/professional-carpet-cleaning-services/commercial" src="/assets/desktop-menu-images/commercial-carpet-cleaning-services.jpg" alt="commercial-carpet-cleaning-services" closeMenu={props.closeMenu}>Commercial carpet cleaning</DropdownMenuItem>
-          <DropdownMenuItem href="/professional-carpet-cleaning-services/residential" src="/assets/desktop-menu-images/residential-carpet-cleaning-services.jpg" alt="residential-carpet-cleaning-services" closeMenu={props.closeMenu}>Residential carpet cleaning</DropdownMenuItem>
+          <DropdownMenuItem href="/stain-protection-services" src="/assets/desktop-menu-images/stain-protection-services.jpeg" alt="stain-protection-services" closeMenu={props.closeMenu}>Carpet stain protection</DropdownMenuItem>
+          <DropdownMenuItem href="/professional-carpet-cleaning-services/commercial" src="/assets/desktop-menu-images/commercial-carpet-cleaning-services.jpeg" alt="commercial-carpet-cleaning-services" closeMenu={props.closeMenu}>Commercial carpet cleaning</DropdownMenuItem>
+          <DropdownMenuItem href="/professional-carpet-cleaning-services/residential" src="/assets/desktop-menu-images/residential-carpet-cleaning-services.jpeg" alt="residential-carpet-cleaning-services" closeMenu={props.closeMenu}>Residential carpet cleaning</DropdownMenuItem>
         </div>
         <div class="flex flex-row flex-wrap hidden flex-items-center flex-content-center flex-justify-center">
-          <DropdownMenuItem href="/professional-carpet-cleaning-services/commercial/office" src="/assets/desktop-menu-images/commercial-office-carpet-cleaning.jpg" alt="commercial-office-carpet-cleaning" closeMenu={props.closeMenu}>Office carpet cleaning</DropdownMenuItem>
+          <DropdownMenuItem href="/professional-carpet-cleaning-services/commercial/office" src="/assets/desktop-menu-images/commercial-office-carpet-cleaning.jpeg" alt="commercial-office-carpet-cleaning" closeMenu={props.closeMenu}>Office carpet cleaning</DropdownMenuItem>
         </div>
       </div>
       <div class="flex flex-col flex-wrap">
@@ -408,10 +408,10 @@ function DropDownMenuDesktop(props: { closeMenu: () => void }) {
         <div class="flex flex-row flex-wrap hidden flex-items-center flex-content-center">
           <DropdownMenuItem href="/professional-upholstery-cleaning-services/mattress" src="/assets/desktop-menu-images/mattress-cleaning-services.jpg" alt="mattress-cleaning-services" closeMenu={props.closeMenu}>Mattress cleaning</DropdownMenuItem>
           <DropdownMenuItem href="/professional-upholstery-cleaning-services/pillow" src="/assets/desktop-menu-images/pillow-cleaning-service.jpg" alt="pillow-cleaning-service" closeMenu={props.closeMenu}>Pillow cleaning</DropdownMenuItem>
-          <DropdownMenuItem href="/professional-stain-removal-services" src="/assets/desktop-menu-images/professional-stain-removal-service.jpg" alt="professional-stain-removal-service" closeMenu={props.closeMenu}>Upholstery stain removal</DropdownMenuItem>
+          <DropdownMenuItem href="/professional-stain-removal-services" src="/assets/desktop-menu-images/professional-stain-removal-service.jpeg" alt="professional-stain-removal-service" closeMenu={props.closeMenu}>Upholstery stain removal</DropdownMenuItem>
         </div>
         <div class="flex flex-row flex-wrap hidden flex-items-center flex-content-center flex-justify-center">
-          <DropdownMenuItem href="/stain-protection-services" src="/assets/desktop-menu-images/stain-protection-services.jpg" alt="stain-protection-services" closeMenu={props.closeMenu}>Upholstery stain protection</DropdownMenuItem>
+          <DropdownMenuItem href="/stain-protection-services" src="/assets/desktop-menu-images/stain-protection-services.jpeg" alt="stain-protection-services" closeMenu={props.closeMenu}>Upholstery stain protection</DropdownMenuItem>
         </div>
       </div>
       <div class="flex flex-col">
@@ -420,10 +420,10 @@ function DropDownMenuDesktop(props: { closeMenu: () => void }) {
           <div class="flex flex-row flex-wrap hidden flex-items-center flex-content-center">
             <DropdownMenuItem href="/professional-rug-cleaning-services/steam" src="/assets/desktop-menu-images/rug-steam-cleaning-service.jpg" alt="rug-steam-cleaning-service" closeMenu={props.closeMenu}>Rug steam cleaning</DropdownMenuItem>
             <DropdownMenuItem href="/professional-rug-cleaning-services/dry" src="/assets/desktop-menu-images/dry-rug-cleaning-service.jpg" alt="dry-rug-cleaning-service" closeMenu={props.closeMenu}>Dry rug cleaning</DropdownMenuItem>
-            <DropdownMenuItem href="/professional-stain-removal-services" src="/assets/desktop-menu-images/professional-stain-removal-service.jpg" alt="professional-stain-removal-service" closeMenu={props.closeMenu}>Rug stain removal</DropdownMenuItem>
+            <DropdownMenuItem href="/professional-stain-removal-services" src="/assets/desktop-menu-images/professional-stain-removal-service.jpeg" alt="professional-stain-removal-service" closeMenu={props.closeMenu}>Rug stain removal</DropdownMenuItem>
           </div>
           <div class="flex flex-row flex-wrap hidden flex-items-center flex-content-center flex-justify-center">
-            <DropdownMenuItem href="/stain-protection-services" src="/assets/desktop-menu-images/stain-protection-services.jpg" alt="stain-protection-services" closeMenu={props.closeMenu}>Rug stain protection</DropdownMenuItem>
+            <DropdownMenuItem href="/stain-protection-services" src="/assets/desktop-menu-images/stain-protection-services.jpeg" alt="stain-protection-services" closeMenu={props.closeMenu}>Rug stain protection</DropdownMenuItem>
           </div>
         </div>
         <div class="flex flex-col flex-wrap">
@@ -505,7 +505,7 @@ export default function LayoutDefault(props: { children?: JSX.Element }) {
               </div>
             </div>
           </div>
-          <div class="flex flex-col gap-5 md-gap-8 flex-wrap line-height-0 my-5">
+          <div class="flex flex-col gap-5 md-gap-7 flex-wrap line-height-0 my-5">
             <h3 class="important-font-size-4.5 md-font-size-4.5 uppercase font-letter tracking-widest mt-0 mb-2 c-paper font-600">Our most popular services</h3>
             <MainFooterMenuItem href="/professional-carpet-cleaning-services">Professional Carpet Cleaning Services</MainFooterMenuItem>
             <MainFooterMenuItem href="/professional-upholstery-cleaning-services">Professional Upholstery Cleaning Services</MainFooterMenuItem>
@@ -513,7 +513,7 @@ export default function LayoutDefault(props: { children?: JSX.Element }) {
             <MainFooterMenuItem href="/professional-carpet-cleaning-services/steam">Professional Steam Carpet Cleaning Services</MainFooterMenuItem>
             <MainFooterMenuItem href="/professional-stain-removal-services">Professional Stain Removal Services</MainFooterMenuItem>
           </div>
-          <div class="flex flex-col gap-5 flex-wrap line-height-0 my-5">
+          <div class="flex flex-col gap-2 flex-wrap line-height-0 my-5">
             <h3 class="important-font-size-4.5 md-font-size-4.5 uppercase font-letter tracking-widest mt-0 mb-2 c-paper font-600">Menu</h3>
             <MainFooterMenuItem href="/">Home</MainFooterMenuItem>
             <MainFooterMenuItem href="/services">Services</MainFooterMenuItem>
@@ -571,7 +571,7 @@ function Logo() {
   return (
     <div class="flex items-center justify-center md-pl-4 pl-0 z-99">
       <a href="/">
-        <img src="/assets/FCC_2024_png.png" class="lg-w-22 w-20 md-ml-10 ml-3 mt-7" />
+        <img src="/assets/FCC_2024_png.png" class="lg-w-22 w-20 md-ml-10 ml-3 mt-7" alt="fine-carpet-cleaning-logo" />
       </a>
     </div>
   );
@@ -636,7 +636,7 @@ function MainFooter(props: { children: JSX.Element }) {
 }
 
 function MainFooterMenuItem(props: { href: string, children: JSX.Element }) {
-  return <a href={props.href} class="c-#9fcdb0 hover-color-paper:hover font-normal lg-font-size-4 md-font-size-4 font-size-4.5 lg-py-1 md-py-2 py-1 font-sans">{props.children}</a>
+  return <a href={props.href} class="line-height-7 text-left c-#9fcdb0 hover-color-paper:hover font-normal font-size-4 font-sans">{props.children}</a>
 }
 
 function BottomFooterMenuItem(props: { href: string, children: JSX.Element }) {
