@@ -5,10 +5,10 @@ import Layout from "../../../layouts/LayoutDefault";
 
 // Default config (can be overridden by pages)
 export default {
-  Head,
+  Head: <Head allowRobots={true}/>,
   // <title>
-  title: "Eco friendly carpet cleaning services in London - Fine Carpet Cleaning",
-  description: "Fine Carpet Cleaning provides eco-friendly carpet cleaning services in London. Perfect hygiene without extra costs.",
+  title: "Dry carpet cleaning services in London - Fine carpet cleaning",
+  description: "Revitalize your carpets with our dry carpet cleaning services. Еffective stain removal and odor elimination.",
   // <meta name="description">
   extends: vikeSolid,
 } satisfies Config;

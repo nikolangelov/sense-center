@@ -5,10 +5,10 @@ import Layout from "../../layouts/LayoutDefault";
 
 // Default config (can be overridden by pages)
 export default {
-  Head,
+  Head: <Head allowRobots={false}/>,
   // <title>
-  title: "Contact us - Fine carpet cleaning",
-  description: "Fine carpet cleaning offers carpet, upholstery and stain cleaning. Contact us if you need professional cleaning.",
+  title: "Learn more about us - Fine carpet cleaning",
+  description: "Want to learn more about us? Here you will find information about our team and their vision for the carpet cleaning business.",
   // <meta name="description">
   extends: vikeSolid,
 } satisfies Config;

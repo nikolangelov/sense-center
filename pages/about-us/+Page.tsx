@@ -53,7 +53,7 @@ export default function Page() {
 
         <FleurDivider></FleurDivider>
 
-        <AnimatedH2>Our accreditations</AnimatedH2>
+        <h2>Our accreditations</h2>
 
         <h3 style="font-family: 'Mona-Sans', sans-serif;" class="mt-15 mb-15">“Fine Carpet Cleaning” Ltd. is a qualified member of "<a class="color-paper-link hover-color-paper-link-hover:hover" href="https://trustedlocalcleaners.ncca.co.uk/listing/fine-carpet-cleaning-ltd/" target="_blank" rel="noopener">NCCA</a>" (National Carpet Cleaners Association)</h3>
 
@@ -129,7 +129,7 @@ export default function Page() {
 
         <FleurDivider></FleurDivider>
 
-        <AnimatedH2>Equipment and products we use</AnimatedH2>
+        <h2>Equipment and products we use</h2>
 
         <GallerySlider>
           <img src="/assets/about-us/equipment-1.jpg" alt="equipment-1" />
@@ -160,7 +160,7 @@ export default function Page() {
 
         <FleurDivider></FleurDivider>
 
-        <AnimatedH2>What our customers say about us</AnimatedH2>
+        <h2>What our customers say about us</h2>
 
         <ReviewSlider>
           <StarReview

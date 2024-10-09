@@ -5,7 +5,7 @@ import Layout from "../../layouts/LayoutDefault";
 
 // Default config (can be overridden by pages)
 export default {
-  Head,
+  Head: <Head allowRobots={true}/>,
   // <title>
   title: "Professional stain removal services in London - Fine Carpet Cleaning",
   description: "Fine Carpet Cleaning performs Professional Stain Removal Services. Attention to detail and commitment to excellence, we guarantee complete stain removal.",

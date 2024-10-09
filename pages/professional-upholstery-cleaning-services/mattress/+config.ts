@@ -5,7 +5,7 @@ import Layout from "../../../layouts/LayoutDefault";
 
 // Default config (can be overridden by pages)
 export default {
-  Head,
+  Head: <Head allowRobots={true}/>,
   // <title>
   title: "Mattress cleaning services in London  - Fine Carpet Cleaning",
   description: "Fine carpet cleaning performs the mattress cleaning service. Cleaner and healthier sleep. Call us today!",

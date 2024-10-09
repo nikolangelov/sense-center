@@ -5,7 +5,7 @@ import Layout from "../../../../layouts/LayoutDefault";
 
 // Default config (can be overridden by pages)
 export default {
-  Head,
+  Head: <Head allowRobots={true}/>,
   // <title>
   title: "Professional leather sofa cleaning services in London",
   description: "Fine Carpet Cleaning provides Professional Leather Sofa Cleaning services in London. Call us today!",

@@ -5,10 +5,10 @@ import Layout from "../../layouts/LayoutDefault";
 
 // Default config (can be overridden by pages)
 export default {
-  Head,
+  Head: <Head allowRobots={true}/>,
   // <title>
-  title: "Antiviral sanitisation services in London - Fine Carpet Cleaning",
-  description: "Fine Carpet Cleaning carry out Antiviral sanitisation services in London. Our team uses state-of-the-art techniques to destroy harmful viruses and bacteria.",
+  title: "Contact us - Fine carpet cleaning",
+  description: "Fine carpet cleaning offers carpet, upholstery and stain cleaning. Contact us if you need professional cleaning.",
   // <meta name="description">
   extends: vikeSolid,
 } satisfies Config;

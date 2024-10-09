@@ -5,7 +5,7 @@ import Layout from "../../../layouts/LayoutDefault";
 
 // Default config (can be overridden by pages)
 export default {
-  Head,
+  Head: <Head allowRobots={true}/>,
   // <title>
   title: "Professional sofa cleaning services in London",
   description: "Restore the beauty of your sofa with our professional cleaning services in London. We guarantee thorough cleaning without compromise.",

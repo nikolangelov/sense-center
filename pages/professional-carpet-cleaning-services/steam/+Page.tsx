@@ -98,7 +98,7 @@ function FaqSection() {
       </ul>
       <li>
         <Typography variant="h3">10. How soon can I expect a cleaner to visit me?</Typography>
-        <Typography variant="body">We will try to get you an appointment as soon as possible. Usually, we are fully booked for 3 days ahead, but sometimes there are exceptions.</Typography></li>
+        <Typography variant="body">We will try to get you an appointment as soon as possible. Usually, we are fully booked for 3 days aHead: <Head allowRobots={true}/>, but sometimes there are exceptions.</Typography></li>
       <li>
         <Typography variant="h3">11. Can you give me a quote over the phone or do you need to visit my property?</Typography>
         <Typography variant="body">We can provide an estimate over the phone for residential properties. Commercial properties may require a site visit. You can also get an online quote for our steam extraction carpet cleaning services.</Typography></li>

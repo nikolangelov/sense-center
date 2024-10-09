@@ -126,7 +126,7 @@ function FaqSection() {
             <li>
                 <Typography variant="h3">10. How soon can I expect a cleaner to visit me?</Typography>
                 <Typography variant="body">We will try to get you an appointment as soon as possible. Usually, we are
-                    fully booked for 3 days ahead, but sometimes there are exceptions.</Typography></li>
+                    fully booked for 3 days aHead: <Head allowRobots={true}/>, but sometimes there are exceptions.</Typography></li>
             <li>
                 <Typography variant="h3">11. Can you give me a carpet cleaning quote over the phone or do you need to visit my
                     property?</Typography>

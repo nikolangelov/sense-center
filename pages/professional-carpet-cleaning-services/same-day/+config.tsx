@@ -5,7 +5,7 @@ import Layout from "../../../layouts/LayoutDefault";
 
 // Default config (can be overridden by pages)
 export default {
-  Head,
+  Head: <Head allowRobots={true}/>,
   // <title>
   title: "Same day carpet cleaning in London - Fine carpet cleaning",
   description: "Need a quick and efficient solution to your carpet cleaning problems? Our same day carpet cleaning service is here to save the day!",

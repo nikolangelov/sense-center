@@ -7,8 +7,8 @@ import Layout from "../../layouts/LayoutDefault";
 export default {
   Head: <Head allowRobots={true}/>,
   // <title>
-  title: "Professional upholstery cleaning services: Refresh Your Space",
-  description: "Fine Carpet Cleaning carry out professional upholstery cleaning services throughout London. Contact us now for a fresher and cleaner home or office.",
+  title: "Professional carpet cleaning services in London - Fine carpet cleaning",
+  description: "Fine Carpet Cleaning carry out professional carpet cleaning services in London. We guarantee thorough cleaning without compromise. Call us today!",
   // <meta name="description">
   extends: vikeSolid,
 } satisfies Config;

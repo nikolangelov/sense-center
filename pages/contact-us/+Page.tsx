@@ -220,15 +220,15 @@ export default function Page() {
           <div class="font-sans font-500 font-size-4.5 md-font-size-5">078 7433 3356</div>
         </div>
         <hr class="w-90% h-2px b-hidden bg-paper-border" />
-        <div class="flex flex-justify-between pt-3 pb-7 md-pb-3 md-py-2 px-1 w-90% m-auto">
+        <div class="flex flex-justify-between pt-3 pb-7 md-pb-9 md-py-2 px-1 w-90% m-auto">
           <div class="font-sans font-500 font-size-4.5 md-font-size-5 uppercase">Message Whatsapp:</div>
           <div class="font-sans font-500 font-size-4.5 md-font-size-5 whitespace-nowrap"><a class="color-paper-link-hover hover-color-paper-link:hover" href="https://wa.me/+447874333356" target="_blank" rel="noopener">078 7433 3356</a></div>
         </div>
-        <hr class="w-90% md-block hidden h-2px b-hidden bg-paper-border" />
+        { /* <hr class="w-90% md-block hidden h-2px b-hidden bg-paper-border" />
         <div class="md-flex hidden flex-col flex-justify-center py-3 md-py-2 w-90% m-auto">
           <div class="font-sans font-500 font-size-4.5 md-font-size-5 uppercase mx-auto mb-7 mt-4">Message Whatsapp:</div>
           <img src="/assets/my-qr-code-2-1024.png" alt="QR code" class="md-w-15% w-30% mx-auto mb-5" />
-        </div>
+        </div> */}
       </div>
 
       <FleurDivider></FleurDivider>
