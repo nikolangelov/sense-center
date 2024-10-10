@@ -489,8 +489,8 @@ export default function LayoutDefault(props: { children?: JSX.Element }) {
             <div class="flex flex-items-center gap-2">
               <RiPhoneFill class="w-10 h-10 c-paper" />
               <div class="flex flex-col line-height-none">
-                <PhoneMailMenuItem href="tel:07874 333 356">07874 333 356</PhoneMailMenuItem>
-                <PhoneMailMenuItem href="tel:07874 333 356">02036 370 033</PhoneMailMenuItem>
+                <PhoneMailMenuItem href="tel:+44 7874 333 356">07874 333 356</PhoneMailMenuItem>
+                <PhoneMailMenuItem href="tel:+44 7874 333 356">02036 370 033</PhoneMailMenuItem>
               </div>
             </div>
             <div class="flex flex-items-center gap-2">
