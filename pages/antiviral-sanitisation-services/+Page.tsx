@@ -1,12 +1,10 @@
-import RiArrowRightSLine from '~icons/ri/arrow-right-s-line';
-import RiArrowLeftSLine from '~icons/ri/arrow-left-s-line';
 import "solid-slider/slider.css";
 import {FacebookLikeGallery} from '../../components/FacebookLikeGallery';
-import {createSlider, Slider, SliderButton, SliderProvider} from 'solid-slider';
 import {createCollapsable} from '../../components/Collapsable';
 import {Typography} from '../../components/Typography';
 import {ReviewSlider, StarReview} from '../../components/ReviewSlider';
 import {PriceTable} from '../../components/PriceTable';
+import {Head} from 'vike-solid/Head'
 
 const VideoPlayer = () => {
   return (
@@ -18,48 +16,6 @@ const VideoPlayer = () => {
         allow="autoplay; encrypted-media"
       ></iframe>
     </div>
-  );
-};
-
-const GalerrySliderDesktop = () => {
-  const options = { duration: 1000 };
-  const [slider, { current, next, prev, moveTo }] = createSlider(options);
-  return (
-    <SliderProvider>
-      <div class="max-w-1000px m-auto position-relative hidden md-block">
-        <Slider options={{ loop: true, slides: { perView: 3, spacing: 10 } }}>
-          <img src="/assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" />
-          <img src="/assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" />
-          <img src="/assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" />
-          <img src="/assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" />
-          <img src="/assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" />
-          <img src="/assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" />
-        </Slider>
-        <SliderButton class="cursor-pointer position-absolute top-41% left-0 bg-paper-inv bg-op-50 b-rd-bl-1 b-rd-tl-1 b-none px-0 py-1.5" prev><RiArrowLeftSLine class="-ml-1 font-size-10 c-paper hover-c-brand-light:hover transition-colors" /></SliderButton>
-        <SliderButton class="cursor-pointer position-absolute top-41% right-0 bg-paper-inv bg-op-50 b-rd-br-1 b-rd-tr-1 b-none px-0 py-1.5" next><RiArrowRightSLine class="-mr-1 font-size-10 c-paper hover-c-brand-light:hover transition-colors" /></SliderButton>
-      </div>
-    </SliderProvider>
-  );
-};
-
-const GalerrySliderMobile = () => {
-  const options = { duration: 1000 };
-  const [slider, { current, next, prev, moveTo }] = createSlider(options);
-  return (
-    <SliderProvider>
-      <div class="max-w-1000px m-auto position-relative md-hidden block">
-        <Slider options={{ loop: true }}>
-          <img src="/assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" />
-          <img src="/assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" />
-          <img src="/assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" />
-          <img src="/assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" />
-          <img src="/assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" />
-          <img src="/assets/Професионално почистване на филтри на аспирации на ресторанти.jpg" />
-        </Slider>
-        <SliderButton class="cursor-pointer position-absolute top-41% left-0 bg-paper-inv bg-op-50 b-rd-bl-1 b-rd-tl-1 b-none px-0 py-1.5" prev><RiArrowLeftSLine class="-ml-1 font-size-10 c-paper hover-c-brand-light:hover transition-colors" /></SliderButton>
-        <SliderButton class="cursor-pointer position-absolute top-41% right-0 bg-paper-inv bg-op-50 b-rd-br-1 b-rd-tr-1 b-none px-0 py-1.5" next><RiArrowRightSLine class="-mr-1 font-size-10 c-paper hover-c-brand-light:hover transition-colors" /></SliderButton>
-      </div>
-    </SliderProvider>
   );
 };
 

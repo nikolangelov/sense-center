@@ -4,7 +4,6 @@ import Head from "../../../layouts/Head";
 
 // Default config (can be overridden by pages)
 export default {
-  Head: <Head allowRobots={true}/>,
   // <title>
   title: "Pillow cleaning services in London - Fine Carpet Cleaning",
   description: "Refresh your cushions with our professional cleaning services. Contact us today to enjoy a cleaner and healthier sleeping environment.",

@@ -1,14 +1,5 @@
 import {createSignal} from 'solid-js';
-
-function FleurDivider() {
-  return (
-    <div class="m-auto my-30 md-my-36 position-relative w-80%">
-      <div class="divider-shadow overflow-hidden h-0.5 after-block::after after-w-full::after after-h-6::after after-mx-auto::after after-mt--6::after"></div>
-      <div class="w-11 h-11 position-absolute position-bottom--6 left-47% bg-#f7f7f7"><img class="position-absolute max-w-7 mx-1.8" src="/assets/output-onlinepngtools.png" /></div>
-    </div>
-  );
-}
-
+import { Head } from 'vike-solid/Head';
 export default function Page() {
   const [email, setEmail] = createSignal('');
   const [name, setName] = createSignal('');
@@ -50,6 +41,7 @@ export default function Page() {
 
   return (
     <>
+      <Head><meta name="robots" content="noindex"/></Head>
       <h1 class="mt-17 font-size-14 md-font-size-16 md-line-height-18 line-height-16">Feedback</h1>
 
       <div class="mt-20 py-8 px-8 md-px-14 b-rd-3 bg-paper line-height-8 text-justify font-size-4.4" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 10%);">If you have suggestions on how we can improve, please do not hesitate to leave us feedback! Your opinion is very valuable to us and it will be read directly by the owner.</div>

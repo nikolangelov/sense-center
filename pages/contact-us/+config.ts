@@ -4,7 +4,6 @@ import Head from "../../layouts/Head";
 
 // Default config (can be overridden by pages)
 export default {
-  Head: <Head allowRobots={true}/>,
   // <title>
   title: "Contact us - Fine carpet cleaning",
   description: "Fine carpet cleaning offers carpet, upholstery and stain cleaning. Contact us if you need professional cleaning.",

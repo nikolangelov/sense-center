@@ -1,3 +1,5 @@
+import { Head } from "vike-solid/Head";
+
 function FleurDivider() {
     return (
         <div class="m-auto my-30 md-my-36 position-relative w-80%">
@@ -27,6 +29,7 @@ function AllServicesButton(props: { href: string; src: string; alt: string; chil
 export default function Page() {
     return (
         <>
+            <Head><meta name="robots" content="noindex"/></Head>
 
             <h1 class="md-mt-20 mt-10 md-mb-25 mb-0">Blog</h1>
 

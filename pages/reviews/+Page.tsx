@@ -1,6 +1,7 @@
 import "solid-slider/slider.css";
 import {createSignal, Show} from 'solid-js';
 import range from "lodash/range"
+import { Head } from "vike-solid/Head";
 
 function FleurDivider() {
   return (
@@ -122,6 +123,7 @@ export default function Page() {
   const [filterStars, setFilterStars] = createSignal<number | undefined>()
   return (
     <>
+      <Head><meta name="robots" content="noindex"/></Head>
       <h1>What our clients say about us</h1>
 
       <ButtonsFilterReviews

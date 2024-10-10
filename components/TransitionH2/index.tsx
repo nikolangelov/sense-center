@@ -3,8 +3,8 @@ import {createSignal, Match, onCleanup, onMount, Switch} from "solid-js";
 export const AnimatedH2 = ({
   children,
   class: className,
-  variant,
-}: { children: string, class?: string, variant: "h1" | "h2" }) => {
+  variant = "h2",
+}: { children: string, class?: string, variant?: "h1" | "h2" }) => {
   const [isVisible, setIsVisible] = createSignal(false);
 
   let headingRef: HTMLHeadingElement | undefined;

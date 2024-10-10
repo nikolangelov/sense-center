@@ -1,6 +1,7 @@
 import "solid-slider/slider.css";
 import {ReviewSlider, StarReview} from '../../components/ReviewSlider';
 import {GallerySlider} from '../../components/GallerySlider';
+import { Head } from 'vike-solid/Head'
 
 function FleurDivider() {
   return (
@@ -15,6 +16,7 @@ export default function Page() {
 
   return (
     <>
+        <Head><meta name="robots" content="noindex"/></Head>
         <h1 class="mt-10 md-mt-17 font-size-14 md-font-size-16 md-line-height-18 line-height-16">Who are we?</h1>
 
         <div class="mt-20">

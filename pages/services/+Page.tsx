@@ -1,3 +1,5 @@
+import { Head } from "vike-solid/Head";
+
 function FleurDivider() {
   return (
     <div class="m-auto my-30 md-my-36 position-relative w-80%">
@@ -29,6 +31,7 @@ function AllServicesButtonContainer(props: { children: HTMLElement | any }) {
 export default function Page() {
   return (
     <>
+        <Head><meta name="robots" content="noindex"/></Head>
       <h1 class="md-mt-20 mt-10 md-mb-25 mb-0">All services we offer</h1>
       <a href="/professional-carpet-cleaning-services"><h2 class="hover-c-brand:hover md-mb-15 mb-5">Carpet cleaning services</h2></a>
 

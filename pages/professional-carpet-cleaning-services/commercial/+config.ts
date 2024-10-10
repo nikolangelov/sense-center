@@ -4,10 +4,9 @@ import Head from "../../../layouts/Head";
 
 // Default config (can be overridden by pages)
 export default {
-  Head: <Head allowRobots={true}/>,
   // <title>
-  title: "Dry carpet cleaning services in London - Fine carpet cleaning",
-  description: "Revitalize your carpets with our dry carpet cleaning services. Еffective stain removal and odor elimination.",
+  title: "Commercial carpet cleaning services - Fine carpet cleaning",
+  description: "Commercial carpet cleaning services in London. The best, fast and efficient services at low prices. Call us today!",
   // <meta name="description">
   extends: vikeSolid,
 } satisfies Config;

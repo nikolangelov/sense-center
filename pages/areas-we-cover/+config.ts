@@ -1,12 +1,11 @@
 import vikeSolid from "vike-solid/config";
 import type {Config} from "vike/types";
-import Head from "../../../../layouts/Head";
 
 // Default config (can be overridden by pages)
 export default {
   // <title>
-  title: "Professional leather sofa cleaning services in London",
-  description: "Fine Carpet Cleaning provides Professional Leather Sofa Cleaning services in London. Call us today!",
+  title: "The best carpet cleaning services in London - Fine carpet cleaning",
+  description: "No matter where you are, our services come to you. Call us today!",
   // <meta name="description">
   extends: vikeSolid,
 } satisfies Config;

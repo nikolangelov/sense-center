@@ -2,6 +2,7 @@ import "solid-slider/slider.css";
 import {createSignal, Show} from 'solid-js';
 import RiCloseFill from '~icons/ri/close-fill';
 import {AnimatedH2} from '../../components/TransitionH2';
+import { Head } from "vike-solid/Head";
 
 function FleurDivider() {
   return (
@@ -48,7 +49,7 @@ function ButtonContainer(props: { children: HTMLElement | any }) {
 export default function Page() {
   return (
     <>
-
+      <Head><meta name="robots" content="noindex"/></Head>
       <h1 class="mt-17 font-size-14 md-font-size-16 md-line-height-18 line-height-16">Areas we cover</h1>
 
       <FullScreenImageGallery />

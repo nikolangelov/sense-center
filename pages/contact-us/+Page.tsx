@@ -1,4 +1,5 @@
 import {createSignal} from 'solid-js';
+import { Head } from 'vike-solid/Head';
 
 function FleurDivider() {
   return (

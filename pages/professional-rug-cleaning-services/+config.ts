@@ -4,7 +4,6 @@ import Head from "../../layouts/Head";
 
 // Default config (can be overridden by pages)
 export default {
-  Head: <Head allowRobots={true}/>,
   // <title>
   title: "Professional rug cleaning services in London",
   description: "Fine Carpet Cleaning provides Professional rug cleaning services in London.Trust us to handle your carpets carefully, quickly and expertly.",

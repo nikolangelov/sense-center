@@ -4,10 +4,9 @@ import Head from "../../layouts/Head";
 
 // Default config (can be overridden by pages)
 export default {
-  Head: <Head allowRobots={false}/>,
   // <title>
-  title: "All carpet cleaning services - Fine carpet cleaning",
-  description: "Fine carpet cleaning specializes in cleaning carpets, upholstery and stains. We serve clients across London.",
+  title: "Reviews from our customers - Fine carpet cleaning",
+  description: "Fine carpet cleaning has carried out cleaning services for dozens of carpets throughout London. You can see their reviews of our work here.",
   // <meta name="description">
   extends: vikeSolid,
 } satisfies Config;
