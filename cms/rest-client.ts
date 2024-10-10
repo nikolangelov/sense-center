@@ -1,5 +1,5 @@
-import { createClient } from "payload-rest-client";
-import { Config } from "./payload-types";
+import {createClient} from "payload-rest-client";
+import {Config} from "./payload-types";
 import path from "node:path"; // auto generated types from payload
 
 type Locales = "bg";

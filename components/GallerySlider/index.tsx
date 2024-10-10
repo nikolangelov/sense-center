@@ -1,7 +1,7 @@
-import { createSlider, Slider, SliderButton, SliderProvider } from "solid-slider";
+import {createSlider, Slider, SliderButton, SliderProvider} from "solid-slider";
 import RiArrowRightSLine from '~icons/ri/arrow-right-s-line';
 import RiArrowLeftSLine from '~icons/ri/arrow-left-s-line';
-import { createSignal, onCleanup, onMount, JSX } from "solid-js";
+import {createSignal, JSX, onCleanup, onMount} from "solid-js";
 
 export const GallerySlider = ({ children }: { children: JSX.Element | JSX.Element[] }) => {
 	const [isDesktop, setIsDesktop] = createSignal(false);

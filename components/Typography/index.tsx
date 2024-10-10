@@ -1,4 +1,4 @@
-import { JSX, Match, Switch } from 'solid-js';
+import {JSX, Match, Switch} from 'solid-js';
 
 export function Typography({ variant, children }: { variant: "body" | "h3" | "li", children: JSX.Element }) {
     return (

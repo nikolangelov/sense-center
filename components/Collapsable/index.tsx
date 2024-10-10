@@ -1,4 +1,4 @@
-import { createSignal, JSX, Show } from "solid-js"
+import {createSignal, JSX, Show} from "solid-js"
 
 type CollapsableComponents = {
   Container: (props: { children: JSX.Element[] }) => JSX.Element

@@ -1,8 +1,7 @@
 import "solid-slider/slider.css";
-import { createSignal, Show } from 'solid-js';
+import {createSignal, Show} from 'solid-js';
 import RiCloseFill from '~icons/ri/close-fill';
-import { MetaProvider, Meta } from "solid-meta";
-import { AnimatedH2 } from '../../components/TransitionH2';
+import {AnimatedH2} from '../../components/TransitionH2';
 
 function FleurDivider() {
   return (

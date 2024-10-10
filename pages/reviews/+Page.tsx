@@ -1,7 +1,6 @@
 import "solid-slider/slider.css";
-import { createSignal, Show } from 'solid-js';
+import {createSignal, Show} from 'solid-js';
 import range from "lodash/range"
-import { MetaProvider, Meta } from "solid-meta";
 
 function FleurDivider() {
   return (

@@ -1,4 +1,4 @@
-import { createSignal, onMount, onCleanup, Switch, Match } from "solid-js";
+import {createSignal, Match, onCleanup, onMount, Switch} from "solid-js";
 
 export const AnimatedH2 = ({
   children,

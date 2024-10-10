@@ -1,12 +1,10 @@
-
 import RiCloseFill from '~icons/ri/close-fill';
 import "solid-slider/slider.css";
-import { createSignal, JSX, onCleanup, Show } from 'solid-js';
-import { createCollapsable } from "../../components/Collapsable";
-import { Typography } from '../../components/Typography';
-import { ReviewSlider, StarReview } from '../../components/ReviewSlider';
-import { AnimatedH2 } from '../../components/TransitionH2';
-import { GallerySlider } from '../../components/GallerySlider';
+import {createSignal, Show} from 'solid-js';
+import {createCollapsable} from "../../components/Collapsable";
+import {Typography} from '../../components/Typography';
+import {ReviewSlider, StarReview} from '../../components/ReviewSlider';
+import {GallerySlider} from '../../components/GallerySlider';
 
 function FleurDivider() {
 	return (

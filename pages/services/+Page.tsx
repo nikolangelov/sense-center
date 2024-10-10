@@ -1,5 +1,3 @@
-import { MetaProvider, Meta } from "solid-meta";
-
 function FleurDivider() {
   return (
     <div class="m-auto my-30 md-my-36 position-relative w-80%">

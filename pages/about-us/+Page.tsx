@@ -1,13 +1,6 @@
-import RiArrowRightSLine from '~icons/ri/arrow-right-s-line';
-import RiArrowLeftSLine from '~icons/ri/arrow-left-s-line';
 import "solid-slider/slider.css";
-import { createSlider, Slider, SliderButton, SliderProvider } from 'solid-slider';
-import { ReviewSlider, StarReview } from '../../components/ReviewSlider';
-import { createSignal, JSX, onCleanup, onMount } from 'solid-js';
-import { MetaProvider, Meta } from 'solid-meta';
-import { createEffect } from 'solid-js';
-import { AnimatedH2 } from '../../components/TransitionH2';
-import { GallerySlider } from '../../components/GallerySlider';
+import {ReviewSlider, StarReview} from '../../components/ReviewSlider';
+import {GallerySlider} from '../../components/GallerySlider';
 
 function FleurDivider() {
   return (

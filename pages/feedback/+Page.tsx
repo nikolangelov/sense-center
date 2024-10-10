@@ -1,7 +1,4 @@
-import emailjs from '@emailjs/browser';
-import { AnimatedH2 } from '../../components/TransitionH2';
-import { createSignal } from 'solid-js';
-import { Title, Meta, MetaProvider } from '@solidjs/meta';
+import {createSignal} from 'solid-js';
 
 function FleurDivider() {
   return (

@@ -1,6 +1,5 @@
 import "solid-slider/slider.css";
-import { MetaProvider, Meta } from "solid-meta";
-import { PriceTable } from '../../components/PriceTable';
+import {PriceTable} from '../../components/PriceTable';
 
 function FleurDivider() {
 	return (

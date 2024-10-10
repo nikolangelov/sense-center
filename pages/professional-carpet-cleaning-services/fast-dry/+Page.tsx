@@ -1,9 +1,9 @@
 import "solid-slider/slider.css";
-import { FacebookLikeGallery } from '../../../components/FacebookLikeGallery';
-import { createCollapsable } from '../../../components/Collapsable';
-import { Typography } from '../../../components/Typography';
-import { ReviewSlider, StarReview } from '../../../components/ReviewSlider';
-import { FOTSlider, FOTSliderContainer } from '../../../components/FrequentlyOrderedTogether';
+import {FacebookLikeGallery} from '../../../components/FacebookLikeGallery';
+import {createCollapsable} from '../../../components/Collapsable';
+import {Typography} from '../../../components/Typography';
+import {ReviewSlider, StarReview} from '../../../components/ReviewSlider';
+import {FOTSlider, FOTSliderContainer} from '../../../components/FrequentlyOrderedTogether';
 
 const VideoPlayer = () => {
   return (

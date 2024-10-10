@@ -1,6 +1,6 @@
 import 'uno.css'
 import "./style.css";
-import { children, createEffect, JSX, onCleanup, onMount, createSignal, Show } from "solid-js";
+import {children, createEffect, createSignal, JSX, onCleanup, onMount, Show} from "solid-js";
 import RiPhoneFill from '~icons/ri/phone-fill';
 import MdiClock from '~icons/mdi/clock';
 import MdiEmail from '~icons/mdi/email';

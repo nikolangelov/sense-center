@@ -1,6 +1,5 @@
-import { makePersisted } from "@solid-primitives/storage";
-import { createEffect, createSignal, Show } from "solid-js";
-
+import {makePersisted} from "@solid-primitives/storage";
+import {createEffect, createSignal, Show} from "solid-js";
 
 
 const [index, setIndex] = makePersisted(createSignal(0), { name: "RotatingBannersIndex" });

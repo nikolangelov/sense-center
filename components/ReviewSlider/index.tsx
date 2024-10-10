@@ -1,14 +1,10 @@
-import { JSX, onMount } from 'solid-js';
+import {createSignal, JSX, onCleanup, onMount} from 'solid-js';
 import range from "lodash/range"
-import { Slider, createSlider, SliderButton, SliderProvider } from "solid-slider";
+import {Slider, SliderButton, SliderProvider} from "solid-slider";
 import RiArrowRightSLine from '~icons/ri/arrow-right-s-line';
 import RiArrowLeftSLine from '~icons/ri/arrow-left-s-line';
-import { createSignal, onCleanup } from "solid-js";
 
 export const ReviewSlider = ({ children }: { children: JSX.Element | JSX.Element[] }) => {
-    const options = { duration: 1000 };
-    const [slider, { current, next, prev, moveTo }] = createSlider(options);
-
     const isDesktop = useMediaQuery("(min-width: 768px)");
 
     return (

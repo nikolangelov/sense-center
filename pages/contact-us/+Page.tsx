@@ -1,5 +1,4 @@
-import emailjs from '@emailjs/browser';
-import { createSignal } from 'solid-js';
+import {createSignal} from 'solid-js';
 
 function FleurDivider() {
   return (

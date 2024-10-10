@@ -1,13 +1,12 @@
 import RiArrowRightSLine from '~icons/ri/arrow-right-s-line';
 import RiArrowLeftSLine from '~icons/ri/arrow-left-s-line';
 import "solid-slider/slider.css";
-import { FacebookLikeGallery } from '../../components/FacebookLikeGallery';
-import { createSlider, Slider, SliderButton, SliderProvider } from 'solid-slider';
-import { RotatingBanners } from '../../components/RotatingBanners';
-import { createCollapsable } from '../../components/Collapsable';
-import { Typography } from '../../components/Typography';
-import { ReviewSlider, StarReview } from '../../components/ReviewSlider';
-import { PriceTable } from '../../components/PriceTable';
+import {FacebookLikeGallery} from '../../components/FacebookLikeGallery';
+import {createSlider, Slider, SliderButton, SliderProvider} from 'solid-slider';
+import {createCollapsable} from '../../components/Collapsable';
+import {Typography} from '../../components/Typography';
+import {ReviewSlider, StarReview} from '../../components/ReviewSlider';
+import {PriceTable} from '../../components/PriceTable';
 
 const VideoPlayer = () => {
   return (

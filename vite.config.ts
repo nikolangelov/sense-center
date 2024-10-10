@@ -1,12 +1,10 @@
-import { defineConfig } from "vite"
+import {defineConfig} from "vite"
 import vike from "vike/plugin";
 import vikeSolid from "vike-solid/vite";
 
-import { fileURLToPath, URL } from "node:url"
+import {fileURLToPath, URL} from "node:url"
 import Icons from "unplugin-icons/vite"
 import UnoCSS from 'unocss/vite'
-
-import solidPlugin from 'vite-plugin-solid';
 
 const isProduction = process.env.NODE_ENV === "production"
 

@@ -1,5 +1,5 @@
 import {createMemo, JSX} from "solid-js";
-import { usePageContext } from "vike-solid/usePageContext";
+import {usePageContext} from "vike-solid/usePageContext";
 
 export function Link(props: { href: string, newTab: boolean, children: JSX.Element }) {
   const pageContext = usePageContext();

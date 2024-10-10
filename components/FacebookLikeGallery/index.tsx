@@ -1,8 +1,9 @@
-import { createSignal, Show } from "solid-js";
-import { createSlider, Slider, SliderButton, SliderProvider } from "solid-slider";
+import {createSignal, Show} from "solid-js";
+import {Slider, SliderButton, SliderProvider} from "solid-slider";
 import RiArrowRightSLine from '~icons/ri/arrow-right-s-line';
 import RiArrowLeftSLine from '~icons/ri/arrow-left-s-line';
 import RiCloseFill from '~icons/ri/close-fill';
+
 export function FacebookLikeGallery(props: { imgs: { src: string, alt: string }[] }) {
     const [open, setOpen] = createSignal(false);
 
