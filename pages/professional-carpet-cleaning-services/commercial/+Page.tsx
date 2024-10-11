@@ -1,17 +1,18 @@
 import "solid-slider/slider.css";
-import {FacebookLikeGallery} from '../../../components/FacebookLikeGallery';
-import {Typography} from '../../../components/Typography';
-import {createCollapsable} from '../../../components/Collapsable';
-import {ReviewSlider, StarReview} from '../../../components/ReviewSlider';
-import {FOTSlider, FOTSliderContainer} from '../../../components/FrequentlyOrderedTogether';
-import {PriceTable} from '../../../components/PriceTable';
+import { FacebookLikeGallery } from '../../../components/FacebookLikeGallery';
+import { Typography } from '../../../components/Typography';
+import { createCollapsable } from '../../../components/Collapsable';
+import { ReviewSlider, StarReview } from '../../../components/ReviewSlider';
+import { FOTSlider, FOTSliderContainer } from '../../../components/FrequentlyOrderedTogether';
+import { PriceTable } from '../../../components/PriceTable';
+import { createEffect } from "solid-js";
 
 const VideoPlayer = () => {
   return (
     <div class="flex flex-justify-center flex-items-center mt-20">
       <iframe
-				class="mt-10 b-rd-3 h-200px md-h-500px"
-				style="width: 100%;"
+        class="mt-10 b-rd-3 h-200px md-h-500px"
+        style="width: 100%;"
         src="https://www.youtube.com/embed/l-8xVNxia5Q?autoplay=1&mute=1"
         allow="autoplay; encrypted-media"
       ></iframe>
@@ -263,9 +264,107 @@ function FaqSection() {
   </Container>
 }
 
+const JSONLDScript = () => {
+  createEffect(() => {
+    const script = document.createElement("script");
+    script.type = "application/ld+json";
+    script.text = JSON.stringify({
+      "@context": "https://schema.org/",
+      "@type": "Product",
+      "name": "Commercial carpet cleaning",
+      "image": "https://finecarpetcleaning.co.uk/assets/service-pics/commercial-carpet/commercial-carpet-cleaning-services.jpg",
+      "description": "Fine Carpet Cleaning offers professional commercial carpet cleaning services that enhance hygiene, prolong carpet life, and maintain a fresh appearance.",
+      "brand": {
+        "@type": "Brand",
+        "name": "Fine Carpet Cleaning"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.8",
+        "bestRating": "5",
+        "worstRating": "1",
+        "ratingCount": "131"
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://finecarpetcleaning.co.uk/commercial-carpet-cleaning"
+      },
+      "faq": {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Do you have a cancellation fee?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, if you cancel on the day of the cleaning, you will lose your deposit."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How long does carpet cleaning take?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "The duration depends on the cleaning method, the size of the area, and the level of soiling."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How long does it take for the carpet to dry?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Drying time varies: approximately 7-9 hours for steam cleaning and immediate for dry cleaning."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Will all stains be removed?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "While we strive to remove all stains, we cannot guarantee this due to factors like the stain's age and type."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How often should carpets be cleaned?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "We recommend cleaning every 3-6 months, depending on factors like foot traffic and carpet type."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What is the best method for cleaning carpets?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Common methods include steam cleaning and dry cleaning. We can advise on the best option for your needs."
+            }
+          }
+        ]
+      }
+    }
+    );
+    document.head.appendChild(script);
+  });
+
+  return null; // This component doesn't need to render anything visible
+};
+
 export default function Page() {
   return (
     <>
+
+      <JSONLDScript />
+
+      <noscript>
+        <iframe
+          src="https://www.googletagmanager.com/ns.html?id=GTM-PCFWNH5G"
+          height="0"
+          width="0"
+          style="display:none;visibility:hidden">
+        </iframe>
+      </noscript>
+
       <h1 class="mt-10 md-mt-17 font-size-12.5 md-font-size-16 md-line-height-18 line-height-16">Commercial carpet cleaning services</h1>
       <div class="flex flex-justify-center"><img class="b-rd-3 md-mt-10 mt-2 max-w-full" src="/assets/service-pics/commercial-carpet/commercial-carpet-cleaning-services.jpg" alt="commercial-carpet-cleaning-services" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 30%);" /></div>
 
@@ -479,22 +578,22 @@ export default function Page() {
 
           <li class="ml--5">
             <h3 class="ml--5 font-size-6 md-font-size-7">Fresh and clean carpet - mission possible!</h3>
-            </li>
-            </ol>
+          </li>
+        </ol>
 
-            <p>Here are some tips that will help you prolong the life of your carpet:</p>
-            <ul style="list-style: initial;" class="ml--5">
-              <li class="ml--5">
-                <p>If you spill something on the carpet, do not try to clean it up with anything because that will only make the situation worse. What you can do is soak up the liquid with kitchen paper.</p>
-              </li>
-              <li class="ml--5">
-                <p>The best way to maintain your carpet at home is to use a hoover with a beater at least once a week. This type of vacuum cleaner removes the dust from the carpet and return the natural fluffiness of the carpet.</p>
-              </li>
-              <li class="ml--5">
-                <p>The areas under the chairs are often worn. In order to prevent this, we recommend that you lay out a chair mat on the carpet.</p>
-              </li>
-            </ul>
-            <p>Our commercial carpet cleaning specialist suggests adding a stain protector to your carpet and upholstery for keeping the carpet fresh and clean. This can save you a considerable amount of money on professional stain removal services. If you are curious, we recommend that you find out <a class="color-paper-link hover-color-paper-link-hover:hover" href="/stain-protection-services">more about the benefits of stain protection services.</a></p>
+        <p>Here are some tips that will help you prolong the life of your carpet:</p>
+        <ul style="list-style: initial;" class="ml--5">
+          <li class="ml--5">
+            <p>If you spill something on the carpet, do not try to clean it up with anything because that will only make the situation worse. What you can do is soak up the liquid with kitchen paper.</p>
+          </li>
+          <li class="ml--5">
+            <p>The best way to maintain your carpet at home is to use a hoover with a beater at least once a week. This type of vacuum cleaner removes the dust from the carpet and return the natural fluffiness of the carpet.</p>
+          </li>
+          <li class="ml--5">
+            <p>The areas under the chairs are often worn. In order to prevent this, we recommend that you lay out a chair mat on the carpet.</p>
+          </li>
+        </ul>
+        <p>Our commercial carpet cleaning specialist suggests adding a stain protector to your carpet and upholstery for keeping the carpet fresh and clean. This can save you a considerable amount of money on professional stain removal services. If you are curious, we recommend that you find out <a class="color-paper-link hover-color-paper-link-hover:hover" href="/stain-protection-services">more about the benefits of stain protection services.</a></p>
       </div>
 
       <FleurDivider></FleurDivider>

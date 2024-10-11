@@ -5,6 +5,7 @@ import {Typography} from '../../../components/Typography';
 import {ReviewSlider, StarReview} from '../../../components/ReviewSlider';
 import {FOTSlider, FOTSliderContainer} from '../../../components/FrequentlyOrderedTogether';
 import {PriceTable} from '../../../components/PriceTable';
+import { createEffect } from "solid-js";
 
 const VideoPlayer = () => {
   return (
@@ -154,9 +155,107 @@ function FaqSection() {
   </Container>
 }
 
+const JSONLDScript = () => {
+	createEffect(() => {
+		const script = document.createElement("script");
+		script.type = "application/ld+json";
+		script.text = JSON.stringify({
+			"@context": "https://schema.org/",
+      "@graph": [
+        {
+          "@type": "Product",
+          "name": "Professional furniture cleaning services",
+          "image": "https://finecarpetcleaning.co.uk/assets/service-pics/furniture-cleaning/steam-cleaning-furniture-services.jpg",
+          "description": "Fine Carpet Cleaning offers professional furniture cleaning services that enhance hygiene, prolong the life of your upholstery, and maintain a fresh appearance.",
+          "brand": {
+            "@type": "Brand",
+            "name": "Fine Carpet Cleaning"
+          },
+          "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.8",
+            "bestRating": "5",
+            "worstRating": "1",
+            "ratingCount": "131"
+          }
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Will you charge me if I cancel the steam cleaning furniture services?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "We require a deposit before performing the soft furniture cleaning. If you cancel the service on the day of the cleaning, you will forfeit that deposit."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "How long does the process of soft furniture cleaning take?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "The duration of the furniture deep cleaning process mainly depends on the level of soiling, whether stain removal treatment is needed, and the cleaning method used."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "How soon can I expect your furniture cleaning specialists to visit me?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "We aim to get you an appointment for soft furniture cleaning as soon as possible. Usually, we are fully booked for the following three days, but there are exceptions at times."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Do you guarantee that after white furniture cleaning services, all stains will be removed?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "We achieve high success rates in stain removal but cannot provide an absolute guarantee due to various factors, including the age of the stains and the type of fabric."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "How often should furniture be professionally cleaned?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "On average, furniture should be cleaned every 12 months. However, if you have pets or children, or if the furniture is frequently used, we recommend cleaning more often."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "What types of furniture do you clean?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "We clean all types of soft furnishings, including linen furniture, recliners, dining chairs, futons, lampshades, upholstered bed frames, and professional headboards."
+              }
+            }
+          ]
+        }
+      ]
+    }    
+		);
+		document.head.appendChild(script);
+	});
+
+	return null; // This component doesn't need to render anything visible
+};
+
 export default function Page() {
   return (
     <>
+
+<JSONLDScript />
+
+<noscript>
+  <iframe
+    src="https://www.googletagmanager.com/ns.html?id=GTM-PCFWNH5G"
+    height="0"
+    width="0"
+    style="display:none;visibility:hidden">
+  </iframe>
+</noscript>
+
       <h1 class="mt-10 md-mt-17 font-size-12.5 md-font-size-16 md-line-height-18 line-height-16">Professional furniture cleaning services</h1>
       <div class="flex flex-justify-center"><img class="b-rd-3 md-mt-10 mt-2 max-w-full" src="/assets/service-pics/furniture-cleaning/steam-cleaning-furniture-services.jpg" alt="steam-cleaning-furniture-services" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 30%);" /></div>
 

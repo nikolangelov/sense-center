@@ -1,17 +1,18 @@
 import "solid-slider/slider.css";
-import {FacebookLikeGallery} from '../../../components/FacebookLikeGallery';
-import {createCollapsable} from '../../../components/Collapsable';
-import {Typography} from '../../../components/Typography';
-import {ReviewSlider, StarReview} from '../../../components/ReviewSlider';
-import {FOTSlider, FOTSliderContainer} from '../../../components/FrequentlyOrderedTogether';
-import {PriceTable} from '../../../components/PriceTable';
+import { FacebookLikeGallery } from '../../../components/FacebookLikeGallery';
+import { createCollapsable } from '../../../components/Collapsable';
+import { Typography } from '../../../components/Typography';
+import { ReviewSlider, StarReview } from '../../../components/ReviewSlider';
+import { FOTSlider, FOTSliderContainer } from '../../../components/FrequentlyOrderedTogether';
+import { PriceTable } from '../../../components/PriceTable';
+import { createEffect } from "solid-js";
 
 const VideoPlayer = () => {
   return (
     <div class="flex flex-justify-center flex-items-center mt-20">
       <iframe
-				class="mt-10 b-rd-3 h-200px md-h-500px"
-				style="width: 100%;"
+        class="mt-10 b-rd-3 h-200px md-h-500px"
+        style="width: 100%;"
         src="https://www.youtube.com/embed/ShTPBmqQtZs?autoplay=1&mute=1"
         allow="autoplay; encrypted-media"
       ></iframe>
@@ -161,9 +162,103 @@ function FaqSection() {
   </Container>
 }
 
+const JSONLDScript = () => {
+  createEffect(() => {
+    const script = document.createElement("script");
+    script.type = "application/ld+json";
+    script.text = JSON.stringify({
+      "@context": "https://schema.org/",
+      "@type": "Product",
+      "name": "Dry rug cleaning service",
+      "image": "https://finecarpetcleaning.co.uk/assets/service-pics/dry-rug-cleaning/dry-rug-cleaning-service.jpg",
+      "description": "Fine Carpet Cleaning provides expert dry rug cleaning services that improve hygiene, extend the lifespan of your rugs, and keep them looking fresh and vibrant.",
+      "brand": {
+        "@type": "Brand",
+        "name": "Fine Carpet Cleaning"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.8",
+        "bestRating": "5",
+        "worstRating": "1",
+        "ratingCount": "131"
+      },
+      "mainEntity": {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Will you fee me if I cancel the dry rug cleaning service?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, a cancellation fee applies only if you cancel on the day of cleaning, resulting in the loss of your deposit."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do I need to pay for the congestion / parking charge?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, please arrange a parking space for our vehicles and cover any applicable parking or congestion fees."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How long does it take for the rug to dry after cleaning?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "The rug is usually dry immediately after dry cleaning, as it uses little to no water."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How long have you been in the rug cleaning business?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "We have been in the rug cleaning industry since 2012, gaining extensive experience with various types of rugs."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can you provide me with an invoice for the dry cleaning cost?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, we will send a receipt via email."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How much does a dry-cleaning rug cost?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "The cost depends on the rug size, soil level, type, and accessibility."
+            }
+          }
+        ]
+      }
+    }
+    );
+    document.head.appendChild(script);
+  });
+
+  return null; // This component doesn't need to render anything visible
+};
+
 export default function Page() {
   return (
     <>
+
+      <JSONLDScript />
+
+      <noscript>
+        <iframe
+          src="https://www.googletagmanager.com/ns.html?id=GTM-PCFWNH5G"
+          height="0"
+          width="0"
+          style="display:none;visibility:hidden">
+        </iframe>
+      </noscript>
+
       <h1 class="mt-10 md-mt-17 font-size-12.5 md-font-size-16 md-line-height-18 line-height-16">Dry rug cleaning service</h1>
       <div class="flex flex-justify-center"><img class="b-rd-3 md-mt-10 mt-2 max-w-full" src="/assets/service-pics/dry-rug-cleaning/dry-rug-cleaning-service.jpg" alt="dry-rug-cleaning-service" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 30%);" /></div>
 

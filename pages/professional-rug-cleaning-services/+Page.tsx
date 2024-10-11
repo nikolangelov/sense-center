@@ -1,17 +1,18 @@
 import "solid-slider/slider.css";
-import {FacebookLikeGallery} from '../../components/FacebookLikeGallery';
-import {createCollapsable} from '../../components/Collapsable';
-import {Typography} from '../../components/Typography';
-import {ReviewSlider, StarReview} from '../../components/ReviewSlider';
-import {FOTSlider, FOTSliderContainer} from '../../components/FrequentlyOrderedTogether';
-import {PriceTable} from '../../components/PriceTable';
+import { FacebookLikeGallery } from '../../components/FacebookLikeGallery';
+import { createCollapsable } from '../../components/Collapsable';
+import { Typography } from '../../components/Typography';
+import { ReviewSlider, StarReview } from '../../components/ReviewSlider';
+import { FOTSlider, FOTSliderContainer } from '../../components/FrequentlyOrderedTogether';
+import { PriceTable } from '../../components/PriceTable';
+import { createEffect } from "solid-js";
 
 const VideoPlayer = () => {
   return (
     <div class="flex flex-justify-center flex-items-center mt-20">
       <iframe
-				class="mt-10 b-rd-3 h-200px md-h-500px"
-				style="width: 100%;"
+        class="mt-10 b-rd-3 h-200px md-h-500px"
+        style="width: 100%;"
         src="https://www.youtube.com/embed/Bj1lo9JMZok?autoplay=1&mute=1"
         allow="autoplay; encrypted-media"
       ></iframe>
@@ -242,9 +243,107 @@ function FaqSection() {
   </Container>
 }
 
+const JSONLDScript = () => {
+  createEffect(() => {
+    const script = document.createElement("script");
+    script.type = "application/ld+json";
+    script.text = JSON.stringify({
+      "@context": "https://schema.org/",
+      "@graph": [
+        {
+          "@type": "Product",
+          "name": "Professional rug cleaning services",
+          "image": "https://finecarpetcleaning.co.uk/assets/service-pics/rug-cleaning/rug-washing-service.jpg",
+          "description": "Fine Carpet Cleaning offers professional rug cleaning services that enhance hygiene, extend the life of your rugs, and maintain a fresh appearance.",
+          "brand": {
+            "@type": "Brand",
+            "name": "Fine Carpet Cleaning"
+          },
+          "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.8",
+            "bestRating": "5",
+            "worstRating": "1",
+            "ratingCount": "131"
+          }
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Will you fee me if I cancel the quality rug cleaning?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes, if you cancel on the day of cleaning, you'll lose your deposit."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Should I move furniture before the chemical-free rug cleaning?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Please move small, fragile items. We can help with lightweight furniture but charge extra for heavy items."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "How long does specialist rug cleaning take?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Cleaning typically takes 10-15 minutes per room; longer if stains need treatment or for special methods."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Do you guarantee stain removal after modern rug cleaning?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "We can't guarantee removal due to factors like stain age and fabric type, but we strive for the best results."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Is professional rug cleaning worth it?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes, it effectively removes dust, dirt, and allergens, improving the rug's appearance and your health."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Can you clean cat urine stains professionally?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes, we specialize in removing cat urine stains and allergens, leaving your rug fresh and odor-free."
+              }
+            }
+          ]
+        }
+      ]
+    }
+    );
+    document.head.appendChild(script);
+  });
+
+  return null; // This component doesn't need to render anything visible
+};
+
 export default function Page() {
   return (
     <>
+
+      <JSONLDScript />
+
+      <noscript>
+        <iframe
+          src="https://www.googletagmanager.com/ns.html?id=GTM-PCFWNH5G"
+          height="0"
+          width="0"
+          style="display:none;visibility:hidden">
+        </iframe>
+      </noscript>
+
       <h1 class="mt-10 md-mt-17 font-size-12.5 md-font-size-16 md-line-height-18 line-height-16">Professional rug cleaning services</h1>
       <div class="flex flex-justify-center"><img class="b-rd-3 md-mt-10 mt-2 max-w-full" src="/assets/service-pics/rug-cleaning/rug-washing-service.jpg" alt="rug-washing-service" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 30%);" /></div>
 

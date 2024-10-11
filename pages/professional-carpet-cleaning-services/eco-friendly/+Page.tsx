@@ -1,16 +1,17 @@
 import "solid-slider/slider.css";
-import {FacebookLikeGallery} from '../../../components/FacebookLikeGallery';
-import {Typography} from '../../../components/Typography';
-import {createCollapsable} from '../../../components/Collapsable';
-import {ReviewSlider, StarReview} from '../../../components/ReviewSlider';
-import {FOTSlider, FOTSliderContainer} from '../../../components/FrequentlyOrderedTogether';
+import { FacebookLikeGallery } from '../../../components/FacebookLikeGallery';
+import { Typography } from '../../../components/Typography';
+import { createCollapsable } from '../../../components/Collapsable';
+import { ReviewSlider, StarReview } from '../../../components/ReviewSlider';
+import { FOTSlider, FOTSliderContainer } from '../../../components/FrequentlyOrderedTogether';
+import { createEffect } from "solid-js";
 
 const VideoPlayer = () => {
   return (
     <div class="flex flex-justify-center flex-items-center mt-20">
       <iframe
-				class="mt-10 b-rd-3 h-200px md-h-500px"
-				style="width: 100%;"
+        class="mt-10 b-rd-3 h-200px md-h-500px"
+        style="width: 100%;"
         src="https://www.youtube.com/embed/UVS4IAtsTZc?autoplay=1&mute=1"
         allow="autoplay; encrypted-media"
       ></iframe>
@@ -211,9 +212,99 @@ function FaqSection() {
   </Container>
 }
 
+const JSONLDScript = () => {
+  createEffect(() => {
+    const script = document.createElement("script");
+    script.type = "application/ld+json";
+    script.text = JSON.stringify({
+      "@context": "https://schema.org/",
+      "@graph": [
+        {
+          "@type": "Product",
+          "name": "Eco-friendly carpet cleaning services",
+          "image": "https://finecarpetcleaning.co.uk/assets/service-pics/eco-friendly-carpet/eco-friendly-carpet-cleaning-service.jpg",
+          "description": "Fine Carpet Cleaning offers eco-friendly carpet cleaning services that enhance hygiene, prolong carpet life, and maintain a fresh appearance.",
+          "brand": {
+            "@type": "Brand",
+            "name": "Fine Carpet Cleaning"
+          },
+          "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.8",
+            "bestRating": "5",
+            "worstRating": "1",
+            "ratingCount": "131"
+          }
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Cancellation Fee?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes, if you cancel on the day of service, you'll forfeit your deposit."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Parking Charges?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes, please arrange suitable parking. Clients cover any parking or congestion charges incurred."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Move Furniture?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Please move small, delicate items. We’ll help with light furniture but may charge for heavy items."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Drying Time?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Eco steam cleaning takes 7-9 hours to dry; green dry cleaning is immediate."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Eco-Friendly Cleaning?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Eco-friendly cleaning uses sustainable methods and products, prioritizing safety for humans and pets."
+              }
+            }
+          ]
+        }
+      ]
+    }
+    );
+    document.head.appendChild(script);
+  });
+
+  return null; // This component doesn't need to render anything visible
+};
+
 export default function Page() {
   return (
     <>
+
+      <JSONLDScript />
+
+      <noscript>
+        <iframe
+          src="https://www.googletagmanager.com/ns.html?id=GTM-PCFWNH5G"
+          height="0"
+          width="0"
+          style="display:none;visibility:hidden">
+        </iframe>
+      </noscript>
+
       <h1 class="mt-10 md-mt-17 font-size-12.5 md-font-size-16 md-line-height-18 line-height-16">Eco-friendly carpet cleaning services</h1>
       <div class="flex flex-justify-center"><img class="b-rd-3 md-mt-10 mt-2 max-w-full" src="/assets/service-pics/eco-friendly-carpet/eco-friendly-carpet-cleaning-service.jpg" alt="eco-friendly-carpet-cleaning-service" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 30%);" /></div>
 

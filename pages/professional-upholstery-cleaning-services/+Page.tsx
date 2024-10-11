@@ -1,10 +1,11 @@
 import "solid-slider/slider.css";
-import {FacebookLikeGallery} from '../../components/FacebookLikeGallery';
-import {createCollapsable} from '../../components/Collapsable';
-import {Typography} from '../../components/Typography';
-import {ReviewSlider, StarReview} from '../../components/ReviewSlider';
-import {FOTSlider, FOTSliderContainer} from '../../components/FrequentlyOrderedTogether';
-import {PriceTable} from '../../components/PriceTable';
+import { FacebookLikeGallery } from '../../components/FacebookLikeGallery';
+import { createCollapsable } from '../../components/Collapsable';
+import { Typography } from '../../components/Typography';
+import { ReviewSlider, StarReview } from '../../components/ReviewSlider';
+import { FOTSlider, FOTSliderContainer } from '../../components/FrequentlyOrderedTogether';
+import { PriceTable } from '../../components/PriceTable';
+import { createEffect } from "solid-js";
 
 const VideoPlayer = () => {
 	return (
@@ -228,9 +229,107 @@ function FaqSection() {
 	</Container>
 }
 
+const JSONLDScript = () => {
+	createEffect(() => {
+		const script = document.createElement("script");
+		script.type = "application/ld+json";
+		script.text = JSON.stringify({
+			"@context": "https://schema.org/",
+			"@graph": [
+				{
+					"@type": "Product",
+					"name": "Upholstery cleaning services",
+					"image": "https://finecarpetcleaning.co.uk/assets/service-pics/upholstery-cleaning/upholstery-cleaners-london.jpg",
+					"description": "Fine Carpet Cleaning offers professional upholstery cleaning services that enhance hygiene, prolong upholstery life, and maintain a fresh appearance.",
+					"brand": {
+						"@type": "Brand",
+						"name": "Fine Carpet Cleaning"
+					},
+					"aggregateRating": {
+						"@type": "AggregateRating",
+						"ratingValue": "4.8",
+						"bestRating": "5",
+						"worstRating": "1",
+						"ratingCount": "131"
+					}
+				},
+				{
+					"@type": "FAQPage",
+					"mainEntity": [
+						{
+							"@type": "Question",
+							"name": "Do you charge a cancellation fee?",
+							"acceptedAnswer": {
+								"@type": "Answer",
+								"text": "Yes, we require a deposit before performing the cleaning service. If you cancel on the day of the cleaning, you will forfeit that deposit."
+							}
+						},
+						{
+							"@type": "Question",
+							"name": "How long will it take for the upholstery to dry after cleaning?",
+							"acceptedAnswer": {
+								"@type": "Answer",
+								"text": "Drying time varies depending on the fabric and cleaning method. Steam cleaning typically takes about 7 to 9 hours, while dry cleaning allows for immediate drying."
+							}
+						},
+						{
+							"@type": "Question",
+							"name": "Do you guarantee all stains will be removed after deep cleaning?",
+							"acceptedAnswer": {
+								"@type": "Answer",
+								"text": "While we achieve high success rates in stain removal, we cannot guarantee complete removal due to factors beyond our control, such as the age and nature of the stains. Nonetheless, we are committed to using the best equipment and techniques to achieve optimal results."
+							}
+						},
+						{
+							"@type": "Question",
+							"name": "What upholstery cleaning services do you offer?",
+							"acceptedAnswer": {
+								"@type": "Answer",
+								"text": "We offer a range of services, including steam cleaning upholstery, dry cleaning upholstery, eco-friendly upholstery cleaning, office and commercial upholstery cleaning, residential upholstery cleaning, and same-day upholstery cleaning."
+							}
+						},
+						{
+							"@type": "Question",
+							"name": "How often should upholstery be professionally cleaned?",
+							"acceptedAnswer": {
+								"@type": "Answer",
+								"text": "On average, upholstery should be cleaned every 12 months. However, for homes with pets or children, or if the upholstery is heavily used, more frequent cleaning is recommended."
+							}
+						},
+						{
+							"@type": "Question",
+							"name": "What types of upholstery do you clean?",
+							"acceptedAnswer": {
+								"@type": "Answer",
+								"text": "We clean various soft furnishings, including sofas, armchairs, mattresses, dining chairs, and office chairs."
+							}
+						}
+					]
+				}
+			]
+		}
+		);
+		document.head.appendChild(script);
+	});
+
+	return null; // This component doesn't need to render anything visible
+};
+
 export default function Page() {
 	return (
 		<>
+
+			<JSONLDScript />
+
+			<noscript>
+				<iframe
+					src="https://www.googletagmanager.com/ns.html?id=GTM-PCFWNH5G"
+					height="0"
+					width="0"
+					style="display:none;visibility:hidden">
+				</iframe>
+			</noscript>
+
 			<h1 class="mt-10 md-mt-17 font-size-12.5 md-font-size-16 md-line-height-18 line-height-16">Professional upholstery cleaning services</h1>
 			<div class="flex flex-justify-center"><img class="b-rd-3 md-mt-10 mt-2 max-w-full" src="/assets/service-pics/upholstery-cleaning/upholstery-cleaners-london.jpg" alt="upholstery-cleaners-london" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 30%);" /></div>
 

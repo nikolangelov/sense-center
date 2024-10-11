@@ -1,17 +1,18 @@
 import "solid-slider/slider.css";
-import {FacebookLikeGallery} from '../../../components/FacebookLikeGallery';
-import {createCollapsable} from '../../../components/Collapsable';
-import {Typography} from '../../../components/Typography';
-import {ReviewSlider, StarReview} from '../../../components/ReviewSlider';
-import {FOTSlider, FOTSliderContainer} from '../../../components/FrequentlyOrderedTogether';
-import {PriceTable} from '../../../components/PriceTable';
+import { FacebookLikeGallery } from '../../../components/FacebookLikeGallery';
+import { createCollapsable } from '../../../components/Collapsable';
+import { Typography } from '../../../components/Typography';
+import { ReviewSlider, StarReview } from '../../../components/ReviewSlider';
+import { FOTSlider, FOTSliderContainer } from '../../../components/FrequentlyOrderedTogether';
+import { PriceTable } from '../../../components/PriceTable';
+import { createEffect } from "solid-js";
 
 const VideoPlayer = () => {
   return (
     <div class="flex flex-justify-center flex-items-center mt-20">
       <iframe
-				class="mt-10 b-rd-3 h-200px md-h-500px"
-				style="width: 100%;"
+        class="mt-10 b-rd-3 h-200px md-h-500px"
+        style="width: 100%;"
         src="https://www.youtube.com/embed/_7AqoLFxc-0?autoplay=1&mute=1"
         allow="autoplay; encrypted-media"
       ></iframe>
@@ -192,9 +193,107 @@ function FaqSection() {
   </Container>
 }
 
+const JSONLDScript = () => {
+  createEffect(() => {
+    const script = document.createElement("script");
+    script.type = "application/ld+json";
+    script.text = JSON.stringify({
+      "@context": "https://schema.org/",
+      "@graph": [
+        {
+          "@type": "Product",
+          "name": "Professional sofa cleaning services",
+          "image": "https://finecarpetcleaning.co.uk/assets/service-pics/sofa-cleaning/sofa-upholstery-cleaning-service.jpg",
+          "description": "Fine Carpet Cleaning offers professional sofa cleaning services that enhance hygiene and maintain a fresh appearance.",
+          "brand": {
+            "@type": "Brand",
+            "name": "Fine Carpet Cleaning"
+          },
+          "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.8",
+            "bestRating": "5",
+            "worstRating": "1",
+            "ratingCount": "131"
+          }
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Do you charge a cancellation fee?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes, a deposit is required; cancellations on the day forfeit this deposit."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "What if something gets damaged during cleaning?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Any accidents will be covered by our insurance."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Do you guarantee all stains will be removed?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "We strive for high success in stain removal, but cannot guarantee complete removal due to various factors."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "How long does it take for a couch to dry?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Drying time varies: 30-60 minutes for dry cleaning; 5-7 hours for steam cleaning."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "How often should I deep clean my couch?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Generally, every 12 months. More frequent cleaning is advised for households with pets or children."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Can you steam clean sofas?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes, steam cleaning effectively removes dirt. For synthetic sofas, we recommend dry cleaning."
+              }
+            }
+          ]
+        }
+      ]
+    }
+    );
+    document.head.appendChild(script);
+  });
+
+  return null; // This component doesn't need to render anything visible
+};
+
 export default function Page() {
   return (
     <>
+
+      <JSONLDScript />
+
+      <noscript>
+        <iframe
+          src="https://www.googletagmanager.com/ns.html?id=GTM-PCFWNH5G"
+          height="0"
+          width="0"
+          style="display:none;visibility:hidden">
+        </iframe>
+      </noscript>
+
       <h1 class="mt-10 md-mt-17 font-size-12.5 md-font-size-16 md-line-height-18 line-height-16">Professional sofa cleaning services</h1>
       <div class="flex flex-justify-center"><img class="b-rd-3 md-mt-10 mt-2 max-w-full" src="/assets/service-pics/sofa-cleaning/sofa-upholstery-cleaning-service.jpg" alt="sofa-upholstery-cleaning-service" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 30%);" /></div>
 

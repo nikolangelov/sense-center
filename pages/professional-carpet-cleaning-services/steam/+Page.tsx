@@ -1,17 +1,18 @@
 import "solid-slider/slider.css";
-import {FacebookLikeGallery} from '../../../components/FacebookLikeGallery';
-import {createCollapsable} from '../../../components/Collapsable';
-import {Typography} from '../../../components/Typography';
-import {ReviewSlider, StarReview} from '../../../components/ReviewSlider';
-import {FOTSlider, FOTSliderContainer} from '../../../components/FrequentlyOrderedTogether';
-import {PriceTable} from '../../../components/PriceTable';
+import { FacebookLikeGallery } from '../../../components/FacebookLikeGallery';
+import { createCollapsable } from '../../../components/Collapsable';
+import { Typography } from '../../../components/Typography';
+import { ReviewSlider, StarReview } from '../../../components/ReviewSlider';
+import { FOTSlider, FOTSliderContainer } from '../../../components/FrequentlyOrderedTogether';
+import { PriceTable } from '../../../components/PriceTable';
+import { createEffect } from "solid-js";
 
 const VideoPlayer = () => {
   return (
     <div class="flex flex-justify-center flex-items-center mt-20">
       <iframe
-				class="mt-10 b-rd-3 h-200px md-h-500px"
-				style="width: 100%;"
+        class="mt-10 b-rd-3 h-200px md-h-500px"
+        style="width: 100%;"
         src="https://www.youtube.com/embed/gXHR4DFbn4s?autoplay=1&mute=1"
         allow="autoplay; encrypted-media"
       ></iframe>
@@ -211,9 +212,107 @@ function FaqSection() {
   </Container>
 }
 
+const JSONLDScript = () => {
+  createEffect(() => {
+    const script = document.createElement("script");
+    script.type = "application/ld+json";
+    script.text = JSON.stringify({
+      "@context": "https://schema.org/",
+      "@graph": [
+        {
+          "@type": "Product",
+          "name": "Professional carpet steam cleaning services",
+          "image": "https://finecarpetcleaning.co.uk/assets/service-pics/carpet-steam/steam-clean-carpet-company.jpg",
+          "description": "Fine Carpet Cleaning offers professional steam carpet cleaning services that enhance hygiene, prolong carpet life, and maintain a fresh appearance.",
+          "brand": {
+            "@type": "Brand",
+            "name": "Fine Carpet Cleaning"
+          },
+          "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.8",
+            "bestRating": "5",
+            "worstRating": "1",
+            "ratingCount": "131"
+          }
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Do you have a cancellation fee?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes, if you cancel on the day of cleaning, you will lose your deposit."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "What if I live on the 4th floor or above and have no lift?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "We charge extra for each floor when carrying heavy equipment by hand, as it takes more time and effort."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Are you insured?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes, we are fully insured to protect against any accidents during cleaning."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "How long does it take for the carpet to dry after a professional carpet steam cleaning service?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Carpets usually take about 7 to 9 hours to dry after cleaning."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "How often should carpets be steam cleaned?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "We recommend cleaning every 12 months, or more often for homes with pets or high traffic."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Does steam cleaning a carpet help with allergies?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes, regular steam cleaning reduces allergens like dust, pet dander, and mould that can trigger allergic reactions."
+              }
+            }
+          ]
+        }
+      ]
+    }
+    );
+    document.head.appendChild(script);
+  });
+
+  return null; // This component doesn't need to render anything visible
+};
+
 export default function Page() {
   return (
     <>
+
+      <JSONLDScript />
+
+      <noscript>
+        <iframe
+          src="https://www.googletagmanager.com/ns.html?id=GTM-PCFWNH5G"
+          height="0"
+          width="0"
+          style="display:none;visibility:hidden">
+        </iframe>
+      </noscript>
+
       <h1 class="mt-10 md-mt-17 font-size-12.5 md-font-size-16 md-line-height-18 line-height-16">Professional carpet steam cleaning services</h1>
       <div class="flex flex-justify-center"><img class="b-rd-3 md-mt-10 mt-2 max-w-full" src="/assets/service-pics/carpet-steam/steam-clean-carpet-company.jpg" alt="steam-clean-carpet-company" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 30%);" /></div>
 

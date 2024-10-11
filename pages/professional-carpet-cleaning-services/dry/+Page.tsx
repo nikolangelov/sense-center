@@ -1,17 +1,18 @@
 import "solid-slider/slider.css";
-import {FacebookLikeGallery} from '../../../components/FacebookLikeGallery';
-import {Typography} from '../../../components/Typography';
-import {createCollapsable} from '../../../components/Collapsable';
-import {ReviewSlider, StarReview} from '../../../components/ReviewSlider';
-import {FOTSlider, FOTSliderContainer} from '../../../components/FrequentlyOrderedTogether';
-import {PriceTable} from '../../../components/PriceTable';
+import { FacebookLikeGallery } from '../../../components/FacebookLikeGallery';
+import { Typography } from '../../../components/Typography';
+import { createCollapsable } from '../../../components/Collapsable';
+import { ReviewSlider, StarReview } from '../../../components/ReviewSlider';
+import { FOTSlider, FOTSliderContainer } from '../../../components/FrequentlyOrderedTogether';
+import { PriceTable } from '../../../components/PriceTable';
+import { createEffect } from "solid-js";
 
 const VideoPlayer = () => {
   return (
     <div class="flex flex-justify-center flex-items-center mt-20">
       <iframe
-				class="mt-10 b-rd-3 h-200px md-h-500px"
-				style="width: 100%;"
+        class="mt-10 b-rd-3 h-200px md-h-500px"
+        style="width: 100%;"
         src="https://www.youtube.com/embed/8wpIdrb1OZs?autoplay=1&mute=1"
         allow="autoplay; encrypted-media"
       ></iframe>
@@ -206,9 +207,108 @@ function FaqSection() {
   </Container>
 }
 
+const JSONLDScript = () => {
+  createEffect(() => {
+    const script = document.createElement("script");
+    script.type = "application/ld+json";
+    script.text = JSON.stringify({
+      "@context": "https://schema.org/",
+      "@graph": [
+        {
+          "@type": "Product",
+          "name": "Dry carpet cleaning services",
+          "image": "https://finecarpetcleaning.co.uk/assets/service-pics/dry-carpet/professional-dry-carpet-cleaning.jpg",
+          "description": "Fine Carpet Cleaning offers professional dry carpet cleaning services that enhance hygiene, prolong carpet life, and maintain a fresh appearance.",
+          "brand": {
+            "@type": "Brand",
+            "name": "Fine Carpet Cleaning"
+          },
+          "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.8",
+            "bestRating": "5",
+            "worstRating": "1",
+            "ratingCount": "131"
+          }
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Do you have a cancellation fee?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes, we charge a cancellation fee only if you cancel on the day of the cleaning. In that case, you will lose your deposit."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "What happens if I live on the 4th floor or above and I have no lift?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Due to the weight of our equipment, which exceeds 50 kg, we charge extra for each floor that requires manual carrying. This process takes extra time and may tire our technicians more quickly."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Are you insured?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes, we are fully insured for your peace of mind."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "How long does the process of dry carpet cleaning take?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "The duration of the process depends on how dirty the carpet is, if stain removal is needed, and if furniture is present. It typically takes 15 to 30 minutes per room."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "How long does it take for the carpet to dry after a carpet dry cleaning in London is performed?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "The dry carpet cleaning method uses a powder and little to no water, so your carpet will be completely dry almost immediately after cleaning."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "What is dry carpet cleaning?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Dry carpet cleaning is a method that does not require much water. It involves the use of specialized dry cleaning compounds or powders instead of water-based solutions."
+              }
+            }
+          ]
+        }
+      ]
+    }
+
+    );
+    document.head.appendChild(script);
+  });
+
+  return null; // This component doesn't need to render anything visible
+};
+
 export default function Page() {
   return (
     <>
+
+      <JSONLDScript />
+
+      <noscript>
+        <iframe
+          src="https://www.googletagmanager.com/ns.html?id=GTM-PCFWNH5G"
+          height="0"
+          width="0"
+          style="display:none;visibility:hidden">
+        </iframe>
+      </noscript>
+
       <h1 class="mt-10 md-mt-17 font-size-12.5 md-font-size-16 md-line-height-18 line-height-16">Dry carpet cleaning services</h1>
       <div class="flex flex-justify-center"><img class="b-rd-3 md-mt-10 mt-2 max-w-full" src="/assets/service-pics/dry-carpet/professional-dry-carpet-cleaning.jpg" alt="professional-dry-carpet-cleaning" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 30%);" /></div>
 

@@ -1,17 +1,18 @@
 import "solid-slider/slider.css";
-import {FacebookLikeGallery} from '../../../components/FacebookLikeGallery';
-import {createCollapsable} from '../../../components/Collapsable';
-import {Typography} from '../../../components/Typography';
-import {ReviewSlider, StarReview} from '../../../components/ReviewSlider';
-import {FOTSlider, FOTSliderContainer} from '../../../components/FrequentlyOrderedTogether';
-import {PriceTable} from '../../../components/PriceTable';
+import { FacebookLikeGallery } from '../../../components/FacebookLikeGallery';
+import { createCollapsable } from '../../../components/Collapsable';
+import { Typography } from '../../../components/Typography';
+import { ReviewSlider, StarReview } from '../../../components/ReviewSlider';
+import { FOTSlider, FOTSliderContainer } from '../../../components/FrequentlyOrderedTogether';
+import { PriceTable } from '../../../components/PriceTable';
+import { createEffect } from "solid-js";
 
 const VideoPlayer = () => {
   return (
     <div class="flex flex-justify-center flex-items-center mt-20">
       <iframe
-				class="mt-10 b-rd-3 h-200px md-h-500px"
-				style="width: 100%;"
+        class="mt-10 b-rd-3 h-200px md-h-500px"
+        style="width: 100%;"
         src="https://www.youtube.com/embed/gvOzzABiV5Q?autoplay=1&mute=1"
         allow="autoplay; encrypted-media"
       ></iframe>
@@ -197,9 +198,102 @@ function FaqSection() {
   </Container>
 }
 
+const JSONLDScript = () => {
+  createEffect(() => {
+    const script = document.createElement("script");
+    script.type = "application/ld+json";
+    script.text = JSON.stringify({
+      "@context": "https://schema.org/",
+      "@type": "Product",
+      "name": "Rug steam cleaning service",
+      "image": "https://finecarpetcleaning.co.uk/assets/service-pics/rug-steam-cleaning/rug-steam-cleaning-service.jpg",
+      "description": "Fine Carpet Cleaning offers professional rug steam cleaning services that enhance hygiene, prolong carpet life, and maintain a fresh appearance.",
+      "brand": {
+        "@type": "Brand",
+        "name": "Fine Carpet Cleaning"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.8",
+        "bestRating": "5",
+        "worstRating": "1",
+        "ratingCount": "131"
+      },
+      "mainEntity": {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Do you have a cancellation fee for the Chinese rug cleaning near me?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, a cancellation fee applies only if you cancel on the day of cleaning; you will lose your deposit."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do I need to move my furniture before the deep rug cleaning?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "We appreciate your help in moving fragile items. We’ll assist with lightweight furniture but charge for moving large items."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do you guarantee that after the Chinese rug cleaning near me, all stains will be removed?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "We strive to remove stains but cannot guarantee complete removal due to various factors affecting stains."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How long does the process of deep rug cleaning take?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "It varies by soil level, rug size, and stain treatment. Contact us for an estimate based on your situation."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How long does it take a rug to dry after steam cleaning?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Typically, it takes about 7 to 9 hours for a rug to dry after steam cleaning."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can you steam clean a rug?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, we can steam clean rugs, which is the most effective method for deep cleaning."
+            }
+          }
+        ]
+      }
+    }
+    );
+    document.head.appendChild(script);
+  });
+
+  return null; // This component doesn't need to render anything visible
+};
+
 export default function Page() {
   return (
     <>
+      <JSONLDScript />
+
+      <noscript>
+        <iframe
+          src="https://www.googletagmanager.com/ns.html?id=GTM-PCFWNH5G"
+          height="0"
+          width="0"
+          style="display:none;visibility:hidden">
+        </iframe>
+      </noscript>
+
       <h1 class="mt-10 md-mt-17 font-size-12.5 md-font-size-16 md-line-height-18 line-height-16">Rug steam cleaning service</h1>
       <div class="flex flex-justify-center"><img class="b-rd-3 md-mt-10 mt-2 max-w-full" src="/assets/service-pics/rug-steam-cleaning/rug-steam-cleaning-service.jpg" alt="rug-steam-cleaning-service" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 30%);" /></div>
 

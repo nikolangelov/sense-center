@@ -1,16 +1,17 @@
 import "solid-slider/slider.css";
-import {FacebookLikeGallery} from '../../../components/FacebookLikeGallery';
-import {Typography} from '../../../components/Typography';
-import {createCollapsable} from '../../../components/Collapsable';
-import {ReviewSlider, StarReview} from '../../../components/ReviewSlider';
-import {FOTSlider, FOTSliderContainer} from '../../../components/FrequentlyOrderedTogether';
+import { FacebookLikeGallery } from '../../../components/FacebookLikeGallery';
+import { Typography } from '../../../components/Typography';
+import { createCollapsable } from '../../../components/Collapsable';
+import { ReviewSlider, StarReview } from '../../../components/ReviewSlider';
+import { FOTSlider, FOTSliderContainer } from '../../../components/FrequentlyOrderedTogether';
+import { createEffect } from "solid-js";
 
 const VideoPlayer = () => {
   return (
     <div class="flex flex-justify-center flex-items-center mt-20">
       <iframe
-				class="mt-10 b-rd-3 h-200px md-h-500px"
-				style="width: 100%;"
+        class="mt-10 b-rd-3 h-200px md-h-500px"
+        style="width: 100%;"
         src="https://www.youtube.com/embed/_KH1rkIGxGo?autoplay=1&mute=1"
         allow="autoplay; encrypted-media"
       ></iframe>
@@ -118,9 +119,106 @@ function FaqSection() {
   </Container>
 }
 
+const JSONLDScript = () => {
+  createEffect(() => {
+    const script = document.createElement("script");
+    script.type = "application/ld+json";
+    script.text = JSON.stringify({
+      "@context": "https://schema.org/",
+      "@graph": [
+        {
+          "@type": "Product",
+          "name": "Same day carpet cleaning services",
+          "image": "https://finecarpetcleaning.co.uk/assets/service-pics/same-day/emergency-carpet-cleaning.jpg",
+          "description": "Fine Carpet Cleaning offers same day carpet cleaning services that enhance hygiene, prolong carpet life, and maintain a fresh appearance.",
+          "brand": {
+            "@type": "Brand",
+            "name": "Fine Carpet Cleaning"
+          },
+          "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.8",
+            "bestRating": "5",
+            "worstRating": "1",
+            "ratingCount": "131"
+          }
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Cancellation Fee?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes, you will lose your deposit if you cancel on the day of cleaning."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Parking Charges?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes, please arrange parking near the location and cover any additional charges."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Furniture Moving?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Please move delicate items. We’ll assist with light furniture. Heavy items incur an extra charge."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Drying Time?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Wool carpets take 10-12 hours; synthetic carpets take 7-10 hours. Drying time varies with cleaning."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Same-Day Cleaning?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes, we offer emergency carpet cleaning. Contact us for availability and options."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Cleaning Prices in London?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Prices vary based on size, carpet type, and cleaning needs. Contact us for an accurate quote."
+              }
+            }
+          ]
+        }
+      ]
+    }
+    );
+    document.head.appendChild(script);
+  });
+
+  return null; // This component doesn't need to render anything visible
+};
+
 export default function Page() {
   return (
     <>
+      <JSONLDScript />
+
+      <noscript>
+        <iframe
+          src="https://www.googletagmanager.com/ns.html?id=GTM-PCFWNH5G"
+          height="0"
+          width="0"
+          style="display:none;visibility:hidden">
+        </iframe>
+      </noscript>
+
       <h1 class="mt-10 md-mt-17 font-size-12.5 md-font-size-16 md-line-height-18 line-height-16">Same day carpet cleaning services</h1>
       <div class="flex flex-justify-center"><img class="b-rd-3 md-mt-10 mt-2 max-w-full" src="/assets/service-pics/same-day/emergency-carpet-cleaning.jpg" alt="emergency-carpet-cleaning" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 30%);" /></div>
 

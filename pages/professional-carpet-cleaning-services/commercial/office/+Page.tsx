@@ -1,17 +1,18 @@
 import "solid-slider/slider.css";
-import {FacebookLikeGallery} from '../../../../components/FacebookLikeGallery';
-import {Typography} from '../../../../components/Typography';
-import {createCollapsable} from '../../../../components/Collapsable';
-import {ReviewSlider, StarReview} from '../../../../components/ReviewSlider';
-import {FOTSlider, FOTSliderContainer} from '../../../../components/FrequentlyOrderedTogether';
-import {PriceTable} from '../../../../components/PriceTable';
+import { FacebookLikeGallery } from '../../../../components/FacebookLikeGallery';
+import { Typography } from '../../../../components/Typography';
+import { createCollapsable } from '../../../../components/Collapsable';
+import { ReviewSlider, StarReview } from '../../../../components/ReviewSlider';
+import { FOTSlider, FOTSliderContainer } from '../../../../components/FrequentlyOrderedTogether';
+import { PriceTable } from '../../../../components/PriceTable';
+import { createEffect } from "solid-js";
 
 const VideoPlayer = () => {
   return (
     <div class="flex flex-justify-center flex-items-center mt-20">
       <iframe
-				class="mt-10 b-rd-3 h-200px md-h-500px"
-				style="width: 100%;"
+        class="mt-10 b-rd-3 h-200px md-h-500px"
+        style="width: 100%;"
         src="https://www.youtube.com/embed/21EBuiUW3nw?autoplay=1&mute=1"
         allow="autoplay; encrypted-media"
       ></iframe>
@@ -277,9 +278,107 @@ function FaqSection() {
   </Container>
 }
 
+const JSONLDScript = () => {
+  createEffect(() => {
+    const script = document.createElement("script");
+    script.type = "application/ld+json";
+    script.text = JSON.stringify({
+      "@context": "https://schema.org/",
+      "@graph": [
+        {
+          "@type": "Product",
+          "name": "Office carpet cleaning",
+          "image": "https://finecarpetcleaning.co.uk/assets/service-pics/office-carpet/commercial-office-carpet-cleaning.jpg",
+          "description": "Fine Carpet Cleaning offers professional office carpet cleaning services that enhance hygiene, prolong carpet life, and maintain a fresh appearance.",
+          "brand": {
+            "@type": "Brand",
+            "name": "Fine Carpet Cleaning"
+          },
+          "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.8",
+            "bestRating": "5",
+            "worstRating": "1",
+            "ratingCount": "131"
+          }
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Do you have a cancellation fee?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes, cancelling on the day results in losing your deposit."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "How long does the process of professional office carpet cleaning take?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Cleaning time varies based on carpet size, soiling level, and stain types."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "How long does it take for the carpet to get completely dry after an office carpet steam cleaning is performed?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Drying time is 7-9 hours for steam cleaning; dry cleaning is immediate."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Do you guarantee that after a professional office carpet cleaning all stains will be removed?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "No guarantee due to various factors, but we strive to remove all stains."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "How often should office carpets be cleaned?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Twice a year is recommended, or more based on foot traffic and office needs."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Can you clean carpets outside of work hours and on weekends?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes, we offer flexible scheduling to clean during off-hours."
+              }
+            }
+          ]
+        }
+      ]
+    }
+    );
+    document.head.appendChild(script);
+  });
+
+  return null; // This component doesn't need to render anything visible
+};
+
 export default function Page() {
   return (
     <>
+
+      <JSONLDScript />
+
+      <noscript>
+        <iframe
+          src="https://www.googletagmanager.com/ns.html?id=GTM-PCFWNH5G"
+          height="0"
+          width="0"
+          style="display:none;visibility:hidden">
+        </iframe>
+      </noscript>
+
       <h1 class="mt-10 md-mt-17 font-size-12.5 md-font-size-16 md-line-height-18 line-height-16">Office carpet cleaning services</h1>
       <div class="flex flex-justify-center"><img class="b-rd-3 md-mt-10 mt-2 max-w-full" src="/assets/service-pics/office-carpet/commercial-office-carpet-cleaning.jpg" alt="commercial-office-carpet-cleaning" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 30%);" /></div>
 

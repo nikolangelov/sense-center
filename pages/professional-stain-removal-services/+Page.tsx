@@ -1,18 +1,19 @@
 import "solid-slider/slider.css";
-import {FacebookLikeGallery} from '../../components/FacebookLikeGallery';
-import {createCollapsable} from '../../components/Collapsable';
-import {Typography} from '../../components/Typography';
-import {ReviewSlider, StarReview} from '../../components/ReviewSlider';
-import {FOTSlider, FOTSliderContainer} from '../../components/FrequentlyOrderedTogether';
-import {PriceTable} from '../../components/PriceTable';
+import { FacebookLikeGallery } from '../../components/FacebookLikeGallery';
+import { createCollapsable } from '../../components/Collapsable';
+import { Typography } from '../../components/Typography';
+import { ReviewSlider, StarReview } from '../../components/ReviewSlider';
+import { FOTSlider, FOTSliderContainer } from '../../components/FrequentlyOrderedTogether';
+import { PriceTable } from '../../components/PriceTable';
+import { createEffect } from "solid-js";
 
 
 const VideoPlayer = () => {
   return (
     <div class="flex flex-justify-center flex-items-center mt-20">
       <iframe
-				class="mt-10 b-rd-3 h-200px md-h-500px"
-				style="width: 100%;"
+        class="mt-10 b-rd-3 h-200px md-h-500px"
+        style="width: 100%;"
         src="https://www.youtube.com/embed/BVrwEwOw_AE?autoplay=1&mute=1"
         allow="autoplay; encrypted-media"
       ></iframe>
@@ -210,9 +211,107 @@ function FaqSection() {
   </Container>
 }
 
+const JSONLDScript = () => {
+  createEffect(() => {
+    const script = document.createElement("script");
+    script.type = "application/ld+json";
+    script.text = JSON.stringify({
+      "@context": "https://schema.org/",
+      "@graph": [
+        {
+          "@type": "Product",
+          "name": "Professional stain removal service",
+          "image": "https://finecarpetcleaning.co.uk/assets/service-pics/stain-removal/professional-stain-removal-service.jpg",
+          "description": "Fine Carpet Cleaning offers professional stain removal cleaning services that enhance hygiene, prolong carpet, upholstery and rug life, and maintain a fresh appearance.",
+          "brand": {
+            "@type": "Brand",
+            "name": "Fine Carpet Cleaning"
+          },
+          "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.8",
+            "bestRating": "5",
+            "worstRating": "1",
+            "ratingCount": "131"
+          }
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Will I be charged if I cancel stain removal?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes, a cancellation fee applies if you cancel on the service day, and you will lose your deposit."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "How long does the stain removal process take?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Stain removal takes 5 to 60 minutes, depending on the material, stain type, size, and prior cleaning attempts."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Do you guarantee all stains will be removed?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "We have high success rates but cannot guarantee complete removal due to factors like stain age and fabric type."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "What payment methods do you accept?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "We accept debit/credit cards, bank transfers, and cash payments directly to our team."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "How much does stain removal cost?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Costs depend on the material, stain type, and size. Check our stain removal prices for details."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Can you remove a red wine stain from a beige carpet?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes, contact us for professional red wine stain removal. We use effective methods and equipment, though no guarantee is possible."
+              }
+            }
+          ]
+        }
+      ]
+    }
+    );
+    document.head.appendChild(script);
+  });
+
+  return null; // This component doesn't need to render anything visible
+};
+
 export default function Page() {
   return (
     <>
+
+      <JSONLDScript />
+
+      <noscript>
+        <iframe
+          src="https://www.googletagmanager.com/ns.html?id=GTM-PCFWNH5G"
+          height="0"
+          width="0"
+          style="display:none;visibility:hidden">
+        </iframe>
+      </noscript>
+
       <h1 class="mt-10 md-mt-17 font-size-12.5 md-font-size-16 md-line-height-18 line-height-16">Professional stain removal service</h1>
       <div class="flex flex-justify-center"><img class="b-rd-3 md-mt-10 mt-2 max-w-full" src="/assets/service-pics/stain-removal/professional-stain-removal-service.jpg" alt="professional-stain-removal-service" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 30%);" /></div>
 

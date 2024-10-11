@@ -1,17 +1,18 @@
 import "solid-slider/slider.css";
-import {FacebookLikeGallery} from '../../../../components/FacebookLikeGallery';
-import {createCollapsable} from '../../../../components/Collapsable';
-import {Typography} from '../../../../components/Typography';
-import {ReviewSlider, StarReview} from '../../../../components/ReviewSlider';
-import {FOTSlider, FOTSliderContainer} from '../../../../components/FrequentlyOrderedTogether';
-import {PriceTable} from '../../../../components/PriceTable';
+import { FacebookLikeGallery } from '../../../../components/FacebookLikeGallery';
+import { createCollapsable } from '../../../../components/Collapsable';
+import { Typography } from '../../../../components/Typography';
+import { ReviewSlider, StarReview } from '../../../../components/ReviewSlider';
+import { FOTSlider, FOTSliderContainer } from '../../../../components/FrequentlyOrderedTogether';
+import { PriceTable } from '../../../../components/PriceTable';
+import { createEffect } from "solid-js";
 
 const VideoPlayer = () => {
   return (
     <div class="flex flex-justify-center flex-items-center mt-20">
       <iframe
-				class="mt-10 b-rd-3 h-200px md-h-500px"
-				style="width: 100%;"
+        class="mt-10 b-rd-3 h-200px md-h-500px"
+        style="width: 100%;"
         src="https://www.youtube.com/embed/wgh_UjG4YU4?autoplay=1&mute=1"
         allow="autoplay; encrypted-media"
       ></iframe>
@@ -164,9 +165,107 @@ function FaqSection() {
   </Container>
 }
 
+const JSONLDScript = () => {
+  createEffect(() => {
+    const script = document.createElement("script");
+    script.type = "application/ld+json";
+    script.text = JSON.stringify({
+      "@context": "https://schema.org/",
+      "@graph": [
+        {
+          "@type": "Product",
+          "name": "Professional sofa cleaning services",
+          "image": "https://finecarpetcleaning.co.uk/assets/service-pics/sofa-cleaning/sofa-upholstery-cleaning-service.jpg",
+          "description": "Our professional leather sofa cleaning services at Fine Carpet Cleaning ensure high hygiene standards, extend the lifespan of your leather sofa, and keep it looking fresh.",
+          "brand": {
+            "@type": "Brand",
+            "name": "Fine Carpet Cleaning"
+          },
+          "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.8",
+            "bestRating": "5",
+            "worstRating": "1",
+            "ratingCount": "131"
+          }
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Do you charge a cancellation fee?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes, if you cancel on the day of cleaning, you will lose your deposit."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "What if your cleaners damage something?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Accidents are covered by our insurance."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "How long does leather cleaning take?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Duration depends on soiling, stain treatments, and cleaning methods used."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "How long does leather upholstery take to dry?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Typically, it can be used after 30-60 minutes."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "How often should leather upholstery be cleaned?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "We recommend cleaning every 12 months, or more often if you have pets or children."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Can you clean leather couches professionally?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes, we offer professional cleaning for leather couches, ensuring expert care."
+              }
+            }
+          ]
+        }
+      ]
+    }
+    );
+    document.head.appendChild(script);
+  });
+
+  return null; // This component doesn't need to render anything visible
+};
+
 export default function Page() {
   return (
     <>
+
+      <JSONLDScript />
+
+      <noscript>
+        <iframe
+          src="https://www.googletagmanager.com/ns.html?id=GTM-PCFWNH5G"
+          height="0"
+          width="0"
+          style="display:none;visibility:hidden">
+        </iframe>
+      </noscript>
+
       <h1 class="mt-10 md-mt-17 font-size-12.5 md-font-size-16 md-line-height-18 line-height-16">Professional leather sofa cleaning services</h1>
       <div class="flex flex-justify-center"><img class="b-rd-3 md-mt-10 mt-2 max-w-full" src="/assets/service-pics\leather-sofa-cleaning\leather-sofa-cleaning-services-1.jpg" alt="leather-sofa-cleaning-services-1" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 30%);" /></div>
 

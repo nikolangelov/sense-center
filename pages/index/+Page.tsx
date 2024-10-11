@@ -1,89 +1,10 @@
 import RiCloseFill from '~icons/ri/close-fill';
 import "solid-slider/slider.css";
-import { createSignal, Show } from 'solid-js';
+import { createEffect, createSignal, Show } from 'solid-js';
 import { createCollapsable } from "../../components/Collapsable";
 import { Typography } from '../../components/Typography';
 import { ReviewSlider, StarReview } from '../../components/ReviewSlider';
 import { GallerySlider } from '../../components/GallerySlider';
-
-import { createEffect } from "solid-js";
-
-const JSONLDScript = () => {
-  createEffect(() => {
-    const script = document.createElement("script");
-    script.type = "application/ld+json";
-    script.text = JSON.stringify({
-      "@context": "https://schema.org/",
-      "@graph": [
-        {
-          "@type": "Product",
-          "name": "Professional carpet steam cleaning services",
-          "image": "https://finecarpetcleaning.co.uk/professional-carpet-cleaning-services/steam",
-          "description": "Fine Carpet Cleaning offers professional carpet cleaning services that enhance hygiene, prolong carpet life, and maintain a fresh appearance.",
-          "brand": {
-            "@type": "Brand",
-            "name": "Fine Carpet Cleaning"
-          },
-          "aggregateRating": {
-            "@type": "AggregateRating",
-            "ratingValue": "4.8",
-            "bestRating": "5",
-            "worstRating": "1",
-            "ratingCount": "131"
-          }
-        },
-        {
-          "@type": "FAQPage",
-          "mainEntity": [
-            {
-              "@type": "Question",
-              "name": "Do you have a cancellation fee?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Yes, if you cancel on the day of the cleaning you will lose your deposit."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "Do I need to pay for congestion/parking charges?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Yes, the client is requested to arrange suitable parking space for our vehicles within close proximity of the property and to cover any parking/congestion expenses if applicable."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "Do carpet cleaning services move furniture?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Please move small, fragile, or valuable items (lamps, ornaments) out of the way for insurance reasons. We’ll help with light furniture but will charge extra for heavy items requiring more effort."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "What if I live on the 4th floor or higher and I have no lift?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Since our equipment is very heavy (50kg+), when our technician has to carry it by hand we charge extra for every additional floor. The reason is that this will usually take a lot of time and our technicians tire faster, therefore that day they cannot do as much work as they usually do."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "Are you insured?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Yes, we are fully insured."
-              }
-            }
-          ]
-        }
-      ]
-    });
-    document.head.appendChild(script);
-  });
-
-  return null; // This component doesn't need to render anything visible
-};
 
 function FleurDivider() {
 	return (
@@ -279,11 +200,108 @@ function FaqSection() {
 	</Container>
 }
 
+const JSONLDScript = () => {
+	createEffect(() => {
+		const script = document.createElement("script");
+		script.type = "application/ld+json";
+		script.text = JSON.stringify({
+			"@context": "https://schema.org/",
+			"@type": "LocalBusiness",
+			"@id": "https://finecarpetcleaning.co.uk#localBusiness",
+			"name": "Fine Carpet Cleaning",
+			"image": "https://finecarpetcleaning.co.uk/assets/home/quality-rug-cleaning-10.jpg",
+			"url": "https://finecarpetcleaning.co.uk",
+			"telephone": "+44 20 3637 0033",
+			"address": {
+				"@type": "PostalAddress",
+				"streetAddress": "8 Holt Way, Chigwell",
+				"addressLocality": "London",
+				"postalCode": "IG7 4HL",
+				"addressCountry": "GB"
+			},
+			"openingHoursSpecification": {
+				"@type": "OpeningHoursSpecification",
+				"dayOfWeek": [
+					"Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"
+				],
+				"opens": "09:00",
+				"closes": "18:00"
+			},
+			"sameAs": [
+				"https://www.facebook.com/profile.php?id=100063685862979",
+				"https://www.youtube.com/@finecarpetcleaninglondon6961"
+			],
+			"aggregateRating": {
+				"@type": "AggregateRating",
+				"ratingValue": "4.8",
+				"bestRating": "5",
+				"worstRating": "1",
+				"ratingCount": "131"
+			},
+			"priceRange": "££",
+			"areaServed": {
+				"@type": "Place",
+				"name": "London"
+			},
+			"description": "Professional carpet cleaning services in London since 2012. We offer deep cleaning, stain removal, and odour elimination for residential and commercial clients.",
+			"mainEntity": {
+				"@type": "FAQPage",
+				"mainEntity": [
+					{
+						"@type": "Question",
+						"name": "What experience does 'Fine Carpet Cleaning' Ltd. have in carpet cleaning?",
+						"acceptedAnswer": {
+							"@type": "Answer",
+							"text": "'Fine Carpet Cleaning' Ltd. has been in business since 2012, serving commercial and residential clients with updated equipment and professional training."
+						}
+					},
+					{
+						"@type": "Question",
+						"name": "When do I need professional cleaning?",
+						"acceptedAnswer": {
+							"@type": "Answer",
+							"text": "Clients typically seek help for stains, odours, pests, discolouration, allergies, visible dirt, and to refresh or prolong carpet life."
+						}
+					},
+					{
+						"@type": "Question",
+						"name": "How often should carpets be cleaned?",
+						"acceptedAnswer": {
+							"@type": "Answer",
+							"text": "Deep clean carpets every 12 months, or more frequently if you have pets, children, high foot traffic, or frequent stains."
+						}
+					},
+					{
+						"@type": "Question",
+						"name": "How long does carpet cleaning take?",
+						"acceptedAnswer": {
+							"@type": "Answer",
+							"text": "Cleaning typically takes 20-60 minutes per room, depending on the soiling level, methods used, and stain treatments."
+						}
+					},
+					{
+						"@type": "Question",
+						"name": "What if a cleaner damages my property?",
+						"acceptedAnswer": {
+							"@type": "Answer",
+							"text": "We are fully insured, so any accidents are covered."
+						}
+					}
+				]
+			}
+		}
+		);
+		document.head.appendChild(script);
+	});
+
+	return null; // This component doesn't need to render anything visible
+};
+
 export default function Page() {
 	return (
 		<>
-		<JSONLDScript/>
-		
+			<JSONLDScript />
+
 			<noscript>
 				<iframe
 					src="https://www.googletagmanager.com/ns.html?id=GTM-PCFWNH5G"
@@ -577,4 +595,8 @@ export default function Page() {
 			</div>
 		</>
 	);
+}
+
+function fetchSomeData() {
+	throw new Error('Function not implemented.');
 }

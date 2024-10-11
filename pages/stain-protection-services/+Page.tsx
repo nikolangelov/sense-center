@@ -1,17 +1,18 @@
 import "solid-slider/slider.css";
-import {FacebookLikeGallery} from '../../components/FacebookLikeGallery';
-import {createCollapsable} from '../../components/Collapsable';
-import {Typography} from '../../components/Typography';
-import {ReviewSlider, StarReview} from '../../components/ReviewSlider';
-import {FOTSlider, FOTSliderContainer} from '../../components/FrequentlyOrderedTogether';
-import {PriceTable} from '../../components/PriceTable';
+import { FacebookLikeGallery } from '../../components/FacebookLikeGallery';
+import { createCollapsable } from '../../components/Collapsable';
+import { Typography } from '../../components/Typography';
+import { ReviewSlider, StarReview } from '../../components/ReviewSlider';
+import { FOTSlider, FOTSliderContainer } from '../../components/FrequentlyOrderedTogether';
+import { PriceTable } from '../../components/PriceTable';
+import { createEffect } from "solid-js";
 
 const VideoPlayer = () => {
   return (
     <div class="flex flex-justify-center flex-items-center mt-20">
       <iframe
-				class="mt-10 b-rd-3 h-200px md-h-500px"
-				style="width: 100%;"
+        class="mt-10 b-rd-3 h-200px md-h-500px"
+        style="width: 100%;"
         src="https://www.youtube.com/embed/Wp3QBIzBpFY?autoplay=1&mute=1"
         allow="autoplay; encrypted-media"
       ></iframe>
@@ -172,9 +173,107 @@ function FaqSection() {
   </Container>
 }
 
+const JSONLDScript = () => {
+  createEffect(() => {
+    const script = document.createElement("script");
+    script.type = "application/ld+json";
+    script.text = JSON.stringify({
+      "@context": "https://schema.org/",
+      "@graph": [
+        {
+          "@type": "Product",
+          "name": "Stain protection services",
+          "image": "https://finecarpetcleaning.co.uk/assets/service-pics/stain-protection-services/stain-protection-services.jpg",
+          "description": "Fine Carpet Cleaning offers professional stain protection services that enhance hygiene, prolong carpet, upholstery and rug life, and maintain a fresh appearance.",
+          "brand": {
+            "@type": "Brand",
+            "name": "Fine Carpet Cleaning"
+          },
+          "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.8",
+            "bestRating": "5",
+            "worstRating": "1",
+            "ratingCount": "131"
+          }
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Will I be charged if I cancel the carpet stain protection?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes, there is a cancellation fee, but it only applies if you cancel on the same day as the cleaning or Scotchgard application. In that case, you will forfeit your deposit."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "How long does stain guard last?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "The longevity of stain guard depends on the frequency of use, but typically it lasts at least six months to a year."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "What is stain protection?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Stain protection, commonly known as Scotchgard protection, is a clear, invisible liquid applied to fabrics by professionals. It creates a protective coating around each fiber of the carpet or upholstery, making it resistant to everyday soiling as well as water-based and oil-based stains."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "How is stain protection applied?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Stain protection is applied in two scenarios: If your carpet or sofa is new, we apply two layers of solvent-based protector, which can be done on dry fabric. After professional cleaning, we allow the carpet to dry, then apply a water-based stain protector in two layers for full coverage."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Why is stain protection important?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Carpet, rug, and sofa stain protection services are essential for preventing staining and minimizing daily soiling. This effective and straightforward process prolongs the life of your items and makes daily cleaning easier."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Does Scotchgard change the feel of the fabric?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "No, carpet and upholstery stain protection does not alter the look or feel of your items."
+              }
+            }
+          ]
+        }
+      ]
+    }
+    );
+    document.head.appendChild(script);
+  });
+
+  return null; // This component doesn't need to render anything visible
+};
+
 export default function Page() {
   return (
     <>
+
+      <JSONLDScript />
+
+      <noscript>
+        <iframe
+          src="https://www.googletagmanager.com/ns.html?id=GTM-PCFWNH5G"
+          height="0"
+          width="0"
+          style="display:none;visibility:hidden">
+        </iframe>
+      </noscript>
+
       <h1 class="mt-10 md-mt-17 font-size-12.5 md-font-size-16 md-line-height-18 line-height-16">Stain protection services</h1>
       <div class="flex flex-justify-center"><img class="b-rd-3 md-mt-10 mt-2 max-w-full" src="/assets/service-pics/stain-protection-services/stain-protection-services.jpg" alt="stain-protection-services-7" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 30%);" /></div>
 

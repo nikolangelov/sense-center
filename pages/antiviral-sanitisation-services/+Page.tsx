@@ -1,17 +1,17 @@
 import "solid-slider/slider.css";
-import {FacebookLikeGallery} from '../../components/FacebookLikeGallery';
-import {createCollapsable} from '../../components/Collapsable';
-import {Typography} from '../../components/Typography';
-import {ReviewSlider, StarReview} from '../../components/ReviewSlider';
-import {PriceTable} from '../../components/PriceTable';
-import {Head} from 'vike-solid/Head'
+import { FacebookLikeGallery } from '../../components/FacebookLikeGallery';
+import { createCollapsable } from '../../components/Collapsable';
+import { Typography } from '../../components/Typography';
+import { ReviewSlider, StarReview } from '../../components/ReviewSlider';
+import { PriceTable } from '../../components/PriceTable';
+import { createEffect } from "solid-js";
 
 const VideoPlayer = () => {
   return (
     <div class="flex flex-justify-center flex-items-center mt-20">
       <iframe
-				class="mt-10 b-rd-3 h-200px md-h-500px"
-				style="width: 100%;"
+        class="mt-10 b-rd-3 h-200px md-h-500px"
+        style="width: 100%;"
         src="https://www.youtube.com/embed/4_KISdoNiRw?autoplay=1&mute=1"
         allow="autoplay; encrypted-media"
       ></iframe>
@@ -105,9 +105,107 @@ function FaqSection() {
   </Container>
 }
 
+const JSONLDScript = () => {
+  createEffect(() => {
+    const script = document.createElement("script");
+    script.type = "application/ld+json";
+    script.text = JSON.stringify({
+      "@context": "https://schema.org/",
+      "@graph": [
+        {
+          "@type": "Product",
+          "name": "Antiviral sanitisation services",
+          "image": "https://finecarpetcleaning.co.uk/assets/service-pics/antiviral-sanitisation/antiviral-sanitisation-services2.webp",
+          "description": "Fine Carpet Cleaning offers professional antiviral sanitization services that enhance hygiene, improve the safety of your environment, and maintain a fresh appearance.",
+          "brand": {
+            "@type": "Brand",
+            "name": "Fine Carpet Cleaning"
+          },
+          "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.8",
+            "bestRating": "5",
+            "worstRating": "1",
+            "ratingCount": "131"
+          }
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "How long does the process of antiviral sanitisation services take?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "The duration varies by room size but typically averages 75 minutes per room."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Should I pay for the congestion/parking charge?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes, we kindly request that you arrange suitable parking for our vehicles near the property or cover any parking/congestion expenses."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Is your company insured?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes, we are fully insured."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "What happens if your cleaner damages anything?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Any damages caused will be covered by our insurance."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "What is antiviral sanitisation?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Antiviral sanitisation involves a specialized disinfection process using fogging to kill 99.99% of germs and viruses on surfaces immediately."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Why hire professionals to perform antiviral sanitisation?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Professional sanitisation ensures thorough disinfection that typical cleaning products may not achieve, making it essential for homes and offices."
+              }
+            }
+          ]
+        }
+      ]
+    }
+    );
+    document.head.appendChild(script);
+  });
+
+  return null; // This component doesn't need to render anything visible
+};
+
 export default function Page() {
   return (
     <>
+
+      <JSONLDScript />
+
+      <noscript>
+        <iframe
+          src="https://www.googletagmanager.com/ns.html?id=GTM-PCFWNH5G"
+          height="0"
+          width="0"
+          style="display:none;visibility:hidden">
+        </iframe>
+      </noscript>
+
       <h1 class="mt-10 md-mt-17 font-size-12.5 md-font-size-16 md-line-height-18 line-height-16">Antiviral sanitisation services</h1>
       <div class="flex flex-justify-center"><img class="b-rd-3 md-mt-10 mt-2 max-w-full" src="/assets/service-pics/antiviral-sanitisation/antiviral-sanitisation-services2.webp" alt="antiviral-sanitisation-services2" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 30%);" /></div>
 

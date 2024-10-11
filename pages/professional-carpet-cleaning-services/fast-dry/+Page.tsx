@@ -1,16 +1,17 @@
 import "solid-slider/slider.css";
-import {FacebookLikeGallery} from '../../../components/FacebookLikeGallery';
-import {createCollapsable} from '../../../components/Collapsable';
-import {Typography} from '../../../components/Typography';
-import {ReviewSlider, StarReview} from '../../../components/ReviewSlider';
-import {FOTSlider, FOTSliderContainer} from '../../../components/FrequentlyOrderedTogether';
+import { FacebookLikeGallery } from '../../../components/FacebookLikeGallery';
+import { createCollapsable } from '../../../components/Collapsable';
+import { Typography } from '../../../components/Typography';
+import { ReviewSlider, StarReview } from '../../../components/ReviewSlider';
+import { FOTSlider, FOTSliderContainer } from '../../../components/FrequentlyOrderedTogether';
+import { createEffect } from "solid-js";
 
 const VideoPlayer = () => {
   return (
     <div class="flex flex-justify-center flex-items-center mt-20">
       <iframe
-				class="mt-10 b-rd-3 h-200px md-h-500px"
-				style="width: 100%;"
+        class="mt-10 b-rd-3 h-200px md-h-500px"
+        style="width: 100%;"
         src="https://www.youtube.com/embed/UN4EcOhkmgc?autoplay=1&mute=1"
         allow="autoplay; encrypted-media"
       ></iframe>
@@ -186,9 +187,107 @@ function FaqSection() {
   </Container>
 }
 
+const JSONLDScript = () => {
+  createEffect(() => {
+    const script = document.createElement("script");
+    script.type = "application/ld+json";
+    script.text = JSON.stringify({
+      "@context": "https://schema.org/",
+      "@graph": [
+        {
+          "@type": "Product",
+          "name": "Fast dry carpet cleaning services",
+          "image": "https://finecarpetcleaning.co.uk/assets/service-pics/fast-dry-carpet/fast-dry-carpet-cleaning-service.jpg",
+          "description": "Fine Carpet Cleaning offers fast-dry carpet cleaning services that enhance hygiene, prolong carpet life, and maintain a fresh appearance.",
+          "brand": {
+            "@type": "Brand",
+            "name": "Fine Carpet Cleaning"
+          },
+          "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.8",
+            "bestRating": "5",
+            "worstRating": "1",
+            "ratingCount": "131"
+          }
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Cancellation Fee?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes, you will lose your deposit if you cancel on the day of the scheduled cleaning."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Parking Charges?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes, please arrange parking and cover any additional costs near the property."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "How to Dry Carpet Quickly?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Open windows, use fans or dehumidifiers to speed up drying. Cross-ventilation helps a lot."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Is It OK to Let Water Dry on Carpet?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "No, damp carpets can promote mildew and mould growth. Proper drying is essential."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "What Temperature Dries Carpet Faster?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Warmer temperatures (22-24°C) help dry carpets quicker. Humidity and airflow also affect drying time."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "How to Dehumidify Wet Carpet?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "We use a Dri-Pod dryer for fast drying. A dehumidifier can also help reduce moisture in your home."
+              }
+            }
+          ]
+        }
+      ]
+    }
+    );
+    document.head.appendChild(script);
+  });
+
+  return null; // This component doesn't need to render anything visible
+};
+
 export default function Page() {
   return (
     <>
+
+      <JSONLDScript />
+
+      <noscript>
+        <iframe
+          src="https://www.googletagmanager.com/ns.html?id=GTM-PCFWNH5G"
+          height="0"
+          width="0"
+          style="display:none;visibility:hidden">
+        </iframe>
+      </noscript>
+
       <h1 class="mt-10 md-mt-17 font-size-12.5 md-font-size-16 md-line-height-18 line-height-16">Fast dry carpet cleaning services</h1>
       <div class="flex flex-justify-center"><img class="b-rd-3 md-mt-10 mt-2 max-w-full" src="/assets/service-pics/fast-dry-carpet/fast-dry-carpet-cleaning-service.jpg" alt="fast-dry-carpet-cleaning-service" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 30%);" /></div>
 

@@ -1,17 +1,18 @@
 import "solid-slider/slider.css";
-import {FacebookLikeGallery} from '../../../components/FacebookLikeGallery';
-import {createCollapsable} from '../../../components/Collapsable';
-import {Typography} from '../../../components/Typography';
-import {ReviewSlider, StarReview} from '../../../components/ReviewSlider';
-import {FOTSlider, FOTSliderContainer} from '../../../components/FrequentlyOrderedTogether';
-import {PriceTable} from '../../../components/PriceTable';
+import { FacebookLikeGallery } from '../../../components/FacebookLikeGallery';
+import { createCollapsable } from '../../../components/Collapsable';
+import { Typography } from '../../../components/Typography';
+import { ReviewSlider, StarReview } from '../../../components/ReviewSlider';
+import { FOTSlider, FOTSliderContainer } from '../../../components/FrequentlyOrderedTogether';
+import { PriceTable } from '../../../components/PriceTable';
+import { createEffect } from "solid-js";
 
 const VideoPlayer = () => {
   return (
     <div class="flex flex-justify-center flex-items-center mt-20">
       <iframe
-				class="mt-10 b-rd-3 h-200px md-h-500px"
-				style="width: 100%;"
+        class="mt-10 b-rd-3 h-200px md-h-500px"
+        style="width: 100%;"
         src="https://www.youtube.com/embed/GGCjkr6sWkE?autoplay=1&mute=1"
         allow="autoplay; encrypted-media"
       ></iframe>
@@ -271,9 +272,107 @@ function FaqSection() {
   </Container>
 }
 
+const JSONLDScript = () => {
+  createEffect(() => {
+    const script = document.createElement("script");
+    script.type = "application/ld+json";
+    script.text = JSON.stringify({
+      "@context": "https://schema.org/",
+      "@graph": [
+        {
+          "@type": "Product",
+          "name": "Mattress cleaning services",
+          "image": "https://finecarpetcleaning.co.uk/assets/service-pics/mattress-cleaning/mattress-cleaning-services.jpg",
+          "description": "Fine Carpet Cleaning offers professional mattress cleaning services that enhance hygiene, prolong mattress life, and maintain a fresh appearance.",
+          "brand": {
+            "@type": "Brand",
+            "name": "Fine Carpet Cleaning"
+          },
+          "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.8",
+            "bestRating": "5",
+            "worstRating": "1",
+            "ratingCount": "131"
+          }
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Do you charge a fee for cancellation?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes, we require a deposit before performing mattress cleaning services, which secures your appointment. If you cancel on the day of the service, the deposit will be forfeited."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "How long does the mattress cleaning process take?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "The duration depends on several factors, including the level of soiling, the need for stain removal treatments, and the size and quantity of the mattresses."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "How long does it take for the mattress to dry after cleaning?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "A mattress typically takes about 5-7 hours to dry completely. We strongly advise allowing the mattress to dry thoroughly before use, as dampness can promote mould and bacteria growth."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "What payment methods do you accept?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "We accept debit and credit cards, bank transfers, and cash payments directly to our team."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "How often should a mattress be professionally cleaned?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "The frequency of professional cleaning varies based on personal preferences, mattress type, and specific concerns like allergies. Generally, we recommend cleaning your mattress at least twice a year or seasonally. Promptly addressing any spills or stains is also advised to prevent bacteria growth and odors."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Can a mattress be cleaned with a steam cleaner?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes, steam cleaning can be effective for removing stains, odors, and killing bacteria. However, caution is necessary, and some mattress types (like memory foam) may not be suitable for steam cleaning. Professional cleaning services are recommended for best results."
+              }
+            }
+          ]
+        }
+      ]
+    }
+    );
+    document.head.appendChild(script);
+  });
+
+  return null; // This component doesn't need to render anything visible
+};
+
 export default function Page() {
   return (
     <>
+
+      <JSONLDScript />
+
+      <noscript>
+        <iframe
+          src="https://www.googletagmanager.com/ns.html?id=GTM-PCFWNH5G"
+          height="0"
+          width="0"
+          style="display:none;visibility:hidden">
+        </iframe>
+      </noscript>
+
       <h1 class="mt-10 md-mt-17 font-size-12.5 md-font-size-16 md-line-height-18 line-height-16">Mattress cleaning services</h1>
       <div class="flex flex-justify-center"><img class="b-rd-3 md-mt-10 mt-2 max-w-full" src="/assets/service-pics/mattress-cleaning/mattress-cleaning-services.jpg" alt="mattress-cleaning-services" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 30%);" /></div>
 
