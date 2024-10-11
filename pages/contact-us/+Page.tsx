@@ -2,7 +2,7 @@ import {createSignal} from 'solid-js';
 import {FleurDivider} from "../../components/FleurDivider";
 import {Collapse} from "solid-collapse";
 
-export function SingleCollapse() {
+function SingleCollapse() {
   const [isExpanded1, setIsExpanded1] = createSignal(false);
   const [isExpanded2, setIsExpanded2] = createSignal(false);
   const [isExpanded3, setIsExpanded3] = createSignal(false);

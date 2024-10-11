@@ -59,7 +59,7 @@ export default function Page() {
 
             <h3 class="mt-25 mb-0">INFOGRAPHIC</h3>
 
-            <div class="flex flex-justify-center"><img class="b-rd-3 md-mt-15 mt-5 max-w-full" src="/assets/blog/Conventional-carpet-cleaning-vs-еco-friendly-carpet-cleaning-401.jpg" alt="professional-stain-removal-service" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 30%);" /></div>
+            <div class="flex flex-justify-center"><img class="b-rd-3 md-mt-15 mt-5 max-w-full" src="/assets/blog/conventional-carpet-cleaning-vs-еco-friendly-carpet-cleaning-401.jpg" alt="professional-stain-removal-service" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 30%);" /></div>
 
             <p><i>The price is for a Medium-sized rug. See full pricing table <a class="color-paper-link hover-color-paper-link-hover:hover" href="/prices">here</a>.</i></p>
 

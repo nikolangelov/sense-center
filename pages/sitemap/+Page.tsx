@@ -10,7 +10,7 @@ export default function Page() {
                 <div class="flex flex-col">
                     <SitemapMenuItem href="/" text="Fine carpet cleaning"></SitemapMenuItem>
                     <div class="flex flex-row flex-items-center">
-                        <SitemapMenuItem href="/index" text="Services"></SitemapMenuItem>
+                        <SitemapMenuItem href="/services" text="Services"></SitemapMenuItem>
                         <ul id="services">
                             <li><SitemapMenuItem href="/professional-carpet-cleaning-services" text="Carpet Cleaning"/>
                             </li>
