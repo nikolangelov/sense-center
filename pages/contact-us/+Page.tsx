@@ -1,5 +1,107 @@
-import {createSignal} from 'solid-js';
-import { Head } from 'vike-solid/Head';
+import { createSignal } from 'solid-js';
+import { Collapse } from 'solid-collapse';
+
+export function SingleCollapse() {
+  const [isExpanded1, setIsExpanded1] = createSignal(false);
+  const [isExpanded2, setIsExpanded2] = createSignal(false);
+  const [isExpanded3, setIsExpanded3] = createSignal(false);
+  const [isExpanded4, setIsExpanded4] = createSignal(false);
+  const [isExpanded5, setIsExpanded5] = createSignal(false);
+  const [isExpanded6, setIsExpanded6] = createSignal(false);
+
+  return (
+    <>
+      <div>
+        <button onClick={() => setIsExpanded1(!isExpanded1())}>Appointment details</button>
+        <Collapse value={isExpanded1()} class="transition-all transition-duration-500">
+          <p>
+            We kindly ask you to respect our technicians' time. Keep your daily activities in mind when making an appointment. Keeping up with our schedule is very important, for the smooth operations of our teams.
+            If you need to change your appointment date, please let us know by 12 pm the working day before your change goes live. Otherwise, we may have to charge you for the missed appointment.
+            If you arrive late for your appointment, we may need to charge an additional fee due to the disruption and delay it causes to our schedule.
+          </p>
+          <p>
+            If we need to change any scheduled appointments, we'll let you know in advance and agree on a suitable alternative.
+          </p>
+        </Collapse>
+      </div>
+
+      <div>
+        <button onClick={() => setIsExpanded2(!isExpanded2())}>Parking</button>
+        <Collapse value={isExpanded2()} class="transition-all transition-duration-500">
+          <p>
+            The parking of our van is crucial, because we use industrial equipment, which is extremely heavy. It is very important to be as close as possible to the property.
+          </p>
+          <p>
+            The easiest and the cheapest way is, if you can provide us with a parking permit or an off-street parking space.
+          </p>
+          <p>
+            If not, the technician will find a suitable parking space and if this incurs any additional costs, they will be added to the final invoice.
+          </p>
+        </Collapse>
+      </div>
+
+      <div>
+        <button onClick={() => setIsExpanded3(!isExpanded3())}>Equipment and Accessibility</button>
+        <Collapse value={isExpanded3()} class="transition-all transition-duration-500">
+          <p>
+            It would be greatly appreciated if you could relocate delicate, small, or expensive pieces of furniture for insurance purposes, like lamps and decorations. If possible, position them in a location that won't be disrupted by the cleaning process. We aim to have the floors free of any obstacles.
+          </p>
+          <p>
+            We kindly ask you to remove any personal belongings (building materials), otherwise we reserve the right to add an additional charge to remove them or cancel your booking, and keep your deposit payment.
+          </p>
+          <p>
+            We need access to hot water and an electric provider for our visit.
+          </p>
+          <p>
+            Our equipment weighs over 50 kg. If it needs to be transported manually, additional fees will apply for each floor due to the effort required.
+          </p>
+        </Collapse>
+      </div>
+
+      <div>
+        <button onClick={() => setIsExpanded4(!isExpanded4())}>Cleaning Process</button>
+        <Collapse value={isExpanded4()} class="transition-all transition-duration-500">
+          <p>
+            We use a huge selection of professional stain removers for different stains. 95% of the time the stains will come out, but there are 5% of the time when the stain is too old, or worse it has been treated before, which sealed it, or even the fibres are rubbed off, in those cases we are unable to guarantee that the stain will come out.
+          </p>
+          <p>
+            In very rare cases where harsh chemicals like Vanish, Dr. Beckmann, etc, have been used, without visible effect, halos or discolouration of the carpet may occur after professional cleaning. This is caused by the bleaching agents contained in those chemicals. We are not responsible in such cases.
+          </p>
+          <p>
+            Please note, draught marks are not included in the quote unless specified.
+          </p>
+          <p>
+            We take photos before and after the cleaning to document our work and for quality control.
+          </p>
+        </Collapse>
+      </div>
+
+      <div>
+        <button onClick={() => setIsExpanded5(!isExpanded5())}>Pet Policy</button>
+        <Collapse value={isExpanded5()} class="transition-all transition-duration-500">
+          <p>
+            As a friendly reminder, if you have pets, we kindly request that you keep them in a separate area or make necessary arrangements during our visit. While we love our furry friends, it's to ensure their safety and our team's comfort during our time on-site.
+          </p>
+        </Collapse>
+      </div>
+
+      <div>
+        <button onClick={() => setIsExpanded6(!isExpanded6())}>Payment</button>
+        <Collapse value={isExpanded6()} class="transition-all transition-duration-500">
+          <p>
+            Payment must be arranged in full upon completion of the job and before the technician leaves.
+          </p>
+          <p>
+            Any complaints should be reported to us within 24hrs of the cleaning.
+          </p>
+          <p>
+            This Confirmation of Booking includes the costs of all materials, equipment and labour based on the above details.
+          </p>
+        </Collapse>
+      </div>
+    </>
+  );
+}
 
 function FleurDivider() {
   return (
@@ -231,7 +333,13 @@ export default function Page() {
         </div> */}
       </div>
 
-      <FleurDivider></FleurDivider>
+      <FleurDivider />
+
+      <h2>Helpful steps before our team arrives</h2>
+
+      <SingleCollapse />
+
+      <FleurDivider />
 
       <h2>Working hours</h2>
 
@@ -277,9 +385,12 @@ export default function Page() {
         </tbody>
       </table>
 
-      <FleurDivider></FleurDivider>
+      <FleurDivider />
 
-      <div class="mb--10"></div>
+      <div class="m-10% mb-3% flex flex-wrap flex-justify-center md-gap-15 gap-10">
+        <a href="/prices"><button class="cursor-pointer outline-none bg-brand-second-action hover-bg-brand-second-action-hover:hover font-size-5 font-600 w-200px h-60px c-paper flex flex-items-center flex-justify-center relative b-solid b-rd-3 b-4 b-brand-second-action hover-b-brand-second-action-hover:hover whitespace-normal line-height-6 word-spacing-0.5 py-9" style="box-shadow: 0 0 0 3px rgba(255, 255, 255, .9) inset; letter-spacing: 0.05rem;">PRICES</button></a>
+        <a href="/services"><button class="cursor-pointer outline-none bg-brand-action hover-bg-brand-action-hover:hover font-size-5 font-600 w-200px h-60px c-paper flex flex-items-center flex-justify-center relative b-solid b-rd-3 b-4 b-brand-action hover-b-brand-action-hover:hover whitespace-normal line-height-6 word-spacing-0.5 py-9" style="box-shadow: 0 0 0 3px rgba(255, 255, 255, .9) inset; letter-spacing: 0.05rem;">SERVICES</button></a>
+      </div>
     </>
   );
 }
