@@ -6,6 +6,85 @@ import { Typography } from '../../components/Typography';
 import { ReviewSlider, StarReview } from '../../components/ReviewSlider';
 import { GallerySlider } from '../../components/GallerySlider';
 
+import { createEffect } from "solid-js";
+
+const JSONLDScript = () => {
+  createEffect(() => {
+    const script = document.createElement("script");
+    script.type = "application/ld+json";
+    script.text = JSON.stringify({
+      "@context": "https://schema.org/",
+      "@graph": [
+        {
+          "@type": "Product",
+          "name": "Professional carpet steam cleaning services",
+          "image": "https://finecarpetcleaning.co.uk/professional-carpet-cleaning-services/steam",
+          "description": "Fine Carpet Cleaning offers professional carpet cleaning services that enhance hygiene, prolong carpet life, and maintain a fresh appearance.",
+          "brand": {
+            "@type": "Brand",
+            "name": "Fine Carpet Cleaning"
+          },
+          "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.8",
+            "bestRating": "5",
+            "worstRating": "1",
+            "ratingCount": "131"
+          }
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Do you have a cancellation fee?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes, if you cancel on the day of the cleaning you will lose your deposit."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Do I need to pay for congestion/parking charges?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes, the client is requested to arrange suitable parking space for our vehicles within close proximity of the property and to cover any parking/congestion expenses if applicable."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Do carpet cleaning services move furniture?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Please move small, fragile, or valuable items (lamps, ornaments) out of the way for insurance reasons. We’ll help with light furniture but will charge extra for heavy items requiring more effort."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "What if I live on the 4th floor or higher and I have no lift?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Since our equipment is very heavy (50kg+), when our technician has to carry it by hand we charge extra for every additional floor. The reason is that this will usually take a lot of time and our technicians tire faster, therefore that day they cannot do as much work as they usually do."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Are you insured?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes, we are fully insured."
+              }
+            }
+          ]
+        }
+      ]
+    });
+    document.head.appendChild(script);
+  });
+
+  return null; // This component doesn't need to render anything visible
+};
+
 function FleurDivider() {
 	return (
 		<div class="m-auto my-30 md-my-36 position-relative w-80%">
@@ -203,6 +282,8 @@ function FaqSection() {
 export default function Page() {
 	return (
 		<>
+		<JSONLDScript/>
+		
 			<noscript>
 				<iframe
 					src="https://www.googletagmanager.com/ns.html?id=GTM-PCFWNH5G"
