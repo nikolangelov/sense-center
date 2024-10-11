@@ -1,15 +1,7 @@
 import "solid-slider/slider.css";
 import {createSignal, Show} from 'solid-js';
 import range from "lodash/range"
-
-function FleurDivider() {
-  return (
-    <div class="m-auto my-30 md-my-36 position-relative w-80%">
-      <div class="divider-shadow overflow-hidden h-0.5 after-block::after after-w-full::after after-h-6::after after-mx-auto::after after-mt--6::after"></div>
-      <div class="w-11 h-11 position-absolute position-bottom--6 left-47% bg-#f7f7f7"><img class="position-absolute max-w-7 mx-1.8" src="/assets/output-onlinepngtools.png" /></div>
-    </div>
-  );
-}
+import {FleurDivider} from "../../components/FleurDivider";
 
 function ButtonsFilterReviews({ setFilter }: { setFilter: (rating: number | undefined) => void }) {
   return (
@@ -18,7 +10,7 @@ function ButtonsFilterReviews({ setFilter }: { setFilter: (rating: number | unde
         <p class="font-size-16 m-b-7 m-t-0 m-x-auto" style="font-family:'Roboto'">4.8</p>
         <div>
           {range(5).map(() => (
-            <img class="w-5" src="https://finecarpetcleaning.co.uk/wp-content/uploads/2024/01/google-star-review-logo-e1706350894182.png" alt="" />
+            <img class="w-5" src="/assets/google-star-review-logo-e1706350894182.png" alt="review star" />
           ))}
         </div>
         <p class="font-400 m-b-0 m-t-1 m-x-auto" style="font-family:'Roboto'">119 reviews</p>
@@ -113,7 +105,9 @@ function StarReview(props: { src: string; filterStars: number | undefined; stars
         <button class="outline-none bg-brand-action hover-bg-brand-action-hover:hover font-size-6 font-600 w-200px h-60px c-paper flex flex-items-center flex-justify-center relative b-solid b-rd-3 b-4 b-brand-action hover-b-brand-action-hover:hover whitespace-normal line-height-6 word-spacing-0.5 py-9" style="box-shadow: 0 0 0 3px rgba(255, 255, 255, .9) inset; letter-spacing: 0.05rem;"><a href={props.hrefGoogleReview} target="_blank" rel="noopener" class="c-paper font-size-5">READ MORE IN GOOGLE</a></button>
       </div>
 
-      <div class="filterDiv 5-stars"><FleurDivider></FleurDivider></div>
+      <div class="filterDiv 5-stars">
+          <FleurDivider/>
+      </div>
     </Show>
   );
 }

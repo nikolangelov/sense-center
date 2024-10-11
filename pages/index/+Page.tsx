@@ -6,15 +6,6 @@ import { Typography } from '../../components/Typography';
 import { ReviewSlider, StarReview } from '../../components/ReviewSlider';
 import { GallerySlider } from '../../components/GallerySlider';
 
-function FleurDivider() {
-	return (
-		<div class="m-auto my-30 md-my-36 position-relative w-80%">
-			<div class="divider-shadow overflow-hidden h-0.5 after-block::after after-w-full::after after-h-6::after after-mx-auto::after after-mt--6::after"></div>
-			<div class="w-11 h-11 position-absolute position-bottom--6 left-47% bg-#f7f7f7"><img class="position-absolute max-w-7 mx-1.8" src="/assets/output-onlinepngtools.png" /></div>
-		</div>
-	);
-}
-
 const VideoPlayer = () => {
 	return (
 		<div class="flex flex-justify-center flex-items-center mt-20">
@@ -581,13 +572,13 @@ export default function Page() {
 				</tbody>
 			</table>
 
-			<FleurDivider></FleurDivider>
+			<FleurDivider/>
 
 			<h2>Frequently asked questions</h2>
 
 			<FaqSection />
 
-			<FleurDivider></FleurDivider>
+			<FleurDivider/>
 
 			<div class="m-10% mb-3% flex flex-wrap flex-justify-center md-gap-15 gap-10">
 				<a href="/contact-us"><button class="cursor-pointer outline-none bg-brand-action hover-bg-brand-action-hover:hover font-size-5 font-600 w-200px h-60px c-paper flex flex-items-center flex-justify-center relative b-solid b-rd-3 b-4 b-brand-action hover-b-brand-action-hover:hover whitespace-normal line-height-6 word-spacing-0.5 py-9" style="box-shadow: 0 0 0 3px rgba(255, 255, 255, .9) inset; letter-spacing: 0.05rem;">REQUEST A QUOTE</button></a>

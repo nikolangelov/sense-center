@@ -6,6 +6,7 @@ import { ReviewSlider, StarReview } from '../../../../components/ReviewSlider';
 import { FOTSlider, FOTSliderContainer } from '../../../../components/FrequentlyOrderedTogether';
 import { PriceTable } from '../../../../components/PriceTable';
 import { createEffect } from "solid-js";
+import {FleurDivider} from "../../../../components/FleurDivider";
 
 const VideoPlayer = () => {
   return (
@@ -19,15 +20,6 @@ const VideoPlayer = () => {
     </div>
   );
 };
-
-function FleurDivider() {
-  return (
-    <div class="m-auto my-30 md-my-36 position-relative w-80%">
-      <div class="divider-shadow overflow-hidden h-0.5 after-block::after after-w-full::after after-h-6::after after-mx-auto::after after-mt--6::after"></div>
-      <div class="w-11 h-11 position-absolute position-bottom--6 left-47% bg-#f7f7f7"><img class="position-absolute max-w-7 mx-1.8" src="/assets/output-onlinepngtools.png" /></div>
-    </div>
-  );
-}
 
 function FaqSection() {
   const { Container, Entry } = createCollapsable()
@@ -267,9 +259,9 @@ export default function Page() {
       </noscript>
 
       <h1 class="mt-10 md-mt-17 font-size-12.5 md-font-size-16 md-line-height-18 line-height-16">Professional leather sofa cleaning services</h1>
-      <div class="flex flex-justify-center"><img class="b-rd-3 md-mt-10 mt-2 max-w-full" src="/assets/service-pics\leather-sofa-cleaning\leather-sofa-cleaning-services-1.jpg" alt="leather-sofa-cleaning-services-1" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 30%);" /></div>
+      <div class="flex flex-justify-center"><img class="b-rd-3 md-mt-10 mt-2 max-w-full" src="/assets/service-pics/leather-sofa-cleaning/leather-sofa-cleaning-services-1.jpg" alt="leather-sofa-cleaning-services-1" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 30%);" /></div>
 
-      <FleurDivider></FleurDivider>
+      <FleurDivider/>
 
       <h2 class="line-height-12 md-line-height-14">What to expect from our professional leather sofa cleaning services</h2>
       <div class="mt-20 py-8 px-8 md-px-14 bg-paper b-rd-3" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 18%);">
@@ -338,7 +330,7 @@ export default function Page() {
         </ol>
       </div>
 
-      <FleurDivider></FleurDivider>
+      <FleurDivider/>
 
       <h2 class="line-height-12 md-line-height-14">Equipment and products we use for our professional leather sofa cleaning services</h2>
       <div class="mt-20 py-8 px-12 md-px-14 bg-paper b-rd-3" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 18%);">
@@ -370,7 +362,7 @@ export default function Page() {
         </ul>
       </div>
 
-      <FleurDivider></FleurDivider>
+      <FleurDivider/>
 
       <h2 class="line-height-12 md-line-height-14">Pictures from our professional leather sofa cleaning services</h2>
 
@@ -390,13 +382,13 @@ export default function Page() {
         { src: "/assets/service-pics/leather-sofa-cleaning/13-leather-upholstery-cleaning-companies-1.jpg", alt: "13-leather-upholstery-cleaning-companies-1" },
       ]} />
 
-      <FleurDivider></FleurDivider>
+      <FleurDivider/>
 
       <h2 class="line-height-12 md-line-height-14">Video from our professional leather sofa cleaning services</h2>
 
       <VideoPlayer></VideoPlayer>
 
-      <FleurDivider></FleurDivider>
+      <FleurDivider/>
 
       <h2 class="line-height-12 md-line-height-14">Prices of our professional leather sofa cleaning services</h2>
 
@@ -455,7 +447,7 @@ export default function Page() {
 
       <button class="outline-none bg-brand-second-action hover-bg-brand-second-action-hover:hover font-size-6 font-600 w-250px h-60px c-paper flex flex-items-center flex-justify-center relative b-solid b-rd-3 b-4 b-brand-second-action hover-b-brand-second-action-hover:hover whitespace-normal line-height-6 word-spacing-0.5 py-9 my-20 mx-auto" style="box-shadow: 0 0 0 3px rgba(255, 255, 255, .9) inset; letter-spacing: 0.05rem;"><a href="/contact-us" class="c-paper font-size-5">REQUEST A QUOTE</a></button>
 
-      <FleurDivider></FleurDivider>
+      <FleurDivider/>
 
       <h2 class="line-height-12 md-line-height-14">Frequently ordered together</h2>
 
@@ -497,7 +489,7 @@ export default function Page() {
         />
       </FOTSlider>
 
-      <FleurDivider></FleurDivider>
+      <FleurDivider/>
 
       <h2 class="line-height-12 md-line-height-14">Our professional leather sofa cleaning services specialist advises:</h2>
       <div class="mt-20 py-8 px-12 md-px-14 bg-paper b-rd-3" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 18%);">
@@ -525,7 +517,7 @@ export default function Page() {
         </ol>
       </div>
 
-      <FleurDivider></FleurDivider>
+      <FleurDivider/>
 
       <h2 class="line-height-12 md-line-height-14">Reviews of our professional leather sofa cleaning services</h2>
 
@@ -585,13 +577,13 @@ export default function Page() {
 
       </ReviewSlider>
 
-      <FleurDivider></FleurDivider>
+      <FleurDivider/>
 
       <h2 class="line-height-12 md-line-height-14">FAQ regarding our professional leather sofa cleaning services</h2>
 
       <FaqSection />
 
-      <FleurDivider></FleurDivider>
+      <FleurDivider/>
 
       <div class="m-10% mb-3% flex flex-wrap flex-justify-center md-gap-15 gap-10">
         <a href="/services"><button class="cursor-pointer outline-none bg-brand-second-action hover-bg-brand-second-action-hover:hover font-size-5 font-600 w-200px h-60px c-paper flex flex-items-center flex-justify-center relative b-solid b-rd-3 b-4 b-brand-second-action hover-b-brand-second-action-hover:hover whitespace-normal line-height-6 word-spacing-0.5 py-9" style="box-shadow: 0 0 0 3px rgba(255, 255, 255, .9) inset; letter-spacing: 0.05rem;">SERVICES</button></a>
