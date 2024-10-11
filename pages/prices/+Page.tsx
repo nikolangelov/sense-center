@@ -1,5 +1,6 @@
 import "solid-slider/slider.css";
 import {PriceTable} from '../../components/PriceTable';
+import {FleurDivider} from "../../components/FleurDivider";
 
 export default function Page() {
 	return (

@@ -6,6 +6,7 @@ import { ReviewSlider, StarReview } from '../../../components/ReviewSlider';
 import { FOTSlider, FOTSliderContainer } from '../../../components/FrequentlyOrderedTogether';
 import { PriceTable } from '../../../components/PriceTable';
 import { createEffect } from "solid-js";
+import {FleurDivider} from "../../../components/FleurDivider";
 
 const VideoPlayer = () => {
   return (

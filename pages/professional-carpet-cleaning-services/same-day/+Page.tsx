@@ -5,6 +5,7 @@ import { createCollapsable } from '../../../components/Collapsable';
 import { ReviewSlider, StarReview } from '../../../components/ReviewSlider';
 import { FOTSlider, FOTSliderContainer } from '../../../components/FrequentlyOrderedTogether';
 import { createEffect } from "solid-js";
+import {FleurDivider} from "../../../components/FleurDivider";
 
 const VideoPlayer = () => {
   return (

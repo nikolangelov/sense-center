@@ -1,3 +1,5 @@
+import {FleurDivider} from "../../components/FleurDivider";
+
 export default function Page() {
     return (
         <>

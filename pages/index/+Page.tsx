@@ -5,6 +5,7 @@ import { createCollapsable } from "../../components/Collapsable";
 import { Typography } from '../../components/Typography';
 import { ReviewSlider, StarReview } from '../../components/ReviewSlider';
 import { GallerySlider } from '../../components/GallerySlider';
+import {FleurDivider} from "../../components/FleurDivider";
 
 const VideoPlayer = () => {
 	return (
