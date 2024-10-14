@@ -312,21 +312,21 @@ export default function Page() {
 			<h2>Our main cleaning services</h2>
 			<div class="p-6 pt-12 bg-paper b-rd-3 flex flex-justify-center" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 18%);">
 				<a href="/professional-carpet-cleaning-services">
-					<img class="md-mt-3 mt--6 mx-auto block md-w-650px xs-w-330px w-270px" src="/assets/service-pics/carpet-cleaning/carpet-cleaning-specialists.jpg" alt="carpet-cleaning-specialists" />
+					<img class="md-mt-3 mt--6 mx-auto block md-w-650px xs-w-330px max-w-full" src="/assets/service-pics/carpet-cleaning/carpet-cleaning-specialists.jpg" alt="carpet-cleaning-specialists" />
 					<h3 class="flex flex-justify-center flex-content-center flex-wrap flex-items-center md-mt-16 md-mb-9 mb-4 text-center font-size-7 md-font-size-9">Professional carpet cleaning services</h3>
 				</a>
 			</div>
 
 			<div class="p-6 pt-12 bg-paper mt-20 b-rd-3 flex flex-justify-center" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 18%);">
 				<a href="/professional-upholstery-cleaning-services">
-					<img class="md-mt-3 mt--6 mx-auto block md-w-650px xs-w-330px w-270px" src="/assets/service-pics/upholstery-cleaning/upholstery-cleaners-london.jpg" alt="upholstery-cleaners-london" />
+					<img class="md-mt-3 mt--6 mx-auto block md-w-650px xs-w-330px max-w-full" src="/assets/service-pics/upholstery-cleaning/upholstery-cleaners-london.jpg" alt="upholstery-cleaners-london" />
 					<h3 class="flex flex-justify-center flex-content-center flex-wrap flex-items-center md-mt-16 md-mb-9 mb-4 text-center font-size-7 md-font-size-9">Professional upholstery cleaning services</h3>
 				</a>
 			</div>
 
 			<div class="p-6 pt-12 bg-paper mt-20 b-rd-3 flex flex-justify-center" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 18%);">
 				<a href="/professional-rug-cleaning-services">
-					<img class="md-mt-3 mt--6 mx-auto block md-w-650px xs-w-330px w-270px" src="/assets/service-pics/rug-cleaning/rug-washing-service.jpg" alt="" />
+					<img class="md-mt-3 mt--6 mx-auto block md-w-650px xs-w-330px max-w-full" src="/assets/service-pics/rug-cleaning/rug-washing-service.jpg" alt="" />
 					<h3 class="flex flex-justify-center flex-content-center flex-wrap flex-items-center md-mt-16 md-mb-9 mb-4 text-center font-size-7 md-font-size-9">Professional rug cleaning services</h3>
 				</a>
 			</div>

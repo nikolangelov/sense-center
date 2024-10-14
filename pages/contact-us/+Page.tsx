@@ -14,7 +14,7 @@ function SingleCollapse() {
   return (
     <>
     <div class="flex flex-col gap-8 cursor-pointer">
-      <div class="collapsable-button-contact-us b-none b-rd-1 bg-paper px-7 py-2" style="box-shadow: 0px 0px 0px 2px #01874c; transition: outline 0.03s ease-out;">
+      <div class="collapsable-button-contact-us b-none b-rd-1 bg-paper px-7 py-2" style="box-shadow: 0px 0px 0px 1.5px #01874c; transition: outline 0.03s ease-out;">
       <button onClick={() => setIsExpanded1(!isExpanded1())} class="flex flex-items-center w-full mx-auto capitalize b-none b-rd-1 bg-paper font-600 py-2 font-size-5 whitespace-nowrap cursor-pointer" style="letter-spacing: -0.01rem;">Appointment details <MdiArrowDownDrop/></button>
               <Collapse value={isExpanded1()} class="transition-all transition-duration-500">
           <p>
@@ -28,7 +28,7 @@ function SingleCollapse() {
         </Collapse>
       </div>
 
-      <div class="collapsable-button-contact-us b-none b-rd-1 bg-paper px-7 py-2 cursor-pointer" style="box-shadow: 0px 0px 0px 2px #01874c; transition: outline 0.03s ease-out;">
+      <div class="collapsable-button-contact-us b-none b-rd-1 bg-paper px-7 py-2 cursor-pointer" style="box-shadow: 0px 0px 0px 1.5px #01874c; transition: outline 0.03s ease-out;">
         <button onClick={() => setIsExpanded2(!isExpanded2())} class="flex flex-items-center w-full mx-auto capitalize b-none b-rd-1 bg-paper font-600 py-2 font-size-5 whitespace-nowrap cursor-pointer" style="letter-spacing: -0.01rem;">Parking <MdiArrowDownDrop/></button>
         <Collapse value={isExpanded2()} class="transition-all transition-duration-500">
           <p>
@@ -43,7 +43,7 @@ function SingleCollapse() {
         </Collapse>
       </div>
 
-      <div class="collapsable-button-contact-us b-none b-rd-1 bg-paper px-7 py-2 cursor-pointer" style="box-shadow: 0px 0px 0px 2px #01874c; transition: outline 0.03s ease-out;">
+      <div class="collapsable-button-contact-us b-none b-rd-1 bg-paper px-7 py-2 cursor-pointer" style="box-shadow: 0px 0px 0px 1.5px #01874c; transition: outline 0.03s ease-out;">
         <button onClick={() => setIsExpanded3(!isExpanded3())} class="flex flex-items-center w-full mx-auto capitalize b-none b-rd-1 bg-paper font-600 py-2 font-size-5 whitespace-nowrap cursor-pointer" style="letter-spacing: -0.01rem;">Equipment and Accessibility <MdiArrowDownDrop/></button>
         <Collapse value={isExpanded3()} class="transition-all transition-duration-500">
           <p>
@@ -61,7 +61,7 @@ function SingleCollapse() {
         </Collapse>
       </div>
 
-      <div class="collapsable-button-contact-us b-none b-rd-1 bg-paper px-7 py-2 cursor-pointer" style="box-shadow: 0px 0px 0px 2px #01874c; transition: outline 0.03s ease-out;">
+      <div class="collapsable-button-contact-us b-none b-rd-1 bg-paper px-7 py-2 cursor-pointer" style="box-shadow: 0px 0px 0px 1.5px #01874c; transition: outline 0.03s ease-out;">
         <button onClick={() => setIsExpanded4(!isExpanded4())} class="flex flex-items-center w-full mx-auto capitalize b-none b-rd-1 bg-paper font-600 py-2 font-size-5 whitespace-nowrap cursor-pointer" style="letter-spacing: -0.01rem;">Cleaning Process <MdiArrowDownDrop/></button>
         <Collapse value={isExpanded4()} class="transition-all transition-duration-500">
           <p>
@@ -79,7 +79,7 @@ function SingleCollapse() {
         </Collapse>
       </div>
 
-      <div class="collapsable-button-contact-us b-none b-rd-1 bg-paper px-7 py-2 cursor-pointer" style="box-shadow: 0px 0px 0px 2px #01874c; transition: outline 0.03s ease-out;">
+      <div class="collapsable-button-contact-us b-none b-rd-1 bg-paper px-7 py-2 cursor-pointer" style="box-shadow: 0px 0px 0px 1.5px #01874c; transition: outline 0.03s ease-out;">
         <button onClick={() => setIsExpanded5(!isExpanded5())} class="flex flex-items-center w-full mx-auto capitalize b-none b-rd-1 bg-paper font-600 py-2 font-size-5 whitespace-nowrap cursor-pointer" style="letter-spacing: -0.01rem;">Pet Policy <MdiArrowDownDrop/></button>
         <Collapse value={isExpanded5()} class="transition-all transition-duration-500">
           <p>
@@ -88,7 +88,7 @@ function SingleCollapse() {
         </Collapse>
       </div>
 
-      <div class="collapsable-button-contact-us b-none b-rd-1 bg-paper px-7 py-2 cursor-pointer" style="box-shadow: 0px 0px 0px 2px #01874c; transition: outline 0.03s ease-out;">
+      <div class="collapsable-button-contact-us b-none b-rd-1 bg-paper px-7 py-2 cursor-pointer" style="box-shadow: 0px 0px 0px 1.5px #01874c; transition: outline 0.03s ease-out;">
         <button onClick={() => setIsExpanded6(!isExpanded6())} class="flex flex-items-center w-full mx-auto capitalize b-none b-rd-1 bg-paper font-600 py-2 font-size-5 whitespace-nowrap cursor-pointer" style="letter-spacing: -0.01rem; font-family: Arial !important;">Payment <MdiArrowDownDrop/></button>
         <Collapse value={isExpanded6()} class="transition-all transition-duration-500">
           <p>
@@ -194,10 +194,10 @@ export default function Page() {
         <div class="mt-15 mb-35 py-8 px-5 md-px-14 bg-paper b-rd-3 mx-auto" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 10%);">
 
           <form class="flex-gap-5 flex flex-col py-5" onSubmit={sendEmail} method="post" enctype="multipart/form-data">
-            <input type="email" value={email()} onChange={(e) => setEmail(e.target.value)} placeholder="E-mail:" class="bg-gray-1 b-none w-full p-3 b-rd-1 c-paper-inv font-serif font-size-4" style="box-shadow: 0 1px 2px rgba(0, 0, 0, .12) inset;" required />
-            <input type="text" value={name()} onChange={(e) => setName(e.target.value)} placeholder="Name:" class="bg-gray-1 b-none w-full p-3 b-rd-1 c-paper-inv font-serif font-size-4" style="box-shadow: 0 1px 2px rgba(0, 0, 0, .12) inset;" required />
-            <input type="text" value={postCode()} onChange={(e) => setPostCode(e.target.value)} placeholder="Post code:" class="bg-gray-1 b-none w-full p-3 b-rd-1 c-paper-inv font-serif font-size-4" style="box-shadow: 0 1px 2px rgba(0, 0, 0, .12) inset;" required />
-            <input type="tel" value={phone()} onChange={(e) => setPhone(e.target.value)} placeholder="Phone:" class="bg-gray-1 b-none w-full p-3 b-rd-1 c-paper-inv font-serif font-size-4" style="box-shadow: 0 1px 2px rgba(0, 0, 0, .12) inset;" required />
+            <input type="email" value={email()} onChange={(e) => setEmail(e.target.value)} placeholder="E-mail:" class="bg-gray-1 b-none w-full p-3 b-rd-1 c-paper-inv font-sans font-size-4" style="box-shadow: 0 1px 2px rgba(0, 0, 0, .12) inset;" required />
+            <input type="text" value={name()} onChange={(e) => setName(e.target.value)} placeholder="Name:" class="bg-gray-1 b-none w-full p-3 b-rd-1 c-paper-inv font-sans font-size-4" style="box-shadow: 0 1px 2px rgba(0, 0, 0, .12) inset;" required />
+            <input type="text" value={postCode()} onChange={(e) => setPostCode(e.target.value)} placeholder="Post code:" class="bg-gray-1 b-none w-full p-3 b-rd-1 c-paper-inv font-sans font-size-4" style="box-shadow: 0 1px 2px rgba(0, 0, 0, .12) inset;" required />
+            <input type="tel" value={phone()} onChange={(e) => setPhone(e.target.value)} placeholder="Phone:" class="bg-gray-1 b-none w-full p-3 b-rd-1 c-paper-inv font-sans font-size-4" style="box-shadow: 0 1px 2px rgba(0, 0, 0, .12) inset;" required />
 
             <h4 class="mb-0 mt-6">Service required</h4>
 
@@ -249,7 +249,7 @@ export default function Page() {
               </div>
             </span>
 
-            <textarea value={text()} onChange={(e) => setText(e.target.value)} placeholder="Message:" class="mt-2 bg-gray-1 b-none w-full pt-3 pl-3 pb-30 b-rd-1 c-paper-inv font-serif font-size-4" style="box-shadow: 0 1px 2px rgba(0, 0, 0, .12) inset;" />
+            <textarea value={text()} onChange={(e) => setText(e.target.value)} placeholder="Message:" class="mt-2 bg-gray-1 b-none w-full pt-3 pl-3 pb-30 b-rd-1 c-paper-inv font-sans font-size-4" style="box-shadow: 0 1px 2px rgba(0, 0, 0, .12) inset;" />
 
             <h4 class="mb-2">How did you find us</h4>
 
