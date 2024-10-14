@@ -82,7 +82,7 @@ h1 {
   margin: 3rem 0;
   font-weight: 700 !important;
   font-size: 48px !important;
-    line-height: 4rem !important;
+  line-height: 4rem !important;
 }
 
 @media (max-width: 900px) {
@@ -293,4 +293,10 @@ ol>li>ul>li:before {
 .transition-h2.visible {
   opacity: 1;
   transform: translateY(0);
+}
+
+.collapsable-button-contact-us:hover {
+  outline-style: solid;
+  outline-width: 2px;
+  outline-color: #1A6142;
 }

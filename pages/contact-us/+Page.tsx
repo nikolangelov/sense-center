@@ -1,6 +1,7 @@
 import {createSignal} from 'solid-js';
 import {FleurDivider} from "../../components/FleurDivider";
 import {Collapse} from "solid-collapse";
+import MdiArrowDownDrop from '~icons/mdi/arrow-down-drop';
 
 function SingleCollapse() {
   const [isExpanded1, setIsExpanded1] = createSignal(false);
@@ -12,9 +13,10 @@ function SingleCollapse() {
 
   return (
     <>
-      <div>
-        <button onClick={() => setIsExpanded1(!isExpanded1())}>Appointment details</button>
-        <Collapse value={isExpanded1()} class="transition-all transition-duration-500">
+    <div class="flex flex-col gap-8 cursor-pointer">
+      <div class="collapsable-button-contact-us b-none b-rd-1 bg-paper px-7 py-2" style="box-shadow: 0px 0px 0px 2px #01874c; transition: outline 0.03s ease-out;">
+      <button onClick={() => setIsExpanded1(!isExpanded1())} class="flex flex-items-center w-full mx-auto capitalize b-none b-rd-1 bg-paper font-600 py-2 font-size-5 whitespace-nowrap cursor-pointer" style="letter-spacing: -0.01rem;">Appointment details <MdiArrowDownDrop/></button>
+              <Collapse value={isExpanded1()} class="transition-all transition-duration-500">
           <p>
             We kindly ask you to respect our technicians' time. Keep your daily activities in mind when making an appointment. Keeping up with our schedule is very important, for the smooth operations of our teams.
             If you need to change your appointment date, please let us know by 12 pm the working day before your change goes live. Otherwise, we may have to charge you for the missed appointment.
@@ -26,8 +28,8 @@ function SingleCollapse() {
         </Collapse>
       </div>
 
-      <div>
-        <button onClick={() => setIsExpanded2(!isExpanded2())}>Parking</button>
+      <div class="collapsable-button-contact-us b-none b-rd-1 bg-paper px-7 py-2 cursor-pointer" style="box-shadow: 0px 0px 0px 2px #01874c; transition: outline 0.03s ease-out;">
+        <button onClick={() => setIsExpanded2(!isExpanded2())} class="flex flex-items-center w-full mx-auto capitalize b-none b-rd-1 bg-paper font-600 py-2 font-size-5 whitespace-nowrap cursor-pointer" style="letter-spacing: -0.01rem;">Parking <MdiArrowDownDrop/></button>
         <Collapse value={isExpanded2()} class="transition-all transition-duration-500">
           <p>
             The parking of our van is crucial, because we use industrial equipment, which is extremely heavy. It is very important to be as close as possible to the property.
@@ -41,8 +43,8 @@ function SingleCollapse() {
         </Collapse>
       </div>
 
-      <div>
-        <button onClick={() => setIsExpanded3(!isExpanded3())}>Equipment and Accessibility</button>
+      <div class="collapsable-button-contact-us b-none b-rd-1 bg-paper px-7 py-2 cursor-pointer" style="box-shadow: 0px 0px 0px 2px #01874c; transition: outline 0.03s ease-out;">
+        <button onClick={() => setIsExpanded3(!isExpanded3())} class="flex flex-items-center w-full mx-auto capitalize b-none b-rd-1 bg-paper font-600 py-2 font-size-5 whitespace-nowrap cursor-pointer" style="letter-spacing: -0.01rem;">Equipment and Accessibility <MdiArrowDownDrop/></button>
         <Collapse value={isExpanded3()} class="transition-all transition-duration-500">
           <p>
             It would be greatly appreciated if you could relocate delicate, small, or expensive pieces of furniture for insurance purposes, like lamps and decorations. If possible, position them in a location that won't be disrupted by the cleaning process. We aim to have the floors free of any obstacles.
@@ -59,8 +61,8 @@ function SingleCollapse() {
         </Collapse>
       </div>
 
-      <div>
-        <button onClick={() => setIsExpanded4(!isExpanded4())}>Cleaning Process</button>
+      <div class="collapsable-button-contact-us b-none b-rd-1 bg-paper px-7 py-2 cursor-pointer" style="box-shadow: 0px 0px 0px 2px #01874c; transition: outline 0.03s ease-out;">
+        <button onClick={() => setIsExpanded4(!isExpanded4())} class="flex flex-items-center w-full mx-auto capitalize b-none b-rd-1 bg-paper font-600 py-2 font-size-5 whitespace-nowrap cursor-pointer" style="letter-spacing: -0.01rem;">Cleaning Process <MdiArrowDownDrop/></button>
         <Collapse value={isExpanded4()} class="transition-all transition-duration-500">
           <p>
             We use a huge selection of professional stain removers for different stains. 95% of the time the stains will come out, but there are 5% of the time when the stain is too old, or worse it has been treated before, which sealed it, or even the fibres are rubbed off, in those cases we are unable to guarantee that the stain will come out.
@@ -77,8 +79,8 @@ function SingleCollapse() {
         </Collapse>
       </div>
 
-      <div>
-        <button onClick={() => setIsExpanded5(!isExpanded5())}>Pet Policy</button>
+      <div class="collapsable-button-contact-us b-none b-rd-1 bg-paper px-7 py-2 cursor-pointer" style="box-shadow: 0px 0px 0px 2px #01874c; transition: outline 0.03s ease-out;">
+        <button onClick={() => setIsExpanded5(!isExpanded5())} class="flex flex-items-center w-full mx-auto capitalize b-none b-rd-1 bg-paper font-600 py-2 font-size-5 whitespace-nowrap cursor-pointer" style="letter-spacing: -0.01rem;">Pet Policy <MdiArrowDownDrop/></button>
         <Collapse value={isExpanded5()} class="transition-all transition-duration-500">
           <p>
             As a friendly reminder, if you have pets, we kindly request that you keep them in a separate area or make necessary arrangements during our visit. While we love our furry friends, it's to ensure their safety and our team's comfort during our time on-site.
@@ -86,8 +88,8 @@ function SingleCollapse() {
         </Collapse>
       </div>
 
-      <div>
-        <button onClick={() => setIsExpanded6(!isExpanded6())}>Payment</button>
+      <div class="collapsable-button-contact-us b-none b-rd-1 bg-paper px-7 py-2 cursor-pointer" style="box-shadow: 0px 0px 0px 2px #01874c; transition: outline 0.03s ease-out;">
+        <button onClick={() => setIsExpanded6(!isExpanded6())} class="flex flex-items-center w-full mx-auto capitalize b-none b-rd-1 bg-paper font-600 py-2 font-size-5 whitespace-nowrap cursor-pointer" style="letter-spacing: -0.01rem; font-family: Arial !important;">Payment <MdiArrowDownDrop/></button>
         <Collapse value={isExpanded6()} class="transition-all transition-duration-500">
           <p>
             Payment must be arranged in full upon completion of the job and before the technician leaves.
@@ -99,6 +101,7 @@ function SingleCollapse() {
             This Confirmation of Booking includes the costs of all materials, equipment and labour based on the above details.
           </p>
         </Collapse>
+      </div>
       </div>
     </>
   );
