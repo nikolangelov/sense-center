@@ -255,33 +255,43 @@ ol>li>ul>li:before {
   display: none;
 }
 
-#menu-checkbox:checked {
-  transform: translateX(0rem);
+
+.hamburger .line {
+  width: 100%;
+  border-radius: 20px;
+  height: 4px;
+  background-color: #1A6142;
+  transition: all 0.4s ease;
 }
 
-#burger-menu>div {
-  height: 5px;
-  background-color: #1a7e57;
-  transition: 0.5s;
-  z-index: 999;
-  border-radius: 10px;
+.hamburger .line:nth-child(1) {
+  transform-origin: top left;
 }
 
-#menu-checkbox:checked~#burger-menu>div {
-  background-color: #1a7e57;
+.hamburger .line:nth-child(2) {
+  opacity: 1;
 }
 
-#menu-checkbox:checked~#burger-menu>div:nth-child(1) {
-  transform: translateY(8px) rotate(45deg);
+.hamburger .line:nth-child(3) {
+  transform-origin: bottom left;
 }
 
-#menu-checkbox:checked~#burger-menu>div:nth-child(2) {
+.hamburger .open:nth-child(1) {
+  transform: rotate(45deg);
+}
+
+.hamburger .open:nth-child(2) {
   opacity: 0;
 }
 
-#menu-checkbox:checked~#burger-menu>div:nth-child(3) {
-  transform: translateY(-15px) rotate(-45deg);
+.hamburger .open:nth-child(3) {
+  transform: rotate(-45deg);
 }
+
+.fixed {
+  transition: height 0.4s ease;
+}
+
 
 
 .transition-h2 {

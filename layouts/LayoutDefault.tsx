@@ -1,6 +1,6 @@
 import 'uno.css'
 import "./style.css";
-import {children, createEffect, createSignal, JSX, onCleanup, onMount, Show} from "solid-js";
+import { children, createEffect, createSignal, JSX, onCleanup, onMount, Show } from "solid-js";
 import RiPhoneFill from '~icons/ri/phone-fill';
 import MdiClock from '~icons/mdi/clock';
 import MdiEmail from '~icons/mdi/email';
@@ -447,104 +447,109 @@ export default function LayoutDefault(props: { children?: JSX.Element }) {
   const closeMenu = () => setIsMenuOpen(false);
 
   return (
-      <div class="flex flex-col">
-        <Topbar>
-          <Logo />
-          <a href="/contact-us">
-            <button
-              class="get-a-quote-button whitespace-nowrap md-ml-2 xl-ml-10 font-serif uppercase font-500 c-paper overflow-hidden relative bg-paper b-double b-rd-1 b-4 b-transparent h-13 w-45 cursor-pointer font-size-3.5 tracking-wide"
-              style="  font-family: DM Sans !important; min-width: fit-content; background-origin: border-box; background-clip: padding-box, border-box; box-shadow: 0 0 0 2.5px rgba(255, 255, 255, 1) inset; background-image: linear-gradient(90deg, rgb(13, 46, 41) 0%, rgb(26, 135, 94) 50%), radial-gradient(circle at left top, rgb(13, 46, 41), rgb(26, 135, 94));"
-            >
-              Request a quote
-            </button>
+    <div class="flex flex-col">
+      <Topbar>
+        <div class="flex items-center justify-center lg-pl-4 pl-0 z-99">
+          <a href="/" class="hidden lg-block" onClick={closeMenu}>
+            <img src="/assets/FCC_2024_png.png" class="lg-w-22 w-20 lg-ml-10 mt-7" alt="fine-carpet-cleaning-logo" />
           </a>
-          <div class="flex whitespace-nowrap flex-nowrap flex-justify-end flex-items-end font-semibold gap-5 xl-gap-5xl md-pr-10 md-pl-5 xl-pl-10 pr-6 flex-content-center flex-items-center">
-            <div
-              onMouseEnter={handleMouseEnter}
-              onMouseLeave={handleMouseLeave}
-            >
-              <div>
-                {/* Pass closeMenu to ensure it closes when clicked */}
-                <ServiceMenuItem closeMenu={closeMenu} href="/services">Services</ServiceMenuItem>
+        </div>
 
-                {isMenuOpen() && <DropDownMenuDesktop closeMenu={closeMenu} />}
-              </div>
-            </div>
-            <MenuItem href="/prices">Prices</MenuItem>
-            <MenuItem href="/reviews">Reviews</MenuItem>
-            <MenuItem href="/about-us">About us</MenuItem>
-            <MenuItem href="/areas-we-cover">Areas we cover</MenuItem>
-            <MenuItem href="/blog">Blog</MenuItem>
-            <MenuItem href="/contact-us">Contact us</MenuItem>
-            <MenuItem href="/feedback">Feedback</MenuItem>
-          </div>
-          <HamburgerMenu />
-        </Topbar>
-        <Content>{childrenMemo()}</Content>
-        <CookieConsent />
-        <BackToTopArrow></BackToTopArrow>
-        <MainFooter>
-          <div class="flex flex-col gap-5 flex-wrap line-height-0 my-5">
-            <h3 class="important-font-size-4.5 md-font-size-4.5 uppercase font-letter tracking-widest mt-0 mb-2 c-paper font-600">Contacts</h3>
-            <div class="flex flex-items-center gap-2">
-              <RiPhoneFill class="w-10 h-10 c-paper" />
-              <div class="flex flex-col line-height-none">
-                <PhoneMailMenuItem href="tel:+44 7874 333 356">+44 7874 333 356</PhoneMailMenuItem>
-                <PhoneMailMenuItem href="tel:+44 7874 333 356">+44 2036 370 033</PhoneMailMenuItem>
-              </div>
-            </div>
-            <div class="flex flex-items-center gap-2">
-              <MdiEmail class="w-10 h-10 c-paper" />
-              <PhoneMailMenuItem href="mailto:office@finecarpetcleaning.co.uk">office@finecarpetcleaning.co.uk</PhoneMailMenuItem>
-            </div>
-            <div class="flex flex-items-center gap-2">
-              <MdiClock class="w-10 h-10 c-paper" />
-              <div class="flex flex-col line-height-none">
-                <div class="c-paper font-normal lg-font-size-4 md-font-size-4 font-size-4.5 font-sans line-height-6">Monday - Sunday</div>
-                <div class="c-paper font-normal lg-font-size-4 md-font-size-4 font-size-4.5 font-sans line-height-6">9:00 - 18:00</div>
-              </div>
+        <a href="/contact-us">
+          <button onClick={closeMenu}
+            class="hidden lg-block get-a-quote-button whitespace-nowrap md-ml-2 xl-ml-10 font-serif uppercase font-500 c-paper overflow-hidden relative bg-paper b-double b-rd-1 b-4 b-transparent h-13 w-45 cursor-pointer font-size-3.5 tracking-wide"
+            style=" font-family: DM Sans !important; min-width: fit-content; background-origin: border-box; background-clip: padding-box, border-box; box-shadow: 0 0 0 2.5px rgba(255, 255, 255, 1) inset; background-image: linear-gradient(90deg, rgb(13, 46, 41) 0%, rgb(26, 135, 94) 50%), radial-gradient(circle at left top, rgb(13, 46, 41), rgb(26, 135, 94));"
+          >
+            Request a quote
+          </button>
+        </a>
+
+        <div class="flex whitespace-nowrap flex-nowrap flex-justify-end flex-items-end font-semibold gap-5 xl-gap-5xl md-pr-10 md-pl-5 xl-pl-10 pr-6 flex-content-center flex-items-center">
+          <div
+            onMouseEnter={handleMouseEnter}
+            onMouseLeave={handleMouseLeave}
+          >
+            <div>
+              {/* Pass closeMenu to ensure it closes when clicked */}
+              <ServiceMenuItem closeMenu={closeMenu} href="/services">Services</ServiceMenuItem>
+
+              {isMenuOpen() && <DropDownMenuDesktop closeMenu={closeMenu} />}
             </div>
           </div>
-          <div class="flex flex-col gap-5 md-gap-7 flex-wrap line-height-0 my-5">
-            <h3 class="important-font-size-4.5 md-font-size-4.5 uppercase font-letter tracking-widest mt-0 mb-2 c-paper font-600">Our most popular services</h3>
-            <MainFooterMenuItem href="/professional-carpet-cleaning-services">Professional Carpet Cleaning Services</MainFooterMenuItem>
-            <MainFooterMenuItem href="/professional-upholstery-cleaning-services">Professional Upholstery Cleaning Services</MainFooterMenuItem>
-            <MainFooterMenuItem href="/professional-rug-cleaning-services">Professional Rug Cleaning Services</MainFooterMenuItem>
-            <MainFooterMenuItem href="/professional-carpet-cleaning-services/steam">Professional Steam Carpet Cleaning Services</MainFooterMenuItem>
-            <MainFooterMenuItem href="/professional-stain-removal-services">Professional Stain Removal Services</MainFooterMenuItem>
+          <MenuItem href="/prices">Prices</MenuItem>
+          <MenuItem href="/reviews">Reviews</MenuItem>
+          <MenuItem href="/about-us">About us</MenuItem>
+          <MenuItem href="/areas-we-cover">Areas we cover</MenuItem>
+          <MenuItem href="/blog">Blog</MenuItem>
+          <MenuItem href="/contact-us">Contact us</MenuItem>
+          <MenuItem href="/feedback">Feedback</MenuItem>
+        </div>
+        <HamburgerMenu />
+      </Topbar>
+      <Content>{childrenMemo()}</Content>
+      <CookieConsent />
+      <BackToTopArrow></BackToTopArrow>
+      <MainFooter>
+        <div class="flex flex-col gap-5 flex-wrap line-height-0 my-5">
+          <h3 class="important-font-size-4.5 md-font-size-4.5 uppercase font-letter tracking-widest mt-0 mb-2 c-paper font-600">Contacts</h3>
+          <div class="flex flex-items-center gap-2">
+            <RiPhoneFill class="w-10 h-10 c-paper" />
+            <div class="flex flex-col line-height-none">
+              <PhoneMailMenuItem href="tel:+44 7874 333 356">+44 7874 333 356</PhoneMailMenuItem>
+              <PhoneMailMenuItem href="tel:+44 7874 333 356">+44 2036 370 033</PhoneMailMenuItem>
+            </div>
           </div>
-          <div class="flex flex-col gap-2 flex-wrap line-height-0 my-5">
-            <h3 class="important-font-size-4.5 md-font-size-4.5 uppercase font-letter tracking-widest mt-0 mb-2 c-paper font-600">Menu</h3>
-            <MainFooterMenuItem href="/">Home</MainFooterMenuItem>
-            <MainFooterMenuItem href="/services">Services</MainFooterMenuItem>
-            <MainFooterMenuItem href="/prices">Prices</MainFooterMenuItem>
-            <MainFooterMenuItem href="/reviews">Reviews</MainFooterMenuItem>
-            <MainFooterMenuItem href="/about-us">About us</MainFooterMenuItem>
-            <MainFooterMenuItem href="/areas-we-cover">Areas we cover</MainFooterMenuItem>
-            <MainFooterMenuItem href="/blog">Blog</MainFooterMenuItem>
-            <MainFooterMenuItem href="/contact-us">Contact us</MainFooterMenuItem>
-            <MainFooterMenuItem href="/feedback">Feedback</MainFooterMenuItem>
+          <div class="flex flex-items-center gap-2">
+            <MdiEmail class="w-10 h-10 c-paper" />
+            <PhoneMailMenuItem href="mailto:office@finecarpetcleaning.co.uk">office@finecarpetcleaning.co.uk</PhoneMailMenuItem>
           </div>
-        </MainFooter>
-        <BottomFooter>
-          <p class="text-center lg-font-size-4 md-font-size-3 font-size-3.7 font-400 line-height-6 font-sans mb-0">Copyright &copy; 2024 Fine Carpet Cleaning London</p>
-          <div class="flex flex-col md-flex-row md-gap-5 flex-items-center flex-justify-center">
+          <div class="flex flex-items-center gap-2">
+            <MdiClock class="w-10 h-10 c-paper" />
+            <div class="flex flex-col line-height-none">
+              <div class="c-paper font-normal lg-font-size-4 md-font-size-4 font-size-4.5 font-sans line-height-6">Monday - Sunday</div>
+              <div class="c-paper font-normal lg-font-size-4 md-font-size-4 font-size-4.5 font-sans line-height-6">9:00 - 18:00</div>
+            </div>
+          </div>
+        </div>
+        <div class="flex flex-col gap-5 md-gap-7 flex-wrap line-height-0 my-5">
+          <h3 class="important-font-size-4.5 md-font-size-4.5 uppercase font-letter tracking-widest mt-0 mb-2 c-paper font-600">Our most popular services</h3>
+          <MainFooterMenuItem href="/professional-carpet-cleaning-services">Professional Carpet Cleaning Services</MainFooterMenuItem>
+          <MainFooterMenuItem href="/professional-upholstery-cleaning-services">Professional Upholstery Cleaning Services</MainFooterMenuItem>
+          <MainFooterMenuItem href="/professional-rug-cleaning-services">Professional Rug Cleaning Services</MainFooterMenuItem>
+          <MainFooterMenuItem href="/professional-carpet-cleaning-services/steam">Professional Steam Carpet Cleaning Services</MainFooterMenuItem>
+          <MainFooterMenuItem href="/professional-stain-removal-services">Professional Stain Removal Services</MainFooterMenuItem>
+        </div>
+        <div class="flex flex-col gap-2 flex-wrap line-height-0 my-5">
+          <h3 class="important-font-size-4.5 md-font-size-4.5 uppercase font-letter tracking-widest mt-0 mb-2 c-paper font-600">Menu</h3>
+          <MainFooterMenuItem href="/">Home</MainFooterMenuItem>
+          <MainFooterMenuItem href="/services">Services</MainFooterMenuItem>
+          <MainFooterMenuItem href="/prices">Prices</MainFooterMenuItem>
+          <MainFooterMenuItem href="/reviews">Reviews</MainFooterMenuItem>
+          <MainFooterMenuItem href="/about-us">About us</MainFooterMenuItem>
+          <MainFooterMenuItem href="/areas-we-cover">Areas we cover</MainFooterMenuItem>
+          <MainFooterMenuItem href="/blog">Blog</MainFooterMenuItem>
+          <MainFooterMenuItem href="/contact-us">Contact us</MainFooterMenuItem>
+          <MainFooterMenuItem href="/feedback">Feedback</MainFooterMenuItem>
+        </div>
+      </MainFooter>
+      <BottomFooter>
+        <p class="text-center lg-font-size-4 md-font-size-3 font-size-3.7 font-400 line-height-6 font-sans mb-0">Copyright &copy; 2024 Fine Carpet Cleaning London</p>
+        <div class="flex flex-col md-flex-row md-gap-5 flex-items-center flex-justify-center">
           <BottomFooterMenuItem href="/terms-and-conditions">Terms and conditions</BottomFooterMenuItem>
           <div class="hidden md-block">┃</div>
           <BottomFooterMenuItem href="/sitemap">Sitemap</BottomFooterMenuItem>
           <div class="hidden md-block">┃</div>
           <BottomFooterMenuItem href="/cookie-policy">Privacy policy</BottomFooterMenuItem>
-          </div>
-        </BottomFooter>
-      </div>
+        </div>
+      </BottomFooter>
+    </div>
   );
 }
 
 function Topbar(props: { children: JSX.Element }) {
   return (
     <div
-      id="sidebar"
-      class="flex sticky lg-py-6 lg-h-20 h-20 position-sticky top-0 border-b-2 border-t-1 bg-#f7f7f7 flex-justify-between lg-flex-justify-center gap-2 flex-items-center z-9998" style="box-shadow: 0 0px 10px 0 rgba(50, 50, 50, 0.5);">
+      class="w-full flex sticky lg-py-6 h-20 position-sticky top-0 border-b-2 border-t-1 bg-#f7f7f7 flex-justify-between lg-flex-justify-center lg-gap-2 flex-items-center z-9998" style="box-shadow: 0 0px 10px 0 rgba(50, 50, 50, 0.5);">
       {props.children}
     </div>
   );
@@ -567,57 +572,64 @@ function Content(props: { children: JSX.Element }) {
   );
 }
 
-function Logo() {
-  return (
-    <div class="flex items-center justify-center md-pl-4 pl-0 z-99">
-      <a href="/">
-        <img src="/assets/FCC_2024_png.png" class="lg-w-22 w-20 md-ml-10 ml-3 mt-7" alt="fine-carpet-cleaning-logo" />
-      </a>
-    </div>
-  );
-}
 
 function HamburgerMenu() {
   const [open, setOpen] = createSignal(false);
-  const [menuHeight, setMenuHeight] = createSignal('0px');
+  const [menuHeight, setMenuHeight] = createSignal("0px");
 
   const handleToggle = () => {
     if (open()) {
-      // Closing the menu
-      setMenuHeight('0px');
+      setMenuHeight("0px");
       setTimeout(() => setOpen(false), 400); // Match the duration of the CSS transition
     } else {
-      // Opening the menu
       setOpen(true);
-      setMenuHeight('3000px'); // Set the desired height for the menu when open
+      setMenuHeight("3000px"); // Set the desired height for the menu when open
     }
   };
 
   const closeMenu = () => {
-    setMenuHeight('0px');
+    setMenuHeight("0px");
     setTimeout(() => setOpen(false), 400); // Match the duration of the CSS transition
   };
 
   return (
-    <div class="lg-hidden flex flex-content-center flex-items-center flex-justify-between">
-      <input type="checkbox" id="menu-checkbox" class="hidden" />
-      <label
-        id="burger-menu"
-        for="menu-checkbox"
-        onClick={handleToggle}
-        class="relative cursor-pointer flex flex-justify-between flex-col w-10 h-7 right-6"
-      >
-        <div></div>
-        <div></div>
-        <div></div>
-      </label>
+    <div class="lg-hidden flex flex-content-center flex-items-center flex-justify-between w-full">
+      <div class="flex items-center justify-center lg-pl-4 pl-0 z-99">
+        <a href="/" onClick={closeMenu}>
+          <img src="/assets/FCC_2024_png.png" class="lg-w-22 w-20 lg-ml-10 mt-7" alt="fine-carpet-cleaning-logo" />
+        </a>
+      </div>
+
+      <a href="/contact-us">
+        <button onClick={closeMenu}
+          class="get-a-quote-button whitespace-nowrap md-ml-2 xl-ml-10 font-serif uppercase font-500 c-paper overflow-hidden relative bg-paper b-double b-rd-1 b-4 b-transparent h-13 w-45 cursor-pointer font-size-3.5 tracking-wide"
+          style=" font-family: DM Sans !important; min-width: fit-content; background-origin: border-box; background-clip: padding-box, border-box; box-shadow: 0 0 0 2.5px rgba(255, 255, 255, 1) inset; background-image: linear-gradient(90deg, rgb(13, 46, 41) 0%, rgb(26, 135, 94) 50%), radial-gradient(circle at left top, rgb(13, 46, 41), rgb(26, 135, 94));"
+        >
+          Request a quote
+        </button>
+      </a>
+
+      <div class="ml-10 md-mr-10">
+        <input type="checkbox" id="menu-checkbox" class="hidden" />
+        <label
+          id="burger-menu"
+          for="menu-checkbox"
+          onClick={handleToggle}
+          class="relative cursor-pointer flex flex-justify-between flex-col w-10 h-7 right-6 hamburger"
+        >
+          <div class={`line ${open() ? "open" : ""}`}></div>
+          <div class={`line ${open() ? "open" : ""}`}></div>
+          <div class={`line ${open() ? "open" : ""}`}></div>
+        </label>
+      </div>
 
       <Show when={open()}>
         <div
           class="fixed w-screen bg-#f7f7f7 left-0 top-19.6 px-10 transition-all transition-duration-400"
-          style={{ height: menuHeight(), overflow: 'hidden' }}
+          style={{ height: menuHeight(), overflow: "hidden" }}
         >
           <div class="py-15 text-left">
+            {/* Other menu content */}
             <MyDropdown closeMenu={closeMenu} />
           </div>
         </div>
@@ -625,6 +637,7 @@ function HamburgerMenu() {
     </div>
   );
 }
+
 
 function MainFooter(props: { children: JSX.Element }) {
   return (
