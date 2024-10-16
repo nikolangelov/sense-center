@@ -277,7 +277,7 @@ ol>li>ul>li:before {
 }
 
 .hamburger .open:nth-child(1) {
-  transform: rotate(45deg);
+  transform: rotate(42deg);
 }
 
 .hamburger .open:nth-child(2) {
@@ -285,7 +285,7 @@ ol>li>ul>li:before {
 }
 
 .hamburger .open:nth-child(3) {
-  transform: rotate(-45deg);
+  transform: rotate(-42deg);
 }
 
 .fixed {

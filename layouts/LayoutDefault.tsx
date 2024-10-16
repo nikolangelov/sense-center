@@ -580,16 +580,16 @@ function HamburgerMenu() {
   const handleToggle = () => {
     if (open()) {
       setMenuHeight("0px");
-      setTimeout(() => setOpen(false), 400); // Match the duration of the CSS transition
+      setTimeout(() => setOpen(false), 400);
     } else {
       setOpen(true);
-      setMenuHeight("3000px"); // Set the desired height for the menu when open
+      setMenuHeight("3000px");
     }
   };
 
   const closeMenu = () => {
     setMenuHeight("0px");
-    setTimeout(() => setOpen(false), 400); // Match the duration of the CSS transition
+    setTimeout(() => setOpen(false), 400);
   };
 
   return (
@@ -615,7 +615,7 @@ function HamburgerMenu() {
           id="burger-menu"
           for="menu-checkbox"
           onClick={handleToggle}
-          class="relative cursor-pointer flex flex-justify-between flex-col w-10 h-7 right-6 hamburger"
+          class="relative cursor-pointer flex flex col flex-justify-between flex-col w-40px h-30px right-6 hamburger"
         >
           <div class={`line ${open() ? "open" : ""}`}></div>
           <div class={`line ${open() ? "open" : ""}`}></div>
