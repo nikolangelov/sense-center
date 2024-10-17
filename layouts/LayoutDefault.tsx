@@ -507,7 +507,7 @@ export default function LayoutDefault(props: { children?: JSX.Element }) {
             <MdiClock class="w-10 h-10 c-paper" />
             <div class="flex flex-col line-height-none">
               <div class="c-paper font-normal lg-font-size-4 md-font-size-4 font-size-4.5 font-sans line-height-6">Monday - Sunday</div>
-              <div class="c-paper font-normal lg-font-size-4 md-font-size-4 font-size-4.5 font-sans line-height-6">9:00 - 18:00</div>
+              <div class="c-paper font-normal lg-font-size-4 md-font-size-4 font-size-4.5 font-sans line-height-6">7:30 - 19:00</div>
             </div>
           </div>
         </div>
