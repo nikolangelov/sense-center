@@ -1,7 +1,7 @@
 import "solid-slider/slider.css";
-import {createSignal, Show} from 'solid-js';
+import { createSignal, Show } from 'solid-js';
 import range from "lodash/range"
-import {FleurDivider} from "../../components/FleurDivider";
+import { FleurDivider } from "../../components/FleurDivider";
 
 function ButtonsFilterReviews({ setFilter }: { setFilter: (rating: number | undefined) => void }) {
   return (
@@ -106,7 +106,7 @@ function StarReview(props: { src: string; filterStars: number | undefined; stars
       </div>
 
       <div class="filterDiv 5-stars">
-          <FleurDivider/>
+        <FleurDivider />
       </div>
     </Show>
   );
@@ -123,12 +123,72 @@ export default function Page() {
       />
 
       <StarReview
+        src="/assets/profile-pics-reviews/unnamed34346.png"
+        reviewText="Very professional service.  Quick and qualitative.  Carpet is like new after cleaning."
+        name="Tereza Svetogorska"
+        date="October 2024"
+        stars={5}
+        hrefGoogleReview="https://g.co/kgs/v6UCjRp"
+        filterStars={filterStars()}
+      />
+
+      <StarReview
+        src="/assets/profile-pics-reviews/unnamed34345.png"
+        reviewText="One of the finest carpet cleaning companies you can find in the city.
+
+Latest equipment,and high quality carpets, upholstery solutions.
+
+Plus technicians will long experience.
+
+Work out your quote with them, to know the total charges of the service.
+
+Super helpful assistance from their office.
+
+No disappointment"
+        name="CEOKCGOODS MEDOV"
+        date="September 2024"
+        stars={5}
+        hrefGoogleReview="https://g.co/kgs/t8f1V11"
+        filterStars={filterStars()}
+      />
+
+      <StarReview
+        src="/assets/profile-pics-reviews/unnamed34344.png"
+        reviewText="Great experience with Fine Carpet Cleaning. I highly recommend their services!"
+        name="Liliya Bobilyak"
+        date="September 2024"
+        stars={5}
+        hrefGoogleReview="https://g.co/kgs/54E8Nzq"
+        filterStars={filterStars()}
+      />
+
+      <StarReview
+        src="/assets/profile-pics-reviews/unnamed34343.png"
+        reviewText="Niki did a great job cleaning our carpet. Happy with the service :)"
+        name="S A"
+        date="August 2024"
+        stars={5}
+        hrefGoogleReview="https://g.co/kgs/byTskAC"
+        filterStars={filterStars()}
+      />
+
+      <StarReview
         src="/assets/profile-pics-reviews/unnamed90.png"
         reviewText="Professional, quick to respond. I'm very happy with their service."
         name="Zaneta Priscepionkaite"
         date="July 2024"
         stars={5}
         hrefGoogleReview="https://g.co/kgs/c4A87Ud"
+        filterStars={filterStars()}
+      />
+
+      <StarReview
+        src="/assets/profile-pics-reviews/unnamed34341.png"
+        reviewText="FANTASTIC STAFF, FANTASTIC SERVICE, FANTASTIC WORK & MOST IMPORTANTLY FANTASTIC PRICE, Cannot be beaten if you want your carpets cleaned,,, one quick call and everything was taken care of.. IF YOU ARE GETTING YOUR CARPETS CLEANED MAKE SURR YOU USE THESE GUYS 100%👍"
+        name="Ashley"
+        date="June 2024"
+        stars={5}
+        hrefGoogleReview="https://g.co/kgs/bkssVpF"
         filterStars={filterStars()}
       />
 
