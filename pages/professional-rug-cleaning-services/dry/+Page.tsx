@@ -7,19 +7,7 @@ import { FOTSlider, FOTSliderContainer } from '../../../components/FrequentlyOrd
 import { PriceTable } from '../../../components/PriceTable';
 import { createEffect } from "solid-js";
 import {FleurDivider} from "../../../components/FleurDivider";
-
-const VideoPlayer = () => {
-  return (
-    <div class="flex flex-justify-center flex-items-center mt-20">
-      <iframe
-        class="mt-10 b-rd-3 h-200px md-h-500px"
-        style="width: 100%;"
-        src="https://www.youtube.com/embed/ShTPBmqQtZs?autoplay=1&mute=1"
-        allow="autoplay; encrypted-media"
-      ></iframe>
-    </div>
-  );
-};
+import { VideoPlayer } from '../../../components/VideoPlayer';
 
 function FaqSection() {
   const { Container, Entry } = createCollapsable()
@@ -365,7 +353,7 @@ export default function Page() {
 
       <h2 class="line-height-12 md-line-height-14">Video from our dry rug cleaning service</h2>
 
-      <VideoPlayer></VideoPlayer>
+			<VideoPlayer src='https://www.youtube.com/embed/ShTPBmqQtZs?enablejsapi=1&mute=1' />
 
       <FleurDivider/>
 

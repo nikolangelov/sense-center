@@ -6,20 +6,8 @@ import { ReviewSlider, StarReview } from '../../components/ReviewSlider';
 import { FOTSlider, FOTSliderContainer } from '../../components/FrequentlyOrderedTogether';
 import { PriceTable } from '../../components/PriceTable';
 import { createEffect } from "solid-js";
-import {FleurDivider} from "../../components/FleurDivider";
-
-const VideoPlayer = () => {
-    return (
-        <div class="flex flex-justify-center flex-items-center mt-20">
-            <iframe
-                class="mt-10 b-rd-3 h-200px md-h-500px"
-                style="width: 100%;"
-                src="https://www.youtube.com/embed/3MUTkOPfjEo?autoplay=1&mute=1"
-                allow="autoplay; encrypted-media"
-            ></iframe>
-        </div>
-    );
-};
+import { FleurDivider } from "../../components/FleurDivider";
+import { VideoPlayer } from '../../components/VideoPlayer';
 
 function FaqSection() {
     const { Container, Entry } = createCollapsable()
@@ -584,7 +572,7 @@ export default function Page() {
                 src="/assets/service-pics/carpet-cleaning/carpet-cleaning-specialists.jpg" alt="carpet-cleaning-specialists"
                 style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 30%);" /></div>
 
-            <FleurDivider/>
+            <FleurDivider />
 
             <h2 class="line-height-12 md-line-height-14">Why to use professional carpet cleaning services</h2>
             <div class="mt-20 py-8 px-8 md-px-14 bg-paper b-rd-3"
@@ -650,7 +638,7 @@ export default function Page() {
                 </ul>
             </div>
 
-            <FleurDivider/>
+            <FleurDivider />
 
             <h2 class="line-height-12 md-line-height-14">Equipment and products we use</h2>
             <div class="mt-20 py-8 px-12 md-px-14 bg-paper b-rd-3"
@@ -687,7 +675,7 @@ export default function Page() {
                 </ol>
             </div>
 
-            <FleurDivider/>
+            <FleurDivider />
 
             <h2 class="line-height-12 md-line-height-14">Pictures from our professional carpet cleaning services in
                 London</h2>
@@ -708,14 +696,14 @@ export default function Page() {
                 { src: "/assets/service-pics/carpet-cleaning/13-expert-carpet-cleaning-london.jpg", alt: "13-expert-carpet-cleaning-london" },
             ]} />
 
-            <FleurDivider/>
+            <FleurDivider />
 
             <h2 class="line-height-12 md-line-height-14">Video from our professional carpet cleaning services in
                 London</h2>
 
-            <VideoPlayer></VideoPlayer>
+            <VideoPlayer src='https://www.youtube.com/embed/3MUTkOPfjEo?enablejsapi=1&mute=1' />
 
-            <FleurDivider/>
+            <FleurDivider />
 
             <h2 class="line-height-12 md-line-height-14">Prices of our professional carpet cleaning services</h2>
 
@@ -786,7 +774,7 @@ export default function Page() {
                 style="box-shadow: 0 0 0 3px rgba(255, 255, 255, .9) inset; letter-spacing: 0.05rem;">
                 <a href="/prices" class="c-paper font-size-5">VIEW ALL PRICES</a></button>
 
-            <FleurDivider/>
+            <FleurDivider />
 
             <h2 class="line-height-12 md-line-height-14">Frequently ordered together</h2>
 
@@ -835,7 +823,7 @@ export default function Page() {
                 />
             </FOTSlider>
 
-            <FleurDivider/>
+            <FleurDivider />
 
             <h2 class="line-height-12 md-line-height-14">Our carpet cleaning specialist advises:</h2>
             <div class="mt-20 py-8 px-12 md-px-14 bg-paper b-rd-3"
@@ -895,7 +883,7 @@ export default function Page() {
                 </ol>
             </div>
 
-            <FleurDivider/>
+            <FleurDivider />
 
             <h2 class="line-height-12 md-line-height-14">Reviews from our professional carpet cleaning</h2>
 
@@ -955,13 +943,13 @@ export default function Page() {
 
             </ReviewSlider>
 
-            <FleurDivider/>
+            <FleurDivider />
 
             <h2 class="line-height-12 md-line-height-14">FAQ regarding our carpet cleaning services</h2>
 
             <FaqSection />
 
-            <FleurDivider/>
+            <FleurDivider />
 
             <div class="m-10% mb-3% flex flex-wrap flex-justify-center md-gap-15 gap-10">
                 <a href="/services"><button class="cursor-pointer outline-none bg-brand-second-action hover-bg-brand-second-action-hover:hover font-size-5 font-600 w-200px h-60px c-paper flex flex-items-center flex-justify-center relative b-solid b-rd-3 b-4 b-brand-second-action hover-b-brand-second-action-hover:hover whitespace-normal line-height-6 word-spacing-0.5 py-9" style="box-shadow: 0 0 0 3px rgba(255, 255, 255, .9) inset; letter-spacing: 0.05rem;">SERVICES</button></a>

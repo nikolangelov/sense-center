@@ -310,3 +310,10 @@ ol>li>ul>li:before {
   outline-width: 2px;
   outline-color: #1A6142;
 }
+
+
+@media only screen and (min-width: 1300px) {
+  .desktop-dropdawn-menu {
+    gap: 4rem;
+  }
+}

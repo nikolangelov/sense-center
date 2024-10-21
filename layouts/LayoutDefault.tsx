@@ -359,7 +359,7 @@ function DropdownMenuItem(props: { href: string, children: JSX.Element, src: str
   };
 
   return (
-    <a href={props.href} onClick={handleClick} class="hidden flex flex-justify-center flex-items-center">
+    <a href={props.href} onClick={handleClick} class="hidden flex flex-justify-center flex-items-center flex-nowrap">
       <div class="flex-col flex-justify-center flex-items-center w-30 h-32 mt-2 mb-2">
         <img class="w-18 h-18 block mx-auto b-rd-100% b-rd-2" src={props.src} alt={props.alt} />
         <p class="font-size-3 whitespace-normal mx-auto c-paper-inv text-center whitespace-normal uppercase font-sans hover-c-paper-link-hover:hover tracking-wide font-700 line-height-normal">
@@ -376,10 +376,10 @@ function DropDownMenuDesktop(props: { closeMenu: () => void }) {
   };
 
   return (
-    <div class="flex top-19.7 w-full flex-justify-center left-0 flex-row hidden gap-15 absolute bg-paper z-1 m-0 py-4 px-6 flex-wrap" style="box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);">
+    <div class="desktop-dropdawn-menu flex top-19.7 w-full flex-justify-center left-0 flex-row hidden absolute bg-paper z-1 m-0 py-4 px-5 flex-nowrap" style="box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);">
       <div class="flex flex-col flex-justify-center">
-        <a href="/professional-carpet-cleaning-services" onClick={handleClick}><h3 class="whitespace-normal text-center hover-c-brand:hover">Carpet cleaning services</h3></a>
-        <div class="flex flex-row flex-wrap hidden flex-items-center flex-content-center">
+        <a href="/professional-carpet-cleaning-services" onClick={handleClick}><h3 class="whitespace-normal text-center hover-c-brand:hover font-size-6.5">Carpet cleaning services</h3></a>
+        <div class="flex flex-row flex-wrap hidden flex-items-center flex-content-center flex-nowrap">
           <DropdownMenuItem href="/professional-carpet-cleaning-services/steam" src="/assets/desktop-menu-images/steam-clean-carpet-company.jpg" alt="steam-clean-carpet-company" closeMenu={props.closeMenu}>Carpet steam cleaning</DropdownMenuItem>
           <DropdownMenuItem href="/professional-carpet-cleaning-services/dry" src="/assets/desktop-menu-images/professional-dry-carpet-cleaning.jpg" alt="professional-dry-carpet-cleaning" closeMenu={props.closeMenu}>Dry carpet cleaning</DropdownMenuItem>
           <DropdownMenuItem href="/professional-carpet-cleaning-services/eco-friendly" src="/assets/desktop-menu-images/eco-friendly-carpet-cleaning-service.jpg" alt="eco-friendly-carpet-cleaning-service" closeMenu={props.closeMenu}>Eco-friendly carpet cleaning</DropdownMenuItem>
@@ -398,9 +398,9 @@ function DropDownMenuDesktop(props: { closeMenu: () => void }) {
           <DropdownMenuItem href="/professional-carpet-cleaning-services/commercial/office" src="/assets/desktop-menu-images/commercial-office-carpet-cleaning.jpg" alt="commercial-office-carpet-cleaning" closeMenu={props.closeMenu}>Office carpet cleaning</DropdownMenuItem>
         </div>
       </div>
-      <div class="flex flex-col flex-wrap">
-        <a href="/professional-upholstery-cleaning-services" onClick={handleClick}><h3 class="whitespace-normal text-center hover-c-brand:hover">Upholstery cleaning services</h3></a>
-        <div class="flex flex-row flex-wrap hidden flex-items-center flex-content-center">
+      <div class="flex flex-col">
+        <a href="/professional-upholstery-cleaning-services" onClick={handleClick}><h3 class="whitespace-normal text-center hover-c-brand:hover font-size-6.5">Upholstery cleaning services</h3></a>
+        <div class="flex flex-row flex-wrap hidden flex-items-center flex-content-center flex-nowrap">
           <DropdownMenuItem href="/professional-upholstery-cleaning-services/sofa" src="/assets/desktop-menu-images/sofa-upholstery-cleaning-service.jpg" alt="sofa-upholstery-cleaning-service" closeMenu={props.closeMenu}>Sofa cleaning</DropdownMenuItem>
           <DropdownMenuItem href="/professional-upholstery-cleaning-services/sofa/leather" src="/assets/desktop-menu-images/leather-sofa-cleaning-services-1.jpg" alt="leather-sofa-cleaning-services-1" closeMenu={props.closeMenu}>Leather sofa cleaning</DropdownMenuItem>
           <DropdownMenuItem href="/professional-upholstery-cleaning-services/furniture" src="/assets/desktop-menu-images/steam-cleaning-furniture-services.jpg" alt="steam-cleaning-furniture-services" closeMenu={props.closeMenu}>Furniture cleaning</DropdownMenuItem>
@@ -415,9 +415,9 @@ function DropDownMenuDesktop(props: { closeMenu: () => void }) {
         </div>
       </div>
       <div class="flex flex-col">
-        <div class="flex flex-col flex-wrap">
-          <a href="/professional-rug-cleaning-services" onClick={handleClick}><h3 class="whitespace-normal text-center hover-c-brand:hover">Rug cleaning services</h3></a>
-          <div class="flex flex-row flex-wrap hidden flex-items-center flex-content-center">
+        <div class="flex flex-col">
+          <a href="/professional-rug-cleaning-services" onClick={handleClick}><h3 class="whitespace-normal text-center hover-c-brand:hover font-size-6.5">Rug cleaning services</h3></a>
+          <div class="flex flex-row flex-wrap hidden flex-items-center flex-content-center flex-nowrap">
             <DropdownMenuItem href="/professional-rug-cleaning-services/steam" src="/assets/desktop-menu-images/rug-steam-cleaning-service.jpg" alt="rug-steam-cleaning-service" closeMenu={props.closeMenu}>Rug steam cleaning</DropdownMenuItem>
             <DropdownMenuItem href="/professional-rug-cleaning-services/dry" src="/assets/desktop-menu-images/dry-rug-cleaning-service.jpg" alt="dry-rug-cleaning-service" closeMenu={props.closeMenu}>Dry rug cleaning</DropdownMenuItem>
             <DropdownMenuItem href="/professional-stain-removal-services" src="/assets/desktop-menu-images/professional-stain-removal-service.jpg" alt="professional-stain-removal-service" closeMenu={props.closeMenu}>Rug stain removal</DropdownMenuItem>
@@ -426,7 +426,7 @@ function DropDownMenuDesktop(props: { closeMenu: () => void }) {
             <DropdownMenuItem href="/stain-protection-services" src="/assets/desktop-menu-images/stain-protection-services.jpg" alt="stain-protection-services" closeMenu={props.closeMenu}>Rug stain protection</DropdownMenuItem>
           </div>
         </div>
-        <div class="flex flex-col flex-wrap">
+        <div class="flex flex-col">
           <h3 class="whitespace-normal text-center">Other cleaning services</h3>
           <div class="flex flex-row flex-wrap hidden flex-items-center flex-content-center flex-justify-center">
             <DropdownMenuItem href="/antiviral-sanitisation-services" src="/assets/desktop-menu-images/antiviral-sanitisation-services2.jpg" alt="antiviral-sanitisation-services2" closeMenu={props.closeMenu}>Antiviral sanitisation</DropdownMenuItem>

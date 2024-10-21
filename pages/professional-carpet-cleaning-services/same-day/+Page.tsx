@@ -6,19 +6,7 @@ import { ReviewSlider, StarReview } from '../../../components/ReviewSlider';
 import { FOTSlider, FOTSliderContainer } from '../../../components/FrequentlyOrderedTogether';
 import { createEffect } from "solid-js";
 import {FleurDivider} from "../../../components/FleurDivider";
-
-const VideoPlayer = () => {
-  return (
-    <div class="flex flex-justify-center flex-items-center mt-20">
-      <iframe
-        class="mt-10 b-rd-3 h-200px md-h-500px"
-        style="width: 100%;"
-        src="https://www.youtube.com/embed/_KH1rkIGxGo?autoplay=1&mute=1"
-        allow="autoplay; encrypted-media"
-      ></iframe>
-    </div>
-  );
-};
+import { VideoPlayer } from '../../../components/VideoPlayer';
 
 function FaqSection() {
   const { Container, Entry } = createCollapsable()
@@ -307,7 +295,7 @@ export default function Page() {
 
       <h2 class="line-height-12 md-line-height-14">Video from our same day carpet cleaning services in London</h2>
 
-      <VideoPlayer></VideoPlayer>
+			<VideoPlayer src='https://www.youtube.com/embed/_KH1rkIGxGo?enablejsapi=1&mute=1' />
 
       <FleurDivider/>
 

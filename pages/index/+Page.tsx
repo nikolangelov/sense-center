@@ -6,19 +6,8 @@ import { Typography } from '../../components/Typography';
 import { ReviewSlider, StarReview } from '../../components/ReviewSlider';
 import { GallerySlider } from '../../components/GallerySlider';
 import {FleurDivider} from "../../components/FleurDivider";
+import { VideoPlayer } from '../../components/VideoPlayer';
 
-const VideoPlayer = () => {
-	return (
-		<div class="flex flex-justify-center flex-items-center mt-20">
-			<iframe
-				class="mt-10 b-rd-3 h-200px md-h-500px"
-				style="width: 100%;"
-				src="https://www.youtube.com/embed/gXHR4DFbn4s?autoplay=1&mute=1"
-				allow="autoplay; encrypted-media"
-			></iframe>
-		</div>
-	);
-};
 
 function FullScreenImageGallery() {
 	const [open, setOpen] = createSignal(false);
@@ -457,7 +446,7 @@ export default function Page() {
 				<img src="/assets/home/20-professional-sofa-cleaning-services.jpg" alt="/20-professional-sofa-cleaning-services" />
 			</GallerySlider>
 
-			<VideoPlayer />
+			<VideoPlayer src='https://www.youtube.com/embed/gXHR4DFbn4s?enablejsapi=1&mute=1' />
 
 			<FleurDivider />
 
