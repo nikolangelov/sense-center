@@ -29,7 +29,7 @@ app.post('/api/send-email', upload.array('attachments', 10), (req, res) => {
     const { senderEmail, text, postCode, phone, name, services, howFound } = req.body;
     const attachments = req.files;
 
-    const emailContent = !phone || phone.length == 0
+    const emailContent = !phone || phone.length === 0
         ? `        
     You have received a new message from your website contact form.
         
@@ -38,7 +38,7 @@ app.post('/api/send-email', upload.array('attachments', 10), (req, res) => {
     Message: ${text}
     `
         : `
-        You have received a new message from your website contact form.
+    You have received a new message from your website contact form.
         
     Sender: <b>${senderEmail}</b>
     Name: ${name}
@@ -51,6 +51,8 @@ app.post('/api/send-email', upload.array('attachments', 10), (req, res) => {
 
     How did they find us: ${howFound || 'Not specified'}
     `;
+
+    console.log(emailContent)
 
     const mailOptions = { 
         from: 'office@finecarpetcleaning.co.uk',
