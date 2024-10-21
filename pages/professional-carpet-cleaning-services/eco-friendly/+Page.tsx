@@ -7,6 +7,7 @@ import { FOTSlider, FOTSliderContainer } from '../../../components/FrequentlyOrd
 import { createEffect } from "solid-js";
 import {FleurDivider} from "../../../components/FleurDivider";
 import { VideoPlayer } from '../../../components/VideoPlayer';
+import { PriceTable } from '../../../components/PriceTable';
 
 function FaqSection() {
   const { Container, Entry } = createCollapsable()
@@ -132,7 +133,7 @@ function FaqSection() {
           <p>The environmental impact of the chemicals used.</p>
         </Typography>
       </ul>
-      <Typography variant="body">Hiring professional green carpet cleaning companies, such as “Fine Carpet Cleaning” Ltd. will ensure you that your carpets will be handled excellently. Experts are trained in the proper use of cleaning chemicals and utilise advanced equipment that can more effectively remove residues. If you have specific health concerns or sensitivities, we recommend booking eco-friendly carpet cleaning services. This service will provide a quality cleaning of your carpet, as well as a chemical-free carpet cleaning.</Typography>
+      <Typography variant="body">Hiring professional green carpet cleaning companies, such as Fine Carpet Cleaning will ensure you that your carpets will be handled excellently. Experts are trained in the proper use of cleaning chemicals and utilise advanced equipment that can more effectively remove residues. If you have specific health concerns or sensitivities, we recommend booking eco-friendly carpet cleaning services. This service will provide a quality cleaning of your carpet, as well as a chemical-free carpet cleaning.</Typography>
       <li>
         <Typography variant="h3">18. What is eco-friendly carpet cleaning?</Typography>
         <Typography variant="body">Eco-friendly carpet cleaning, also known as green carpet cleaning, refers to a carpet cleaning process that prioritises environmental sustainability and the safety of humans and pets. This approach involves the use of cleaning methods, products, and equipment that have minimal impact on the environment.</Typography>
@@ -153,7 +154,7 @@ function FaqSection() {
         <Typography variant="h3">21. Does ecology carpet cleaning remove stains?</Typography>
         <Typography variant="body">It depends on the eco-green carpet cleaning method being used. Eco steam carpet cleaning is highly proficient at eradicating deep-seated stains, dirt, and grime. It excels at eliminating bacteria, dust mites, allergens, mould, pet dander, and unpleasant odours. However, it's important to note that particularly stubborn stains, such as those that are very old or have been treated improperly, can present a significant challenge for complete removal, even with professional eco-clean carpet assistance.</Typography>
         <Typography variant="body">On the other hand, green dry carpet cleaning is not as effective at stain removal, but it excels at refreshing the carpet's appearance and restoring its colour. This method is typically used for cleaning more delicate and natural carpets and rugs that are susceptible to water damage.</Typography>
-        <Typography variant="body">While we, at "Fine Carpet Cleaning Ltd.," have achieved impressive success rates in stain removal thanks to our extensive experience and the use of high-quality equipment, we cannot provide an absolute guarantee that every stain can be entirely eliminated. However, we want to assure you that we will assess each stain and provide information on whether we can successfully remove them during the quotation process. Your confidence in stain removal is our priority.</Typography></li>
+        <Typography variant="body">While we, at Fine Carpet Cleaning, have achieved impressive success rates in stain removal thanks to our extensive experience and the use of high-quality equipment, we cannot provide an absolute guarantee that every stain can be entirely eliminated. However, we want to assure you that we will assess each stain and provide information on whether we can successfully remove them during the quotation process. Your confidence in stain removal is our priority.</Typography></li>
       <li>
         <Typography variant="h3">22. How often should carpets go through eco-organic carpet cleaning with pets?</Typography>
         <Typography variant="body">We recommend that pet owners seek eco carpet cleaning in London at least twice per year. If you are not sure whether your carpets, rugs or upholstery should go through green carpet cleaning services feel free to contact us at any suitable for you time to get professional advice.</Typography></li>
@@ -181,13 +182,13 @@ function FaqSection() {
       <Typography variant="body">For a comprehensive pricing breakdown, please visit our <a class="color-paper-link hover-color-paper-link-hover:hover" href="#price_table">enviro green carpet cleaning prices page</a>. To obtain an accurate quote and determine the cost of the healthy carpet cleaning, it's recommended to get in touch with us. This will allow us to assess your specific needs, provide a more precise estimate, and discuss any optional services that might be applicable.</Typography>
       <li>
         <Typography variant="h3">24. What is the best natural way to clean a carpet?</Typography>
-        <Typography variant="body">The best natural way to do carpet cleaning without chemicals involves using environmentally friendly, non-toxic methods and ingredients. We at “Fine Carpet Cleaning” Ltd. provide chemical-free carpet cleaning services. This natural carpet cleaning method is effective for regular maintenance and deodorising. It's safe for your family, pets, and the environment.</Typography></li>
+        <Typography variant="body">The best natural way to do carpet cleaning without chemicals involves using environmentally friendly, non-toxic methods and ingredients. We at Fine Carpet Cleaning provide chemical-free carpet cleaning services. This natural carpet cleaning method is effective for regular maintenance and deodorising. It's safe for your family, pets, and the environment.</Typography></li>
       <li>
         <Typography variant="h3">25.How can I clean my carpet without chemicals?</Typography>
         <Typography variant="body">You can do an eco-clean carpet cleaning using natural and eco-friendly methods by vacuuming thoroughly, using simple ingredients like baking soda and vinegar solution and fully rinsing. We recommend hiring natural carpet cleaning companies to avoid any slip-ups that are likely to occur during cleaning by yourself. Such companies perform non chemical carpet cleaning, which is effective in regular maintenance and deodorising. It's safe for your family, pets, and the environment.</Typography></li>
       <li>
         <Typography variant="h3">26. How to find a company that performs nontoxic carpet cleaning near me?</Typography>
-        <Typography variant="body">“Fine Carpet Cleaning” Ltd. performs in all of London. Feel free to contact us for environmentally friendly carpet cleaning services wherever you are and rest assured that we will take good care of your carpets, rugs and upholstery.</Typography></li>
+        <Typography variant="body">Fine Carpet Cleaning performs in all of London. Feel free to contact us for environmentally friendly carpet cleaning services wherever you are and rest assured that we will take good care of your carpets, rugs and upholstery.</Typography></li>
     </Entry>
   </Container>
 }
@@ -293,7 +294,7 @@ export default function Page() {
       <h2 class="line-height-12 md-line-height-14">What to expect from our eco-friendly carpet cleaning services</h2>
       <div class="mt-20 py-8 px-8 md-px-14 bg-paper b-rd-3" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 18%);">
         <h3>Benefits:</h3>
-        <p>“Fine Carpet Cleaning” Ltd. performs eco-friendly carpet cleaning services in all London boroughs. Eco-carpet cleaning is beneficial for the following reasons:</p>
+        <p>Fine Carpet Cleaning performs eco-friendly carpet cleaning services in all London boroughs. Eco-carpet cleaning is beneficial for the following reasons:</p>
         <ul>
           <li class="ml--5">
             <p>Eco-friendly carpet cleaning eliminates the exposure to harmful chemicals;</p>
@@ -346,7 +347,7 @@ export default function Page() {
 
       <h2 class="line-height-12 md-line-height-14">Equipment and products we use for our eco-friendly carpet cleaning services</h2>
       <div class="mt-20 py-8 px-12 md-px-14 bg-paper b-rd-3" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 18%);">
-        <p>At "Fine Carpet Cleaning" Ltd., we employ a range of top-tier cleaning equipment and materials to ensure the highest quality in our eco carpet cleaning in London:</p>
+        <p>At Fine Carpet Cleaning, we employ a range of top-tier cleaning equipment and materials to ensure the highest quality in our eco carpet cleaning in London:</p>
         <ol style="counter-reset: ordered; list-style: none;">
           <li class="ml--5">
             <h3 class="ml--5 font-size-6 md-font-size-7">High-Performance Carpet Cleaning Machines</h3>
@@ -408,68 +409,24 @@ export default function Page() {
         <br></br>
         <strong id="price_table">Deising - Free of charge - just notify us when booking.</strong></div>
 
-      <table class="w-full m-auto font-sans">
-        <thead style="box-shadow: 0px 20px 20px 1px rgb(84 89 95 / 10%);">
-          <tr class="h-18">
-            <td class="c-paper bg-#2e5c47 font-size-7 pl-5 b-rd-lt-3"><strong>Room type</strong></td>
-            <td class="c-paper bg-#2e5c47 font-size-7 pl-5 b-rd-rt-3"><strong>Price</strong></td>
-          </tr>
-        </thead>
-        <tbody style="box-shadow: 0px 20px 20px 1px rgb(84 89 95 / 10%);">
-          <tr>
-            <td class="bg-paper pl-5 py-2 font-500">Single Bedroom</td>
-            <td class="bg-paper pl-5 py-2 font-500">from £31.00</td>
-          </tr>
-          <tr>
-            <td class="bg-paper pl-5 py-2 font-500">Double Bedroom</td>
-            <td class="bg-paper pl-5 py-2 font-500">from £35.00</td>
-          </tr>
-          <tr>
-            <td class="bg-paper pl-5 py-2 font-500">Master Bedroom</td>
-            <td class="bg-paper pl-5 py-2 font-500">from £40.00</td>
-          </tr>
-          <tr>
-            <td class="bg-paper pl-5 py-2 font-500">Living Room</td>
-            <td class="bg-paper pl-5 py-2 font-500">from £43.00</td>
-          </tr>
-          <tr>
-            <td class="bg-paper pl-5 py-2 font-500">Through Lounge</td>
-            <td class="bg-paper pl-5 py-2 font-500">from £69.00</td>
-          </tr>
-          <tr>
-            <td class="bg-paper pl-5 py-2 font-500">Hallway</td>
-            <td class="bg-paper pl-5 py-2 font-500">from £21.00</td>
-          </tr>
-          <tr>
-            <td class="bg-paper pl-5 py-2 font-500">Flight of Stairs</td>
-            <td class="bg-paper pl-5 py-2 font-500">from £34.00</td>
-          </tr>
-          <tr>
-            <td class="bg-paper pl-5 py-2 font-500">Landing</td>
-            <td class="bg-paper pl-5 py-2 font-500">from £15.00</td>
-          </tr>
-          <tr>
-            <td class="bg-paper pl-5 py-2 font-500">Bathroom</td>
-            <td class="bg-paper pl-5 py-2 font-500">from £6.00</td>
-          </tr>
-          <tr>
-            <td class="bg-paper pl-5 py-2 font-500">Small rug</td>
-            <td class="bg-paper pl-5 py-2 font-500">from £14.00</td>
-          </tr>
-          <tr>
-            <td class="bg-paper pl-5 py-2 font-500">Medium rug</td>
-            <td class="bg-paper pl-5 py-2 font-500">from £20.00</td>
-          </tr>
-          <tr>
-            <td class="bg-paper pl-5 py-2 font-500">Large rug</td>
-            <td class="bg-paper pl-5 py-2 font-500">from £31.00</td>
-          </tr>
-          <tr>
-            <td class="b-rd-lb-3 b-rd-rb-3 bg-#2e5c47" colspan="3" style="box-shadow: 0px 20px 20px 1px rgb(247 247 247/ 100%);"><p class="font-size-3.5 md-font-size-4 px-4 my-2 md-my-7 c-paper line-height-5 word-spacing-0.5">*All prices depend on the quantity of the order, degree of contamination, access and location.
-              <br></br>**Final price after contacting us.</p></td>
-          </tr>
-        </tbody>
-      </table>
+
+                    <PriceTable
+                title="Room type"
+                items={[
+                    { label: "Single Bedroom", value: "from £31.00" },
+                    { label: "Double Bedroom", value: "from £35.00" },
+                    { label: "Master Bedroom", value: "from £40.00" },
+                    { label: "Living Room", value: "from £43.00" },
+                    { label: "Through Lounge", value: "from £69.00" },
+                    { label: "Hallway", value: "from £21.00" },
+                    { label: "Flight of Stairs", value: "from £34.00" },
+                    { label: "Landing", value: "from £15.00" },
+                    { label: "Bathroom", value: "from £6.00" },
+                    { label: "Small rug", value: "from £14.00" },
+                    { label: "Medium rug", value: "from £20.00" },
+                    { label: "Large rug", value: "from £31.00" },
+                ]}
+            />
 
       <button class="outline-none bg-brand-second-action hover-bg-brand-second-action-hover:hover font-size-6 font-600 w-250px h-60px c-paper flex flex-items-center flex-justify-center relative b-solid b-rd-3 b-4 b-brand-second-action hover-b-brand-second-action-hover:hover whitespace-normal line-height-6 word-spacing-0.5 py-9 my-20 mx-auto" style="box-shadow: 0 0 0 3px rgba(255, 255, 255, .9) inset; letter-spacing: 0.05rem;"><a href="/contact-us" class="c-paper font-size-5">REQUEST A QUOTE</a></button>
 

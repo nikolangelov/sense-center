@@ -6,7 +6,7 @@ import { ReviewSlider, StarReview } from '../../components/ReviewSlider';
 import { FOTSlider, FOTSliderContainer } from '../../components/FrequentlyOrderedTogether';
 import { PriceTable } from '../../components/PriceTable';
 import { createEffect } from "solid-js";
-import {FleurDivider} from "../../components/FleurDivider";
+import { FleurDivider } from "../../components/FleurDivider";
 import { VideoPlayer } from '../../components/VideoPlayer';
 
 function FaqSection() {
@@ -257,12 +257,12 @@ export default function Page() {
       <h1 class="mt-10 md-mt-17 font-size-12.5 md-font-size-16 md-line-height-18 line-height-16">Stain protection services</h1>
       <div class="flex flex-justify-center"><img class="b-rd-3 md-mt-10 mt-2 max-w-full" src="/assets/service-pics/stain-protection-services/stain-protection-services.jpg" alt="stain-protection-services-7" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 30%);" /></div>
 
-      <FleurDivider/>
+      <FleurDivider />
 
       <h2 class="line-height-12 md-line-height-14">What to expect from our stain protection services</h2>
       <div class="mt-20 py-8 px-8 md-px-14 bg-paper b-rd-3" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 18%);">
         <h3>Benefits:</h3>
-        <p>We at “Fine Carpet Cleaning” Ltd. perform stain protection services. Stain protector also known as Scotchgard protector is an invisible clear liquid that is applied on fabric. It surrounds each fibre of the carpet or upholstery with an invisible protective coating which makes the carpet resistant to everyday soiling and both water-based and oil-based stains. The purpose of stain protection services is to guard the fabric against penetration of liquids that lead to lasting stains and permanent damage to the carpet and upholstery. Other advantages that stain protection services give are:</p>
+        <p>We at Fine Carpet Cleaning perform stain protection services. Stain protector also known as Scotchgard protector is an invisible clear liquid that is applied on fabric. It surrounds each fibre of the carpet or upholstery with an invisible protective coating which makes the carpet resistant to everyday soiling and both water-based and oil-based stains. The purpose of stain protection services is to guard the fabric against penetration of liquids that lead to lasting stains and permanent damage to the carpet and upholstery. Other advantages that stain protection services give are:</p>
         <ul>
           <li class="ml--5">
             <p>Protecting against both oil and water-based stains;</p>
@@ -315,7 +315,7 @@ export default function Page() {
         </ul>
       </div>
 
-      <FleurDivider/>
+      <FleurDivider />
 
       <h2>The process of our stain protection services:</h2>
       <div class="mt-20 py-8 px-8 md-px-14 bg-paper b-rd-3" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 18%);">
@@ -330,14 +330,14 @@ export default function Page() {
         </ul>
       </div>
 
-      <FleurDivider/>
+      <FleurDivider />
 
       <h2 class="line-height-12 md-line-height-14">Equipment and products we use for our stain protection services</h2>
       <div class="mt-20 py-8 px-12 md-px-14 bg-paper b-rd-3" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 18%);">
         <ol style="counter-reset: ordered; list-style: none;">
           <li class="ml--5">
             <h3 class="ml--5 font-size-6 md-font-size-7">High-efficient extractors</h3>
-            <Typography variant="body">"Fine Carpet Cleaning" Ltd uses the best cleaning equipment and materials. Our tools are among the strongest, most effective, and largest portable ones on the market. Following a careful assessment of several machine models available in the UK, we have selected "<a class="color-paper-link hover-color-paper-link-hover:hover" href="https://www.mytee.com/products/1003dx-speedster-deluxe-carpet-extractor/" target="_blank" rel="noopener">Mytee</a>" and "<a class="color-paper-link hover-color-paper-link-hover:hover" href="https://www.clean-smart.co.uk/store/airflex-storm" target="_blank" rel="noopener">Airflex</a>" as our expert cleaning equipment. Our in-house engineer also improves these devices further, making significant adjustments to maximise their functioning.</Typography>
+            <Typography variant="body">Fine Carpet Cleaning uses the best cleaning equipment and materials. Our tools are among the strongest, most effective, and largest portable ones on the market. Following a careful assessment of several machine models available in the UK, we have selected "<a class="color-paper-link hover-color-paper-link-hover:hover" href="https://www.mytee.com/products/1003dx-speedster-deluxe-carpet-extractor/" target="_blank" rel="noopener">Mytee</a>" and "<a class="color-paper-link hover-color-paper-link-hover:hover" href="https://www.clean-smart.co.uk/store/airflex-storm" target="_blank" rel="noopener">Airflex</a>" as our expert cleaning equipment. Our in-house engineer also improves these devices further, making significant adjustments to maximise their functioning.</Typography>
           </li>
           <li class="ml--5">
             <h3 class="ml--5 font-size-6 md-font-size-7">Dual motor vacuum cleaner</h3>
@@ -362,7 +362,7 @@ export default function Page() {
         </ul>
       </div>
 
-      <FleurDivider/>
+      <FleurDivider />
 
       <h2 class="line-height-12 md-line-height-14">Pictures from our stain protection services</h2>
 
@@ -373,133 +373,53 @@ export default function Page() {
         { src: "/assets/service-pics/stain-protection-services/4-upholstery-stain-protection.jpg", alt: "4-upholstery-stain-protection" },
       ]} />
 
-      <FleurDivider/>
+      <FleurDivider />
 
       <h2 class="line-height-12 md-line-height-14">Video from our stain protection services</h2>
 
-			<VideoPlayer src='https://www.youtube.com/embed/Wp3QBIzBpFY?enablejsapi=1&mute=1' />
+      <VideoPlayer src='https://www.youtube.com/embed/Wp3QBIzBpFY?enablejsapi=1&mute=1' />
 
-      <FleurDivider/>
+      <FleurDivider />
 
       <h2 class="line-height-12 md-line-height-14">Prices of our stain protection services</h2>
 
-      <PriceTable title="Room type">
-        <tr>
-          <td class="bg-paper pl-5 py-2 font-500 text-left">Commercial stain protector</td>
-          <td class="bg-paper pl-5 py-2 font-500">from £1.00</td>
-        </tr>
-        <tr>
-          <td class="bg-paper pl-5 py-2 font-500">Hallway</td>
-          <td class="bg-paper pl-5 py-2 font-500">from £6.00</td>
-        </tr>
-        <tr>
-          <td class="bg-paper pl-5 py-2 font-500">Landing</td>
-          <td class="bg-paper pl-5 py-2 font-500">from £3.00</td>
-        </tr>
-        <tr>
-          <td class="bg-paper pl-5 py-2 font-500">Living Room</td>
-          <td class="bg-paper pl-5 py-2 font-500">from £20.00</td>
-        </tr>
-        <tr>
-          <td class="bg-paper pl-5 py-2 font-500">Bedroom</td>
-          <td class="bg-paper pl-5 py-2 font-500">from £11.00</td>
-        </tr>
-        <tr>
-          <td class="bg-paper pl-5 py-2 font-500">Flight of stairs</td>
-          <td class="bg-paper pl-5 py-2 font-500">from £10.00</td>
-        </tr>
-        <tr>
-          <td class="bg-paper pl-5 py-2 font-500">Office room</td>
-          <td class="bg-paper pl-5 py-2 font-500">from £11.00</td>
-        </tr>
-        <tr>
-          <td class="bg-paper pl-5 py-2 font-500">Hotel room</td>
-          <td class="bg-paper pl-5 py-2 font-500">from £20.00</td>
-        </tr>
-        <tr>
-          <td class="bg-paper pl-5 py-2 font-500">Loft room</td>
-          <td class="bg-paper pl-5 py-2 font-500">from £13.00</td>
-        </tr>
-        <tr>
-          <td class="bg-paper pl-5 py-2 font-500">Through lounge</td>
-          <td class="bg-paper pl-5 py-2 font-500">from £35.00</td>
-        </tr>
-        <tr>
-          <td class="bg-paper pl-5 py-2 font-500">Box room</td>
-          <td class="bg-paper pl-5 py-2 font-500">from £11.00</td>
-        </tr>
-        <tr>
-          <td class="bg-paper pl-5 py-2 font-500">Bathroom</td>
-          <td class="bg-paper pl-5 py-2 font-500">from £5.00</td>
-        </tr>
-        <tr>
-          <td colspan="2"><h3 class="bg-paper pl-5 py-6 font-700 my-0">Upholstery type</h3></td>
-        </tr>
-        <tr>
-          <td class="bg-paper pl-5 py-2 font-500">Footstool (Puff)</td>
-          <td class="bg-paper pl-5 py-2 font-500">from £4.00</td>
-        </tr>
-        <tr>
-          <td class="bg-paper pl-5 py-2 font-500">Two seated</td>
-          <td class="bg-paper pl-5 py-2 font-500">from £9.00</td>
-        </tr>
-        <tr>
-          <td class="bg-paper pl-5 py-2 font-500">Two seated L shaped</td>
-          <td class="bg-paper pl-5 py-2 font-500">from £11.00</td>
-        </tr>
-        <tr>
-          <td class="bg-paper pl-5 py-2 font-500">Three seated</td>
-          <td class="bg-paper pl-5 py-2 font-500">from £11.00</td>
-        </tr>
-        <tr>
-          <td class="bg-paper pl-5 py-2 font-500">Three seated L shaped</td>
-          <td class="bg-paper pl-5 py-2 font-500">from £13.00</td>
-        </tr>
-        <tr>
-          <td class="bg-paper pl-5 py-2 font-500">Four seated</td>
-          <td class="bg-paper pl-5 py-2 font-500">from £13.00</td>
-        </tr>
-        <tr>
-          <td class="bg-paper pl-5 py-2 font-500">Four seated L shaped</td>
-          <td class="bg-paper pl-5 py-2 font-500">from £17.00</td>
-        </tr>
-        <tr>
-          <td class="bg-paper pl-5 py-2 font-500">Five seated</td>
-          <td class="bg-paper pl-5 py-2 font-500">from £17.00</td>
-        </tr>
-        <tr>
-          <td class="bg-paper pl-5 py-2 font-500">Five seated L shaped</td>
-          <td class="bg-paper pl-5 py-2 font-500">from £21.00</td>
-        </tr>
-        <tr>
-          <td class="bg-paper pl-5 py-2 font-500">Dining chair</td>
-          <td class="bg-paper pl-5 py-2 font-500">from £3.00</td>
-        </tr>
-        <tr>
-          <td class="bg-paper pl-5 py-2 font-500">Office chair</td>
-          <td class="bg-paper pl-5 py-2 font-500">from £4.00</td>
-        </tr>
-        <tr>
-          <td class="bg-paper pl-5 py-2 font-500">Armchair</td>
-          <td class="bg-paper pl-5 py-2 font-500">from £8.00</td>
-        </tr>
-        <tr>
-          <td class="bg-paper pl-5 py-2 font-500">For others, please contact us</td>
-          <td class="bg-paper pl-5 py-2 font-500">-</td>
-        </tr>
+      <PriceTable
+        title="Room type"
+        items={[
+          { label: "Commercial stain protector", value: "from £1.00" },
+          { label: "Hallway", value: "from £6.00" },
+          { label: "Landing", value: "from £3.00" },
+          { label: "Living Room", value: "from £20.00" },
+          { label: "Bedroom", value: "from £11.00" },
+          { label: "Flight of stairs", value: "from £10.00" },
+          { label: "Office room", value: "from £11.00" },
+          { label: "Hotel room", value: "from £20.00" },
+          { label: "Loft room", value: "from £13.00" },
+          { label: "Through lounge", value: "from £35.00" },
+          { label: "Box room", value: "from £11.00" },
+          { label: "Bathroom", value: "from £5.00" },
 
-        <tr>
-          <td colspan="2"><h3 class="bg-paper pl-5 py-6 font-700 my-0">Rug type</h3></td>
-        </tr>
-        <tr>
-          <td class="bg-paper pl-5 py-2 font-500">Rug</td>
-          <td class="bg-paper pl-5 py-2 font-500">from £6.00</td>
-        </tr>
-      </PriceTable>
+          { element: <h3 class="bg-paper pl-5 py-6 font-700 my-0 b-#f3f3f3" style="border-style: none none solid none;">Upholstery type</h3> },
+
+          { label: "Footstool (Puff)", value: "from £4.00" },
+          { label: "Two seated", value: "from £9.00" },
+          { label: "Two seated L shaped", value: "from £11.00" },
+          { label: "Three seated", value: "from £11.00" },
+          { label: "Three seated L shaped", value: "from £13.00" },
+          { label: "Four seated", value: "from £13.00" },
+          { label: "Four seated L shaped", value: "from £17.00" },
+          { label: "Five seated", value: "from £17.00" },
+          { label: "Five seated L shaped", value: "from £21.00" },
+          { label: "Dining chair", value: "from £3.00" },
+          { label: "Office chair", value: "from £4.00" },
+          { label: "Armchair", value: "from £8.00" },
+          { label: "For others, please contact us", value: "-" },
+        ]}
+      />
 
       <button class="outline-none bg-brand-second-action hover-bg-brand-second-action-hover:hover font-size-6 font-600 w-250px h-60px c-paper flex flex-items-center flex-justify-center relative b-solid b-rd-3 b-4 b-brand-second-action hover-b-brand-second-action-hover:hover whitespace-normal line-height-6 word-spacing-0.5 py-9 my-20 mx-auto" style="box-shadow: 0 0 0 3px rgba(255, 255, 255, .9) inset; letter-spacing: 0.05rem;"><a href="/contact-us" class="c-paper font-size-5">REQUEST A QUOTE</a></button>
 
-      <FleurDivider/>
+      <FleurDivider />
 
       <h2 class="line-height-12 md-line-height-14">Frequently ordered together</h2>
 
@@ -548,7 +468,7 @@ export default function Page() {
         />
       </FOTSlider>
 
-      <FleurDivider/>
+      <FleurDivider />
 
       <h2 class="line-height-12 md-line-height-14">Our stain protection services specialists advise:</h2>
       <div class="mt-20 py-8 px-12 md-px-14 bg-paper b-rd-3" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 18%);">
@@ -576,7 +496,7 @@ export default function Page() {
         </ol>
       </div>
 
-      <FleurDivider/>
+      <FleurDivider />
 
       <h2 class="line-height-12 md-line-height-14">Reviews for our stain protection services</h2>
 
@@ -636,13 +556,13 @@ export default function Page() {
 
       </ReviewSlider>
 
-      <FleurDivider/>
+      <FleurDivider />
 
       <h2 class="line-height-12 md-line-height-14">FAQ regarding our stain protection services</h2>
 
       <FaqSection />
 
-      <FleurDivider/>
+      <FleurDivider />
 
       <div class="m-10% mb-3% flex flex-wrap flex-justify-center md-gap-15 gap-10">
         <a href="/services"><button class="cursor-pointer outline-none bg-brand-second-action hover-bg-brand-second-action-hover:hover font-size-5 font-600 w-200px h-60px c-paper flex flex-items-center flex-justify-center relative b-solid b-rd-3 b-4 b-brand-second-action hover-b-brand-second-action-hover:hover whitespace-normal line-height-6 word-spacing-0.5 py-9" style="box-shadow: 0 0 0 3px rgba(255, 255, 255, .9) inset; letter-spacing: 0.05rem;">SERVICES</button></a>

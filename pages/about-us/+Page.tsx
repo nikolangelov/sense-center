@@ -22,7 +22,7 @@ export default function Page() {
 
         <div class="mt-20 py-8 px-8 md-px-14 b-rd-3 bg-paper line-height-8 text-justify font-size-4.4" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 18%);">
 
-          <p>“Fine Carpet Cleaning'' Ltd. is a London-based carpet cleaning company that has been in the industry since 2012. It was founded with the commitment to provide our customers with the highest quality carpet cleaning services. Today, we are proud to have established a reputation as a trusted and high-performing agency.</p>
+          <p>Fine Carpet Cleaning is a London-based carpet cleaning company that has been in the industry since 2012. It was founded with the commitment to provide our customers with the highest quality carpet cleaning services. Today, we are proud to have established a reputation as a trusted and high-performing agency.</p>
 
           <p>In our company, we follow the philosophy of always thinking about our clients first. We don’t just do cleaning jobs – we strive to be the most reliable and quality-focused carpet cleaning company. Our core value is customer satisfaction, and we are dedicated to providing the best possible services.</p>
 
@@ -40,7 +40,7 @@ export default function Page() {
 
         <h2>Our accreditations</h2>
 
-        <h3 style="font-family: 'Mona-Sans', sans-serif;" class="mt-15 mb-15">“Fine Carpet Cleaning” Ltd. is a qualified member of "<a class="color-paper-link hover-color-paper-link-hover:hover" href="https://trustedlocalcleaners.ncca.co.uk/listing/fine-carpet-cleaning-ltd/" target="_blank" rel="noopener">NCCA</a>" (National Carpet Cleaners Association)</h3>
+        <h3 style="font-family: 'Mona-Sans', sans-serif;" class="mt-15 mb-15">Fine Carpet Cleaning is a qualified member of "<a class="color-paper-link hover-color-paper-link-hover:hover" href="https://trustedlocalcleaners.ncca.co.uk/listing/fine-carpet-cleaning-ltd/" target="_blank" rel="noopener">NCCA</a>" (National Carpet Cleaners Association)</h3>
 
         <GallerySlider>
           <img src="/assets/about-us/fine-carpet-cleaning-ncca-certificate-1.jpg" alt="fine-carpet-cleaning-ncca-certificate-1" />
@@ -57,13 +57,13 @@ export default function Page() {
 
         </div>
 
-        <h3 style="font-family: 'Mona-Sans', sans-serif;" class="mt-25 mb--5">“Fine Carpet Cleaning” Ltd. is listed on “<a class="color-paper-link hover-color-paper-link-hover:hover" href="https://www.checkatrade.com/trades/FineCarpetCleaning" target="_blank" rel="noopener">Checkatrade</a>"</h3>
+        <h3 style="font-family: 'Mona-Sans', sans-serif;" class="mt-25 mb--5">Fine Carpet Cleaning is listed on “<a class="color-paper-link hover-color-paper-link-hover:hover" href="https://www.checkatrade.com/trades/FineCarpetCleaning" target="_blank" rel="noopener">Checkatrade</a>"</h3>
 
         <div class="mt-20 py-8 px-8 md-px-14 b-rd-3 bg-paper line-height-8 text-justify font-size-4.4" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 18%);">
 
           <p>“Checkatrade” is an organisation founded in 1998 to help consumers in the UK to find their specialist in a particular area, such as quality carpet cleaning. The main goal of the organisation is the collection of all quality companies in one place, covering high standards, transparency in customer service and prices.</p>
 
-          <p>In order to be accredited by “Checkatrade”, “Fine Carpet Cleaning” Ltd. had to pass a detailed inspection covering more than 20 aspects, such as:</p>
+          <p>In order to be accredited by “Checkatrade”, Fine Carpet Cleaning had to pass a detailed inspection covering more than 20 aspects, such as:</p>
 
           <ul>
             <li class="ml--5">
@@ -90,11 +90,11 @@ export default function Page() {
 
         </div>
 
-        <h3 style="font-family: 'Mona-Sans', sans-serif;" class="mt-25 mb--5">“Fine Carpet Cleaning” Ltd. staff members are trained and certified</h3>
+        <h3 style="font-family: 'Mona-Sans', sans-serif;" class="mt-25 mb--5">Fine Carpet Cleaning staff members are trained and certified</h3>
 
         <div class="mt-20 py-8 px-8 md-px-14 b-rd-3 bg-paper line-height-8 text-justify font-size-4.4" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 18%);">
 
-          <p>At Fine Carpet Cleaning Ltd., we are driven by two key principles: fully satisfying our customers' needs and fostering a company culture that encourages constant striving for excellence. As a result, our staff members have successfully completed numerous specialised professional courses, including:</p>
+          <p>At Fine Carpet Cleaning, we are driven by two key principles: fully satisfying our customers' needs and fostering a company culture that encourages constant striving for excellence. As a result, our staff members have successfully completed numerous specialised professional courses, including:</p>
 
           <ul>
             <li class="ml--5">
@@ -125,7 +125,7 @@ export default function Page() {
 
         <div class="mt-20 py-8 px-12 md-px-14 bg-paper b-rd-3" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 18%);">
 
-          <p>At “Fine Carpet Cleaning” Ltd., we utilise top-grade cleaning equipment and premium products to ensure the highest quality service. Our approach includes:</p>
+          <p>At Fine Carpet Cleaning, we utilise top-grade cleaning equipment and premium products to ensure the highest quality service. Our approach includes:</p>
 
           <ol style="counter-reset: ordered; list-style: none;">
             <li class="ml--5">

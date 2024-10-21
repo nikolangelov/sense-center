@@ -1,11 +1,11 @@
 import "solid-slider/slider.css";
-import {FacebookLikeGallery} from '../../../components/FacebookLikeGallery';
-import {createCollapsable} from '../../../components/Collapsable';
-import {Typography} from '../../../components/Typography';
-import {ReviewSlider, StarReview} from '../../../components/ReviewSlider';
-import {FOTSlider, FOTSliderContainer} from '../../../components/FrequentlyOrderedTogether';
-import {PriceTable} from '../../../components/PriceTable';
-import {FleurDivider} from "../../../components/FleurDivider";
+import { FacebookLikeGallery } from '../../../components/FacebookLikeGallery';
+import { createCollapsable } from '../../../components/Collapsable';
+import { Typography } from '../../../components/Typography';
+import { ReviewSlider, StarReview } from '../../../components/ReviewSlider';
+import { FOTSlider, FOTSliderContainer } from '../../../components/FrequentlyOrderedTogether';
+import { PriceTable } from '../../../components/PriceTable';
+import { FleurDivider } from "../../../components/FleurDivider";
 import { createEffect } from "solid-js";
 import { VideoPlayer } from '../../../components/VideoPlayer';
 
@@ -106,7 +106,7 @@ function FaqSection() {
     <Entry>
       <li>
         <Typography variant="h3">17. What is the best thing to clean furniture with?</Typography>
-        <Typography variant="body">Professional furniture cleaning services are highly effective and work exceptionally well. This is made possible by the expertise, equipment, products, and methods employed by expert companies. A professional furniture cleaning business like "Fine Carpet Cleaning Ltd." offers high-quality cleaning services that are particularly effective in cleaning musty furniture, tackling stubborn stains, eliminating odors, and eradicating germ buildup. These results are often unattainable through regular cleaning methods.</Typography></li>
+        <Typography variant="body">Professional furniture cleaning services are highly effective and work exceptionally well. This is made possible by the expertise, equipment, products, and methods employed by expert companies. A professional furniture cleaning business like Fine Carpet Cleaning offers high-quality cleaning services that are particularly effective in cleaning musty furniture, tackling stubborn stains, eliminating odors, and eradicating germ buildup. These results are often unattainable through regular cleaning methods.</Typography></li>
       <li>
         <Typography variant="h3">18. How do you clean really dirty furniture?</Typography>
         <Typography variant="body">Cleaning really dirty furniture requires a thorough and systematic approach. The cleaning method used should be tailored to the specific type of furniture and fabric. Our approach includes a pre-cleaning survey to establish what cleaning methods and detergent should be used for the furniture, using professional equipment, and utilising specialised techniques for professional furniture cleaning services. We offer a range of services specialised for all kinds of furniture, such as cleaning linen furniture, cleaning mould off furniture, recliner cleaning services, dining chair cleaning services, futon cleaning services, lampshade cleaning services, upholstered bed frame cleaning, professional headboard cleaning, and many more.</Typography></li>
@@ -130,17 +130,17 @@ function FaqSection() {
         <Typography variant="body">Yes, our company is specialised in professional lampshade cleaning services. We have undergone expert training and have years of experience in cleaning all kinds of furniture, including cleaning linen furniture, cleaning mould off furniture, recliner cleaning services, dining chair cleaning services, futon cleaning services, lampshade cleaning services, upholstered bed frame cleaning, professional headboard cleaning, and many more.</Typography></li>
       <li>
         <Typography variant="h3">24. Are there furniture steam cleaning companies near me?</Typography>
-        <Typography variant="body">“Fine Carpet Cleaning” Ltd. performs in all of London. Feel free to contact us to receive furniture upholstery cleaning services wherever you are, and rest assured that we will take good care of your furniture.</Typography></li>
+        <Typography variant="body">Fine Carpet Cleaning performs in all of London. Feel free to contact us to receive furniture upholstery cleaning services wherever you are, and rest assured that we will take good care of your furniture.</Typography></li>
     </Entry>
   </Container>
 }
 
 const JSONLDScript = () => {
-	createEffect(() => {
-		const script = document.createElement("script");
-		script.type = "application/ld+json";
-		script.text = JSON.stringify({
-			"@context": "https://schema.org/",
+  createEffect(() => {
+    const script = document.createElement("script");
+    script.type = "application/ld+json";
+    script.text = JSON.stringify({
+      "@context": "https://schema.org/",
       "@graph": [
         {
           "@type": "Product",
@@ -213,38 +213,38 @@ const JSONLDScript = () => {
           ]
         }
       ]
-    }    
-		);
-		document.head.appendChild(script);
-	});
+    }
+    );
+    document.head.appendChild(script);
+  });
 
-	return null; // This component doesn't need to render anything visible
+  return null; // This component doesn't need to render anything visible
 };
 
 export default function Page() {
   return (
     <>
 
-<JSONLDScript />
+      <JSONLDScript />
 
-<noscript>
-  <iframe
-    src="https://www.googletagmanager.com/ns.html?id=GTM-PCFWNH5G"
-    height="0"
-    width="0"
-    style="display:none;visibility:hidden">
-  </iframe>
-</noscript>
+      <noscript>
+        <iframe
+          src="https://www.googletagmanager.com/ns.html?id=GTM-PCFWNH5G"
+          height="0"
+          width="0"
+          style="display:none;visibility:hidden">
+        </iframe>
+      </noscript>
 
       <h1 class="mt-10 md-mt-17 font-size-12.5 md-font-size-16 md-line-height-18 line-height-16">Professional furniture cleaning services</h1>
       <div class="flex flex-justify-center"><img class="b-rd-3 md-mt-10 mt-2 max-w-full" src="/assets/service-pics/furniture-cleaning/steam-cleaning-furniture-services.jpg" alt="steam-cleaning-furniture-services" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 30%);" /></div>
 
-      <FleurDivider/>
+      <FleurDivider />
 
       <h2 class="line-height-12 md-line-height-14">What to expect from our professional furniture cleaning services</h2>
       <div class="mt-20 py-8 px-8 md-px-14 bg-paper b-rd-3" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 18%);">
         <h3>Benefits:</h3>
-        <p>We at “Fine Carpet Cleaning” Ltd. perform professional furniture cleaning services. Professional furniture cleaning services offer more than just the removal of general dirt and shading. They provide a range of benefits, including:</p>
+        <p>We at Fine Carpet Cleaning perform professional furniture cleaning services. Professional furniture cleaning services offer more than just the removal of general dirt and shading. They provide a range of benefits, including:</p>
         <ul>
           <li class="ml--5">
             <p>Effective removal of stains from spills, pet accidents, and everyday use;</p>
@@ -266,7 +266,7 @@ export default function Page() {
           </li>
           <li class="ml--5">
             <p>Furniture cleaning experts customise their methods based on the specific type of furniture, ensuring optimal results without causing damage.</p>
-            <Typography variant="body">At "Fine Carpet Cleaning" Ltd., our cleaning technicians are skilled in handling even the most delicate furniture. They can successfully remove tough stains while preserving the colours without resorting to abrasive chemicals. To ensure a successful outcome, a test of the product and cleaning method is conducted on a small area of your furniture, ensuring that the detergent is best suited for it.</Typography>
+            <Typography variant="body">At Fine Carpet Cleaning, our cleaning technicians are skilled in handling even the most delicate furniture. They can successfully remove tough stains while preserving the colours without resorting to abrasive chemicals. To ensure a successful outcome, a test of the product and cleaning method is conducted on a small area of your furniture, ensuring that the detergent is best suited for it.</Typography>
           </li>
         </ul>
 
@@ -307,7 +307,7 @@ export default function Page() {
         </ul>
       </div>
 
-      <FleurDivider/>
+      <FleurDivider />
 
       <h2>The process of our professional furniture cleaning services:</h2>
       <div class="mt-20 py-8 px-8 md-px-14 bg-paper b-rd-3" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 18%);">
@@ -321,7 +321,7 @@ export default function Page() {
         </ol>
       </div>
 
-      <FleurDivider/>
+      <FleurDivider />
 
       <h2 class="line-height-12 md-line-height-14">Equipment and products we use for our professional furniture cleaning services</h2>
       <div class="mt-20 py-8 px-12 md-px-14 bg-paper b-rd-3" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 18%);">
@@ -357,7 +357,7 @@ export default function Page() {
         </ul>
       </div>
 
-      <FleurDivider/>
+      <FleurDivider />
 
       <h2 class="line-height-12 md-line-height-14">Pictures from our professional furniture cleaning services</h2>
 
@@ -375,13 +375,13 @@ export default function Page() {
         { src: "/assets/service-pics/furniture-cleaning/11-furniture-deep-cleaning-1.jpg", alt: "11-furniture-deep-cleaning-1" },
       ]} />
 
-      <FleurDivider/>
+      <FleurDivider />
 
       <h2 class="line-height-12 md-line-height-14">Video from our professional furniture cleaning services</h2>
 
-			<VideoPlayer src='https://www.youtube.com/embed/vuDflQLPHmg?enablejsapi=1&mute=1' />
+      <VideoPlayer src='https://www.youtube.com/embed/vuDflQLPHmg?enablejsapi=1&mute=1' />
 
-      <FleurDivider/>
+      <FleurDivider />
 
       <h2 class="line-height-12 md-line-height-14">Prices of our professional furniture cleaning services</h2>
 
@@ -395,71 +395,30 @@ export default function Page() {
         <br></br>
         <strong>Deising - Free of charge - just notify us when booking.</strong></div>
 
-      <PriceTable title="Furniture type">
-        <tr>
-          <td class="bg-paper pl-5 py-2 font-500">Armchair</td>
-          <td class="bg-paper pl-5 py-2 font-500">from £30.00</td>
-        </tr>
-        <tr>
-          <td class="bg-paper pl-5 py-2 font-500">Pair of curtains</td>
-          <td class="bg-paper pl-5 py-2 font-500">from £25.00</td>
-        </tr>
-        <tr>
-          <td class="bg-paper pl-5 py-2 font-500">Bed base</td>
-          <td class="bg-paper pl-5 py-2 font-500">from £22.00</td>
-        </tr>
-        <tr>
-          <td class="bg-paper pl-5 py-2 font-500">Headboard</td>
-          <td class="bg-paper pl-5 py-2 font-500">from £15.00</td>
-        </tr>
-        <tr>
-          <td class="bg-paper pl-5 py-2 font-500">Office chair - seat</td>
-          <td class="bg-paper pl-5 py-2 font-500">from £8.00</td>
-        </tr>
-        <tr>
-          <td class="bg-paper pl-5 py-2 font-500">Office chair - seat & back</td>
-          <td class="bg-paper pl-5 py-2 font-500">from £14.00</td>
-        </tr>
-        <tr>
-          <td class="bg-paper pl-5 py-2 font-500">Dining chair - seat</td>
-          <td class="bg-paper pl-5 py-2 font-500">from £7.00</td>
-        </tr>
-        <tr>
-          <td class="bg-paper pl-5 py-2 font-500">Dining chair - seat & back</td>
-          <td class="bg-paper pl-5 py-2 font-500">from £13.00</td>
-        </tr>
-        <tr>
-          <td colspan="2"><h3 class="bg-paper pl-5 py-6 font-700 my-0">Velvet furniture cleaning</h3></td>
-        </tr>
-        <tr>
-          <td class="bg-paper pl-5 py-2 font-500">Bed base - Velvet</td>
-          <td class="bg-paper pl-5 py-2 font-500">from £26.00</td>
-        </tr>
-        <tr>
-          <td class="bg-paper pl-5 py-2 font-500">Headboard - Velvet/Leather</td>
-          <td class="bg-paper pl-5 py-2 font-500">from £20.00</td>
-        </tr>
-        <tr>
-          <td class="bg-paper pl-5 py-2 font-500">Office chair - seat - Velvet</td>
-          <td class="bg-paper pl-5 py-2 font-500">from £10.00</td>
-        </tr>
-        <tr>
-          <td class="bg-paper pl-5 py-2 font-500">Office chair - seat & back - Velvet</td>
-          <td class="bg-paper pl-5 py-2 font-500">from £24.00</td>
-        </tr>
-        <tr>
-          <td class="bg-paper pl-5 py-2 font-500">Dining chair - seat - Velvet</td>
-          <td class="bg-paper pl-5 py-2 font-500">from £7.00</td>
-        </tr>
-        <tr>
-          <td class="bg-paper pl-5 py-2 font-500">Dining chair - seat & back - Velvet</td>
-          <td class="bg-paper pl-5 py-2 font-500">from £13.00</td>
-        </tr>
-      </PriceTable>
+      <PriceTable
+        title="Furniture type"
+        items={[
+          { label: "Armchair", value: "from £30.00" },
+          { label: "Pair of curtains", value: "from £25.00" },
+          { label: "Bed base", value: "from £22.00" },
+          { label: "Headboard", value: "from £15.00" },
+          { label: "Office chair - seat", value: "from £8.00" },
+          { label: "Office chair - seat & back", value: "from £14.00" },
+
+          { element: <h3 class="bg-paper pl-5 py-6 font-700 my-0 b-#f3f3f3" style="border-style: none none solid none;">Velvet furniture cleaning</h3> },
+
+          { label: "Bed base - Velvet", value: "from £26.00" },
+          { label: "Headboard - Velvet/Leather", value: "from £20.00" },
+          { label: "Office chair - seat - Velvet", value: "from £10.00" },
+          { label: "Office chair - seat & back - Velvet", value: "from £24.00" },
+          { label: "Dining chair - seat - Velvet", value: "from £7.00" },
+          { label: "Dining chair - seat & back - Velvet", value: "from £13.00" },
+        ]}
+      />
 
       <button class="outline-none bg-brand-second-action hover-bg-brand-second-action-hover:hover font-size-6 font-600 w-250px h-60px c-paper flex flex-items-center flex-justify-center relative b-solid b-rd-3 b-4 b-brand-second-action hover-b-brand-second-action-hover:hover whitespace-normal line-height-6 word-spacing-0.5 py-9 my-20 mx-auto" style="box-shadow: 0 0 0 3px rgba(255, 255, 255, .9) inset; letter-spacing: 0.05rem;"><a href="/contact-us" class="c-paper font-size-5">REQUEST A QUOTE</a></button>
 
-      <FleurDivider/>
+      <FleurDivider />
 
       <h2 class="line-height-12 md-line-height-14">Frequently ordered together</h2>
 
@@ -508,7 +467,7 @@ export default function Page() {
         />
       </FOTSlider>
 
-      <FleurDivider/>
+      <FleurDivider />
 
       <h2 class="line-height-12 md-line-height-14">Our professional furniture cleaning services specialist advises:</h2>
       <div class="mt-20 py-8 px-12 md-px-14 bg-paper b-rd-3" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 18%);">
@@ -536,7 +495,7 @@ export default function Page() {
         </ol>
       </div>
 
-      <FleurDivider/>
+      <FleurDivider />
 
       <h2 class="line-height-12 md-line-height-14">Reviews for our professional furniture cleaning services</h2>
 
@@ -596,13 +555,13 @@ export default function Page() {
 
       </ReviewSlider>
 
-      <FleurDivider/>
+      <FleurDivider />
 
       <h2 class="line-height-12 md-line-height-14">FAQ regarding our professional furniture cleaning services</h2>
 
       <FaqSection />
 
-      <FleurDivider/>
+      <FleurDivider />
 
       <div class="m-10% mb-3% flex flex-wrap flex-justify-center md-gap-15 gap-10">
         <a href="/services"><button class="cursor-pointer outline-none bg-brand-second-action hover-bg-brand-second-action-hover:hover font-size-5 font-600 w-200px h-60px c-paper flex flex-items-center flex-justify-center relative b-solid b-rd-3 b-4 b-brand-second-action hover-b-brand-second-action-hover:hover whitespace-normal line-height-6 word-spacing-0.5 py-9" style="box-shadow: 0 0 0 3px rgba(255, 255, 255, .9) inset; letter-spacing: 0.05rem;">SERVICES</button></a>

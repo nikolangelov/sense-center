@@ -181,8 +181,8 @@ function FaqSection() {
         </Typography>
       </ul>
       <li>
-        <Typography variant="h3">26. Is “Fine Carpet Cleaning” Ltd. a specialised dry carpet cleaning company?</Typography>
-        <Typography variant="body">Yes, “Fine Carpet Cleaning” Ltd is a specialised dry carpet cleaning company. Anyhow apart from professional dry carpet cleaning, we are offering a variety of  <a class="color-paper-link hover-color-paper-link-hover:hover" href="/services">other cleaning services.</a></Typography></li>
+        <Typography variant="h3">26. Is Fine Carpet Cleaning a specialised dry carpet cleaning company?</Typography>
+        <Typography variant="body">Yes, Fine Carpet Cleaning is a specialised dry carpet cleaning company. Anyhow apart from professional dry carpet cleaning, we are offering a variety of  <a class="color-paper-link hover-color-paper-link-hover:hover" href="/services">other cleaning services.</a></Typography></li>
     </Entry>
   </Container>
 }
@@ -297,7 +297,7 @@ export default function Page() {
       <h2 class="line-height-12 md-line-height-14">What to expect from our dry carpet cleaning services</h2>
       <div class="mt-20 py-8 px-8 md-px-14 bg-paper b-rd-3" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 18%);">
         <h3>Benefits:</h3>
-        <p>We at “Fine Carpet Cleaning” Ltd are offering dry carpet cleaning services. These services are used for cleaning finer, more delicate, and natural carpets, rugs, and upholstery, which are very vulnerable to water damage. This cleaning method is essentially carpet cleaning without water and it is safe for babies, pets and allergy sufferers.</p>
+        <p>We at Fine Carpet Cleaning are offering dry carpet cleaning services. These services are used for cleaning finer, more delicate, and natural carpets, rugs, and upholstery, which are very vulnerable to water damage. This cleaning method is essentially carpet cleaning without water and it is safe for babies, pets and allergy sufferers.</p>
         <p>The benefits of using dry carpet cleaning services are:</p>
 
         <ul>
@@ -381,7 +381,7 @@ export default function Page() {
         <ol style="counter-reset: ordered; list-style: none;">
           <li class="ml--5">
             <h3 class="ml--5 font-size-6 md-font-size-7">Carefully selected cleaning supplies</h3>
-            <Typography variant="body">We at "Fine Carpet Cleaning" Ltd. use the most effective and top-of-the-line cleaning equipment and premium products in our no-water carpet cleaning. Our machines are recognised as some of the most powerful and effective portable machines globally.</Typography>
+            <Typography variant="body">We at Fine Carpet Cleaning use the most effective and top-of-the-line cleaning equipment and premium products in our no-water carpet cleaning. Our machines are recognised as some of the most powerful and effective portable machines globally.</Typography>
           </li>
           <li class="ml--5">
             <h3 class="ml--5 font-size-6 md-font-size-7">Efficient vacuum cleaner</h3>
@@ -429,52 +429,22 @@ export default function Page() {
         <br></br>
         <strong id="price_table">Deising - Free of charge - just notify us when booking.</strong></div>
 
-      <PriceTable title="Room type">
-        <tr>
-          <td class="bg-paper pl-5 py-2 font-500">Hallway</td>
-          <td class="bg-paper pl-5 py-2 font-500">from £16.00</td>
-        </tr>
-        <tr>
-          <td class="bg-paper pl-5 py-2 font-500">Landing</td>
-          <td class="bg-paper pl-5 py-2 font-500">from £8.00</td>
-        </tr>
-        <tr>
-          <td class="bg-paper pl-5 py-2 font-500">Living room</td>
-          <td class="bg-paper pl-5 py-2 font-500">from £48.00</td>
-        </tr>
-        <tr>
-          <td class="bg-paper pl-5 py-2 font-500">Bedroom</td>
-          <td class="bg-paper pl-5 py-2 font-500">from £32.00</td>
-        </tr>
-        <tr>
-          <td class="bg-paper pl-5 py-2 font-500">Flight of stairs</td>
-          <td class="bg-paper pl-5 py-2 font-500">from £35.00</td>
-        </tr>
-        <tr>
-          <td class="bg-paper pl-5 py-2 font-500">Office room</td>
-          <td class="bg-paper pl-5 py-2 font-500">from £32.00</td>
-        </tr>
-        <tr>
-          <td class="bg-paper pl-5 py-2 font-500">Hotel room</td>
-          <td class="bg-paper pl-5 py-2 font-500">from £50.00</td>
-        </tr>
-        <tr>
-          <td class="bg-paper pl-5 py-2 font-500">Loft room</td>
-          <td class="bg-paper pl-5 py-2 font-500">from £35.00</td>
-        </tr>
-        <tr>
-          <td class="bg-paper pl-5 py-2 font-500">Through lounge</td>
-          <td class="bg-paper pl-5 py-2 font-500">from £76.00</td>
-        </tr>
-        <tr>
-          <td class="bg-paper pl-5 py-2 font-500">Box room</td>
-          <td class="bg-paper pl-5 py-2 font-500">from £32.00</td>
-        </tr>
-        <tr>
-          <td class="bg-paper pl-5 py-2 font-500">Bathroom</td>
-          <td class="bg-paper pl-5 py-2 font-500">from £11.00</td>
-        </tr>
-      </PriceTable>
+        <PriceTable
+                title="Room type"
+                items={[
+                    { label: "Hallway", value: "from £16.00" },
+                    { label: "Landing", value: "from £8.00" },
+                    { label: "Living room", value: "from £48.00" },
+                    { label: "Bedroom", value: "from £32.00" },
+                    { label: "Flight of stairs", value: "from £35.00" },
+                    { label: "Office room", value: "from £32.00" },
+                    { label: "Hotel room", value: "from £50.00" },
+                    { label: "Loft room", value: "from £35.00" },
+                    { label: "Through lounge", value: "from £76.00" },
+                    { label: "Box room", value: "from £32.00" },
+                    { label: "Bathroom", value: "from £11.00" },
+                ]}
+            />
 
       <button class="outline-none bg-brand-second-action hover-bg-brand-second-action-hover:hover font-size-6 font-600 w-250px h-60px c-paper flex flex-items-center flex-justify-center relative b-solid b-rd-3 b-4 b-brand-second-action hover-b-brand-second-action-hover:hover whitespace-normal line-height-6 word-spacing-0.5 py-9 my-20 mx-auto" style="box-shadow: 0 0 0 3px rgba(255, 255, 255, .9) inset; letter-spacing: 0.05rem;"><a href="/contact-us" class="c-paper font-size-5">REQUEST A QUOTE</a></button>
 

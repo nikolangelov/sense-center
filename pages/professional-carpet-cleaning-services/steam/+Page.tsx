@@ -126,10 +126,10 @@ function FaqSection() {
         <Typography variant="body">The deep steam carpet cleaning frequency depends mainly on factors like how fast the carpet soils. On average, a carpet should be cleaned at 12-month intervals. However, if you have pets, children, high traffic on the carpet, a smoking habit, or if you stain it a lot, we recommend using an expert carpet cleaning service more often than that. Feel free to contact us anytime for professional carpet cleaning services or advice.</Typography></li>
       <li>
         <Typography variant="h3">21. Does steam cleaning carpets work?</Typography>
-        <Typography variant="body">Yes, steam carpet cleaning definitely works. Steam carpet cleaning is a highly effective method offered by professional companies like "Fine Carpet Cleaning Ltd." Their experience, equipment, products, and techniques ensure exceptional results. This approach is not only efficient but also affordable, guaranteeing the removal of tough stains, odours, and germ buildup that regular cleaning methods cannot eliminate.</Typography></li>
+        <Typography variant="body">Yes, steam carpet cleaning definitely works. Steam carpet cleaning is a highly effective method offered by professional companies like Fine Carpet Cleaning Their experience, equipment, products, and techniques ensure exceptional results. This approach is not only efficient but also affordable, guaranteeing the removal of tough stains, odours, and germ buildup that regular cleaning methods cannot eliminate.</Typography></li>
       <li>
         <Typography variant="h3">22. Does steam cleaning carpets remove stains?</Typography>
-        <Typography variant="body"><strong>The short answer is yes, they do.</strong> Steam cleaning is highly effective in removing deep-down stains, dirt, and grime, while also eliminating bacteria and removing dust mites, allergens, mould, pet dander, and unpleasant odours. However, certain stubborn stains, such as extremely old ones or those that have been treated improperly, can be challenging to remove completely, even with expert assistance. Fortunately, due to our extensive experience and utilisation of top-notch equipment, we at “Fine Carpet Cleaning Ltd.” have achieved remarkable success rates in stain removal. Nevertheless, we cannot offer a guarantee that every stain can be completely eradicated. Rest assured, we will evaluate the stain and inform you during the quotation process about our confidence in achieving its removal.</Typography></li>
+        <Typography variant="body"><strong>The short answer is yes, they do.</strong> Steam cleaning is highly effective in removing deep-down stains, dirt, and grime, while also eliminating bacteria and removing dust mites, allergens, mould, pet dander, and unpleasant odours. However, certain stubborn stains, such as extremely old ones or those that have been treated improperly, can be challenging to remove completely, even with expert assistance. Fortunately, due to our extensive experience and utilisation of top-notch equipment, we at Fine Carpet Cleaning have achieved remarkable success rates in stain removal. Nevertheless, we cannot offer a guarantee that every stain can be completely eradicated. Rest assured, we will evaluate the stain and inform you during the quotation process about our confidence in achieving its removal.</Typography></li>
       <li>
         <Typography variant="h3">23. Does steam cleaning damage the carpet?</Typography>
         <Typography variant="body">No, steam cleaning does not damage carpets, if done properly. In fact, it is the most thorough method and is recommended by most carpet manufacturers. Steam cleaning effectively removes deep-down stains, dirt, and grime. It kills bacteria, removes dust mites, allergens, mould, pet dander and odours, while prolonging the carpet's lifespan.</Typography></li>
@@ -146,7 +146,7 @@ function FaqSection() {
       <li>
         <Typography variant="h3">27. Does steam cleaning a carpet help with allergies?</Typography>
         <Typography variant="body">Regular cleaning is essential for allergy sufferers as it helps to reduce exposure to allergens. A professional deep clean carpet company effectively removes dust, pollen, pet dander, mould, and other allergens that can trigger allergic reactions. Carpets that are not regularly cleaned can become breeding grounds for dust mites, which can cause serious allergic reactions. Steam cleaning, also known as the hot water extraction method, is a recommended allergy carpet cleaning method as it has been proven to reduce allergens in carpets. However, it is important to ensure that all the water is properly removed from the carpet after steam cleaning to prevent moisture-related issues.</Typography>
-        <Typography variant="body">“Fine Carpet Cleaning Ltd.” is a company that specialises in professional hot water extraction carpet cleaning services and uses special machines and solutions to effectively remove allergens. Vacuuming regularly is also important in removing allergens from the carpet.</Typography></li>
+        <Typography variant="body">Fine Carpet Cleaning is a company that specialises in professional hot water extraction carpet cleaning services and uses special machines and solutions to effectively remove allergens. Vacuuming regularly is also important in removing allergens from the carpet.</Typography></li>
       <li>
         <Typography variant="h3">28. Is steam cleaning best for carpets?</Typography>
         <Typography variant="body">A deep carpet cleaning service is the most effective way to clean your carpet. Cleaning your carpet with hot water at high pressure successfully removes dirt, bacteria, grime, and toxins embedded in the carpet fibres. Professional deep carpet cleaning offers many advantages, including:</Typography></li>
@@ -301,7 +301,7 @@ export default function Page() {
       <h2 class="line-height-12 md-line-height-14">What to expect from our professional carpet steam cleaning services</h2>
       <div class="mt-20 py-8 px-8 md-px-14 bg-paper b-rd-3" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 18%);">
         <h3>Benefits:</h3>
-        <p>We at “Fine Carpet Cleaning” Ltd. perform professional carpet steam cleaning services. Carpet steam cleaning (also known as hot water extraction) is by far the most popular method for deep cleaning and sanitising carpets due to its unmatched efficiency.</p>
+        <p>We at Fine Carpet Cleaning perform professional carpet steam cleaning services. Carpet steam cleaning (also known as hot water extraction) is by far the most popular method for deep cleaning and sanitising carpets due to its unmatched efficiency.</p>
         <p>The benefits of using professional carpet steam cleaning services are:</p>
 
         <ul>
@@ -381,7 +381,7 @@ export default function Page() {
         <ol style="counter-reset: ordered; list-style: none;">
           <li class="ml--5">
             <h3 class="ml--5 font-size-6 md-font-size-7">Highly-efficient extractors</h3>
-            <Typography variant="body">"Fine Carpet Cleaning Ltd" prides itself on utilising top-of-the-line cleaning equipment and products. Our machines, considered to be among the most powerful and effective portable machines in the world, have been tested extensively, and we have selected the best brands available in the UK market – "<a class="color-paper-link hover-color-paper-link-hover:hover" href="https://www.mytee.com/products/1003dx-speedster-deluxe-carpet-extractor/" target="_blank" rel="noopener">Mytee</a>" and "<a class="color-paper-link hover-color-paper-link-hover:hover" href="https://www.clean-smart.co.uk/store/airflex-storm" target="_blank" rel="noopener">Airflex</a>". Further enhancing their performance, our team's engineer makes significant improvements to maximise their capabilities.</Typography>
+            <Typography variant="body">Fine Carpet Cleaning prides itself on utilising top-of-the-line cleaning equipment and products. Our machines, considered to be among the most powerful and effective portable machines in the world, have been tested extensively, and we have selected the best brands available in the UK market – "<a class="color-paper-link hover-color-paper-link-hover:hover" href="https://www.mytee.com/products/1003dx-speedster-deluxe-carpet-extractor/" target="_blank" rel="noopener">Mytee</a>" and "<a class="color-paper-link hover-color-paper-link-hover:hover" href="https://www.clean-smart.co.uk/store/airflex-storm" target="_blank" rel="noopener">Airflex</a>". Further enhancing their performance, our team's engineer makes significant improvements to maximise their capabilities.</Typography>
           </li>
           <li class="ml--5">
             <h3 class="ml--5 font-size-6 md-font-size-7">Powerful vacuum cleaners</h3>
@@ -431,56 +431,23 @@ export default function Page() {
         <br></br>
         <strong id="price_table">Deising - Free of charge - just notify us when booking.</strong></div>
 
-      <PriceTable title="Room type">
-        <tr>
-          <td class="bg-paper pl-5 py-2 font-500">Hallway</td>
-          <td class="bg-paper pl-5 py-2 font-500">from £11.00</td>
-        </tr>
-        <tr>
-          <td class="bg-paper pl-5 py-2 font-500">Landing</td>
-          <td class="bg-paper pl-5 py-2 font-500">from £6.00</td>
-        </tr>
-        <tr>
-          <td class="bg-paper pl-5 py-2 font-500">Living room</td>
-          <td class="bg-paper pl-5 py-2 font-500">from £39.00</td>
-        </tr>
-        <tr>
-          <td class="bg-paper pl-5 py-2 font-500">Bedroom</td>
-          <td class="bg-paper pl-5 py-2 font-500">from £27.00</td>
-        </tr>
-        <tr>
-          <td class="bg-paper pl-5 py-2 font-500">Flight of stairs</td>
-          <td class="bg-paper pl-5 py-2 font-500">from £29.00</td>
-        </tr>
-        <tr>
-          <td class="bg-paper pl-5 py-2 font-500">Single step</td>
-          <td class="bg-paper pl-5 py-2 font-500">from £2.20</td>
-        </tr>
-        <tr>
-          <td class="bg-paper pl-5 py-2 font-500">Office room</td>
-          <td class="bg-paper pl-5 py-2 font-500">from £27.00</td>
-        </tr>
-        <tr>
-          <td class="bg-paper pl-5 py-2 font-500">Hotel room</td>
-          <td class="bg-paper pl-5 py-2 font-500">from £40.00</td>
-        </tr>
-        <tr>
-          <td class="bg-paper pl-5 py-2 font-500">Loft room</td>
-          <td class="bg-paper pl-5 py-2 font-500">from £31.00</td>
-        </tr>
-        <tr>
-          <td class="bg-paper pl-5 py-2 font-500">Through lounge</td>
-          <td class="bg-paper pl-5 py-2 font-500">from £63.00</td>
-        </tr>
-        <tr>
-          <td class="bg-paper pl-5 py-2 font-500">Box room</td>
-          <td class="bg-paper pl-5 py-2 font-500">from £27.00</td>
-        </tr>
-        <tr>
-          <td class="bg-paper pl-5 py-2 font-500">Bathroom</td>
-          <td class="bg-paper pl-5 py-2 font-500">from £8.00</td>
-        </tr>
-      </PriceTable>
+        <PriceTable
+                title="Room type"
+                items={[
+                    { label: "Hallway", value: "from £11.00" },
+                    { label: "Landing", value: "from £6.00" },
+                    { label: "Living Room", value: "from £39.00" },
+                    { label: "Bedroom", value: "from £27.00" },
+                    { label: "Flight of stairs", value: "from £29.00" },
+                    { label: "Single step", value: "from £2.20" },
+                    { label: "Office room", value: "from £27.00" },
+                    { label: "Hotel room", value: "from £40.00" },
+                    { label: "Loft room", value: "from £31.00" },
+                    { label: "Through lounge", value: "from £63.00" },
+                    { label: "Box room", value: "from £27.00" },
+                    { label: "Bathroom", value: "from £8.00" },
+                ]}
+            />
 
       <button class="outline-none bg-brand-second-action hover-bg-brand-second-action-hover:hover font-size-6 font-600 w-250px h-60px c-paper flex flex-items-center flex-justify-center relative b-solid b-rd-3 b-4 b-brand-second-action hover-b-brand-second-action-hover:hover whitespace-normal line-height-6 word-spacing-0.5 py-9 my-20 mx-auto" style="box-shadow: 0 0 0 3px rgba(255, 255, 255, .9) inset; letter-spacing: 0.05rem;"><a href="/contact-us" class="c-paper font-size-5">REQUEST A QUOTE</a></button>
 

@@ -6,7 +6,7 @@ import { ReviewSlider, StarReview } from '../../../components/ReviewSlider';
 import { FOTSlider, FOTSliderContainer } from '../../../components/FrequentlyOrderedTogether';
 import { PriceTable } from '../../../components/PriceTable';
 import { createEffect } from "solid-js";
-import {FleurDivider} from "../../../components/FleurDivider";
+import { FleurDivider } from "../../../components/FleurDivider";
 import { VideoPlayer } from '../../../components/VideoPlayer';
 
 function FaqSection() {
@@ -145,16 +145,16 @@ function FaqSection() {
       <Typography variant="body">To learn more, check out our <a class="color-paper-link hover-color-paper-link-hover:hover" href="#price_table">dry cleaning pillows prices</a>.</Typography>
       <li>
         <Typography variant="h3">22. Are pillows worth washing?</Typography>
-        <Typography variant="body">Yes, it is very advisable to wash your pillows at least every six months. Professional pillow cleaning is highly effective and works exceptionally well. This is made possible by the expertise, equipment, products, and methods employed by expert companies. A professional pillow cleaning company like "Fine Carpet Cleaning Ltd." offers top-quality cleaning services that are particularly effective in tackling stubborn stains, eliminating odours, and eradicating germ buildup. These results are often unattainable through regular cleaning methods.</Typography></li>
+        <Typography variant="body">Yes, it is very advisable to wash your pillows at least every six months. Professional pillow cleaning is highly effective and works exceptionally well. This is made possible by the expertise, equipment, products, and methods employed by expert companies. A professional pillow cleaning company like Fine Carpet Cleaning offers top-quality cleaning services that are particularly effective in tackling stubborn stains, eliminating odours, and eradicating germ buildup. These results are often unattainable through regular cleaning methods.</Typography></li>
       <li>
         <Typography variant="h3">23. What happens if you don't wash your pillow?</Typography>
         <Typography variant="body">Pet dander, dust mites, dirt and oils from your skin easily build up on your pillow. These things can possibly trigger allergies. Pillows can double in weight over their lifespan, due to everything they absorb. Many people throw out their old pillows when it can be more cost-effective to have them professionally cleaned instead. Our professional pillow cleaning process includes fluffing, sanitising and deodorising.</Typography></li>
       <li>
         <Typography variant="h3">24. How do you wash a pillow without ruining it?</Typography>
-        <Typography variant="body">The quickest and safest way is to call in a professional pillow cleaning company. Due to their years of experience and professional equipment, professionals will know how to take the best care of your pillows. We at “Fine Carpet Cleaning” Ltd. use special equipment and premium products and have undergone professional training to ensure that your pillows will be taken care of in the best way possible.</Typography></li>
+        <Typography variant="body">The quickest and safest way is to call in a professional pillow cleaning company. Due to their years of experience and professional equipment, professionals will know how to take the best care of your pillows. We at Fine Carpet Cleaning use special equipment and premium products and have undergone professional training to ensure that your pillows will be taken care of in the best way possible.</Typography></li>
       <li>
         <Typography variant="h3">25. What is the easiest way to clean a pillow?</Typography>
-        <Typography variant="body">The most expedient and secure approach is to contact a professional pillow cleaning company. With their extensive experience and specialised equipment, experts will adeptly attend to your pillows. At “Fine Carpet Cleaning” Ltd. use the following methods to guarantee optimal care for your pillows:</Typography></li>
+        <Typography variant="body">The most expedient and secure approach is to contact a professional pillow cleaning company. With their extensive experience and specialised equipment, experts will adeptly attend to your pillows. At Fine Carpet Cleaning use the following methods to guarantee optimal care for your pillows:</Typography></li>
       <ul class="ml--5" style="list-style: initial;">
         <Typography variant="li">
           <p>We employ special equipment;</p>
@@ -274,12 +274,12 @@ export default function Page() {
       <h1 class="mt-10 md-mt-17 font-size-12.5 md-font-size-16 md-line-height-18 line-height-16">Pillow cleaning services</h1>
       <div class="flex flex-justify-center"><img class="b-rd-3 md-mt-10 mt-2 max-w-full" src="/assets/service-pics/pillow-cleaning/pillow-cleaning-service.jpg" alt="pillow-cleaning-service" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 30%);" /></div>
 
-      <FleurDivider/>
+      <FleurDivider />
 
       <h2 class="line-height-12 md-line-height-14">What to expect from our pillow cleaning services</h2>
       <div class="mt-20 py-8 px-8 md-px-14 bg-paper b-rd-3" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 18%);">
         <h3>Benefits:</h3>
-        <p>We at “Fine Carpet Cleaning” Ltd. perform pillow cleaning services. Pillows act as a magnet for sloughed skin, mould, mildew, fungus and dust mites. They can <strong>double</strong> in weight over their lifespan, due to everything they pick up. Many people throw out their old pillows when it can be more cost-effective to have them professionally cleaned instead. Our professional pillow cleaning process includes fluffing, sanitising and deodorising. Other advantages are:</p>
+        <p>We at Fine Carpet Cleaning perform pillow cleaning services. Pillows act as a magnet for sloughed skin, mould, mildew, fungus and dust mites. They can <strong>double</strong> in weight over their lifespan, due to everything they pick up. Many people throw out their old pillows when it can be more cost-effective to have them professionally cleaned instead. Our professional pillow cleaning process includes fluffing, sanitising and deodorising. Other advantages are:</p>
         <ul>
           <li class="ml--5">
             <p>Effectively removing stains from spills, pet accidents, and everyday use;</p>
@@ -301,7 +301,7 @@ export default function Page() {
           </li>
           <li class="ml--5">
             <p>Professional pillow cleaning experts will tailor their methods to the specific type of pillow, ensuring the best results without damage.</p>
-            <Typography variant="body">At “Fine Carpet Cleaning” Ltd. our cleaning technicians can handle even the most delicate pillows. Our cleaners are able to remove all tough stains and maintain their colour without using abrasive chemicals.</Typography>
+            <Typography variant="body">At Fine Carpet Cleaning our cleaning technicians can handle even the most delicate pillows. Our cleaners are able to remove all tough stains and maintain their colour without using abrasive chemicals.</Typography>
             <Typography variant="body">In order to be sure that the professional pillow cleaning process will go as planned, a test of the product and the cleaning method shall be performed on a small area of your pillow. That way we make sure that the cleaning product is best suited for your pillows.</Typography>
           </li>
         </ul>
@@ -340,7 +340,7 @@ export default function Page() {
         </ul>
       </div>
 
-      <FleurDivider/>
+      <FleurDivider />
 
       <h2>The process of our pillow cleaning services:</h2>
       <div class="mt-20 py-8 px-8 md-px-14 bg-paper b-rd-3" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 18%);">
@@ -354,14 +354,14 @@ export default function Page() {
         </ol>
       </div>
 
-      <FleurDivider/>
+      <FleurDivider />
 
       <h2 class="line-height-12 md-line-height-14">Equipment and products we use for our pillow cleaning services</h2>
       <div class="mt-20 py-8 px-12 md-px-14 bg-paper b-rd-3" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 18%);">
         <ol style="counter-reset: ordered; list-style: none;">
           <li class="ml--5">
             <h3 class="ml--5 font-size-6 md-font-size-7">Highly-efficient extractors</h3>
-            <Typography variant="body">At "Fine Carpet Cleaning Ltd," we utilise some of the finest portable machines globally in our pillow cleaning service. After rigorous testing, we've carefully selected top brands available in the UK market, including "<a class="color-paper-link hover-color-paper-link-hover:hover" href="https://www.mytee.com/products/1003dx-speedster-deluxe-carpet-extractor/" target="_blank" rel="noopener">Mytee</a>" and "<a class="color-paper-link hover-color-paper-link-hover:hover" href="https://www.clean-smart.co.uk/store/airflex-storm" target="_blank" rel="noopener">Airflex</a>". Moreover, our in-house engineer implements significant enhancements to optimise their performance.</Typography>
+            <Typography variant="body">At Fine Carpet Cleaning, we utilise some of the finest portable machines globally in our pillow cleaning service. After rigorous testing, we've carefully selected top brands available in the UK market, including "<a class="color-paper-link hover-color-paper-link-hover:hover" href="https://www.mytee.com/products/1003dx-speedster-deluxe-carpet-extractor/" target="_blank" rel="noopener">Mytee</a>" and "<a class="color-paper-link hover-color-paper-link-hover:hover" href="https://www.clean-smart.co.uk/store/airflex-storm" target="_blank" rel="noopener">Airflex</a>". Moreover, our in-house engineer implements significant enhancements to optimise their performance.</Typography>
           </li>
           <li class="ml--5">
             <h3 class="ml--5 font-size-6 md-font-size-7">Powerful vacuum cleaners</h3>
@@ -386,7 +386,7 @@ export default function Page() {
         </ul>
       </div>
 
-      <FleurDivider/>
+      <FleurDivider />
 
       <h2 class="line-height-12 md-line-height-14">Pictures from our pillow cleaning services</h2>
 
@@ -402,13 +402,13 @@ export default function Page() {
         { src: "/assets/service-pics/pillow-cleaning/9-pillow-cleaning-service-1.jpg", alt: "9-pillow-cleaning-service-1" },
       ]} />
 
-      <FleurDivider/>
+      <FleurDivider />
 
       <h2 class="line-height-12 md-line-height-14">Video from our pillow cleaning services</h2>
 
-			<VideoPlayer src='https://www.youtube.com/embed/12m8Ly5CWuY?enablejsapi=1&mute=1' />
+      <VideoPlayer src='https://www.youtube.com/embed/12m8Ly5CWuY?enablejsapi=1&mute=1' />
 
-      <FleurDivider/>
+      <FleurDivider />
 
       <h2 class="line-height-12 md-line-height-14">Prices of our pillow cleaning services</h2>
 
@@ -422,16 +422,16 @@ export default function Page() {
         <br></br>
         <strong id="price_table">Deising - Free of charge - just notify us when booking.</strong></div>
 
-      <PriceTable title="Pillow type">
-        <tr>
-          <td class="bg-paper pl-5 py-2 font-500">Single pillow</td>
-          <td class="bg-paper pl-5 py-2 font-500">from £10.00</td>
-        </tr>
-      </PriceTable>
+      <PriceTable
+        title="Pillow type"
+        items={[
+          { label: "Single pillow", value: "from £10.00" },
+        ]}
+      />
 
       <button class="outline-none bg-brand-second-action hover-bg-brand-second-action-hover:hover font-size-6 font-600 w-250px h-60px c-paper flex flex-items-center flex-justify-center relative b-solid b-rd-3 b-4 b-brand-second-action hover-b-brand-second-action-hover:hover whitespace-normal line-height-6 word-spacing-0.5 py-9 my-20 mx-auto" style="box-shadow: 0 0 0 3px rgba(255, 255, 255, .9) inset; letter-spacing: 0.05rem;"><a href="/contact-us" class="c-paper font-size-5">REQUEST A QUOTE</a></button>
 
-      <FleurDivider/>
+      <FleurDivider />
 
       <h2 class="line-height-12 md-line-height-14">Frequently ordered together</h2>
 
@@ -480,7 +480,7 @@ export default function Page() {
         />
       </FOTSlider>
 
-      <FleurDivider/>
+      <FleurDivider />
 
       <h2 class="line-height-12 md-line-height-14">Our pillow cleaning services specialists advise:</h2>
       <div class="mt-20 py-8 px-12 md-px-14 bg-paper b-rd-3" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 18%);">
@@ -508,7 +508,7 @@ export default function Page() {
         </ol>
       </div>
 
-      <FleurDivider/>
+      <FleurDivider />
 
       <h2 class="line-height-12 md-line-height-14">Reviews of our pillow cleaning services</h2>
 
@@ -568,13 +568,13 @@ export default function Page() {
 
       </ReviewSlider>
 
-      <FleurDivider/>
+      <FleurDivider />
 
       <h2 class="line-height-12 md-line-height-14">FAQ regarding our pillow cleaning services</h2>
 
       <FaqSection />
 
-      <FleurDivider/>
+      <FleurDivider />
 
       <div class="m-10% mb-3% flex flex-wrap flex-justify-center md-gap-15 gap-10">
         <a href="/services"><button class="cursor-pointer outline-none bg-brand-second-action hover-bg-brand-second-action-hover:hover font-size-5 font-600 w-200px h-60px c-paper flex flex-items-center flex-justify-center relative b-solid b-rd-3 b-4 b-brand-second-action hover-b-brand-second-action-hover:hover whitespace-normal line-height-6 word-spacing-0.5 py-9" style="box-shadow: 0 0 0 3px rgba(255, 255, 255, .9) inset; letter-spacing: 0.05rem;">SERVICES</button></a>

@@ -5,7 +5,7 @@ import { Typography } from '../../components/Typography';
 import { ReviewSlider, StarReview } from '../../components/ReviewSlider';
 import { PriceTable } from '../../components/PriceTable';
 import { createEffect } from "solid-js";
-import {FleurDivider} from "../../components/FleurDivider";
+import { FleurDivider } from "../../components/FleurDivider";
 import { VideoPlayer } from '../../components/VideoPlayer';
 
 function FaqSection() {
@@ -189,12 +189,12 @@ export default function Page() {
       <h1 class="mt-10 md-mt-17 font-size-12.5 md-font-size-16 md-line-height-18 line-height-16">Antiviral sanitisation services</h1>
       <div class="flex flex-justify-center"><img class="b-rd-3 md-mt-10 mt-2 max-w-full" src="/assets/service-pics/antiviral-sanitisation/antiviral-sanitisation-services2.webp" alt="antiviral-sanitisation-services2" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 30%);" /></div>
 
-      <FleurDivider/>
+      <FleurDivider />
 
       <h2>What to expect from our antiviral sanitisation services</h2>
       <div class="mt-20 py-8 px-8 md-px-14 bg-paper b-rd-3" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 18%);">
         <h3>Benefits:</h3>
-        <p>We at “Fine Carpet Cleaning” Ltd. perform antiviral sanitisation services. It is important to keep your workplace and home sanitised in order to eliminate the spread of bacteria and viruses. For this reason, we provide specialised antiviral sanitisation services and disinfection cleaning. It kills 99.99% of all bacteria and viruses on all surfaces using a fogging method, which gives the best results and has an immediate effect. Our antiviral sanitisation services provide other advantages, such as:</p>
+        <p>We at Fine Carpet Cleaning perform antiviral sanitisation services. It is important to keep your workplace and home sanitised in order to eliminate the spread of bacteria and viruses. For this reason, we provide specialised antiviral sanitisation services and disinfection cleaning. It kills 99.99% of all bacteria and viruses on all surfaces using a fogging method, which gives the best results and has an immediate effect. Our antiviral sanitisation services provide other advantages, such as:</p>
         <ul>
           <li class="ml--5">
             <p>Using biodegradable products;</p>
@@ -240,7 +240,7 @@ export default function Page() {
         </ul>
       </div>
 
-      <FleurDivider/>
+      <FleurDivider />
 
       <h2>The process of our antiviral sanitisation services:</h2>
       <div class="mt-20 py-8 px-8 md-px-14 bg-paper b-rd-3" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 18%);">
@@ -263,11 +263,11 @@ export default function Page() {
         </ol>
       </div>
 
-      <FleurDivider/>
+      <FleurDivider />
 
       <h2>Equipment and products we use for our antiviral sanitisation services</h2>
       <div class="mt-20 py-8 px-12 md-px-14 bg-paper b-rd-3" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 18%);">
-        <p>"Fine Carpet Cleaning" Ltd uses high-quality products and machinery for cleaning.</p>
+        <p>Fine Carpet Cleaning uses high-quality products and machinery for cleaning.</p>
         <ol style="counter-reset: ordered; list-style: none;">
           <li class="ml--5">
             <h3 class="ml--5 font-size-6 md-font-size-7">Best devices</h3>
@@ -281,7 +281,7 @@ export default function Page() {
         </ol>
       </div>
 
-      <FleurDivider/>
+      <FleurDivider />
 
       <h2>Pictures from our antiviral sanitisation services</h2>
 
@@ -292,50 +292,32 @@ export default function Page() {
         { src: "/assets/service-pics/antiviral-sanitisation/4-antiviral-sanitisation-services1.webp", alt: "4-antiviral-sanitisation-services1" },
       ]} />
 
-      <FleurDivider/>
+      <FleurDivider />
 
       <h2>Video from our antiviral sanitisation services</h2>
 
-			<VideoPlayer src='https://www.youtube.com/embed/4_KISdoNiRw?enablejsapi=1&mute=1' />
+      <VideoPlayer src='https://www.youtube.com/embed/4_KISdoNiRw?enablejsapi=1&mute=1' />
 
-      <FleurDivider/>
+      <FleurDivider />
 
       <h2>Prices of our antiviral sanitisation services</h2>
 
-      <PriceTable title="Room type">
-        <tr>
-          <td class="bg-paper pl-5 py-2 font-500">Studio flat</td>
-          <td class="bg-paper pl-5 py-2 font-500">from £80.00</td>
-        </tr>
-        <tr>
-          <td class="bg-paper pl-5 py-2 font-500">One bedroom flat</td>
-          <td class="bg-paper pl-5 py-2 font-500">from £100.00</td>
-        </tr>
-        <tr>
-          <td class="bg-paper pl-5 py-2 font-500">Two bedroom flat</td>
-          <td class="bg-paper pl-5 py-2 font-500">from £120.00</td>
-        </tr>
-        <tr>
-          <td class="bg-paper pl-5 py-2 font-500">Two bedroom house</td>
-          <td class="bg-paper pl-5 py-2 font-500">from £140.00</td>
-        </tr>
-        <tr>
-          <td class="bg-paper pl-5 py-2 font-500">Three bedroom house</td>
-          <td class="bg-paper pl-5 py-2 font-500">from £180.00</td>
-        </tr>
-        <tr>
-          <td class="bg-paper pl-5 py-2 font-500">Four bedroom house</td>
-          <td class="bg-paper pl-5 py-2 font-500">from £200.00</td>
-        </tr>
-        <tr>
-          <td class="bg-paper pl-5 py-2 font-500">Office** m²</td>
-          <td class="bg-paper pl-5 py-2 font-500">from £1.50</td>
-        </tr>
-      </PriceTable>
+      <PriceTable
+        title="Room type"
+        items={[
+          { label: "Studio flat", value: "from £80.00" },
+          { label: "One bedroom flat", value: "from £100.00" },
+          { label: "Two bedroom flat", value: "from £120.00" },
+          { label: "Two bedroom house", value: "from £140.00" },
+          { label: "Three bedroom house", value: "from £180.00" },
+          { label: "Four bedroom house", value: "from £200.00" },
+          { label: "Office** m²", value: "from £1.50" },
+        ]}
+      />
 
       <button class="outline-none bg-brand-second-action hover-bg-brand-second-action-hover:hover font-size-6 font-600 w-250px h-60px c-paper flex flex-items-center flex-justify-center relative b-solid b-rd-3 b-4 b-brand-second-action hover-b-brand-second-action-hover:hover whitespace-normal line-height-6 word-spacing-0.5 py-9 my-20 mx-auto" style="box-shadow: 0 0 0 3px rgba(255, 255, 255, .9) inset; letter-spacing: 0.05rem;"><a href="/contact-us" class="c-paper font-size-5">REQUEST A QUOTE</a></button>
 
-      <FleurDivider/>
+      <FleurDivider />
 
       <h2>Our antiviral sanitisation services specialists advise:</h2>
       <div class="mt-20 py-8 px-12 md-px-14 bg-paper b-rd-3" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 18%);">
@@ -363,7 +345,7 @@ export default function Page() {
         </ol>
       </div>
 
-      <FleurDivider/>
+      <FleurDivider />
 
       <h2>Reviews of our antiviral sanitisation services</h2>
 
@@ -422,13 +404,13 @@ export default function Page() {
         />
       </ReviewSlider>
 
-      <FleurDivider/>
+      <FleurDivider />
 
       <h2>FAQ regarding our antiviral sanitisation services</h2>
 
       <FaqSection />
 
-      <FleurDivider/>
+      <FleurDivider />
 
       <div class="m-10% mb-3% flex flex-wrap flex-justify-center md-gap-15 gap-10">
         <a href="/services"><button class="cursor-pointer outline-none bg-brand-second-action hover-bg-brand-second-action-hover:hover font-size-5 font-600 w-200px h-60px c-paper flex flex-items-center flex-justify-center relative b-solid b-rd-3 b-4 b-brand-second-action hover-b-brand-second-action-hover:hover whitespace-normal line-height-6 word-spacing-0.5 py-9" style="box-shadow: 0 0 0 3px rgba(255, 255, 255, .9) inset; letter-spacing: 0.05rem;">SERVICES</button></a>

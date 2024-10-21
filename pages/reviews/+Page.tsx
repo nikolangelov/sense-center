@@ -787,7 +787,7 @@ No disappointment"
 
       <StarReview
         src="/assets/profile-pics-reviews/unnamed-20.png"
-        reviewText="I have used Fine Carpet Cleaning for years and need I say they turn our home to new each time they come to do the carpet cleaning. Staffs are very helpful when it comes to flexibility they always deliver the utmost returning that new carpet smell. I will highly recommend Fine Carpet Cleaning Ltd anytime any day.
+        reviewText="I have used Fine Carpet Cleaning for years and need I say they turn our home to new each time they come to do the carpet cleaning. Staffs are very helpful when it comes to flexibility they always deliver the utmost returning that new carpet smell. I will highly recommend Fine Carpet Cleaning anytime any day.
       Moved home recently and we resumed business as usual.....use Fine Carpet Cleaning you won't regret"
         name="Grace Agbo"
         date="January 2022"

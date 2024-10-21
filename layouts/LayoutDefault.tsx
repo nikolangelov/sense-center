@@ -496,7 +496,7 @@ export default function LayoutDefault(props: { children?: JSX.Element }) {
             <RiPhoneFill class="w-10 h-10 c-paper" />
             <div class="flex flex-col line-height-none">
               <PhoneMailMenuItem href="tel:+44 7874 333 356">+44 7874 333 356</PhoneMailMenuItem>
-              <PhoneMailMenuItem href="tel:+44 7874 333 356">+44 2036 370 033</PhoneMailMenuItem>
+              <PhoneMailMenuItem href="tel:+44 2036 370 033">+44 2036 370 033</PhoneMailMenuItem>
             </div>
           </div>
           <div class="flex flex-items-center gap-2">
@@ -516,7 +516,7 @@ export default function LayoutDefault(props: { children?: JSX.Element }) {
           <MainFooterMenuItem href="/professional-carpet-cleaning-services">Professional Carpet Cleaning Services</MainFooterMenuItem>
           <MainFooterMenuItem href="/professional-upholstery-cleaning-services">Professional Upholstery Cleaning Services</MainFooterMenuItem>
           <MainFooterMenuItem href="/professional-rug-cleaning-services">Professional Rug Cleaning Services</MainFooterMenuItem>
-          <MainFooterMenuItem href="/professional-carpet-cleaning-services/steam">Professional Steam Carpet Cleaning Services</MainFooterMenuItem>
+          <MainFooterMenuItem href="/stain-protection-services">Professional Stain protection services</MainFooterMenuItem>
           <MainFooterMenuItem href="/professional-stain-removal-services">Professional Stain Removal Services</MainFooterMenuItem>
         </div>
         <div class="flex flex-col gap-2 flex-wrap line-height-0 my-5">

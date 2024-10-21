@@ -6,7 +6,7 @@ import { ReviewSlider, StarReview } from '../../../../components/ReviewSlider';
 import { FOTSlider, FOTSliderContainer } from '../../../../components/FrequentlyOrderedTogether';
 import { PriceTable } from '../../../../components/PriceTable';
 import { createEffect } from "solid-js";
-import {FleurDivider} from "../../../../components/FleurDivider";
+import { FleurDivider } from "../../../../components/FleurDivider";
 import { VideoPlayer } from '../../../../components/VideoPlayer';
 
 function FaqSection() {
@@ -362,12 +362,12 @@ export default function Page() {
       <h1 class="mt-10 md-mt-17 font-size-12.5 md-font-size-16 md-line-height-18 line-height-16">Office carpet cleaning services</h1>
       <div class="flex flex-justify-center"><img class="b-rd-3 md-mt-10 mt-2 max-w-full" src="/assets/service-pics/office-carpet/commercial-office-carpet-cleaning.jpg" alt="commercial-office-carpet-cleaning" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 30%);" /></div>
 
-      <FleurDivider/>
+      <FleurDivider />
 
       <h2 class="line-height-12 md-line-height-14">What to expect from our office carpet cleaning services</h2>
       <div class="mt-20 py-8 px-8 md-px-14 bg-paper b-rd-3" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 18%);">
         <h3>Benefits:</h3>
-        <p>We at “Fine Carpet Cleaning” Ltd. perform office carpet cleaning services. Carpets, rugs and upholstery are an important part of every office interior. When regularly maintained, hygiene and a polished look of your office space will be guaranteed.</p>
+        <p>We at Fine Carpet Cleaning perform office carpet cleaning services. Carpets, rugs and upholstery are an important part of every office interior. When regularly maintained, hygiene and a polished look of your office space will be guaranteed.</p>
         <p>Some benefits that come with office carpet cleaning services are:</p>
         <ul>
           <li class="ml--5">
@@ -412,14 +412,14 @@ export default function Page() {
         </ul>
       </div>
 
-      <FleurDivider/>
+      <FleurDivider />
 
       <h2 class="line-height-12 md-line-height-14">Equipment and products we use for our office carpet cleaning services</h2>
       <div class="mt-20 py-8 px-12 md-px-14 bg-paper b-rd-3" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 18%);">
         <ol style="counter-reset: ordered; list-style: none;">
           <li class="ml--5">
             <h3 class="ml--5 font-size-6 md-font-size-7">Premium devices</h3>
-            <Typography variant="body">At "Fine Carpet Cleaning Ltd," we take great pride in our commitment of utilising the finest cleaning equipment and products available for our carpet cleaning office services. Our cleaning machines, recognized as some of the most powerful and effective portable units globally, have undergone rigorous testing, and we have chosen to work with the best brands in the UK market, namely "<a class="color-paper-link hover-color-paper-link-hover:hover" href="https://www.mytee.com/products/1003dx-speedster-deluxe-carpet-extractor/" target="_blank" rel="noopener">Mytee</a>" and "<a class="color-paper-link hover-color-paper-link-hover:hover" href="https://www.clean-smart.co.uk/store/airflex-storm" target="_blank" rel="noopener">Airflex</a>". Moreover, our in-house engineer continually enhances their performance to maximise their capabilities.</Typography>
+            <Typography variant="body">At Fine Carpet Cleaning, we take great pride in our commitment of utilising the finest cleaning equipment and products available for our carpet cleaning office services. Our cleaning machines, recognized as some of the most powerful and effective portable units globally, have undergone rigorous testing, and we have chosen to work with the best brands in the UK market, namely "<a class="color-paper-link hover-color-paper-link-hover:hover" href="https://www.mytee.com/products/1003dx-speedster-deluxe-carpet-extractor/" target="_blank" rel="noopener">Mytee</a>" and "<a class="color-paper-link hover-color-paper-link-hover:hover" href="https://www.clean-smart.co.uk/store/airflex-storm" target="_blank" rel="noopener">Airflex</a>". Moreover, our in-house engineer continually enhances their performance to maximise their capabilities.</Typography>
           </li>
           <li class="ml--5">
             <h3 class="ml--5 font-size-6 md-font-size-7">Efficient vacuum cleaner</h3>
@@ -433,7 +433,7 @@ export default function Page() {
         </ol>
       </div>
 
-      <FleurDivider/>
+      <FleurDivider />
 
       <h2 class="line-height-12 md-line-height-14">Pictures from our office carpet cleaning services in London</h2>
 
@@ -450,13 +450,13 @@ export default function Page() {
         { src: "/assets/service-pics/office-carpet/10-office-carpet-deep-cleaning-2.jpg", alt: "10-office-carpet-deep-cleaning-2" },
       ]} />
 
-      <FleurDivider/>
+      <FleurDivider />
 
       <h2 class="line-height-12 md-line-height-14">Video from our office carpet cleaning services in London</h2>
 
-			<VideoPlayer src='https://www.youtube.com/embed/21EBuiUW3nw?enablejsapi=1&mute=1' />
+      <VideoPlayer src='https://www.youtube.com/embed/21EBuiUW3nw?enablejsapi=1&mute=1' />
 
-      <FleurDivider/>
+      <FleurDivider />
 
       <h2 class="line-height-12 md-line-height-14">Our office carpet cleaning prices</h2>
 
@@ -470,19 +470,17 @@ export default function Page() {
         <br></br>
         <strong id="price_table">Deising - Free of charge - just notify us when booking.</strong></div>
 
-      <PriceTable title="Area size">
-        <tr>
-          <td class="bg-paper pl-5 py-2 font-500">Per square metre - from 0 up to 200m²</td>
-          <td class="bg-paper pl-5 py-2 font-500">£2.20</td>
-        </tr>
-        <tr>
-          <td class="bg-paper pl-5 py-2 font-500">Per square metre - from 200 up to 1000m²</td>
-          <td class="bg-paper pl-5 py-2 font-500">£2.00</td>
-        </tr>
-      </PriceTable>
+      <PriceTable
+        title="Area size"
+        items={[
+          { label: "Per square metre - from 0 up to 200m²", value: "£2.20" },
+          { label: "Per square metre - from 200 up to 1000m²", value: "£2.00" },
+        ]}
+      />
+
       <button class="outline-none bg-brand-second-action hover-bg-brand-second-action-hover:hover font-size-6 font-600 w-250px h-60px c-paper flex flex-items-center flex-justify-center relative b-solid b-rd-3 b-4 b-brand-second-action hover-b-brand-second-action-hover:hover whitespace-normal line-height-6 word-spacing-0.5 py-9 my-20 mx-auto" style="box-shadow: 0 0 0 3px rgba(255, 255, 255, .9) inset; letter-spacing: 0.05rem;"><a href="/contact-us" class="c-paper font-size-5">REQUEST A QUOTE</a></button>
 
-      <FleurDivider/>
+      <FleurDivider />
 
       <h2 class="line-height-12 md-line-height-14">Frequently ordered together</h2>
 
@@ -524,7 +522,7 @@ export default function Page() {
         />
       </FOTSlider>
 
-      <FleurDivider/>
+      <FleurDivider />
 
       <h2 class="line-height-12 md-line-height-14">Our office carpet cleaning services specialist advises:</h2>
       <div class="mt-20 py-8 px-12 md-px-14 bg-paper b-rd-3" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 18%);">
@@ -552,7 +550,7 @@ export default function Page() {
         </ol>
       </div>
 
-      <FleurDivider/>
+      <FleurDivider />
 
       <h2 class="line-height-12 md-line-height-14">Reviews for our office carpet cleaning services in London</h2>
 
@@ -612,13 +610,13 @@ export default function Page() {
 
       </ReviewSlider>
 
-      <FleurDivider/>
+      <FleurDivider />
 
       <h2 class="line-height-12 md-line-height-14">FAQ regarding our office carpet cleaning services</h2>
 
       <FaqSection />
 
-      <FleurDivider/>
+      <FleurDivider />
 
       <div class="m-10% mb-3% flex flex-wrap flex-justify-center md-gap-15 gap-10">
         <a href="/services"><button class="cursor-pointer outline-none bg-brand-second-action hover-bg-brand-second-action-hover:hover font-size-5 font-600 w-200px h-60px c-paper flex flex-items-center flex-justify-center relative b-solid b-rd-3 b-4 b-brand-second-action hover-b-brand-second-action-hover:hover whitespace-normal line-height-6 word-spacing-0.5 py-9" style="box-shadow: 0 0 0 3px rgba(255, 255, 255, .9) inset; letter-spacing: 0.05rem;">SERVICES</button></a>

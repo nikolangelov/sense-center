@@ -142,7 +142,7 @@ function FaqSection() {
         <Typography variant="body">Old stains might come out, but we cannot offer any guarantee. Factors like the contents that have caused the stain, the kind of fabric that has been stained or spilled and the period of time that the stain has been left to settle greatly impact the chance of its removal. If you want to receive information for your specific situation, feel free to contact us at any suitable time for you and we will give you a professional estimate on whether your stain or spill can be eliminated.</Typography></li>
       <li>
         <Typography variant="h3">19. Can professional carpet cleaners remove stains?</Typography>
-        <Typography variant="body">Yes, since professionals have undergone special training, booking services from stain removal companies is the most effective choice to remove stains. Due to our powerful equipment, we at “Fine Carpet Cleaning” Ltd. are able to deliver the results you desire within a fraction of time. Unfortunately we cannot guarantee you that all stains will be entirely removed. This is due to the fact that some situations are harder to handle. For example, if a stain has been improperly treated it might settle even deeper into the fibres of your carpet or upholstery. If the stain has been left to dry out completely or if it is a very old stain, its removal will require a lot more attention, which still does not guarantee that it will be entirely removed. We strongly advise to react as quickly as possible if a stain has occurred and to take advantage of services provided by stain removal companies for the best and safest results.</Typography>
+        <Typography variant="body">Yes, since professionals have undergone special training, booking services from stain removal companies is the most effective choice to remove stains. Due to our powerful equipment, we at Fine Carpet Cleaning are able to deliver the results you desire within a fraction of time. Unfortunately we cannot guarantee you that all stains will be entirely removed. This is due to the fact that some situations are harder to handle. For example, if a stain has been improperly treated it might settle even deeper into the fibres of your carpet or upholstery. If the stain has been left to dry out completely or if it is a very old stain, its removal will require a lot more attention, which still does not guarantee that it will be entirely removed. We strongly advise to react as quickly as possible if a stain has occurred and to take advantage of services provided by stain removal companies for the best and safest results.</Typography>
         <Typography variant="body">Our stain removal London services include professional carpet stain removal, sofa stain removal services, mattress stain removal services, rug stain removal services, couch stain removal services, upholstery stain removal London and more.</Typography>
       </li>
       <li>
@@ -175,7 +175,7 @@ function FaqSection() {
       </li>
       <li>
         <Typography variant="h3">24. How do professionals clean carpet stains?</Typography>
-        <Typography variant="body">This is made achievable by the knowledge, tools, supplies, and techniques used by experienced stain removal companies. A reputable cleaning business such as "Fine Carpet Cleaning Ltd." provides excellent cleaning services that work especially well on various types of stains. Often, normal cleaning techniques fail to achieve these outcomes. In addition, we provide a customised approach, use only the best cleaning solutions and state-of-the-art commercial appliances, and further safeguard your possessions when providing a professional stain removal service.</Typography>
+        <Typography variant="body">This is made achievable by the knowledge, tools, supplies, and techniques used by experienced stain removal companies. A reputable cleaning business such as Fine Carpet Cleaning provides excellent cleaning services that work especially well on various types of stains. Often, normal cleaning techniques fail to achieve these outcomes. In addition, we provide a customised approach, use only the best cleaning solutions and state-of-the-art commercial appliances, and further safeguard your possessions when providing a professional stain removal service.</Typography>
         <Typography variant="body">Our stain removal London services include professional carpet stain removal, sofa stain removal services, mattress stain removal services, rug stain removal services, couch stain removal services, upholstery stain removal London and more.</Typography>
       </li>
       <li>
@@ -299,7 +299,7 @@ export default function Page() {
       <h2 class="line-height-12 md-line-height-14">What to expect from our professional stain removal service</h2>
       <div class="mt-20 py-8 px-8 md-px-14 bg-paper b-rd-3" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 18%);">
         <h3>Benefits:</h3>
-        <p>We at “Fine Carpet Cleaning” Ltd. perform professional stain removal services. Our professional stain removal service not only helps improve the appearance of your carpets, rugs and upholstery but also guarantees hygiene and a healthy indoor environment. Our stain removal services successfully eliminate mechanical, biological and other types of contaminants, so you, your family and your guests won't have to worry about being in touch with hazardous substances stuck in the depth of the soft coverings around you.</p>
+        <p>We at Fine Carpet Cleaning perform professional stain removal services. Our professional stain removal service not only helps improve the appearance of your carpets, rugs and upholstery but also guarantees hygiene and a healthy indoor environment. Our stain removal services successfully eliminate mechanical, biological and other types of contaminants, so you, your family and your guests won't have to worry about being in touch with hazardous substances stuck in the depth of the soft coverings around you.</p>
 
         <h3>Simple booking process:</h3>
         <p>The usual process of booking our professional stain removal services:</p>
@@ -339,7 +339,7 @@ export default function Page() {
         <ol style="counter-reset: ordered; list-style: none;">
           <li class="ml--5">
             <h3 class="ml--5 font-size-6 md-font-size-7">Highly-efficient extractors</h3>
-            <Typography variant="body">"Fine Carpet Cleaning" Ltd makes use of top-notch cleaning tools and supplies. Our devices are among the most potent, efficient, and sizable portable ones available in the world. After thoroughly evaluating a number of machine brands available in the UK, we have decided to choose "<a class="color-paper-link hover-color-paper-link-hover:hover" href="https://www.mytee.com/products/1003dx-speedster-deluxe-carpet-extractor/" target="_blank" rel="noopener">Mytee</a>" and "<a class="color-paper-link hover-color-paper-link-hover:hover" href="https://www.clean-smart.co.uk/store/airflex-storm" target="_blank" rel="noopener">Airflex</a>" as our professional cleaning tools. Furthermore, these devices are further enhanced by our in-house engineer, who makes substantial modifications to optimise their functionality.</Typography>
+            <Typography variant="body">Fine Carpet Cleaning makes use of top-notch cleaning tools and supplies. Our devices are among the most potent, efficient, and sizable portable ones available in the world. After thoroughly evaluating a number of machine brands available in the UK, we have decided to choose "<a class="color-paper-link hover-color-paper-link-hover:hover" href="https://www.mytee.com/products/1003dx-speedster-deluxe-carpet-extractor/" target="_blank" rel="noopener">Mytee</a>" and "<a class="color-paper-link hover-color-paper-link-hover:hover" href="https://www.clean-smart.co.uk/store/airflex-storm" target="_blank" rel="noopener">Airflex</a>" as our professional cleaning tools. Furthermore, these devices are further enhanced by our in-house engineer, who makes substantial modifications to optimise their functionality.</Typography>
           </li>
           <li class="ml--5">
             <h3 class="ml--5 font-size-6 md-font-size-7">Powerful vacuum cleaners</h3>
@@ -403,12 +403,12 @@ export default function Page() {
         <br></br>
         <strong id="price_table">Deising - Free of charge - just notify us when booking.</strong></div>
 
-      <PriceTable title="Service type">
-        <tr>
-          <td class="bg-paper pl-5 py-2 font-500">Stain removal</td>
-          <td class="bg-paper pl-5 py-2 font-500">from £20.00</td>
-        </tr>
-      </PriceTable>
+      <PriceTable
+        title="Service type"
+        items={[
+          { label: "Stain removal", value: "from £20.00" },
+        ]}
+      />
 
       <button class="outline-none bg-brand-second-action hover-bg-brand-second-action-hover:hover font-size-6 font-600 w-250px h-60px c-paper flex flex-items-center flex-justify-center relative b-solid b-rd-3 b-4 b-brand-second-action hover-b-brand-second-action-hover:hover whitespace-normal line-height-6 word-spacing-0.5 py-9 my-20 mx-auto" style="box-shadow: 0 0 0 3px rgba(255, 255, 255, .9) inset; letter-spacing: 0.05rem;"><a href="/contact-us" class="c-paper font-size-5">REQUEST A QUOTE</a></button>
 

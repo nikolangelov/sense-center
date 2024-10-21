@@ -6,7 +6,7 @@ import { ReviewSlider, StarReview } from '../../../components/ReviewSlider';
 import { FOTSlider, FOTSliderContainer } from '../../../components/FrequentlyOrderedTogether';
 import { PriceTable } from '../../../components/PriceTable';
 import { createEffect } from "solid-js";
-import {FleurDivider} from "../../../components/FleurDivider";
+import { FleurDivider } from "../../../components/FleurDivider";
 import { VideoPlayer } from '../../../components/VideoPlayer';
 
 function FaqSection() {
@@ -126,7 +126,7 @@ function FaqSection() {
         <Typography variant="body">The main factor that determines the frequency of deep rug cleaning is the rug's rate of soiling. A rug should typically be cleaned every 12 months. However, we advise hiring a professional rug steam cleaning service more frequently if you have kids, pets, a smoking habit, heavy traffic on the rug, or if you stain it frequently. Feel free to get in touch with us at any moment if you need help or professional rug steam cleaning services.</Typography></li>
       <li>
         <Typography variant="h3">19. Can you steam clean a rug?</Typography>
-        <Typography variant="body">Yes, rugs can be steam-cleaned. Steam cleaning is the most thorough, effective method for removing dirt and soil from the base of the rug. It is an effective approach provided by reputable businesses such as "Fine Carpet Cleaning” Ltd. Their methods, tools, supplies, and experience guarantee outstanding outcomes. This procedure guarantees the elimination of stubborn stains, odours, and germ accumulation that standard cleaning procedures are unable to remove.</Typography></li>
+        <Typography variant="body">Yes, rugs can be steam-cleaned. Steam cleaning is the most thorough, effective method for removing dirt and soil from the base of the rug. It is an effective approach provided by reputable businesses such as Fine Carpet Cleaning Their methods, tools, supplies, and experience guarantee outstanding outcomes. This procedure guarantees the elimination of stubborn stains, odours, and germ accumulation that standard cleaning procedures are unable to remove.</Typography></li>
       <li>
         <Typography variant="h3">20. How much does it cost to steam clean a rug?</Typography>
         <Typography variant="body">How much the steam clean rug cost depends on a number of factors. Some of them are:</Typography></li>
@@ -164,7 +164,7 @@ function FaqSection() {
         <Typography variant="body">Yes, Oriental rugs can definitely be steam-cleaned, if done properly, since these hand-knotted rugs need special care. In that case, a professional rug steam cleaning service is the best solution. Not only is it time-saving and stress-free for you, but it is also the best maintenance choice for your Oriental rug. Our Oriental rug cleaning in London is the most thorough and effective method for removing all dirt, soil and bacteria from the base of the rug.</Typography></li>
       <li>
         <Typography variant="h3">26. Can you steam clean a shag rug?</Typography>
-        <Typography variant="body">Yes, shag rugs can be steam-cleaned. We recommend using professional help to steam clean your shag rug. Through their expertise and knowledge, you can rest assured that your deep-pile rug will be properly taken care of. We at “Fine Carpet Cleaning” Ltd. are specialised in shag rug cleaning which you can take great advantage of. Contact us at any suitable time for you to book your desired cleaning services or to receive professional advice.</Typography></li>
+        <Typography variant="body">Yes, shag rugs can be steam-cleaned. We recommend using professional help to steam clean your shag rug. Through their expertise and knowledge, you can rest assured that your deep-pile rug will be properly taken care of. We at Fine Carpet Cleaning are specialised in shag rug cleaning which you can take great advantage of. Contact us at any suitable time for you to book your desired cleaning services or to receive professional advice.</Typography></li>
       <li>
         <Typography variant="h3">27. Can you steam clean a Persian rug?</Typography>
         <Typography variant="body">Persian rugs are also valued for their durability and high quality due to their exquisite craftsmanship. They can be treasured for many years to come with the correct maintenance and care. Persian rugs need special cleaning solutions and cleaning methods so they can be treated properly. A professional rug steam cleaning service is the ideal choice in that situation. It saves you time and reduces tension, and it's the ideal option for maintaining your Persian rug. Our Persian rug cleaning in London is the most complete and efficient way to get rid of all the filth, grime, and bacteria from the rug's foundation.</Typography></li>
@@ -277,12 +277,12 @@ export default function Page() {
       <h1 class="mt-10 md-mt-17 font-size-12.5 md-font-size-16 md-line-height-18 line-height-16">Rug steam cleaning service</h1>
       <div class="flex flex-justify-center"><img class="b-rd-3 md-mt-10 mt-2 max-w-full" src="/assets/service-pics/rug-steam-cleaning/rug-steam-cleaning-service.jpg" alt="rug-steam-cleaning-service" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 30%);" /></div>
 
-      <FleurDivider/>
+      <FleurDivider />
 
       <h2 class="line-height-12 md-line-height-14">What to expect from our rug steam cleaning service</h2>
       <div class="mt-20 py-8 px-8 md-px-14 bg-paper b-rd-3" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 18%);">
         <h3>Benefits:</h3>
-        <p>We at “Fine Carpet Cleaning” Ltd. perform professional rug steam cleaning services. Rug steam cleaning (also known as hot water extraction) is by far the most popular method for deep cleaning and sanitising rugs because of its unmatched efficiency.</p>
+        <p>We at Fine Carpet Cleaning perform professional rug steam cleaning services. Rug steam cleaning (also known as hot water extraction) is by far the most popular method for deep cleaning and sanitising rugs because of its unmatched efficiency.</p>
         <p>The benefits of using a rug steam cleaning service are:</p>
         <ul>
           <li class="ml--5">
@@ -330,7 +330,7 @@ export default function Page() {
         </ul>
       </div>
 
-      <FleurDivider/>
+      <FleurDivider />
 
       <h2>The process of our rug steam cleaning service:</h2>
       <div class="mt-20 py-8 px-8 md-px-14 bg-paper b-rd-3" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 18%);">
@@ -344,7 +344,7 @@ export default function Page() {
         </ol>
       </div>
 
-      <FleurDivider/>
+      <FleurDivider />
 
       <h2 class="line-height-12 md-line-height-14">Equipment and products we use for our rug steam cleaning service</h2>
       <div class="mt-20 py-8 px-12 md-px-14 bg-paper b-rd-3" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 18%);">
@@ -364,7 +364,7 @@ export default function Page() {
         </ol>
       </div>
 
-      <FleurDivider/>
+      <FleurDivider />
 
       <h2 class="line-height-12 md-line-height-14">Pictures from our rug steam cleaning service</h2>
 
@@ -378,13 +378,13 @@ export default function Page() {
         { src: "/assets/service-pics/rug-steam-cleaning/7-deep-rug-cleaning-1.jpg", alt: "7-deep-rug-cleaning-1" },
       ]} />
 
-      <FleurDivider/>
+      <FleurDivider />
 
       <h2 class="line-height-12 md-line-height-14">Video from our rug steam cleaning service</h2>
 
-			<VideoPlayer src='https://www.youtube.com/embed/gvOzzABiV5Q?enablejsapi=1&mute=1' />
+      <VideoPlayer src='https://www.youtube.com/embed/gvOzzABiV5Q?enablejsapi=1&mute=1' />
 
-      <FleurDivider/>
+      <FleurDivider />
 
       <h2 class="line-height-12 md-line-height-14">Prices of our rug steam cleaning service</h2>
 
@@ -398,28 +398,19 @@ export default function Page() {
         <br></br>
         <strong id="price_table">Deising - Free of charge - just notify us when booking.</strong></div>
 
-      <PriceTable title="Rug type">
-        <tr>
-          <td class="bg-paper pl-5 py-2 font-500">Rug - small</td>
-          <td class="bg-paper pl-5 py-2 font-500">from £11.00</td>
-        </tr>
-        <tr>
-          <td class="bg-paper pl-5 py-2 font-500">Rug - medium</td>
-          <td class="bg-paper pl-5 py-2 font-500">from £17.00</td>
-        </tr>
-        <tr>
-          <td class="bg-paper pl-5 py-2 font-500">Rug - large</td>
-          <td class="bg-paper pl-5 py-2 font-500">from £31.00</td>
-        </tr>
-        <tr>
-          <td class="bg-paper pl-5 py-2 font-500">Rug - extra large</td>
-          <td class="bg-paper pl-5 py-2 font-500">from £50.00</td>
-        </tr>
-      </PriceTable>
+      <PriceTable
+        title="Rug type"
+        items={[
+          { label: "Rug - small", value: "from £11.00" },
+          { label: "Rug - medium", value: "from £17.00" },
+          { label: "Rug - large", value: "from £31.00" },
+          { label: "Rug - extra large", value: "from £50.00" },
+        ]}
+      />
 
       <button class="outline-none bg-brand-second-action hover-bg-brand-second-action-hover:hover font-size-6 font-600 w-250px h-60px c-paper flex flex-items-center flex-justify-center relative b-solid b-rd-3 b-4 b-brand-second-action hover-b-brand-second-action-hover:hover whitespace-normal line-height-6 word-spacing-0.5 py-9 my-20 mx-auto" style="box-shadow: 0 0 0 3px rgba(255, 255, 255, .9) inset; letter-spacing: 0.05rem;"><a href="/contact-us" class="c-paper font-size-5">REQUEST A QUOTE</a></button>
 
-      <FleurDivider/>
+      <FleurDivider />
 
       <h2 class="line-height-12 md-line-height-14">Frequently ordered together</h2>
 
@@ -468,7 +459,7 @@ export default function Page() {
         />
       </FOTSlider>
 
-      <FleurDivider/>
+      <FleurDivider />
 
       <h2 class="line-height-12 md-line-height-14">Our rug steam cleaning specialists advise:</h2>
       <div class="mt-20 py-8 px-12 md-px-14 bg-paper b-rd-3" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 18%);">
@@ -496,7 +487,7 @@ export default function Page() {
         </ol>
       </div>
 
-      <FleurDivider/>
+      <FleurDivider />
 
       <h2 class="line-height-12 md-line-height-14">Reviews of our rug steam cleaning service</h2>
 
@@ -556,13 +547,13 @@ export default function Page() {
 
       </ReviewSlider>
 
-      <FleurDivider/>
+      <FleurDivider />
 
       <h2 class="line-height-12 md-line-height-14">FAQ regarding our rug steam cleaning service</h2>
 
       <FaqSection />
 
-      <FleurDivider/>
+      <FleurDivider />
 
       <div class="m-10% mb-3% flex flex-wrap flex-justify-center md-gap-15 gap-10">
         <a href="/services"><button class="cursor-pointer outline-none bg-brand-second-action hover-bg-brand-second-action-hover:hover font-size-5 font-600 w-200px h-60px c-paper flex flex-items-center flex-justify-center relative b-solid b-rd-3 b-4 b-brand-second-action hover-b-brand-second-action-hover:hover whitespace-normal line-height-6 word-spacing-0.5 py-9" style="box-shadow: 0 0 0 3px rgba(255, 255, 255, .9) inset; letter-spacing: 0.05rem;">SERVICES</button></a>

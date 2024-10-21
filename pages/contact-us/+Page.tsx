@@ -2,6 +2,7 @@ import {createSignal} from 'solid-js';
 import {FleurDivider} from "../../components/FleurDivider";
 import {Collapse} from "solid-collapse";
 import MdiArrowDownDrop from '~icons/mdi/arrow-down-drop';
+import { PriceTable } from '../../components/PriceTable';
 
 function SingleCollapse() {
   const [isExpanded1, setIsExpanded1] = createSignal(false);
@@ -338,47 +339,18 @@ export default function Page() {
 
       <h2>Working hours</h2>
 
-      <table class="w-full mx-auto font-sans">
-        <thead style="box-shadow: 0px 20px 20px 1px rgb(84 89 95 / 10%);">
-          <tr class="h-20">
-            <td class="c-paper bg-#2e5c47 font-size-7 pl-5 b-rd-lt-3"><strong>Day</strong></td>
-            <td class="c-paper bg-#2e5c47 font-size-7 pl-5 b-rd-rt-3"><strong>Time</strong></td>
-          </tr>
-        </thead>
-        <tbody style="box-shadow: 0px 20px 20px 1px rgb(84 89 95 / 10%);">
-          <tr>
-            <td class="bg-paper pl-5 py-2 font-500">Monday</td>
-            <td class="bg-paper pl-5 py-2 font-500">7:30 - 19:00</td>
-          </tr>
-          <tr>
-            <td class="bg-paper pl-5 py-2 font-500">Tuesday</td>
-            <td class="bg-paper pl-5 py-2 font-500">7:30 - 19:00</td>
-          </tr>
-          <tr>
-            <td class="bg-paper pl-5 py-2 font-500">Wednesday</td>
-            <td class="bg-paper pl-5 py-2 font-500">7:30 - 19:00</td>
-          </tr>
-          <tr>
-            <td class="bg-paper pl-5 py-2 font-500">Thursday</td>
-            <td class="bg-paper pl-5 py-2 font-500">7:30 - 19:00</td>
-          </tr>
-          <tr>
-            <td class="bg-paper pl-5 py-2 font-500">Friday</td>
-            <td class="bg-paper pl-5 py-2 font-500">7:30 - 19:00</td>
-          </tr>
-          <tr>
-            <td class="bg-paper pl-5 py-2 font-500">Saturday</td>
-            <td class="bg-paper pl-5 py-2 font-500">7:30 - 19:00</td>
-          </tr>
-          <tr>
-            <td class="bg-paper pl-5 py-2 font-500">Sunday</td>
-            <td class="bg-paper pl-5 py-2 font-500">7:30 - 19:00</td>
-          </tr>
-          <tr>
-            <td class="b-rd-lb-3 b-rd-rb-3 bg-#2e5c47 h-6" colspan="3" style="box-shadow: 0px 20px 20px 1px rgb(247 247 247/ 100%);"><p class="font-size-3.5 md-font-size-4 px-5 md-my-7 c-paper md-line-height-0 line-height-6 word-spacing-0.5">*We also offer performing services out of working hours and at night, which will be included in the final price.</p></td>
-          </tr>
-        </tbody>
-      </table>
+      <PriceTable
+                title="Day"
+                items={[
+                    { label: "Monday", value: "7:30 - 19:00" },
+                    { label: "Tuesday", value: "7:30 - 19:00" },
+                    { label: "Wednesday", value: "7:30 - 19:00" },
+                    { label: "Thursday", value: "7:30 - 19:00" },
+                    { label: "Friday", value: "7:30 - 19:00" },
+                    { label: "Saturday", value: "7:30 - 19:00" },
+                    { label: "Sunday", value: "7:30 - 19:00" },
+                ]}
+            />
 
       <FleurDivider/>
 

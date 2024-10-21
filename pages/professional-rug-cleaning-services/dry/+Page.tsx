@@ -120,7 +120,7 @@ function FaqSection() {
         <Typography variant="body">A cowhide rug is delicate and needs a dry cleaning treatment. Dry cleaning uses no to little water and a cleaning compound in powder form to ensure that your sisal rug will be carefully and properly treated. Water-based cleaning methods are not suitable for such materials and will create permanent damage to the rug.</Typography></li>
       <li>
         <Typography variant="h3">21. Can you steam clean a silk rug?</Typography>
-        <Typography variant="body">Rugs, made from silk are very delicate and will not sustain from steam cleaning. In steam cleaning, high-temperature water and high pressure are used, which will damage the rug. We at “Fine Carpet Cleaning” Ltd. perform dry rug cleaning services for such cases and will ensure that your beautiful rug will be left fresh and clean.</Typography></li>
+        <Typography variant="body">Rugs, made from silk are very delicate and will not sustain from steam cleaning. In steam cleaning, high-temperature water and high pressure are used, which will damage the rug. We at Fine Carpet Cleaning perform dry rug cleaning services for such cases and will ensure that your beautiful rug will be left fresh and clean.</Typography></li>
       <li>
         <Typography variant="h3">22. How much does it cost to dry clean a sheepskin rug?</Typography>
         <Typography variant="body">How much does it cost to dry clean a sheepskin rug depends on the following factors:</Typography></li>
@@ -247,7 +247,7 @@ export default function Page() {
       <h2 class="line-height-12 md-line-height-14">What to expect from our dry rug cleaning service</h2>
       <div class="mt-20 py-8 px-8 md-px-14 bg-paper b-rd-3" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 18%);">
         <h3>Benefits:</h3>
-        <p>We at “Fine Carpet Cleaning” Ltd. perform dry rug cleaning services. Dry rug cleaning services are effective, but it's important to note that they may not be as effective in deep cleaning heavily soiled rugs or in removing certain types of stains. Dry cleaning is used for cleaning finer and more delicate rugs, which can be easily damaged by water-based cleaning methods. Other benefits of using dry rug cleaning services are:</p>
+        <p>We at Fine Carpet Cleaning perform dry rug cleaning services. Dry rug cleaning services are effective, but it's important to note that they may not be as effective in deep cleaning heavily soiled rugs or in removing certain types of stains. Dry cleaning is used for cleaning finer and more delicate rugs, which can be easily damaged by water-based cleaning methods. Other benefits of using dry rug cleaning services are:</p>
         <ul>
           <li class="ml--5">
             <p>Being suitable for various types of rugs. We perform a wide range of services like, synthetic rug cleaning, as well as seagrass rug cleaning, coir, sisal rug cleaning, professional silk rug cleaning, professional cowhide rug cleaning, hemp rug cleaning, bamboo silk rug cleaning, sheepskin rug cleaning, jute rug cleaning service and professional cleaning viscose rugs;</p>
@@ -319,7 +319,7 @@ export default function Page() {
         <ol style="counter-reset: ordered; list-style: none;">
           <li class="ml--5">
             <h3 class="ml--5 font-size-6 md-font-size-7">Highly-efficient extractors</h3>
-            <Typography variant="body">At "Fine Carpet Cleaning" Ltd., we utilise some of the finest portable machines globally in our pillow cleaning service. After rigorous testing, we've carefully selected top brands available in the UK market, including "<a class="color-paper-link hover-color-paper-link-hover:hover" href="https://www.mytee.com/products/1003dx-speedster-deluxe-carpet-extractor/" target="_blank" rel="noopener">Mytee</a>" and "<a class="color-paper-link hover-color-paper-link-hover:hover" href="https://www.clean-smart.co.uk/store/airflex-storm" target="_blank" rel="noopener">Airflex</a>". Moreover, our in-house engineer implements significant enhancements to optimise their performance.At "Fine Carpet Cleaning Ltd," we employ the most effective and cutting-edge cleaning equipment, along with premium products for our rug dry cleaning London. Our machines are recognized as some of the most powerful and efficient portable units globally.</Typography>
+            <Typography variant="body">At Fine Carpet Cleaning, we utilise some of the finest portable machines globally in our pillow cleaning service. After rigorous testing, we've carefully selected top brands available in the UK market, including "<a class="color-paper-link hover-color-paper-link-hover:hover" href="https://www.mytee.com/products/1003dx-speedster-deluxe-carpet-extractor/" target="_blank" rel="noopener">Mytee</a>" and "<a class="color-paper-link hover-color-paper-link-hover:hover" href="https://www.clean-smart.co.uk/store/airflex-storm" target="_blank" rel="noopener">Airflex</a>". Moreover, our in-house engineer implements significant enhancements to optimise their performance.At Fine Carpet Cleaning, we employ the most effective and cutting-edge cleaning equipment, along with premium products for our rug dry cleaning London. Our machines are recognized as some of the most powerful and efficient portable units globally.</Typography>
           </li>
           <li class="ml--5">
             <h3 class="ml--5 font-size-6 md-font-size-7">Excellent standard device</h3>
@@ -369,24 +369,15 @@ export default function Page() {
         <br></br>
         <strong id="price_table">Deising - Free of charge - just notify us when booking.</strong></div>
 
-      <PriceTable title="Rug type">
-        <tr>
-          <td class="bg-paper pl-5 py-2 font-500">Rug - small</td>
-          <td class="bg-paper pl-5 py-2 font-500">from £14.00</td>
-        </tr>
-        <tr>
-          <td class="bg-paper pl-5 py-2 font-500">Rug - medium</td>
-          <td class="bg-paper pl-5 py-2 font-500">from £20.00</td>
-        </tr>
-        <tr>
-          <td class="bg-paper pl-5 py-2 font-500">Rug - large</td>
-          <td class="bg-paper pl-5 py-2 font-500">from £37.00</td>
-        </tr>
-        <tr>
-          <td class="bg-paper pl-5 py-2 font-500">Rug - extra large</td>
-          <td class="bg-paper pl-5 py-2 font-500">from £60.00</td>
-        </tr>
-      </PriceTable>
+      <PriceTable
+        title="Rug type"
+        items={[
+          { label: "Rug - small", value: "from £14.00" },
+          { label: "Rug - medium", value: "from £20.00" },
+          { label: "Rug - large", value: "from £37.00" },
+          { label: "Rug - extra large", value: "from £60.00" },
+        ]}
+      />
 
       <button class="outline-none bg-brand-second-action hover-bg-brand-second-action-hover:hover font-size-6 font-600 w-250px h-60px c-paper flex flex-items-center flex-justify-center relative b-solid b-rd-3 b-4 b-brand-second-action hover-b-brand-second-action-hover:hover whitespace-normal line-height-6 word-spacing-0.5 py-9 my-20 mx-auto" style="box-shadow: 0 0 0 3px rgba(255, 255, 255, .9) inset; letter-spacing: 0.05rem;"><a href="/contact-us" class="c-paper font-size-5">REQUEST A QUOTE</a></button>
 

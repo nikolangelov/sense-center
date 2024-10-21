@@ -6,7 +6,7 @@ import { ReviewSlider, StarReview } from '../../../components/ReviewSlider';
 import { FOTSlider, FOTSliderContainer } from '../../../components/FrequentlyOrderedTogether';
 import { PriceTable } from '../../../components/PriceTable';
 import { createEffect } from "solid-js";
-import {FleurDivider} from "../../../components/FleurDivider";
+import { FleurDivider } from "../../../components/FleurDivider";
 import { VideoPlayer } from '../../../components/VideoPlayer';
 
 function FaqSection() {
@@ -125,7 +125,7 @@ function FaqSection() {
         <Typography variant="h3">19. Do carpet house cleaning services remove stains?</Typography>
         <Typography variant="body">It depends on the residential carpet cleaning method being used. For example, steam cleaning is highly effective in removing deep-down stains, dirt, and grime, while also eliminating bacteria and removing dust mites, allergens, mould, pet dander, and unpleasant odours. However, certain stubborn stains, such as extremely old ones or those that have been treated improperly, pose a significant challenge to complete elimination, even with expert assistance.</Typography>
         <Typography variant="body">Dry carpet cleaning is not effective in removing stains, but it refreshes the carpet and brings back its colour. This service is used for cleaning finer, more delicate and natural carpets and rugs, which are very vulnerable to water damage.</Typography>
-        <Typography variant="body">Fortunately, due to our extensive experience and utilisation of top-notch equipment, we at “Fine Carpet Cleaning Ltd.” have achieved remarkable success rates in stain removal. Nevertheless, we cannot offer a guarantee that every stain can be completely eradicated. Rest assured, we will evaluate the stain and inform you during the quotation process about our confidence in achieving its removal.</Typography>
+        <Typography variant="body">Fortunately, due to our extensive experience and utilisation of top-notch equipment, we at Fine Carpet Cleaning have achieved remarkable success rates in stain removal. Nevertheless, we cannot offer a guarantee that every stain can be completely eradicated. Rest assured, we will evaluate the stain and inform you during the quotation process about our confidence in achieving its removal.</Typography>
       </li>
     </Entry>
     <Entry>
@@ -281,12 +281,12 @@ export default function Page() {
       <h1 class="mt-10 md-mt-17 font-size-12.5 md-font-size-16 md-line-height-18 line-height-16">Residential carpet cleaning services</h1>
       <div class="flex flex-justify-center"><img class="b-rd-3 md-mt-10 mt-2 max-w-full" src="/assets/service-pics/residential-carpet/residential-carpet-cleaning-services.jpg" alt="residential-carpet-cleaning-services" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 30%);" /></div>
 
-      <FleurDivider/>
+      <FleurDivider />
 
       <h2 class="line-height-12 md-line-height-14">What to expect from our residential carpet cleaning services</h2>
       <div class="mt-20 py-8 px-8 md-px-14 bg-paper b-rd-3" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 18%);">
         <h3>Benefits:</h3>
-        <p>“Fine Carpet Cleaning” Ltd. performs residential carpet cleaning services in all of London. We have years of experience in residential carpet cleaning for all homes and deliver a deeper clean that is healthier for you, your family and your pets. Home carpet cleaning is beneficial for the following reasons:</p>
+        <p>Fine Carpet Cleaning performs residential carpet cleaning services in all of London. We have years of experience in residential carpet cleaning for all homes and deliver a deeper clean that is healthier for you, your family and your pets. Home carpet cleaning is beneficial for the following reasons:</p>
         <ul>
           <li class="ml--5">
             <p>It extends the life of your carpets;</p>
@@ -347,11 +347,11 @@ export default function Page() {
         </ul>
       </div>
 
-      <FleurDivider/>
+      <FleurDivider />
 
       <h2 class="line-height-12 md-line-height-14">Equipment and products we use for our residential carpet cleaning services</h2>
       <div class="mt-20 py-8 px-12 md-px-14 bg-paper b-rd-3" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 18%);">
-        <p>At "Fine Carpet Cleaning" Ltd., we use an array of premium cleaning equipment and materials to guarantee the utmost quality in our home carpet cleaning in London:</p>
+        <p>At Fine Carpet Cleaning, we use an array of premium cleaning equipment and materials to guarantee the utmost quality in our home carpet cleaning in London:</p>
         <ol style="counter-reset: ordered; list-style: none;">
           <li class="ml--5">
             <h3 class="ml--5 font-size-6 md-font-size-7">Top-notch equipment</h3>
@@ -379,7 +379,7 @@ export default function Page() {
         <p>This approach ensures the provision of the most professional house cleaning and carpet cleaning services.</p>
       </div>
 
-      <FleurDivider/>
+      <FleurDivider />
 
       <h2 class="line-height-12 md-line-height-14">Pictures from our residential carpet cleaning services in London</h2>
 
@@ -397,13 +397,13 @@ export default function Page() {
         { src: "/assets/service-pics/residential-carpet/11-house-carpet-cleaning-services-1.jpg", alt: "11-house-carpet-cleaning-services-1" },
       ]} />
 
-      <FleurDivider/>
+      <FleurDivider />
 
       <h2 class="line-height-12 md-line-height-14">Video from our residential carpet cleaning services in London</h2>
 
-			<VideoPlayer src='https://www.youtube.com/embed/CN8JssJJ-7E?enablejsapi=1&mute=1' />
+      <VideoPlayer src='https://www.youtube.com/embed/CN8JssJJ-7E?enablejsapi=1&mute=1' />
 
-      <FleurDivider/>
+      <FleurDivider />
 
       <h2 class="line-height-12 md-line-height-14">Residential carpet cleaning prices</h2>
 
@@ -417,60 +417,27 @@ export default function Page() {
         <br></br>
         <strong id="price_table">Deising - Free of charge - just notify us when booking.</strong></div>
 
-      <PriceTable title="Room type">
-        <tr>
-          <td class="bg-paper pl-5 py-2 font-500">Hallway</td>
-          <td class="bg-paper pl-5 py-2 font-500">from £11.00</td>
-        </tr>
-        <tr>
-          <td class="bg-paper pl-5 py-2 font-500">Landing</td>
-          <td class="bg-paper pl-5 py-2 font-500">from £6.00</td>
-        </tr>
-        <tr>
-          <td class="bg-paper pl-5 py-2 font-500">Living room</td>
-          <td class="bg-paper pl-5 py-2 font-500">from £39.00</td>
-        </tr>
-        <tr>
-          <td class="bg-paper pl-5 py-2 font-500">Bedroom</td>
-          <td class="bg-paper pl-5 py-2 font-500">from £27.00</td>
-        </tr>
-        <tr>
-          <td class="bg-paper pl-5 py-2 font-500">Flight of stairs</td>
-          <td class="bg-paper pl-5 py-2 font-500">from £29.00</td>
-        </tr>
-        <tr>
-          <td class="bg-paper pl-5 py-2 font-500">Single step</td>
-          <td class="bg-paper pl-5 py-2 font-500">from £2.20</td>
-        </tr>
-        <tr>
-          <td class="bg-paper pl-5 py-2 font-500">Office room</td>
-          <td class="bg-paper pl-5 py-2 font-500">from £27.00</td>
-        </tr>
-        <tr>
-          <td class="bg-paper pl-5 py-2 font-500">Hotel room</td>
-          <td class="bg-paper pl-5 py-2 font-500">from £40.00</td>
-        </tr>
-        <tr>
-          <td class="bg-paper pl-5 py-2 font-500">Loft room</td>
-          <td class="bg-paper pl-5 py-2 font-500">from £31.00</td>
-        </tr>
-        <tr>
-          <td class="bg-paper pl-5 py-2 font-500">Through lounge</td>
-          <td class="bg-paper pl-5 py-2 font-500">from £63.00</td>
-        </tr>
-        <tr>
-          <td class="bg-paper pl-5 py-2 font-500">Box room</td>
-          <td class="bg-paper pl-5 py-2 font-500">from £27.00</td>
-        </tr>
-        <tr>
-          <td class="bg-paper pl-5 py-2 font-500">Bathroom</td>
-          <td class="bg-paper pl-5 py-2 font-500">from £8.00</td>
-        </tr>
-      </PriceTable>
+      <PriceTable
+        title="Room type"
+        items={[
+          { label: "Hallway", value: "from £11.00" },
+          { label: "Landing", value: "from £6.00" },
+          { label: "Living Room", value: "from £39.00" },
+          { label: "Bedroom", value: "from £27.00" },
+          { label: "Flight of stairs", value: "from £29.00" },
+          { label: "Single step", value: "from £2.20" },
+          { label: "Office room", value: "from £27.00" },
+          { label: "Hotel room", value: "from £40.00" },
+          { label: "Loft room", value: "from £31.00" },
+          { label: "Through lounge", value: "from £63.00" },
+          { label: "Box room", value: "from £27.00" },
+          { label: "Bathroom", value: "from £8.00" },
+        ]}
+      />
 
       <button class="outline-none bg-brand-second-action hover-bg-brand-second-action-hover:hover font-size-6 font-600 w-250px h-60px c-paper flex flex-items-center flex-justify-center relative b-solid b-rd-3 b-4 b-brand-second-action hover-b-brand-second-action-hover:hover whitespace-normal line-height-6 word-spacing-0.5 py-9 my-20 mx-auto" style="box-shadow: 0 0 0 3px rgba(255, 255, 255, .9) inset; letter-spacing: 0.05rem;"><a href="/contact-us" class="c-paper font-size-5">REQUEST A QUOTE</a></button>
 
-      <FleurDivider/>
+      <FleurDivider />
 
       <h2 class="line-height-12 md-line-height-14">Frequently ordered together</h2>
 
@@ -519,7 +486,7 @@ export default function Page() {
         />
       </FOTSlider>
 
-      <FleurDivider/>
+      <FleurDivider />
 
       <h2 class="line-height-12 md-line-height-14">Our residential carpet cleaning services specialists advise:</h2>
       <div class="mt-20 py-8 px-12 md-px-14 bg-paper b-rd-3" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 18%);">
@@ -547,7 +514,7 @@ export default function Page() {
         </ol>
       </div>
 
-      <FleurDivider/>
+      <FleurDivider />
 
       <h2 class="line-height-12 md-line-height-14">Reviews for our residential carpet cleaning</h2>
 
@@ -606,13 +573,13 @@ export default function Page() {
         />
       </ReviewSlider>
 
-      <FleurDivider/>
+      <FleurDivider />
 
       <h2 class="line-height-12 md-line-height-14">FAQ regarding our residential carpet cleaning services</h2>
 
       <FaqSection />
 
-      <FleurDivider/>
+      <FleurDivider />
 
       <div class="m-10% mb-3% flex flex-wrap flex-justify-center md-gap-15 gap-10">
         <a href="/services"><button class="cursor-pointer outline-none bg-brand-second-action hover-bg-brand-second-action-hover:hover font-size-5 font-600 w-200px h-60px c-paper flex flex-items-center flex-justify-center relative b-solid b-rd-3 b-4 b-brand-second-action hover-b-brand-second-action-hover:hover whitespace-normal line-height-6 word-spacing-0.5 py-9" style="box-shadow: 0 0 0 3px rgba(255, 255, 255, .9) inset; letter-spacing: 0.05rem;">SERVICES</button></a>

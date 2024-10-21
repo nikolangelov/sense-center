@@ -718,56 +718,23 @@ export default function Page() {
                 <br></br>
                 <strong id="price_table">Deodorising - Free of charge - just notify us when booking.</strong></div>
 
-            <PriceTable title="Room type">
-                <tr>
-                    <td class="bg-paper pl-5 py-2 font-500">Hallway</td>
-                    <td class="bg-paper pl-5 py-2 font-500">from £11.00</td>
-                </tr>
-                <tr>
-                    <td class="bg-paper pl-5 py-2 font-500">Landing</td>
-                    <td class="bg-paper pl-5 py-2 font-500">from £6.00</td>
-                </tr>
-                <tr>
-                    <td class="bg-paper pl-5 py-2 font-500">Living room</td>
-                    <td class="bg-paper pl-5 py-2 font-500">from £39.00</td>
-                </tr>
-                <tr>
-                    <td class="bg-paper pl-5 py-2 font-500">Bedroom</td>
-                    <td class="bg-paper pl-5 py-2 font-500">from £27.00</td>
-                </tr>
-                <tr>
-                    <td class="bg-paper pl-5 py-2 font-500">Flight of stairs</td>
-                    <td class="bg-paper pl-5 py-2 font-500">from £29.00</td>
-                </tr>
-                <tr>
-                    <td class="bg-paper pl-5 py-2 font-500">Single step</td>
-                    <td class="bg-paper pl-5 py-2 font-500">from £2.20</td>
-                </tr>
-                <tr>
-                    <td class="bg-paper pl-5 py-2 font-500">Office room</td>
-                    <td class="bg-paper pl-5 py-2 font-500">from £27.00</td>
-                </tr>
-                <tr>
-                    <td class="bg-paper pl-5 py-2 font-500">Hotel room</td>
-                    <td class="bg-paper pl-5 py-2 font-500">from £40.00</td>
-                </tr>
-                <tr>
-                    <td class="bg-paper pl-5 py-2 font-500">Loft room</td>
-                    <td class="bg-paper pl-5 py-2 font-500">from £31.00</td>
-                </tr>
-                <tr>
-                    <td class="bg-paper pl-5 py-2 font-500">Through lounge</td>
-                    <td class="bg-paper pl-5 py-2 font-500">from £63.00</td>
-                </tr>
-                <tr>
-                    <td class="bg-paper pl-5 py-2 font-500">Box room</td>
-                    <td class="bg-paper pl-5 py-2 font-500">from £27.00</td>
-                </tr>
-                <tr>
-                    <td class="bg-paper pl-5 py-2 font-500">Bathroom</td>
-                    <td class="bg-paper pl-5 py-2 font-500">from £8.00</td>
-                </tr>
-            </PriceTable>
+            <PriceTable
+                title="Room type"
+                items={[
+                    { label: "Hallway", value: "from £11.00" },
+                    { label: "Landing", value: "from £6.00" },
+                    { label: "Living Room", value: "from £39.00" },
+                    { label: "Bedroom", value: "from £27.00" },
+                    { label: "Flight of stairs", value: "from £29.00" },
+                    { label: "Single step", value: "from £2.20" },
+                    { label: "Office room", value: "from £27.00" },
+                    { label: "Hotel room", value: "from £40.00" },
+                    { label: "Loft room", value: "from £31.00" },
+                    { label: "Through lounge", value: "from £63.00" },
+                    { label: "Box room", value: "from £27.00" },
+                    { label: "Bathroom", value: "from £8.00" },
+                ]}
+            />
 
             <button
                 class="outline-none bg-brand-second-action hover-bg-brand-second-action-hover:hover font-size-6 font-600 w-250px h-60px c-paper flex flex-items-center flex-justify-center relative b-solid b-rd-3 b-4 b-brand-second-action hover-b-brand-second-action-hover:hover whitespace-normal line-height-6 word-spacing-0.5 py-9 my-20 mx-auto"

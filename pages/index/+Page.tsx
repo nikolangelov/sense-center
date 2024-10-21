@@ -7,7 +7,7 @@ import { ReviewSlider, StarReview } from '../../components/ReviewSlider';
 import { GallerySlider } from '../../components/GallerySlider';
 import {FleurDivider} from "../../components/FleurDivider";
 import { VideoPlayer } from '../../components/VideoPlayer';
-
+import { PriceTable } from '../../components/PriceTable';
 
 function FullScreenImageGallery() {
 	const [open, setOpen] = createSignal(false);
@@ -35,7 +35,7 @@ function FaqSection() {
 		<Entry>
 			<li>
 				<Typography variant="h3">1. How long have you been in the carpet cleaning business?</Typography>
-				<Typography variant="body">"Fine Carpet Cleaning" Ltd. has been operating in the carpet cleaning industry since 2012. We serve both commercial and residential clients, and over the years, we've cleaned all kinds of carpets, rugs, upholstery, and stains. Through these experiences, we've acquired valuable knowledge and expertise. Our commitment to delivering top-notch service has driven us to improve our services in the following ways:</Typography>
+				<Typography variant="body">Fine Carpet Cleaning has been operating in the carpet cleaning industry since 2012. We serve both commercial and residential clients, and over the years, we've cleaned all kinds of carpets, rugs, upholstery, and stains. Through these experiences, we've acquired valuable knowledge and expertise. Our commitment to delivering top-notch service has driven us to improve our services in the following ways:</Typography>
 				<ul class="ml--5" style="list-style: initial;">
 					<Typography variant="li">
 						<p>We continually update and upgrade our equipment, ensuring that we utilise the latest and most effective technologies available.</p>
@@ -158,7 +158,7 @@ function FaqSection() {
 			<li>
 				<Typography variant="h3">7. Will carpet cleaning remove the stains on my carpet?</Typography>
 				<Typography variant="body"><strong>In summary, yes</strong>, professional carpet cleaning is very effective in removing stubborn stains, dirt, grime, bacteria, dust mites, allergens, mould, pet dander, and odours. However, some particularly tough stains, especially very old or improperly treated ones, can present challenges for complete removal, even with professional assistance.</Typography>
-				<Typography variant="body">Thankfully, our extensive experience and high-quality equipment at "Fine Carpet Cleaning” Ltd. have led to our high-rates of successful stain removal. Nevertheless, we cannot guarantee the complete removal of every stain. We will thoroughly assess the stain and let you know during the quotation process whether or not the stain can be successfully eliminated.</Typography></li>
+				<Typography variant="body">Thankfully, our extensive experience and high-quality equipment at Fine Carpet Cleaning have led to our high-rates of successful stain removal. Nevertheless, we cannot guarantee the complete removal of every stain. We will thoroughly assess the stain and let you know during the quotation process whether or not the stain can be successfully eliminated.</Typography></li>
 			<li>
 				<Typography variant="h3">8. Are you able to give me a carpet cleaning quote over the phone, or do you need to visit my property?</Typography>
 				<Typography variant="body"><strong>Yes</strong>, we can provide you with a cost estimate over the phone without the necessity of an in-person visit. For commercial properties, a site visit may be necessary. You have the option to get a carpet cleaning quote online as well.</Typography></li>
@@ -230,10 +230,10 @@ const JSONLDScript = () => {
 				"mainEntity": [
 					{
 						"@type": "Question",
-						"name": "What experience does 'Fine Carpet Cleaning' Ltd. have in carpet cleaning?",
+						"name": "What experience does Fine Carpet Cleaning have in carpet cleaning?",
 						"acceptedAnswer": {
 							"@type": "Answer",
-							"text": "'Fine Carpet Cleaning' Ltd. has been in business since 2012, serving commercial and residential clients with updated equipment and professional training."
+							"text": "Fine Carpet Cleaning has been in business since 2012, serving commercial and residential clients with updated equipment and professional training."
 						}
 					},
 					{
@@ -294,7 +294,7 @@ export default function Page() {
 
 			<h1 class="mt-10 md-mt-20 font-size-14 md-font-size-21 md-line-height-18 line-height-16">Fine Carpet Cleaning</h1>
 			<div class="flex flex-justify-center"><img class="b-rd-3 md-my-20 my-10 md-mt-10 mt-2" src="/assets/home/quality-rug-cleaning-10.jpg" alt="quality-rug-cleaning-10" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 30%); width: -moz-available; width: -webkit-fill-available; width: fill-available;" /></div>
-			<div class="mt-10 py-8 px-8 md-px-14 b-rd-3 bg-paper line-height-8 text-justify font-size-4.4" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 18%);">“Fine Carpet Cleaning” Ltd. is a carpet cleaning company that operates in all London boroughs. We provide a variety of commercial and domestic carpet cleaning services, tailoring them to our client's needs.</div>
+			<div class="mt-10 py-8 px-8 md-px-14 b-rd-3 bg-paper line-height-8 text-justify font-size-4.4" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 18%);">Fine Carpet Cleaning is a carpet cleaning company that operates in all London boroughs. We provide a variety of commercial and domestic carpet cleaning services, tailoring them to our client's needs.</div>
 
 			<FleurDivider />
 
@@ -322,7 +322,7 @@ export default function Page() {
 
 			<FleurDivider />
 
-			<h2>Equipment and products we use in “Fine Carpet Cleaning” Ltd.</h2>
+			<h2>Equipment and products we use in Fine Carpet Cleaning</h2>
 
 			<GallerySlider>
 				<img src="/assets/home/equipments-2.jpg" alt="equipments-2" />
@@ -333,7 +333,7 @@ export default function Page() {
 
 			<div class="mt-20 py-8 px-8 md-px-14 bg-paper b-rd-3" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 18%);">
 
-				<p>We at “Fine Carpet Cleaning” Ltd. have accumulated years of expertise in caring for our clients’ carpets, rugs, and upholstery. We continuously seek new ways to improve our services by upgrading our equipment, cleaning products, and knowledge at every opportunity. This commitment has enabled us to reach the high level of service we offer today.</p>
+				<p>We at Fine Carpet Cleaning have accumulated years of expertise in caring for our clients’ carpets, rugs, and upholstery. We continuously seek new ways to improve our services by upgrading our equipment, cleaning products, and knowledge at every opportunity. This commitment has enabled us to reach the high level of service we offer today.</p>
 
 				<p>The factors that set us apart from our competitors are:</p>
 				<ul>
@@ -352,7 +352,7 @@ export default function Page() {
 			<FleurDivider />
 
 			<h2>Fine Carpet Cleaning Accreditations</h2>
-			<h3 class="md-mt-25 mb-15">“Fine Carpet Cleaning” Ltd. is a qualified member of <a class="color-paper-link hover-color-paper-link-hover:hover" href="https://trustedlocalcleaners.ncca.co.uk/listing/fine-carpet-cleaning-ltd/" target="_blank" rel="noopener">"NCCA"</a> (National Carpet Cleaners Association)</h3>
+			<h3 class="md-mt-25 mb-15">Fine Carpet Cleaning is a qualified member of <a class="color-paper-link hover-color-paper-link-hover:hover" href="https://trustedlocalcleaners.ncca.co.uk/listing/fine-carpet-cleaning-ltd/" target="_blank" rel="noopener">"NCCA"</a> (National Carpet Cleaners Association)</h3>
 
 			<GallerySlider>
 				<img src="/assets/home/fine-carpet-cleaning-ncca-certificate-1.jpg" alt="fine-carpet-cleaning-ncca-certificate-1" />
@@ -365,7 +365,7 @@ export default function Page() {
 				<p>“NCCA” is one of the most respected and authoritative associations for training carpet cleaners. Founded in 1968, it is dedicated to the cleaning, maintenance, and restoration of carpets. The main objective of the association is to provide certificates of professionalism and high standards to partner companies that have passed a special test for practical knowledge and skills. This ensures the quality of the certified company’s services.</p>
 			</div>
 
-			<h3 class="mt-25 mb-15">“Fine Carpet Cleaning” Ltd. is listed on “<a class="color-paper-link hover-color-paper-link-hover:hover" href="https://www.checkatrade.com/trades/FineCarpetCleaning" target="_blank" rel="noopener">Checkatrade</a>"</h3>
+			<h3 class="mt-25 mb-15">Fine Carpet Cleaning is listed on “<a class="color-paper-link hover-color-paper-link-hover:hover" href="https://www.checkatrade.com/trades/FineCarpetCleaning" target="_blank" rel="noopener">Checkatrade</a>"</h3>
 
 			<div class="flex flex-justify-center"><img class="b-rd-3 md-my-20 my-10 md-mt-10 mt-2" src="/assets/home/fine-carpet-cleaning-checkatrade-certificate.jpg" alt="fine-carpet-cleaning-checkatrade-certificate" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 30%); width: -moz-available; width: -webkit-fill-available; width: fill-available;" /></div>
 
@@ -373,7 +373,7 @@ export default function Page() {
 
 				<p>“Checkatradе” is an organisation founded in 1998 to help consumers in the UK to find their specialist in a particular area, such as quality carpet cleaning. The main goal of the organisation is the collection of all quality companies in one place, covering high standards, transparency in customer service, and prices.</p>
 
-				<p>In order to be accredited by “Checkatrade”, “Fine Carpet Cleaning” Ltd. had to pass a detailed inspection covering more than 20 aspects, such as:</p>
+				<p>In order to be accredited by “Checkatrade”, Fine Carpet Cleaning had to pass a detailed inspection covering more than 20 aspects, such as:</p>
 
 				<ul>
 					<li class="ml--5">
@@ -399,11 +399,11 @@ export default function Page() {
 				<p>After creating a listing on the “Checkatrade” website, each company is then permanently monitored based on user feedback posted on the organisation’s website.</p>
 
 			</div>
-			<h3 class="mt-25 md-mb-15 mb--5">“Fine Carpet Cleaning” Ltd. staff members are trained and certified</h3>
+			<h3 class="mt-25 md-mb-15 mb--5">Fine Carpet Cleaning staff members are trained and certified</h3>
 
 			<div class="mt-20 py-8 px-8 md-px-14 bg-paper b-rd-3" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 18%);">
 
-				<p>On one hand, our ambition is to fully satisfy the customer’s needs to the best of our capabilities. On the other hand, the company culture of “Fine Carpet Cleaning” Ltd. strongly encourages constant striving for excellence. These two reasons combined led to the result that our staff members successfully completed a number of specialised professional courses, like:</p>
+				<p>On one hand, our ambition is to fully satisfy the customer’s needs to the best of our capabilities. On the other hand, the company culture of Fine Carpet Cleaning strongly encourages constant striving for excellence. These two reasons combined led to the result that our staff members successfully completed a number of specialised professional courses, like:</p>
 
 				<ul>
 					<li class="ml--5">
@@ -421,7 +421,7 @@ export default function Page() {
 
 			<FleurDivider />
 
-			<h2>Results from our services in “Fine Carpet Cleaning” Ltd.</h2>
+			<h2>Results from our services in Fine Carpet Cleaning</h2>
 
 			<GallerySlider>
 				<img src="/assets/home/1-same-day-carpet-cleaning.jpg" alt="1-same-day-carpet-cleaning" />
@@ -514,53 +514,25 @@ export default function Page() {
 
 			<FullScreenImageGallery />
 
-			<p class="md-max-w-80% font-size-4 line-height-5.5 md-line-height-6 m-auto mt-5 ">*”Fine Carpet Cleaning” Ltd. operates in all of London. The map above shows all of the London postcodes we cover.<br></br>
+			<p class="md-max-w-80% font-size-4 line-height-5.5 md-line-height-6 m-auto mt-5 ">*Fine Carpet Cleaning operates in all of London. The map above shows all of the London postcodes we cover.<br></br>
 				**Transport surcharge may apply for all other post codes.</p>
 
 			<FleurDivider />
 
 			<h2>Working hours</h2>
-			<table class="w-full m-auto font-sans">
-				<thead style="box-shadow: 0px 20px 20px 1px rgb(84 89 95 / 10%);">
-					<tr class="h-20">
-						<td class="c-paper bg-#2e5c47 font-size-7 pl-5 b-rd-lt-3"><strong>Day</strong></td>
-						<td class="c-paper bg-#2e5c47 font-size-7 pl-5 b-rd-rt-3"><strong>Time</strong></td>
-					</tr>
-				</thead>
-				<tbody style="box-shadow: 0px 20px 20px 1px rgb(84 89 95 / 10%);">
-					<tr>
-						<td class="bg-paper pl-5 py-2 font-500">Monday</td>
-						<td class="bg-paper pl-5 py-2 font-500">7:30 - 19:00</td>
-					</tr>
-					<tr>
-						<td class="bg-paper pl-5 py-2 font-500">Tuesday</td>
-						<td class="bg-paper pl-5 py-2 font-500">7:30 - 19:00</td>
-					</tr>
-					<tr>
-						<td class="bg-paper pl-5 py-2 font-500">Wednesday</td>
-						<td class="bg-paper pl-5 py-2 font-500">7:30 - 19:00</td>
-					</tr>
-					<tr>
-						<td class="bg-paper pl-5 py-2 font-500">Thursday</td>
-						<td class="bg-paper pl-5 py-2 font-500">7:30 - 19:00</td>
-					</tr>
-					<tr>
-						<td class="bg-paper pl-5 py-2 font-500">Friday</td>
-						<td class="bg-paper pl-5 py-2 font-500">7:30 - 19:00</td>
-					</tr>
-					<tr>
-						<td class="bg-paper pl-5 py-2 font-500">Saturday</td>
-						<td class="bg-paper pl-5 py-2 font-500">7:30 - 19:00</td>
-					</tr>
-					<tr>
-						<td class="bg-paper pl-5 py-2 font-500">Sunday</td>
-						<td class="bg-paper pl-5 py-2 font-500">7:30 - 19:00</td>
-					</tr>
-					<tr>
-						<td class="b-rd-lb-3 b-rd-rb-3 bg-#2e5c47 outline-color" colspan="3" style="box-shadow: 0px 20px 20px 1px rgb(247 247 247/ 100%);"><p class="font-size-3.5 md-font-size-4 px-5 md-my-7 c-paper md-line-height-0 line-height-6 word-spacing-0.5">*We also offer performing services out of working hours and at night, which will be included in the final price.</p></td>
-					</tr>
-				</tbody>
-			</table>
+			
+            <PriceTable
+                title="Day"
+                items={[
+                    { label: "Monday", value: "7:30 - 19:00" },
+                    { label: "Tuesday", value: "7:30 - 19:00" },
+                    { label: "Wednesday", value: "7:30 - 19:00" },
+                    { label: "Thursday", value: "7:30 - 19:00" },
+                    { label: "Friday", value: "7:30 - 19:00" },
+                    { label: "Saturday", value: "7:30 - 19:00" },
+                    { label: "Sunday", value: "7:30 - 19:00" },
+                ]}
+            />
 
 			<FleurDivider/>
 

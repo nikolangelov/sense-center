@@ -7,6 +7,7 @@ import { FOTSlider, FOTSliderContainer } from '../../../components/FrequentlyOrd
 import { createEffect } from "solid-js";
 import {FleurDivider} from "../../../components/FleurDivider";
 import { VideoPlayer } from '../../../components/VideoPlayer';
+import { PriceTable } from '../../../components/PriceTable';
 
 function FaqSection() {
   const { Container, Entry } = createCollapsable()
@@ -444,68 +445,24 @@ export default function Page() {
         <br></br>
         <strong>Deising - Free of charge - just notify us when booking.</strong></div>
 
-      <table class="w-full m-auto font-sans">
-        <thead style="box-shadow: 0px 20px 20px 1px rgb(84 89 95 / 10%);">
-          <tr class="h-20">
-            <td class="c-paper bg-#2e5c47 font-size-7 pl-5 b-rd-lt-3"><strong>Room type</strong></td>
-            <td class="c-paper bg-#2e5c47 font-size-7 pl-5 b-rd-rt-3"><strong>Price</strong></td>
-          </tr>
-        </thead>
-        <tbody style="box-shadow: 0px 20px 20px 1px rgb(84 89 95 / 10%);">
-          <tr>
-            <td class="bg-paper pl-5 py-2 font-500">Single Bedroom</td>
-            <td class="bg-paper pl-5 py-2 font-500">from £31.00</td>
-          </tr>
-          <tr>
-            <td class="bg-paper pl-5 py-2 font-500">Double Bedroom</td>
-            <td class="bg-paper pl-5 py-2 font-500">from £35.00</td>
-          </tr>
-          <tr>
-            <td class="bg-paper pl-5 py-2 font-500">Master Bedroom</td>
-            <td class="bg-paper pl-5 py-2 font-500">from £40.00</td>
-          </tr>
-          <tr>
-            <td class="bg-paper pl-5 py-2 font-500">Living Room</td>
-            <td class="bg-paper pl-5 py-2 font-500">from £43.00</td>
-          </tr>
-          <tr>
-            <td class="bg-paper pl-5 py-2 font-500">Through Lounge</td>
-            <td class="bg-paper pl-5 py-2 font-500">from £69.00</td>
-          </tr>
-          <tr>
-            <td class="bg-paper pl-5 py-2 font-500">Hallway</td>
-            <td class="bg-paper pl-5 py-2 font-500">from £21.00</td>
-          </tr>
-          <tr>
-            <td class="bg-paper pl-5 py-2 font-500">Flight of Stairs</td>
-            <td class="bg-paper pl-5 py-2 font-500">from £34.00</td>
-          </tr>
-          <tr>
-            <td class="bg-paper pl-5 py-2 font-500">Landing</td>
-            <td class="bg-paper pl-5 py-2 font-500">from £15.00</td>
-          </tr>
-          <tr>
-            <td class="bg-paper pl-5 py-2 font-500">Bathroom</td>
-            <td class="bg-paper pl-5 py-2 font-500">from £6.00</td>
-          </tr>
-          <tr>
-            <td class="bg-paper pl-5 py-2 font-500">Small rug</td>
-            <td class="bg-paper pl-5 py-2 font-500">from £14.00</td>
-          </tr>
-          <tr>
-            <td class="bg-paper pl-5 py-2 font-500">Medium rug</td>
-            <td class="bg-paper pl-5 py-2 font-500">from £20.00</td>
-          </tr>
-          <tr>
-            <td class="bg-paper pl-5 py-2 font-500">Large rug</td>
-            <td class="bg-paper pl-5 py-2 font-500">from £31.00</td>
-          </tr>
-          <tr>
-            <td class="b-rd-lb-3 b-rd-rb-3 bg-#2e5c47" colspan="3" style="box-shadow: 0px 20px 20px 1px rgb(247 247 247/ 100%);"><p class="font-size-3.5 md-font-size-4 px-5 md-my-7 c-paper line-height-6 word-spacing-0.5">*All prices depend on the quantity of the order, degree of contamination and access.
-              <br></br>**Final price after contacting us.</p></td>
-          </tr>
-        </tbody>
-      </table>
+
+                    <PriceTable
+                title="Room type"
+                items={[
+                    { label: "Single Bedroom", value: "from £31.00" },
+                    { label: "Double Bedroom", value: "from £35.00" },
+                    { label: "Master Bedroom", value: "from £40.00" },
+                    { label: "Living Room", value: "from £43.00" },
+                    { label: "Through Lounge", value: "from £69.00" },
+                    { label: "Hallway", value: "from £21.00" },
+                    { label: "Flight of Stairs", value: "from £34.00" },
+                    { label: "Landing", value: "from £15.00" },
+                    { label: "Bathroom", value: "from £6.00" },
+                    { label: "Small rug", value: "from £14.00" },
+                    { label: "Medium rug", value: "from £20.00" },
+                    { label: "Large rug", value: "from £31.00" },
+                ]}
+            />
 
       <button class="outline-none bg-brand-second-action hover-bg-brand-second-action-hover:hover font-size-6 font-600 w-250px h-60px c-paper flex flex-items-center flex-justify-center relative b-solid b-rd-3 b-4 b-brand-second-action hover-b-brand-second-action-hover:hover whitespace-normal line-height-6 word-spacing-0.5 py-9 my-20 mx-auto" style="box-shadow: 0 0 0 3px rgba(255, 255, 255, .9) inset; letter-spacing: 0.05rem;"><a href="/contact-us" class="c-paper font-size-5">REQUEST A QUOTE</a></button>
 

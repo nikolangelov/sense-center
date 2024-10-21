@@ -6,7 +6,7 @@ import { ReviewSlider, StarReview } from '../../components/ReviewSlider';
 import { FOTSlider, FOTSliderContainer } from '../../components/FrequentlyOrderedTogether';
 import { PriceTable } from '../../components/PriceTable';
 import { createEffect } from "solid-js";
-import {FleurDivider} from "../../components/FleurDivider";
+import { FleurDivider } from "../../components/FleurDivider";
 import { VideoPlayer } from '../../components/VideoPlayer';
 
 function FaqSection() {
@@ -145,7 +145,7 @@ function FaqSection() {
         <Typography variant="body">Yes, professional rug cleaning services are the most effective way to take care of your rugs. Due to our powerful equipment, we are able to deliver the results you desire within a fraction of time. Such services will ensure that your rugs will be free of things like dust, dirt, pollen, germs and mites, which can lead to potential health problems.</Typography></li>
       <li>
         <Typography variant="h3">21. How do professionals clean area rugs?</Typography>
-        <Typography variant="body">This is made possible by the expertise, equipment, products, and methods employed by expert companies. A professional rug cleaning company like "Fine Carpet Cleaning Ltd." offers top-quality cleaning services that are particularly effective in tackling stubborn stains, eliminating odours, and eradicating germ buildup. These results are often unattainable through regular cleaning methods.</Typography>
+        <Typography variant="body">This is made possible by the expertise, equipment, products, and methods employed by expert companies. A professional rug cleaning company like Fine Carpet Cleaning offers top-quality cleaning services that are particularly effective in tackling stubborn stains, eliminating odours, and eradicating germ buildup. These results are often unattainable through regular cleaning methods.</Typography>
         <Typography variant="body">Apart from professional area rug cleaning, we are specialised in wool carpet cleaning services, professionally clean flokati rugs, professional antique rug cleaning, handmade rug cleaning, vintage rug cleaning, cotton rug cleaning, alpaca rug cleaning, lambswool rug cleaning, Navajo rug cleaning, natural fibre rug cleaning, Khazai rug cleaning, karastan rug cleaning, throw rug cleaning, Indian rug cleaning, Aubusson rug cleaning, Ziegler rug cleaning and more.</Typography></li>
       <li>
         <Typography variant="h3">22. How often should upholstery be professionally cleaned?</Typography>
@@ -217,7 +217,7 @@ function FaqSection() {
       </li>
       <li>
         <Typography variant="h3">27. Is there a company that performs small rug cleaning near me?</Typography>
-        <Typography variant="body">“Fine Carpet Cleaning” Ltd. performs in all of London. Feel free to contact us to receive home rug cleaning services wherever you are and rest assured that we will take good care of your rugs.</Typography>
+        <Typography variant="body">Fine Carpet Cleaning performs in all of London. Feel free to contact us to receive home rug cleaning services wherever you are and rest assured that we will take good care of your rugs.</Typography>
       </li>
     </Entry>
   </Container>
@@ -327,12 +327,12 @@ export default function Page() {
       <h1 class="mt-10 md-mt-17 font-size-12.5 md-font-size-16 md-line-height-18 line-height-16">Professional rug cleaning services</h1>
       <div class="flex flex-justify-center"><img class="b-rd-3 md-mt-10 mt-2 max-w-full" src="/assets/service-pics/rug-cleaning/rug-washing-service.jpg" alt="rug-washing-service" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 30%);" /></div>
 
-      <FleurDivider/>
+      <FleurDivider />
 
       <h2 class="line-height-12 md-line-height-14">What to expect from our professional rug cleaning services</h2>
       <div class="mt-20 py-8 px-8 md-px-14 bg-paper b-rd-3" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 18%);">
         <h3>Benefits:</h3>
-        <p>We at “Fine Carpet Cleaning” Ltd. perform professional rug cleaning services. Apart from removing dirt and shading, professional rug cleaning services refresh, kill bacteria, reach all areas and maintain the colours of the rug. Our rug washing service ensures a set of vital advantages for you, including:</p>
+        <p>We at Fine Carpet Cleaning perform professional rug cleaning services. Apart from removing dirt and shading, professional rug cleaning services refresh, kill bacteria, reach all areas and maintain the colours of the rug. Our rug washing service ensures a set of vital advantages for you, including:</p>
         <ul>
           <li class="ml--5">
             <p>Effectively removing stains from spills, pet accidents, and everyday use;</p>
@@ -388,11 +388,11 @@ export default function Page() {
         </ul>
       </div>
 
-      <FleurDivider/>
+      <FleurDivider />
 
       <h2 class="line-height-12 md-line-height-14">Equipment and products we use for our professional rug cleaning services</h2>
       <div class="mt-20 py-8 px-12 md-px-14 bg-paper b-rd-3" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 18%);">
-        <p>"Fine Carpet Cleaning" Ltd utilises premier cleaning equipment and products, including:</p>
+        <p>Fine Carpet Cleaning utilises premier cleaning equipment and products, including:</p>
         <ol style="counter-reset: ordered; list-style: none;">
           <li class="ml--5">
             <h3 class="ml--5 font-size-6 md-font-size-7">Efficient Extractors</h3>
@@ -421,7 +421,7 @@ export default function Page() {
         </ul>
       </div>
 
-      <FleurDivider/>
+      <FleurDivider />
 
       <h2 class="line-height-12 md-line-height-14">Photos from our professional rug cleaning services</h2>
 
@@ -441,13 +441,13 @@ export default function Page() {
         { src: "/assets/service-pics/rug-cleaning/13-specialist-rug-cleaning-london.jpg", alt: "13-specialist-rug-cleaning-london" },
       ]} />
 
-      <FleurDivider/>
+      <FleurDivider />
 
       <h2 class="line-height-12 md-line-height-14">Video from our professional rug cleaning services</h2>
 
-			<VideoPlayer src='https://www.youtube.com/embed/Bj1lo9JMZok?enablejsapi=1&mute=1' />
+      <VideoPlayer src='https://www.youtube.com/embed/Bj1lo9JMZok?enablejsapi=1&mute=1' />
 
-      <FleurDivider/>
+      <FleurDivider />
 
       <h2 class="line-height-12 md-line-height-14">Professional rug cleaning prices</h2>
 
@@ -461,28 +461,19 @@ export default function Page() {
         <br></br>
         <strong id="price_table">Deising - Free of charge - just notify us when booking.</strong></div>
 
-      <PriceTable title="Rug type">
-        <tr>
-          <td class="bg-paper pl-5 py-2 font-500">Rug - small</td>
-          <td class="bg-paper pl-5 py-2 font-500">from £11.00</td>
-        </tr>
-        <tr>
-          <td class="bg-paper pl-5 py-2 font-500">Rug - medium</td>
-          <td class="bg-paper pl-5 py-2 font-500">from £17.00</td>
-        </tr>
-        <tr>
-          <td class="bg-paper pl-5 py-2 font-500">Rug - large</td>
-          <td class="bg-paper pl-5 py-2 font-500">from £31.00</td>
-        </tr>
-        <tr>
-          <td class="bg-paper pl-5 py-2 font-500">Rug - extra large</td>
-          <td class="bg-paper pl-5 py-2 font-500">from £50.00</td>
-        </tr>
-      </PriceTable>
+      <PriceTable
+        title="Rug type"
+        items={[
+          { label: "Rug - small", value: "from £11.00" },
+          { label: "Rug - medium", value: "from £17.00" },
+          { label: "Rug - large", value: "from £31.00" },
+          { label: "Rug - extra large", value: "from £50.00" },
+        ]}
+      />
 
       <button class="outline-none bg-brand-second-action hover-bg-brand-second-action-hover:hover font-size-6 font-600 w-250px h-60px c-paper flex flex-items-center flex-justify-center relative b-solid b-rd-3 b-4 b-brand-second-action hover-b-brand-second-action-hover:hover whitespace-normal line-height-6 word-spacing-0.5 py-9 my-20 mx-auto" style="box-shadow: 0 0 0 3px rgba(255, 255, 255, .9) inset; letter-spacing: 0.05rem;"><a href="/prices" class="c-paper font-size-5">VIEW ALL PRICES</a></button>
 
-      <FleurDivider/>
+      <FleurDivider />
 
       <h2 class="line-height-12 md-line-height-14">Frequently ordered together</h2>
 
@@ -531,7 +522,7 @@ export default function Page() {
         />
       </FOTSlider>
 
-      <FleurDivider/>
+      <FleurDivider />
 
       <h2 class="line-height-12 md-line-height-14">Our professional rug cleaning services specialists advise:</h2>
       <div class="mt-20 py-8 px-12 md-px-14 bg-paper b-rd-3" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 18%);">
@@ -559,7 +550,7 @@ export default function Page() {
         </ol>
       </div>
 
-      <FleurDivider/>
+      <FleurDivider />
 
       <h2 class="line-height-12 md-line-height-14">Reviews of our professional rug cleaning services</h2>
 
@@ -619,13 +610,13 @@ export default function Page() {
 
       </ReviewSlider>
 
-      <FleurDivider/>
+      <FleurDivider />
 
       <h2 class="line-height-12 md-line-height-14">FAQ regarding our professional rug cleaning services</h2>
 
       <FaqSection />
 
-      <FleurDivider/>
+      <FleurDivider />
 
       <div class="m-10% mb-3% flex flex-wrap flex-justify-center md-gap-15 gap-10">
         <a href="/services"><button class="cursor-pointer outline-none bg-brand-second-action hover-bg-brand-second-action-hover:hover font-size-5 font-600 w-200px h-60px c-paper flex flex-items-center flex-justify-center relative b-solid b-rd-3 b-4 b-brand-second-action hover-b-brand-second-action-hover:hover whitespace-normal line-height-6 word-spacing-0.5 py-9" style="box-shadow: 0 0 0 3px rgba(255, 255, 255, .9) inset; letter-spacing: 0.05rem;">SERVICES</button></a>

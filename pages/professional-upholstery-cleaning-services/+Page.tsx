@@ -6,7 +6,7 @@ import { ReviewSlider, StarReview } from '../../components/ReviewSlider';
 import { FOTSlider, FOTSliderContainer } from '../../components/FrequentlyOrderedTogether';
 import { PriceTable } from '../../components/PriceTable';
 import { createEffect } from "solid-js";
-import {FleurDivider} from "../../components/FleurDivider";
+import { FleurDivider } from "../../components/FleurDivider";
 import { VideoPlayer } from '../../components/VideoPlayer';
 
 function FaqSection() {
@@ -111,7 +111,7 @@ function FaqSection() {
 				<Typography variant="body">Our high end upholstery cleaning services are known for their top quality, utilising the most effective equipment and a range of premium cleaning products. What sets us apart even further is that our upholstery cleaning prices are not only highly competitive but also rank among the most attractive in the market. The combination of all required services proves to be a more cost-effective approach compared to individual performance. This is primarily due to the initial high cost and additional fees for each technician visit, factoring in elements like travel time, parking, and the handling of heavy equipment during loading and unloading.</Typography></li>
 			<li>
 				<Typography variant="h3">16. Does upholstery cleaning work?</Typography>
-				<Typography variant="body">Indeed, professional upholstery cleaning is highly effective and works exceptionally well. This is made possible by the expertise, equipment, products, and methods employed by expert companies. A professional upholstery cleaning company like "Fine Carpet Cleaning Ltd." offers top-quality cleaning services that are particularly effective in tackling stubborn stains, eliminating odors, and eradicating germ buildup. These results are often unattainable through regular cleaning methods.</Typography></li>
+				<Typography variant="body">Indeed, professional upholstery cleaning is highly effective and works exceptionally well. This is made possible by the expertise, equipment, products, and methods employed by expert companies. A professional upholstery cleaning company like Fine Carpet Cleaning offers top-quality cleaning services that are particularly effective in tackling stubborn stains, eliminating odors, and eradicating germ buildup. These results are often unattainable through regular cleaning methods.</Typography></li>
 			<li>
 				<Typography variant="h3">17. Does steam cleaning remove stains from upholstery?</Typography>
 				<Typography variant="body">Yes, steam cleaning upholstery services are very effective in removing stains and are the most popular method for upholstery cleaning. Due to our powerful equipment, we are able to deliver the results you desire within a fraction of time. The drying time of the upholstery is usually much shorter as well.</Typography>
@@ -204,7 +204,7 @@ function FaqSection() {
 				<Typography variant="body">Yes, we can clean nylon upholstery and furniture made from other synthetic fabrics. In such special cases with synthetic upholstery from polyester, rayon, acrylic or nylon, we will not use a steam cleaning method, but dry cleaning, as the heat and steam <strong>will</strong> damage the furniture.</Typography></li>
 			<li>
 				<Typography variant="h3">24. Is there a company that performs upholstery cleaning near me now?</Typography>
-				<Typography variant="body">“Fine Carpet Cleaning” Ltd. performs in all of London. Feel free to contact us to receive the best upholstery cleaning services wherever you are and rest assured that we will take good care of your upholstery.</Typography></li>
+				<Typography variant="body">Fine Carpet Cleaning performs in all of London. Feel free to contact us to receive the best upholstery cleaning services wherever you are and rest assured that we will take good care of your upholstery.</Typography></li>
 		</Entry>
 	</Container>
 }
@@ -313,12 +313,12 @@ export default function Page() {
 			<h1 class="mt-10 md-mt-17 font-size-12.5 md-font-size-16 md-line-height-18 line-height-16">Professional upholstery cleaning services</h1>
 			<div class="flex flex-justify-center"><img class="b-rd-3 md-mt-10 mt-2 max-w-full" src="/assets/service-pics/upholstery-cleaning/upholstery-cleaners-london.jpg" alt="upholstery-cleaners-london" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 30%);" /></div>
 
-			<FleurDivider/>
+			<FleurDivider />
 
 			<h2 class="line-height-12 md-line-height-14">What to expect from our professional upholstery cleaning services</h2>
 			<div class="mt-20 py-8 px-8 md-px-14 bg-paper b-rd-3" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 18%);">
 				<h3>Benefits:</h3>
-				<p>We at “Fine Carpet Cleaning” Ltd. perform professional upholstery cleaning services. Apart from removing the general dirt and shading, professional upholstery cleaning services refresh, kill bacteria, reach all areas and maintain the brightness of the colours. Other advantages are:</p>
+				<p>We at Fine Carpet Cleaning perform professional upholstery cleaning services. Apart from removing the general dirt and shading, professional upholstery cleaning services refresh, kill bacteria, reach all areas and maintain the brightness of the colours. Other advantages are:</p>
 				<ul>
 					<li class="ml--5">
 						<p>Professional upholstery cleaning can effectively <strong>remove stains</strong> from spills, pet accidents, and everyday use.</p>
@@ -340,7 +340,7 @@ export default function Page() {
 					</li>
 					<li class="ml--5">
 						<p>Upholstery cleaning experts will tailor their methods to the specific type of upholstery, ensuring the best results without damage.</p>
-						<Typography variant="body">At “Fine Carpet Cleaning” Ltd. our cleaning technicians can handle even the most delicate upholstery. Our upholstery cleaners are able to <strong>remove all tough stains</strong> and maintain its colours <strong>without using abrasive chemicals</strong> on it.</Typography>
+						<Typography variant="body">At Fine Carpet Cleaning our cleaning technicians can handle even the most delicate upholstery. Our upholstery cleaners are able to <strong>remove all tough stains</strong> and maintain its colours <strong>without using abrasive chemicals</strong> on it.</Typography>
 						<Typography variant="body">In order to be sure that everything will go as planned, a test of the product and the cleaning method shall be fulfilled on a small area on your upholstery. That way we make sure that the detergent is best suited for your furniture.</Typography>
 					</li>
 
@@ -380,7 +380,7 @@ export default function Page() {
 				</ul>
 			</div>
 
-			<FleurDivider/>
+			<FleurDivider />
 
 			<h2>The process of our professional upholstery cleaning services:</h2>
 			<div class="mt-20 py-8 px-8 md-px-14 bg-paper b-rd-3" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 18%);">
@@ -406,14 +406,14 @@ export default function Page() {
 				</ol>
 			</div>
 
-			<FleurDivider/>
+			<FleurDivider />
 
 			<h2 class="line-height-12 md-line-height-14">Equipment and products we use for our professional upholstery cleaning services</h2>
 			<div class="mt-20 py-8 px-12 md-px-14 bg-paper b-rd-3" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 18%);">
 				<ol style="counter-reset: ordered; list-style: none;">
 					<li class="ml--5">
 						<h3 class="ml--5 font-size-6 md-font-size-7">High-quality extractors</h3>
-						<Typography variant="body">At "Fine Carpet Cleaning Ltd," we take pride in our commitment to using cutting-edge cleaning equipment and premium products. Our machines, known for their exceptional power and effectiveness, are considered among the best portable machines globally. They have undergone rigorous testing, and we've selected top brands available in the UK market, including "<a class="color-paper-link hover-color-paper-link-hover:hover" href="https://www.mytee.com/products/1003dx-speedster-deluxe-carpet-extractor/" target="_blank" rel="noopener">Mytee</a>" and "<a class="color-paper-link hover-color-paper-link-hover:hover" href="https://www.clean-smart.co.uk/store/airflex-storm" target="_blank" rel="noopener">Airflex</a>". Furthermore, our in-house engineer makes significant enhancements to maximize their performance.</Typography>
+						<Typography variant="body">At Fine Carpet Cleaning, we take pride in our commitment to using cutting-edge cleaning equipment and premium products. Our machines, known for their exceptional power and effectiveness, are considered among the best portable machines globally. They have undergone rigorous testing, and we've selected top brands available in the UK market, including "<a class="color-paper-link hover-color-paper-link-hover:hover" href="https://www.mytee.com/products/1003dx-speedster-deluxe-carpet-extractor/" target="_blank" rel="noopener">Mytee</a>" and "<a class="color-paper-link hover-color-paper-link-hover:hover" href="https://www.clean-smart.co.uk/store/airflex-storm" target="_blank" rel="noopener">Airflex</a>". Furthermore, our in-house engineer makes significant enhancements to maximize their performance.</Typography>
 					</li>
 					<li class="ml--5">
 						<h3 class="ml--5 font-size-6 md-font-size-7">Efficient vacuum cleaners</h3>
@@ -438,7 +438,7 @@ export default function Page() {
 				<p>With our state-of-the-art cleaning equipment and top-quality products, we guarantee a professional upholstery cleaning service in London of the utmost quality.</p>
 			</div>
 
-			<FleurDivider/>
+			<FleurDivider />
 
 			<h2 class="line-height-12 md-line-height-14">Pictures from our professional upholstery cleaning services</h2>
 
@@ -458,13 +458,13 @@ export default function Page() {
 				{ src: "/assets/service-pics/upholstery-cleaning/13-upholstery-deep-cleaning-service.jpg", alt: "13-upholstery-deep-cleaning-service" },
 			]} />
 
-			<FleurDivider/>
+			<FleurDivider />
 
 			<h2 class="line-height-12 md-line-height-14">Videos from our professional upholstery cleaning services</h2>
 
 			<VideoPlayer src='https://www.youtube.com/embed/A-fIXKhu9sk?enablejsapi=1&mute=1' />
 
-			<FleurDivider/>
+			<FleurDivider />
 
 			<h2 class="line-height-12 md-line-height-14">Professional upholstery cleaning prices</h2>
 
@@ -478,52 +478,25 @@ export default function Page() {
 				<br></br>
 				<strong id="price_table">Deising - Free of charge - just notify us when booking.</strong></div>
 
-			<PriceTable title="Upholstery type">
-				<tr>
-					<td class="bg-paper pl-5 py-2 font-500">Footstool (Puff)</td>
-					<td class="bg-paper pl-5 py-2 font-500">from £10.00</td>
-				</tr>
-				<tr>
-					<td class="bg-paper pl-5 py-2 font-500">Two seated sofa</td>
-					<td class="bg-paper pl-5 py-2 font-500">from £44.20</td>
-				</tr>
-				<tr>
-					<td class="bg-paper pl-5 py-2 font-500">Two seated L shaped sofa</td>
-					<td class="bg-paper pl-5 py-2 font-500">from £52.00</td>
-				</tr>
-				<tr>
-					<td class="bg-paper pl-5 py-2 font-500">Three seated sofa</td>
-					<td class="bg-paper pl-5 py-2 font-500">from £52.00</td>
-				</tr>
-				<tr>
-					<td class="bg-paper pl-5 py-2 font-500">Three seated L shaped sofa</td>
-					<td class="bg-paper pl-5 py-2 font-500">from £65.00</td>
-				</tr>
-				<tr>
-					<td class="bg-paper pl-5 py-2 font-500">Four seated sofa</td>
-					<td class="bg-paper pl-5 py-2 font-500">from £65.00</td>
-				</tr>
-				<tr>
-					<td class="bg-paper pl-5 py-2 font-500">Four seated L shaped sofa</td>
-					<td class="bg-paper pl-5 py-2 font-500">from £76.00</td>
-				</tr>
-				<tr>
-					<td class="bg-paper pl-5 py-2 font-500">Five seated sofa</td>
-					<td class="bg-paper pl-5 py-2 font-500">from £76.00</td>
-				</tr>
-				<tr>
-					<td class="bg-paper pl-5 py-2 font-500">Five seated L shaped sofa</td>
-					<td class="bg-paper pl-5 py-2 font-500">from £95.00</td>
-				</tr>
-				<tr>
-					<td class="bg-paper pl-5 py-2 font-500">For others, please contact us</td>
-					<td class="bg-paper pl-5 py-2 font-500">-</td>
-				</tr>
-			</PriceTable>
+			<PriceTable
+				title="Upholstery type"
+				items={[
+					{ label: "Footstool (Puff)", value: "from £10.00" },
+					{ label: "Two seated sofa", value: "from £44.20" },
+					{ label: "Two seated L shaped sofa", value: "from £52.00" },
+					{ label: "Three seated sofa", value: "from £52.00" },
+					{ label: "Three seated L shaped sofa", value: "from £65.00" },
+					{ label: "Four seated sofa", value: "from £65.00" },
+					{ label: "Four seated L shaped sofa", value: "from £76.00" },
+					{ label: "Five seated sofa", value: "from £76.00" },
+					{ label: "Five seated L shaped sofa", value: "from £95.00" },
+					{ label: "For others, please contact us", value: "-" },
+				]}
+			/>
 
 			<button class="outline-none bg-brand-second-action hover-bg-brand-second-action-hover:hover font-size-6 font-600 w-250px h-60px c-paper flex flex-items-center flex-justify-center relative b-solid b-rd-3 b-4 b-brand-second-action hover-b-brand-second-action-hover:hover whitespace-normal line-height-6 word-spacing-0.5 py-9 my-20 mx-auto" style="box-shadow: 0 0 0 3px rgba(255, 255, 255, .9) inset; letter-spacing: 0.05rem;"><a href="/prices" class="c-paper font-size-5">VIEW ALL PRICES</a></button>
 
-			<FleurDivider/>
+			<FleurDivider />
 
 			<h2 class="line-height-12 md-line-height-14">Frequently ordered together</h2>
 
@@ -565,7 +538,7 @@ export default function Page() {
 				/>
 			</FOTSlider>
 
-			<FleurDivider/>
+			<FleurDivider />
 
 			<h2 class="line-height-12 md-line-height-14">Our professional upholstery cleaning services specialists advise:</h2>
 			<div class="mt-20 py-8 px-12 md-px-14 bg-paper b-rd-3" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 18%);">
@@ -593,7 +566,7 @@ export default function Page() {
 				</ol>
 			</div>
 
-			<FleurDivider/>
+			<FleurDivider />
 
 			<h2 class="line-height-12 md-line-height-14">Upholstery cleaning reviews</h2>
 
@@ -653,13 +626,13 @@ export default function Page() {
 
 			</ReviewSlider>
 
-			<FleurDivider/>
+			<FleurDivider />
 
 			<h2 class="line-height-12 md-line-height-14">FAQ regarding our professional upholstery cleaning in London</h2>
 
 			<FaqSection />
 
-			<FleurDivider/>
+			<FleurDivider />
 
 			<div class="m-10% mb-3% flex flex-wrap flex-justify-center md-gap-15 gap-10">
 				<a href="/services"><button class="cursor-pointer outline-none bg-brand-second-action hover-bg-brand-second-action-hover:hover font-size-5 font-600 w-200px h-60px c-paper flex flex-items-center flex-justify-center relative b-solid b-rd-3 b-4 b-brand-second-action hover-b-brand-second-action-hover:hover whitespace-normal line-height-6 word-spacing-0.5 py-9" style="box-shadow: 0 0 0 3px rgba(255, 255, 255, .9) inset; letter-spacing: 0.05rem;">SERVICES</button></a>

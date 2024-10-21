@@ -206,7 +206,7 @@ function FaqSection() {
       <li>
         <Typography variant="h3">24. What do hotels use to remove stains?</Typography>
         <Typography variant="body">Many hotels use hotel carpet cleaning services that are equipped with the expertise and equipment to handle a wide range of stains effectively. These services can provide deep cleaning for carpets, upholstery, and other surfaces.</Typography>
-        <Typography variant="body">It's important to note that the choice of stain removal method or product depends on the type of stain, the fabric or material involved, and the hotel's specific protocols. Booking industrial carpet cleaning services, like the ones we offer at “Fine Carpet Cleaning” Ltd., will ensure that your hotel’s carpets, rugs and upholstery are correctly taken care of. That is thanks to our business carpet cleaning expertise, professional equipment and carefully selected cleaning products.</Typography></li>
+        <Typography variant="body">It's important to note that the choice of stain removal method or product depends on the type of stain, the fabric or material involved, and the hotel's specific protocols. Booking industrial carpet cleaning services, like the ones we offer at Fine Carpet Cleaning, will ensure that your hotel’s carpets, rugs and upholstery are correctly taken care of. That is thanks to our business carpet cleaning expertise, professional equipment and carefully selected cleaning products.</Typography></li>
       <li>
         <Typography variant="h3">25. What are your commercial carpet cleaning rates?</Typography>
         <Typography variant="body">The carpet cleaning rates for commercial cleaning are determined by several variables, including:</Typography></li>
@@ -227,7 +227,7 @@ function FaqSection() {
       <Typography variant="body">To learn more about our commercial carpet cleaning rates, check out our commercial carpet cleaning prices.</Typography>
       <li>
         <Typography variant="h3">26. Do you offer industrial carpet cleaning services?</Typography>
-        <Typography variant="body">We at “Fine Carpet Cleaning” Ltd. are specialised in cleaning commercial carpets and perform in all boroughs in London. Wherever you want your carpets, rugs or upholstery to be cleaned by a commercial carpet cleaning company, you can rely on us to happily arrive at that destination.</Typography></li>
+        <Typography variant="body">We at Fine Carpet Cleaning are specialised in cleaning commercial carpets and perform in all boroughs in London. Wherever you want your carpets, rugs or upholstery to be cleaned by a commercial carpet cleaning company, you can rely on us to happily arrive at that destination.</Typography></li>
       <li>
         <Typography variant="h3">27. Are the cleaning machines loud? Will they interrupt the work process?</Typography>
         <Typography variant="body">Yes, the machines are noisy, but commercial carpet cleaning is designed to be efficient, fast and minimise downtime for your business. Our powerful equipment and experienced technicians ensure that cleaning is completed quickly, usually within a few hours, depending on the size and condition of the area. In addition, we offer flexible scheduling options, including after-hours and weekend appointments, to further minimise disruption to your daily operations.</Typography></li>
@@ -353,7 +353,7 @@ export default function Page() {
       <h2 class="line-height-12 md-line-height-14">What to expect from our commercial carpet cleaning services</h2>
       <div class="mt-20 py-8 px-8 md-px-14 bg-paper b-rd-3" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 18%);">
         <h3>Benefits:</h3>
-        <p>Fine Carpet Cleaning” Ltd. performs commercial carpet cleaning services in all of London. We have years of experience in commercial carpet cleaning for businesses of all sizes. We deliver a deeper clean that is healthier for your employees and customers without interfering with your business activities. The benefits of using commercial carpet cleaning services are:</p>
+        <p>Fine Carpet Cleaning performs commercial carpet cleaning services in all of London. We have years of experience in commercial carpet cleaning for businesses of all sizes. We deliver a deeper clean that is healthier for your employees and customers without interfering with your business activities. The benefits of using commercial carpet cleaning services are:</p>
         <ul>
           <li class="ml--5">
             <p><strong>Customised pricing and discounts</strong> - For business customers, an inspection is always conducted in advance. This will allow the cleaning team to assess access to the water and electricity systems and get an idea of the full scope of the job. In this way we will be able to customise the service to your specific needs and ensure you get the best possible price.</p>
@@ -415,7 +415,7 @@ export default function Page() {
 
       <h2 class="line-height-12 md-line-height-14">Equipment and products we use for our commercial carpet cleaning services</h2>
       <div class="mt-20 py-8 px-12 md-px-14 bg-paper b-rd-3" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 18%);">
-        <p>At "Fine Carpet Cleaning" Ltd., we use a range of top-tier cleaning equipment and products to ensure the highest quality commercial carpet cleaning:</p>
+        <p>At Fine Carpet Cleaning, we use a range of top-tier cleaning equipment and products to ensure the highest quality commercial carpet cleaning:</p>
         <ol style="counter-reset: ordered; list-style: none;">
           <li class="ml--5">
             <h3 class="ml--5 font-size-6 md-font-size-7">Premium devices</h3>
@@ -479,16 +479,13 @@ export default function Page() {
         <br></br>
         <strong>Deising - Free of charge - just notify us when booking.</strong></div>
 
-      <PriceTable title="Area size">
-        <tr>
-          <td class="bg-paper pl-5 py-2 font-500">Per square metre - from 0 up to 200m²</td>
-          <td class="bg-paper pl-5 py-2 font-500">£2.20</td>
-        </tr>
-        <tr>
-          <td class="bg-paper pl-5 py-2 font-500">Per square metre - from 200 up to 1000m²</td>
-          <td class="bg-paper pl-5 py-2 font-500">£2.00</td>
-        </tr>
-      </PriceTable>
+      <PriceTable
+        title="Area size"
+        items={[
+          { label: "Per square metre - from 0 up to 200m²", value: "£2.20" },
+          { label: "Per square metre - from 200 up to 1000m²", value: "£2.00" },
+        ]}
+      />
 
       <button class="outline-none bg-brand-second-action hover-bg-brand-second-action-hover:hover font-size-6 font-600 w-250px h-60px c-paper flex flex-items-center flex-justify-center relative b-solid b-rd-3 b-4 b-brand-second-action hover-b-brand-second-action-hover:hover whitespace-normal line-height-6 word-spacing-0.5 py-9 my-20 mx-auto" style="box-shadow: 0 0 0 3px rgba(255, 255, 255, .9) inset; letter-spacing: 0.05rem;"><a href="/contact-us" class="c-paper font-size-5">REQUEST A QUOTE</a></button>
 
