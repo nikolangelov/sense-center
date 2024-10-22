@@ -1,10 +1,12 @@
 import "solid-slider/slider.css";
 import { PriceTable } from '../../components/PriceTable';
 import { FleurDivider } from "../../components/FleurDivider";
+import { Head } from 'vike-solid/Head';
 
 export default function Page() {
 	return (
 		<>
+			<Head><meta name="robots" content="noindex" /></Head>
 			<h1 class="font-size-14 md-font-size-16 md-line-height-18 line-height-16">Prices of our cleaning services</h1>
 
 			<h2 class="mb-10 md-mb-20">Carpet cleaning (Carpet steam cleaning)</h2>

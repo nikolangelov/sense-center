@@ -1,4 +1,5 @@
-import {FleurDivider} from "../../components/FleurDivider";
+import { FleurDivider } from "../../components/FleurDivider";
+import { Head } from 'vike-solid/Head';
 
 function AllServicesButton(props: { href: string; src: string; alt: string; children: HTMLElement | any }) {
   return (
@@ -22,6 +23,7 @@ function AllServicesButtonContainer(props: { children: HTMLElement | any }) {
 export default function Page() {
   return (
     <>
+      <Head><meta name="robots" content="noindex" /></Head>
       <h1 class="md-mt-20 mt-10 md-mb-25 mb-0">All services we offer</h1>
       <a href="/professional-carpet-cleaning-services"><h2 class="hover-c-brand:hover md-mb-15 mb-5">Carpet cleaning services</h2></a>
 
@@ -102,7 +104,7 @@ export default function Page() {
         </AllServicesButton>
       </AllServicesButtonContainer>
 
-      <FleurDivider/>
+      <FleurDivider />
 
       <a href="/professional-upholstery-cleaning-services"><h2 class="hover-c-brand:hover md-mb-15 mb-5">Upholstery cleaning services</h2></a>
 
@@ -162,7 +164,7 @@ export default function Page() {
         </AllServicesButton>
       </AllServicesButtonContainer>
 
-      <FleurDivider/>
+      <FleurDivider />
 
       <a href="/professional-rug-cleaning-services"><h2 class="hover-c-brand:hover md-mb-15 mb-5">Rug cleaning services</h2></a>
 
@@ -196,7 +198,7 @@ export default function Page() {
         </AllServicesButton>
       </AllServicesButtonContainer>
 
-      <FleurDivider/>
+      <FleurDivider />
 
       <h2>Other services</h2>
 
@@ -209,7 +211,7 @@ export default function Page() {
         </AllServicesButton>
       </AllServicesButtonContainer>
 
-      <FleurDivider/>
+      <FleurDivider />
 
       <div class="m-10% mb-3% flex flex-wrap flex-justify-center md-gap-15 gap-10">
         <a href="/prices"><button class="cursor-pointer outline-none bg-brand-second-action hover-bg-brand-second-action-hover:hover font-size-5 font-600 w-200px h-60px c-paper flex flex-items-center flex-justify-center relative b-solid b-rd-3 b-4 b-brand-second-action hover-b-brand-second-action-hover:hover whitespace-normal line-height-6 word-spacing-0.5 py-9" style="box-shadow: 0 0 0 3px rgba(255, 255, 255, .9) inset; letter-spacing: 0.05rem;">PRICES</button></a>
