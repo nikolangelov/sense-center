@@ -53,7 +53,8 @@ app.post('/api/send-email', upload.array('attachments', 10), (req, res) => {
     `;
 
     console.log("\n\n-------------------------------")
-    console.log(new Date().toDateString())
+    const now = new Date()
+    console.log(now.toTimeString() + " " + now.toDateString())
     console.log(emailContent)
 
     const mailOptions = { 
