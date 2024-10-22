@@ -52,6 +52,8 @@ app.post('/api/send-email', upload.array('attachments', 10), (req, res) => {
     How did they find us: ${howFound || 'Not specified'}
     `;
 
+    console.log("\n\n-------------------------------")
+    console.log(new Date().toDateString())
     console.log(emailContent)
 
     const mailOptions = { 

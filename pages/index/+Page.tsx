@@ -12,9 +12,7 @@ import { PriceTable } from '../../components/PriceTable';
 function FullScreenImageGallery() {
 	const [open, setOpen] = createSignal(false);
 
-	const handleClick = () => {
-		setOpen(!open());
-	};
+	const handleClick = () => setOpen(!open())
 
 	return (
 		<div class="relative">
