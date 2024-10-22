@@ -210,9 +210,21 @@ export default function Page() {
 					{ label: "Five seated sofa", value: "from £76.00" },
 					{ label: "Five seated L shaped sofa", value: "from £95.00" },
 					{ label: "For others, please contact us", value: "-" },
+				]}
+			/>
 
-					{ element: <h3 class="bg-paper pl-5 py-6 font-700 my-0 b-#f3f3f3" style="border-style: none none solid none;">Velvet sofa cleaning</h3> },
+			<div class="m-10%  mt-12% flex flex-wrap flex-justify-center">
+				<button class="outline-none bg-brand-action hover-bg-brand-action-hover:hover font-size-6 font-600 w-200px h-60px c-paper flex flex-items-center flex-justify-center relative b-solid b-rd-3 b-4 b-brand-action hover-b-brand-action-hover:hover whitespace-normal line-height-6 word-spacing-0.5 py-9" style="box-shadow: 0 0 0 3px rgba(255, 255, 255, .9) inset; letter-spacing: 0.05rem;"><a href="/professional-upholstery-cleaning-services/sofa" class="c-paper font-size-5">GO TO SERVICE</a></button>
+			</div>
 
+			<FleurDivider />
+
+
+			<h2 class="mb-10 md-mb-20">Velvet sofa cleaning</h2>
+
+			<PriceTable
+				title="Velvet sofa type"
+				items={[
 					{ label: "Footstool (Puff)", value: "from £15.00" },
 					{ label: "Two seated velvet sofa", value: "from £54.00" },
 					{ label: "Two seated L shaped velvet sofa", value: "from £65.00" },
@@ -223,7 +235,6 @@ export default function Page() {
 					{ label: "Five seated velvet sofa", value: "from £95.00" },
 					{ label: "Five seated L shaped velvet sofa", value: "from £106.00" },
 					{ label: "For others, please contact us", value: "-" },
-
 				]}
 			/>
 
@@ -232,6 +243,11 @@ export default function Page() {
 			</div>
 
 			<FleurDivider />
+
+
+
+
+
 
 			<h2 class="mb-10 md-mb-20">Leather sofa cleaning</h2>
 
@@ -270,9 +286,22 @@ export default function Page() {
 					{ label: "Office chair - seat & back", value: "from £14.00" },
 					{ label: "Dining chair - seat", value: "from £7.00" },
 					{ label: "Dining chair - seat & backk", value: "from £13.00" },
+				]}
+			/>
 
-					{ element: <h3 class="bg-paper pl-5 py-6 font-700 my-0 b-#f3f3f3" style="border-style: none none solid none;">Velvet furniture cleaning</h3> },
+			<div class="m-10%  mt-12% flex flex-wrap flex-justify-center">
+				<button class="outline-none bg-brand-action hover-bg-brand-action-hover:hover font-size-6 font-600 w-200px h-60px c-paper flex flex-items-center flex-justify-center relative b-solid b-rd-3 b-4 b-brand-action hover-b-brand-action-hover:hover whitespace-normal line-height-6 word-spacing-0.5 py-9" style="box-shadow: 0 0 0 3px rgba(255, 255, 255, .9) inset; letter-spacing: 0.05rem;"><a href="/professional-upholstery-cleaning-services/furniture" class="c-paper font-size-5">GO TO SERVICE</a></button>
+			</div>
 
+			<FleurDivider />
+
+
+
+			<h2 class="mb-10 md-mb-20">Velvet furniture cleaning</h2>
+
+			<PriceTable
+				title="Velvet furniture type"
+				items={[
 					{ label: "Bed base - Velvet", value: "from £26.00" },
 					{ label: "Headboard - Velvet/Leather", value: "from £20.00" },
 					{ label: "Office chair - seat - Velvet", value: "from £10.00" },
@@ -287,6 +316,11 @@ export default function Page() {
 			</div>
 
 			<FleurDivider />
+
+
+
+
+
 
 			<h2 class="mb-10 md-mb-20">Mattress cleaning</h2>
 

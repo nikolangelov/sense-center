@@ -460,9 +460,12 @@ export default function Page() {
           { label: "Five seated sofa", value: "from £76.00" },
           { label: "Five seated L shaped sofa", value: "from £95.00" },
           { label: "For others, please contact us", value: "-" },
+        ]}
+      />
 
-          { element: <h3 class="bg-paper pl-5 py-6 font-700 my-0 b-#f3f3f3" style="border-style: none none solid none;">Velvet sofa cleaning</h3> },
-
+      <PriceTable
+        title="Velvet sofa type"
+        items={[
           { label: "Footstool (Puff)", value: "from £15.00" },
           { label: "Two seated velvet sofa", value: "from £54.00" },
           { label: "Two seated L shaped velvet sofa", value: "from £65.00" },
@@ -473,7 +476,6 @@ export default function Page() {
           { label: "Five seated velvet sofa", value: "from £95.00" },
           { label: "Five seated L shaped velvet sofa", value: "from £106.00" },
           { label: "For others, please contact us", value: "-" },
-
         ]}
       />
 

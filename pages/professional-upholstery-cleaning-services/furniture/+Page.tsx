@@ -404,9 +404,12 @@ export default function Page() {
           { label: "Headboard", value: "from £15.00" },
           { label: "Office chair - seat", value: "from £8.00" },
           { label: "Office chair - seat & back", value: "from £14.00" },
+        ]}
+      />
 
-          { element: <h3 class="bg-paper pl-5 py-6 font-700 my-0 b-#f3f3f3" style="border-style: none none solid none;">Velvet furniture cleaning</h3> },
-
+      <PriceTable
+        title="Velvet furniture type"
+        items={[
           { label: "Bed base - Velvet", value: "from £26.00" },
           { label: "Headboard - Velvet/Leather", value: "from £20.00" },
           { label: "Office chair - seat - Velvet", value: "from £10.00" },

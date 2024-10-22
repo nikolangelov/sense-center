@@ -320,7 +320,7 @@ export default function Page() {
         <hr class="w-90% h-2px b-hidden bg-paper-border" />
         <div class="flex flex-justify-between pt-3 pb-7 md-pb-9 md-py-2 px-1 w-90% m-auto">
           <div class="font-sans font-500 font-size-4.5 md-font-size-5 uppercase">Message Whatsapp:</div>
-          <div class="font-sans font-500 font-size-4.5 md-font-size-5 whitespace-nowrap"><a class="color-paper-link-hover hover-color-paper-link:hover" href="https://wa.me/+447874333356" target="_blank" rel="noopener">078 7433 3356</a></div>
+          <div class="font-sans font-500 font-size-4.5 md-font-size-5 whitespace-nowrap"><a class="color-paper-link-hover hover-color-paper-link:hover" href="https://wa.me/+447874333356" target="_blank" rel="noopener">Click to chat</a></div>
         </div>
         { /* <hr class="w-90% md-block hidden h-2px b-hidden bg-paper-border" />
         <div class="md-flex hidden flex-col flex-justify-center py-3 md-py-2 w-90% m-auto">

@@ -33,14 +33,14 @@ app.post('/api/send-email', upload.array('attachments', 10), (req, res) => {
         ? `        
     You have received a new message from your website contact form.
         
-    Sender: <b>${senderEmail}</b>
+    Sender: ${senderEmail}
     Name: ${name}
     Message: ${text}
     `
         : `
     You have received a new message from your website contact form.
         
-    Sender: <b>${senderEmail}</b>
+    Sender: ${senderEmail}
     Name: ${name}
     Post code: ${postCode}
     Phone: ${phone}
