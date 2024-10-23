@@ -46,7 +46,7 @@ export default function Page() {
 
       <FullScreenImageGallery />
 
-      <p class="md-max-w-80% font-size-4 line-height-5.5 md-line-height-6 m-auto mt-5 ">*Fine Carpet Cleaning London operates in all of London. The map below shows all of the London postcodes we cover.<br></br>
+      <p class="md-max-w-80% font-size-4 line-height-5.5 md-line-height-6 m-auto mt-5 ">*Fine Carpet Cleaning London operates in all of London. The map above shows all of the London postcodes we cover.<br></br>
         **Transport surcharge may apply for all other post codes.</p>
 
       <FleurDivider />

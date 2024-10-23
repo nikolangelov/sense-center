@@ -201,15 +201,14 @@ const CookieConsent = () => {
     <>
       <Show when={showBanner()}>
         <div
-          class={`fixed bottom-0 left-0 right-0 justify-center items-center z-100 transition-opacity duration-500 ease-in-out ${showBanner() ? "opacity-100" : "opacity-0 hidden"
-            }`}
+          class={`fixed bottom-0 left-0 right-0 justify-center items-center z-100 transition-opacity duration-500 ease-in-out ${showBanner() ? "opacity-100" : "opacity-0 hidden"}`}
         >
           <div class="fixed bg-paper w-full flex flex-col md-flex-row flex-justify-evenly md-flex-justify-between flex-items-center h-40 md-h-16 relative" style="box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.4);">
             <p
               class="mb-0 mt-0 font-size-3.8 mx-3 md-ml-8 md-mr-0 text-left word-spacing-1 line-height-5.5"
               style="font-family:'Roboto'"
             >
-              We use cookies tp improve your experience on this website. By continuing to use our site, you accept our use of cookies.
+              We use cookies to improve your experience on this website. By continuing to use our site, you accept our use of cookies.
             </p>
             <div class="flex flex-justify-between flex-items-center md-mr-8 md-gap-0 gap-2">
               <button
@@ -218,6 +217,7 @@ const CookieConsent = () => {
               >
                 Close
               </button>
+
               <a
                 href="/cookie-policy"
                 target="_blank"
@@ -233,47 +233,48 @@ const CookieConsent = () => {
 
       <Show when={showSettings()}>
         <div class="fixed inset-0 bg-gray-800 bg-opacity-50 flex justify-center items-center z-50 mt-20 botom-0">
-          <div class="bg-paper px-10 pt-8 pb-6 w-11/12 md:w-3/4 lg:w-2/3">
-            <h2 class="mb-0 md-mb-8 md-mt-3 mt-0 line-height-7 sm-line-height-6 md-line-height-8 font-size-6 md-font-size-10">Настройки на бисквитките</h2>
+          <div class="bg-paper px-10 pt-8 pb-6 w-11/12 md:w-3/4 lg:w-2/3 b-rd-2">
+            <h2 class="mb-0 md-mb-8 md-mt-3 mt-0 line-height-7 sm-line-height-6 md-line-height-8 font-size-6 md-font-size-10">Cookie Settings</h2>
 
             <CookieCategory
               name="necessary"
-              title="Строго необходими бисквитки"
-              description="Тези бисквитки са необходими за функционирането на сайта и не могат да бъдат изключени."
+              title="Strictly Necessary Cookies"
+              description="These cookies are necessary for the website to function and cannot be disabled."
             />
 
             <CookieCategory
               name="functional"
-              title="Функционални бисквитки"
-              description="Тези бисквитки позволяват на уебсайта да предостави подобрена функционалност и персонализация."
+              title="Functional Cookies"
+              description="These cookies allow the website to provide enhanced functionality and personalization."
             />
 
             <CookieCategory
               name="analytics"
-              title="Аналитични бисквитки"
-              description="Тези бисквитки ни помагат да разберем как посетителите взаимодействат с уебсайта."
+              title="Analytics Cookies"
+              description="These cookies help us understand how visitors interact with the website."
             />
 
             <CookieCategory
               name="advertising"
-              title="Рекламни бисквитки"
-              description="Тези бисквитки се използват за показване на релевантни реклами."
+              title="Advertising Cookies"
+              description="These cookies are used to display relevant advertisements."
             />
 
             <CookieCategory
               name="thirdParty"
-              title="Бисквитки на трети страни"
-              description="Тези бисквитки се задават от външни услуги, които добавяме към страниците."
+              title="Third-Party Cookies"
+              description="These cookies are set by external services that we add to the website."
             />
 
             <div class="flex justify-center md-justify-end gap-3 mt-1 md-mt-0 pt-0">
-              <button class="b-solid b-2 b-brand b-rd-1 bg-brand hover-bg-brand-second-action-hover:hover transition-colors hover-b-brand-second-action-hover:hover font-700 font-size-2.7 md-font-size-4 uppercase c-paper cursor-pointer py-1.5 md-py-3.5 px-4 md-px-5 mt-4 md-mt-10 line-height-4" onClick={savePreferences}>Save settings</button>
-              <button class="b-solid b-2 b-brand b-rd-1 bg-paper hover-c-brand-second-action-hover:hover transition-colors hover-b-brand-second-action-hover:hover font-700 font-size-2.7 md-font-size-4 uppercase c-brand cursor-pointer py-1.5 md-py-3.5 px-4 md-px-5 mt-4 md-mt-10 line-height-4" onClick={acceptAll}>Accept all</button>
+              <button class="b-solid b-2 b-brand b-rd-1 bg-brand hover-bg-brand-second-action-hover:hover transition-colors hover-b-brand-second-action-hover:hover font-700 font-size-2.7 md-font-size-4 uppercase c-paper cursor-pointer py-1.5 md-py-3.5 px-4 md-px-5 mt-4 md-mt-10 line-height-4" onClick={acceptAll}>Accept all</button>
+              <button class="b-solid b-2 b-brand b-rd-1 bg-paper hover-c-brand-second-action-hover:hover transition-colors hover-b-brand-second-action-hover:hover font-700 font-size-2.7 md-font-size-4 uppercase c-brand cursor-pointer py-1.5 md-py-3.5 px-4 md-px-5 mt-4 md-mt-10 line-height-4" onClick={savePreferences}>Save settings</button>
               <button class="b-solid b-2 b-brand b-rd-1 bg-paper hover-c-brand-second-action-hover:hover transition-colors hover-b-brand-second-action-hover:hover font-700 font-size-2.7 md-font-size-4 uppercase c-brand cursor-pointer py-1.5 md-py-3.5 px-4 md-px-5 mt-4 md-mt-10 line-height-4" onClick={() => setShowSettings(false)}>Close</button>
             </div>
           </div>
         </div>
       </Show>
+
     </>
   );
 };
@@ -516,7 +517,7 @@ export default function LayoutDefault(props: { children?: JSX.Element }) {
           <MainFooterMenuItem href="/professional-carpet-cleaning-services">Professional Carpet Cleaning Services</MainFooterMenuItem>
           <MainFooterMenuItem href="/professional-upholstery-cleaning-services">Professional Upholstery Cleaning Services</MainFooterMenuItem>
           <MainFooterMenuItem href="/professional-rug-cleaning-services">Professional Rug Cleaning Services</MainFooterMenuItem>
-          <MainFooterMenuItem href="/stain-protection-services">Professional Stain protection services</MainFooterMenuItem>
+          <MainFooterMenuItem href="/stain-protection-services">Professional Stain Protection Services</MainFooterMenuItem>
           <MainFooterMenuItem href="/professional-stain-removal-services">Professional Stain Removal Services</MainFooterMenuItem>
         </div>
         <div class="flex flex-col gap-2 flex-wrap line-height-0 my-5">

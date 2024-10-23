@@ -5,7 +5,7 @@ import { createCollapsable } from "../../components/Collapsable";
 import { Typography } from '../../components/Typography';
 import { ReviewSlider, StarReview } from '../../components/ReviewSlider';
 import { GallerySlider } from '../../components/GallerySlider';
-import {FleurDivider} from "../../components/FleurDivider";
+import { FleurDivider } from "../../components/FleurDivider";
 import { VideoPlayer } from '../../components/VideoPlayer';
 import { PriceTable } from '../../components/PriceTable';
 
@@ -289,11 +289,10 @@ export default function Page() {
 					style="display:none;visibility:hidden">
 				</iframe>
 			</noscript>
-
-			<h1 class="mt-10 md-mt-20 font-size-14 md-font-size-21 md-line-height-18 line-height-16">Fine Carpet Cleaning</h1>
-			<div class="flex flex-justify-center"><img class="b-rd-3 md-my-20 my-10 md-mt-10 mt-2" src="/assets/home/quality-rug-cleaning-10.jpg" alt="quality-rug-cleaning-10" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 30%); width: -moz-available; width: -webkit-fill-available; width: fill-available;" /></div>
-			<div class="mt-10 py-8 px-8 md-px-14 b-rd-3 bg-paper line-height-8 text-justify font-size-4.4" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 18%);">Fine Carpet Cleaning is a carpet cleaning company that operates in all London boroughs. We provide a variety of commercial and domestic carpet cleaning services, tailoring them to our client's needs.</div>
-
+				<h1 class="mt-10 md-mt-20 font-size-14 md-font-size-21 md-line-height-18 line-height-16">Fine Carpet Cleaning</h1>
+				<div class="flex flex-justify-center"><img class="b-rd-3 md-my-20 my-10 md-mt-10 mt-2" src="/assets/home/quality-rug-cleaning-10.jpg" alt="quality-rug-cleaning-10" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 30%); width: -moz-available; width: -webkit-fill-available; width: fill-available;" /></div>
+				<div class="mt-10 py-8 px-8 md-px-14 b-rd-3 bg-paper line-height-8 text-justify font-size-4.4" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 18%);">Fine Carpet Cleaning is a carpet cleaning company that operates in all London boroughs. We provide a variety of commercial and domestic carpet cleaning services, tailoring them to our client's needs.</div>
+			
 			<FleurDivider />
 
 			<h2>Our main cleaning services</h2>
@@ -518,27 +517,27 @@ export default function Page() {
 			<FleurDivider />
 
 			<h2>Working hours</h2>
-			
-            <PriceTable
-                title="Day"
-                items={[
-                    { label: "Monday", value: "7:30 - 19:00" },
-                    { label: "Tuesday", value: "7:30 - 19:00" },
-                    { label: "Wednesday", value: "7:30 - 19:00" },
-                    { label: "Thursday", value: "7:30 - 19:00" },
-                    { label: "Friday", value: "7:30 - 19:00" },
-                    { label: "Saturday", value: "7:30 - 19:00" },
-                    { label: "Sunday", value: "7:30 - 19:00" },
-                ]}
-            />
 
-			<FleurDivider/>
+			<PriceTable
+				title="Day"
+				items={[
+					{ label: "Monday", value: "7:30 - 19:00" },
+					{ label: "Tuesday", value: "7:30 - 19:00" },
+					{ label: "Wednesday", value: "7:30 - 19:00" },
+					{ label: "Thursday", value: "7:30 - 19:00" },
+					{ label: "Friday", value: "7:30 - 19:00" },
+					{ label: "Saturday", value: "7:30 - 19:00" },
+					{ label: "Sunday", value: "7:30 - 19:00" },
+				]}
+			/>
+
+			<FleurDivider />
 
 			<h2>Frequently asked questions</h2>
 
 			<FaqSection />
 
-			<FleurDivider/>
+			<FleurDivider />
 
 			<div class="m-10% mb-3% flex flex-wrap flex-justify-center md-gap-15 gap-10">
 				<a href="/contact-us"><button class="cursor-pointer outline-none bg-brand-action hover-bg-brand-action-hover:hover font-size-5 font-600 w-200px h-60px c-paper flex flex-items-center flex-justify-center relative b-solid b-rd-3 b-4 b-brand-action hover-b-brand-action-hover:hover whitespace-normal line-height-6 word-spacing-0.5 py-9" style="box-shadow: 0 0 0 3px rgba(255, 255, 255, .9) inset; letter-spacing: 0.05rem;">REQUEST A QUOTE</button></a>
@@ -546,8 +545,4 @@ export default function Page() {
 			</div>
 		</>
 	);
-}
-
-function fetchSomeData() {
-	throw new Error('Function not implemented.');
 }

@@ -264,6 +264,10 @@ export default function Page() {
                 Gumtree
               </label>
               <label>
+                <input type="radio" name="howfound" value="Facebook" onChange={handleRadioChange} />
+                Facebook
+              </label>
+              <label>
                 <input type="radio" name="howfound" value="Recommendation" onChange={handleRadioChange} />
                 Recommendation
               </label>

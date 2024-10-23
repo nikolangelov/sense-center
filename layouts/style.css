@@ -16,6 +16,7 @@ a {
 body {
   margin: 0 auto;
   background-color: #f7f7f7;
+  background-size: 10%;
 }
 
 #page-content {
