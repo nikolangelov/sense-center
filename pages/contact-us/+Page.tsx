@@ -180,6 +180,9 @@ export default function Page() {
 
   const handleRadioChange = (event: { target: { value: string; }; }) => {
     setHowFound(event.target.value);
+    if (event.target.value !== 'Other') {
+      setText(''); // Clear the message field if a different option is selected
+    }
   };
 
   const closeModal = () => {
@@ -280,6 +283,16 @@ export default function Page() {
                 Other
               </label>
             </div>
+
+            {howFound() === 'Other' && (
+              <textarea
+                value={text()}
+                onChange={(e) => setText(e.target.value)}
+                placeholder="Please specify: (Optional)"
+                class="mt-2 bg-gray-1 b-none w-full pt-3 pl-3 pb-30 b-rd-1 c-paper-inv font-sans font-size-4"
+                style="box-shadow: 0 1px 2px rgba(0, 0, 0, .12) inset;"
+              />
+            )}
 
             <label class="pt-3">Upload images (Optional):</label>
             <input type="file" id="email-input" multiple onChange={handleFileChange} />
