@@ -41,10 +41,10 @@ app.post('/api/send-email', upload.array('attachments', 10), (req, res) => {
     You have received a new message from your website contact form.
         
     **Sender**: ${senderEmail}
-    **Name**: ${name}
-    **Post code**: ${postCode}
-    **Phone**: ${phone}
-    **Message**: ${text}
+<span style="font-weight:bold;">Name:</span> ${name}<br>
+<span style="font-weight:bold;">Post code:</span> ${postCode}<br>
+<span style="font-weight:bold;">Phone:</span> ${phone}<br>
+<span style="font-weight:bold;">Message:</span> ${text}
 
     Services Required:
     ${services ? services.split(', ').join('\n') : 'No services selected'}
@@ -57,7 +57,7 @@ app.post('/api/send-email', upload.array('attachments', 10), (req, res) => {
     console.log(now.toTimeString() + " " + now.toDateString())
     console.log(emailContent)
 
-    const mailOptions = { 
+    const mailOptions = {
         from: 'office@finecarpetcleaning.co.uk',
         to: 'office@finecarpetcleaning.co.uk',
         subject: 'New message from contact form',
