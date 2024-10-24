@@ -25,7 +25,6 @@ declare global {
 const GA_MEASUREMENT_ID = 'G-PWPSS6VWF1'; // Replace with your actual GA4 Measurement ID
 
 const CookieConsent = () => {
-  console.log("CookieConsent component initialized");
 
   const [hasMadeChoice, setHasMadeChoice] = createSignal(false);
   const [showBanner, setShowBanner] = createSignal(false); // Start with false to keep it hidden
@@ -39,14 +38,12 @@ const CookieConsent = () => {
   });
 
   const loadGoogleAnalytics = () => {
-    console.log("Loading Google Analytics...");
     const script = document.createElement("script");
     script.src = `https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`;
     script.async = true;
     document.head.appendChild(script);
 
     script.onload = () => {
-      console.log("Google Analytics loaded");
       window.dataLayer = window.dataLayer || [];
       window.gtag = function () {
         window.dataLayer.push(arguments);
@@ -71,12 +68,10 @@ const CookieConsent = () => {
   };
 
   onMount(() => {
-    console.log("CookieConsent component mounted");
     const savedPreferences = Cookies.get("cookiePreferences");
     const bannerClosed = Cookies.get("bannerClosed");
 
     if (savedPreferences) {
-      console.log("Saved preferences found:", savedPreferences);
       const preferences = JSON.parse(savedPreferences);
       setCookiePreferences(preferences);
       setHasMadeChoice(true);
@@ -86,37 +81,21 @@ const CookieConsent = () => {
     if (bannerClosed !== "true" && !savedPreferences) {
       setShowBanner(true);
     }
-
-    console.log(
-      "Initial showBanner value:",
-      showBanner(),
-      "hasMadeChoice:",
-      hasMadeChoice()
-    );
   });
 
   const savePreferences = () => {
-    console.log("Saving preferences:", cookiePreferences());
     Cookies.set("cookiePreferences", JSON.stringify(cookiePreferences()), {
       expires: 365,
       path: "/",
     });
     Cookies.set("bannerClosed", "true", { expires: 365, path: "/" });
-    console.log("Cookies set");
     setHasMadeChoice(true);
     setShowBanner(false);
     setShowSettings(false);
     applyPreferences();
-    console.log(
-      "After saving, showBanner:",
-      showBanner(),
-      "hasMadeChoice:",
-      hasMadeChoice()
-    );
   };
 
   const closeBanner = () => {
-    console.log("Closing banner without saving preferences");
     Cookies.set("bannerClosed", "true", { expires: 365, path: "/" });
     setShowBanner(false);
   };
