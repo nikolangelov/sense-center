@@ -335,12 +335,12 @@ export default function Page() {
       <h2>The process of our rug steam cleaning service:</h2>
       <div class="mt-20 py-8 px-8 md-px-14 bg-paper b-rd-3" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 18%);">
         <ol style="counter-reset: ordered; list-style: none;">
-          <li class="ml--5"><Typography variant="body">We start by doing a pre-cleaning survey. We apply a unique strategy to each rug, taking into account its kind, condition, and level of pollution. This is required to determine the approximate amount of detergent and equipment required for steam cleaning the rug.</Typography></li>
-          <li class="ml--5"><Typography variant="body">Using a high-filtration twin-motor Hoover cleaner made especially for high-performance steam cleaning is the second stage. This gets rid of any dust, dry soils, and loose dirt.</Typography></li>
-          <li class="ml--5"><Typography variant="body">Then, we use a strong pre-spray that is intended to loosen oily soil and other contaminants from your rug, allowing our powerful extraction machines to safely remove them.</Typography></li>
-          <li class="ml--5"><Typography variant="body">The cleaning solution is then applied to the rug fibres. In doing so, the soil is loosened and prepared for extraction.</Typography></li>
-          <li class="ml--5"><Typography variant="body">After that, the rug fibres are deeply and gently injected with pure, softened hot water. This lets our strong machine loosen the dirt so it can be removed efficiently. Any leftover stains and spots are addressed one at a time with carefully chosen cleaning solutions.</Typography></li>
-          <li class="ml--5"><Typography variant="body">In order to make sure that there are no chemical remnants from the steam cleaning, we rinse and extract once more.</Typography></li>
+          <li class="md-ml--5"><Typography variant="body">We start by doing a pre-cleaning survey. We apply a unique strategy to each rug, taking into account its kind, condition, and level of pollution. This is required to determine the approximate amount of detergent and equipment required for steam cleaning the rug.</Typography></li>
+          <li class="md-ml--5"><Typography variant="body">Using a high-filtration twin-motor Hoover cleaner made especially for high-performance steam cleaning is the second stage. This gets rid of any dust, dry soils, and loose dirt.</Typography></li>
+          <li class="md-ml--5"><Typography variant="body">Then, we use a strong pre-spray that is intended to loosen oily soil and other contaminants from your rug, allowing our powerful extraction machines to safely remove them.</Typography></li>
+          <li class="md-ml--5"><Typography variant="body">The cleaning solution is then applied to the rug fibres. In doing so, the soil is loosened and prepared for extraction.</Typography></li>
+          <li class="md-ml--5"><Typography variant="body">After that, the rug fibres are deeply and gently injected with pure, softened hot water. This lets our strong machine loosen the dirt so it can be removed efficiently. Any leftover stains and spots are addressed one at a time with carefully chosen cleaning solutions.</Typography></li>
+          <li class="md-ml--5"><Typography variant="body">In order to make sure that there are no chemical remnants from the steam cleaning, we rinse and extract once more.</Typography></li>
         </ol>
       </div>
 

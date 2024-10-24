@@ -16,12 +16,12 @@ export function PriceTable(props: { title: string, items: TTableEntry[], childre
 				</div>
 				<For each={props.items}>
 					{(entry) => <div class="w-full flex flex-row font-sans">
-						<div class="w-full bg-paper pl-5 py-2 font-600 b-2px b-#f3f3f3" style="border-style: none solid solid none;">{entry.label}</div>
-						<div class="w-full bg-paper pl-5 py-2 font-600 b-2px b-#f3f3f3 w-70%" style="border-style: none none solid none;">{entry.value}</div>
+						<div class="w-full bg-paper pl-5 py-2 font-600 b-2px b-#f3f3f3 text-left" style="border-style: none solid solid none;">{entry.label}</div>
+						<div class="w-full bg-paper pl-5 py-2 font-600 b-2px b-#f3f3f3 w-70% text-left" style="border-style: none none solid none;">{entry.value}</div>
 					</div>
 					}
 				</For>
-				<div class="w-full bg-#2e5c47"><p class="font-size-3.5 md-font-size-4 px-3 md-my-2 c-paper md-line-height-5 line-height-5 word-spacing-0.5 text-left">*We also offer performing services out of working hours and at night, which will be included in the final price.<br></br>**Minimum charge £65</p></div>
+				<div class="w-full bg-#2e5c47"><p class="font-size-3.4 md-font-size-4 px-3 md-my-2 c-paper line-height-5 text-left">*We also offer performing services out of working hours and at night, which will be included in the final price.<br></br>**Minimum charge £65</p></div>
 			</div>
 		</div>
 	);

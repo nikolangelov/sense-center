@@ -312,12 +312,12 @@ export default function Page() {
       <h2>The process of our professional furniture cleaning services:</h2>
       <div class="mt-20 py-8 px-8 md-px-14 bg-paper b-rd-3" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 18%);">
         <ol style="counter-reset: ordered; list-style: none;">
-          <li class="ml--5"><Typography variant="body">We begin with a pre-cleaning survey to determine the specific fabric and identify the appropriate cleaning detergents and tools needed for the furniture upholstery cleaning services.</Typography></li>
-          <li class="ml--5"><Typography variant="body">Then we conduct a dry vacuum cleaning on the fabric to eliminate loose dirt, dry soil, and dust.</Typography></li>
-          <li class="ml--5"><Typography variant="body">After that, we apply a heavy-duty pre-spray designed to lift oily dirt and pollutants from the furniture, making them ready for extraction using high-performance machines.</Typography></li>
-          <li class="ml--5"><Typography variant="body">We work the cleaning solution onto the upholstery to loosen the soiling in preparation for extraction.</Typography></li>
-          <li class="ml--5"><Typography variant="body">Then we gently inject pure, softened hot water (reaching a maximum of 135 degrees) deep into the fibres, releasing the soil. We utilise a powerful hot water extraction machine to effectively remove the soil, addressing any remaining spots and stains individually with special products.</Typography></li>
-          <li class="ml--5"><Typography variant="body">Finally, we conclude the furniture upholstery cleaning services by rinsing and extracting again to ensure no chemical residues are left behind.</Typography></li>
+          <li class="md-ml--5"><Typography variant="body">We begin with a pre-cleaning survey to determine the specific fabric and identify the appropriate cleaning detergents and tools needed for the furniture upholstery cleaning services.</Typography></li>
+          <li class="md-ml--5"><Typography variant="body">Then we conduct a dry vacuum cleaning on the fabric to eliminate loose dirt, dry soil, and dust.</Typography></li>
+          <li class="md-ml--5"><Typography variant="body">After that, we apply a heavy-duty pre-spray designed to lift oily dirt and pollutants from the furniture, making them ready for extraction using high-performance machines.</Typography></li>
+          <li class="md-ml--5"><Typography variant="body">We work the cleaning solution onto the upholstery to loosen the soiling in preparation for extraction.</Typography></li>
+          <li class="md-ml--5"><Typography variant="body">Then we gently inject pure, softened hot water (reaching a maximum of 135 degrees) deep into the fibres, releasing the soil. We utilise a powerful hot water extraction machine to effectively remove the soil, addressing any remaining spots and stains individually with special products.</Typography></li>
+          <li class="md-ml--5"><Typography variant="body">Finally, we conclude the furniture upholstery cleaning services by rinsing and extracting again to ensure no chemical residues are left behind.</Typography></li>
         </ol>
       </div>
 

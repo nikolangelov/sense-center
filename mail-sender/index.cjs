@@ -40,11 +40,11 @@ app.post('/api/send-email', upload.array('attachments', 10), (req, res) => {
         : `
     You have received a new message from your website contact form.
         
-    Sender: ${senderEmail}
-    Name: ${name}
-    Post code: ${postCode}
-    Phone: ${phone}
-    Message: ${text}
+    **Sender**: ${senderEmail}
+    **Name**: ${name}
+    **Post code**: ${postCode}
+    **Phone**: ${phone}
+    **Message**: ${text}
 
     Services Required:
     ${services ? services.split(', ').join('\n') : 'No services selected'}

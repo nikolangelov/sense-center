@@ -304,11 +304,11 @@ export default function Page() {
       <h2>The process of our dry rug cleaning service:</h2>
       <div class="mt-20 py-8 px-8 md-px-14 bg-paper b-rd-3" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 18%);">
         <ol style="counter-reset: ordered; list-style: none;">
-          <li class="ml--5"><Typography variant="body">A powerful vacuum cleaner is used to clean the rug so that most of the dirt and grimy particles are extracted.</Typography></li>
-          <li class="ml--5"><Typography variant="body">After that, a biodegradable cleaning compound is simmered onto the rug, which attracts dirt and grime and brings them to the surface.</Typography></li>
-          <li class="ml--5"><Typography variant="body">Then a machine is used to agitate the cleaning compound into the fibres.</Typography></li>
-          <li class="ml--5"><Typography variant="body">Finally, everything is vacuumed off, leaving the rug clean, fresh and dry.</Typography></li>
-          <li class="ml--5"><Typography variant="body">If the area that needs to be cleaned is small, we may brush the cleaning powder into the carpet with a large brush by hand and then we will vacuum the area. We use this method for small spaces that don’t need the heavy equipment we would normally use, and the effect is the same, leaving the rug clean and fresh.</Typography></li>
+          <li class="md-ml--5"><Typography variant="body">A powerful vacuum cleaner is used to clean the rug so that most of the dirt and grimy particles are extracted.</Typography></li>
+          <li class="md-ml--5"><Typography variant="body">After that, a biodegradable cleaning compound is simmered onto the rug, which attracts dirt and grime and brings them to the surface.</Typography></li>
+          <li class="md-ml--5"><Typography variant="body">Then a machine is used to agitate the cleaning compound into the fibres.</Typography></li>
+          <li class="md-ml--5"><Typography variant="body">Finally, everything is vacuumed off, leaving the rug clean, fresh and dry.</Typography></li>
+          <li class="md-ml--5"><Typography variant="body">If the area that needs to be cleaned is small, we may brush the cleaning powder into the carpet with a large brush by hand and then we will vacuum the area. We use this method for small spaces that don’t need the heavy equipment we would normally use, and the effect is the same, leaving the rug clean and fresh.</Typography></li>
         </ol>
       </div>
 

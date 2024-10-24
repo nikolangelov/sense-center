@@ -534,7 +534,7 @@ export default function LayoutDefault(props: { children?: JSX.Element }) {
         </div>
       </MainFooter>
       <BottomFooter>
-        <p class="text-center lg-font-size-4 md-font-size-3 font-size-3.7 font-400 line-height-6 font-sans mb-0">Copyright &copy; 2024 Fine Carpet Cleaning London</p>
+        <p class="text-center lg-font-size-4 md-font-size-3 font-size-3.7 font-400 line-height-6 font-sans mb-0">Copyright &copy; <CurrentYear/> Fine Carpet Cleaning London</p>
         <div class="flex flex-col md-flex-row md-gap-5 flex-items-center flex-justify-center">
           <BottomFooterMenuItem href="/terms-and-conditions">Terms and conditions</BottomFooterMenuItem>
           <div class="hidden md-block">┃</div>
@@ -546,6 +546,18 @@ export default function LayoutDefault(props: { children?: JSX.Element }) {
     </div>
   );
 }
+
+const CurrentYear = () => {
+  const [year, setYear] = createSignal<number>(new Date().getFullYear());
+
+  onMount(() => {
+    setYear(new Date().getFullYear());
+  });
+
+  return (
+    <span id="year">{year()}</span>
+  );
+};
 
 function Topbar(props: { children: JSX.Element }) {
   return (

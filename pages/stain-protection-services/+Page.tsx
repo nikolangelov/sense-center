@@ -398,9 +398,12 @@ export default function Page() {
           { label: "Through lounge", value: "from £35.00" },
           { label: "Box room", value: "from £11.00" },
           { label: "Bathroom", value: "from £5.00" },
+        ]}
+      />
 
-          { element: <h3 class="bg-paper pl-5 py-6 font-700 my-0 b-#f3f3f3" style="border-style: none none solid none;">Upholstery type</h3> },
-
+      <PriceTable
+        title="Upholstery type"
+        items={[
           { label: "Footstool (Puff)", value: "from £4.00" },
           { label: "Two seated", value: "from £9.00" },
           { label: "Two seated L shaped", value: "from £11.00" },
@@ -416,6 +419,7 @@ export default function Page() {
           { label: "For others, please contact us", value: "-" },
         ]}
       />
+
 
       <button class="outline-none bg-brand-second-action hover-bg-brand-second-action-hover:hover font-size-6 font-600 w-250px h-60px c-paper flex flex-items-center flex-justify-center relative b-solid b-rd-3 b-4 b-brand-second-action hover-b-brand-second-action-hover:hover whitespace-normal line-height-6 word-spacing-0.5 py-9 my-20 mx-auto" style="box-shadow: 0 0 0 3px rgba(255, 255, 255, .9) inset; letter-spacing: 0.05rem;"><a href="/contact-us" class="c-paper font-size-5">REQUEST A QUOTE</a></button>
 
