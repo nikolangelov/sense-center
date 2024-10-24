@@ -33,9 +33,9 @@ app.post('/api/send-email', upload.array('attachments', 10), (req, res) => {
         ? `        
     You have received a new message from your website contact form.
         
-    Sender: ${senderEmail}
-    Name: ${name}
-    Message: ${text}
+    **Sender**: ${senderEmail}
+    **Name**: ${name}
+    **Message**: ${text}
     `
         : `
     You have received a new message from your website contact form.
