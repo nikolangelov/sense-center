@@ -319,7 +319,7 @@ function MenuItem(props: { href: string, children: JSX.Element }) {
 
 function ServiceMenuItem(props: { href: string, children: JSX.Element, closeMenu: () => void }) {
   const handleClick = () => {
-    props.closeMenu(); // Close the menu when this link is clicked
+    props.closeMenu(); 
   };
 
   return (
@@ -356,7 +356,7 @@ function DropDownMenuDesktop(props: { closeMenu: () => void }) {
   };
 
   return (
-    <div class="desktop-dropdawn-menu flex top-19.7 w-full flex-justify-center left-0 flex-row hidden absolute bg-paper z-1 m-0 py-4 px-5 flex-nowrap" style="box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);">
+    <div class="desktop-dropdawn-menu flex top-18  w-full flex-justify-center left-0 flex-row hidden absolute bg-paper z-1 m-0 py-4 px-5 flex-nowrap" style="box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);">
       <div class="flex flex-col flex-justify-center">
         <a href="/professional-carpet-cleaning-services" onClick={handleClick}><h3 class="whitespace-normal text-center hover-c-brand:hover font-size-6.5">Carpet cleaning services</h3></a>
         <div class="flex flex-row flex-wrap hidden flex-items-center flex-content-center flex-nowrap">

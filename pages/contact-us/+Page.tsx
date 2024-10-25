@@ -264,6 +264,10 @@ export default function Page() {
                 Google
               </label>
               <label>
+                <input type="radio" name="howfound" value="Bing" onChange={handleRadioChange} />
+                Bing
+              </label>
+              <label>
                 <input type="radio" name="howfound" value="Gumtree" onChange={handleRadioChange} />
                 Gumtree
               </label>
@@ -289,7 +293,7 @@ export default function Page() {
               <textarea
                 value={otherText()}
                 onChange={(e) => setOtherText(e.target.value)}
-                placeholder="Please specify:"
+                placeholder="Please specify: (Optional)"
                 class="mt-2 bg-gray-1 b-none w-full pt-3 pl-3 pb-30 b-rd-1 c-paper-inv font-sans font-size-4"
                 style="box-shadow: 0 1px 2px rgba(0, 0, 0, .12) inset;"
               />

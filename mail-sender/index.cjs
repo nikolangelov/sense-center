@@ -49,8 +49,8 @@ app.post('/api/send-email', upload.array('attachments', 10), (req, res) => {
         Services Required:
         ${services ? services.split(', ').join('\n') : 'No services selected'}
   
-        How did they find us: ${howFoundText};
-      `;
+        How did they find us: ${howFound || 'Not specified' || howFoundText}; 
+        `;
 
     console.log("\n\n-------------------------------")
     const now = new Date()
