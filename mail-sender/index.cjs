@@ -25,32 +25,32 @@ const transporter = nodemailer.createTransport({
     }
 });
 
-app.post('/api/send-email', upload.array('attachments', 10), (req, res) => { 
+app.post('/api/send-email', upload.array('attachments', 10), (req, res) => {
     const { senderEmail, text, postCode, phone, name, services, howFound, howFoundOther } = req.body;
     const attachments = req.files;
   
+    // Use howFoundText to include 'howFoundOther' if 'Other' is selected
     const howFoundText = howFound === 'Other' ? `${howFound} - ${howFoundOther || 'Not specified'}` : (howFound || 'Not specified');
   
     const emailContent = !phone || phone.length === 0
-    ? `You have received a new message from your website contact form.
-    
-    Sender: ${senderEmail}
-    Name: ${name}
-    Message: ${text}`
-    : 
-    `You have received a new message from your website contact form.
-    
-    Sender: ${senderEmail}
-    Name: ${name}
-    Post code: ${postCode}
-    Phone: ${phone}
-    Message: ${text}
-    
-    Services Required:
-    ${services ? services.split(', ').join('\n') : 'No services selected'}
-
-        How did they find us: ${howFound || 'Not specified' || howFoundText}; 
-    `;
+      ? `You have received a new message from your website contact form.
+  
+        Sender: ${senderEmail}
+        Name: ${name}
+        Message: ${text}`
+      : `You have received a new message from your website contact form.
+  
+        Sender: ${senderEmail}
+        Name: ${name}
+        Post code: ${postCode}
+        Phone: ${phone}
+        Message: ${text}
+  
+        Services Required:
+        ${services ? services.split(', ').join('\n') : 'No services selected'}
+  
+        How did they find us: ${howFoundText};
+      `;
 
     console.log("\n\n-------------------------------")
     const now = new Date()
