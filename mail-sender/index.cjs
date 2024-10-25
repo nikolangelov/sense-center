@@ -6,6 +6,8 @@ const cors = require('cors');
 
 const app = express();
 
+app.use(express.json()); // Middleware to parse JSON
+
 app.use(cors({
     origin: '*',
 }));
@@ -25,32 +27,31 @@ const transporter = nodemailer.createTransport({
     }
 });
 
-app.post('/api/send-email', upload.array('attachments', 10), (req, res) => {
+app.post('/api/send-email', (req, res) => {
     const { senderEmail, text, postCode, phone, name, services, howFound, howFoundOther } = req.body;
     const attachments = req.files;
   
-    // Use howFoundText to include 'howFoundOther' if 'Other' is selected
-    const howFoundText = howFound === 'Other' ? `${howFound} - ${howFoundOther || 'Not specified'}` : (howFound || 'Not specified');
+    const howFoundText = howFound === 'Other' ? `Other - ${howFoundOther || 'Not specified'}` : howFound || 'Not specified';
   
-    const emailContent = !phone || phone.length === 0
+    const emailContent = phone && phone.length > 0
       ? `You have received a new message from your website contact form.
   
-        Sender: ${senderEmail}
-        Name: ${name}
-        Message: ${text}`
+      Sender: ${senderEmail}
+      Name: ${name}
+      Post code: ${postCode}
+      Phone: ${phone}
+      Message: ${text}
+  
+      Services Required:
+      ${services ? services.split(', ').join('\n') : 'No services selected'}
+  
+      How did they find us: ${howFoundText}`
+      
       : `You have received a new message from your website contact form.
   
-        Sender: ${senderEmail}
-        Name: ${name}
-        Post code: ${postCode}
-        Phone: ${phone}
-        Message: ${text}
-  
-        Services Required:
-        ${services ? services.split(', ').join('\n') : 'No services selected'}
-  
-        How did they find us: ${howFound || 'Not specified' || howFoundText}; 
-        `;
+      Sender: ${senderEmail}
+      Name: ${name}
+      Message: ${text}`;
 
     console.log("\n\n-------------------------------")
     const now = new Date()
