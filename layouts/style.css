@@ -318,3 +318,26 @@ ol>li>ul>li:before {
     gap: 4rem;
   }
 }
+
+
+.progress-bar-contacts-form {
+  background: linear-gradient(to right, #0d2e29, #1a875e);
+}
+
+.popper {
+  position: absolute;
+  width: 40px; /* Adjust width as needed */
+  height: 40px; /* Adjust height as needed */
+  background-color: transparent; /* Make background transparent */
+  border: 5px solid #FFF; /* Example styling for the poppers */
+  border-radius: 50%; /* Circular shape */
+  top: 20px; /* Position from the top of the modal */
+}
+
+#popper-left {
+  left: -50px; /* Position it to the left */
+}
+
+#popper-right {
+  right: -50px; /* Position it to the right */
+}

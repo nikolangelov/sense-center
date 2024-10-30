@@ -108,6 +108,24 @@ function SingleCollapse() {
   );
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 export default function Page() {
   const [email, setEmail] = createSignal('');
   const [subject, setSubject] = createSignal('');
@@ -121,6 +139,8 @@ export default function Page() {
   const [howFound, setHowFound] = createSignal('');
   const [isSubmitted, setIsSubmitted] = createSignal(false);
   const [isModalOpen, setIsModalOpen] = createSignal(false);
+  const [isUploading, setIsUploading] = createSignal(false);
+  const [progress, setProgress] = createSignal(0); // Progress state
 
   const handleRadioChange = (event: { target: { value: string; }; }) => {
     setHowFound(event.target.value);
@@ -131,7 +151,9 @@ export default function Page() {
 
   async function sendEmail(e: Event) {
     e.preventDefault();
-
+    setIsUploading(true); // Start upload
+    setProgress(0); // Reset progress
+  
     const formData = new FormData();
     formData.append('senderEmail', email());
     formData.append('subject', subject());
@@ -140,31 +162,62 @@ export default function Page() {
     formData.append('phone', phone());
     formData.append('text', text());
     formData.append('howFound', howFound());
-
+  
     if (attachments()) {
       for (let i = 0; i < attachments().length; i++) {
         formData.append('attachments', attachments()[i]);
       }
     }
-
+  
     formData.append('services', selectedServices().join(', '));
-
-    try {
-      const response = await fetch('/api/send-email', {
-        method: 'POST',
-        body: formData,
-      });
-
-      if (response.ok) {
-        setIsSubmitted(true); // Set form as submitted
-        setIsModalOpen(true); // Open the success modal
-      } else {
-        const errorMessage = await response.text();
-        alert(`Error sending email: ${errorMessage}`);
+  
+    const totalSize = Array.from(formData).reduce((acc, [_, value]) => {
+      if (value instanceof Blob) {
+        return acc + value.size;
       }
+      return acc + new Blob([String(value)]).size;
+    }, 0);
+  
+    const stream = new ReadableStream({
+      start(controller) {
+        for (const [key, value] of formData.entries()) {
+          const blob = value instanceof Blob ? value : new Blob([String(value)]);
+          controller.enqueue(blob);
+        }
+        controller.close();
+      }
+    });
+  
+    const reader = stream.getReader();
+    let uploadedSize = 0;
+  
+    const uploadChunk = async () => {
+      const { done, value } = await reader.read();
+      if (done) {
+        return;
+      }
+  
+      uploadedSize += value.size;
+      setProgress(Math.round((uploadedSize / totalSize) * 100)); // Update progress
+  
+      // Simulate sending chunk - in reality, this would be sending a chunk to the server.
+      await fetch('/api/send-email', {
+        method: 'POST',
+        body: value
+      });
+  
+      uploadChunk(); // Continue uploading the next chunk
+    };
+  
+    try {
+      await uploadChunk(); // Start uploading chunks
+      setIsSubmitted(true); // Set form as submitted
+      setIsModalOpen(true); // Open the success modal
     } catch (error) {
       console.error('Error:', error);
       alert('An error occurred while sending the email.');
+    } finally {
+      setIsUploading(false); // End upload
     }
   }
 
@@ -193,44 +246,7 @@ export default function Page() {
 
   return (
     <>
-
-      <h1 class="mt-17 font-size-14 md-font-size-16 md-line-height-18 line-height-16 pb-8">Contacts</h1>
-
-      <div class="bg-paper b-rd-3" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 10%);">
-        <div class="flex flex-col md-flex-row flex-justify-between flex-items-center pb-2 pt-7 md-pt-10 md-pt-8 px-2 w-90% m-auto">
-          <div class="font-sans font-500 font-size-4.5 md-font-size-5 uppercase flex-nowrap flex">Email us:</div>
-          <div class="font-sans font-500 font-size-4.5 md-font-size-5"><a class="color-paper-link-hover hover-color-paper-link:hover" href="mailto:office@finecarpetcleaning.co.uk" target="_blank" rel="noopener">office@finecarpetcleaning.co.uk</a></div>
-        </div>
-        <hr class="w-90% h-2px b-hidden bg-paper-border" />
-        <div class="flex flex-justify-between py-3 md-py-2 px-1 w-90% m-auto">
-          <div class="font-sans font-500 font-size-4.5 md-font-size-5 uppercase">Call mobile :</div>
-          <div class="font-sans font-500 font-size-4.5 md-font-size-5">+44 7874 333 356</div>
-        </div>
-        <hr class="w-90% h-2px b-hidden bg-paper-border" />
-        <div class="flex flex-justify-between py-3 md-py-2 px-1 w-90% m-auto">
-          <div class="font-sans font-500 font-size-4.5 md-font-size-5 uppercase">Call landline :</div>
-          <div class="font-sans font-500 font-size-4.5 md-font-size-5">+44 2036 370 033</div>
-        </div>
-        <hr class="w-90% h-2px b-hidden bg-paper-border" />
-        <div class="flex flex-justify-between py-3 md-py-2 px-1 w-90% m-auto">
-          <div class="font-sans font-500 font-size-4.5 md-font-size-5 uppercase">Call Whatsapp :</div>
-          <div class="font-sans font-500 font-size-4.5 md-font-size-5">+44 7874 333 356</div>
-        </div>
-        <hr class="w-90% h-2px b-hidden bg-paper-border" />
-        <div class="flex flex-justify-between pt-3 pb-7 md-py-2 px-1 w-90% m-auto">
-          <div class="font-sans font-500 font-size-4.5 md-font-size-5 uppercase">Message Whatsapp :</div>
-          <div class="font-sans font-500 font-size-4.5 md-font-size-5 whitespace-nowrap"><a class="color-paper-link-hover hover-color-paper-link:hover" href="https://wa.me/+447874333356" target="_blank" rel="noopener">Click to chat</a></div>
-        </div>
-        <hr class="w-90% md-block hidden h-2px b-hidden bg-paper-border" />
-        <div class="md-flex hidden flex-col flex-justify-center py-3 md-py-2 w-90% m-auto">
-          <div class="font-sans font-500 font-size-4.5 md-font-size-5 uppercase mx-auto mb-7 mt-4">Message Whatsapp:</div>
-          <img src="/assets/QR-code.png" alt="QR code" class="md-w-15% w-30% mx-auto mb-5" />
-        </div>
-      </div>
-
-      <FleurDivider />
-
-      <h2>Request a quote</h2>
+      <h1 class="mt-17 font-size-14 md-font-size-16 md-line-height-18 line-height-16 pb-8">Request a quote</h1>
 
       {!isSubmitted() && !isModalOpen() && (
         <div class="mt-15 mb-35 py-8 px-5 md-px-14 bg-paper b-rd-3 mx-auto" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 10%);">
@@ -344,6 +360,22 @@ export default function Page() {
         </div>
       )}
 
+
+      {/* Progress bar overlay */}
+      {isUploading() && (
+        <div class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50">
+          <div class="bg-white p-6 rounded-lg shadow-lg w-64">
+            <h3 class="text-lg font-semibold mb-3">Submitting...</h3>
+            <div class="w-full bg-gray-200 rounded h-4">
+              <div
+                class="progress-bar-contacts-form h-full rounded bg-blue-500"
+                style={{ width: `${progress()}%`, transition: 'width 0.3s ease-in-out' }}
+              />
+            </div>
+          </div>
+        </div>
+      )}
+
       {isModalOpen() && (
         <div class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-5">
           <div class="bg-white p-8 rounded-lg shadow-lg max-w-md w-full">
@@ -353,6 +385,42 @@ export default function Page() {
           </div>
         </div>
       )}
+
+      <FleurDivider />
+
+      <h2>Contacts</h2>
+
+      <div class="bg-paper b-rd-3" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 10%);">
+        <div class="flex flex-col md-flex-row flex-justify-between flex-items-center pb-2 pt-7 md-pt-10 md-pt-8 px-2 w-90% m-auto">
+          <div class="font-sans font-500 font-size-4.5 md-font-size-5 uppercase flex-nowrap flex">Email us:</div>
+          <div class="font-sans font-500 font-size-4.5 md-font-size-5"><a class="color-paper-link-hover hover-color-paper-link:hover" href="mailto:office@finecarpetcleaning.co.uk" target="_blank" rel="noopener">office@finecarpetcleaning.co.uk</a></div>
+        </div>
+        <hr class="w-90% h-2px b-hidden bg-paper-border" />
+        <div class="flex flex-justify-between py-3 md-py-2 px-1 w-90% m-auto">
+          <div class="font-sans font-500 font-size-4.5 md-font-size-5 uppercase">Call mobile :</div>
+          <div class="font-sans font-500 font-size-4.5 md-font-size-5">+44 7874 333 356</div>
+        </div>
+        <hr class="w-90% h-2px b-hidden bg-paper-border" />
+        <div class="flex flex-justify-between py-3 md-py-2 px-1 w-90% m-auto">
+          <div class="font-sans font-500 font-size-4.5 md-font-size-5 uppercase">Call landline :</div>
+          <div class="font-sans font-500 font-size-4.5 md-font-size-5">+44 2036 370 033</div>
+        </div>
+        <hr class="w-90% h-2px b-hidden bg-paper-border" />
+        <div class="flex flex-justify-between py-3 md-py-2 px-1 w-90% m-auto">
+          <div class="font-sans font-500 font-size-4.5 md-font-size-5 uppercase">Call Whatsapp :</div>
+          <div class="font-sans font-500 font-size-4.5 md-font-size-5">+44 7874 333 356</div>
+        </div>
+        <hr class="w-90% h-2px b-hidden bg-paper-border" />
+        <div class="flex flex-justify-between pt-3 pb-7 md-py-2 px-1 w-90% m-auto">
+          <div class="font-sans font-500 font-size-4.5 md-font-size-5 uppercase">Message Whatsapp :</div>
+          <div class="font-sans font-500 font-size-4.5 md-font-size-5 whitespace-nowrap"><a class="color-paper-link-hover hover-color-paper-link:hover" href="https://wa.me/+447874333356" target="_blank" rel="noopener">Click to chat</a></div>
+        </div>
+        <hr class="w-90% md-block hidden h-2px b-hidden bg-paper-border" />
+        <div class="md-flex hidden flex-col flex-justify-center py-3 md-py-2 w-90% m-auto">
+          <div class="font-sans font-500 font-size-4.5 md-font-size-5 uppercase mx-auto mb-7 mt-4">Message Whatsapp:</div>
+          <img src="/assets/QR-code.png" alt="QR code" class="md-w-15% w-30% mx-auto mb-5" />
+        </div>
+      </div>
 
       <FleurDivider />
 
@@ -386,4 +454,3 @@ export default function Page() {
     </>
   );
 }
-

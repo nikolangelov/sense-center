@@ -30,35 +30,37 @@ const transporter = nodemailer.createTransport({
 app.post('/api/send-email', (req, res) => {
     const { senderEmail, text, postCode, phone, name, services, howFound, howFoundOther } = req.body;
     const attachments = req.files;
-  
-    const howFoundText = howFound === 'Other' ? `Other - ${howFoundOther || 'Not specified'}` : howFound || 'Not specified';
-  
-    const emailContent = phone && phone.length > 0
-      ? `You have received a new message from your website contact form.
-  
-      Sender: ${senderEmail}
-      Name: ${name}
-      Post code: ${postCode}
-      Phone: ${phone}
-      Message: ${text}
-  
-      Services Required:
-      ${services ? services.split(', ').join('\n') : 'No services selected'}
-  
-      How did they find us: ${howFoundText}`
-      
-      : `You have received a new message from your website contact form.
-  
-      Sender: ${senderEmail}
-      Name: ${name}
-      Message: ${text}`;
+
+    const emailContent = !phone || phone.length === 0
+        ? `   
+        You have received a new message from your website contact form.
+            
+        Sender: ${senderEmail}
+        Name: ${name}
+        Message: ${text} `
+
+        :
+
+        ` You have received a new message from your website contact form.
+            
+        Sender: ${senderEmail}
+        Name: ${name}
+        Post code: ${postCode}
+        Phone: ${phone}
+        Message: ${text}
+
+        Services Required:
+        ${services ? services.split(', ').join('\n') : 'No services selected'}
+
+        How did they find us: ${howFound || 'Not specified' || otherText}`;
+
 
     console.log("\n\n-------------------------------")
     const now = new Date()
     console.log(now.toTimeString() + " " + now.toDateString())
     console.log(emailContent)
 
-    const mailOptions = { 
+    const mailOptions = {
         from: 'office@finecarpetcleaning.co.uk',
         to: 'office@finecarpetcleaning.co.uk',
         subject: 'New message from contact form',
