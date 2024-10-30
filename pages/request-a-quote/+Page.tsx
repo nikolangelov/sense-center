@@ -108,24 +108,6 @@ function SingleCollapse() {
   );
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 export default function Page() {
   const [email, setEmail] = createSignal('');
   const [subject, setSubject] = createSignal('');
@@ -139,8 +121,6 @@ export default function Page() {
   const [howFound, setHowFound] = createSignal('');
   const [isSubmitted, setIsSubmitted] = createSignal(false);
   const [isModalOpen, setIsModalOpen] = createSignal(false);
-  const [isUploading, setIsUploading] = createSignal(false);
-  const [progress, setProgress] = createSignal(0); // Progress state
 
   const handleRadioChange = (event: { target: { value: string; }; }) => {
     setHowFound(event.target.value);
@@ -151,9 +131,7 @@ export default function Page() {
 
   async function sendEmail(e: Event) {
     e.preventDefault();
-    setIsUploading(true); // Start upload
-    setProgress(0); // Reset progress
-  
+
     const formData = new FormData();
     formData.append('senderEmail', email());
     formData.append('subject', subject());
@@ -162,62 +140,31 @@ export default function Page() {
     formData.append('phone', phone());
     formData.append('text', text());
     formData.append('howFound', howFound());
-  
+
     if (attachments()) {
       for (let i = 0; i < attachments().length; i++) {
         formData.append('attachments', attachments()[i]);
       }
     }
-  
+
     formData.append('services', selectedServices().join(', '));
-  
-    const totalSize = Array.from(formData).reduce((acc, [_, value]) => {
-      if (value instanceof Blob) {
-        return acc + value.size;
-      }
-      return acc + new Blob([String(value)]).size;
-    }, 0);
-  
-    const stream = new ReadableStream({
-      start(controller) {
-        for (const [key, value] of formData.entries()) {
-          const blob = value instanceof Blob ? value : new Blob([String(value)]);
-          controller.enqueue(blob);
-        }
-        controller.close();
-      }
-    });
-  
-    const reader = stream.getReader();
-    let uploadedSize = 0;
-  
-    const uploadChunk = async () => {
-      const { done, value } = await reader.read();
-      if (done) {
-        return;
-      }
-  
-      uploadedSize += value.size;
-      setProgress(Math.round((uploadedSize / totalSize) * 100)); // Update progress
-  
-      // Simulate sending chunk - in reality, this would be sending a chunk to the server.
-      await fetch('/api/send-email', {
-        method: 'POST',
-        body: value
-      });
-  
-      uploadChunk(); // Continue uploading the next chunk
-    };
-  
+
     try {
-      await uploadChunk(); // Start uploading chunks
-      setIsSubmitted(true); // Set form as submitted
-      setIsModalOpen(true); // Open the success modal
+      const response = await fetch('/api/send-email', {
+        method: 'POST',
+        body: formData,
+      });
+
+      if (response.ok) {
+        setIsSubmitted(true); // Set form as submitted
+        setIsModalOpen(true); // Open the success modal
+      } else {
+        const errorMessage = await response.text();
+        alert(`Error sending email: ${errorMessage}`);
+      }
     } catch (error) {
       console.error('Error:', error);
       alert('An error occurred while sending the email.');
-    } finally {
-      setIsUploading(false); // End upload
     }
   }
 
@@ -360,22 +307,6 @@ export default function Page() {
         </div>
       )}
 
-
-      {/* Progress bar overlay */}
-      {isUploading() && (
-        <div class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50">
-          <div class="bg-white p-6 rounded-lg shadow-lg w-64">
-            <h3 class="text-lg font-semibold mb-3">Submitting...</h3>
-            <div class="w-full bg-gray-200 rounded h-4">
-              <div
-                class="progress-bar-contacts-form h-full rounded bg-blue-500"
-                style={{ width: `${progress()}%`, transition: 'width 0.3s ease-in-out' }}
-              />
-            </div>
-          </div>
-        </div>
-      )}
-
       {isModalOpen() && (
         <div class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-5">
           <div class="bg-white p-8 rounded-lg shadow-lg max-w-md w-full">
@@ -454,3 +385,4 @@ export default function Page() {
     </>
   );
 }
+
