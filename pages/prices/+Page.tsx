@@ -287,7 +287,7 @@ export default function Page() {
 					{ label: "Office chair - seat", value: "from £8.00" },
 					{ label: "Office chair - seat & back", value: "from £14.00" },
 					{ label: "Dining chair - seat", value: "from £7.00" },
-					{ label: "Dining chair - seat & backk", value: "from £13.00" },
+					{ label: "Dining chair - seat & back", value: "from £13.00" },
 				]}
 			/>
 
@@ -296,8 +296,6 @@ export default function Page() {
 			</div>
 
 			<FleurDivider />
-
-
 
 			<h2 class="mb-10 md-mb-20">Velvet furniture cleaning</h2>
 
