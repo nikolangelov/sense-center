@@ -214,7 +214,7 @@ export default function Page() {
         <hr class="w-90% h-2px b-hidden bg-paper-border" />
         <div class="flex flex-justify-between py-3 md-py-2 px-1 w-90% m-auto">
           <div class="font-sans font-500 font-size-4.5 md-font-size-5 uppercase">Call Whatsapp :</div>
-          <div class="font-sans font-500 font-size-4.5 md-font-size-5"><a class="color-paper-link-hover hover-color-paper-link:hover" href="tel:+44 7874 333 356" target="_blank" rel="noopener">+44 7874 333 356</a></div>
+          <div class="font-sans font-500 font-size-4.5 md-font-size-5"><a class="color-paper-link-hover hover-color-paper-link:hover" href="https://wa.me/+447874333356" target="_blank" rel="noopener">+44 7874 333 356</a></div>
         </div>
         <hr class="w-90% h-2px b-hidden bg-paper-border" />
         <div class="flex flex-justify-between pt-3 pb-7 md-py-2 px-1 w-90% m-auto">
