@@ -397,7 +397,7 @@ export default function Page() {
 
       <FleurDivider/>
 
-      { /* <h2 class="line-height-12 md-line-height-14">Eco-friendly carpet cleaning services prices</h2>
+      <h2 class="line-height-12 md-line-height-14">Eco-friendly carpet cleaning services prices</h2>
 
       <div class="my-20 pt-8 pb-6 px-8 md-px-14 b-rd-3 bg-paper line-height-7.5 md-line-height-8 text-justify font-size-4 md-font-size-4.4"
         style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 18%);">
@@ -410,27 +410,26 @@ export default function Page() {
         <strong id="price_table">Deising - Free of charge - just notify us when booking.</strong></div>
 
 
-                    <PriceTable
-                title="Room type"
-                items={[
-                    { label: "Single Bedroom", value: "from £31.00" },
-                    { label: "Double Bedroom", value: "from £35.00" },
-                    { label: "Master Bedroom", value: "from £40.00" },
-                    { label: "Living Room", value: "from £43.00" },
-                    { label: "Through Lounge", value: "from £69.00" },
-                    { label: "Hallway", value: "from £21.00" },
-                    { label: "Flight of Stairs", value: "from £34.00" },
-                    { label: "Landing", value: "from £15.00" },
-                    { label: "Bathroom", value: "from £6.00" },
-                    { label: "Small rug", value: "from £14.00" },
-                    { label: "Medium rug", value: "from £20.00" },
-                    { label: "Large rug", value: "from £31.00" },
-                ]}
-            />
+			<PriceTable
+				title="Room type"
+				items={[
+					{ label: "Hallway", value: "from £18.00" },
+					{ label: "Landing", value: "from £9.00" },
+					{ label: "Living room", value: "from £54.00" },
+					{ label: "Bedroom", value: "from £36.00" },
+					{ label: "Flight of stairs", value: "from £39.00" },
+					{ label: "Office room", value: "from £36.00" },
+					{ label: "Hotel room", value: "from £56.00" },
+					{ label: "Loft room", value: "from £39.00" },
+					{ label: "Through lounge", value: "from £85.00" },
+					{ label: "Box room", value: "from £36.00" },
+					{ label: "Bathroom", value: "from £13.00" },
+				]}
+			/>
 
       <button class="outline-none bg-brand-second-action hover-bg-brand-second-action-hover:hover font-size-6 font-600 w-250px h-60px c-paper flex flex-items-center flex-justify-center relative b-solid b-rd-3 b-4 b-brand-second-action hover-b-brand-second-action-hover:hover whitespace-normal line-height-6 word-spacing-0.5 py-9 my-20 mx-auto" style="box-shadow: 0 0 0 3px rgba(255, 255, 255, .9) inset; letter-spacing: 0.05rem;"><a href="/contact-us" class="c-paper font-size-5">REQUEST A QUOTE</a></button>
 
-      <FleurDivider/> */}
+      <FleurDivider/> 
 
       <h2 class="line-height-12 md-line-height-14">Frequently ordered together</h2>
 

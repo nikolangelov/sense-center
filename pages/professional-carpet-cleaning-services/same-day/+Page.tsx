@@ -7,6 +7,7 @@ import { FOTSlider, FOTSliderContainer } from '../../../components/FrequentlyOrd
 import { createEffect } from "solid-js";
 import { FleurDivider } from "../../../components/FleurDivider";
 import { VideoPlayer } from '../../../components/VideoPlayer';
+import { PriceTable } from '../../../components/PriceTable';
 
 function FaqSection() {
   const { Container, Entry } = createCollapsable()
@@ -299,7 +300,7 @@ export default function Page() {
 
       <FleurDivider />
 
-      { /* <h2 class="line-height-12 md-line-height-14">Prices of our professional carpet cleaning services</h2>
+      <h2 class="line-height-12 md-line-height-14">Prices of our professional carpet cleaning services</h2>
 
       <div class="my-20 pt-8 pb-6 px-8 md-px-14 b-rd-3 bg-paper line-height-7.5 md-line-height-8 text-justify font-size-4 md-font-size-4.4"
         style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 18%);">
@@ -311,27 +312,16 @@ export default function Page() {
         <br></br>
         <strong>Deising - Free of charge - just notify us when booking.</strong></div>
 
-                    <PriceTable
-                title="Room type"
-                items={[
-                    { label: "Hallway", value: "£11.00" },
-                    { label: "Landing", value: "£6.00" },
-                    { label: "Living Room", value: "£39.00" },
-                    { label: "Bedroom", value: "£27.00" },
-                    { label: "Flight of stairs", value: "£29.00" },
-                    { label: "Single step", value: "£2.20" },
-                    { label: "Office room", value: "£27.00" },
-                    { label: "Hotel room", value: "£40.00" },
-                    { label: "Loft room", value: "£31.00" },
-                    { label: "Through lounge", value: "£63.00" },
-                    { label: "Box room", value: "£27.00" },
-                    { label: "Bathroom", value: "£8.00" },
-                ]}
-            />
+      <PriceTable
+        title="Service type"
+        items={[
+          { label: "Same day carpet cleaning", value: "additional charge from £60.00 - £100.00" }
+        ]}
+      />
 
       <button class="outline-none bg-brand-second-action hover-bg-brand-second-action-hover:hover font-size-6 font-600 w-250px h-60px c-paper flex flex-items-center flex-justify-center relative b-solid b-rd-3 b-4 b-brand-second-action hover-b-brand-second-action-hover:hover whitespace-normal line-height-6 word-spacing-0.5 py-9 my-20 mx-auto" style="box-shadow: 0 0 0 3px rgba(255, 255, 255, .9) inset; letter-spacing: 0.05rem;"><a href="/contact-us" class="c-paper font-size-5">REQUEST A QUOTE</a></button>
 
-      <FleurDivider/> */}
+      <FleurDivider />
 
       <h2 class="line-height-12 md-line-height-14">Frequently ordered together</h2>
 

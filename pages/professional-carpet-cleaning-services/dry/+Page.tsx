@@ -432,17 +432,17 @@ export default function Page() {
         <PriceTable
                 title="Room type"
                 items={[
-                    { label: "Hallway", value: "from £16.00" },
-                    { label: "Landing", value: "from £8.00" },
-                    { label: "Living room", value: "from £48.00" },
-                    { label: "Bedroom", value: "from £32.00" },
-                    { label: "Flight of stairs", value: "from £35.00" },
-                    { label: "Office room", value: "from £32.00" },
-                    { label: "Hotel room", value: "from £50.00" },
-                    { label: "Loft room", value: "from £35.00" },
-                    { label: "Through lounge", value: "from £76.00" },
-                    { label: "Box room", value: "from £32.00" },
-                    { label: "Bathroom", value: "from £11.00" },
+                  { label: "Hallway", value: "from £18.00" },
+                  { label: "Landing", value: "from £9.00" },
+                  { label: "Living room", value: "from £54.00" },
+                  { label: "Bedroom", value: "from £36.00" },
+                  { label: "Flight of stairs", value: "from £39.00" },
+                  { label: "Office room", value: "from £36.00" },
+                  { label: "Hotel room", value: "from £56.00" },
+                  { label: "Loft room", value: "from £39.00" },
+                  { label: "Through lounge", value: "from £85.00" },
+                  { label: "Box room", value: "from £36.00" },
+                  { label: "Bathroom", value: "from £13.00" },
                 ]}
             />
 

@@ -304,15 +304,15 @@ export default function Page() {
 
       <PriceTable
         title="Room type"
-        items={[
-          { label: "Studio flat", value: "from £80.00" },
-          { label: "One bedroom flat", value: "from £100.00" },
-          { label: "Two bedroom flat", value: "from £120.00" },
-          { label: "Two bedroom house", value: "from £140.00" },
-          { label: "Three bedroom house", value: "from £180.00" },
-          { label: "Four bedroom house", value: "from £200.00" },
-          { label: "Office** m²", value: "from £1.50" },
-        ]}
+				items={[
+					{ label: "Studio flat", value: "from £90.00" },
+					{ label: "One bedroom flat", value: "from £112.00" },
+					{ label: "Two bedroom flat", value: "from £135.00" },
+					{ label: "Two bedroom house", value: "from £157.00" },
+					{ label: "Three bedroom house", value: "from £200.00" },
+					{ label: "Four bedroom house", value: "from £225.00" },
+					{ label: "Office** m²", value: "from £1.70" },
+				]}
       />
 
       <button class="outline-none bg-brand-second-action hover-bg-brand-second-action-hover:hover font-size-6 font-600 w-250px h-60px c-paper flex flex-items-center flex-justify-center relative b-solid b-rd-3 b-4 b-brand-second-action hover-b-brand-second-action-hover:hover whitespace-normal line-height-6 word-spacing-0.5 py-9 my-20 mx-auto" style="box-shadow: 0 0 0 3px rgba(255, 255, 255, .9) inset; letter-spacing: 0.05rem;"><a href="/contact-us" class="c-paper font-size-5">REQUEST A QUOTE</a></button>

@@ -392,18 +392,18 @@ export default function Page() {
 
       <PriceTable
         title="Sofa type"
-        items={[
-          { label: "Footstool (Puff)", value: "from £15.00" },
-          { label: "Two seated sofa", value: "from £54.00" },
-          { label: "Two seated L shaped", value: "from £65.00" },
-          { label: "Three seated sofa", value: "from £65.00" },
-          { label: "Three seated L shaped", value: "from £84.00" },
-          { label: "Four seated sofa", value: "from £84.00" },
-          { label: "Four seated L shaped", value: "from £95.00" },
-          { label: "Five seated sofa", value: "from £95.00" },
-          { label: "Five seated L shaped", value: "from £106.00" },
-          { label: "For others, please contact us", value: "-" },
-        ]}
+				items={[
+					{ label: "Footstool (Puff)", value: "from £17.00" },
+					{ label: "Two seated sofa", value: "from £61.00" },
+					{ label: "Two seated L shaped", value: "from £73.00" },
+					{ label: "Three seated sofa", value: "from £73.00" },
+					{ label: "Three seated L shaped", value: "from £95.00" },
+					{ label: "Four seated sofa", value: "from £95.00" },
+					{ label: "Four seated L shaped", value: "from £107.00" },
+					{ label: "Five seated sofa", value: "from £107.00" },
+					{ label: "Five seated L shaped", value: "from £119.00" },
+					{ label: "For others, please contact us", value: "-" },
+				]}
       />
 
       <button class="outline-none bg-brand-second-action hover-bg-brand-second-action-hover:hover font-size-6 font-600 w-250px h-60px c-paper flex flex-items-center flex-justify-center relative b-solid b-rd-3 b-4 b-brand-second-action hover-b-brand-second-action-hover:hover whitespace-normal line-height-6 word-spacing-0.5 py-9 my-20 mx-auto" style="box-shadow: 0 0 0 3px rgba(255, 255, 255, .9) inset; letter-spacing: 0.05rem;"><a href="/contact-us" class="c-paper font-size-5">REQUEST A QUOTE</a></button>

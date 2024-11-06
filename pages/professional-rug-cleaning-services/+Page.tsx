@@ -463,12 +463,12 @@ export default function Page() {
 
       <PriceTable
         title="Rug type"
-        items={[
-          { label: "Rug - small", value: "from £11.00" },
-          { label: "Rug - medium", value: "from £17.00" },
-          { label: "Rug - large", value: "from £31.00" },
-          { label: "Rug - extra large", value: "from £50.00" },
-        ]}
+				items={[
+					{ label: "Rug - small", value: "from £15.00" },
+					{ label: "Rug - medium", value: "from £24.00" },
+					{ label: "Rug - large", value: "from £42.00" },
+					{ label: "Rug - extra large", value: "from £56.00" },
+				]}
       />
 
       <button class="outline-none bg-brand-second-action hover-bg-brand-second-action-hover:hover font-size-6 font-600 w-250px h-60px c-paper flex flex-items-center flex-justify-center relative b-solid b-rd-3 b-4 b-brand-second-action hover-b-brand-second-action-hover:hover whitespace-normal line-height-6 word-spacing-0.5 py-9 my-20 mx-auto" style="box-shadow: 0 0 0 3px rgba(255, 255, 255, .9) inset; letter-spacing: 0.05rem;"><a href="/prices" class="c-paper font-size-5">VIEW ALL PRICES</a></button>

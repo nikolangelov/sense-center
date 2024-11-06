@@ -372,8 +372,8 @@ export default function Page() {
           { label: "Wednesday", value: "7:30 - 19:00" },
           { label: "Thursday", value: "7:30 - 19:00" },
           { label: "Friday", value: "7:30 - 19:00" },
-          { label: "Saturday", value: "7:30 - 19:00" },
-          { label: "Sunday", value: "7:30 - 19:00" },
+          { label: "Saturday", value: "9:00 - 18:00" },
+          { label: "Sunday", value: "9:00 - 18:00" },
         ]}
       />
 

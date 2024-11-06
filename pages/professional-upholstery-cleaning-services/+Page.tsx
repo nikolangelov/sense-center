@@ -481,15 +481,15 @@ export default function Page() {
 			<PriceTable
 				title="Upholstery type"
 				items={[
-					{ label: "Footstool (Puff)", value: "from £10.00" },
-					{ label: "Two seated sofa", value: "from £44.20" },
-					{ label: "Two seated L shaped sofa", value: "from £52.00" },
-					{ label: "Three seated sofa", value: "from £52.00" },
-					{ label: "Three seated L shaped sofa", value: "from £65.00" },
-					{ label: "Four seated sofa", value: "from £65.00" },
-					{ label: "Four seated L shaped sofa", value: "from £76.00" },
-					{ label: "Five seated sofa", value: "from £76.00" },
-					{ label: "Five seated L shaped sofa", value: "from £95.00" },
+					{ label: "Footstool (Puff)", value: "from £12.00" },
+					{ label: "Two seated sofa", value: "from £49.00" },
+					{ label: "Two seated L shaped sofa", value: "from £59.00" },
+					{ label: "Three seated sofa", value: "from £59.00" },
+					{ label: "Three seated L shaped sofa", value: "from £73.00" },
+					{ label: "Four seated sofa", value: "from £73.00" },
+					{ label: "Four seated L shaped sofa", value: "from £86.00" },
+					{ label: "Five seated sofa", value: "from £86.00" },
+					{ label: "Five seated L shaped sofa", value: "from £107.00" },
 					{ label: "For others, please contact us", value: "-" },
 				]}
 			/>

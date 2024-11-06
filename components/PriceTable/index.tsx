@@ -21,7 +21,7 @@ export function PriceTable(props: { title: string, items: TTableEntry[], childre
 					</div>
 					}
 				</For>
-				<div class="w-full bg-#2e5c47"><p class="font-size-3.4 md-font-size-4 px-3 md-my-2 c-paper line-height-5 text-left">*We also offer performing services out of working hours and at night, which will be included in the final price.<br></br>**Minimum charge £65</p></div>
+				<div class="w-full bg-#2e5c47"><p class="font-size-3.4 md-font-size-4 px-3 md-my-2 c-paper line-height-5 text-left">*We also offer performing services out of working hours and at night, which will be included in the final price.<br></br>**Minimum charge £75</p></div>
 			</div>
 		</div>
 	);

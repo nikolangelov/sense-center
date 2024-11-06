@@ -481,10 +481,10 @@ export default function Page() {
 
       <PriceTable
         title="Area size"
-        items={[
-          { label: "Per square metre - from 0 up to 200m²", value: "£2.20" },
-          { label: "Per square metre - from 200 up to 1000m²", value: "£2.00" },
-        ]}
+				items={[
+					{ label: "Per square metre - from 0 up to 200m²", value: "£2.20 + VAT" },
+					{ label: "Per square metre - from 200 up to 1000m²", value: "£2.00 + VAT" },
+				]}
       />
 
       <button class="outline-none bg-brand-second-action hover-bg-brand-second-action-hover:hover font-size-6 font-600 w-250px h-60px c-paper flex flex-items-center flex-justify-center relative b-solid b-rd-3 b-4 b-brand-second-action hover-b-brand-second-action-hover:hover whitespace-normal line-height-6 word-spacing-0.5 py-9 my-20 mx-auto" style="box-shadow: 0 0 0 3px rgba(255, 255, 255, .9) inset; letter-spacing: 0.05rem;"><a href="/contact-us" class="c-paper font-size-5">REQUEST A QUOTE</a></button>

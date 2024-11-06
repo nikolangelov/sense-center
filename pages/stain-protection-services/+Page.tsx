@@ -385,39 +385,39 @@ export default function Page() {
 
       <PriceTable
         title="Room type"
-        items={[
-          { label: "Commercial stain protector", value: "from £1.00" },
-          { label: "Hallway", value: "from £6.00" },
-          { label: "Landing", value: "from £3.00" },
-          { label: "Living Room", value: "from £20.00" },
-          { label: "Bedroom", value: "from £11.00" },
-          { label: "Flight of stairs", value: "from £10.00" },
-          { label: "Office room", value: "from £11.00" },
-          { label: "Hotel room", value: "from £20.00" },
-          { label: "Loft room", value: "from £13.00" },
-          { label: "Through lounge", value: "from £35.00" },
-          { label: "Box room", value: "from £11.00" },
-          { label: "Bathroom", value: "from £5.00" },
-        ]}
+				items={[
+					{ label: "Commercial stain protector - per square metre", value: "from £1.50" },
+					{ label: "Hallway", value: "from £7.00" },
+					{ label: "Landing", value: "from £3.00" },
+					{ label: "Living Room", value: "from £23.00" },
+					{ label: "Bedroom", value: "from £13.00" },
+					{ label: "Flight of stairs", value: "from £12.00" },
+					{ label: "Office room", value: "from £13.00" },
+					{ label: "Hotel room", value: "from £23.00" },
+					{ label: "Loft room", value: "from £15.00" },
+					{ label: "Through lounge", value: "from £39.00" },
+					{ label: "Box room", value: "from £13.00" },
+					{ label: "Bathroom", value: "from £6.00" },
+				]}
       />
 
       <PriceTable
         title="Upholstery type"
-        items={[
-          { label: "Footstool (Puff)", value: "from £4.00" },
-          { label: "Two seated", value: "from £9.00" },
-          { label: "Two seated L shaped", value: "from £11.00" },
-          { label: "Three seated", value: "from £11.00" },
-          { label: "Three seated L shaped", value: "from £13.00" },
-          { label: "Four seated", value: "from £13.00" },
-          { label: "Four seated L shaped", value: "from £17.00" },
-          { label: "Five seated", value: "from £17.00" },
-          { label: "Five seated L shaped", value: "from £21.00" },
-          { label: "Dining chair", value: "from £3.00" },
-          { label: "Office chair", value: "from £4.00" },
-          { label: "Armchair", value: "from £8.00" },
-          { label: "For others, please contact us", value: "-" },
-        ]}
+				items={[
+					{ label: "Footstool (Puff)", value: "from £5.00" },
+					{ label: "Two seated", value: "from £11.00" },
+					{ label: "Two seated L shaped", value: "from £13.00" },
+					{ label: "Three seated", value: "from £13.00" },
+					{ label: "Three seated L shaped", value: "from £15.00" },
+					{ label: "Four seated", value: "from £15.00" },
+					{ label: "Four seated L shaped", value: "from £19.00" },
+					{ label: "Five seated", value: "from £19.00" },
+					{ label: "Five seated L shaped", value: "from £24.00" },
+					{ label: "Dining chair", value: "from £3.00" },
+					{ label: "Office chair", value: "from £5.00" },
+					{ label: "Armchair", value: "from £9.00" },
+					{ label: "For others, please contact us", value: "-" },
+				]}
       />
 
 

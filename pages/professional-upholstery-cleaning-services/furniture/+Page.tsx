@@ -397,26 +397,26 @@ export default function Page() {
 
       <PriceTable
         title="Furniture type"
-        items={[
-          { label: "Armchair", value: "from £30.00" },
-          { label: "Pair of curtains", value: "from £25.00" },
-          { label: "Bed base", value: "from £22.00" },
-          { label: "Headboard", value: "from £15.00" },
-          { label: "Office chair - seat", value: "from £8.00" },
-          { label: "Office chair - seat & back", value: "from £14.00" },
-        ]}
+				items={[
+					{ label: "Armchair", value: "from £34.00" },
+					{ label: "Pair of curtains", value: "from £28.00" },
+					{ label: "Bed base", value: "from £25.00" },
+					{ label: "Headboard", value: "from £17.00" },
+					{ label: "Office chair - seat", value: "from £9.00" },
+					{ label: "Office chair - seat & back", value: "from £16.00" },
+				]}
       />
 
       <PriceTable
         title="Velvet furniture type"
-        items={[
-          { label: "Bed base - Velvet", value: "from £26.00" },
-          { label: "Headboard - Velvet/Leather", value: "from £20.00" },
-          { label: "Office chair - seat - Velvet", value: "from £10.00" },
-          { label: "Office chair - seat & back - Velvet", value: "from £24.00" },
-          { label: "Dining chair - seat - Velvet", value: "from £7.00" },
-          { label: "Dining chair - seat & back - Velvet", value: "from £13.00" },
-        ]}
+				items={[
+					{ label: "Bed base - Velvet", value: "from £29.00" },
+					{ label: "Headboard - Velvet/Leather", value: "from £23.00" },
+					{ label: "Office chair - seat - Velvet", value: "from £12.00" },
+					{ label: "Office chair - seat & back - Velvet", value: "from £27.00" },
+					{ label: "Dining chair - seat - Velvet", value: "from £8.00" },
+					{ label: "Dining chair - seat & back - Velvet", value: "from £15.00" },
+				]}
       />
 
       <button class="outline-none bg-brand-second-action hover-bg-brand-second-action-hover:hover font-size-6 font-600 w-250px h-60px c-paper flex flex-items-center flex-justify-center relative b-solid b-rd-3 b-4 b-brand-second-action hover-b-brand-second-action-hover:hover whitespace-normal line-height-6 word-spacing-0.5 py-9 my-20 mx-auto" style="box-shadow: 0 0 0 3px rgba(255, 255, 255, .9) inset; letter-spacing: 0.05rem;"><a href="/contact-us" class="c-paper font-size-5">REQUEST A QUOTE</a></button>

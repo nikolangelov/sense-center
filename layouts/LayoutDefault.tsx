@@ -265,7 +265,7 @@ const MyDropdown = (props: { closeMenu: () => void; }) => {
     props.closeMenu();
   };
 
-  return (
+  return ( 
     <div class="w-full overflow-y-auto max-h-770px sticky">
       <div class="py-5 b-b-solid b-b border-brand-second-action">
         <a onClick={handleLinkClick} href="/services" class="flex flex-items-center flex-nowrap c-paper-inv hover-c-brand:hover font-size-5 font-500" style="font-family: Open Sans, sans-serif; letter-spacing: 0.6px;">
@@ -486,8 +486,8 @@ export default function LayoutDefault(props: { children?: JSX.Element }) {
           <div class="flex flex-items-center gap-2">
             <MdiClock class="w-10 h-10 c-paper" />
             <div class="flex flex-col line-height-none">
-              <div class="c-paper font-normal lg-font-size-4 md-font-size-4 font-size-4.5 font-sans line-height-6">Monday - Sunday</div>
-              <div class="c-paper font-normal lg-font-size-4 md-font-size-4 font-size-4.5 font-sans line-height-6">7:30 - 19:00</div>
+              <div class="c-paper font-normal lg-font-size-4 md-font-size-4 font-size-4.5 font-sans line-height-6">Monday - Friday: <strong>7:30 - 19:00</strong></div>
+              <div class="c-paper font-normal lg-font-size-4 md-font-size-4 font-size-4.5 font-sans line-height-6">Saturday & Sunday: <strong>9:00 - 18:00</strong></div>
             </div>
           </div>
         </div>

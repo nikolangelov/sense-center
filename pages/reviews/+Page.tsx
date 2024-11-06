@@ -124,6 +124,16 @@ export default function Page() {
         setFilter={setFilterStars}
       />
 
+    <StarReview
+        src="/assets/profile-pics-reviews/unnamed222222.png"
+        reviewText="Arrived on time, great communication, got the job done quickly and offer competitive prices. Will defenitley be using this place again! Thanks"
+        name="Ellie Newton"
+        date="November 2024"
+        stars={5}
+        hrefGoogleReview="https://g.co/kgs/MjA6nrS"
+        filterStars={filterStars()}
+      />
+
       <StarReview
         src="/assets/profile-pics-reviews/unnamed34346.png"
         reviewText="Very professional service.  Quick and qualitative.  Carpet is like new after cleaning."

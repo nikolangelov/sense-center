@@ -5,7 +5,7 @@ import { Typography } from '../../../components/Typography';
 import { ReviewSlider, StarReview } from '../../../components/ReviewSlider';
 import { FOTSlider, FOTSliderContainer } from '../../../components/FrequentlyOrderedTogether';
 import { createEffect } from "solid-js";
-import {FleurDivider} from "../../../components/FleurDivider";
+import { FleurDivider } from "../../../components/FleurDivider";
 import { VideoPlayer } from '../../../components/VideoPlayer';
 import { PriceTable } from '../../../components/PriceTable';
 
@@ -272,7 +272,7 @@ export default function Page() {
       <h1 class="mt-10 md-mt-17 font-size-12.5 md-font-size-16 md-line-height-18 line-height-16">Fast dry carpet cleaning services</h1>
       <div class="flex flex-justify-center"><img class="b-rd-3 md-mt-10 mt-2 max-w-full" src="/assets/service-pics/fast-dry-carpet/fast-dry-carpet-cleaning-service.jpg" alt="fast-dry-carpet-cleaning-service" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 30%);" /></div>
 
-      <FleurDivider/>
+      <FleurDivider />
 
       <h2 class="line-height-12 md-line-height-14">Why to use fast dry carpet cleaning services</h2>
       <div class="mt-20 py-8 px-8 md-px-14 bg-paper b-rd-3" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 18%);">
@@ -328,7 +328,7 @@ export default function Page() {
         </ul>
       </div>
 
-      <FleurDivider/>
+      <FleurDivider />
 
       <h2>The process of our fast dry carpet cleaning services:</h2>
       <div class="mt-20 py-8 px-8 md-px-14 bg-paper b-rd-3" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 18%);">
@@ -373,7 +373,7 @@ export default function Page() {
         <p><strong>Discover the difference our fast dry carpet cleaning can make and witness how it can turn your home into a cleaner, healthier, and more welcoming environment. Schedule your appointment today, and let us handle the rest!</strong></p>
       </div>
 
-      <FleurDivider/>
+      <FleurDivider />
 
       <h3>What to expect after the cleaning:</h3>
       <div class="mt-20 py-8 px-8 md-px-14 bg-paper b-rd-3" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 18%);">
@@ -390,7 +390,7 @@ export default function Page() {
         </ul>
       </div>
 
-      <FleurDivider/>
+      <FleurDivider />
 
       <h2 class="line-height-12 md-line-height-14">Fast Dry Carpet Cleaning: Equipment and products</h2>
       <div class="mt-20 py-8 px-12 md-px-14 bg-paper b-rd-3" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 18%);">
@@ -411,7 +411,7 @@ export default function Page() {
         </ol>
       </div>
 
-      <FleurDivider/>
+      <FleurDivider />
 
       <h2 class="line-height-12 md-line-height-14">Pictures from our fast dry carpet cleaning services in London</h2>
 
@@ -425,15 +425,15 @@ export default function Page() {
         { src: "/assets/service-pics/fast-dry-carpet/7-fast-dry-carpet-cleaning-service-2.jpg", alt: "7-fast-dry-carpet-cleaning-service-2" },
       ]} />
 
-      <FleurDivider/>
+      <FleurDivider />
 
       <h2 class="line-height-12 md-line-height-14">Video from our fast dry carpet cleaning services in London</h2>
 
-			<VideoPlayer src='https://www.youtube.com/embed/UN4EcOhkmgc?enablejsapi=1&mute=1' />
+      <VideoPlayer src='https://www.youtube.com/embed/UN4EcOhkmgc?enablejsapi=1&mute=1' />
 
-      <FleurDivider/>
+      <FleurDivider />
 
-      { /* <h2 class="line-height-12 md-line-height-14">Prices of our professional carpet cleaning services</h2>
+      <h2 class="line-height-12 md-line-height-14">Prices of our professional carpet cleaning services</h2>
 
       <div class="my-20 pt-8 pb-6 px-8 md-px-14 b-rd-3 bg-paper line-height-7.5 md-line-height-8 text-justify font-size-4 md-font-size-4.4"
         style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 18%);">
@@ -446,27 +446,16 @@ export default function Page() {
         <strong>Deising - Free of charge - just notify us when booking.</strong></div>
 
 
-                    <PriceTable
-                title="Room type"
-                items={[
-                    { label: "Single Bedroom", value: "from £31.00" },
-                    { label: "Double Bedroom", value: "from £35.00" },
-                    { label: "Master Bedroom", value: "from £40.00" },
-                    { label: "Living Room", value: "from £43.00" },
-                    { label: "Through Lounge", value: "from £69.00" },
-                    { label: "Hallway", value: "from £21.00" },
-                    { label: "Flight of Stairs", value: "from £34.00" },
-                    { label: "Landing", value: "from £15.00" },
-                    { label: "Bathroom", value: "from £6.00" },
-                    { label: "Small rug", value: "from £14.00" },
-                    { label: "Medium rug", value: "from £20.00" },
-                    { label: "Large rug", value: "from £31.00" },
-                ]}
-            />
+      <PriceTable
+        title="Room type"
+        items={[
+          { label: "Per room", value: "£20.00 - £30.00" }
+        ]}
+      />
 
       <button class="outline-none bg-brand-second-action hover-bg-brand-second-action-hover:hover font-size-6 font-600 w-250px h-60px c-paper flex flex-items-center flex-justify-center relative b-solid b-rd-3 b-4 b-brand-second-action hover-b-brand-second-action-hover:hover whitespace-normal line-height-6 word-spacing-0.5 py-9 my-20 mx-auto" style="box-shadow: 0 0 0 3px rgba(255, 255, 255, .9) inset; letter-spacing: 0.05rem;"><a href="/contact-us" class="c-paper font-size-5">REQUEST A QUOTE</a></button>
 
-      <FleurDivider/> */}
+      <FleurDivider />
 
       <h2 class="line-height-12 md-line-height-14">Frequently ordered together</h2>
 
@@ -515,7 +504,7 @@ export default function Page() {
         />
       </FOTSlider>
 
-      <FleurDivider/>
+      <FleurDivider />
 
       <h2 class="line-height-12 md-line-height-14">Our carpet cleaning specialist advises:</h2>
       <div class="mt-20 py-8 px-12 md-px-14 bg-paper b-rd-3" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 18%);">
@@ -543,7 +532,7 @@ export default function Page() {
         </ol>
       </div>
 
-      <FleurDivider/>
+      <FleurDivider />
 
       <h2 class="line-height-12 md-line-height-14">Quick dry carpet cleaning reviews</h2>
 
@@ -603,13 +592,13 @@ export default function Page() {
 
       </ReviewSlider>
 
-      <FleurDivider/>
+      <FleurDivider />
 
       <h2 class="line-height-12 md-line-height-14">FAQ regarding our fast dry carpet cleaning services</h2>
 
       <FaqSection />
 
-      <FleurDivider/>
+      <FleurDivider />
 
       <div class="m-10% mb-3% flex flex-wrap flex-justify-center md-gap-15 gap-10">
         <a href="/services"><button class="cursor-pointer outline-none bg-brand-second-action hover-bg-brand-second-action-hover:hover font-size-5 font-600 w-200px h-60px c-paper flex flex-items-center flex-justify-center relative b-solid b-rd-3 b-4 b-brand-second-action hover-b-brand-second-action-hover:hover whitespace-normal line-height-6 word-spacing-0.5 py-9" style="box-shadow: 0 0 0 3px rgba(255, 255, 255, .9) inset; letter-spacing: 0.05rem;">SERVICES</button></a>
