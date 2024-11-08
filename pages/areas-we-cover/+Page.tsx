@@ -25,9 +25,9 @@ function FullScreenImageGallery() {
   );
 }
 
-function AreaButton(props: { buttontitle: string, href: string }) {
+function AreaButton(props: { buttontitle: string, href?: string, class?: string, }) {
   return (
-    <a href={props.href}><button class="outline-none bg-brand-second-action font-size-6 font-600 w-230px h-110px c-paper flex flex-items-center flex-justify-center relative b-solid b-rd-3 b-4 b-brand-second-action whitespace-normal line-height-6 word-spacing-0.5" style="box-shadow: 0 0 0 3px rgba(255, 255, 255, .9) inset; letter-spacing: 0.0rem;">{props.buttontitle}</button></a>
+    <a href={props.href}><button class={props.class} class="outline-none bg-brand-second-action font-size-6 font-600 w-230px h-110px c-paper flex flex-items-center flex-justify-center relative b-solid b-rd-3 b-4 b-brand-second-action whitespace-normal line-height-6 word-spacing-0.5" style="box-shadow: 0 0 0 3px rgba(255, 255, 255, .9) inset; letter-spacing: 0.0rem;">{props.buttontitle}</button></a>
   )
 }
 function ButtonContainer(props: { children: HTMLElement | any }) {
@@ -55,14 +55,15 @@ export default function Page() {
 
       <ButtonContainer>
         <AreaButton
-          href=""
           buttontitle="Carpet cleaning City of London"
         />
         <AreaButton
+        class="cursor-pointer"
           href="/professional-carpet-cleaning-services/westminster"
           buttontitle="Carpet cleaning Westminster"
         />
         <AreaButton
+          class="cursor-pointer"
           href="/professional-carpet-cleaning-services/kensington-chelsea"
           buttontitle="Carpet cleaning Kensington and Chelsea"
         />
@@ -74,88 +75,88 @@ export default function Page() {
           buttontitle="Carpet cleaning Hammersmith and Fulham"
         />
         <AreaButton
-          href=""
+          
           buttontitle="Carpet cleaning Wandsworth"
         />
         <AreaButton
-          href=""
+          
           buttontitle="Carpet cleaning Lambeth"
         />
       </ButtonContainer>
 
       <ButtonContainer>
         <AreaButton
-          href=""
+          
           buttontitle="Carpet cleaning Southwark"
         />
         <AreaButton
-          href=""
+          
           buttontitle="Carpet cleaning Tower Hamlets"
         />
         <AreaButton
-          href=""
+          
           buttontitle="Carpet cleaning Hackney"
         />
       </ButtonContainer>
 
       <ButtonContainer>
         <AreaButton
-          href=""
+          
           buttontitle="Carpet cleaning Islington"
         />
         <AreaButton
-          href=""
+          
           buttontitle="Carpet cleaning Camden"
         />
         <AreaButton
-          href=""
+          
           buttontitle="Carpet cleaning Brent"
         />
       </ButtonContainer>
 
       <ButtonContainer>
         <AreaButton
-          href=""
+          
           buttontitle="Carpet cleaning Ealing"
         />
         <AreaButton
-          href=""
+          
           buttontitle="Carpet cleaning Hounslow"
         />
         <AreaButton
-          href=""
+          
           buttontitle="Carpet cleaning Richmond upon Thames"
         />
       </ButtonContainer>
 
       <ButtonContainer>
         <AreaButton
-          href=""
+          
           buttontitle="Carpet cleaning Kingston upon Thames"
         />
         <AreaButton
-          href=""
+          
           buttontitle="Carpet cleaning Merton"
         />
         <AreaButton
-          href=""
+          
           buttontitle="Carpet cleaning Sutton"
         />
       </ButtonContainer>
 
       <ButtonContainer>
         <AreaButton
-          href=""
+          
 
           buttontitle="Carpet cleaning Croydon"
         />
         <AreaButton
-          href=""
+          
 
           buttontitle="Carpet cleaning Bromley"
         />
         <AreaButton
-          href=""
+          
 
           buttontitle="Carpet cleaning Lewisham"
         />
@@ -163,17 +164,17 @@ export default function Page() {
 
       <ButtonContainer>
         <AreaButton
-          href=""
+          
 
           buttontitle="Carpet cleaning Greenwich"
         />
         <AreaButton
-          href=""
+          
 
           buttontitle="Carpet cleaning Bexley"
         />
         <AreaButton
-          href=""
+          
 
           buttontitle="Carpet cleaning Havering"
         />
@@ -181,17 +182,17 @@ export default function Page() {
 
       <ButtonContainer>
         <AreaButton
-          href=""
+          
 
           buttontitle="Carpet cleaning Barking and Dagenham"
         />
         <AreaButton
-          href=""
+          
 
           buttontitle="Carpet cleaning Redbridge"
         />
         <AreaButton
-          href=""
+          
 
           buttontitle="Carpet cleaning Newham"
         />
@@ -199,17 +200,17 @@ export default function Page() {
 
       <ButtonContainer>
         <AreaButton
-          href=""
+          
 
           buttontitle="Carpet cleaning Waltham Forest"
         />
         <AreaButton
-          href=""
+          
 
           buttontitle="Carpet cleaning Haringey"
         />
         <AreaButton
-          href=""
+          
 
           buttontitle="Carpet cleaning Enfield"
         />
@@ -217,17 +218,17 @@ export default function Page() {
 
       <ButtonContainer>
         <AreaButton
-          href=""
+          
 
           buttontitle="Carpet cleaning Barnet"
         />
         <AreaButton
-          href=""
+          
 
           buttontitle="Carpet cleaning Harrow"
         />
         <AreaButton
-          href=""
+          
 
           buttontitle="Carpet cleaning Hillingdon"
         />
