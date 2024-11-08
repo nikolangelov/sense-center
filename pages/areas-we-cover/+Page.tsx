@@ -71,7 +71,6 @@ export default function Page() {
 
       <ButtonContainer>
         <AreaButton
-          href="/professional-carpet-cleaning-services/kensington-chelsea"
           buttontitle="Carpet cleaning Hammersmith and Fulham"
         />
         <AreaButton
