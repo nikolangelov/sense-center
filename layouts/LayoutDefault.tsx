@@ -621,7 +621,6 @@ function HamburgerMenu() {
           style={{ height: menuHeight(), overflow: "hidden" }}
         >
           <div class="py-10 text-left">
-            {/* Other menu content */}
             <MyDropdown closeMenu={closeMenu} />
           </div>
         </div>
