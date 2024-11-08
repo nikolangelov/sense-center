@@ -195,7 +195,7 @@ export default function Page() {
 			<PriceTable
 				title="Sofa type"
 				items={[
-					{ label: "Footstool (Puff)", value: "from £12.00" },
+					{ label: "Footstool (Puff)", value: "from £12.00" }, 
 					{ label: "Two seated sofa", value: "from £49.00" },
 					{ label: "Two seated L shaped sofa", value: "from £59.00" },
 					{ label: "Three seated sofa", value: "from £59.00" },

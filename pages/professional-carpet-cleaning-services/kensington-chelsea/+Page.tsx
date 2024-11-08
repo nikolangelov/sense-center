@@ -21,10 +21,10 @@ function FaqSection() {
                 <Typography variant="body">Yes, the client is requested to arrange suitable parking space for our vehicles within close proximity of the property and to cover any parking/congestion expenses if applicable.</Typography></li>
             <li>
                 <Typography variant="h3">3. Do carpet cleaning services move furniture?</Typography>
-                <Typography variant="body">We would appreciate it if you would move small, fragile, or valuable items of furniture for insurance reasons, such as lamps and ornaments. If possible, please put them well out of the way before we arrive in an area that is not going to be disturbed by cleaning. We would like to have floors free from any obstructions. We will assist with moving other light furniture such as chairs, armchairs, and tables during the cleaning and put them back in place. If heavy furniture needs to be moved (such as sofas, beds, wardrobes, cupboards, etc.), we will charge you extra. The reason is that this will require additional time and effort by our technician, and he will receive an additional reward for it. Our aim is for the whole process to be as stress-free for you as possible.</Typography></li>
+                <Typography variant="body">We would appreciate it if you would move small, delicate, or valuable items of furniture for insurance reasons, such as lamps and ornaments. If you can, please put them well out of the way before we arrive in an area that won't be disturbed by cleaning. We would like to have floors free from any obstacles. We will help with moving other light furniture such as chairs, armchairs, and tables during the cleaning and put them back in place. If heavy furniture has to be moved (such as sofas, beds, wardrobes, cupboards, etc.), we will charge you extra. The reason is that this will require additional time and effort by our technician, and he will receive an additional reward for it. Our goal is for the whole process to be as stress-free for you as possible.</Typography></li>
             <li>
                 <Typography variant="h3">4. What if I live on the 4th floor or higher and I have no lift?</Typography>
-                <Typography variant="body">Since our equipment is very heavy (50kg+), when our technician has to carry it manually, we charge extra for every additional floor. The reason is that this will usually take a lot of time, and our technicians tire faster, therefore that day they can not do as much work as they usually do.</Typography></li>
+                <Typography variant="body">Since our equipment is very weighty (50kg+), when our technician has to carry it manually, we charge extra for every additional floor. The reason is that this will usually take a lot of time, and our technicians fatigue faster, therefore that day they can not do as much work as they usually do.</Typography></li>
             <li>
                 <Typography variant="h3">5. Are you insured?</Typography>
                 <Typography variant="body">Yes, we are fully insured.</Typography></li>
@@ -35,119 +35,195 @@ function FaqSection() {
                 <Typography variant="body">We are fully insured and if an accident happens we have full coverage.</Typography>
             </li>
             <li>
-                <Typography variant="h3">7. Does professional carpet cleaning really work?</Typography>
-                <Typography variant="body">Yes, professional carpet cleaning definitely works, thanks to the expertise, equipment, products and methods provided by professional carpet cleaning companies. Such carpet cleaning companies like Fine Carpet Cleaning London will provide quality carpet cleaning services and will be very effective in removing tough stains, odours and germ buildup, which cannot be eliminated with regular cleaning.</Typography>
+                <Typography variant="h3">7. What is professional carpet cleaning?</Typography>
+                <Typography variant="body">Professional carpet cleaning is performed by experts using special products and professional equipment and offers special carpet washing services (such as steam cleaning). By hiring professionals, the carpet also dries as quickly as possible after cleaning, thanks to the quality of the equipment used.</Typography>
+                <Typography variant="body">By having an affordable carpet cleaning like the one we provide, you are ensuring that your carpets are going to receive state-of-the-art cleaning techniques and quality cleaning solutions with thorough drying. DIY carpet cleaning almost always leaves out the crucial drying techniques that can help prevent the growth of mould or mildew.</Typography>
+                <Typography variant="body">Professional carpet cleaners are well-qualified in their field and know exactly which products to use on different types of carpets. The cleaning technician will also be able to clean your carpet without damaging its fibres, so your carpet looks as new without losing any of its thickness. The fibres won't be damaged in the process either.</Typography>
             </li>
             <li>
-                <Typography variant="h3">8. Do you offer cheap carpet cleaning?</Typography>
-                <Typography variant="body">The truth is that we, from Fine Carpet Cleaning London, do not offer cheap carpet cleaning. The reason is that we want to ensure high-quality of our carpet cleaning services which involves higher expenses for us.</Typography>
+                <Typography variant="h3">8. How much does a professional carpet cleaning cost?</Typography>
+                <Typography variant="body">The cost of professional carpet cleaning depends on the quantity and size of the carpets, how soiled they are, the type of the carpets and how easy the access to the carpets is. For more detailed information check out our <a
+                    class="color-paper-link hover-color-paper-link-hover:hover" href="/prices">carpet cleaning price list</a>.</Typography>
             </li>
             <li>
-                <Typography variant="h3">9. Is it possible to book carpet cleaning online?</Typography>
-                <Typography variant="body">Yes, professional carpet cleaning definitely works, thanks to the expertise, equipment, products and methods provided by professional carpet cleaning companies. Such carpet cleaning companies like Fine Carpet Cleaning London will provide quality carpet cleaning services and will be very effective in removing tough stains, odours and germ buildup, which cannot be eliminated with regular cleaning.</Typography>
+                <Typography variant="h3">9. Do you think that your company is doing the best carpet cleaning in London?</Typography>
+                <Typography variant="body">We, from Fine Carpet Cleaning London, believe that we are bound to be among the best carpet cleaning companies in London. The reason is that we strongly believe in the principle "No pain, no gain" and try to follow it when doing business. When we combine this with another principle that we try to follow - "think about others first" - this guarantees strive for constant improvement and delivery of better and better results. All of the above gives us confidence that we definitely have a chance in the foreseeable future to offer the best carpet cleaning in London.</Typography>
             </li>
             <li>
-                <Typography variant="h3">10. Does carpet cleaning kill bed bugs?</Typography>
-                <Typography variant="body">The short answer is yes, because the special equipment used for steam cleaning can eliminate bed bugs due to the high temperature it produces. However if your carpet is infested with bed bugs, hiring a good carpet cleaning company to steam clean your carpets does not guarantee their complete extinction. The reason is that it's very likely that the bed bugs do not reside only in the carpet but also in beds, mattresses, other furnishings and so on.</Typography>
-                <Typography variant="body">In case you have bed bug infestation in your property we highly recommend you to call a pest control company first. Once they perform a complete disinfestation of your property you are good to go with a professional carpet cleaning service.</Typography>
+                <Typography variant="h3">10. Do you offer berber carpet cleaning service?</Typography>
+                <Typography variant="body">Yes, we offer berber carpet cleaning service. If you need more information about this service you have to <a
+                    class="color-paper-link hover-color-paper-link-hover:hover" href="/contact-us">contact us</a>.</Typography>
             </li>
             <li>
-                <Typography variant="h3">11. Does carpet cleaning ruin carpets?</Typography>
-                <Typography variant="body">No, professional carpet cleaning in London will not damage the carpet. Despite popular belief, you cannot clean your carpets too often, and steam cleaning them frequently will not dry them out or break the carpet fibres. What will harm your carpets or rugs, however, is regular cleaning with improper methods, as well as products and chemicals being used that are not tried-and-true. Some companies offer cheap carpet cleaning services and in order to provide such a low price, they might decide to decrease the quality of the service or the quality of the products they use for cleaning. But if the chemicals used for the cleaning are safe, like ours in Fine Carpet Cleaning London, then you should not worry that this might cause any damage to your carpets.</Typography>
-                <Typography variant="body">While improper cleaning can harm your carpets, frequent hot water extraction will not. A good steam cleaning can prolong the lifespan of your carpets. Here are a few advantages of the regular use of steam cleaning and other carpet cleaning services:</Typography>
-                <ul class="ml--5" style="list-style: initial;">
-                    <Typography variant="li">
-                        <p>Carpet cleaning makes your carpet healthier;</p>
-                    </Typography>
-                    <Typography variant="li">
-                        <p>Steam cleaning keeps the carpet hygienic;</p>
-                    </Typography>
-                    <Typography variant="li">
-                        <p>Cleaning helps carpet fibres maintain their shape;</p>
-                    </Typography>
-                    <Typography variant="li">
-                        <p>Cleaning maintains the carpet warranty;</p>
-                    </Typography>
-                    <Typography variant="li">
-                        <p>Steam cleaning restores the colour of carpets.</p>
-                    </Typography>
-                </ul>
-                <Typography variant="body">Routine cleaning has many benefits for your carpet. In addition to making your house beautiful, regular affordable carpet cleaning like the one we offer helps extend the lifespan of one of your home's most valuable assets.</Typography>
-                <Typography variant="body">However, in special cases when the carpet is made of natural fibres (such as sisal, jute, seagrass etc.) we do not recommend steam cleaning, but dry cleaning, as the heat and steam will damage the carpet.</Typography>
-                <Typography variant="body">If you are not sure what type of cleaning method is most appropriate for your carpet, feel free to contact us to get professional advice.</Typography>
+                <Typography variant="h3">11. Can professional carpet cleaning remove coffee stains?</Typography>
+                <Typography variant="body">Yes, high-quality carpet cleaning services can absolutely remove coffee stains. In cases like stains from coffee with sugar, the carpet will have a growth of certain microbial activities. Some cleaning methods that a professional carpet cleaning company provides, such as steam carpet cleaning, effectively kill all those germs along with removing 100% of the coffee stain.</Typography>
+                <Typography variant="body">Unfortunately, we can't guarantee that we will be able to eliminate every coffee stain. The reason is that the coffee stain might be more difficult to remove if it has been incorrectly treated before or if it has been left to completely dry out. However, we will inform you beforehand whether we think we can get a coffee stain out or not.</Typography>
             </li>
             <li>
-                <Typography variant="h3">12. In which wards of Westminster do you do carpet cleaning?</Typography>
+                <Typography variant="h3">12. In which wards of Kensington and Chelsea do you do carpet cleaning?</Typography>
                 <Typography variant="body">We do:</Typography>
                 <ul class="ml--5" style="list-style: initial;">
                     <Typography variant="li">
-                        <p>carpet cleaning in Abbey Road;</p>
+                        <p>carpet cleaning in Abingdon;</p>
+                    </Typography>
+                    <Typography variant="li">
+                        <p>carpet cleaning in Brompton & Hans Town;</p>
+                    </Typography>
+                    <Typography variant="li">
+                        <p>carpet cleaning in Campden;</p>
+                    </Typography>
+                    <Typography variant="li">
+                        <p>carpet cleaning in Chelsea Riverside;</p>
+                    </Typography>
+                    <Typography variant="li">
+                        <p>carpet cleaning in Colville;</p>
+                    </Typography>
+                    <Typography variant="li">
+                        <p>carpet cleaning in Courtfield;</p>
+                    </Typography>
+                    <Typography variant="li">
+                        <p>carpet cleaning in Dalgarno;</p>
+                    </Typography>
+                    <Typography variant="li">
+                        <p>carpet cleaning in Earl's Court;</p>
+                    </Typography>
+                    <Typography variant="li">
+                        <p>carpet cleaning in Golborne;</p>
+                    </Typography>
+                    <Typography variant="li">
+                        <p>carpet cleaning in Holland;</p>
+                    </Typography>
+                    <Typography variant="li">
+                        <p>carpet cleaning in Norland;</p>
+                    </Typography>
+                    <Typography variant="li">
+                        <p>carpet cleaning in Notting Dale;</p>
+                    </Typography>
+                    <Typography variant="li">
+                        <p>carpet cleaning in Pembridge;</p>
+                    </Typography>
+                    <Typography variant="li">
+                        <p>carpet cleaning in Queen's Gate;</p>
+                    </Typography>
+                    <Typography variant="li">
+                        <p>carpet cleaning in Redcliffe;</p>
+                    </Typography>
+                    <Typography variant="li">
+                        <p>carpet cleaning in Royal Hospital;</p>
+                    </Typography>
+                    <Typography variant="li">
+                        <p>carpet cleaning in St Helen's;</p>
+                    </Typography>
+                    <Typography variant="li">
+                        <p>carpet cleaning in Stanley;</p>
+                    </Typography>
+                </ul>
+            </li>
+            <li>
+                <Typography variant="h3">13. In which districts of Kensington and Chelsea do you do carpet cleaning?</Typography>
+                <Typography variant="body">We do:</Typography>
+                <ul class="ml--5" style="list-style: initial;">
+                    <Typography variant="li">
+                        <p>carpet cleaning in Albertopolis;</p>
                     </Typography>
                     <Typography variant="li">
                         <p>carpet cleaning in Bayswater;</p>
                     </Typography>
                     <Typography variant="li">
-                        <p>carpet cleaning in Church Street;</p>
+                        <p>carpet cleaning in Belgravia;</p>
                     </Typography>
                     <Typography variant="li">
-                        <p>carpet cleaning in Harrow Road;</p>
+                        <p>carpet cleaning in Brompton;</p>
                     </Typography>
                     <Typography variant="li">
-                        <p>carpet cleaning in Hyde Park;</p>
+                        <p>carpet cleaning in Chelsea;</p>
                     </Typography>
                     <Typography variant="li">
-                        <p>carpet cleaning in Knightsbridge & Belgravia;</p>
+                        <p>carpet cleaning in Chelsea Harbour;</p>
                     </Typography>
                     <Typography variant="li">
-                        <p>carpet cleaning in Lancaster Gate;</p>
+                        <p>carpet cleaning in Earl's Court;</p>
                     </Typography>
                     <Typography variant="li">
-                        <p>carpet cleaning in Little Venice;</p>
+                        <p>carpet cleaning in Holland Park;</p>
                     </Typography>
                     <Typography variant="li">
-                        <p>carpet cleaning in Maida Vale;</p>
+                        <p>carpet cleaning in Kensal Green;</p>
                     </Typography>
                     <Typography variant="li">
-                        <p>carpet cleaning in Marylebone;</p>
+                        <p>carpet cleaning in Kensington;</p>
                     </Typography>
                     <Typography variant="li">
-                        <p>carpet cleaning in Pimlico North;</p>
+                        <p>carpet cleaning in Knightsbridge;</p>
                     </Typography>
                     <Typography variant="li">
-                        <p>carpet cleaning in Pimlico South;</p>
+                        <p>carpet cleaning in Ladbroke Grove;</p>
                     </Typography>
                     <Typography variant="li">
-                        <p>carpet cleaning in Queen's Park;</p>
+                        <p>carpet cleaning in North Kensington;</p>
                     </Typography>
                     <Typography variant="li">
-                        <p>carpet cleaning in Regent's Park;</p>
+                        <p>carpet cleaning in Notting Hill;</p>
                     </Typography>
                     <Typography variant="li">
-                        <p>carpet cleaning in St James's;</p>
+                        <p>carpet cleaning in South Kensington;</p>
                     </Typography>
                     <Typography variant="li">
-                        <p>carpet cleaning in Vincent Square;</p>
+                        <p>carpet cleaning in West Brompton;</p>
                     </Typography>
                     <Typography variant="li">
-                        <p>carpet cleaning in West End;</p>
+                        <p>carpet cleaning in West Kensington;</p>
                     </Typography>
                     <Typography variant="li">
-                        <p>carpet cleaning in Westbourne;</p>
+                        <p>carpet cleaning in World's End;</p>
                     </Typography>
                 </ul>
             </li>
             <li>
-                <Typography variant="h3">13. In which postcodes of Westminster do you do carpet cleaning?</Typography>
+                <Typography variant="h3">14. In which postcodes of Kensington and Chelsea do you do carpet cleaning?</Typography>
                 <Typography variant="body">We perform:</Typography>
                 <ul class="ml--5" style="list-style: initial;">
                     <Typography variant="li">
-                        <p>carpet cleaning in SW1;</p>
+                        <p>carpet cleaning in SW10;</p>
                     </Typography>
                     <Typography variant="li">
-                        <p>carpet cleaning in SW95;</p>
+                        <p>carpet cleaning in SW19;</p>
+                    </Typography>
+                    <Typography variant="li">
+                        <p>carpet cleaning in SW1W;</p>
+                    </Typography>
+                    <Typography variant="li">
+                        <p>carpet cleaning in SW1X;</p>
+                    </Typography>
+                    <Typography variant="li">
+                        <p>carpet cleaning in SW3;</p>
+                    </Typography>
+                    <Typography variant="li">
+                        <p>carpet cleaning in SW5;</p>
+                    </Typography>
+                    <Typography variant="li">
+                        <p>carpet cleaning in SW7;</p>
+                    </Typography>
+                    <Typography variant="li">
+                        <p>carpet cleaning in W10;</p>
+                    </Typography>
+                    <Typography variant="li">
+                        <p>carpet cleaning in W11;</p>
+                    </Typography>
+                    <Typography variant="li">
+                        <p>carpet cleaning in W14;</p>
+                    </Typography>
+                    <Typography variant="li">
+                        <p>carpet cleaning in W2;</p>
+                    </Typography>
+                    <Typography variant="li">
+                        <p>carpet cleaning in W8;</p>
+                    </Typography>
+                    <Typography variant="li">
+                        <p>carpet cleaning in W9;</p>
                     </Typography>
                 </ul>
-                <Typography variant="body">Anyhow, no matter in which borough of Westminster you are located, our local carpet, rug and upholstery cleaning teams are available to respond quickly to your needs, tailoring the services to your personal preferences.</Typography>
+                <Typography variant="body">Anyhow, no matter in which borough of Kensington and Chelsea you are located, our local carpet, rug and upholstery cleaning teams are available to respond quickly to your needs, tailoring the services to your personal preferences.</Typography>
             </li>
         </Entry>
     </Container>
@@ -157,66 +233,66 @@ export default function Page() {
 
     return (
         <>
-            <h1 class="mt-10 md-mt-17 font-size-12.5 md-font-size-16 md-line-height-18 line-height-16">Carpet cleaning Westminster</h1>
+            <h1 class="mt-10 md-mt-17 font-size-12.5 md-font-size-16 md-line-height-18 line-height-16">Carpet cleaning Kensington and Chelsea</h1>
             <div class="flex flex-justify-center"><img class="b-rd-3 md-mt-10 mt-2 max-w-full"
-                src="/assets/location-pages/westminster/carpet-cleaning-marylebone.png" alt="carpet-cleaning-marylebone"
+                src="/assets/location-pages/kensington-chelsea/carpet-cleaning-chelsea.png" alt="carpet-cleaning-chelsea"
                 style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 30%);" /></div>
 
             <FleurDivider />
 
-            <h2 class="line-height-12 md-line-height-14">Why to use professional carpet cleaning services in Westminster</h2>
+            <h2 class="line-height-12 md-line-height-14">Why to use professional carpet cleaning services in Kensington and Chelsea</h2>
             <div class="mt-20 py-8 px-8 md-px-14 bg-paper b-rd-3"
                 style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 18%);">
                 <h3>Benefits</h3>
-                <p>Fine Carpet Cleaning London provides a variety of skilled carpet cleaning services. The utilisation of these kinds of solutions has the following benefits:</p>
+                <p>Fine Carpet Cleaning London offers a range of expert carpet cleaning options. The use of these types of services has the following advantages:</p>
                 <ul>
                     <li class="ml--5">
-                        <p>It is much cheaper to do routine maintenance than purchasing a new rug.</p>
+                        <p>It is significantly more affordable to perform regular upkeep than buying a new carpet.</p>
                     </li>
                     <li class="ml--5">
-                        <p>It will prolong the lifespan of your carpet.</p>
+                        <p>It will extend the life of your carpet.</p>
                     </li>
                     <li class="ml--5">
-                        <p>It will maintain the appearance of your carpet.</p>
+                        <p>It will preserve the look of your carpet.</p>
                     </li>
                     <li class="ml--5">
-                        <p>It will keep the hygiene of your carpet (which offers you health benefits).</p>
+                        <p>It will maintain the cleanliness of your carpet (which brings you health advantages).</p>
                     </li>
                 </ul>
                 <h3>Simple booking process:</h3>
-                <p>The standard process for booking our skilled carpet cleaning services in Westminster:</p>
+                <p>The usual steps for arranging our professional carpet cleaning services in Kensington and Chelsea:</p>
                 <ul>
                     <li class="ml--5">
-                        <p>You contact us.</p>
+                        <p>You reach out to us.</p>
                     </li>
                     <li class="ml--5">
-                        <p>We advise you on the most appropriate services based on your needs.</p>
+                        <p>We recommend the most suitable services for your situation.</p>
                     </li>
                     <li class="ml--5">
-                        <p>We offer you a carpet cleaning estimate.</p>
+                        <p>We provide you with a carpet cleaning quote.</p>
                     </li>
                     <li class="ml--5">
-                        <p>If you accept our conditions, we schedule a visit.</p>
+                        <p>If you're satisfied with our terms, we set up an appointment.</p>
                     </li>
                     <li class="ml--5">
-                        <p>Our technician will come to your home and clean your carpets.</p>
+                        <p>One of our experts will visit your property and clean your carpets.</p>
                     </li>
                 </ul>
                 <h3>What do we offer:</h3>
-                <p>The professional carpet cleaning services that we provide in Westminster include:</p>
+                <p>The expert carpet cleaning services we offer in Kensington and Chelsea consist of:</p>
                 <ul>
                     <li class="ml--5"><a
                         class="color-paper-link-hover hover-color-paper-link:hover font-size-17.5px line-height-8 word-spacing--0.12 tracking--0.04"
-                        href="/professional-carpet-cleaning-services/steam">Expert carpet steam cleaning services</a></li>
+                        href="/professional-carpet-cleaning-services/steam">Professional carpet steam cleaning services</a></li>
                     <li class="ml--5"><a
                         class="color-paper-link-hover hover-color-paper-link:hover font-size-17.5px line-height-8 word-spacing--0.12 tracking--0.04"
                         href="/professional-carpet-cleaning-services/dry">Dry carpet cleaning services</a></li>
                     <li class="ml--5"><a
                         class="color-paper-link-hover hover-color-paper-link:hover font-size-17.5px line-height-8 word-spacing--0.12 tracking--0.04"
-                        href="/professional-carpet-cleaning-services/eco-friendly">Eco-friendly carpet cleaning services</a></li>
+                        href="/professional-carpet-cleaning-services/eco-friendly">Green carpet cleaning services</a></li>
                     <li class="ml--5"><a
                         class="color-paper-link-hover hover-color-paper-link:hover font-size-17.5px line-height-8 word-spacing--0.12 tracking--0.04"
-                        href="/professional-carpet-cleaning-services/fast-dry">Fast dry carpet cleaning services</a></li>
+                        href="/professional-carpet-cleaning-services/fast-dry">Quick-dry carpet cleaning services</a></li>
                     <li class="ml--5"><a
                         class="color-paper-link-hover hover-color-paper-link:hover font-size-17.5px line-height-8 word-spacing--0.12 tracking--0.04"
                         href="/services">All of our services</a></li>
@@ -231,54 +307,52 @@ export default function Page() {
                 <ol style="counter-reset: ordered; list-style: none;">
                     <li class="ml--5">
                         <h3 class="ml--5 font-size-6 md-font-size-7">Highly-efficient extractors</h3>
-                        <Typography variant="body">The machines we utilise have been picked after an uncompromising process. First, we assessed all major brands available on the UK market. Second, we chose the most effective ones among them - "<a
+                        <Typography variant="body">The equipment we employ has been selected after a rigorous selection process. Initially, we evaluated all major brands accessible in the UK market. Next, we picked the most efficient ones among them - "<a
                             class="color-paper-link hover-color-paper-link-hover:hover"
                             href="https://www.mytee.com/products/1003dx-speedster-deluxe-carpet-extractor/"
-                            target="_blank" rel="noopener">Mytee</a>" (leading US manufacturer) and "<a
+                            target="_blank" rel="noopener">Mytee</a>" (top US manufacturer) and "<a
                                 class="color-paper-link hover-color-paper-link-hover:hover"
                                 href="https://www.clean-smart.co.uk/store/airflex-storm" target="_blank"
-                                rel="noopener">Airflex</a>" (top UK manufacturer). Third, our engineer further improved them to maximise their performance.</Typography>
+                                rel="noopener">Airflex</a>" (leading UK manufacturer). Finally, our technician further enhanced them in order to optimise their performance.</Typography>
                     </li>
                     <li class="ml--5">
                         <h3 class="ml--5 font-size-6 md-font-size-7">Powerful vacuum cleaners</h3>
-                        <Typography variant="body">We employ a high-filtration dual engine vacuum cleaner, which we consider the top choice on the market. It's engineered for high-performance professional carpet cleaning. One of the double-motors pounds at the carpet while the other one removes any loose dirt, dry soil, and dust.</Typography>
+                        <Typography variant="body">We utilise a high-filtration twin motor vacuum cleaner, which we believe is the best one available. It's designed for superior expert carpet cleaning. One of the dual-motors beats at the carpet while the other one sucks out any loose debris, dry soil, and dust.</Typography>
                     </li>
                     <li class="ml--5">
                         <h3 class="ml--5 font-size-6 md-font-size-7">Carefully selected cleaning products</h3>
-                        <Typography variant="body">When it comes to cleaning products, we utilise more than 20 various detergents, because we understand that every scenario demands an individual approach. We have assessed almost all detergents available on the market and chose those giving the best results. Among them are items from the brands "Alltec", "Prochem", "Chemspec", "Solution World of Clean", "TMF", etc.</Typography>
+                        <Typography variant="body">In terms of cleaning solutions, we employ over 20 different detergents, as we know that each situation requires a unique approach. We have evaluated nearly all detergents accessible on the market and selected those providing the best outcomes. Among them are products from brands like Alltec, Prochem, Chemspec, Solution World of Clean, TMF, and more.</Typography>
                     </li>
                 </ol>
             </div>
 
             <FleurDivider />
 
-            <h2 class="line-height-12 md-line-height-14">Pictures from our professional carpet cleaning services in Westminster</h2>
+            <h2 class="line-height-12 md-line-height-14">Pictures from our professional carpet cleaning services in Kensington and Chelsea</h2>
 
             <FacebookLikeGallery imgs={[
-                { src: "/assets/location-pages/westminster/carpet-cleaning-aldgate.jpg", alt: "carpet-cleaning-aldgate" },
-                { src: "/assets/location-pages/westminster/carpet-cleaning-cripplegate.jpg", alt: "carpet-cleaning-cripplegate" },
-                { src: "/assets/location-pages/westminster/carpet-cleaning-bassishaw.jpg", alt: "carpet-cleaning-bassishaw" },
-                { src: "/assets/location-pages/westminster/carpet-cleaning-aldersgate.jpg", alt: "carpet-cleaning-aldersgate" },
-                { src: "/assets/location-pages/westminster/carpet-cleaning-bread-street.jpg", alt: "carpet-cleaning-bread-street" },
-                { src: "/assets/location-pages/westminster/carpet-cleaning-broad-street.jpg", alt: "carpet-cleaning-broad-street" },
-                { src: "/assets/location-pages/westminster/carpet-cleaning-castle-baynard.jpg", alt: "carpet-cleaning-castle-baynard" },
-                { src: "/assets/location-pages/westminster/carpet-cleaning-city-of-london.jpg", alt: "carpet-cleaning-city-of-london" },
-                { src: "/assets/location-pages/westminster/carpet-cleaning-coleman-street.jpg", alt: "carpet-cleaning-coleman-street" },
-                { src: "/assets/location-pages/westminster/carpet-cleaning-farringdon-within.jpg", alt: "carpet-cleaning-farringdon-within" },
-                { src: "/assets/location-pages/westminster/carpet-cleaning-farringdon-without.jpg", alt: "carpet-cleaning-farringdon-without" },
-                { src: "/assets/location-pages/westminster/carpet-cleaning-london-bridge.jpg", alt: "carpet-cleaning-london-bridge" },
-                { src: "/assets/location-pages/westminster/carpet-cleaning-queenhithe.jpg", alt: "carpet-cleaning-queenhithe" },
+                { src: "/assets/location-pages/kensington-chelsea/carpet-cleaning-abingdon.jpg", alt: "carpet-cleaning-abingdon" },
+                { src: "/assets/location-pages/kensington-chelsea/abingdon-carpet-cleaning.jpg", alt: "abingdon-carpet-cleaning" },
+                { src: "/assets/location-pages/kensington-chelsea/carpet-cleaning-sw19.jpg", alt: "carpet-cleaning-sw19" },
+                { src: "/assets/location-pages/kensington-chelsea/carpet-cleaning-sw3.jpg", alt: "carpet-cleaning-sw3" },
+                { src: "/assets/location-pages/kensington-chelsea/carpet-cleaning-redcliffe.jpg", alt: "carpet-cleaning-redcliffe" },
+                { src: "/assets/location-pages/kensington-chelsea/carpet-cleaning-services-st-helens.jpg", alt: "carpet-cleaning-services-st-helens" },
+                { src: "/assets/location-pages/kensington-chelsea/carpet-cleaning-sw7.jpg", alt: "carpet-cleaning-sw7" },
+                { src: "/assets/location-pages/kensington-chelsea/carpet-cleaning-w2.jpg", alt: "carpet-cleaning-w2" },
+                { src: "/assets/location-pages/kensington-chelsea/carpet-cleaning-w11.jpg", alt: "carpet-cleaning-w11" },
+                { src: "/assets/location-pages/kensington-chelsea/professional-carpet-cleaning-abingdon.jpg", alt: "professional-carpet-cleaning-abingdon" },
             ]} />
 
             <FleurDivider />
 
-            <h2 class="line-height-12 md-line-height-14">Video from our professional carpet cleaning services in Westminster</h2>
+            <h2 class="line-height-12 md-line-height-14">Video from our professional carpet cleaning services in Kensington and Chelsea</h2>
 
-            <VideoPlayer src='https://www.youtube.com/embed/KCpGggVDqO0?enablejsapi=1&mute=1' />
+            <VideoPlayer src='https://www.youtube.com/embed/eWs_PxyvyS8?enablejsapi=1&mute=1' />
 
             <FleurDivider />
 
-            <h2 class="line-height-12 md-line-height-14">Prices of our professional carpet cleaning services in Westminster</h2>
+            <h2 class="line-height-12 md-line-height-14">Prices of our professional carpet cleaning services in Kensington and Chelsea</h2>
+
 
             <div class="my-20 pt-8 pb-6 px-8 md-px-14 b-rd-3 bg-paper line-height-7.5 md-line-height-8 text-justify font-size-4 md-font-size-4.4"
                 style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 18%);">
@@ -361,39 +435,39 @@ export default function Page() {
 
             <FleurDivider />
 
-            <h2 class="line-height-12 md-line-height-14">Our carpet cleaning specialists advise:</h2>
+            <h2 class="line-height-12 md-line-height-14">Our carpet cleaning specialist’s advices:</h2>
             <div class="mt-20 py-8 px-12 md-px-14 bg-paper b-rd-3"
                 style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 18%);">
                 <ol style="counter-reset: ordered; list-style: none;">
                     <li class="ml--5">
                         <h3 class="ml--5 font-size-6 md-font-size-7">Use a stain protector</h3>
-                        <Typography variant="body">Our carpet cleaning expert recommends always adding stain protector to your carpet and upholstery if you can manage it. It saves a lot of money on professional stain removal services. Why? Because it protects the fabric against penetration of liquids that cause lasting stains and permanent damage to the carpet and furniture. Discover more about the advantages of using <a
+                        <Typography variant="body">Our carpet cleaning specialist advises you to always apply stain protector to your carpet and upholstery if you can afford it. It saves a significant amount of money from professional stain removal services. Why? Because it shields the fabric against penetration of liquids that lead to persistent stains and permanent harm to the carpet and upholstery. Learn more about the benefits of using <a
                             class="color-paper-link hover-color-paper-link-hover:hover" href="/stain-protection-services">stain protection services</a>.</Typography>
                     </li>
                     <li class="ml--5">
                         <h3 class="ml--5 font-size-6 md-font-size-7">Use a professional stain removal service</h3>
-                        <Typography variant="body">Our carpet cleaning expert recommends that if your carpet or upholstery has been stained, it's best to look for a professional stain removal company. The reason is that when you try to clean it yourself or leave the stain to dry, the fibres might get damaged and the stain probably won't come off completely. Attempting to clean the stain yourself will likely seal it in, rather than remove it. This will then make it harder or even impossible for a professional carpet cleaning company to get rid of it. So, booking a <a class="color-paper-link hover-color-paper-link-hover:hover"
-                            href="/professional-stain-removal-services">professional stain removal service</a> today from an expert carpet cleaning company can save your carpet or furniture that's worth a lot of money.</Typography>
+                        <Typography variant="body">Our carpet cleaning specialist advises that if your carpet or upholstery has been stained, it is in your best interest to search for a professional stain removal company. The reason is that in the process of self-cleaning or leaving the stain to dry, the fibres might be damaged and the stain is very likely to not entirely come off ever. The attempt to clean the stain yourself will very likely seal off the stain, rather than remove it. This will then make it harder or even impossible for a professional carpet cleaning company to eliminate it. Thus, a <a class="color-paper-link hover-color-paper-link-hover:hover"
+                            href="/professional-stain-removal-services">professional stain removal service</a> booked today from an expert carpet cleaning company can rescue your carpet or upholstery that is worth thousands.</Typography>
                     </li>
                     <li class="ml--5">
                         <h3 class="ml--5 font-size-6 md-font-size-7">Take informed decisions</h3>
-                        <Typography variant="body">Our carpet cleaning expert recommends you take a look at the other services we provide. By getting to know <a
-                            class="color-paper-link hover-color-paper-link-hover:hover" href="/services">all of our services</a>, you can make informed choices about what else you might need. This lets you remember any specific services you may have forgotten about or discover new services that you didn't even know were available.</Typography>
+                        <Typography variant="body">Our carpet cleaning specialist advises you to check out the <a
+                            class="color-paper-link hover-color-paper-link-hover:hover" href="/services">other services</a> we offer. By acquainting yourself with all of our services, you can make informed decisions about what else you may require. This allows you to recall any particular services you may have forgotten about or uncover new services that you didn't even know existed.</Typography>
                     </li>
                     <li class="ml--5">
                         <h3 class="ml--5 font-size-6 md-font-size-7">Combine different services</h3>
-                        <Typography variant="body">It's in your best interest to combine different services instead of having them done separately. Why? Because this will save you a lot of money. The reason is that the initial professional carpet cleaning cost is high and you'll have to pay some extra money for each visit of our technicians (due to time and cost of travel, parking, carrying of heavy machinery etc.). So once you pay the initial cost, adding extra services is much cheaper.</Typography>
+                        <Typography variant="body">It's to your advantage to combine different services rather than having them performed separately. Why? Because this will save you a significant amount of money. The reason is that the initial professional carpet cleaning cost is high and you will have to pay some additional money for every visit of our technicians (due to time and cost of travel, parking, carrying of heavy equipment etc.). So once you pay the initial cost, adding extra services is significantly more affordable.</Typography>
                     </li>
                     <li class="ml--5">
                         <h3 class="ml--5 font-size-6 md-font-size-7">Enjoy health benefits</h3>
-                        <Typography variant="body">Your rug, carpet floor covering, and upholstery are some of those items that collect lots of dust, microorganisms, and particles of dirt that are potential causes for health problems. They might provoke different reactions, skin issues, and allergies, and the risk gets higher if they are not taken care of. So depending on how much traffic you have on your rugs, carpets, and upholstery, our carpet cleaning expert recommends considering using professional carpet cleaning services in Westminster once a year. If the traffic is really, really heavy, it's best to do it more often.</Typography>
+                        <Typography variant="body">Your rug, carpet floor covering, and furniture are some of those items that accumulate lots of dust, microbes, and particles of dirt that are potential causes for health issues. They might provoke different reactions, skin problems, and allergies, and the risk is getting higher if they are not taken care of. So depending on the amount of traffic that you have on your rugs, carpets, and upholstery, our carpet cleaning specialist advises you to consider using professional carpet cleaning services in Kensington and Chelsea once a year. In case the traffic is really, really heavy, it is in your best interest to do it more frequently.</Typography>
                     </li>
                 </ol>
             </div>
 
             <FleurDivider />
 
-            <h2 class="line-height-12 md-line-height-14">Reviews from our professional carpet cleaning in Westminster</h2>
+            <h2 class="line-height-12 md-line-height-14">Reviews from our professional carpet cleaning in Kensington and Chelsea</h2>
 
             <ReviewSlider>
                 <StarReview
@@ -452,7 +526,7 @@ export default function Page() {
 
             <FleurDivider />
 
-            <h2 class="line-height-12 md-line-height-14">FAQ regarding our carpet cleaning services in Westminster</h2>
+            <h2 class="line-height-12 md-line-height-14">FAQ regarding our carpet cleaning services in Kensington and Chelsea</h2>
 
             <FaqSection />
 
