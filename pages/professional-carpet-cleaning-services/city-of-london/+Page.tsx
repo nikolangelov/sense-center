@@ -369,7 +369,7 @@ export default function Page() {
 
             <FleurDivider />
 
-            <h2 class="line-height-12 md-line-height-14">Our carpet cleaning specialist’s advices:</h2>
+            <h2 class="line-height-12 md-line-height-14">Our carpet cleaning specialists advise:</h2>
             <div class="mt-20 py-8 px-12 md-px-14 bg-paper b-rd-3"
                 style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 18%);">
                 <ol style="counter-reset: ordered; list-style: none;">

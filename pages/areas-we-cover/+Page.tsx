@@ -27,7 +27,7 @@ function FullScreenImageGallery() {
 
 function AreaButton(props: { buttontitle: string, href?: string, class?: string, }) {
   return (
-    <a href={props.href}><button class={props.class} class="outline-none bg-brand-second-action font-size-6 font-600 w-230px h-110px c-paper flex flex-items-center flex-justify-center relative b-solid b-rd-3 b-4 b-brand-second-action whitespace-normal line-height-6 word-spacing-0.5" style="box-shadow: 0 0 0 3px rgba(255, 255, 255, .9) inset; letter-spacing: 0.0rem;">{props.buttontitle}</button></a>
+    <a href={props.href}><button class={props.class} class="outline-none bg-brand-second-action font-size-6 font-600 w-230px h-110px c-paper flex flex-items-center flex-justify-center relative b-solid b-rd-3 b-4 b-brand-second-action whitespace-normal line-height-7 word-spacing-0.5" style="box-shadow: 0 0 0 3px rgba(255, 255, 255, .9) inset; letter-spacing: 0.0rem;">{props.buttontitle}</button></a>
   )
 }
 function ButtonContainer(props: { children: HTMLElement | any }) {
@@ -73,25 +73,31 @@ export default function Page() {
 
       <ButtonContainer>
         <AreaButton
+          class="cursor-pointer"
+          href="/professional-carpet-cleaning-services/hammersmith-fulham"
           buttontitle="Carpet cleaning Hammersmith and Fulham"
         />
         <AreaButton
-
+          class="cursor-pointer"
+          href="/professional-carpet-cleaning-services/wandsworth"
           buttontitle="Carpet cleaning Wandsworth"
         />
         <AreaButton
-
+          class="cursor-pointer"
+          href="/professional-carpet-cleaning-services/lambeth"
           buttontitle="Carpet cleaning Lambeth"
         />
       </ButtonContainer>
 
       <ButtonContainer>
         <AreaButton
-
+          class="cursor-pointer"
+          href="/professional-carpet-cleaning-services/southwark"
           buttontitle="Carpet cleaning Southwark"
         />
         <AreaButton
-
+          class="cursor-pointer"
+          href="/professional-carpet-cleaning-services/tower-hamlets"
           buttontitle="Carpet cleaning Tower Hamlets"
         />
         <AreaButton
