@@ -326,24 +326,139 @@ ol>li>ul>li:before {
 
 .popper {
   position: absolute;
-  width: 40px; /* Adjust width as needed */
-  height: 40px; /* Adjust height as needed */
-  background-color: transparent; /* Make background transparent */
-  border: 5px solid #FFF; /* Example styling for the poppers */
-  border-radius: 50%; /* Circular shape */
-  top: 20px; /* Position from the top of the modal */
+  width: 40px;
+  /* Adjust width as needed */
+  height: 40px;
+  /* Adjust height as needed */
+  background-color: transparent;
+  /* Make background transparent */
+  border: 5px solid #FFF;
+  /* Example styling for the poppers */
+  border-radius: 50%;
+  /* Circular shape */
+  top: 20px;
+  /* Position from the top of the modal */
 }
 
 #popper-left {
-  left: -50px; /* Position it to the left */
+  left: -50px;
+  /* Position it to the left */
 }
 
 #popper-right {
-  right: -50px; /* Position it to the right */
+  right: -50px;
+  /* Position it to the right */
 }
 
-@keyframes progressLoop {
-  0% { transform: scaleX(0.8); opacity: 0.9; }
-  50% { transform: scaleX(1); opacity: 1; }
-  100% { transform: scaleX(0.8); opacity: 0.9; }
+@keyframes smoothProgress {
+  0% {
+    width: 0%;
+  }
+
+  50% {
+    width: 50%;
+  }
+
+  100% {
+    width: 100%;
+  }
+}
+
+
+
+
+/* Navigation Styles */
+.primaryNav {
+  width: 100%;
+
+}
+
+.primaryNav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.primaryNav li {
+  position: relative;
+  text-align: center;
+  line-height: 1.5rem;
+  max-width: 400px;
+    margin-top: 10px;
+}
+
+@media (max-width: 900px) {
+  .primaryNav li {
+    max-width: 220px;
+  }
+}
+
+.primaryNav li a {
+  height: 110px;
+  align-items: center;
+  align-content: center;
+  display: block;
+  padding: 0.45em;
+  background-color: #f8f8f8;
+  color: #333;
+  text-decoration: none;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  font-size: 0.65em;
+}
+
+@media (max-width: 900px) {
+  .primaryNav li a {
+    max-height: 120px;
+  }
+}
+
+.primaryNav li a:hover {
+  background-color: #f1f1f1;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Submenu Styles */
+.has-submenu>a::after {
+  content: ' ▼';
+  font-size: 0.8em;
+  margin-left: 0.5em;
+}
+
+
+@media (max-width: 900px) {
+  .first-menu {
+    left: 30px !important;
+  }
+}
+.first-menu {
+  left: 80px;
+  position: relative;
+}
+
+@media (max-width: 900px) {
+  .submenu li a {
+    left: 60px !important;
+  }
+}
+
+.submenu li a {
+  left: 160px;
+  position: relative;
+}
+
+@media (max-width: 900px) {
+  .sub-submenu li a {
+    left: 90px !important;
+  }
+}
+
+.sub-submenu li a {
+  left: 240px;
+  position: relative;
 }
