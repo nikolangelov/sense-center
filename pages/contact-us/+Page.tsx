@@ -151,6 +151,38 @@ export default function Page() {
       }
     }
 
+    const xhr = new XMLHttpRequest();
+  
+    xhr.open('POST', '/api/send-email', true);
+    
+    // Progress event listener
+    xhr.upload.onprogress = (event) => {
+      if (event.lengthComputable) {
+        const percentComplete = (event.loaded / event.total) * 100;
+        setProgress(percentComplete);
+      }
+    };
+    
+    xhr.onload = () => {
+      setIsUploading(false); // End upload
+  
+      if (xhr.status === 200) {
+        setIsSubmitted(true);
+        setIsModalOpen(true);
+      } else {
+        alert(`Error sending email: ${xhr.responseText}`);
+      }
+    };
+    
+    xhr.onerror = () => {
+      console.error('Error:', xhr.responseText);
+      alert('An error occurred while sending the email.');
+      setIsUploading(false); // End upload
+    };
+  
+    xhr.send(formData);
+  
+
     formData.append('services', selectedServices().join(', '));
 
     try {
