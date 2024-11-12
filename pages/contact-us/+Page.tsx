@@ -386,7 +386,6 @@ export default function Page() {
       )}
 
       {isModalOpen() && (
-        isOpen() && (
           <div class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50">
             <div class="bg-white p-8 rounded-lg shadow-lg max-w-md w-full relative flex flex-col items-center justify-center">
               {/* Right decorative SVG */}
@@ -406,7 +405,7 @@ export default function Page() {
               </button>
             </div>
           </div>
-        ))}
+        )}
 
       <FleurDivider />
 
