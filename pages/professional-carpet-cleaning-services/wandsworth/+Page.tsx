@@ -345,14 +345,14 @@ export default function Page() {
             <h2 class="line-height-12 md-line-height-14">Pictures from our professional carpet cleaning services in Wandsworth</h2>
 
             <FacebookLikeGallery imgs={[
+                { src: "/assets/location-pages/wandsworth/carpet-cleaning-southfields.jpg", alt: "carpet-cleaning-southfields" },
+                { src: "/assets/location-pages/wandsworth/carpet-cleaning-tooting-bec.jpg", alt: "carpet-cleaning-tooting-bec" },
                 { src: "/assets/location-pages/wandsworth/carpet-cleaning-balham.jpg", alt: "carpet-cleaning-balham" },
                 { src: "/assets/location-pages/wandsworth/carpet-cleaning-earlsfield.jpg", alt: "carpet-cleaning-earlsfield" },
                 { src: "/assets/location-pages/wandsworth/carpet-cleaning-in-putney.jpg", alt: "carpet-cleaning-in-putney" },
                 { src: "/assets/location-pages/wandsworth/carpet-cleaning-roehampton.jpg", alt: "carpet-cleaning-roehampton" },
                 { src: "/assets/location-pages/wandsworth/carpet-cleaning-shaftesbury.jpg", alt: "carpet-cleaning-shaftesbury" },
-                { src: "/assets/location-pages/wandsworth/carpet-cleaning-southfields.jpg", alt: "carpet-cleaning-southfields" },
                 { src: "/assets/location-pages/wandsworth/carpet-cleaning-sw16.jpg", alt: "carpet-cleaning-sw16" },
-                { src: "/assets/location-pages/wandsworth/carpet-cleaning-tooting-bec.jpg", alt: "carpet-cleaning-tooting-bec" },
                 { src: "/assets/location-pages/wandsworth/professional-carpet-cleaning-putney.jpg", alt: "professional-carpet-cleaning-putney" },
                 { src: "/assets/location-pages/wandsworth/trinity-carpet-cleaning.jpg", alt: "trinity-carpet-cleaning" },
             ]} />

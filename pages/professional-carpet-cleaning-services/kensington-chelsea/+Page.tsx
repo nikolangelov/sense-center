@@ -332,14 +332,14 @@ export default function Page() {
 
             <FacebookLikeGallery imgs={[
                 { src: "/assets/location-pages/kensington-chelsea/carpet-cleaning-abingdon.jpg", alt: "carpet-cleaning-abingdon" },
-                { src: "/assets/location-pages/kensington-chelsea/abingdon-carpet-cleaning.jpg", alt: "abingdon-carpet-cleaning" },
+                { src: "/assets/location-pages/kensington-chelsea/carpet-cleaning-w11.jpg", alt: "carpet-cleaning-w11" },
                 { src: "/assets/location-pages/kensington-chelsea/carpet-cleaning-sw19.jpg", alt: "carpet-cleaning-sw19" },
+                { src: "/assets/location-pages/kensington-chelsea/abingdon-carpet-cleaning.jpg", alt: "abingdon-carpet-cleaning" },
                 { src: "/assets/location-pages/kensington-chelsea/carpet-cleaning-sw3.jpg", alt: "carpet-cleaning-sw3" },
                 { src: "/assets/location-pages/kensington-chelsea/carpet-cleaning-redcliffe.jpg", alt: "carpet-cleaning-redcliffe" },
                 { src: "/assets/location-pages/kensington-chelsea/carpet-cleaning-services-st-helens.jpg", alt: "carpet-cleaning-services-st-helens" },
                 { src: "/assets/location-pages/kensington-chelsea/carpet-cleaning-sw7.jpg", alt: "carpet-cleaning-sw7" },
                 { src: "/assets/location-pages/kensington-chelsea/carpet-cleaning-w2.jpg", alt: "carpet-cleaning-w2" },
-                { src: "/assets/location-pages/kensington-chelsea/carpet-cleaning-w11.jpg", alt: "carpet-cleaning-w11" },
                 { src: "/assets/location-pages/kensington-chelsea/professional-carpet-cleaning-abingdon.jpg", alt: "professional-carpet-cleaning-abingdon" },
             ]} />
 

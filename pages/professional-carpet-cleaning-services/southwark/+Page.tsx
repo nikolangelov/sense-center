@@ -292,16 +292,14 @@ export default function Page() {
             <h2 class="line-height-12 md-line-height-14">Pictures from our professional carpet cleaning services in Southwark</h2>
 
             <FacebookLikeGallery imgs={[
+                { src: "/assets/location-pages/southwark/carpet-cleaning-newington.jpg", alt: "carpet-cleaning-newington" },
+                { src: "/assets/location-pages/southwark/carpet-cleaning-rotherhithe.jpg", alt: "carpet-cleaning-rotherhithe" },
+                { src: "/assets/location-pages/southwark/carpet-cleaning-peckham.jpg", alt: "carpet-cleaning-peckham" },
                 { src: "/assets/location-pages/southwark/carpet-cleaning-in-southwark.jpg", alt: "carpet-cleaning-in-southwark" },
                 { src: "/assets/location-pages/southwark/carpet-cleaning-nunhead.jpg", alt: "carpet-cleaning-nunhead" },
                 { src: "/assets/location-pages/southwark/carpet-cleaning-in-newington.jpg", alt: "carpet-cleaning-in-newington" },
-                { src: "/assets/location-pages/southwark/carpet-cleaning-newington.jpg", alt: "carpet-cleaning-newington" },
                 { src: "/assets/location-pages/southwark/carpet-cleaning-in-nunhead.jpg", alt: "carpet-cleaning-in-nunhead" },
                 { src: "/assets/location-pages/southwark/carpet-cleaning-in-south-bermondsey.jpg", alt: "carpet-cleaning-in-south-bermondsey" },
-                { src: "/assets/location-pages/southwark/carpet-cleaning-newington.jpg", alt: "carpet-cleaning-newington" },
-                { src: "/assets/location-pages/southwark/carpet-cleaning-nunhead.jpg", alt: "carpet-cleaning-nunhead" },
-                { src: "/assets/location-pages/southwark/carpet-cleaning-peckham.jpg", alt: "carpet-cleaning-peckham" },
-                { src: "/assets/location-pages/southwark/carpet-cleaning-rotherhithe.jpg", alt: "carpet-cleaning-rotherhithe" },
                 { src: "/assets/location-pages/southwark/carpet-cleaning-se23.jpg", alt: "carpet-cleaning-se23" },
                 { src: "/assets/location-pages/southwark/carpet-cleaning-south-bermondsey.jpg", alt: "carpet-cleaning-south-bermondsey" },
             ]} />

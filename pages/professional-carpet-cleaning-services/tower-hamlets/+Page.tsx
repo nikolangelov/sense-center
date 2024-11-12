@@ -336,9 +336,9 @@ export default function Page() {
 
             <FacebookLikeGallery imgs={[
                 { src: "/assets/location-pages/tower-hamlets/carpet-cleaning-limehouse.jpg", alt: "carpet-cleaning-limehouse" },
-                { src: "/assets/location-pages/tower-hamlets/carpet-cleaning-bow.jpg", alt: "carpet-cleaning-bow" },
-                { src: "/assets/location-pages/tower-hamlets/carpet-cleaning-isle-of-dogs.jpg", alt: "carpet-cleaning-isle-of-dogs" },
                 { src: "/assets/location-pages/tower-hamlets/carpet-cleaning-mile-end.jpg", alt: "carpet-cleaning-mile-end" },
+                { src: "/assets/location-pages/tower-hamlets/carpet-cleaning-isle-of-dogs.jpg", alt: "carpet-cleaning-isle-of-dogs" },
+                { src: "/assets/location-pages/tower-hamlets/carpet-cleaning-bow.jpg", alt: "carpet-cleaning-bow" },
                 { src: "/assets/location-pages/tower-hamlets/carpet-cleaning-poplar.jpg", alt: "carpet-cleaning-poplar" },
                 { src: "/assets/location-pages/tower-hamlets/carpet-cleaning-shadwell.jpg", alt: "carpet-cleaning-shadwell" },
                 { src: "/assets/location-pages/tower-hamlets/carpet-cleaning-stepney.jpg", alt: "carpet-cleaning-stepney" },
