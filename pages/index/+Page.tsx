@@ -8,6 +8,7 @@ import { GallerySlider } from '../../components/GallerySlider';
 import { FleurDivider } from "../../components/FleurDivider";
 import { VideoPlayer } from '../../components/VideoPlayer';
 import { PriceTable } from '../../components/PriceTable';
+import { Head } from 'vike-solid/Head';
 
 function FullScreenImageGallery() {
 	const [open, setOpen] = createSignal(false);
@@ -279,6 +280,8 @@ const JSONLDScript = () => {
 export default function Page() {
 	return (
 		<>
+		<Head><meta name="google-site-verification" content="TF2dILiHX-pWwuw-J1hokh88TL4NVvGArsbnZFUPjgM" /></Head>
+
 			<JSONLDScript />
 
 			<noscript>
