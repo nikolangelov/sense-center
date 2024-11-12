@@ -216,14 +216,13 @@ export default function Page() {
       });
     };
   
-    // Close modal and trigger confetti
+    // Close modal without triggering confetti
     const closeModal = () => {
-      launchConfetti();
       setIsOpen(false);
     };
   
     // Automatically trigger confetti when the component is mounted
-    onMount(() => {
+    onCleanup(() => {
       if (isOpen()) launchConfetti();
     });
   
