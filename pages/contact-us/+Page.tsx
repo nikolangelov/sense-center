@@ -133,9 +133,9 @@ export default function Page() {
 
   async function sendEmail(e: Event) {
     e.preventDefault();
-    setIsUploading(true); // Start upload
-    setProgress(0); // Reset progress
-
+    setIsUploading(true);
+    setProgress(0);
+  
     const formData = new FormData();
     formData.append('senderEmail', email());
     formData.append('subject', subject());
@@ -144,53 +144,64 @@ export default function Page() {
     formData.append('phone', phone());
     formData.append('text', text());
     formData.append('howFound', howFound());
-
+    formData.append('services', selectedServices().join(', '));
+  
     if (attachments()) {
       for (let i = 0; i < attachments().length; i++) {
         formData.append('attachments', attachments()[i]);
       }
     }
-
-    const xhr = new XMLHttpRequest();
   
-    xhr.open('POST', '/api/send-email', true);
-    
-    // Progress event listener
-    xhr.upload.onprogress = (event) => {
-      if (event.lengthComputable) {
-        const percentComplete = (event.loaded / event.total) * 100;
-        setProgress(percentComplete);
+    // Estimate the total size of the upload
+    const totalSize = Array.from(formData.entries()).reduce((acc, [, value]) => {
+      if (value instanceof File) {
+        return acc + value.size;
+      } else if (typeof value === 'string') {
+        return acc + new Blob([value]).size;
       }
-    };
-    
-    xhr.onload = () => {
-      setIsUploading(false); // End upload
+      return acc;
+    }, 0);
   
-      if (xhr.status === 200) {
-        setIsSubmitted(true);
-        setIsModalOpen(true);
-      } else {
-        alert(`Error sending email: ${xhr.responseText}`);
+    // Create a custom stream to track progress
+    const progressStream = new ReadableStream({
+      async start(controller) {
+        let uploadedSize = 0;
+  
+        for (const [key, value] of formData.entries()) {
+          if (value instanceof File) {
+            const reader = value.stream().getReader();
+            while (true) {
+              const { done, value: chunk } = await reader.read();
+              if (done) break;
+  
+              uploadedSize += chunk.length;
+              setProgress((uploadedSize / totalSize) * 100); // Update progress
+              controller.enqueue(chunk);
+            }
+          } else {
+            const blob = new Blob([value]);
+            const reader = blob.stream().getReader();
+            while (true) {
+              const { done, value: chunk } = await reader.read();
+              if (done) break;
+  
+              uploadedSize += chunk.length;
+              setProgress((uploadedSize / totalSize) * 100); // Update progress
+              controller.enqueue(chunk);
+            }
+          }
+        }
+        controller.close();
       }
-    };
-    
-    xhr.onerror = () => {
-      console.error('Error:', xhr.responseText);
-      alert('An error occurred while sending the email.');
-      setIsUploading(false); // End upload
-    };
+    });
   
-    xhr.send(formData);
-  
-
-    formData.append('services', selectedServices().join(', '));
-
     try {
       const response = await fetch('/api/send-email', {
         method: 'POST',
-        body: formData,
+        headers: { 'Content-Type': 'multipart/form-data' },
+        body: progressStream, // Use our progress tracking stream
       });
-
+  
       if (response.ok) {
         setIsSubmitted(true);
         setIsModalOpen(true);
@@ -202,9 +213,10 @@ export default function Page() {
       console.error('Error:', error);
       alert('An error occurred while sending the email.');
     } finally {
-      setIsUploading(false); // End upload
+      setIsUploading(false);
     }
   }
+  
 
   const handleFileChange: (event: Event) => void = (event) => {
     const input = event.target as HTMLInputElement;
