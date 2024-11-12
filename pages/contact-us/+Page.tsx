@@ -350,20 +350,23 @@ export default function Page() {
         </div>
       )}
 
-            {/* Progress bar overlay */}
-            {isUploading() && (
-        <div class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50">
-          <div class="bg-white p-6 rounded-lg shadow-lg w-64">
-            <h3 class="text-lg font-semibold mb-3">Submitting...</h3>
-            <div class="w-full bg-gray-200 rounded h-4">
-              <div
-                class="progress-bar-contacts-form h-full rounded bg-blue-500"
-                style={{ width: `${progress()}%`, transition: 'width 0.3s ease-in-out' }}
-              />
-            </div>
-          </div>
-        </div>
-      )}
+{isUploading() && (
+  <div class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50">
+    <div class="bg-white p-6 rounded-lg shadow-lg w-64">
+      <h3 class="text-lg font-semibold mb-3">Submitting...</h3>
+      <div class="w-full bg-gray-200 rounded h-4 overflow-hidden">
+        <div
+          class="progress-bar-contacts-form h-full rounded bg-blue-500"
+          style={{
+            width: `${progress()}%`,
+            transition: 'width 0.3s ease-in-out',
+            animation: 'progressLoop 1s linear infinite' // <-- Add animation here
+          }}
+        />
+      </div>
+    </div>
+  </div>
+)}
 
       {isModalOpen() && (
         <div class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-5">
