@@ -387,6 +387,7 @@ export default function Page() {
         title="Room type"
 				items={[
 					{ label: "Commercial stain protector - per square metre", value: "from £1.50" },
+          { label: "Commercial stain protector - per square foot", value: "from £0.15" },
 					{ label: "Hallway", value: "from £7.00" },
 					{ label: "Landing", value: "from £3.00" },
 					{ label: "Living Room", value: "from £23.00" },

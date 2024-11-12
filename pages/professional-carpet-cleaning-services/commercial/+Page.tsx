@@ -482,8 +482,15 @@ export default function Page() {
       <PriceTable
         title="Area size"
 				items={[
+					{ element: "Metric system"},
+
 					{ label: "Per square metre - from 0 up to 200m²", value: "£2.20 + VAT" },
 					{ label: "Per square metre - from 200 up to 1000m²", value: "£2.00 + VAT" },
+
+					{ element: "Imperial system"},
+
+					{ label: "Per square foot - From 0 up to 2,152 ft2", value: "£0.20 + VAT" },
+					{ label: "Per square foot - From 2,152 up to 10,764 ft2", value: "£0.19 + VAT" },
 				]}
       />
 
