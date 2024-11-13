@@ -1,4 +1,4 @@
-import {createSignal} from 'solid-js';
+import { createSignal } from 'solid-js';
 import { Head } from 'vike-solid/Head';
 export default function Page() {
   const [email, setEmail] = createSignal('');
@@ -6,9 +6,13 @@ export default function Page() {
   const [text, setText] = createSignal('');
   const [isSubmitted, setIsSubmitted] = createSignal(false);
   const [isModalOpen, setIsModalOpen] = createSignal(false);
+  const [isUploading, setIsUploading] = createSignal(false);
+  const [progress, setProgress] = createSignal(0); // Progress state
 
   async function sendEmail(e: Event) {
     e.preventDefault();
+    setIsUploading(true); // Start upload
+    setProgress(0); // Reset progress
 
     const formData = new FormData();
     formData.append('senderEmail', email());
@@ -41,7 +45,7 @@ export default function Page() {
 
   return (
     <>
-      <Head><meta name="robots" content="noindex"/></Head>
+      <Head><meta name="robots" content="noindex" /></Head>
       <h1 class="mt-17 font-size-14 md-font-size-16 md-line-height-18 line-height-16">Feedback</h1>
 
       <div class="mt-20 py-8 px-8 md-px-14 b-rd-3 bg-paper line-height-8 text-justify font-size-4.4" style="box-shadow: 0px 0px 20px 5px rgb(84 89 95 / 10%);">If you have suggestions on how we can improve, please do not hesitate to leave us feedback! Your opinion is very valuable to us and it will be read directly by the owner.</div>
@@ -51,12 +55,28 @@ export default function Page() {
 
           <form class="flex-gap-5 flex flex-col py-5" onSubmit={sendEmail} method="post" enctype="multipart/form-data">
 
-            <input type="text" value={name()} onChange={(e) => setName(e.target.value)} placeholder="Name:" class="bg-gray-1 b-none w-full p-3 b-rd-1 c-paper-inv font-sans font-size-4" style="box-shadow: 0 1px 2px rgba(0, 0, 0, .12) inset;" required/>
-            <input type="email" value={email()} onChange={(e) => setEmail(e.target.value)} placeholder="E-mail:" class="bg-gray-1 b-none w-full p-3 b-rd-1 c-paper-inv font-sans font-size-4" style="box-shadow: 0 1px 2px rgba(0, 0, 0, .12) inset;" required/>
+            <input type="text" value={name()} onChange={(e) => setName(e.target.value)} placeholder="Name:" class="bg-gray-1 b-none w-full p-3 b-rd-1 c-paper-inv font-sans font-size-4" style="box-shadow: 0 1px 2px rgba(0, 0, 0, .12) inset;" required />
+            <input type="email" value={email()} onChange={(e) => setEmail(e.target.value)} placeholder="E-mail:" class="bg-gray-1 b-none w-full p-3 b-rd-1 c-paper-inv font-sans font-size-4" style="box-shadow: 0 1px 2px rgba(0, 0, 0, .12) inset;" required />
             <textarea value={text()} onChange={(e) => setText(e.target.value)} placeholder="Message:" class="bg-gray-1 b-none w-full pt-3 pl-3 pb-30 b-rd-1 c-paper-inv font-sans font-size-4" style="box-shadow: 0 1px 2px rgba(0, 0, 0, .12) inset;" required />
 
             <button type="submit" class="cursor-pointer flex flex-justify-center text-center mx-auto py-4 mt-7 px-10 bg-brand hover:bg-brand-second-action-hover transition-colors b-none c-paper b-rd-2 w-full uppercase font-800 font-size-4.4 md-font-size-5" style="letter-spacing: 1px;">Send</button>
           </form>
+        </div>
+      )}
+
+      {isUploading() && (
+        <div class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50">
+          <div class="bg-white p-6 rounded-lg shadow-lg w-64">
+            <h3 class="text-lg font-semibold mb-3">Submitting...</h3>
+            <div class="w-full bg-gray-200 rounded h-4 overflow-hidden">
+              <div
+                class="progress-bar-contacts-form h-full rounded bg-blue-500"
+                style={{
+                  animation: 'smoothProgress 20s linear forwards'
+                }}
+              />
+            </div>
+          </div>
         </div>
       )}
 

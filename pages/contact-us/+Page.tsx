@@ -1,9 +1,10 @@
-import { createSignal } from 'solid-js';
+import { createSignal, onMount } from 'solid-js';
 import { FleurDivider } from "../../components/FleurDivider";
 import { Collapse } from "solid-collapse";
 import MdiArrowDownDrop from '~icons/mdi/arrow-down-drop';
 import { PriceTable } from '../../components/PriceTable';
-
+import { onCleanup } from "solid-js";
+import confetti from "canvas-confetti";
 function SingleCollapse() {
   const [isExpanded1, setIsExpanded1] = createSignal(false);
   const [isExpanded2, setIsExpanded2] = createSignal(false);
@@ -108,29 +109,36 @@ function SingleCollapse() {
   );
 }
 
+
 export default function Page() {
   const [email, setEmail] = createSignal('');
   const [subject, setSubject] = createSignal('');
   const [name, setName] = createSignal('');
   const [postCode, setPostCode] = createSignal('');
   const [phone, setPhone] = createSignal('');
-  const [text, setText] = createSignal(''); // Main message field
-  const [otherText, setOtherText] = createSignal(''); // Separate field for "Other" specification
+  const [text, setText] = createSignal('');
+  const [otherText, setOtherText] = createSignal('');
   const [attachments, setAttachments] = createSignal<File[]>([]);
   const [selectedServices, setSelectedServices] = createSignal<string[]>([]);
   const [howFound, setHowFound] = createSignal('');
   const [isSubmitted, setIsSubmitted] = createSignal(false);
   const [isModalOpen, setIsModalOpen] = createSignal(false);
+  const [isUploading, setIsUploading] = createSignal(false);
+  const [progress, setProgress] = createSignal(0); // Progress state
+
+
 
   const handleRadioChange = (event: { target: { value: string; }; }) => {
     setHowFound(event.target.value);
     if (event.target.value !== 'Other') {
-      setOtherText(''); // Clear the "Other" field if a different option is selected
+      setOtherText('');
     }
   };
 
   async function sendEmail(e: Event) {
     e.preventDefault();
+    setIsUploading(true); // Start upload
+    setProgress(0); // Reset progress
 
     const formData = new FormData();
     formData.append('senderEmail', email());
@@ -156,8 +164,8 @@ export default function Page() {
       });
 
       if (response.ok) {
-        setIsSubmitted(true); // Set form as submitted
-        setIsModalOpen(true); // Open the success modal
+        setIsSubmitted(true);
+        setIsModalOpen(true);
       } else {
         const errorMessage = await response.text();
         alert(`Error sending email: ${errorMessage}`);
@@ -165,6 +173,8 @@ export default function Page() {
     } catch (error) {
       console.error('Error:', error);
       alert('An error occurred while sending the email.');
+    } finally {
+      setIsUploading(false); // End upload
     }
   }
 
@@ -341,6 +351,22 @@ export default function Page() {
 
             <button type="submit" class="cursor-pointer flex flex-justify-center text-center mx-auto py-4 mt-7 px-10 bg-brand hover:bg-brand-second-action-hover transition-colors b-none c-paper b-rd-2 w-full uppercase font-800 font-size-4.4 md-font-size-5" style="letter-spacing: 1px;">Request a quote</button>
           </form>
+        </div>
+      )}
+
+      {isUploading() && (
+        <div class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50">
+          <div class="bg-white p-6 rounded-lg shadow-lg w-64">
+            <h3 class="text-lg font-semibold mb-3">Submitting...</h3>
+            <div class="w-full bg-gray-200 rounded h-4 overflow-hidden">
+              <div
+                class="progress-bar-contacts-form h-full rounded bg-blue-500"
+                style={{
+                  animation: 'smoothProgress 20s linear forwards'
+                }}
+              />
+            </div>
+          </div>
         </div>
       )}
 
