@@ -371,20 +371,14 @@ export default function Page() {
       )}
 
       {isModalOpen() && (
-          <div class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50">
-            <div class="bg-white p-8 rounded-lg shadow-lg max-w-md w-full relative flex flex-col items-center justify-center">
-
-              {/* Success message */}
-              <h2 class="text-2xl font-bold mb-4">Success!</h2>
-              <p class="text-center mb-4">Your action was successful!</p>
-
-              {/* Close button */}
-              <button onClick={closeModal} class="bg-blue-500 text-white py-2 px-4 rounded">
-                Close
-              </button>
-            </div>
+        <div class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-5">
+          <div class="bg-white p-8 rounded-lg shadow-lg max-w-md w-full">
+            <h2 class="text-2xl font-bold mb-4 mt-1">Success!</h2>
+            <p class="mb-5">The form has been sent successfully! We will get back to you as soon as possible.</p>
+            <button onClick={closeModal} class="bg-brand text-white px-5 py-3 b-none rounded hover:bg-brand-second-action-hover transition-colors">Close</button>
           </div>
-        )}
+        </div>
+      )}
 
       <FleurDivider />
 
