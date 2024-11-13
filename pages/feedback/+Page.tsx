@@ -26,8 +26,8 @@ export default function Page() {
       });
 
       if (response.ok) {
-        setIsSubmitted(true); // Set form as submitted
-        setIsModalOpen(true); // Open the success modal
+        setIsSubmitted(true);
+        setIsModalOpen(true);
       } else {
         const errorMessage = await response.text();
         alert(`Error sending email: ${errorMessage}`);
@@ -35,6 +35,8 @@ export default function Page() {
     } catch (error) {
       console.error('Error:', error);
       alert('An error occurred while sending the email.');
+    } finally {
+      setIsUploading(false); // End upload
     }
   }
 
