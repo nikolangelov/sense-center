@@ -1,7 +1,7 @@
 import {createSlider, Slider, SliderButton, SliderProvider} from "solid-slider";
-import RiArrowRightSLine from '~icons/ri/arrow-right-s-line';
-import RiArrowLeftSLine from '~icons/ri/arrow-left-s-line';
 import {createSignal, JSX, onCleanup, onMount} from "solid-js";
+import RiPlayMiniLine from '~icons/ri/play-mini-line';
+import RiPlayReverseMiniLine from '~icons/ri/play-reverse-mini-line';
 
 export const GallerySlider = ({ children }: { children: JSX.Element | JSX.Element[] }) => {
 	const [isDesktop, setIsDesktop] = createSignal(false);
@@ -31,15 +31,15 @@ const GallerySliderDesktop = ({ children }: { children: JSX.Element | JSX.Elemen
   
     return (
       <SliderProvider>
-        <div class="max-w-1000px m-auto position-relative hidden md:block">
-          <Slider options={{ loop: true, slides: { perView: 3, spacing: 10 } }}>
+        <div class="max-w-1100px m-auto position-relative hidden md:block">
+          <Slider options={{ loop: true, slides: { perView: 3, spacing: 20 } }}>
             {children}
           </Slider>
           <SliderButton class="cursor-pointer position-absolute top-45% left--15 bg-transparent b-none" prev>
-            <RiArrowLeftSLine class="-ml-1 font-size-10 c-brand-second-action hover-c-brand transition-colors" />
+            <RiPlayReverseMiniLine class="-ml-2 font-size-10 b-solid b-3px p-1 hover-c-paper hover-bg-#d19d64 hover-b-#d19d64 transition-colors" />
           </SliderButton>
           <SliderButton class="cursor-pointer position-absolute top-45% right--15 bg-transparent b-none" next>
-            <RiArrowRightSLine class="-mr-1 font-size-10 c-brand-second-action hover-c-brand transition-colors" />
+            <RiPlayMiniLine class="-mr-2 font-size-10 b-solid b-3px p-1 hover-c-paper hover-bg-#d19d64 hover-b-#d19d64 transition-colors" />
           </SliderButton>
           <div class="flex flex-justify-center">
           </div>
@@ -54,15 +54,15 @@ const GallerySliderDesktop = ({ children }: { children: JSX.Element | JSX.Elemen
   
     return (
       <SliderProvider>
-        <div class="max-w-1000px m-auto position-relative md:hidden block">
+        <div class="max-w-1100px m-auto position-relative md:hidden block">
           <Slider options={{ loop: true }}>
             {children}
           </Slider>
           <SliderButton class="cursor-pointer position-absolute top-45% left-0 bg-transparent b-none" prev>
-            <RiArrowLeftSLine class="-ml-1 font-size-9 c-brand-second-action hover-c-brand transition-colors" />
+            <RiPlayReverseMiniLine class="-ml-1 font-size-8 b-solid b-3px p-1 b-solid b-3px hover-c-paper hover-bg-#d19d64 hover-b-#d19d64 transition-colors" />
           </SliderButton>
           <SliderButton class="cursor-pointer position-absolute top-45% right-0 bg-transparent b-none" next>
-            <RiArrowRightSLine class="-mr-1 font-size-9 c-brand-second-action hover-c-brand transition-colors" />
+            <RiPlayMiniLine class="-mr-1 font-size-8 b-solid b-3px p-1 hover-c-paper hover-bg-#d19d64 hover-b-#d19d64 transition-colors" />
           </SliderButton>
         </div>
       </SliderProvider>
