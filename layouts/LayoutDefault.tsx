@@ -1,9 +1,6 @@
 import 'uno.css'
 import "./style.css";
 import { children, createEffect, createSignal, JSX, onCleanup, onMount, Show } from "solid-js";
-import RiPhoneFill from '~icons/ri/phone-fill';
-import MdiClock from '~icons/mdi/clock';
-import MdiEmail from '~icons/mdi/email';
 import MdiVacuum from '~icons/mdi/vacuum';
 import RiMoneyPoundCircleLine from '~icons/ri/money-pound-circle-line';
 import MdiAccountGroupOutline from '~icons/mdi/account-group-outline';
@@ -11,252 +8,239 @@ import MdiPlaceOutline from '~icons/mdi/place-outline';
 import MdiEmailEditOutline from '~icons/mdi/email-edit-outline';
 import MdiPhoneOutline from '~icons/mdi/phone-outline';
 import MdiCommentAccountOutline from '~icons/mdi/comment-account-outline';
-import Cookies from 'js-cookie';
-import RiArrowUpDoubleFill from '~icons/ri/arrow-up-double-fill';
 import MdiBookOpenPageVariantOutline from '~icons/mdi/book-open-page-variant-outline';
+import RiArrowDropUpFill from '~icons/ri/arrow-drop-up-fill?width=192px&height=192px';
+import MdiDot from '~icons/mdi/dot?width=192px&height=192px';
+import RiFacebookFill from '~icons/ri/facebook-fill?width=192px&height=192px';
+import RiInstagramLine from '~icons/ri/instagram-line?width=192px&height=192px';
 
-declare global {
-  interface Window {
-    dataLayer: any[];
-    gtag: (...args: any[]) => void;
-  }
+export default function LayoutDefault(props: { children?: JSX.Element }) {
+  const childrenMemo = children(() => props.children)
+
+  const [isMenuOpen, setIsMenuOpen] = createSignal(false);
+
+  const handleMouseEnter = () => setIsMenuOpen(true);
+  const handleMouseLeave = () => setIsMenuOpen(false);
+  const closeMenu = () => setIsMenuOpen(false);
+
+  return (
+    <div class="flex flex-col">
+      <Topbar>
+        <div class="flex items-center justify-center lg-pl-4 pl-0 z-99">
+          <a href="/" class="hidden lg-block" onClick={closeMenu}>
+            <img src="/assets/the-barber-shop-logo1000-x-400-px.webp" class="lg-w-30 w-20 lg-ml-10 lg-mt-4" alt="the-barber-shop-logo" />
+          </a>
+        </div>
+        <div class="flex whitespace-nowrap flex-nowrap flex-justify-end flex-items-end font-semibold gap-5 xl-gap-12 md-pr-10 md-pl-5 xl-pl-10 pr-6 flex-content-center flex-items-center">
+          <MenuItem href="/">Услуги</MenuItem>
+          <MenuItem href="/">Цени</MenuItem>
+          <MenuItem href="/">Отзиви</MenuItem>
+          <MenuItem href="/">За нас</MenuItem>
+          <MenuItem href="/">Кариери</MenuItem>
+          <MenuItem href="/">Магазин</MenuItem>
+          <MenuItem href="/">Контакти</MenuItem>
+        </div>
+        <a href="/request-a-quote" class="hidden lg-block mr-10">
+          <button onClick={closeMenu}
+            class="cursor-pointer bg-#d19d64 c-black b-solid b-2px b-#d19d64 uppercase font-size-4 font-500 px-7 py-2 hover-c-paper transition-colors b-rd-3px lg-block hidden" style="font-family: 'Oswald', sans-serif !important; letter-spacing: 1px;"
+          >
+            Request a quote
+          </button>
+        </a>
+        <HamburgerMenu />
+      </Topbar>
+      <Content>{childrenMemo()}</Content>
+      <BackToTopArrow></BackToTopArrow>
+      <MainFooter>
+        <div class="flex flex-col gap-5 flex-wrap line-height-0 my-5 mx-auto w-full">
+          <div class="w-full flex flex-jusify-center">
+            <img class="mx-auto w-70% md-w-30%" src="/assets/the-barber-shop-logo1000-x-400-px.webp" alt="thebarbershop-logo" />
+          </div>
+          <div class="flex flex-col md-flex-row flex-justify-center flex-items-center my-2 md-gap-0 gap-1">
+            <MainFooterMenuItem href="/">Услуги</MainFooterMenuItem>
+            <MdiDot class="w-4 c-paper pt-2px mx-5 md-block hidden" />
+            <MainFooterMenuItem href="/">Цени</MainFooterMenuItem>
+            <MdiDot class="w-4 c-paper pt-2px mx-5 md-block hidden" />
+            <MainFooterMenuItem href="/">Отзиви</MainFooterMenuItem>
+            <MdiDot class="w-4 c-paper pt-2px mx-5 md-block hidden" />
+            <MainFooterMenuItem href="/">За нас</MainFooterMenuItem>
+            <MdiDot class="w-4 c-paper pt-2px mx-5 md-block hidden" />
+            <MainFooterMenuItem href="/">Кариери</MainFooterMenuItem>
+            <MdiDot class="w-4 c-paper pt-2px mx-5 md-block hidden" />
+            <MainFooterMenuItem href="/">Магазин</MainFooterMenuItem>
+            <MdiDot class="w-4 c-paper pt-2px mx-5 md-block hidden" />
+            <MainFooterMenuItem href="/">Контакти</MainFooterMenuItem>
+          </div>
+          <div class="flex flex-justify-center mt-5 gap-2">
+            <a href="/">
+              <RiFacebookFill class="w-10 h-10 bg-brand hover-c-#07111c transition-colors p-1.5 c-paper" />
+            </a>
+            <a href="/">
+              <RiInstagramLine class="w-10 h-10 bg-brand hover-c-#07111c transition-colors p-1.5 c-paper" />
+            </a>
+          </div>
+          {/* <h3 class="important-font-size-4.5 md-font-size-4.5 uppercase font-letter tracking-widest mt-0 mb-2 c-paper text-left font-600">Contacts</h3>
+          <div class="flex flex-items-center gap-2">
+            <RiPhoneFill class="w-10 h-10 c-paper" />
+            <div class="flex flex-col line-height-none">
+              <PhoneMailMenuItem href="tel:+44 7874 333 356">+44 7874 333 356</PhoneMailMenuItem>
+              <PhoneMailMenuItem href="tel:+44 2036 370 033">+44 2036 370 033</PhoneMailMenuItem>
+            </div>
+          </div>
+          <div class="flex flex-items-center gap-2">
+            <MdiEmail class="w-10 h-10 c-paper" />
+            <PhoneMailMenuItem href="mailto:office@finecarpetcleaning.co.uk">office@finecarpetcleaning.co.uk</PhoneMailMenuItem>
+          </div>
+          <div class="flex flex-items-center gap-2">
+            <MdiClock class="w-10 h-10 c-paper" /> 
+            <div class="flex flex-col line-height-none">
+              <div class="c-paper font-normal lg-font-size-4 md-font-size-4 font-size-4.5 font-sans line-height-6">Monday - Friday: <strong>7:30 - 19:00</strong></div>
+              <div class="c-paper font-normal lg-font-size-4 md-font-size-4 font-size-4.5 font-sans line-height-6">Saturday & Sunday: <strong>9:00 - 18:00</strong></div>
+            </div>
+          </div> */}
+        </div>
+      </MainFooter>
+      <BottomFooter>
+        <p class="text-center lg-font-size-4 md-font-size-3 font-size-3.7 font-400 line-height-6 font-sans mb-0">Copyright &copy; <CurrentYear /> Fine Carpet Cleaning London</p>
+        <div class="flex flex-col md-flex-row md-gap-5 flex-items-center flex-justify-center">
+          <BottomFooterMenuItem href="/terms-and-conditions">Terms and conditions</BottomFooterMenuItem>
+          <div class="hidden md-block">┃</div>
+          <BottomFooterMenuItem href="/sitemap">Sitemap</BottomFooterMenuItem>
+          <div class="hidden md-block">┃</div>
+          <BottomFooterMenuItem href="/cookie-policy">Privacy policy</BottomFooterMenuItem>
+        </div>
+      </BottomFooter>
+    </div>
+  );
 }
 
-const GA_MEASUREMENT_ID = 'G-PWPSS6VWF1'; // Replace with your actual GA4 Measurement ID
+function MenuItem(props: { href: string, children: JSX.Element }) {
+  return <a href={props.href} style="font-family: 'Oswald', sans-serif !important; letter-spacing: 0.5px;" class="py-6 dropdown hidden font-ui lg-flex c-paper text-center font-size-5 uppercase font-sans hover-c-brand-hover:hover tracking-wide font-500 transition-colors">{props.children}</a>
+}
 
-const CookieConsent = () => {
+const CurrentYear = () => {
+  const [year, setYear] = createSignal<number>(new Date().getFullYear());
 
-  const [hasMadeChoice, setHasMadeChoice] = createSignal(false);
-  const [showBanner, setShowBanner] = createSignal(false); // Start with false to keep it hidden
-  const [showSettings, setShowSettings] = createSignal(false);
-  const [cookiePreferences, setCookiePreferences] = createSignal({
-    necessary: true,
-    functional: false,
-    analytics: false,
-    advertising: false,
-    thirdParty: false,
+  onMount(() => {
+    setYear(new Date().getFullYear());
   });
 
-  const loadGoogleAnalytics = () => {
-    const script = document.createElement("script");
-    script.src = `https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`;
-    script.async = true;
-    document.head.appendChild(script);
+  return (
+    <span id="year">{year()}</span>
+  );
+};
 
-    script.onload = () => {
-      window.dataLayer = window.dataLayer || [];
-      window.gtag = function () {
-        window.dataLayer.push(arguments);
-      };
-      window.gtag("js", new Date());
-      window.gtag("config", GA_MEASUREMENT_ID, { anonymize_ip: true });
-    };
-  };
+function Topbar(props: { children: JSX.Element }) {
+  const [isScrolled, setIsScrolled] = createSignal(false);
 
-  const removeGoogleAnalytics = () => {
-    Cookies.remove("_ga");
-    Cookies.remove("_gat");
-    Cookies.remove("_gid");
-    window.gtag &&
-      window.gtag("config", GA_MEASUREMENT_ID, { send_page_view: false });
-    const gaScript = document.querySelector(
-      `script[src^="https://www.googletagmanager.com/gtag/js"]`
-    );
-    if (gaScript) {
-      gaScript.remove();
-    }
+  const handleScroll = () => {
+    setIsScrolled(window.scrollY > 50);
   };
 
   onMount(() => {
-    const savedPreferences = Cookies.get("cookiePreferences");
-    const bannerClosed = Cookies.get("bannerClosed");
-
-    if (savedPreferences) {
-      const preferences = JSON.parse(savedPreferences);
-      setCookiePreferences(preferences);
-      setHasMadeChoice(true);
-      applyPreferences();
-    }
-
-    if (bannerClosed !== "true" && !savedPreferences) {
-      setShowBanner(true);
-    }
+    window.addEventListener("scroll", handleScroll);
+    onCleanup(() => window.removeEventListener("scroll", handleScroll));
   });
 
-  const savePreferences = () => {
-    Cookies.set("cookiePreferences", JSON.stringify(cookiePreferences()), {
-      expires: 365,
-      path: "/",
-    });
-    Cookies.set("bannerClosed", "true", { expires: 365, path: "/" });
-    setHasMadeChoice(true);
-    setShowBanner(false);
-    setShowSettings(false);
-    applyPreferences();
-  };
+  return (
+    <div
+      class={`h-${isScrolled() ? "92px" : "172px"} w-full z-3 fixed top-0 flex-content-center ${isScrolled() ? "lg-p-0px" : "lg-p-40px"
+        } p-0px transition-all duration-300 ease-in-out ${isScrolled() ? "bg-#14100c" : "bg-transparent"
+        }`}
+    >
+      <div
+        style={` ${isScrolled() ? "border-bottom: none;" : "border-bottom-color: rgba(255, 255, 255, 0.1);"
+          }`}
 
-  const closeBanner = () => {
-    Cookies.set("bannerClosed", "true", { expires: 365, path: "/" });
-    setShowBanner(false);
-  };
-
-  const acceptAll = () => {
-    setCookiePreferences({
-      necessary: true,
-      functional: true,
-      analytics: true,
-      advertising: true,
-      thirdParty: true,
-    });
-    savePreferences();
-  };
-
-  const applyPreferences = () => {
-    const preferences = cookiePreferences();
-    Cookies.set("necessary_cookie", "true", { expires: 30 });
-
-    if (preferences.functional) {
-      Cookies.set("functional_cookie", "true", { expires: 30 });
-    } else {
-      Cookies.remove("functional_cookie");
-    }
-
-    if (preferences.analytics) {
-      Cookies.set("analytics_cookie", "true", { expires: 30 });
-      loadGoogleAnalytics();
-    } else {
-      Cookies.remove("analytics_cookie");
-      removeGoogleAnalytics();
-    }
-
-    if (preferences.advertising) {
-      Cookies.set("advertising_cookie", "true", { expires: 30 });
-    } else {
-      Cookies.remove("advertising_cookie");
-    }
-
-    if (preferences.thirdParty) {
-      Cookies.set("third_party_cookie", "true", { expires: 30 });
-    } else {
-      Cookies.remove("third_party_cookie");
-    }
-  };
-
-  const CookieCategory = (props: {
-    title: string;
-    description: string;
-    name:
-    | "necessary"
-    | "functional"
-    | "analytics"
-    | "advertising"
-    | "thirdParty";
-  }) => (
-    <div class="flex flex-col">
-      <h4 class="mb-1 mt-2 line-height-6 sm-line-height-6 md-line-height-8 font-size-4 md-font-size-4.5">
-        {props.title}
-      </h4>
-      <div class="flex flex-row flex-items-center">
-        <input
-          class="mr-4 mb-0 flex flex-items-center"
-          type="checkbox"
-          checked={cookiePreferences()[props.name]}
-          disabled={props.name === "necessary"}
-          onChange={(e) =>
-            setCookiePreferences({
-              ...cookiePreferences(),
-              [props.name]: e.target.checked,
-            })
-          }
-        />
-        <p class="text-left word-spacing-widest mb-0 mt-0 flex flex-items-center line-height-5 sm-line-height-6 md-line-height-8 md-font-size-4 font-size-3.2">
-          {props.description}
-        </p>
+        class={`header-border block lg-b-rd-4px lg-b-#dedede lg-b-2px border-b-solid border-b-1px ${isScrolled() ? "lg-b-none" : "lg-b-solid"
+          } w-full relative line-height-92px ${isScrolled() ? "h-72px" : "h-92px"
+          } bg-${isScrolled() ? "#333" : "#fff"} text-${isScrolled() ? "#fff" : "#000"} transition-all duration-300 ease-in-out`}
+      >
+        <div class="mx-auto max-w-full flex flex-justify-between flex-items-center h-full">
+          {props.children}
+        </div>
       </div>
     </div>
   );
+}
+
+function Content(props: { children: JSX.Element }) {
+  return (
+    <div id="page-container">
+      <div
+        id="page-content"
+        style={{
+          padding: "20px",
+          "padding-bottom": "50px",
+          "min-height": "100vh",
+        }}
+      >
+        {props.children}
+      </div>
+    </div>
+  );
+}
+
+function HamburgerMenu() {
+  const [open, setOpen] = createSignal(false);
+  const [menuHeight, setMenuHeight] = createSignal("0px");
+
+  const handleToggle = () => {
+    if (open()) {
+      setMenuHeight("0px");
+      setTimeout(() => setOpen(false), 400);
+    } else {
+      setOpen(true);
+      setMenuHeight("3500px");
+    }
+  };
+
+  const closeMenu = () => {
+    setMenuHeight("0px");
+    setTimeout(() => setOpen(false), 400);
+  };
 
   return (
-    <>
-      <Show when={showBanner()}>
-        <div
-          class={`fixed bottom-0 left-0 right-0 justify-center items-center z-100 transition-opacity duration-500 ease-in-out ${showBanner() ? "opacity-100" : "opacity-0 hidden"}`}
+    <div class="lg-hidden flex flex-content-center flex-items-center flex-justify-between w-full">
+      <div class="flex flex-items-center flex-justify-center lg-pl-4 pl-0 z-99">
+        <a href="/" onClick={closeMenu}>
+          <img src="/assets/the-barber-shop-logo1000-x-400-px.webp" class="lg-w-22 w-20 ml--2 lg-ml-10 mt-4" alt="fine-carpet-cleaning-logo" />
+        </a>
+      </div>
+      <a href="/contact-us">
+        <button onClick={closeMenu}
+          class="cursor-pointer bg-#d19d64 c-black b-solid b-2px b-#d19d64 uppercase font-size-4 font-500 px-7 py-2 hover-c-paper transition-colors b-rd-3px block lg-hidden" style="font-family: 'Oswald', sans-serif !important; letter-spacing: 1px;"
         >
-          <div class="fixed bg-paper w-full flex flex-col md-flex-row flex-justify-evenly md-flex-justify-between flex-items-center h-40 md-h-16 relative" style="box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.4);">
-            <p
-              class="mb-0 mt-0 font-size-3.8 mx-3 md-ml-8 md-mr-0 text-left word-spacing-1 line-height-5.5"
-              style="font-family:'Roboto'"
-            >
-              We use cookies to improve your experience on this website. By continuing to use our site, you accept our use of cookies.
-            </p>
-            <div class="flex flex-justify-between flex-items-center md-mr-8 md-gap-0 gap-2">
-              <button
-                class="b-solid b-2 b-brand b-rd-1 bg-brand hover-bg-brand-action-hover:hover transition-colors hover-b-brand-action-hover:hover font-700 font-size-3.5 uppercase c-paper cursor-pointer mr-2 py-1.5 px-5 line-height-normal"
-                onClick={savePreferences}
-              >
-                Close
-              </button>
-
-              <a
-                href="/cookie-policy"
-                target="_blank"
-                class="b-solid b-2 b-brand b-rd-1 bg-paper hover-b-brand-action-hover:hover hover-c-brand-action-hover:hover transition-colors font-700 font-size-3.5 uppercase c-brand cursor-pointer py-1.5 px-5 font-sans line-height-normal text-center"
-                style="font-family:'Arial'"
-              >
-                Privacy policy
-              </a>
-            </div>
+          Book now
+        </button>
+      </a>
+      <div class="ml-10 md-mr-10">
+        <input type="checkbox" id="menu-checkbox" class="hidden" />
+        <label
+          id="burger-menu"
+          for="menu-checkbox"
+          onClick={handleToggle}
+          class="relative cursor-pointer flex flex col flex-justify-between flex-col w-30px h-20px right-6 hamburger"
+        >
+          <div class={`line ${open() ? "open" : ""}`}></div>
+          <div class={`line ${open() ? "open" : ""}`}></div>
+          <div class={`line ${open() ? "open" : ""}`}></div>
+        </label>
+      </div>
+      <Show when={open()}>
+        <div
+          class="fixed w-screen bg-#f7f7f7 left-0 top-19.6 px-10 transition-all transition-duration-400"
+          style={{ height: menuHeight(), overflow: "hidden" }}
+        >
+          <div class="py-10 text-left">
+            <MyDropdown closeMenu={closeMenu} />
           </div>
         </div>
       </Show>
-
-      <Show when={showSettings()}>
-        <div class="fixed inset-0 bg-gray-800 bg-opacity-50 flex justify-center items-center z-50 mt-20 botom-0">
-          <div class="bg-paper px-10 pt-8 pb-6 w-11/12 md:w-3/4 lg:w-2/3 b-rd-2">
-            <h2 class="mb-0 md-mb-8 md-mt-3 mt-0 line-height-7 sm-line-height-6 md-line-height-8 font-size-6 md-font-size-10">Cookie Settings</h2>
-
-            <CookieCategory
-              name="necessary"
-              title="Strictly Necessary Cookies"
-              description="These cookies are necessary for the website to function and cannot be disabled."
-            />
-
-            <CookieCategory
-              name="functional"
-              title="Functional Cookies"
-              description="These cookies allow the website to provide enhanced functionality and personalization."
-            />
-
-            <CookieCategory
-              name="analytics"
-              title="Analytics Cookies"
-              description="These cookies help us understand how visitors interact with the website."
-            />
-
-            <CookieCategory
-              name="advertising"
-              title="Advertising Cookies"
-              description="These cookies are used to display relevant advertisements."
-            />
-
-            <CookieCategory
-              name="thirdParty"
-              title="Third-Party Cookies"
-              description="These cookies are set by external services that we add to the website."
-            />
-
-            <div class="flex justify-center md-justify-end gap-3 mt-1 md-mt-0 pt-0">
-              <button class="b-solid b-2 b-brand b-rd-1 bg-brand hover-bg-brand-second-action-hover:hover transition-colors hover-b-brand-second-action-hover:hover font-700 font-size-2.7 md-font-size-4 uppercase c-paper cursor-pointer py-1.5 md-py-3.5 px-4 md-px-5 mt-4 md-mt-10 line-height-4" onClick={acceptAll}>Accept all</button>
-              <button class="b-solid b-2 b-brand b-rd-1 bg-paper hover-c-brand-second-action-hover:hover transition-colors hover-b-brand-second-action-hover:hover font-700 font-size-2.7 md-font-size-4 uppercase c-brand cursor-pointer py-1.5 md-py-3.5 px-4 md-px-5 mt-4 md-mt-10 line-height-4" onClick={savePreferences}>Save settings</button>
-              <button class="b-solid b-2 b-brand b-rd-1 bg-paper hover-c-brand-second-action-hover:hover transition-colors hover-b-brand-second-action-hover:hover font-700 font-size-2.7 md-font-size-4 uppercase c-brand cursor-pointer py-1.5 md-py-3.5 px-4 md-px-5 mt-4 md-mt-10 line-height-4" onClick={() => setShowSettings(false)}>Close</button>
-            </div>
-          </div>
-        </div>
-      </Show>
-
-    </>
+    </div>
   );
-};
+}
+
 
 const MyDropdown = (props: { closeMenu: () => void; }) => {
   const [isDropdownOpen, setDropdownOpen] = createSignal(false);
@@ -265,7 +249,7 @@ const MyDropdown = (props: { closeMenu: () => void; }) => {
     props.closeMenu();
   };
 
-  return ( 
+  return (
     <div class="w-full overflow-y-auto max-h-770px sticky">
       <div class="py-4 b-b-solid b-b border-brand-second-action">
         <a onClick={handleLinkClick} href="/services" class="flex flex-items-center flex-nowrap c-paper-inv hover-c-brand:hover font-size-5 font-500" style="font-family: Open Sans, sans-serif; letter-spacing: 0.6px;">
@@ -313,348 +297,27 @@ const MyDropdown = (props: { closeMenu: () => void; }) => {
   );
 };
 
-function MenuItem(props: { href: string, children: JSX.Element }) {
-  return <a href={props.href} class="py-6 dropdown hidden font-ui lg-flex c-paper-inv text-center font-size-3.5 uppercase font-sans hover-c-paper-link-hover:hover tracking-wide">{props.children}</a>
-}
-
-function ServiceMenuItem(props: { href: string, children: JSX.Element, closeMenu: () => void }) {
-  const handleClick = () => {
-    props.closeMenu(); 
-  };
-
-  return (
-    <a
-      href={props.href}
-      onClick={handleClick}
-      class="py-6 dropdown hidden font-ui lg-flex c-paper-inv text-center font-size-3.5 uppercase font-sans hover-c-paper-link-hover:hover tracking-wide"
-    >
-      {props.children}
-    </a>
-  );
-}
-
-function DropdownMenuItem(props: { href: string, children: JSX.Element, src: string, alt: string, closeMenu: () => void }) {
-  const handleClick = () => {
-    props.closeMenu()
-  };
-
-  return (
-    <a href={props.href} onClick={handleClick} class="hidden flex flex-justify-center flex-items-center flex-nowrap">
-      <div class="flex-col flex-justify-center flex-items-center w-30 h-32 mt-2 mb-2">
-        <img class="w-18 h-18 block mx-auto b-rd-100% b-rd-2" src={props.src} alt={props.alt} />
-        <p class="font-size-3 whitespace-normal mx-auto c-paper-inv text-center whitespace-normal uppercase font-sans hover-c-paper-link-hover:hover tracking-wide font-700 line-height-normal">
-          {props.children}
-        </p>
-      </div>
-    </a>
-  );
-}
-
-function DropDownMenuDesktop(props: { closeMenu: () => void }) {
-  const handleClick = () => {
-    props.closeMenu()
-  };
-
-  return (
-    <div class="desktop-dropdawn-menu flex top-18  w-full flex-justify-center left-0 flex-row hidden absolute bg-paper z-1 m-0 py-4 px-5 flex-nowrap" style="box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);">
-      <div class="flex flex-col flex-justify-center">
-        <a href="/professional-carpet-cleaning-services" onClick={handleClick}><h3 class="whitespace-normal text-center hover-c-brand:hover font-size-6.5">Carpet cleaning services</h3></a>
-        <div class="flex flex-row flex-wrap hidden flex-items-center flex-content-center flex-nowrap">
-          <DropdownMenuItem href="/professional-carpet-cleaning-services/steam" src="/assets/desktop-menu-images/steam-clean-carpet-company.jpg" alt="steam-clean-carpet-company" closeMenu={props.closeMenu}>Carpet steam cleaning</DropdownMenuItem>
-          <DropdownMenuItem href="/professional-carpet-cleaning-services/dry" src="/assets/desktop-menu-images/professional-dry-carpet-cleaning.jpg" alt="professional-dry-carpet-cleaning" closeMenu={props.closeMenu}>Dry carpet cleaning</DropdownMenuItem>
-          <DropdownMenuItem href="/professional-carpet-cleaning-services/eco-friendly" src="/assets/desktop-menu-images/eco-friendly-carpet-cleaning-service.jpg" alt="eco-friendly-carpet-cleaning-service" closeMenu={props.closeMenu}>Eco-friendly carpet cleaning</DropdownMenuItem>
-        </div>
-        <div class="flex flex-row flex-wrap hidden flex-items-center flex-content-center">
-          <DropdownMenuItem href="/professional-carpet-cleaning-services/same-day" src="/assets/desktop-menu-images/emergency-carpet-cleaning.jpg" alt="emergency-carpet-cleaning" closeMenu={props.closeMenu}>Same day carpet cleaning</DropdownMenuItem>
-          <DropdownMenuItem href="/professional-carpet-cleaning-services/fast-dry" src="/assets/desktop-menu-images/fast-dry-carpet-cleaning-service.jpg" alt="fast-dry-carpet-cleaning-service" closeMenu={props.closeMenu}>Fast dry carpet cleaning</DropdownMenuItem>
-          <DropdownMenuItem href="/professional-stain-removal-services" src="/assets/desktop-menu-images/professional-stain-removal-service.jpg" alt="professional-stain-removal-service" closeMenu={props.closeMenu}>Carpet stain removal</DropdownMenuItem>
-        </div>
-        <div class="flex flex-row flex-wrap hidden flex-items-center flex-content-center">
-          <DropdownMenuItem href="/stain-protection-services" src="/assets/desktop-menu-images/stain-protection-services.jpg" alt="stain-protection-services" closeMenu={props.closeMenu}>Carpet stain protection</DropdownMenuItem>
-          <DropdownMenuItem href="/professional-carpet-cleaning-services/commercial" src="/assets/desktop-menu-images/commercial-carpet-cleaning-services.jpg" alt="commercial-carpet-cleaning-services" closeMenu={props.closeMenu}>Commercial carpet cleaning</DropdownMenuItem>
-          <DropdownMenuItem href="/professional-carpet-cleaning-services/residential" src="/assets/desktop-menu-images/residential-carpet-cleaning-services.jpg" alt="residential-carpet-cleaning-services" closeMenu={props.closeMenu}>Residential carpet cleaning</DropdownMenuItem>
-        </div>
-        <div class="flex flex-row flex-wrap hidden flex-items-center flex-content-center flex-justify-center">
-          <DropdownMenuItem href="/professional-carpet-cleaning-services/commercial/office" src="/assets/desktop-menu-images/commercial-office-carpet-cleaning.jpg" alt="commercial-office-carpet-cleaning" closeMenu={props.closeMenu}>Office carpet cleaning</DropdownMenuItem>
-        </div>
-      </div>
-      <div class="flex flex-col">
-        <a href="/professional-upholstery-cleaning-services" onClick={handleClick}><h3 class="whitespace-normal text-center hover-c-brand:hover font-size-6.5">Upholstery cleaning services</h3></a>
-        <div class="flex flex-row flex-wrap hidden flex-items-center flex-content-center flex-nowrap">
-          <DropdownMenuItem href="/professional-upholstery-cleaning-services/sofa" src="/assets/desktop-menu-images/sofa-upholstery-cleaning-service.jpg" alt="sofa-upholstery-cleaning-service" closeMenu={props.closeMenu}>Sofa cleaning</DropdownMenuItem>
-          <DropdownMenuItem href="/professional-upholstery-cleaning-services/sofa/leather" src="/assets/desktop-menu-images/leather-sofa-cleaning-services-1.jpg" alt="leather-sofa-cleaning-services-1" closeMenu={props.closeMenu}>Leather sofa cleaning</DropdownMenuItem>
-          <DropdownMenuItem href="/professional-upholstery-cleaning-services/furniture" src="/assets/desktop-menu-images/steam-cleaning-furniture-services.jpg" alt="steam-cleaning-furniture-services" closeMenu={props.closeMenu}>Furniture cleaning</DropdownMenuItem>
-        </div>
-        <div class="flex flex-row flex-wrap hidden flex-items-center flex-content-center">
-          <DropdownMenuItem href="/professional-upholstery-cleaning-services/mattress" src="/assets/desktop-menu-images/mattress-cleaning-services.jpg" alt="mattress-cleaning-services" closeMenu={props.closeMenu}>Mattress cleaning</DropdownMenuItem>
-          <DropdownMenuItem href="/professional-upholstery-cleaning-services/pillow" src="/assets/desktop-menu-images/pillow-cleaning-service.jpg" alt="pillow-cleaning-service" closeMenu={props.closeMenu}>Pillow cleaning</DropdownMenuItem>
-          <DropdownMenuItem href="/professional-stain-removal-services" src="/assets/desktop-menu-images/professional-stain-removal-service.jpg" alt="professional-stain-removal-service" closeMenu={props.closeMenu}>Upholstery stain removal</DropdownMenuItem>
-        </div>
-        <div class="flex flex-row flex-wrap hidden flex-items-center flex-content-center flex-justify-center">
-          <DropdownMenuItem href="/stain-protection-services" src="/assets/desktop-menu-images/stain-protection-services.jpg" alt="stain-protection-services" closeMenu={props.closeMenu}>Upholstery stain protection</DropdownMenuItem>
-        </div>
-      </div>
-      <div class="flex flex-col">
-        <div class="flex flex-col">
-          <a href="/professional-rug-cleaning-services" onClick={handleClick}><h3 class="whitespace-normal text-center hover-c-brand:hover font-size-6.5">Rug cleaning services</h3></a>
-          <div class="flex flex-row flex-wrap hidden flex-items-center flex-content-center flex-nowrap">
-            <DropdownMenuItem href="/professional-rug-cleaning-services/steam" src="/assets/desktop-menu-images/rug-steam-cleaning-service.jpg" alt="rug-steam-cleaning-service" closeMenu={props.closeMenu}>Rug steam cleaning</DropdownMenuItem>
-            <DropdownMenuItem href="/professional-rug-cleaning-services/dry" src="/assets/desktop-menu-images/dry-rug-cleaning-service.jpg" alt="dry-rug-cleaning-service" closeMenu={props.closeMenu}>Dry rug cleaning</DropdownMenuItem>
-            <DropdownMenuItem href="/professional-stain-removal-services" src="/assets/desktop-menu-images/professional-stain-removal-service.jpg" alt="professional-stain-removal-service" closeMenu={props.closeMenu}>Rug stain removal</DropdownMenuItem>
-          </div>
-          <div class="flex flex-row flex-wrap hidden flex-items-center flex-content-center flex-justify-center">
-            <DropdownMenuItem href="/stain-protection-services" src="/assets/desktop-menu-images/stain-protection-services.jpg" alt="stain-protection-services" closeMenu={props.closeMenu}>Rug stain protection</DropdownMenuItem>
-          </div>
-        </div>
-        <div class="flex flex-col">
-          <h3 class="whitespace-normal text-center">Other cleaning services</h3>
-          <div class="flex flex-row flex-wrap hidden flex-items-center flex-content-center flex-justify-center">
-            <DropdownMenuItem href="/antiviral-sanitisation-services" src="/assets/desktop-menu-images/antiviral-sanitisation-services2.jpg" alt="antiviral-sanitisation-services2" closeMenu={props.closeMenu}>Antiviral sanitisation</DropdownMenuItem>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
-}
-
-export default function LayoutDefault(props: { children?: JSX.Element }) {
-  const childrenMemo = children(() => props.children)
-
-  const [isMenuOpen, setIsMenuOpen] = createSignal(false);
-
-  const handleMouseEnter = () => setIsMenuOpen(true);
-  const handleMouseLeave = () => setIsMenuOpen(false);
-  const closeMenu = () => setIsMenuOpen(false);
-
-  return (
-    <div class="flex flex-col">
-      <Topbar>
-        <div class="flex items-center justify-center lg-pl-4 pl-0 z-99">
-          <a href="/" class="hidden lg-block" onClick={closeMenu}>
-            <img src="/assets/FCC_2024_png.png" class="lg-w-22 w-20 lg-ml-10 mt-7" alt="fine-carpet-cleaning-logo" />
-          </a>
-        </div>
-
-        <a href="/request-a-quote">
-          <button onClick={closeMenu}
-            class="hidden lg-block get-a-quote-button whitespace-nowrap md-ml-2 xl-ml-10 font-serif uppercase font-500 c-paper overflow-hidden relative bg-paper b-double b-rd-1 b-4 b-transparent h-13 w-45 cursor-pointer font-size-3.5 tracking-wide"
-            style=" font-family: DM Sans !important; min-width: fit-content; background-origin: border-box; background-clip: padding-box, border-box; box-shadow: 0 0 0 2.5px rgba(255, 255, 255, 1) inset; background-image: linear-gradient(90deg, rgb(13, 46, 41) 0%, rgb(26, 135, 94) 50%), radial-gradient(circle at left top, rgb(13, 46, 41), rgb(26, 135, 94));"
-          >
-            Request a quote
-          </button>
-        </a>
-
-        <div class="flex whitespace-nowrap flex-nowrap flex-justify-end flex-items-end font-semibold gap-5 xl-gap-5xl md-pr-10 md-pl-5 xl-pl-10 pr-6 flex-content-center flex-items-center">
-          <div
-            onMouseEnter={handleMouseEnter}
-            onMouseLeave={handleMouseLeave}
-          >
-            <div>
-              {/* Pass closeMenu to ensure it closes when clicked */}
-              <ServiceMenuItem closeMenu={closeMenu} href="/services">Services</ServiceMenuItem>
-
-              {isMenuOpen() && <DropDownMenuDesktop closeMenu={closeMenu} />}
-            </div>
-          </div>
-          <MenuItem href="/prices">Prices</MenuItem>
-          <MenuItem href="/reviews">Reviews</MenuItem>
-          <MenuItem href="/about-us">About us</MenuItem>
-          <MenuItem href="/areas-we-cover">Areas we cover</MenuItem>
-          <MenuItem href="/blog">Blog</MenuItem>
-          <MenuItem href="/contact-us">Contact us</MenuItem>
-          <MenuItem href="/feedback">Feedback</MenuItem>
-        </div>
-        <HamburgerMenu />
-      </Topbar>
-      <Content>{childrenMemo()}</Content>
-      <CookieConsent />
-      <BackToTopArrow></BackToTopArrow>
-      <MainFooter>
-        <div class="flex flex-col gap-5 flex-wrap line-height-0 my-5">
-          <h3 class="important-font-size-4.5 md-font-size-4.5 uppercase font-letter tracking-widest mt-0 mb-2 c-paper font-600">Contacts</h3>
-          <div class="flex flex-items-center gap-2">
-            <RiPhoneFill class="w-10 h-10 c-paper" />
-            <div class="flex flex-col line-height-none">
-              <PhoneMailMenuItem href="tel:+44 7874 333 356">+44 7874 333 356</PhoneMailMenuItem>
-              <PhoneMailMenuItem href="tel:+44 2036 370 033">+44 2036 370 033</PhoneMailMenuItem>
-            </div>
-          </div>
-          <div class="flex flex-items-center gap-2">
-            <MdiEmail class="w-10 h-10 c-paper" />
-            <PhoneMailMenuItem href="mailto:office@finecarpetcleaning.co.uk">office@finecarpetcleaning.co.uk</PhoneMailMenuItem>
-          </div>
-          <div class="flex flex-items-center gap-2">
-            <MdiClock class="w-10 h-10 c-paper" />
-            <div class="flex flex-col line-height-none">
-              <div class="c-paper font-normal lg-font-size-4 md-font-size-4 font-size-4.5 font-sans line-height-6">Monday - Friday: <strong>7:30 - 19:00</strong></div>
-              <div class="c-paper font-normal lg-font-size-4 md-font-size-4 font-size-4.5 font-sans line-height-6">Saturday & Sunday: <strong>9:00 - 18:00</strong></div>
-            </div>
-          </div>
-        </div>
-        <div class="flex flex-col gap-5 md-gap-7 flex-wrap line-height-0 my-5">
-          <h3 class="important-font-size-4.5 md-font-size-4.5 uppercase font-letter tracking-widest mt-0 mb-2 c-paper font-600">Our most popular services</h3>
-          <MainFooterMenuItem href="/professional-carpet-cleaning-services">Professional Carpet Cleaning Services</MainFooterMenuItem>
-          <MainFooterMenuItem href="/professional-upholstery-cleaning-services">Professional Upholstery Cleaning Services</MainFooterMenuItem>
-          <MainFooterMenuItem href="/professional-rug-cleaning-services">Professional Rug Cleaning Services</MainFooterMenuItem>
-          <MainFooterMenuItem href="/stain-protection-services">Professional Stain Protection Services</MainFooterMenuItem>
-          <MainFooterMenuItem href="/professional-stain-removal-services">Professional Stain Removal Services</MainFooterMenuItem>
-        </div>
-        <div class="flex flex-col gap-2 flex-wrap line-height-0 my-5">
-          <h3 class="important-font-size-4.5 md-font-size-4.5 uppercase font-letter tracking-widest mt-0 mb-2 c-paper font-600">Menu</h3>
-          <MainFooterMenuItem href="/">Home</MainFooterMenuItem>
-          <MainFooterMenuItem href="/services">Services</MainFooterMenuItem>
-          <MainFooterMenuItem href="/prices">Prices</MainFooterMenuItem>
-          <MainFooterMenuItem href="/reviews">Reviews</MainFooterMenuItem>
-          <MainFooterMenuItem href="/about-us">About us</MainFooterMenuItem>
-          <MainFooterMenuItem href="/areas-we-cover">Areas we cover</MainFooterMenuItem>
-          <MainFooterMenuItem href="/blog">Blog</MainFooterMenuItem>
-          <MainFooterMenuItem href="/contact-us">Contact us</MainFooterMenuItem>
-          <MainFooterMenuItem href="/feedback">Feedback</MainFooterMenuItem>
-        </div>
-      </MainFooter>
-      <BottomFooter>
-        <p class="text-center lg-font-size-4 md-font-size-3 font-size-3.7 font-400 line-height-6 font-sans mb-0">Copyright &copy; <CurrentYear/> Fine Carpet Cleaning London</p>
-        <div class="flex flex-col md-flex-row md-gap-5 flex-items-center flex-justify-center">
-          <BottomFooterMenuItem href="/terms-and-conditions">Terms and conditions</BottomFooterMenuItem>
-          <div class="hidden md-block">┃</div>
-          <BottomFooterMenuItem href="/sitemap">Sitemap</BottomFooterMenuItem>
-          <div class="hidden md-block">┃</div>
-          <BottomFooterMenuItem href="/cookie-policy">Privacy policy</BottomFooterMenuItem>
-        </div>
-      </BottomFooter>
-    </div>
-  );
-}
-
-const CurrentYear = () => {
-  const [year, setYear] = createSignal<number>(new Date().getFullYear());
-
-  onMount(() => {
-    setYear(new Date().getFullYear());
-  });
-
-  return (
-    <span id="year">{year()}</span>
-  );
-};
-
-function Topbar(props: { children: JSX.Element }) {
-  return (
-    <div
-      class="w-full flex sticky lg-py-6 h-20 position-sticky top-0 border-b-2 border-t-1 bg-#f7f7f7 flex-justify-between lg-flex-justify-center lg-gap-2 flex-items-center z-9998" style="box-shadow: 0 0px 10px 0 rgba(50, 50, 50, 0.5);">
-      {props.children}
-    </div>
-  );
-}
-
-function Content(props: { children: JSX.Element }) {
-  return (
-    <div id="page-container">
-      <div
-        id="page-content"
-        style={{
-          padding: "20px",
-          "padding-bottom": "50px",
-          "min-height": "100vh",
-        }}
-      >
-        {props.children}
-      </div>
-    </div>
-  );
-}
-
-
-function HamburgerMenu() {
-  const [open, setOpen] = createSignal(false);
-  const [menuHeight, setMenuHeight] = createSignal("0px");
-
-  const handleToggle = () => {
-    if (open()) {
-      setMenuHeight("0px");
-      setTimeout(() => setOpen(false), 400);
-    } else {
-      setOpen(true);
-      setMenuHeight("3500px");
-    }
-  };
-
-  const closeMenu = () => {
-    setMenuHeight("0px");
-    setTimeout(() => setOpen(false), 400);
-  };
-
-  return (
-    <div class="lg-hidden flex flex-content-center flex-items-center flex-justify-between w-full">
-      <div class="flex items-center justify-center lg-pl-4 pl-0 z-99">
-        <a href="/" onClick={closeMenu}>
-          <img src="/assets/FCC_2024_png.png" class="lg-w-22 w-20 lg-ml-10 mt-7" alt="fine-carpet-cleaning-logo" />
-        </a>
-      </div>
-
-      <a href="/contact-us">
-        <button onClick={closeMenu}
-          class="get-a-quote-button whitespace-nowrap md-ml-2 xl-ml-10 font-serif uppercase font-500 c-paper overflow-hidden relative bg-paper b-double b-rd-1 b-4 b-transparent h-13 w-45 cursor-pointer font-size-3.5 tracking-wide"
-          style=" font-family: DM Sans !important; min-width: fit-content; background-origin: border-box; background-clip: padding-box, border-box; box-shadow: 0 0 0 2.5px rgba(255, 255, 255, 1) inset; background-image: linear-gradient(90deg, rgb(13, 46, 41) 0%, rgb(26, 135, 94) 50%), radial-gradient(circle at left top, rgb(13, 46, 41), rgb(26, 135, 94));"
-        >
-          Request a quote
-        </button>
-      </a>
-
-      <div class="ml-10 md-mr-10">
-        <input type="checkbox" id="menu-checkbox" class="hidden" />
-        <label
-          id="burger-menu"
-          for="menu-checkbox"
-          onClick={handleToggle}
-          class="relative cursor-pointer flex flex col flex-justify-between flex-col w-40px h-30px right-6 hamburger"
-        >
-          <div class={`line ${open() ? "open" : ""}`}></div>
-          <div class={`line ${open() ? "open" : ""}`}></div>
-          <div class={`line ${open() ? "open" : ""}`}></div>
-        </label>
-      </div>
-
-      <Show when={open()}>
-        <div
-          class="fixed w-screen bg-#f7f7f7 left-0 top-19.6 px-10 transition-all transition-duration-400"
-          style={{ height: menuHeight(), overflow: "hidden" }}
-        >
-          <div class="py-10 text-left">
-            <MyDropdown closeMenu={closeMenu} />
-          </div>
-        </div>
-      </Show>
-    </div>
-  );
-}
-
-
 function MainFooter(props: { children: JSX.Element }) {
   return (
     <div
-      class="flex flex-justify-start md-flex-justify-evenly bg-brand-dark lg-p-10 p-6 md-p-5 flex-shrink-0 flex-items-start flex-wrap">
+      class="flex flex-col flex-justify-center md-flex-justify-center bg-#14100c lg-p-10 p-6 md-p-5 flex-shrink-0 flex-items-center flex-wrap border-t-solid border-t-1px border-t-brand">
       {props.children}
     </div>
   );
 }
 
 function MainFooterMenuItem(props: { href: string, children: JSX.Element }) {
-  return <a href={props.href} class="line-height-7 text-left c-#9fcdb0 hover-color-paper:hover font-normal font-size-4 font-sans">{props.children}</a>
+  return <a href={props.href} class="line-height-7 text-left c-#8a8a8a hover-color-brand:hover font-normal font-size-4 font-sans uppercase important-font-400 transition-colors" style="font-family: 'Oswald', sans-serif">{props.children}</a>
 }
 
 function BottomFooterMenuItem(props: { href: string, children: JSX.Element }) {
   return <a href={props.href} class="c-paper-inv hover-color-brand-second-action:hover font-normal lg-font-size-4 md-font-size-4 font-size-4 lg-py-1 md-py-2 font-sans">{props.children}</a>
 }
 
-function PhoneMailMenuItem(props: { href: string, children: JSX.Element }) {
-  return <a href={props.href} target="_blank" rel="noopener" class="c-#9fcdb0 hover-color-paper:hover font-normal lg-font-size-4 md-font-size-4 font-size-4.5 lg-py-1 md-py-2 py-1 font-sans">{props.children}</a>
-}
-
 function BottomFooter(props: { children: JSX.Element }) {
   return (
     <div
-      class="flex flex-col gap-0 bg-#d6d6d6 py-1 flex-shrink-0 flex-justify-center flex-items-center">
+      class=" flex-col gap-0 bg-brand hidden py-1 flex-shrink-0 flex-justify-center flex-items-center">
       {props.children}
     </div>
   );
@@ -663,7 +326,7 @@ function BottomFooter(props: { children: JSX.Element }) {
 function BackToTopButton(props: { onClick: JSX.EventHandlerUnion<HTMLButtonElement, MouseEvent> | undefined; children: number | boolean | Node | JSX.ArrayElement | (string & {}) | null | undefined; }) {
   return (
     <button
-      class="flex items-center justify-between cursor-pointer b-none color-paper bg-brand-second-action hover-bg-brand w-11 h-11 b-rd-1"
+      class="flex items-center justify-between cursor-pointer b-solid b-2px c-brand hover-c-#b56b1b b-brand hover-b-#b56b1b bg-transparent w-12 h-12 b-rd-50% transition-colors"
       onClick={props.onClick}
     >
       {props.children}
@@ -677,7 +340,7 @@ function BackToTopArrow() {
   createEffect(() => {
     const handleScroll = () => {
       const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-      setIsVisible(scrollTop > 0); // Set isVisible to true if user has scrolled down
+      setIsVisible(scrollTop > 0);
     };
 
     window.addEventListener('scroll', handleScroll);
@@ -689,7 +352,7 @@ function BackToTopArrow() {
   const handleScrollToTop = () => {
     window.scrollTo({
       top: 0,
-      behavior: 'smooth' // Scroll smoothly to the top
+      behavior: 'smooth'
     });
   };
 
@@ -701,7 +364,7 @@ function BackToTopArrow() {
       }}
     >
       <BackToTopButton onClick={handleScrollToTop}>
-        <RiArrowUpDoubleFill class="w-full h-full ma" />
+        <RiArrowDropUpFill class="mx-auto" />
       </BackToTopButton>
     </div>
   );

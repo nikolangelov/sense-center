@@ -19,7 +19,7 @@ export default defineConfig({
 			theme:
 			 {
 				colors: {
-					brand: "#1A6142",
+					brand: "#d19d64",
 					"brand-dark": "#09321d",
 					"brand-action": "#edb339",
 					"brand-action-hover": "#ebbc59",
