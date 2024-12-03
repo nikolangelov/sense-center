@@ -38,13 +38,13 @@ export default function LayoutDefault(props: { children?: JSX.Element }) {
           <MenuItem href="/">За нас</MenuItem>
           <MenuItem href="/">Кариери</MenuItem>
           <MenuItem href="/">Магазин</MenuItem>
-          <MenuItem href="/">Контакти</MenuItem>
+          <MenuItem href="/test">Контакти</MenuItem>
         </div>
-        <a href="/request-a-quote" class="hidden lg-block mr-10">
+        <a href="/test#test-id-page" class="hidden lg-block mr-10">
           <button onClick={closeMenu}
             class="cursor-pointer bg-#d19d64 c-black b-solid b-2px b-#d19d64 uppercase font-size-4 font-500 px-7 py-2 hover-c-paper transition-colors b-rd-3px lg-block hidden" style="font-family: 'Oswald', sans-serif !important; letter-spacing: 1px;"
           >
-            Request a quote
+            Запазете час
           </button>
         </a>
         <HamburgerMenu />
@@ -133,28 +133,28 @@ const CurrentYear = () => {
 function Topbar(props: { children: JSX.Element }) {
   const [isScrolled, setIsScrolled] = createSignal(false);
 
-  const handleScroll = () => {
-    setIsScrolled(window.scrollY > 50);
+  const checkScroll = () => {
+    const isScrolledNow = window.scrollY > 0;
+    setIsScrolled(isScrolledNow);
   };
 
   onMount(() => {
-    window.addEventListener("scroll", handleScroll);
-    onCleanup(() => window.removeEventListener("scroll", handleScroll));
+    checkScroll();
+    window.addEventListener("scroll", checkScroll);
+    onCleanup(() => window.removeEventListener("scroll", checkScroll));
   });
 
   return (
     <div
-      class={`h-${isScrolled() ? "92px" : "172px"} w-full z-3 fixed top-0 flex-content-center ${isScrolled() ? "lg-p-0px" : "lg-p-40px"
-        } p-0px transition-all duration-300 ease-in-out ${isScrolled() ? "bg-#14100c" : "bg-transparent"
-        }`}
+      class={`h-${isScrolled() ? "92px" : "172px"} w-full z-3 fixed top-0 flex-content-center ${isScrolled() ? "lg-p-0px" : "lg-p-40px"} p-0px transition-all duration-300 ease-in-out ${
+        isScrolled() ? "bg-#14100c" : "bg-transparent"
+      }`}
     >
       <div
-        style={` ${isScrolled() ? "border-bottom: none;" : "border-bottom-color: rgba(255, 255, 255, 0.1);"
-          }`}
-
-        class={`header-border block lg-b-rd-4px lg-b-#dedede lg-b-2px border-b-solid border-b-1px ${isScrolled() ? "lg-b-none" : "lg-b-solid"
-          } w-full relative line-height-92px ${isScrolled() ? "h-72px" : "h-92px"
-          } bg-${isScrolled() ? "#333" : "#fff"} text-${isScrolled() ? "#fff" : "#000"} transition-all duration-300 ease-in-out`}
+        style={`${isScrolled() ? "border-bottom: none;" : "border-bottom-color: rgba(255, 255, 255, 0.1);"} `}
+        class={`header-border block lg-b-rd-4px lg-b-#dedede lg-b-2px border-b-solid border-b-1px ${isScrolled() ? "lg-b-none" : "lg-b-solid"} w-full relative line-height-92px ${
+          isScrolled() ? "h-72px" : "h-92px"
+        } bg-${isScrolled() ? "#333" : "#fff"} text-${isScrolled() ? "#fff" : "#000"}`}
       >
         <div class="mx-auto max-w-full flex flex-justify-between flex-items-center h-full">
           {props.children}
@@ -204,14 +204,14 @@ function HamburgerMenu() {
     <div class="lg-hidden flex flex-content-center flex-items-center flex-justify-between w-full">
       <div class="flex flex-items-center flex-justify-center lg-pl-4 pl-0 z-99">
         <a href="/" onClick={closeMenu}>
-          <img src="/assets/the-barber-shop-logo1000-x-400-px.webp" class="lg-w-22 w-20 ml--2 lg-ml-10 mt-4" alt="fine-carpet-cleaning-logo" />
+          <img src="/assets/the-barber-shop-logo1000-x-400-px.webp" class="w-27 ml--2 mt-4" alt="fine-carpet-cleaning-logo" />
         </a>
       </div>
-      <a href="/contact-us">
+      <a href="/test">
         <button onClick={closeMenu}
           class="cursor-pointer bg-#d19d64 c-black b-solid b-2px b-#d19d64 uppercase font-size-4 font-500 px-7 py-2 hover-c-paper transition-colors b-rd-3px block lg-hidden" style="font-family: 'Oswald', sans-serif !important; letter-spacing: 1px;"
         >
-          Book now
+          Запазете час
         </button>
       </a>
       <div class="ml-10 md-mr-10">

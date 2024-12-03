@@ -26,11 +26,11 @@ export const ReviewSlider = ({ children }: { children: JSX.Element | JSX.Element
                     <Slider options={{ loop: true }}>
                         {children}
                     </Slider>
-                    <SliderButton class="cursor-pointer position-absolute top-45% left-0 bg-transparent b-none" prev>
-                        <RiPlayReverseMiniLine class="-ml-1 font-size-6 b-solid b-2px p-1 c-#d19d64 b-#d19d64 hover-c-paper hover-bg-#d19d64 hover-b-#d19d64 transition-colors" />
+                    <SliderButton class="cursor-pointer position-absolute top-47% left-0 bg-transparent b-none" prev>
+                        <RiPlayReverseMiniLine class="-ml-1 font-size-7 b-solid b-2px p-1 c-#d19d64 b-#d19d64 hover-c-paper hover-bg-#d19d64 hover-b-#d19d64 transition-colors" />
                     </SliderButton>
-                    <SliderButton class="cursor-pointer position-absolute top-45% right-0 bg-transparent b-none" next>
-                        <RiPlayMiniLine class="-mr-1 font-size-6 b-solid b-2px p-1 c-#d19d64 b-#d19d64 hover-c-paper hover-bg-#d19d64 hover-b-#d19d64 transition-colors" />
+                    <SliderButton class="cursor-pointer position-absolute top-47% right-0 bg-transparent b-none" next>
+                        <RiPlayMiniLine class="-mr-1 font-size-7 b-solid b-2px p-1 c-#d19d64 b-#d19d64 hover-c-paper hover-bg-#d19d64 hover-b-#d19d64 transition-colors" />
                     </SliderButton>
                 </div>
             )}
@@ -46,7 +46,7 @@ export function StarReview(props: { src: string; stars: number; hrefGoogleReview
                     <div class="flex flex-justify-center flex-items-center">
                         <img class="w-12 h-12 mx-auto" src={props.src} alt="profile" />
                     </div>
-                    <div class="important-text-center py-7 font-300 font-size-4.3 md-font-size-4.5 line-height-7 lg-line-height-8" style="font-family:'Roboto', sans-serif; text-align: left;">{props.reviewText}</div>
+                    <div class="important-text-center py-7 lg-px-0 px-3 font-300 font-size-4.3 md-font-size-4.5 line-height-7 lg-line-height-8" style="font-family:'Roboto', sans-serif; text-align: left;">{props.reviewText}</div>
                     <div class="">
                         {range(props.stars).map((_: any) => <img class="m-r-2 w-5" src="/assets/google-star-review-logo-e1706350894182.png" alt="star" />)}
                         {range(5 - props.stars).map((_: any) => <img class="w-5 m-r-2" src="/assets/output-onlinepngtools-e1707480352597.png" alt="star" />)}

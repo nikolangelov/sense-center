@@ -2,11 +2,74 @@ import "solid-slider/slider.css";
 import { ReviewSlider, StarReview } from '../../components/ReviewSlider';
 import { VideoPlayer } from '../../components/VideoPlayer';
 import { GallerySlider } from '../../components/GallerySlider';
-import { AnimatedComponent } from '../../components/AnimateOnView';
-import { AnimatedComponentSlide } from '../../components/AnimateOnViewSlide';
 import MdiBank from '~icons/mdi/bank';
 import MdiPhoneClassic from '~icons/mdi/phone-classic';
 import RiTimerFill from '~icons/ri/timer-fill';
+import { createSignal, JSX } from "solid-js";
+import { onMount } from "solid-js";
+import { createEffect } from "solid-js";
+
+type AnimateOnViewOptions = {
+	root?: Element | null;
+	rootMargin?: string;
+	threshold?: number | number[];
+	animateClass?: string;
+};
+
+export function useAnimateOnView(options: AnimateOnViewOptions = {}) {
+	const { root = null, rootMargin = "0px", threshold = 0.1, animateClass = "animate" } = options;
+
+	const [observer, setObserver] = createSignal<IntersectionObserver | null>(null);
+
+	createEffect(() => {
+		const observerInstance = new IntersectionObserver((entries) => {
+			entries.forEach((entry) => {
+				if (entry.isIntersecting) {
+					entry.target.classList.add(animateClass);
+				} else {
+					entry.target.classList.remove(animateClass);
+				}
+			});
+		}, { root, rootMargin, threshold });
+
+		setObserver(observerInstance);
+
+		return () => observerInstance.disconnect();
+	});
+
+	const observe = (element: Element) => {
+		observer()?.observe(element);
+	};
+
+	const unobserve = (element: Element) => {
+		observer()?.unobserve(element);
+	};
+
+	return { observe, unobserve };
+}
+
+const AnimatedComponent = (props: { children: JSX.Element, class?: string, style?: string }) => {
+	let element!: HTMLDivElement;
+
+	const { observe, unobserve } = useAnimateOnView({ animateClass: "animate" });
+
+	onMount(() => {
+		if (element) {
+			observe(element);
+		}
+		return () => {
+			if (element) {
+				unobserve(element);
+			}
+		};
+	});
+
+	return (
+		<div ref={(el) => (element = el)} data-observed class={props.class} style={props.style}>
+			{props.children}
+		</div>
+	);
+};
 
 export default function Page() {
 	return (
@@ -18,15 +81,15 @@ export default function Page() {
 					<div class="flex flex-justify-center">
 						<div class="left-0 right-0 px-3 my-0 mx-auto absolute top-46% lg-top-50% text-center w-full max-w-700px" style="-webkit-transform: translateY(-50%);">
 							<h1 class="uppercase c-paper mb-6">The Barber Shop Sofia</h1>
-							<div class="c-paper text-center mb-10 font-size-5">Само за мъже.<br></br>За добре прекарано време или за добре загубено време.</div>
+							<div class="c-paper text-center mb-10 font-size-4.8">Само за мъже.<br></br>За добре прекарано време или за добре загубено време.</div>
 						</div>
 
 						<div class="float-left pr-5px relative text-center lg--top-170px -top-180px w-100% max-w-1240px" style="border: 2px solid rgba(255, 255, 255, 0.5);">
 							<div class="w-33.333% float-left">
 								<div class="float-left w-full py-25px">
 									<div class="flex flex-col flex-justify-center flex-items-center gap-2">
-										<MdiBank class="font-size-5.2 c-brand" />
-										<div class="relative min-h-1px px-8px lg-px-15px c-paper flex text-center flex-justify-center font-size-5 lg-font-size-5.2" style="font-family: 'Oswald', sans-serif !important;">
+										<MdiBank class="font-size-5 c-brand" />
+										<div class="relative min-h-1px px-8px lg-px-15px c-paper flex text-center flex-justify-center font-size-4.5 lg-font-size-4.8" style="font-family: 'Oswald', sans-serif !important;">
 											София, ул. "Николай Хайтов" 2
 										</div>
 									</div>
@@ -36,8 +99,8 @@ export default function Page() {
 							<div class="w-33.333% float-left">
 								<div class="float-left w-full py-25px" style="border-left: 2px solid rgba(255, 255, 255, 0.5); border-right: 2px solid rgba(255, 255, 255, 0.5)">
 									<div class="flex flex-col flex-justify-center flex-items-center gap-2">
-										<RiTimerFill class="font-size-5.7 c-brand" />
-										<div class="relative min-h-1px px-8px lg-px-15px c-paper flex text-center flex-justify-center font-size-5 lg-font-size-5.2" style="font-family: 'Oswald', sans-serif !important;">
+										<RiTimerFill class="font-size-5.5 c-brand" />
+										<div class="relative min-h-1px px-8px lg-px-15px c-paper flex text-center flex-justify-center font-size-4.5 lg-font-size-4.8" style="font-family: 'Oswald', sans-serif !important;">
 											Понеделник - Петък: 09.00 - 17.00
 										</div>
 									</div>
@@ -47,12 +110,12 @@ export default function Page() {
 							<div class="w-33.333% float-left">
 								<div class="float-left w-full py-25px">
 									<div class="flex flex-col flex-justify-center flex-items-center gap-2">
-										<MdiPhoneClassic class="font-size-5.7 c-brand" />
+										<MdiPhoneClassic class="font-size-5.5 c-brand" />
 										<div class="relative min-h-1px px-8px lg-px-15px c-paper text-center flex flex-col lg-flex-row flex-justify-center font-size-4.5 lg-font-size-4.8" style="font-family: 'Oswald', sans-serif !important;">
 											<div class="c-paper text-center flex flex-justify-center font-size-4.5 lg-font-size-4.8" style="font-family: 'Oswald', sans-serif !important;">
 												Телефон:
 											</div>
-											<div class="lg-px-15px c-paper text-center flex flex-justify-center font-size-5 lg-font-size-5.2" style="font-family: 'Oswald', sans-serif !important;">
+											<div class="lg-px-15px c-paper text-center flex flex-justify-center font-size-4.5 lg-font-size-4.8" style="font-family: 'Oswald', sans-serif !important;">
 												0882 820 331
 											</div>
 										</div>
@@ -66,9 +129,8 @@ export default function Page() {
 
 			<div class="pt-10 pb-10 lg--mt-30 -mt-45" style="background-image: url(/assets/bg-2.jpg); background-position: center; background-repeat: no-repeat; background-size: cover;">
 				<div class="lg-mt-0 lg-px-30 pb-10 max-w-1600px mx-auto flex lg-flex-row flex-col gap-8 lg-gap-20">
-					<AnimatedComponentSlide class="lg-w-50% px-5">
-						<h2 class="c-paper text-left mb-7">Бръснарница от класа</h2>
-						<div class="text-center h-1px w-150px bg-brand text-left mb-10"></div>
+					<AnimatedComponent class="lg-w-50% px-5">
+						<h2 class="c-paper">Бръснарница от класа</h2>
 						<div class="flex flex-col gap-5">
 							<div class="c-paper">
 								<span class="c-brand  font-900" style="font-family: 'Roboto'">The Barber Shop Sofia</span> е нещо повече от просто бръснарница. Нашият барбър шоп се намира в квартал Изток, София на удобна и лесно достъпна локация в близост до ключови транспортни връзки и зелени градски зони.
@@ -77,28 +139,27 @@ export default function Page() {
 								<span class="c-brand font-900" style="font-family: 'Roboto'">The Barber Shop Sofia</span> е премиум бръснарница, където майсторството се преплита с вниманието към детайла, за да Ви осигури отлично ниво на комфорт и стил. Нашата мисия е да създадем цялостно ексклузивно преживяване за истински мъже.
 							</div>
 						</div>
-					</AnimatedComponentSlide>
+					</AnimatedComponent>
 
-					<AnimatedComponentSlide class="lg-w-50% pr-5">
-						<h2 class="c-paper text-left mb-7">Стил и комфорт в едно</h2>
-						<div class="text-center h-1px w-150px bg-brand text-left mb-10"></div>
-						<ul class="c-paper ml--5">
+					<AnimatedComponent class="lg-w-50% pr-5">
+						<h2 class="c-paper">Стил и комфорт в едно</h2>
+						<ul class="c-paper">
 							<li>Безплатно паркиране → бръснарница с място за паркиране</li>
 							<li>Топло посрещане с безплатно питие</li>
 							<li>Приятна и уютна атмосфера</li>
 							<li>Усещане за принадлежност към мъжка общност</li>
 							<li>Съчетание на традиционни техники с модерни подходи</li>
 						</ul>
-					</AnimatedComponentSlide>
+					</AnimatedComponent>
 				</div>
 			</div>
 
-			<div class="lg-px-30 pt-10 pb-20 px-4 w-full">
-				<AnimatedComponentSlide>
+			<div class="lg-px-30 pt-10 pb-20 px-4 w-full" id="test-id-page">
+				<AnimatedComponent>
 					<h2>Нашите услуги</h2>
-				</AnimatedComponentSlide>
+				</AnimatedComponent>
 				<div class="flex flex-wrap flex-justify-center lg-gap-5 gap-15">
-					<AnimatedComponentSlide class="flex lg-w-23% max-w-full relative overflow-hidden " style="flex: 0 0 auto;">
+					<AnimatedComponent class="flex lg-w-23% max-w-full relative overflow-hidden " style="flex: 0 0 auto;">
 						<img class="w-full h-auto" src="/assets/about3.jpg" alt="" />
 						<div class="w-full p-20px absolute bottom-0px text-center" style="background: -webkit-linear-gradient(top, transparent 0, rgba(0, 0, 0, .01) 1%, rgba(0, 0, 0, .95) 80%);">
 							<div class="flex flex-col gap-1">
@@ -109,9 +170,9 @@ export default function Page() {
 								<a href="/" class="bg-none c-paper b-solid b-1px b-paper hover-b-brand hover-bg-brand transition-colors mx-auto uppercase font-size-4 font-500 px-7 py-2" style="font-family: 'Oswald', sans-serif !important; letter-spacing: 1px;">Вижте повече</a>
 							</div>
 						</div>
-					</AnimatedComponentSlide>
+					</AnimatedComponent>
 
-					<AnimatedComponentSlide class="flex lg-w-23% max-w-full relative overflow-hidden" style="flex: 0 0 auto;">
+					<AnimatedComponent class="flex lg-w-23% max-w-full relative overflow-hidden" style="flex: 0 0 auto;">
 						<img class="w-full h-auto" src="/assets/about3.jpg" alt="" />
 						<div class="w-full p-20px absolute bottom-0px text-center" style="background: -webkit-linear-gradient(top, transparent 0, rgba(0, 0, 0, .01) 1%, rgba(0, 0, 0, .95) 80%);">
 							<div class="flex flex-col gap-1">
@@ -122,9 +183,9 @@ export default function Page() {
 								<a href="/" class="bg-none c-paper b-solid b-1px b-paper hover-b-brand hover-bg-brand transition-colors mx-auto uppercase font-size-4 font-500 px-7 py-2" style="font-family: 'Oswald', sans-serif !important; letter-spacing: 1px;">Вижте повече</a>
 							</div>
 						</div>
-					</AnimatedComponentSlide>
+					</AnimatedComponent>
 
-					<AnimatedComponentSlide class="flex lg-w-23% max-w-full relative overflow-hidden" style="flex: 0 0 auto;">
+					<AnimatedComponent class="flex lg-w-23% max-w-full relative overflow-hidden" style="flex: 0 0 auto;">
 						<img class="w-full h-auto" src="/assets/about3.jpg" alt="" />
 						<div class="w-full p-20px absolute bottom-0px text-center" style="background: -webkit-linear-gradient(top, transparent 0, rgba(0, 0, 0, .01) 1%, rgba(0, 0, 0, .95) 80%);">
 							<div class="flex flex-col gap-1">
@@ -135,7 +196,20 @@ export default function Page() {
 								<a href="/" class="bg-none c-paper b-solid b-1px b-paper hover-b-brand hover-bg-brand transition-colors mx-auto uppercase font-size-4 font-500 px-7 py-2" style="font-family: 'Oswald', sans-serif !important; letter-spacing: 1px;">Вижте повече</a>
 							</div>
 						</div>
-					</AnimatedComponentSlide>
+					</AnimatedComponent>
+
+					<AnimatedComponent class="flex lg-w-23% max-w-full relative overflow-hidden" style="flex: 0 0 auto;">
+						<img class="w-full h-auto" src="/assets/about3.jpg" alt="" />
+						<div class="w-full p-20px absolute bottom-0px text-center" style="background: -webkit-linear-gradient(top, transparent 0, rgba(0, 0, 0, .01) 1%, rgba(0, 0, 0, .95) 80%);">
+							<div class="flex flex-col gap-1">
+								<h4 class="c-paper relative font-size-27px mb-20px">
+									Hair Cut
+								</h4>
+								<div class="text-center h-1px w-60px bg-brand mx-auto mb-20px"></div>
+								<a href="/" class="bg-none c-paper b-solid b-1px b-paper hover-b-brand hover-bg-brand transition-colors mx-auto uppercase font-size-4 font-500 px-7 py-2" style="font-family: 'Oswald', sans-serif !important; letter-spacing: 1px;">Вижте повече</a>
+							</div>
+						</div>
+					</AnimatedComponent>
 				</div>
 			</div>
 
@@ -216,7 +290,7 @@ export default function Page() {
 
 			<section style="background-color: #222222; background-image: url(/assets/bg-2.jpg); background-position: center center; background-repeat: no-repeat; background-size: cover;">
 				<div class="lg-mx-30 mx-auto lg-pt-10 lg-pb-20 pt-10 pb-10">
-					<div class="flex md-flex flex-col lg-gap-10 flex-justify-center max-w-1440px lg-px-0 mx-auto pb-10">
+					<div class="flex md-flex flex-col lg-gap-10 flex-justify-center max-w-1440px lg-px-0 mx-auto">
 						<AnimatedComponent>
 							<h2 class="pb-3 lg-pb-0 lg-mb-20 text-left c-paper">Предимставата на "The Barber Shop"</h2>
 						</AnimatedComponent>
@@ -241,61 +315,20 @@ export default function Page() {
 							</div>
 						</div>
 					</div>
-					<GallerySlider style="border-color:#d19d64; color:#d19d64;" imgs={[
-						{ src: "/assets/about3.jpg", alt: "1-commercial-carpet-cleaning-london" },
-						{ src: "/assets/about3.jpg", alt: "3-commercial-carpet-cleaning-methods" },
-						{ src: "/assets/about3.jpg", alt: "2-commercial-carpet-cleaning-process" },
-						{ src: "/assets/about3.jpg", alt: "4-commercial-carpet-cleaning-services" },
-					]}
-					/>
 				</div>
 			</section>
-
-			<div class="lg-px-30 pt-10 pb-20 px-4 w-full flex flex-col flex-justify-center">
-				<AnimatedComponentSlide>
-					<h2>Нашият магазин</h2>
-				</AnimatedComponentSlide>
-				<div class="flex flex-wrap flex-justify-center lg-gap-5 gap-15">
-					<AnimatedComponentSlide class="flex lg-w-23% max-w-full relative overflow-hidden " style="flex: 0 0 auto;">
-						<img class="w-full h-auto" src="/assets/about3.jpg" alt="" />
-						<div class="w-full p-20px absolute bottom-0px text-center" style="background: -webkit-linear-gradient(top, transparent 0, rgba(0, 0, 0, .01) 1%, rgba(0, 0, 0, .95) 80%);">
-							<div class="flex flex-col gap-1">
-								<h4 class="c-paper relative font-size-27px mb-20px">
-									Козметика
-								</h4>
-								<div class="text-center h-1px w-60px bg-brand mx-auto mb-20px"></div>
-								<a href="/" class="bg-none c-paper b-solid b-1px b-paper hover-b-brand hover-bg-brand transition-colors mx-auto uppercase font-size-4 font-500 px-7 py-2" style="font-family: 'Oswald', sans-serif !important; letter-spacing: 1px;">Вижте повече</a>
-							</div>
-						</div>
-					</AnimatedComponentSlide>
-					<AnimatedComponentSlide class="flex lg-w-23% max-w-full relative overflow-hidden" style="flex: 0 0 auto;">
-						<img class="w-full h-auto" src="/assets/about3.jpg" alt="" />
-						<div class="w-full p-20px absolute bottom-0px text-center" style="background: -webkit-linear-gradient(top, transparent 0, rgba(0, 0, 0, .01) 1%, rgba(0, 0, 0, .95) 80%);">
-							<div class="flex flex-col gap-1">
-								<h4 class="c-paper relative font-size-27px mb-20px">
-									Козметика
-								</h4>
-								<div class="text-center h-1px w-60px bg-brand mx-auto mb-20px"></div>
-								<a href="/" class="bg-none c-paper b-solid b-1px b-paper hover-b-brand hover-bg-brand transition-colors mx-auto uppercase font-size-4 font-500 px-7 py-2" style="font-family: 'Oswald', sans-serif !important; letter-spacing: 1px;">Вижте повече</a>
-							</div>
-						</div>
-					</AnimatedComponentSlide>
-					<AnimatedComponentSlide class="flex lg-w-23% max-w-full relative overflow-hidden" style="flex: 0 0 auto;">
-						<img class="w-full h-auto" src="/assets/about3.jpg" alt="" />
-						<div class="w-full p-20px absolute bottom-0px text-center" style="background: -webkit-linear-gradient(top, transparent 0, rgba(0, 0, 0, .01) 1%, rgba(0, 0, 0, .95) 80%);">
-							<div class="flex flex-col gap-1">
-								<h4 class="c-paper relative font-size-27px mb-20px">
-									Козметика
-								</h4>
-								<div class="text-center h-1px w-60px bg-brand mx-auto mb-20px"></div>
-								<a href="/" class="bg-none c-paper b-solid b-1px b-paper hover-b-brand hover-bg-brand transition-colors mx-auto uppercase font-size-4 font-500 px-7 py-2" style="font-family: 'Oswald', sans-serif !important; letter-spacing: 1px;">Вижте повече</a>
-							</div>
-						</div>
-					</AnimatedComponentSlide>
-				</div>
-				<AnimatedComponentSlide class="mx-auto pt-15">
+			<div class="lg-pt-10 lg-pb-20 pb-20 pt-10 flex flex-col flex-justify-center">
+				<h2>Нашият магазин</h2>
+				<GallerySlider imgs={[
+					{ src: "/assets/about3.jpg", alt: "1-commercial-carpet-cleaning-london" },
+					{ src: "/assets/about3.jpg", alt: "3-commercial-carpet-cleaning-methods" },
+					{ src: "/assets/about3.jpg", alt: "2-commercial-carpet-cleaning-process" },
+					{ src: "/assets/about3.jpg", alt: "4-commercial-carpet-cleaning-services" },
+				]}
+				/>
+				<AnimatedComponent class="mx-auto pt-15">
 					<a href="/" class="bg-brand c-black b-solid b-2px b-brand uppercase font-size-4 font-500 px-7 py-2 hover-c-paper transition-colors" style="font-family: 'Oswald', sans-serif !important; letter-spacing: 1px;">Към магазин</a>
-				</AnimatedComponentSlide>
+				</AnimatedComponent>
 			</div>
 			<div class="" style="background-position: center top; background-repeat: no-repeat; background-size: cover; height: auto;">
 				<div class="px-2 gap-15 lg-h-80vh h-100% lg-py-0 py-15 flex flex-col flex-justify-center flex-items-center" style="background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7) ), url(/assets/20.jpg); background-position: center top; background-repeat: no-repeat; background-size: cover;">
