@@ -17,11 +17,13 @@ export default function Page() {
 				<div class="max-w-1240px mx-auto">
 					<div class="flex flex-justify-center">
 						<div class="left-0 right-0 px-3 my-0 mx-auto absolute top-46% lg-top-50% text-center w-full max-w-700px" style="-webkit-transform: translateY(-50%);">
-							<h1 class="uppercase c-paper mb-6">The Barber Shop Sofia</h1>
-							<div class="c-paper text-center mb-10 font-size-5">Само за мъже.<br></br>За добре прекарано време или за добре загубено време.</div>
+							<AnimatedComponent>
+								<h1 class="uppercase c-paper mb-6">The Barber Shop Sofia</h1>
+							</AnimatedComponent>
+							<AnimatedComponent class="important-delay-300 c-paper text-center mb-10 font-size-5">Само за мъже.<br></br>За добре прекарано време или за добре загубено време.</AnimatedComponent>
 						</div>
 
-						<div class="float-left pr-5px relative text-center lg--top-170px -top-180px w-100% max-w-1240px" style="border: 2px solid rgba(255, 255, 255, 0.5);">
+						<AnimatedComponent class="important-delay-600 float-left pr-5px relative text-center lg--top-170px -top-180px w-100% max-w-1240px" style="border: 2px solid rgba(255, 255, 255, 0.5);">
 							<div class="w-33.333% float-left">
 								<div class="float-left w-full py-25px">
 									<div class="flex flex-col flex-justify-center flex-items-center gap-2">
@@ -59,7 +61,7 @@ export default function Page() {
 									</div>
 								</div>
 							</div>
-						</div>
+						</AnimatedComponent>
 					</div>
 				</div>
 			</div>
@@ -150,7 +152,7 @@ export default function Page() {
 				</div>
 			</div>
 
-			<section class="lg-pb-30 pb-20 pt-10">
+			<section class="lg-pb-25 pb-20 pt-10">
 				<AnimatedComponent>
 					<h2>Как го правим</h2>
 				</AnimatedComponent>
@@ -164,7 +166,7 @@ export default function Page() {
 			</section>
 
 			<div>
-				<div class="flex flex-col gap-5 lg-pt-10 pb-20 pt-0">
+				<div class="flex flex-col gap-5 lg-pt-20 pb-20 pt-0 bg-#f2e0c2">
 					<div class="flex flex-col flex-items-center">
 						<AnimatedComponent>
 							<h2 class="important-mb-2 lg-mb-9 mt-3">Какво казват нашите клиенти за нас</h2>
@@ -215,7 +217,7 @@ export default function Page() {
 			</div>
 
 			<section style="background-color: #222222; background-image: url(/assets/bg-2.jpg); background-position: center center; background-repeat: no-repeat; background-size: cover;">
-				<div class="lg-mx-30 mx-auto lg-pt-10 lg-pb-20 pt-10 pb-10">
+				<div class="lg-mx-30 mx-auto lg-pt-10 pt-10">
 					<div class="flex md-flex flex-col lg-gap-10 flex-justify-center max-w-1440px lg-px-0 mx-auto pb-10">
 						<AnimatedComponent>
 							<h2 class="pb-3 lg-pb-0 lg-mb-20 text-left c-paper">Предимставата на "The Barber Shop"</h2>
@@ -241,6 +243,8 @@ export default function Page() {
 							</div>
 						</div>
 					</div>
+				</div>
+				<div class="lg-pb-20 pb-10">
 					<GallerySlider style="border-color:#d19d64; color:#d19d64;" imgs={[
 						{ src: "/assets/about3.jpg", alt: "1-commercial-carpet-cleaning-london" },
 						{ src: "/assets/about3.jpg", alt: "3-commercial-carpet-cleaning-methods" },
