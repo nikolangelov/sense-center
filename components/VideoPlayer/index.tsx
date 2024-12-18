@@ -41,7 +41,7 @@ export const VideoPlayer = (props: { src: string; }) => {
       <div class="flex flex-justify-center flex-items-center mt-0 lg-mt-20 max-w-1140px mx-auto">
         <iframe
           ref={iframeRef}
-          class=" b-none w-full bg-paper h-220px md-h-600px"
+          class="b-none w-full bg-paper h-217px md-h-600px"
           src={props.src}
           allow="autoplay; encrypted-media"
           style={{

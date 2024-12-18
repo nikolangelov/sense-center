@@ -13,6 +13,9 @@ import RiArrowDropUpFill from '~icons/ri/arrow-drop-up-fill?width=192px&height=1
 import MdiDot from '~icons/mdi/dot?width=192px&height=192px';
 import RiFacebookFill from '~icons/ri/facebook-fill?width=192px&height=192px';
 import RiInstagramLine from '~icons/ri/instagram-line?width=192px&height=192px';
+import MdiScissors from '~icons/mdi/scissors?width=24px&height=24px';
+import RiScissors2Line from '~icons/ri/scissors-2-line?width=24px&height=24px';
+import RiScissorsLine from '~icons/ri/scissors-line?width=24px&height=24px';
 
 export default function LayoutDefault(props: { children?: JSX.Element }) {
   const childrenMemo = children(() => props.children)
@@ -229,7 +232,7 @@ function HamburgerMenu() {
       </div>
       <Show when={open()}>
         <div
-          class="fixed w-screen bg-#f7f7f7 left-0 top-19.6 px-10 transition-all transition-duration-400"
+          class="fixed w-screen bg-#14100c left-0 top-19.6 px-10 transition-all transition-duration-400"
           style={{ height: menuHeight(), overflow: "hidden" }}
         >
           <div class="py-10 text-left">
@@ -251,46 +254,39 @@ const MyDropdown = (props: { closeMenu: () => void; }) => {
 
   return (
     <div class="w-full overflow-y-auto max-h-770px sticky">
-      <div class="py-4 b-b-solid b-b border-brand-second-action">
-        <a onClick={handleLinkClick} href="/services" class="flex flex-items-center flex-nowrap c-paper-inv hover-c-brand:hover font-size-5 font-500" style="font-family: Open Sans, sans-serif; letter-spacing: 0.6px;">
-          <MdiVacuum class="mr-3" />Services
+      <div class="py-4 b-b-solid b-b border-brand-action">
+        <a onClick={handleLinkClick} href="/" class="flex flex-items-center flex-nowrap c-paper hover-c-brand:hover font-size-5 font-500" style="font-family: Open Sans, sans-serif; letter-spacing: 0.6px;">
+          <RiScissorsLine class="mr-3 c-brand" />Услуги
         </a>
       </div>
-
-      <div class="py-4 b-b-solid b-b border-brand-second-action">
-        <a onClick={handleLinkClick} href="/prices" class="flex flex-items-center flex-nowrap c-paper-inv hover-c-brand:hover font-size-5 font-500" style="font-family: Open Sans, sans-serif; letter-spacing: 0.6px;">
-          <RiMoneyPoundCircleLine class="mr-3" />Prices
+      <div class="py-4 b-b-solid b-b border-brand-action">
+        <a onClick={handleLinkClick} href="/" class="flex flex-items-center flex-nowrap c-paper hover-c-brand:hover font-size-5 font-500" style="font-family: Open Sans, sans-serif; letter-spacing: 0.6px;">
+          <RiScissorsLine class="mr-3 c-brand" />Цени
         </a>
       </div>
-
-      <div class="py-4 b-b-solid b-b border-brand-second-action">
-        <a onClick={handleLinkClick} href="/reviews" class="flex flex-items-center flex-nowrap c-paper-inv hover-c-brand:hover font-size-5 font-500" style="font-family: Open Sans, sans-serif; letter-spacing: 0.6px;">
-          <MdiCommentAccountOutline class="mr-3" />Reviews
+      <div class="py-4 b-b-solid b-b border-brand-action">
+        <a onClick={handleLinkClick} href="/" class="flex flex-items-center flex-nowrap c-paper hover-c-brand:hover font-size-5 font-500" style="font-family: Open Sans, sans-serif; letter-spacing: 0.6px;">
+          <RiScissorsLine class="mr-3 c-brand" />Отзиви
         </a>
       </div>
-      <div class="py-4 b-b-solid b-b border-brand-second-action">
-        <a onClick={handleLinkClick} href="/about-us" class="flex flex-items-center flex-nowrap c-paper-inv hover-c-brand:hover font-size-5 font-500" style="font-family: Open Sans, sans-serif; letter-spacing: 0.6px;">
-          <MdiAccountGroupOutline class="mr-3" />About us
+      <div class="py-4 b-b-solid b-b border-brand-action">
+        <a onClick={handleLinkClick} href="/" class="flex flex-items-center flex-nowrap c-paper hover-c-brand:hover font-size-5 font-500" style="font-family: Open Sans, sans-serif; letter-spacing: 0.6px;">
+          <RiScissorsLine class="mr-3 c-brand" />За нас
         </a>
       </div>
-      <div class="py-4 b-b-solid b-b border-brand-second-action">
-        <a onClick={handleLinkClick} href="/areas-we-cover" class="flex flex-items-center flex-nowrap c-paper-inv hover-c-brand:hover font-size-5 font-500" style="font-family: Open Sans, sans-serif; letter-spacing: 0.6px;">
-          <MdiPlaceOutline class="mr-3" />Areas we cover
+      <div class="py-4 b-b-solid b-b border-brand-action">
+        <a onClick={handleLinkClick} href="/" class="flex flex-items-center flex-nowrap c-paper hover-c-brand:hover font-size-5 font-500" style="font-family: Open Sans, sans-serif; letter-spacing: 0.6px;">
+          <RiScissorsLine class="mr-3 c-brand" />Кариери
         </a>
       </div>
-      <div class="py-4 b-b-solid b-b border-brand-second-action">
-        <a onClick={handleLinkClick} href="/blog" class="flex flex-items-center flex-nowrap c-paper-inv hover-c-brand:hover font-size-5 font-500" style="font-family: Open Sans, sans-serif; letter-spacing: 0.6px;">
-          <MdiBookOpenPageVariantOutline class="mr-3" />Blog
+      <div class="py-4 b-b-solid b-b border-brand-action">
+        <a onClick={handleLinkClick} href="/" class="flex flex-items-center flex-nowrap c-paper hover-c-brand:hover font-size-5 font-500" style="font-family: Open Sans, sans-serif; letter-spacing: 0.6px;">
+          <RiScissorsLine class="mr-3 c-brand" />Магазин
         </a>
       </div>
-      <div class="py-4 b-b-solid b-b border-brand-second-action">
-        <a onClick={handleLinkClick} href="/contact-us" class="flex flex-items-center flex-nowrap c-paper-inv hover-c-brand:hover font-size-5 font-500" style="font-family: Open Sans, sans-serif; letter-spacing: 0.6px;">
-          <MdiPhoneOutline class="mr-3" />Contact us
-        </a>
-      </div>
-      <div class="py-4 b-b-solid b-b border-brand-second-action">
-        <a onClick={handleLinkClick} href="/feedback" class="flex flex-items-center flex-nowrap c-paper-inv hover-c-brand:hover font-size-5 font-500" style="font-family: Open Sans, sans-serif; letter-spacing: 0.6px;">
-          <MdiEmailEditOutline class="mr-3" />Feedback
+      <div class="py-4 b-b-solid b-b border-brand-action">
+        <a onClick={handleLinkClick} href="/" class="flex flex-items-center flex-nowrap c-paper hover-c-brand:hover font-size-5 font-500" style="font-family: Open Sans, sans-serif; letter-spacing: 0.6px;">
+          <RiScissorsLine class="mr-3 c-brand" />Контакти
         </a>
       </div>
     </div>

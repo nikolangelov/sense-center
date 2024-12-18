@@ -16,11 +16,11 @@ export default function Page() {
 			<div class="w-full bg-#212528">
 				<div class="max-w-1240px mx-auto">
 					<div class="flex flex-justify-center">
-						<div class="left-0 right-0 px-3 my-0 mx-auto absolute top-46% lg-top-50% text-center w-full max-w-700px" style="-webkit-transform: translateY(-50%);">
+						<div class="left-0 right-0 px-3 my-0 mx-auto absolute top-45% lg-top-50% text-center w-full max-w-700px" style="-webkit-transform: translateY(-50%);">
 							<AnimatedComponent>
 								<h1 class="uppercase c-paper mb-6">The Barber Shop Sofia</h1>
 							</AnimatedComponent>
-							<AnimatedComponent class="important-delay-300 c-paper text-center mb-10 font-size-5">Само за мъже.<br></br>За добре прекарано време или за добре загубено време.</AnimatedComponent>
+							<AnimatedComponent class="important-delay-300 c-paper text-center mb-0 font-size-4.5 lg-font-size-5">Само за мъже.<br></br>За добре прекарано време или за добре загубено време.</AnimatedComponent>
 						</div>
 
 						<AnimatedComponent class="important-delay-600 float-left pr-5px relative text-center lg--top-170px -top-180px w-100% max-w-1240px" style="border: 2px solid rgba(255, 255, 255, 0.5);">
@@ -69,7 +69,7 @@ export default function Page() {
 			<div class="pt-10 pb-10 lg--mt-30 -mt-45" style="background-image: url(/assets/bg-2.jpg); background-position: center; background-repeat: no-repeat; background-size: cover;">
 				<div class="lg-mt-0 lg-px-30 pb-10 max-w-1600px mx-auto flex lg-flex-row flex-col gap-8 lg-gap-20">
 					<AnimatedComponentSlide class="lg-w-50% px-5">
-						<h2 class="c-paper text-left mb-7">Бръснарница от класа</h2>
+						<h2 class="c-paper text-left mb-7 pl-0">Бръснарница от класа</h2>
 						<div class="text-center h-1px w-150px bg-brand text-left mb-10"></div>
 						<div class="flex flex-col gap-5">
 							<div class="c-paper">
@@ -81,8 +81,8 @@ export default function Page() {
 						</div>
 					</AnimatedComponentSlide>
 
-					<AnimatedComponentSlide class="lg-w-50% pr-5">
-						<h2 class="c-paper text-left mb-7">Стил и комфорт в едно</h2>
+					<AnimatedComponentSlide class="lg-w-50% pr-5 pl-5 lg-pl-0">
+						<h2 class="c-paper text-left mb-7 pl-0">Стил и комфорт в едно</h2>
 						<div class="text-center h-1px w-150px bg-brand text-left mb-10"></div>
 						<ul class="c-paper ml--5">
 							<li>Безплатно паркиране → бръснарница с място за паркиране</li>
@@ -97,7 +97,8 @@ export default function Page() {
 
 			<div class="lg-px-30 pt-10 pb-20 px-4 w-full">
 				<AnimatedComponentSlide>
-					<h2>Нашите услуги</h2>
+					<h2 class="important-mb-0">Нашите услуги</h2>
+					<img class="mx-auto pt-2 pb-15 flex flex-justify-center" src="/assets/heading-ic.png" />
 				</AnimatedComponentSlide>
 				<div class="flex flex-wrap flex-justify-center lg-gap-5 gap-15">
 					<AnimatedComponentSlide class="flex lg-w-23% max-w-full relative overflow-hidden " style="flex: 0 0 auto;">
@@ -144,7 +145,8 @@ export default function Page() {
 			<div style="background-image: url(/assets/bg-2.jpg); background-position: center; background-repeat: no-repeat; background-size: cover;">
 				<div class="lg-mt-10 lg-pb-30 pb-20 pt-10">
 					<AnimatedComponent>
-						<h2 class="c-paper">Видео</h2>
+						<h2 class="c-paper important-mb-0">Видео</h2>
+						<img class="mx-auto pt-2 mb-15 lg-mb--5 flex flex-justify-center" src="/assets/heading-ic.png" />
 					</AnimatedComponent>
 					<AnimatedComponent>
 						<VideoPlayer src='https://www.youtube.com/embed/e2x0UXVU2yg?enablejsapi=1&mute=1' />
@@ -154,7 +156,8 @@ export default function Page() {
 
 			<section class="lg-pb-25 pb-20 pt-10">
 				<AnimatedComponent>
-					<h2>Как го правим</h2>
+					<h2 class="important-mb-0">Как го правим</h2>
+					<img class="mx-auto pt-2 pb-15 flex flex-justify-center" src="/assets/heading-ic.png" />
 				</AnimatedComponent>
 				<GallerySlider imgs={[
 					{ src: "/assets/about3.jpg", alt: "1-commercial-carpet-cleaning-london" },
@@ -166,10 +169,11 @@ export default function Page() {
 			</section>
 
 			<div>
-				<div class="flex flex-col gap-5 lg-pt-20 pb-20 pt-0 bg-#f2e0c2">
+				<div class="flex flex-col lg-pt-20 pb-20 pt-0 bg-#f2e0c2">
 					<div class="flex flex-col flex-items-center">
 						<AnimatedComponent>
-							<h2 class="important-mb-2 lg-mb-9 mt-3">Какво казват нашите клиенти за нас</h2>
+							<h2 class="important-mb-2 lg-mb-9 mt-3 mb-0">Какво казват нашите клиенти за нас</h2>
+							<img class="mx-auto pt-2 pb-10 flex flex-justify-center" src="/assets/heading-ic.png" />
 						</AnimatedComponent>
 					</div>
 					<div>
@@ -218,11 +222,12 @@ export default function Page() {
 
 			<section style="background-color: #222222; background-image: url(/assets/bg-2.jpg); background-position: center center; background-repeat: no-repeat; background-size: cover;">
 				<div class="lg-mx-30 mx-auto lg-pt-10 pt-10">
-					<div class="flex md-flex flex-col lg-gap-10 flex-justify-center max-w-1440px lg-px-0 mx-auto pb-10">
+					<div class="flex md-flex flex-col lg-gap-5 flex-justify-center max-w-1440px lg-px-0 mx-auto pb-10">
 						<AnimatedComponent>
-							<h2 class="pb-3 lg-pb-0 lg-mb-20 text-left c-paper">Предимставата на "The Barber Shop"</h2>
+							<h2 class="pb-3 lg-pb-0 important-mb-0 c-paper">Предимставата на "The Barber Shop"</h2>
+							<img class="mx-auto pt-2 pb-15 lg-pb-10 flex flex-justify-center" src="/assets/heading-ic.png" />
 						</AnimatedComponent>
-						<div class="px-5 flex lg-flex-row flex-col lg-gap-10">
+						<div class="px-5 lg-px-0 flex lg-flex-row flex-col lg-gap-10">
 							<div class="lg-w-33.33% flex flex-col">
 								<AnimatedComponent>
 									<h3 class="c-brand text-left mt-0">Опитни и квалифицирани барбъри</h3>
@@ -257,7 +262,8 @@ export default function Page() {
 
 			<div class="lg-px-30 pt-10 pb-20 px-4 w-full flex flex-col flex-justify-center">
 				<AnimatedComponentSlide>
-					<h2>Нашият магазин</h2>
+					<h2 class="important-mb-0">Нашият магазин</h2>
+					<img class="mx-auto pt-2 pb-15 flex flex-justify-center" src="/assets/heading-ic.png" />
 				</AnimatedComponentSlide>
 				<div class="flex flex-wrap flex-justify-center lg-gap-5 gap-15">
 					<AnimatedComponentSlide class="flex lg-w-23% max-w-full relative overflow-hidden " style="flex: 0 0 auto;">

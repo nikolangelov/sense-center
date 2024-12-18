@@ -103,13 +103,21 @@ h1 {
 
 @media (max-width: 900px) {
   h1 {
-    font-size: 75px !important;
+    font-size: 70px !important;
     line-height: 80px !important;
     font-weight: 900;
     letter-spacing: 1px;
   }
 }
 
+@media (max-width: 350px) {
+  h1 {
+    font-size: 55px !important;
+    line-height: 70px !important;
+    font-weight: 900;
+    letter-spacing: 1px;
+  }
+}
 
 h2 {
   font-weight: 700;
@@ -161,7 +169,7 @@ html::-webkit-scrollbar-thumb {
 }
 
 .hamburger .open:nth-child(1) {
-  transform: rotate(42deg);
+  transform: rotate(37deg);
 }
 
 .hamburger .open:nth-child(2) {
@@ -169,7 +177,7 @@ html::-webkit-scrollbar-thumb {
 }
 
 .hamburger .open:nth-child(3) {
-  transform: rotate(-42deg);
+  transform: rotate(-37deg);
 }
 
 @media (min-width: 900px) {
