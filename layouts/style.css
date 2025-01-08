@@ -97,7 +97,7 @@ h1 {
   margin: 3rem 0;
   font-weight: 600 !important;
   font-size: 115px;
-  line-height: 116px;
+  line-height: 136px;
   letter-spacing: 0.6px;
 }
 
@@ -206,4 +206,20 @@ html::-webkit-scrollbar-thumb {
 .animate-slide.animate {
   opacity: 1;
   transform: translateX(0); /* Moves to the original position */
+}
+
+.desktop-menu-item:after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 0;
+  content: '';
+  background: #d19d64;
+  height: 2px;
+  transition: all 0.3s;
+}
+
+.desktop-menu-item:hover:after {
+  width: 100%;
 }

@@ -1,20 +1,10 @@
 import 'uno.css'
 import "./style.css";
 import { children, createEffect, createSignal, JSX, onCleanup, onMount, Show } from "solid-js";
-import MdiVacuum from '~icons/mdi/vacuum';
-import RiMoneyPoundCircleLine from '~icons/ri/money-pound-circle-line';
-import MdiAccountGroupOutline from '~icons/mdi/account-group-outline';
-import MdiPlaceOutline from '~icons/mdi/place-outline';
-import MdiEmailEditOutline from '~icons/mdi/email-edit-outline';
-import MdiPhoneOutline from '~icons/mdi/phone-outline';
-import MdiCommentAccountOutline from '~icons/mdi/comment-account-outline';
-import MdiBookOpenPageVariantOutline from '~icons/mdi/book-open-page-variant-outline';
 import RiArrowDropUpFill from '~icons/ri/arrow-drop-up-fill?width=192px&height=192px';
 import MdiDot from '~icons/mdi/dot?width=192px&height=192px';
 import RiFacebookFill from '~icons/ri/facebook-fill?width=192px&height=192px';
 import RiInstagramLine from '~icons/ri/instagram-line?width=192px&height=192px';
-import MdiScissors from '~icons/mdi/scissors?width=24px&height=24px';
-import RiScissors2Line from '~icons/ri/scissors-2-line?width=24px&height=24px';
 import RiScissorsLine from '~icons/ri/scissors-line?width=24px&height=24px';
 
 export default function LayoutDefault(props: { children?: JSX.Element }) {
@@ -35,13 +25,13 @@ export default function LayoutDefault(props: { children?: JSX.Element }) {
           </a>
         </div>
         <div class="flex whitespace-nowrap flex-nowrap flex-justify-end flex-items-end font-semibold gap-5 xl-gap-12 md-pr-10 md-pl-5 xl-pl-10 pr-6 flex-content-center flex-items-center">
-          <MenuItem href="/">Услуги</MenuItem>
+          <MenuItem href="/mazhko-podstrigvane">Услуги</MenuItem>
           <MenuItem href="/">Цени</MenuItem>
           <MenuItem href="/">Отзиви</MenuItem>
           <MenuItem href="/">За нас</MenuItem>
           <MenuItem href="/">Кариери</MenuItem>
           <MenuItem href="/">Магазин</MenuItem>
-          <MenuItem href="/test">Контакти</MenuItem>
+          <MenuItem href="/">Контакти</MenuItem>
         </div>
         <a href="/test#test-id-page" class="hidden lg-block mr-10">
           <button onClick={closeMenu}
@@ -82,25 +72,6 @@ export default function LayoutDefault(props: { children?: JSX.Element }) {
               <RiInstagramLine class="w-10 h-10 bg-brand hover-c-#07111c transition-colors p-1.5 c-paper" />
             </a>
           </div>
-          {/* <h3 class="important-font-size-4.5 md-font-size-4.5 uppercase font-letter tracking-widest mt-0 mb-2 c-paper text-left font-600">Contacts</h3>
-          <div class="flex flex-items-center gap-2">
-            <RiPhoneFill class="w-10 h-10 c-paper" />
-            <div class="flex flex-col line-height-none">
-              <PhoneMailMenuItem href="tel:+44 7874 333 356">+44 7874 333 356</PhoneMailMenuItem>
-              <PhoneMailMenuItem href="tel:+44 2036 370 033">+44 2036 370 033</PhoneMailMenuItem>
-            </div>
-          </div>
-          <div class="flex flex-items-center gap-2">
-            <MdiEmail class="w-10 h-10 c-paper" />
-            <PhoneMailMenuItem href="mailto:office@finecarpetcleaning.co.uk">office@finecarpetcleaning.co.uk</PhoneMailMenuItem>
-          </div>
-          <div class="flex flex-items-center gap-2">
-            <MdiClock class="w-10 h-10 c-paper" /> 
-            <div class="flex flex-col line-height-none">
-              <div class="c-paper font-normal lg-font-size-4 md-font-size-4 font-size-4.5 font-sans line-height-6">Monday - Friday: <strong>7:30 - 19:00</strong></div>
-              <div class="c-paper font-normal lg-font-size-4 md-font-size-4 font-size-4.5 font-sans line-height-6">Saturday & Sunday: <strong>9:00 - 18:00</strong></div>
-            </div>
-          </div> */}
         </div>
       </MainFooter>
       <BottomFooter>
@@ -118,7 +89,7 @@ export default function LayoutDefault(props: { children?: JSX.Element }) {
 }
 
 function MenuItem(props: { href: string, children: JSX.Element }) {
-  return <a href={props.href} style="font-family: 'Oswald', sans-serif !important; letter-spacing: 0.5px;" class="py-6 dropdown hidden font-ui lg-flex c-paper text-center font-size-5 uppercase font-sans hover-c-brand-hover:hover tracking-wide font-500 transition-colors">{props.children}</a>
+  return <a href={props.href} style="font-family: 'Oswald', sans-serif !important; letter-spacing: 0.5px;" class="relative py-2 dropdown hidden font-ui lg-flex c-paper text-center font-size-5 uppercase font-sans hover-c-brand-hover:hover tracking-wide font-500 transition-all desktop-menu-item">{props.children}</a>
 }
 
 const CurrentYear = () => {

@@ -4,154 +4,149 @@ import { VideoPlayer } from '../../components/VideoPlayer';
 import { GallerySlider } from '../../components/GallerySlider';
 import { AnimatedComponent } from '../../components/AnimateOnView';
 import { AnimatedComponentSlide } from '../../components/AnimateOnViewSlide';
+import { ElementInOftenOT, OftenOT } from '../../components/OftenOT';
 import MdiBank from '~icons/mdi/bank';
 import MdiPhoneClassic from '~icons/mdi/phone-classic';
 import RiTimerFill from '~icons/ri/timer-fill';
+import MdiProgressClock from '~icons/mdi/progress-clock?width=24px&height=24px';
 
 export default function Page() {
 	return (
 		<>
-			<div style="background-position: center top; background-repeat: no-repeat; background-size: cover; height: auto;"><div style="background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5) ), url(/assets/23.jpg); background-position: center top; background-repeat: no-repeat; background-size: cover;" class="h-100vh"></div></div>
+			<div style="background-position: center top; background-repeat: no-repeat; background-size: cover; height: auto;"><div style="background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5) ), url(/assets/23.jpg); background-position: center top; background-repeat: no-repeat; background-size: cover;" class="h-110vh"></div></div>
 
 			<div class="w-full bg-#212528">
 				<div class="max-w-1240px mx-auto">
 					<div class="flex flex-justify-center">
-						<div class="left-0 right-0 px-3 my-0 mx-auto absolute top-45% lg-top-50% text-center w-full max-w-700px" style="-webkit-transform: translateY(-50%);">
+						<div class="left-0 right-0 px-3 my-0 mx-auto absolute top-45% lg-top-55% text-center w-full max-w-700px" style="-webkit-transform: translateY(-50%);">
 							<AnimatedComponent>
-								<h1 class="uppercase c-paper mb-6">The Barber Shop Sofia</h1>
+								<h1 class="uppercase c-paper mb-6 text-center">Мъжко подстригване</h1>
 							</AnimatedComponent>
-							<AnimatedComponent class="important-delay-300 c-paper text-center mb-0 font-size-4.5 lg-font-size-5">Само за мъже.<br></br>За добре прекарано време или за добре загубено време.</AnimatedComponent>
+							<AnimatedComponent><p class="important-delay-300 c-paper text-center pt-10">В The Barber Shop не просто подстригваме. Предлагаме Ви преживяване, което съчетава удобство, майсторство и прецизност. С помощта на нашите бръснари ще определим стил на мъжкото подстригване, който не само подхожда на чертите Ви, но и отразява кой сте Вие.</p>
+								<p class="important-delay-500 c-paper text-center">Нашата цел е да видите в огледалото мъж, който изглежда точно толкова добре, колкото се чувства.</p></AnimatedComponent>
 						</div>
-
-						<AnimatedComponent class="important-delay-600 float-left pr-5px relative text-center lg--top-170px -top-180px w-100% max-w-1240px" style="border: 2px solid rgba(255, 255, 255, 0.5);">
-							<div class="w-33.333% float-left">
-								<div class="float-left w-full py-25px">
-									<div class="flex flex-col flex-justify-center flex-items-center gap-2">
-										<MdiBank class="font-size-5.2 c-brand" />
-										<div class="relative min-h-1px px-8px lg-px-15px c-paper flex text-center flex-justify-center font-size-5 lg-font-size-5.2" style="font-family: 'Oswald', sans-serif !important;">
-											София, ул. "Николай Хайтов" 2
-										</div>
-									</div>
-								</div>
-							</div>
-
-							<div class="w-33.333% float-left">
-								<div class="float-left w-full py-25px" style="border-left: 2px solid rgba(255, 255, 255, 0.5); border-right: 2px solid rgba(255, 255, 255, 0.5)">
-									<div class="flex flex-col flex-justify-center flex-items-center gap-2">
-										<RiTimerFill class="font-size-5.7 c-brand" />
-										<div class="relative min-h-1px px-8px lg-px-15px c-paper flex text-center flex-justify-center font-size-5 lg-font-size-5.2" style="font-family: 'Oswald', sans-serif !important;">
-											Понеделник - Петък: 09.00 - 17.00
-										</div>
-									</div>
-								</div>
-							</div>
-
-							<div class="w-33.333% float-left">
-								<div class="float-left w-full py-25px">
-									<div class="flex flex-col flex-justify-center flex-items-center gap-2">
-										<MdiPhoneClassic class="font-size-5.7 c-brand" />
-										<div class="relative min-h-1px px-8px lg-px-15px c-paper text-center flex flex-col lg-flex-row flex-justify-center font-size-4.5 lg-font-size-4.8" style="font-family: 'Oswald', sans-serif !important;">
-											<div class="c-paper text-center flex flex-justify-center font-size-4.5 lg-font-size-4.8" style="font-family: 'Oswald', sans-serif !important;">
-												Телефон:
-											</div>
-											<div class="lg-px-15px c-paper text-center flex flex-justify-center font-size-5 lg-font-size-5.2" style="font-family: 'Oswald', sans-serif !important;">
-												0882 820 331
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</AnimatedComponent>
 					</div>
 				</div>
 			</div>
 
 			<div class="pt-10 pb-10 lg--mt-30 -mt-45" style="background-image: url(/assets/bg-2.jpg); background-position: center; background-repeat: no-repeat; background-size: cover;">
-				<div class="lg-mt-0 lg-px-30 pb-10 max-w-1600px mx-auto flex lg-flex-row flex-col gap-8 lg-gap-20">
+				<h2 class="c-paper text-center important-mb-0">Бръснарница от класа</h2>
+				<img class="mx-auto pt-2 mb-15 flex flex-justify-center" src="/assets/heading-ic.png" />
+				<div class="lg-mt-0 lg-px-30 pb-10 max-w-1600px mx-auto flex lg-flex-row flex-col gap-6 lg-gap-20 flex-items-center">
 					<AnimatedComponentSlide class="lg-w-50% px-5">
-						<h2 class="c-paper text-left mb-7 pl-0">Бръснарница от класа</h2>
-						<div class="text-center h-1px w-150px bg-brand text-left mb-10"></div>
-						<div class="flex flex-col gap-5">
-							<div class="c-paper">
-								<span class="c-brand  font-900" style="font-family: 'Roboto'">The Barber Shop Sofia</span> е нещо повече от просто бръснарница. Нашият барбър шоп се намира в квартал Изток, София на удобна и лесно достъпна локация в близост до ключови транспортни връзки и зелени градски зони.
-							</div>
-							<div class="c-paper">
-								<span class="c-brand font-900" style="font-family: 'Roboto'">The Barber Shop Sofia</span> е премиум бръснарница, където майсторството се преплита с вниманието към детайла, за да Ви осигури отлично ниво на комфорт и стил. Нашата мисия е да създадем цялостно ексклузивно преживяване за истински мъже.
-							</div>
+						<div class="flex flex-col gap-5 c-paper">
+							1. Посрещане с усмивка и освежаваща напитка.<br></br>
+							2. Настаняване на бръснарския стол.<br></br>
+							3. Консултация относно желания стил на мъжко подстригване и стилизиране.<br></br>
+							4. Подстригване спрямо Вашите черти и изисквания.<br></br>
+							5. Измиване на косата с професионален шампоан и балсам.
 						</div>
 					</AnimatedComponentSlide>
 
-					<AnimatedComponentSlide class="lg-w-50% pr-5 pl-5 lg-pl-0">
-						<h2 class="c-paper text-left mb-7 pl-0">Стил и комфорт в едно</h2>
-						<div class="text-center h-1px w-150px bg-brand text-left mb-10"></div>
-						<ul class="c-paper ml--5">
-							<li>Безплатно паркиране → бръснарница с място за паркиране</li>
-							<li>Топло посрещане с безплатно питие</li>
-							<li>Приятна и уютна атмосфера</li>
-							<li>Усещане за принадлежност към мъжка общност</li>
-							<li>Съчетание на традиционни техники с модерни подходи</li>
-						</ul>
+					<AnimatedComponentSlide class="lg-w-50% pr-5 pl-5 lg-pl-0 flex-self-start">
+						<div class="flex flex-col gap-5 c-paper">
+							6. Изсушаване на косата със сешоар.<br></br>
+							7. Оформяне и стилизиране на прическата с премиум козметика.<br></br>
+							8. Представяне на повече информация относно предимствата от използваните продукти по време на мъжкото подстригване.<br></br>
+							9. Перфектна визия и повишено самочувствие.
+						</div>
 					</AnimatedComponentSlide>
 				</div>
 			</div>
 
-			<div class="lg-px-30 pt-10 pb-20 px-4 w-full">
+			<section class="lg-pb-25 pb-20 pt-10">
+				<AnimatedComponent>
+					<h2 class="important-mb-0">Видео</h2>
+					<img class="mx-auto pt-2 mb-15 lg-mb--5 flex flex-justify-center" src="/assets/heading-ic.png" />
+				</AnimatedComponent>
+				<AnimatedComponent>
+					<VideoPlayer src='https://www.youtube.com/embed/e2x0UXVU2yg?enablejsapi=1&mute=1' />
+				</AnimatedComponent>
+			</section>
+
+			<div class="pt-10 lg-pb-20 pb-15" style="background-image: url(/assets/bg-2.jpg); background-position: center; background-repeat: no-repeat; background-size: cover;">
+				<h2 class="c-paper text-center mb-7 important-mb-0">Бръснарница от класа</h2>
+				<img class="mx-auto pt-2 mb-15 flex flex-justify-center" src="/assets/heading-ic.png" />
+				<div class="lg-mt-0 lg-px-30 pb-10 max-w-1600px mx-auto flex lg-flex-row flex-col gap-6 lg-gap-20 flex-items-center">
+					<AnimatedComponentSlide class="lg-w-50% px-5 gap-15 flex flex-col">
+						<div class="flex flex-col">
+							<div class="flex flex-justify-between b-b-solid b-1px b-gray-500 pb-1">
+								<div class="font-size-6 uppercase c-paper text-left" style="font-family: 'Oswald', sans-serif !important;">Natural Grey Coverage</div>
+								<div class="c-brand font-size-6 uppercase font-500" style="font-family: 'Oswald', sans-serif !important;">12 лв.</div>
+							</div>
+							<div class="c-gray-400 font-size-4 pt-3">Тониране на сиви коси, които придават естествен и младежки вид.</div>
+						</div>
+
+						<div class="flex flex-col">
+							<div class="flex flex-justify-between b-b-solid b-1px b-gray-500 pb-1">
+								<div class="font-size-6 uppercase c-paper text-left" style="font-family: 'Oswald', sans-serif !important;">Natural Grey Coverage</div>
+								<div class="c-brand font-size-6 uppercase font-500" style="font-family: 'Oswald', sans-serif !important;">12 лв.</div>
+							</div>
+							<div class="c-gray-400 font-size-4 pt-3">Тониране на сиви коси, които придават естествен и младежки вид.</div>
+						</div>
+
+						<div class="flex flex-col">
+							<div class="flex flex-justify-between b-b-solid b-1px b-gray-500 pb-1">
+								<div class="font-size-6 uppercase c-paper text-left" style="font-family: 'Oswald', sans-serif !important;">Natural Grey Coverage</div>
+								<div class="c-brand font-size-6 uppercase font-500" style="font-family: 'Oswald', sans-serif !important;">12 лв.</div>
+							</div>
+							<div class="c-gray-400 font-size-4 pt-3">Тониране на сиви коси, които придават естествен и младежки вид.</div>
+						</div>
+
+						<div class="flex flex-col">
+							<div class="flex flex-justify-between b-b-solid b-1px b-gray-500 pb-1">
+								<div class="font-size-6 uppercase c-paper text-left" style="font-family: 'Oswald', sans-serif !important;">Natural Grey Coverage</div>
+								<div class="c-brand font-size-6 uppercase font-500" style="font-family: 'Oswald', sans-serif !important;">12 лв.</div>
+							</div>
+							<div class="c-gray-400 font-size-4 pt-3">Тониране на сиви коси, които придават естествен и младежки вид.</div>
+						</div>
+					</AnimatedComponentSlide>
+
+					<AnimatedComponentSlide class="lg-w-50% pr-5 pl-5 lg-pl-0 flex-self-start gap-15 flex flex-col">
+						<div class="flex flex-col">
+							<div class="flex flex-justify-between b-b-solid b-1px b-gray-500 pb-1">
+								<div class="font-size-6 uppercase c-paper text-left" style="font-family: 'Oswald', sans-serif !important;">Natural Grey Coverage</div>
+								<div class="c-brand font-size-6 uppercase font-500" style="font-family: 'Oswald', sans-serif !important;">12 лв.</div>
+							</div>
+							<div class="c-gray-400 font-size-4 pt-3">Тониране на сиви коси, които придават естествен и младежки вид.</div>
+						</div>
+
+						<div class="flex flex-col">
+							<div class="flex flex-justify-between b-b-solid b-1px b-gray-500 pb-1">
+								<div class="font-size-6 uppercase c-paper text-left" style="font-family: 'Oswald', sans-serif !important;">Natural Grey Coverage</div>
+								<div class="c-brand font-size-6 uppercase font-500" style="font-family: 'Oswald', sans-serif !important;">12 лв.</div>
+							</div>
+							<div class="c-gray-400 font-size-4 pt-3">Тониране на сиви коси, които придават естествен и младежки вид.</div>
+						</div>
+
+						<div class="flex flex-col">
+							<div class="flex flex-justify-between b-b-solid b-1px b-gray-500 pb-1">
+								<div class="font-size-6 uppercase c-paper text-left" style="font-family: 'Oswald', sans-serif !important;">Natural Grey Coverage</div>
+								<div class="c-brand font-size-6 uppercase font-500" style="font-family: 'Oswald', sans-serif !important;">12 лв.</div>
+							</div>
+							<div class="c-gray-400 font-size-4 pt-3">Тониране на сиви коси, които придават естествен и младежки вид.</div>
+						</div>
+
+						<div class="flex flex-col">
+							<div class="flex flex-justify-between b-b-solid b-1px b-gray-500 pb-1">
+								<div class="font-size-6 uppercase c-paper text-left" style="font-family: 'Oswald', sans-serif !important;">Natural Grey Coverage</div>
+								<div class="c-brand font-size-6 uppercase font-500" style="font-family: 'Oswald', sans-serif !important;">12 лв.</div>
+							</div>
+							<div class="c-gray-400 font-size-4 pt-3">Тониране на сиви коси, които придават естествен и младежки вид.</div>
+						</div>
+					</AnimatedComponentSlide>
+				</div>
+
 				<AnimatedComponentSlide>
-					<h2 class="important-mb-0">Нашите услуги</h2>
-					<img class="mx-auto pt-2 pb-15 flex flex-justify-center" src="/assets/heading-ic.png" />
+					<div class="flex w-full px-20px lg-px-50px py-10 max-w-1320px mx-auto flex-justify-between flex-items-center b-solid b-2px b-gray-500 flex mt-8 hover-b-paper hover-bg-black transition-colors important-transition-duration-300">
+						<div class="c-paper font-size-6 flex flex-items-center" style="font-family: 'Oswald', sans-serif !important;">
+							<MdiProgressClock class="flex flex-self-center mr-2 w-7 h-7 c-brand" />Работно време: Понеделник - Петък: 09.00 - 17.00
+						</div>
+						<div class="flex flex-col flex-items-center flex-self-center">
+							<a href="/" class="bg-brand c-black b-solid b-2px b-brand uppercase font-size-4 font-500 px-7 py-2 hover-c-paper transition-colors" style="font-family: 'Oswald', sans-serif !important; letter-spacing: 1px;">Вижте повече</a>
+						</div>
+					</div>
 				</AnimatedComponentSlide>
-				<div class="flex flex-wrap flex-justify-center lg-gap-5 gap-15">
-					<AnimatedComponentSlide class="flex lg-w-23% max-w-full relative overflow-hidden " style="flex: 0 0 auto;">
-						<img class="w-full h-auto" src="/assets/about3.jpg" alt="" />
-						<div class="w-full p-20px absolute bottom-0px text-center" style="background: -webkit-linear-gradient(top, transparent 0, rgba(0, 0, 0, .01) 1%, rgba(0, 0, 0, .95) 80%);">
-							<div class="flex flex-col gap-1">
-								<h4 class="c-paper relative font-size-27px mb-20px">
-									Hair Cut
-								</h4>
-								<div class="text-center h-1px w-60px bg-brand mx-auto mb-20px"></div>
-								<a href="/" class="bg-none c-paper b-solid b-1px b-paper hover-b-brand hover-bg-brand transition-colors mx-auto uppercase font-size-4 font-500 px-7 py-2" style="font-family: 'Oswald', sans-serif !important; letter-spacing: 1px;">Вижте повече</a>
-							</div>
-						</div>
-					</AnimatedComponentSlide>
-
-					<AnimatedComponentSlide class="flex lg-w-23% max-w-full relative overflow-hidden" style="flex: 0 0 auto;">
-						<img class="w-full h-auto" src="/assets/about3.jpg" alt="" />
-						<div class="w-full p-20px absolute bottom-0px text-center" style="background: -webkit-linear-gradient(top, transparent 0, rgba(0, 0, 0, .01) 1%, rgba(0, 0, 0, .95) 80%);">
-							<div class="flex flex-col gap-1">
-								<h4 class="c-paper relative font-size-27px mb-20px">
-									Hair Cut
-								</h4>
-								<div class="text-center h-1px w-60px bg-brand mx-auto mb-20px"></div>
-								<a href="/" class="bg-none c-paper b-solid b-1px b-paper hover-b-brand hover-bg-brand transition-colors mx-auto uppercase font-size-4 font-500 px-7 py-2" style="font-family: 'Oswald', sans-serif !important; letter-spacing: 1px;">Вижте повече</a>
-							</div>
-						</div>
-					</AnimatedComponentSlide>
-
-					<AnimatedComponentSlide class="flex lg-w-23% max-w-full relative overflow-hidden" style="flex: 0 0 auto;">
-						<img class="w-full h-auto" src="/assets/about3.jpg" alt="" />
-						<div class="w-full p-20px absolute bottom-0px text-center" style="background: -webkit-linear-gradient(top, transparent 0, rgba(0, 0, 0, .01) 1%, rgba(0, 0, 0, .95) 80%);">
-							<div class="flex flex-col gap-1">
-								<h4 class="c-paper relative font-size-27px mb-20px">
-									Hair Cut
-								</h4>
-								<div class="text-center h-1px w-60px bg-brand mx-auto mb-20px"></div>
-								<a href="/" class="bg-none c-paper b-solid b-1px b-paper hover-b-brand hover-bg-brand transition-colors mx-auto uppercase font-size-4 font-500 px-7 py-2" style="font-family: 'Oswald', sans-serif !important; letter-spacing: 1px;">Вижте повече</a>
-							</div>
-						</div>
-					</AnimatedComponentSlide>
-				</div>
-			</div>
-
-			<div style="background-image: url(/assets/bg-2.jpg); background-position: center; background-repeat: no-repeat; background-size: cover;">
-				<div class="lg-mt-10 lg-pb-30 pb-20 pt-10">
-					<AnimatedComponent>
-						<h2 class="c-paper important-mb-0">Видео</h2>
-						<img class="mx-auto pt-2 mb-15 lg-mb--5 flex flex-justify-center" src="/assets/heading-ic.png" />
-					</AnimatedComponent>
-					<AnimatedComponent>
-						<VideoPlayer src='https://www.youtube.com/embed/e2x0UXVU2yg?enablejsapi=1&mute=1' />
-					</AnimatedComponent>
-				</div>
 			</div>
 
 			<section class="lg-pb-25 pb-20 pt-10">
@@ -221,6 +216,41 @@ export default function Page() {
 					</AnimatedComponent>
 				</div>
 			</div>
+
+			<section class="lg-pb-25 pb-20 pt-10">
+				<AnimatedComponent>
+					<h2 class="important-mb-0">Често поръчвани заедно</h2>
+					<img class="mx-auto pt-2 pb-15 flex flex-justify-center" src="/assets/heading-ic.png" />
+				</AnimatedComponent>
+
+				<OftenOT>
+					<ElementInOftenOT
+						title="Hot Towel Shave"
+						desc="Класическо мокро бръснене е ритуал в The Barber Shop Sofia, който е много повече от грижа – той е чиста проба удоволствие за един мъж. [1ч.]"
+					/>
+
+					<ElementInOftenOT
+						title="Hot Towel Shave"
+						desc="Класическо мокро бръснене е ритуал в The Barber Shop Sofia, който е много повече от грижа – той е чиста проба удоволствие за един мъж. [1ч.]"
+					/>
+
+					<ElementInOftenOT
+						title="Hot Towel Shave"
+						desc="Класическо мокро бръснене е ритуал в The Barber Shop Sofia, който е много повече от грижа – той е чиста проба удоволствие за един мъж. [1ч.]"
+					/>
+
+					<ElementInOftenOT
+						title="Hot Towel Shave"
+						desc="Класическо мокро бръснене е ритуал в The Barber Shop Sofia, който е много повече от грижа – той е чиста проба удоволствие за един мъж. [1ч.]"
+					/>
+				</OftenOT>
+
+				<AnimatedComponent>
+					<div class="flex flex-col flex-items-center pt-10">
+						<a href="/" class="bg-brand c-black b-solid b-2px b-brand uppercase font-size-4 font-500 px-7 py-2 hover-c-paper transition-colors" style="font-family: 'Oswald', sans-serif !important; letter-spacing: 1px;">Вижте повече</a>
+					</div>
+				</AnimatedComponent>
+			</section>
 
 			<section style="background-color: #222222; background-image: url(/assets/bg-2.jpg); background-position: center center; background-repeat: no-repeat; background-size: cover;">
 				<div class="lg-mx-30 mx-auto lg-pt-10 pt-10">
