@@ -20,7 +20,7 @@ export default defineConfig({
 			 {
 				colors: {
 					brand: "#d19d64",
-					"brand-dark": "#09321d",
+					"brand-dark": "#a6753f",
 					"brand-action": "#edb339",
 					"brand-action-hover": "#ebbc59",
 					"brand-second-action": "#228057",

@@ -15,10 +15,10 @@ export const ReviewSlider = ({ children }: { children: JSX.Element | JSX.Element
                         {children}
                     </Slider>
                     <SliderButton class="cursor-pointer position-absolute top-45% left--15 bg-transparent b-none" prev>
-                        <RiPlayReverseMiniLine class="-ml-2 font-size-10 b-solid b-3px p-1 hover-c-paper hover-bg-#d19d64 hover-b-#d19d64 transition-colors" />
+                        <RiPlayReverseMiniLine class="md-ml-14 md-c-brand md-b-brand lg-c-black lg-b-black lg--ml-2 font-size-10 b-solid b-3px p-1 hover-c-paper hover-bg-#d19d64 hover-b-#d19d64 transition-colors" />
                     </SliderButton>
                     <SliderButton class="cursor-pointer position-absolute top-45% right--15 bg-transparent b-none" next>
-                        <RiPlayMiniLine class="-mr-2 font-size-10 b-solid b-3px p-1 hover-c-paper hover-bg-#d19d64 hover-b-#d19d64 transition-colors" />
+                        <RiPlayMiniLine class="md-mr-14 md-c-brand md-b-brand lg-c-black lg-b-black lg--mr-2 font-size-10 b-solid b-3px p-1 hover-c-paper hover-bg-#d19d64 hover-b-#d19d64 transition-colors" />
                     </SliderButton>
                 </div>
             ) : (

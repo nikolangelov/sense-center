@@ -15,6 +15,7 @@ export default function LayoutDefault(props: { children?: JSX.Element }) {
   const handleMouseEnter = () => setIsMenuOpen(true);
   const handleMouseLeave = () => setIsMenuOpen(false);
   const closeMenu = () => setIsMenuOpen(false);
+  const [menuOpen, setMenuOpen] = createSignal(false);
 
   return (
     <div class="flex flex-col">
@@ -24,11 +25,20 @@ export default function LayoutDefault(props: { children?: JSX.Element }) {
             <img src="/assets/the-barber-shop-logo1000-x-400-px.webp" class="lg-w-30 w-20 lg-ml-10 lg-mt-4" alt="the-barber-shop-logo" />
           </a>
         </div>
-        <div class="flex whitespace-nowrap flex-nowrap flex-justify-end flex-items-end font-semibold gap-5 xl-gap-12 md-pr-10 md-pl-5 xl-pl-10 pr-6 flex-content-center flex-items-center">
-          <MenuItem href="/mazhko-podstrigvane">Услуги</MenuItem>
+
+        <div class="flex whitespace-nowrap justify-end items-center font-semibold gap-5 xl:gap-12 md:pr-10 md:pl-5 xl:pl-10 pr-6">
+          <div
+            class="relative"
+            onMouseEnter={() => setMenuOpen(true)}
+            onMouseLeave={() => setMenuOpen(false)}
+          >
+            <ServiceMenuItem href="/uslugi">Услуги</ServiceMenuItem>
+            <DropDownMenuDesktop isVisible={menuOpen()} />
+          </div>
+
           <MenuItem href="/">Цени</MenuItem>
           <MenuItem href="/">Отзиви</MenuItem>
-          <MenuItem href="/">За нас</MenuItem>
+          <MenuItem href="/za-nas/kris">За нас</MenuItem>
           <MenuItem href="/">Кариери</MenuItem>
           <MenuItem href="/">Магазин</MenuItem>
           <MenuItem href="/">Контакти</MenuItem>
@@ -88,6 +98,39 @@ export default function LayoutDefault(props: { children?: JSX.Element }) {
   );
 }
 
+function ServiceMenuItem(props: { href: string; children: any }) {
+  return (
+    <a
+      href={props.href}
+      class="relative dropdown font-ui hidden lg-flex c-paper text-center font-size-5 uppercase font-sans hover:c-brand-hover tracking-wide font-500 transition-all desktop-menu-item"
+      style="font-family: 'Oswald', sans-serif; letter-spacing: 0.5px;"
+    >
+      {props.children}
+    </a>
+  );
+}
+
+function DropdownMenuItem(props: { href: string; children: any }) {
+  return (
+    <a href={props.href} class="flex justify-center items-center p-2 hover:bg-gray-100">
+      <div class="text-center uppercase font-sans tracking-wide font-700 leading-normal">
+        {props.children}
+      </div>
+    </a>
+  );
+}
+
+function DropDownMenuDesktop(props: { isVisible: boolean }) {
+  return (
+    <div
+      class={`absolute top-full left-0 w-48 bg-white shadow-lg z-10 py-4 px-5 rounded-lg transition-all duration-300 ease-out ${props.isVisible ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-4 invisible"
+        }`}
+    >
+      <DropdownMenuItem href="/mazhko-podstrigvane">МЪЖКО ПОДСТРИГВАНЕ</DropdownMenuItem>
+    </div>
+  );
+}
+
 function MenuItem(props: { href: string, children: JSX.Element }) {
   return <a href={props.href} style="font-family: 'Oswald', sans-serif !important; letter-spacing: 0.5px;" class="relative py-2 dropdown hidden font-ui lg-flex c-paper text-center font-size-5 uppercase font-sans hover-c-brand-hover:hover tracking-wide font-500 transition-all desktop-menu-item">{props.children}</a>
 }
@@ -120,15 +163,13 @@ function Topbar(props: { children: JSX.Element }) {
 
   return (
     <div
-      class={`h-${isScrolled() ? "92px" : "172px"} w-full z-3 fixed top-0 flex-content-center ${isScrolled() ? "lg-p-0px" : "lg-p-40px"} p-0px transition-all duration-300 ease-in-out ${
-        isScrolled() ? "bg-#14100c" : "bg-transparent"
-      }`}
+      class={`h-${isScrolled() ? "92px" : "172px"} w-full z-3 fixed top-0 flex-content-center ${isScrolled() ? "lg-p-0px" : "lg-p-40px"} p-0px transition-all duration-300 ease-in-out ${isScrolled() ? "bg-#14100c" : "bg-transparent"
+        }`}
     >
       <div
         style={`${isScrolled() ? "border-bottom: none;" : "border-bottom-color: rgba(255, 255, 255, 0.1);"} `}
-        class={`header-border block lg-b-rd-4px lg-b-#dedede lg-b-2px border-b-solid border-b-1px ${isScrolled() ? "lg-b-none" : "lg-b-solid"} w-full relative line-height-92px ${
-          isScrolled() ? "h-72px" : "h-92px"
-        } bg-${isScrolled() ? "#333" : "#fff"} text-${isScrolled() ? "#fff" : "#000"}`}
+        class={`header-border block lg-b-rd-4px lg-b-#dedede lg-b-2px border-b-solid border-b-1px ${isScrolled() ? "lg-b-none" : "lg-b-solid"} w-full relative line-height-92px ${isScrolled() ? "h-72px" : "h-92px"
+          } bg-${isScrolled() ? "#333" : "#fff"} text-${isScrolled() ? "#fff" : "#000"}`}
       >
         <div class="mx-auto max-w-full flex flex-justify-between flex-items-center h-full">
           {props.children}
@@ -178,17 +219,17 @@ function HamburgerMenu() {
     <div class="lg-hidden flex flex-content-center flex-items-center flex-justify-between w-full">
       <div class="flex flex-items-center flex-justify-center lg-pl-4 pl-0 z-99">
         <a href="/" onClick={closeMenu}>
-          <img src="/assets/the-barber-shop-logo1000-x-400-px.webp" class="w-27 ml--2 mt-4" alt="fine-carpet-cleaning-logo" />
+          <img src="/assets/The Barber Shop (2).png" class="w-23 ml--5 mr--4 mt-4" alt="fine-carpet-cleaning-logo" />
         </a>
       </div>
       <a href="/test">
         <button onClick={closeMenu}
-          class="cursor-pointer bg-#d19d64 c-black b-solid b-2px b-#d19d64 uppercase font-size-4 font-500 px-7 py-2 hover-c-paper transition-colors b-rd-3px block lg-hidden" style="font-family: 'Oswald', sans-serif !important; letter-spacing: 1px;"
+          class="cursor-pointer bg-#d19d64 c-black b-solid b-2px b-#d19d64 uppercase font-size-3.5 font-500 px-7 py-2 hover-c-paper transition-colors b-rd-3px block lg-hidden" style="font-family: 'Oswald', sans-serif !important; letter-spacing: 0.2px;"
         >
           Запазете час
         </button>
       </a>
-      <div class="ml-10 md-mr-10">
+      <div class="ml-6 md-mr-10">
         <input type="checkbox" id="menu-checkbox" class="hidden" />
         <label
           id="burger-menu"
@@ -293,7 +334,7 @@ function BottomFooter(props: { children: JSX.Element }) {
 function BackToTopButton(props: { onClick: JSX.EventHandlerUnion<HTMLButtonElement, MouseEvent> | undefined; children: number | boolean | Node | JSX.ArrayElement | (string & {}) | null | undefined; }) {
   return (
     <button
-      class="flex items-center justify-between cursor-pointer b-solid b-2px c-brand hover-c-#b56b1b b-brand hover-b-#b56b1b bg-transparent w-12 h-12 b-rd-50% transition-colors"
+      class="flex items-center justify-between cursor-pointer b-solid b-2px c-brand hover-c-#b56b1b b-brand hover-b-#b56b1b bg-transparent md-w-12 md-h-12 w-10 h-10 b-rd-50% transition-colors"
       onClick={props.onClick}
     >
       {props.children}
@@ -324,7 +365,7 @@ function BackToTopArrow() {
   };
 
   return (
-    <div class="block z-99 position-fixed right-4 bottom-4"
+    <div class="block z-99 position-fixed right-2 bottom-2 md-right-4 md-bottom-4"
       classList={{
         'back-to-top-arrow': true,
         'visible': isVisible(),
