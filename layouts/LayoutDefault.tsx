@@ -55,26 +55,61 @@ export default function LayoutDefault(props: { children?: JSX.Element }) {
       <Content>{childrenMemo()}</Content>
       <BackToTopArrow></BackToTopArrow>
       <MainFooter>
-        <div class="flex flex-col gap-5 flex-wrap line-height-0 my-5 mx-auto w-full">
-          <div class="w-full flex flex-jusify-center">
-            <img class="mx-auto w-70% md-w-30%" src="/assets/the-barber-shop-logo1000-x-400-px.webp" alt="thebarbershop-logo" />
+        <div class="flex flex-col gap-5 flex-wrap line-height-0 mb-5 mx-auto w-full bg-#14100c rounded-b-[30px] border" style="background-image: linear-gradient(30deg,#14100c 50%,rgba(255, 191, 52, 0.25) 100%);">
+          <div class="flex flex-justify-evenly mx-30 pb-10 pt-30">
+            <div class="flex flex-col flex-justify-start flex-items-center py-2 md-gap-0 gap-1">
+              <h3 class="c-brand font-600 mt-0 uppercase">Най-популярните ни услуги</h3>
+              <MainFooterMenuItem href="/">Мъжко подстригване</MainFooterMenuItem>
+              <div>
+                <MdiDot class="w-4 c-paper pt-2px mx-5 md-block hidden" />
+              </div>
+              <MainFooterMenuItem href="/">Оформяне на брада</MainFooterMenuItem>
+              <div>
+                <MdiDot class="w-4 c-paper pt-2px mx-5 md-block hidden" />
+              </div>
+              <MainFooterMenuItem href="/">Комбо</MainFooterMenuItem>
+              <div>
+                <MdiDot class="w-4 c-paper pt-2px mx-5 md-block hidden" />
+              </div>
+              <MainFooterMenuItem href="/">Тониране</MainFooterMenuItem>
+            </div>
+
+            <div class="flex flex-col flex-justify-start flex-items-center py-2 md-gap-0 gap-1 " style="border-right-color: rgba(255, 255, 255, 0.12); border-left-color: rgba(255, 255, 255, 0.2);">
+              <h3 class="c-brand font-600 mt-0 uppercase">Полезни връзки</h3>
+              <MainFooterMenuItem href="/">Магазин</MainFooterMenuItem>
+              <div>
+                <MdiDot class="w-4 c-paper pt-2px mx-5 md-block hidden" />
+              </div>
+              <MainFooterMenuItem href="/">Контакти</MainFooterMenuItem>
+              <div>
+                <MdiDot class="w-4 c-paper pt-2px mx-5 md-block hidden" />
+              </div>
+              <MainFooterMenuItem href="/">Кариери</MainFooterMenuItem>
+              <div>
+                <MdiDot class="w-4 c-paper pt-2px mx-5 md-block hidden" />
+              </div>
+              <MainFooterMenuItem href="/">За нас</MainFooterMenuItem>
+              <div>
+                <MdiDot class="w-4 c-paper pt-2px mx-5 md-block hidden" />
+              </div>
+              <MainFooterMenuItem href="/">Контакти</MainFooterMenuItem>
+              <div>
+                <div>
+                  <MdiDot class="w-4 c-paper pt-2px mx-5 md-block hidden" />
+                </div>
+              </div>
+              <MainFooterMenuItem href="/">Кариери</MainFooterMenuItem>
+              <div>
+                <MdiDot class="w-4 c-paper pt-2px mx-5 md-block hidden" />
+              </div>
+              <MainFooterMenuItem href="/">За нас</MainFooterMenuItem>
+            </div>
+            <div class="w-500px">
+              <GoogleMapIframe />
+            </div>
           </div>
-          <div class="flex flex-col md-flex-row flex-justify-center flex-items-center my-2 md-gap-0 gap-1">
-            <MainFooterMenuItem href="/">Услуги</MainFooterMenuItem>
-            <MdiDot class="w-4 c-paper pt-2px mx-5 md-block hidden" />
-            <MainFooterMenuItem href="/">Цени</MainFooterMenuItem>
-            <MdiDot class="w-4 c-paper pt-2px mx-5 md-block hidden" />
-            <MainFooterMenuItem href="/">Отзиви</MainFooterMenuItem>
-            <MdiDot class="w-4 c-paper pt-2px mx-5 md-block hidden" />
-            <MainFooterMenuItem href="/">За нас</MainFooterMenuItem>
-            <MdiDot class="w-4 c-paper pt-2px mx-5 md-block hidden" />
-            <MainFooterMenuItem href="/">Кариери</MainFooterMenuItem>
-            <MdiDot class="w-4 c-paper pt-2px mx-5 md-block hidden" />
-            <MainFooterMenuItem href="/">Магазин</MainFooterMenuItem>
-            <MdiDot class="w-4 c-paper pt-2px mx-5 md-block hidden" />
-            <MainFooterMenuItem href="/">Контакти</MainFooterMenuItem>
-          </div>
-          <div class="flex flex-justify-center mt-5 gap-2">
+
+          <div class="flex flex-justify-center pt-12 pb-3 gap-3 b-t-solid b-t-0.5px mx-30" style="border-top-color: rgba(255, 255, 255, 0.12);">
             <a href="/">
               <RiFacebookFill class="w-10 h-10 bg-brand hover-c-#07111c transition-colors p-1.5 c-paper" />
             </a>
@@ -82,21 +117,65 @@ export default function LayoutDefault(props: { children?: JSX.Element }) {
               <RiInstagramLine class="w-10 h-10 bg-brand hover-c-#07111c transition-colors p-1.5 c-paper" />
             </a>
           </div>
+
+          <div class="b-t-solid b-t-0.5px mx-30 py-8" style="border-top-color: rgba(255, 255, 255, 0.12);">
+            <p class="text-center c-paper lg-font-size-4 md-font-size-3 font-size-3.7 font-400 line-height-6 font-sans mb-0">Copyright &copy; <CurrentYear /> TheBarberShop</p>
+            <div class="flex flex-col md-flex-row md-gap-5 flex-items-center flex-justify-center">
+              <BottomFooterMenuItem href="/terms-and-conditions">Общи условия</BottomFooterMenuItem>
+              <div class="hidden md-block c-paper">┃</div>
+              <BottomFooterMenuItem href="/cookie-policy">Политика за поверителност</BottomFooterMenuItem>
+              <div class="hidden md-block c-paper">┃</div>
+              <BottomFooterMenuItem href="/sitemap">Карта на сайта</BottomFooterMenuItem>
+            </div>
+            <div class="flex flex-justify-center">
+              <a class="c-paper hover:c-brand transition-colors font-normal lg-font-size-4 md-font-size-4 font-size-4" href="/sitemap">Cookie Policy</a>
+            </div>
+          </div>
         </div>
       </MainFooter>
-      <BottomFooter>
-        <p class="text-center lg-font-size-4 md-font-size-3 font-size-3.7 font-400 line-height-6 font-sans mb-0">Copyright &copy; <CurrentYear /> Fine Carpet Cleaning London</p>
-        <div class="flex flex-col md-flex-row md-gap-5 flex-items-center flex-justify-center">
-          <BottomFooterMenuItem href="/terms-and-conditions">Terms and conditions</BottomFooterMenuItem>
-          <div class="hidden md-block">┃</div>
-          <BottomFooterMenuItem href="/sitemap">Sitemap</BottomFooterMenuItem>
-          <div class="hidden md-block">┃</div>
-          <BottomFooterMenuItem href="/cookie-policy">Privacy policy</BottomFooterMenuItem>
-        </div>
-      </BottomFooter>
     </div>
   );
 }
+
+function GoogleMapIframe() {
+  const mapSrc = `https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2933.53860479928!2d23.352789!3d42.671132!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40aa85cc743ddfd7%3A0xfdafbdb8cd44f23!2sThe%20Barber%20Shop%20Sofia!5e0!3m2!1sen!2sbg!4v1741095880781!5m2!1sen!2sbg`;
+
+  return (
+    <iframe
+      src={mapSrc}
+      width="100%"
+      height="400"
+      style={{ border: 0 }}
+      loading="lazy"
+      referrerPolicy="no-referrer-when-downgrade"
+    ></iframe>
+  );
+}
+
+function MainFooter(props: { children: JSX.Element }) {
+  return (
+    <div
+      class="flex flex-col flex-justify-center md-flex-justify-center bg-#14100c px-25 pb-12 flex-shrink-0 flex-items-center flex-wrap border-t-solid border-t-1px border-t-brand" style="background-image: url(/assets/12121.png); background-position: center center; background-repeat: no-repeat; background-size: cover; filter: grayscale(0%);">
+      {props.children}
+    </div>
+  );
+}
+
+function BottomFooterMenuItem(props: { href: string, children: JSX.Element }) {
+  return <a href={props.href} class="transition-colors c-paper hover-color-brand:hover font-normal lg-font-size-4 md-font-size-4 font-size-4 lg-py-1 md-py-2 font-sans">{props.children}</a>
+}
+
+function BottomFooter(props: { children: JSX.Element }) {
+  return (
+    <div
+      class="flex-col gap-0 bg-brand py-1 flex-shrink-0 flex-justify-center flex-items-center">
+      {props.children}
+    </div>
+  );
+}
+
+
+
 
 function ServiceMenuItem(props: { href: string; children: any }) {
   return (
@@ -305,30 +384,8 @@ const MyDropdown = (props: { closeMenu: () => void; }) => {
   );
 };
 
-function MainFooter(props: { children: JSX.Element }) {
-  return (
-    <div
-      class="flex flex-col flex-justify-center md-flex-justify-center bg-#14100c lg-p-10 p-6 md-p-5 flex-shrink-0 flex-items-center flex-wrap border-t-solid border-t-1px border-t-brand">
-      {props.children}
-    </div>
-  );
-}
-
 function MainFooterMenuItem(props: { href: string, children: JSX.Element }) {
   return <a href={props.href} class="line-height-7 text-left c-#8a8a8a hover-color-brand:hover font-normal font-size-4 font-sans uppercase important-font-400 transition-colors" style="font-family: 'Oswald', sans-serif">{props.children}</a>
-}
-
-function BottomFooterMenuItem(props: { href: string, children: JSX.Element }) {
-  return <a href={props.href} class="c-paper-inv hover-color-brand-second-action:hover font-normal lg-font-size-4 md-font-size-4 font-size-4 lg-py-1 md-py-2 font-sans">{props.children}</a>
-}
-
-function BottomFooter(props: { children: JSX.Element }) {
-  return (
-    <div
-      class=" flex-col gap-0 bg-brand hidden py-1 flex-shrink-0 flex-justify-center flex-items-center">
-      {props.children}
-    </div>
-  );
 }
 
 function BackToTopButton(props: { onClick: JSX.EventHandlerUnion<HTMLButtonElement, MouseEvent> | undefined; children: number | boolean | Node | JSX.ArrayElement | (string & {}) | null | undefined; }) {
