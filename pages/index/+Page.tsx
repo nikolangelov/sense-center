@@ -379,52 +379,6 @@ export default function Page() {
 					<a href="/" class="bg-brand c-black b-solid b-2px b-brand uppercase font-size-4 font-500 px-7 py-2 hover-c-paper transition-colors" style="font-family: 'Oswald', sans-serif !important; letter-spacing: 1px;">Към магазин</a>
 				</AnimatedComponentSlide>
 			</div> */}
-
-			<div class="" style="background-position: center top; background-repeat: no-repeat; background-size: cover; height: auto;">
-				<div class="px-2 gap-15 lg-h-80vh h-100% lg-py-0 py-15 flex flex-col flex-justify-center flex-items-center" style="background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7) ), url(/assets/20.jpg); background-position: 50% 50% ; background-repeat: no-repeat; background-size: cover;" role="img" aria-label="">
-					<AnimatedComponent class="flex flex-col flex-justify-center">
-						<h2 class="c-paper important-my-0">Свържете се с нас</h2>
-						<img class="mx-auto pt-2" src="/assets/heading-ic.png" />
-					</AnimatedComponent>
-
-					<div class="flex lg-flex-row flex-col lg-gap-0 gap-10 w-full flex-justify-center">
-						<AnimatedComponent class="flex flex-col text-center lg-w-25%">
-							<MdiBank class="c-paper-inv bg-paper b-rd-50% font-size-10 p-2 pl-2.3 mx-auto lg-mb-6 mb-3" />
-							<div class="c-brand mx-auto font-size-4.5 lg-font-size-4.8" style="font-family: 'Oswald', sans-serif !important; letter-spacing: 1px;">
-								Адрес:
-							</div>
-							<div class="c-paper mx-auto font-size-4.5 lg-font-size-4.8" style="font-family: 'Oswald', sans-serif !important; letter-spacing: 1px;">
-								София, ул. "Николай Хайтов" 2
-							</div>
-						</AnimatedComponent>
-
-						<AnimatedComponent class="flex flex-col text-center lg-w-25%">
-							<RiTimerFill class="c-paper-inv bg-paper b-rd-50% font-size-10 p-2 mx-auto lg-mb-6 mb-3" />
-							<div class="c-brand mx-auto font-size-4.5 lg-font-size-4.8" style="font-family: 'Oswald', sans-serif !important; letter-spacing: 1px;">
-								Работно време:
-							</div>
-							<div class="c-paper mx-auto font-size-4.5 lg-font-size-4.8" style="font-family: 'Oswald', sans-serif !important; letter-spacing: 1px;">
-								Понеделник - Петък: 09.00 - 17.00
-							</div>
-						</AnimatedComponent>
-
-						<AnimatedComponent class="flex flex-col text-center lg-w-25%">
-							<MdiPhoneClassic class="c-paper-inv bg-paper b-rd-50% font-size-10 p-2 mx-auto lg-mb-6 mb-3" />
-							<div class="c-brand mx-auto font-size-4.5 lg-font-size-4.8" style="font-family: 'Oswald', sans-serif !important; letter-spacing: 1px;">
-								Телефон:
-							</div>
-							<div class="c-paper mx-auto font-size-4.5 lg-font-size-4.8" style="font-family: 'Oswald', sans-serif !important; letter-spacing: 1px;">
-								0882 820 331
-							</div>
-						</AnimatedComponent>
-					</div>
-
-					<AnimatedComponent class="flex flex-justify-evenly lg-flex-justify-center lg-mt-10 w-full lg-gap-15 max-w-90% lg-max-w-1200px border-t-solid b-paper b-1px pt-16 lg-pt-22">
-						<a href="/" class="text-center w-32 lg-w-42 bg-brand c-black b-solid b-2px b-brand uppercase font-size-4 lg-font-size-5 font-500 py-3 hover-c-paper transition-colors" style="font-family: 'Oswald', sans-serif !important; letter-spacing: 1px;">Услуги</a>
-						<a href="/" class="text-center w-32 lg-w-42 bg-brand c-black b-solid b-2px b-brand uppercase font-size-4 lg-font-size-5 font-500 py-3 hover-c-paper transition-colors" style="font-family: 'Oswald', sans-serif !important; letter-spacing: 1px;">Цени</a>
-					</AnimatedComponent>
-				</div>
-			</div>
 		</>
 	);
 }

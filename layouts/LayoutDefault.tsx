@@ -6,6 +6,10 @@ import MdiDot from '~icons/mdi/dot?width=192px&height=192px';
 import RiFacebookFill from '~icons/ri/facebook-fill?width=192px&height=192px';
 import RiInstagramLine from '~icons/ri/instagram-line?width=192px&height=192px';
 import RiScissorsLine from '~icons/ri/scissors-line?width=24px&height=24px';
+import { AnimatedComponent } from '../components/AnimateOnView';
+import MdiBank from '~icons/mdi/bank';
+import MdiPhoneClassic from '~icons/mdi/phone-classic';
+import RiTimerFill from '~icons/ri/timer-fill';
 
 export default function LayoutDefault(props: { children?: JSX.Element }) {
   const childrenMemo = children(() => props.children)
@@ -54,62 +58,60 @@ export default function LayoutDefault(props: { children?: JSX.Element }) {
       </Topbar>
       <Content>{childrenMemo()}</Content>
       <BackToTopArrow></BackToTopArrow>
+      <TopFooter />
       <MainFooter>
-        <div class="flex flex-col gap-5 flex-wrap line-height-0 mb-5 mx-auto w-full bg-#14100c rounded-b-[30px] border" style="background-image: linear-gradient(30deg,#14100c 50%,rgba(255, 191, 52, 0.25) 100%);">
-          <div class="flex flex-justify-evenly mx-30 pb-10 pt-30">
+        <div class="flex flex-col gap-5 flex-wrap line-height-0 mx-auto w-full bg-#14100c" style="">
+          <div class="flex flex-col lg-flex-row flex-justify-evenly gap-5 lg-gap-5 xl-gap-0 md-mx-8 xl-mx-30 pb-2 pb-10 pt-5 md-pt-10 sm-pt-15 lg-pt-25">
+            <div class="block md-hidden w-100% xl-w-500px lg-w-450px px-5">
+              <GoogleMapIframe />
+            </div>
+
+            <AnimatedComponent class="md-hidden flex flex-justify-center lg-flex-justify-center lg-mt-10 w-full gap-5 lg-gap-15 py-10">
+              <a href="/" class="text-center w-32 lg-w-42 bg-brand c-black b-solid b-2px b-brand uppercase font-size-4 lg-font-size-5 font-500 py-3 hover-c-paper transition-colors" style="font-family: 'Oswald', sans-serif !important; letter-spacing: 1px;">Запазете час</a>
+              <a href="/" class="text-center w-32 lg-w-42 bg-brand c-black b-solid b-2px b-brand uppercase font-size-4 lg-font-size-5 font-500 py-3 hover-c-paper transition-colors" style="font-family: 'Oswald', sans-serif !important; letter-spacing: 1px;">Цени</a>
+            </AnimatedComponent>
+
             <div class="flex flex-col flex-justify-start flex-items-center py-2 md-gap-0 gap-1">
-              <h3 class="c-brand font-600 mt-0 uppercase">Най-популярните ни услуги</h3>
+              <h3 class="c-brand font-600 mt-0 uppercase">Най-популярните<br></br>ни услуги</h3>
               <MainFooterMenuItem href="/">Мъжко подстригване</MainFooterMenuItem>
               <div>
-                <MdiDot class="w-4 c-paper pt-2px mx-5 md-block hidden" />
+                <MdiDot class="w-4 c-paper pt-2px mx-5 block" />
               </div>
               <MainFooterMenuItem href="/">Оформяне на брада</MainFooterMenuItem>
               <div>
-                <MdiDot class="w-4 c-paper pt-2px mx-5 md-block hidden" />
+                <MdiDot class="w-4 c-paper pt-2px mx-5 block" />
               </div>
               <MainFooterMenuItem href="/">Комбо</MainFooterMenuItem>
               <div>
-                <MdiDot class="w-4 c-paper pt-2px mx-5 md-block hidden" />
+                <MdiDot class="w-4 c-paper pt-2px mx-5 block" />
               </div>
               <MainFooterMenuItem href="/">Тониране</MainFooterMenuItem>
             </div>
 
-            <div class="flex flex-col flex-justify-start flex-items-center py-2 md-gap-0 gap-1 " style="border-right-color: rgba(255, 255, 255, 0.12); border-left-color: rgba(255, 255, 255, 0.2);">
+            <div class="hidden md-flex flex-col flex-justify-start flex-items-center py-2 md-gap-0 gap-1" style="border-right-color: rgba(255, 255, 255, 0.12); border-left-color: rgba(255, 255, 255, 0.2);">
               <h3 class="c-brand font-600 mt-0 uppercase">Полезни връзки</h3>
               <MainFooterMenuItem href="/">Магазин</MainFooterMenuItem>
               <div>
-                <MdiDot class="w-4 c-paper pt-2px mx-5 md-block hidden" />
+                <MdiDot class="w-4 c-paper pt-2px mx-5 block" />
               </div>
               <MainFooterMenuItem href="/">Контакти</MainFooterMenuItem>
               <div>
-                <MdiDot class="w-4 c-paper pt-2px mx-5 md-block hidden" />
+                <MdiDot class="w-4 c-paper pt-2px mx-5 block" />
               </div>
               <MainFooterMenuItem href="/">Кариери</MainFooterMenuItem>
               <div>
-                <MdiDot class="w-4 c-paper pt-2px mx-5 md-block hidden" />
+                <MdiDot class="w-4 c-paper pt-2px mx-5 block" />
               </div>
               <MainFooterMenuItem href="/">За нас</MainFooterMenuItem>
-              <div>
-                <MdiDot class="w-4 c-paper pt-2px mx-5 md-block hidden" />
-              </div>
-              <MainFooterMenuItem href="/">Контакти</MainFooterMenuItem>
-              <div>
-                <div>
-                  <MdiDot class="w-4 c-paper pt-2px mx-5 md-block hidden" />
-                </div>
-              </div>
-              <MainFooterMenuItem href="/">Кариери</MainFooterMenuItem>
-              <div>
-                <MdiDot class="w-4 c-paper pt-2px mx-5 md-block hidden" />
-              </div>
-              <MainFooterMenuItem href="/">За нас</MainFooterMenuItem>
+
             </div>
-            <div class="w-500px">
+
+            <div class="md-block hidden w-100% xl-w-500px lg-w-450px">
               <GoogleMapIframe />
             </div>
           </div>
 
-          <div class="flex flex-justify-center pt-12 pb-3 gap-3 b-t-solid b-t-0.5px mx-30" style="border-top-color: rgba(255, 255, 255, 0.12);">
+          <div class="flex flex-justify-center pt-11 pb-2 gap-3 b-t-solid b-t-0.5px mx-5 sm-mx-10 lg-mx-30" style="border-top-color: rgba(255, 255, 255, 0.12);">
             <a href="/">
               <RiFacebookFill class="w-10 h-10 bg-brand hover-c-#07111c transition-colors p-1.5 c-paper" />
             </a>
@@ -118,17 +120,27 @@ export default function LayoutDefault(props: { children?: JSX.Element }) {
             </a>
           </div>
 
-          <div class="b-t-solid b-t-0.5px mx-30 py-8" style="border-top-color: rgba(255, 255, 255, 0.12);">
+          {/* <div class="b-t-solid b-t-0.5px mx-30 py-8" style="border-top-color: rgba(255, 255, 255, 0.12);">
             <p class="text-center c-paper lg-font-size-4 md-font-size-3 font-size-3.7 font-400 line-height-6 font-sans mb-0">Copyright &copy; <CurrentYear /> TheBarberShop</p>
             <div class="flex flex-col md-flex-row md-gap-5 flex-items-center flex-justify-center">
-              <BottomFooterMenuItem href="/terms-and-conditions">Общи условия</BottomFooterMenuItem>
+              <BottomFooterMenuItem href="/">Общи условия</BottomFooterMenuItem>
               <div class="hidden md-block c-paper">┃</div>
-              <BottomFooterMenuItem href="/cookie-policy">Политика за поверителност</BottomFooterMenuItem>
+              <BottomFooterMenuItem href="/">Политика за поверителност</BottomFooterMenuItem>
               <div class="hidden md-block c-paper">┃</div>
-              <BottomFooterMenuItem href="/sitemap">Карта на сайта</BottomFooterMenuItem>
+              <BottomFooterMenuItem href="/">Карта на сайта</BottomFooterMenuItem>
             </div>
             <div class="flex flex-justify-center">
               <a class="c-paper hover:c-brand transition-colors font-normal lg-font-size-4 md-font-size-4 font-size-4" href="/sitemap">Cookie Policy</a>
+            </div>
+          </div> */}
+
+          <div class="b-t-solid b-t-0.5px mx-5 sm-mx-10 lg-mx-30 py-8 font-100 flex md-flex-row flex-col flex-justify-between flex-items-center" style="border-top-color: rgba(255, 255, 255, 0.12);">
+            <p class="text-center c-paper lg-font-size-3.5 md-font-size-3.3 font-size-3.2 line-height-6 font-sans">Copyright &copy; <CurrentYear /> <span class="c-brand">TheBarberShop</span></p>
+            <div class="flex flex-col md-flex-row md-gap-2 lg-gap-5 flex-items-center flex-justify-end">
+              <BottomFooterMenuItem href="/">Общи условия</BottomFooterMenuItem>
+              <BottomFooterMenuItem href="/">Политика за поверителност</BottomFooterMenuItem>
+              <BottomFooterMenuItem href="/">Карта на сайта</BottomFooterMenuItem>
+              <BottomFooterMenuItem href="/">Cookie Policy</BottomFooterMenuItem>
             </div>
           </div>
         </div>
@@ -144,7 +156,7 @@ function GoogleMapIframe() {
     <iframe
       src={mapSrc}
       width="100%"
-      height="400"
+      height="350"
       style={{ border: 0 }}
       loading="lazy"
       referrerPolicy="no-referrer-when-downgrade"
@@ -152,30 +164,71 @@ function GoogleMapIframe() {
   );
 }
 
+function TopFooter() {
+
+  return (
+    <>
+      <div class="" style="background-position: center top; background-repeat: no-repeat; background-size: cover; height: auto;">
+        <div class="px-2 gap-15 lg-h-80vh h-100% lg-py-0 py-15 flex flex-col flex-justify-center flex-items-center" style="background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7) ), url(/assets/20.jpg); background-position: 50% 50% ; background-repeat: no-repeat; background-size: cover;" role="img" aria-label="">
+          <AnimatedComponent class="flex flex-col flex-justify-center">
+            <h2 class="c-paper important-my-0">Свържете се с нас</h2>
+            <img class="mx-auto pt-2" src="/assets/heading-ic.png" />
+          </AnimatedComponent>
+
+          <div class="flex lg-flex-row flex-col lg-gap-0 gap-10 w-full flex-justify-center">
+            <AnimatedComponent class="flex flex-col text-center lg-w-25%">
+              <MdiBank class="c-paper-inv bg-paper b-rd-50% font-size-10 p-2 pl-2.3 mx-auto lg-mb-6 mb-3" />
+              <div class="c-brand mx-auto font-size-4.5 lg-font-size-4.8" style="font-family: 'Oswald', sans-serif !important; letter-spacing: 1px;">
+                Адрес:
+              </div>
+              <div class="c-paper mx-auto font-size-4.5 lg-font-size-4.8" style="font-family: 'Oswald', sans-serif !important; letter-spacing: 1px;">
+                София, ул. "Николай Хайтов" 2
+              </div>
+            </AnimatedComponent>
+
+            <AnimatedComponent class="flex flex-col text-center lg-w-25%">
+              <RiTimerFill class="c-paper-inv bg-paper b-rd-50% font-size-10 p-2 mx-auto lg-mb-6 mb-3" />
+              <div class="c-brand mx-auto font-size-4.5 lg-font-size-4.8" style="font-family: 'Oswald', sans-serif !important; letter-spacing: 1px;">
+                Работно време:
+              </div>
+              <div class="c-paper mx-auto font-size-4.5 lg-font-size-4.8" style="font-family: 'Oswald', sans-serif !important; letter-spacing: 1px;">
+                Понеделник - Петък: 09.00 - 17.00
+              </div>
+            </AnimatedComponent>
+
+            <AnimatedComponent class="flex flex-col text-center lg-w-25%">
+              <MdiPhoneClassic class="c-paper-inv bg-paper b-rd-50% font-size-10 p-2 mx-auto lg-mb-6 mb-3" />
+              <div class="c-brand mx-auto font-size-4.5 lg-font-size-4.8" style="font-family: 'Oswald', sans-serif !important; letter-spacing: 1px;">
+                Телефон:
+              </div>
+              <div class="c-paper mx-auto font-size-4.5 lg-font-size-4.8" style="font-family: 'Oswald', sans-serif !important; letter-spacing: 1px;">
+                0882 820 331
+              </div>
+            </AnimatedComponent>
+          </div>
+
+          <AnimatedComponent class="hidden md-flex flex-justify-evenly lg-flex-justify-center lg-mt-10 w-full lg-gap-15 max-w-90% lg-max-w-1200px border-t-solid b-paper b-1px pt-16 lg-pt-22">
+            <a href="/" class="text-center w-32 lg-w-42 bg-brand c-black b-solid b-2px b-brand uppercase font-size-4 lg-font-size-5 font-500 py-3 hover-c-paper transition-colors" style="font-family: 'Oswald', sans-serif !important; letter-spacing: 1px;">Запазете час</a>
+            <a href="/" class="text-center w-32 lg-w-42 bg-brand c-black b-solid b-2px b-brand uppercase font-size-4 lg-font-size-5 font-500 py-3 hover-c-paper transition-colors" style="font-family: 'Oswald', sans-serif !important; letter-spacing: 1px;">Цени</a>
+          </AnimatedComponent>
+        </div>
+      </div>
+    </>
+  )
+}
+
 function MainFooter(props: { children: JSX.Element }) {
   return (
     <div
-      class="flex flex-col flex-justify-center md-flex-justify-center bg-#14100c px-25 pb-12 flex-shrink-0 flex-items-center flex-wrap border-t-solid border-t-1px border-t-brand" style="background-image: url(/assets/12121.png); background-position: center center; background-repeat: no-repeat; background-size: cover; filter: grayscale(0%);">
+      class="flex flex-col flex-justify-center md-flex-justify-center bg-#14100c flex-shrink-0 flex-items-center flex-wrap b-t-solid b-t-1px" style="border-top-color: rgba(209, 157, 100, 0.3); background-image: url(/assets/1313131.png); background-position: center center; background-repeat: no-repeat; background-size: cover; filter: grayscale(0%);">
       {props.children}
     </div>
   );
 }
 
 function BottomFooterMenuItem(props: { href: string, children: JSX.Element }) {
-  return <a href={props.href} class="transition-colors c-paper hover-color-brand:hover font-normal lg-font-size-4 md-font-size-4 font-size-4 lg-py-1 md-py-2 font-sans">{props.children}</a>
+  return <a href={props.href} class="transition-colors c-brand hover-color-paper:hover font-400 lg-font-size-3.5 md-font-size-3.3 font-size-3.2 lg-py-1 md-py-2 font-sans line-height-6">{props.children}</a>
 }
-
-function BottomFooter(props: { children: JSX.Element }) {
-  return (
-    <div
-      class="flex-col gap-0 bg-brand py-1 flex-shrink-0 flex-justify-center flex-items-center">
-      {props.children}
-    </div>
-  );
-}
-
-
-
 
 function ServiceMenuItem(props: { href: string; children: any }) {
   return (
@@ -385,7 +438,7 @@ const MyDropdown = (props: { closeMenu: () => void; }) => {
 };
 
 function MainFooterMenuItem(props: { href: string, children: JSX.Element }) {
-  return <a href={props.href} class="line-height-7 text-left c-#8a8a8a hover-color-brand:hover font-normal font-size-4 font-sans uppercase important-font-400 transition-colors" style="font-family: 'Oswald', sans-serif">{props.children}</a>
+  return <a href={props.href} class="line-height-7 text-left c-#a1a1a1 hover-color-brand:hover font-normal font-size-4 font-sans uppercase important-font-400 transition-colors" style="font-family: 'Oswald', sans-serif">{props.children}</a>
 }
 
 function BackToTopButton(props: { onClick: JSX.EventHandlerUnion<HTMLButtonElement, MouseEvent> | undefined; children: number | boolean | Node | JSX.ArrayElement | (string & {}) | null | undefined; }) {
