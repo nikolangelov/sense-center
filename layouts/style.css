@@ -32,8 +32,8 @@ body {
 }
 
 @font-face {
-  font-family: 'HeyWowBook';
-  src: url('/assets/fonts/HeyWowBook.ttf') format('truetype');
+  font-family: 'SofiaSans';
+  src: url('/assets/fonts/SofiaSans-Regular.ttf') format('truetype');
 }
 
 body.page-is-transitioning #page-content {
@@ -47,12 +47,12 @@ li::marker {
 
 div,
 p {
-  font-family: 'HeyWowBook', sans-serif !important;
+  font-family: 'SofiaSans', sans-serif !important;
   color: #07111c;
   font-weight: 300;
   letter-spacing: 0.04rem;
   word-spacing: 0.01rem;
-  font-size: 17.5px;
+  font-size: 19px;
   line-height: 2rem;
   text-align: left;
 }
@@ -63,7 +63,7 @@ p {
   p {
     letter-spacing: 0.04rem;
     word-spacing: 0.01rem;
-    font-size: 16px;
+    font-size: 17px;
     line-height: 1.8rem;
   }
 }
@@ -163,7 +163,7 @@ html::-webkit-scrollbar {
 }
 
 html::-webkit-scrollbar-thumb {
-  background-image: linear-gradient(30deg, #14100c 0%, #917658 80%);
+  background-image: linear-gradient(30deg, #14100c 0%, #f5a574 80%);
   border-radius: 10px;
   border: 3px solid transparent;
   background-clip: content-box;
@@ -172,8 +172,8 @@ html::-webkit-scrollbar-thumb {
 .hamburger .line {
   width: 100%;
   border-radius: 20px;
-  height: 3px;
-  background-color: #dddddd;
+  height: 2px;
+  background-color: #ffffff;
   transition: all 0.4s ease;
 }
 
@@ -190,7 +190,7 @@ html::-webkit-scrollbar-thumb {
 }
 
 .hamburger .open:nth-child(1) {
-  transform: rotate(37deg);
+  transform: rotate(41deg);
 }
 
 .hamburger .open:nth-child(2) {
@@ -198,7 +198,7 @@ html::-webkit-scrollbar-thumb {
 }
 
 .hamburger .open:nth-child(3) {
-  transform: rotate(-37deg);
+  transform: rotate(-41deg);
 }
 
 @media (min-width: 900px) {
@@ -277,9 +277,6 @@ html::-webkit-scrollbar-thumb {
   }
 }
 
-
-
-
 @media (min-width: 640px) {
   .home-img {
     background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.8)), url('/assets/home/the-barber-shop-sofia.webp') !important;
@@ -293,4 +290,73 @@ html::-webkit-scrollbar-thumb {
   .kris-img {
     background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.6)), url('/assets/kris/барбър-крис-индивидуална-мобилно.webp') !important;
   }
+}
+
+@media (min-width: 640px) {
+  .za-nas-img {
+    background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.65)), url('/assets/za-nas/the-barber-shop-sofia-2.webp') !important;
+  }
+}
+
+@media (min-width: 640px) {
+  .karieri-img {
+    background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8)), url('/assets/karieri/екип-бръснарница-софия.webp') !important;
+  }
+}
+
+
+
+
+
+
+
+.glass-effect {
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.fancy-heading {
+  font-family: 'Playfair Display', serif;
+  background: linear-gradient(135deg, #2c3e50 0%, #4a5568 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.input-highlight {
+  position: relative;
+  overflow: hidden;
+}
+
+.input-highlight::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #e9cbac 0%, #e08734 100%);
+  transition: width 0.4s ease;
+}
+
+.input-highlight:hover::after,
+.input-highlight:focus-within::after {
+  width: 100%;
+}
+
+.luxury-button {
+  background: linear-gradient(135deg, #d19d64 0%, #c27832 100%);
+  transition: all 0.4s ease;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(252, 252, 252, 0.05);
+}
+
+.luxury-button:hover {
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  transform: translateY(-2px);
+}
+
+.form-container {
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  background: linear-gradient(89.96deg, rgba(255, 255, 255, 0.5) 0.03%, rgba(255, 255, 255, 0.233) 49.67%, rgba(255, 255, 255, 0.0) 99.96%);
+  border-radius: 26px;
+  padding: 16px;
 }
