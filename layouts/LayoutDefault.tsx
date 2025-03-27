@@ -1,11 +1,11 @@
 import 'uno.css'
 import "./style.css";
-import { children, createEffect, createSignal, JSX, onCleanup, onMount, Show, For } from "solid-js";
-import RiArrowDropUpFill from '~icons/ri/arrow-drop-up-fill?width=192px&height=192px';
-import MdiDot from '~icons/mdi/dot?width=192px&height=192px';
-import RiFacebookFill from '~icons/ri/facebook-fill?width=192px&height=192px';
-import RiInstagramLine from '~icons/ri/instagram-line?width=192px&height=192px';
-import RiScissorsLine from '~icons/ri/scissors-line?width=24px&height=24px';
+import { children, createEffect, createSignal, JSX, onCleanup, onMount, Show } from "solid-js";
+import MdiDot from '~icons/mdi/dot';
+import RiFacebookFill from '~icons/ri/facebook-fill';
+import RiInstagramLine from '~icons/ri/instagram-line';
+import RiScissorsLine from '~icons/ri/scissors-line';
+import RiArrowDropUpFill from '~icons/ri/arrow-drop-up-fill';
 import { AnimatedComponent } from '../components/AnimateOnView';
 import MdiBank from '~icons/mdi/bank';
 import MdiPhoneClassic from '~icons/mdi/phone-classic';

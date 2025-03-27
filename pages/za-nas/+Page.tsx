@@ -4,7 +4,7 @@ import { VideoPlayer } from '../../components/VideoPlayer';
 import { GallerySlider } from '../../components/GallerySlider';
 import { AnimatedComponent } from '../../components/AnimateOnView';
 import { AnimatedComponentSlide } from '../../components/AnimateOnViewSlide';
-import MdiScissors from '~icons/mdi/scissors?width=24px&height=24px';
+import MdiScissors from '~icons/mdi/scissors';
 import MdiCircleSmall from '~icons/mdi/circle-small';
 import { H2WithImage } from '../../components/H2WithImage';
 import MdiArrowRight from '~icons/mdi/arrow-right';

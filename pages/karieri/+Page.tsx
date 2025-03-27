@@ -4,7 +4,7 @@ import { AnimatedComponentSlide } from '../../components/AnimateOnViewSlide';
 import { H2WithImage } from '../../components/H2WithImage';
 import MdiCircleSmall from '~icons/mdi/circle-small';
 import { createEffect, createSignal } from 'solid-js';
-import MdiCloseThick from '~icons/mdi/close-thick?width=24px&height=24px';
+import MdiCloseThick from '~icons/mdi/close-thick';
 import confetti from "canvas-confetti";
 import { createSlider } from "solid-slider";
 

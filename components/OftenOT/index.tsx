@@ -2,7 +2,7 @@ import { createSignal, JSX, onCleanup, onMount, Component } from 'solid-js';
 import { Slider, SliderButton, SliderProvider } from "solid-slider";
 import RiPlayMiniLine from '~icons/ri/play-mini-line';
 import RiPlayReverseMiniLine from '~icons/ri/play-reverse-mini-line';
-import MdiScissors from '~icons/mdi/scissors?width=24px&height=24px';
+import MdiScissors from '~icons/mdi/scissors';
 import { AnimatedComponent } from '../AnimateOnView';
 
 export const OftenOT = ({ children, style }: { children: JSX.Element | JSX.Element[], style?: string }) => {

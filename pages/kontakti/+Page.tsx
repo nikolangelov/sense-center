@@ -1,7 +1,7 @@
 import "solid-slider/slider.css";
 import { AnimatedComponent } from '../../components/AnimateOnView';
 import { createEffect, createMemo, createSignal } from 'solid-js';
-import MdiCloseThick from '~icons/mdi/close-thick?width=24px&height=24px';
+import MdiCloseThick from '~icons/mdi/close-thick';
 import confetti from "canvas-confetti";
 import MdiPhoneClassic from "~icons/mdi/phone-classic";
 import RiTimerLine from '~icons/ri/timer-line';

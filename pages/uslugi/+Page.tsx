@@ -1,6 +1,6 @@
 import "solid-slider/slider.css";
 import { AnimatedComponent } from '../../components/AnimateOnView';
-import MdiScissors from '~icons/mdi/scissors?width=24px&height=24px';
+import MdiScissors from '~icons/mdi/scissors';
 import { createSignal, onCleanup, onMount } from "solid-js";
 
 function useMediaQuery(query: string) {
