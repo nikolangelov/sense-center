@@ -15,10 +15,10 @@ export const ReviewSlider = ( props : { style?: string | string, children: JSX.E
                         {props.children}
                     </Slider>
                     <SliderButton class="cursor-pointer position-absolute top-45% left--15 bg-transparent b-none" prev>
-                        <RiPlayReverseMiniLine class="md-ml-14 c-brand-compliment b-brand-compliment lg--ml-2 font-size-10 b-solid b-3px p-1 important-hover-c-paper hover-bg-brand-compliment hover-b-brand-compliment transition-colors" style={props.style} />
+                        <RiPlayReverseMiniLine class="md-ml-14 bg-brand-compliment c-paper b-brand-compliment lg--ml-2 font-size-10 b-solid b-3px p-1 hover:c-brand-compliment hover-bg-transparent hover-b-brand-compliment transition-colors" style={props.style} />
                     </SliderButton>
                     <SliderButton class="cursor-pointer position-absolute top-45% right--15 bg-transparent b-none" next>
-                        <RiPlayMiniLine class="md-mr-14 c-brand-compliment b-brand-compliment lg--mr-2 font-size-10 b-solid b-3px p-1 important-hover-c-paper hover-bg-brand-compliment hover-b-brand-compliment transition-colors" style={props.style} />
+                        <RiPlayMiniLine class="md-mr-14 bg-brand-compliment c-paper b-brand-compliment lg--mr-2 font-size-10 b-solid b-3px p-1 hover:c-brand-compliment hover-bg-transparent hover-b-brand-compliment transition-colors" style={props.style} />
                     </SliderButton>
                 </div>
             ) : (
@@ -27,10 +27,10 @@ export const ReviewSlider = ( props : { style?: string | string, children: JSX.E
                         {props.children}
                     </Slider>
                     <SliderButton class="cursor-pointer position-absolute top-47% left-0 bg-transparent b-none" prev>
-                        <RiPlayReverseMiniLine class="-ml-1 font-size-7 b-solid b-2px p-1 c-brand-compliment b-brand-compliment hover-c-paper hover-bg-brand-compliment hover-b-brand-compliment transition-colors" style={props.style} />
+                        <RiPlayReverseMiniLine class="-ml-1 font-size-7 b-solid b-2px p-1 c-paper b-brand-compliment hover-c-brand-compliment bg-brand-compliment hover-bg-transparent hover-b-brand-compliment transition-colors" style={props.style} />
                     </SliderButton>
                     <SliderButton class="cursor-pointer position-absolute top-47% right-0 bg-transparent b-none" next>
-                        <RiPlayMiniLine class="-mr-1 font-size-7 b-solid b-2px p-1 c-brand-compliment b-brand-compliment hover-c-paper hover-bg-brand-compliment hover-b-brand-compliment transition-colors" style={props.style} />
+                        <RiPlayMiniLine class="-mr-1 font-size-7 b-solid b-2px p-1 c-paper b-brand-compliment hover-c-brand-compliment bg-brand-compliment hover-bg-transparent hover-b-brand-compliment transition-colors" style={props.style} />
                     </SliderButton>
                 </div>
             )}

@@ -192,7 +192,7 @@ export default function Page() {
 				</div>
 			</div>
 
-			<section class="pb-20" style="background-attachment: fixed; background-image: url(/assets/designbg.png); background-position: center; background-repeat: repeat; background-size: cover;">
+			<section class="pb-20">
 				<AnimatedComponent>
 					<H2WithImage title="Как го правим" />
 				</AnimatedComponent>
@@ -216,7 +216,7 @@ export default function Page() {
 				]}
 				/>
 
-				<div class="lg-mt-0 lg-px-30 xl-px-58 py-15 lg-py-30 max-w-1600px mx-auto flex lg-flex-row flex-col gap-8 lg-gap-20">
+				<div class="lg-mt-0 lg-px-30 xl-px-58 py-15 lg-py-25 max-w-1600px mx-auto flex lg-flex-row flex-col gap-8 lg-gap-20">
 					<AnimatedComponentSlide class="px-5">
 						<div class="flex flex-col gap-5">
 							<div>
@@ -228,8 +228,7 @@ export default function Page() {
 						</div>
 					</AnimatedComponentSlide>
 				</div>
-
-				<BeforeAfterSlider imgs={[
+			<BeforeAfterSlider imgs={[
 					{ src: "/assets/home/барбер-шоп-софия.webp", alt: "професионално мъжко подстригване в бръснарница в барбер шоп в София", hairstyle: "example-hairstyle" },
 					{ src: "/assets/home/barber-shops-sofia.webp", alt: "професионално измиване на глава в barber shops Sofia", hairstyle: "example-hairstyle" },
 					{ src: "/assets/home/подстригване-мъжко.webp", alt: "Подстригване мъжко", hairstyle: "example-hairstyle" },
