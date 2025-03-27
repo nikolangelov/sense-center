@@ -7,6 +7,7 @@ import { ReviewSlider, StarReview } from '../../../components/ReviewSlider';
 import MdiBank from '~icons/mdi/bank';
 import MdiPhoneClassic from '~icons/mdi/phone-classic';
 import RiTimerFill from '~icons/ri/timer-fill';
+import { H2WithImage } from "../../../components/H2WithImage";
 
 export default function Page() {
 	return (
@@ -28,39 +29,37 @@ export default function Page() {
 				</div>
 			</div>
 
-			<section class="lg-pb-25 pb-20 pt-10 bg-#f2e0c2" style="background-attachment: fixed; background-image: url(/assets/designbg.png); background-position: center; background-repeat: repeat; background-size: cover;">
+			<section class="pb-20 bg-#f2e0c2" style="background-color: #222222; background-image: url(/assets/bg-2.jpg); background-position: center center; background-repeat: no-repeat; background-size: cover;">
 				<AnimatedComponent>
-					<h2 class="important-mb-0">Видео</h2>
-					<img class="mx-auto pt-2 mb-15 lg-mb--5 flex flex-justify-center" src="/assets/heading-ic.png" />
+					<H2WithImage class="c-paper" title="Видео" />
 				</AnimatedComponent>
 				<AnimatedComponent>
 					<VideoPlayer src='https://www.youtube.com/embed/e2x0UXVU2yg?enablejsapi=1&mute=1' />
 				</AnimatedComponent>
 			</section>
 
-			<section style="background-color: #222222; background-image: url(/assets/bg-2.jpg); background-position: center center; background-repeat: no-repeat; background-size: cover;">
-				<div class="lg-mx-30 mx-auto lg-pt-10 pt-10">
+			<section>
+				<div class="lg-mx-30 mx-auto">
 					<div class="flex md-flex flex-col lg-gap-5 flex-justify-center max-w-1440px lg-px-0 mx-auto pb-10">
 						<AnimatedComponent>
-							<h2 class="pb-3 lg-pb-0 important-mb-0 c-paper">Защо да се доверите на Кристиан</h2>
-							<img class="mx-auto pt-2 pb-15 lg-pb-10 flex flex-justify-center" src="/assets/heading-ic.png" />
+							<H2WithImage title="Защо да се доверите на Кристиан" />
 						</AnimatedComponent>
 						<div class="px-5 lg-px-0 flex lg-flex-row flex-col lg-gap-10">
 							<div class="lg-w-50% flex flex-col">
 								<AnimatedComponent>
-									<div class="pb-8 c-paper">Кристиан е пример за професионализъм в бръснарското изкуство, както и че с постоянство всичко се постига. Неговият дългогодишен опит го е утвърдил като ненадминат експерт в традиционното бръснене с бръснач. Към момента не само практикува, а и участва като лектор в множество обучения, на които с радост предава своите знания на следващото поколение бръснари.</div>
+									<div class="pb-8">Кристиан е пример за професионализъм в бръснарското изкуство, както и че с постоянство всичко се постига. Неговият дългогодишен опит го е утвърдил като ненадминат експерт в традиционното бръснене с бръснач. Към момента не само практикува, а и участва като лектор в множество обучения, на които с радост предава своите знания на следващото поколение бръснари.</div>
 								</AnimatedComponent>
 							</div>
 							<div class="lg-w-50% flex flex-col">
 								<AnimatedComponent>
-									<div class="pb-8 c-paper">Умело комбинира класическите техники с актуалните тенденции, като създава пътуване във времето, стила и естетиката. Неговата супер сила е създаването на уникално изживяване със старомоден чар.</div>
+									<div class="pb-8">Умело комбинира класическите техники с актуалните тенденции, като създава пътуване във времето, стила и естетиката. Неговата супер сила е създаването на уникално изживяване със старомоден чар.</div>
 								</AnimatedComponent>
 							</div>
 						</div>
 					</div>
 				</div>
-				<div class="lg-pb-20 pb-10">
-					<GallerySlider style="border-color:#d19d64; color:#d19d64;" imgs={[
+				<div class="pb-20">
+					<GallerySlider imgs={[
 						{ src: "/assets/kris/барбър-крис-подстригване-с-ножица.webp", alt: "Барбър Крис - подстригване с ножица" },
 						{ src: "/assets/kris/барбър-крис-buzz-cut.webp", alt: "Барбър Крис - buzz cut" },
 						{ src: "/assets/kris/барбър-крисa-екшън-снимки.webp", alt: "Барбър Крис - екшън снимки" },
@@ -70,11 +69,10 @@ export default function Page() {
 				</div>
 			</section>
 
-			<div class="lg-px-30 pt-10 pb-20 w-full flex flex-col flex-justify-center bg-#f2e0c2" style="background-attachment: fixed; background-image: url(/assets/designbg.png); background-position: center; background-repeat: repeat; background-size: cover;">
+			<div class="lg-px-30 pb-20 w-full flex flex-col flex-justify-center bg-#f2e0c2" style="background-color: #222222; background-image: url(/assets/bg-2.jpg); background-position: center center; background-repeat: no-repeat; background-size: cover;">
 				<AnimatedComponentSlide>
 					<div class="px-4">
-						<h2 class="important-mb-0">Какво казват другите за Кристиан?</h2>
-						<img class="mx-auto pt-2 pb-15 flex flex-justify-center" src="/assets/heading-ic.png" />
+						<H2WithImage class="c-paper" title="Какво казват другите за Кристиан?" />
 					</div>
 				</AnimatedComponentSlide>
 
@@ -115,8 +113,8 @@ export default function Page() {
 					</ReviewSlider>
 				</AnimatedComponent>
 
-				<AnimatedComponentSlide class="mx-auto pt-15">
-					<a href="/" class="bg-brand c-black b-solid b-2px b-brand uppercase font-size-4 font-500 px-7 py-2 hover-c-paper transition-colors" style="font-family: 'Oswald', sans-serif !important; letter-spacing: 1px;">Запазете час при Кристиан</a>
+				<AnimatedComponentSlide class="mx-auto pt-10">
+					<a href="/" class="bg-brand-compliment c-paper b-solid b-2px b-brand-compliment uppercase font-size-4 font-500 px-7 py-2 hover-c-paper-inv transition-colors" style="font-family: 'Oswald', sans-serif !important; letter-spacing: 1px;">Запазете час при Кристиан</a>
 				</AnimatedComponentSlide>
 			</div>
 		</>

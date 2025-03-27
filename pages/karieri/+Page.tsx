@@ -1,46 +1,31 @@
 import "solid-slider/slider.css";
 import { AnimatedComponent } from '../../components/AnimateOnView';
 import { AnimatedComponentSlide } from '../../components/AnimateOnViewSlide';
+import { H2WithImage } from '../../components/H2WithImage';
 import MdiCircleSmall from '~icons/mdi/circle-small';
 import { createEffect, createSignal } from 'solid-js';
 import MdiCloseThick from '~icons/mdi/close-thick?width=24px&height=24px';
 import confetti from "canvas-confetti";
+import { createSlider } from "solid-slider";
 
 export default function Page() {
 	const [email, setEmail] = createSignal('');
-	const [subject, setSubject] = createSignal('');
 	const [name, setName] = createSignal('');
-	const [postCode, setPostCode] = createSignal('');
+	const [surname, setSurname] = createSignal('');
 	const [phone, setPhone] = createSignal('');
 	const [text, setText] = createSignal('');
-	const [otherText, setOtherText] = createSignal('');
-	const [attachments, setAttachments] = createSignal<File[]>([]);
-	const [selectedServices, setSelectedServices] = createSignal<string[]>([]);
-	const [howFound, setHowFound] = createSignal('');
 	const [isSubmitted, setIsSubmitted] = createSignal(false);
 	const [isModalOpen, setIsModalOpen] = createSignal(false);
 	const [isUploading, setIsUploading] = createSignal(false);
 	const [progress, setProgress] = createSignal(0);
 	const [errorMessage, setErrorMessage] = createSignal('');
 
-	const handleRadioChange = (event: { target: { value: string } }) => {
-		setHowFound(event.target.value);
-		if (event.target.value !== 'Other') {
-			setOtherText('');
-		}
-	};
-
 	const resetForm = () => {
 		setEmail('');
-		setSubject('');
 		setName('');
-		setPostCode('');
+		setSurname('');
 		setPhone('');
 		setText('');
-		setOtherText('');
-		setAttachments([]);
-		setSelectedServices([]);
-		setHowFound('');
 	};
 
 	async function sendEmail(e: Event) {
@@ -50,21 +35,10 @@ export default function Page() {
 
 		const formData = new FormData();
 		formData.append('senderEmail', email());
-		formData.append('subject', subject());
 		formData.append('name', name());
-		formData.append('postCode', postCode());
+		formData.append('surname', surname());
 		formData.append('phone', phone());
 		formData.append('text', text());
-		formData.append('howFound', howFound());
-		formData.append('OtherText', otherText());
-
-		if (attachments()) {
-			for (let i = 0; i < attachments().length; i++) {
-				formData.append('attachments', attachments()[i]);
-			}
-		}
-
-		formData.append('services', selectedServices().join(', '));
 
 		try {
 			const response = await fetch('/api/send-email', {
@@ -88,24 +62,6 @@ export default function Page() {
 		}
 	}
 
-	const handleFileChange = (event: Event) => {
-		const input = event.target as HTMLInputElement;
-		const files = input.files;
-		if (files) {
-			setAttachments([...attachments(), ...Array.from(files)]);
-		}
-	};
-
-	const handleCheckboxChange = (event: { target: { value: string; checked: boolean } }) => {
-		const value = event.target.value;
-		const services = selectedServices();
-		if (event.target.checked) {
-			setSelectedServices([...services, value]);
-		} else {
-			setSelectedServices(services.filter(service => service !== value));
-		}
-	};
-
 	const closeModal = () => {
 		setIsModalOpen(false);
 		setIsSubmitted(false);
@@ -125,84 +81,91 @@ export default function Page() {
 
 	return (
 		<>
-			<div style="background-position: center top; background-repeat: no-repeat; background-size: cover; height: auto;"><div style="background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5) ), url(/assets/karieri/екип-бръснарница-софия-mobile.webp); background-position: center bottom; background-repeat: no-repeat; background-size: cover;" class="h-100vh md-h-110vh karieri-img" role="img" aria-label="The barber shop Sofia"></div></div>
+			<div style="background-position: center top; background-repeat: no-repeat; background-size: cover; height: auto;">
+				<div style="background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.65) ), url(assets/za-nas/екип-бръснарница-софия_result_result.webp); background-position: right 55% bottom 100% ; background-repeat: no-repeat; background-size: cover;" class="h-105vh md:h-110vh karieri-img" role="img" aria-label="the barber shop Sofia">
+				</div>
 
-			<div class="w-full bg-#212528">
-				<div class="max-w-1240px mx-auto">
-					<div class="flex flex-justify-center">
-						<div class="left-0 right-0 px-3 my-0 mx-auto absolute top-80% sm-top-85% md-top-80% lg-top-80% text-center w-full max-w-1500px" style="-webkit-transform: translateY(-50%);">
-							<AnimatedComponent>
-								<h1 class="uppercase c-paper mb-6 text-center">Присъедини се към екипа</h1>
-							</AnimatedComponent>
-							<AnimatedComponent class="hidden md:block">
-								<p class="important-delay-300 c-paper text-center lg-pt-0 font-size-14.5px md-font-size-18px line-height-7">Отваряме врати за нови таланти!</p>
-								<p class="important-delay-500 c-paper text-center font-size-14.5px md-font-size-18px line-height-7">Независимо дали сте начинаещ или опитен професионалист, The Barber Shop има желание да работи с Вас.</p>
-								<p class="important-delay-500 c-paper text-center font-size-14.5px md-font-size-18px line-height-7">Нашата мисия е да създадем не просто екип, а общност от майстори бръснари, обединени от любовта към занаята.</p>
-							</AnimatedComponent>
+				<div class="w-full bg-#212528">
+					<div class="max-w-1240px mx-auto">
+						<div class="flex flex-justify-center">
+							<div class="left-0 right-0 px-3 my-0 mx-auto absolute top-77% sm-top-85% md-top-80% lg-top-80% text-center w-full max-w-1500px" style="-webkit-transform: translateY(-50%);">
+								<AnimatedComponent>
+									<h1 class="uppercase c-paper mb-2 text-center">Присъедини се към екипа</h1>
+								</AnimatedComponent>
+								<AnimatedComponent class="block md:hidden">
+									<p class="important-delay-300 c-paper text-center lg-pt-0 line-height-7 mt-30px">Отваряме врати за нови таланти!</p>
+								</AnimatedComponent>
+
+								<AnimatedComponent class="md:block hidden pb-5">
+									<p class="important-delay-300 text-center lg-pt-0 line-height-7 mt-30px c-paper">Отваряме врати за нови таланти!</p>
+									<p class="important-delay-500 text-center line-height-7 c-paper">Независимо дали сте начинаещ или опитен професионалист, The Barber Shop има желание да работи с Вас.</p>
+									<p class="important-delay-500 text-center line-height-7 c-paper">Нашата мисия е да създадем не просто екип, а общност от майстори бръснари, обединени от любовта към занаята.</p>
+								</AnimatedComponent>
+							</div>
 						</div>
 					</div>
 				</div>
 			</div>
 
-			<section class="lg-pt-15 pb-5 pt-10 px-4 w-full block md:hidden" style="background-attachment: fixed; background-image: url(/assets/designbg.png); background-position: center; background-repeat: repeat; background-size: cover;">
-				<AnimatedComponent>
-					<img class="md-mx-0 mx-auto pb-0 flex flex-justify-start" src="/assets/heading-ic.png" />
-
-					<p class="important-delay-300 text-center lg-pt-0 font-size-14.5px md-font-size-18px line-height-7">Отваряме врати за нови таланти!</p>
-					<p class="important-delay-500 text-center font-size-14.5px md-font-size-18px line-height-7">Независимо дали сте начинаещ или опитен професионалист, The Barber Shop има желание да работи с Вас.</p>
-					<p class="important-delay-500 text-center font-size-14.5px md-font-size-18px line-height-7">Нашата мисия е да създадем не просто екип, а общност от майстори бръснари, обединени от любовта към занаята.</p>
+			<section class="pb-20 px-4 w-full block md:hidden" style="background-attachment: fixed; background-image: url(/assets/designbg.png); background-position: center; background-repeat: repeat; background-size: cover;">
+				<AnimatedComponent class="px-4">
+					<H2WithImage style="margin-left:0px;" class="text-left pl-0" title="Какво предлагаме" />
+					<p class="important-delay-500 text-left lg-pt-0 line-height-7">Независимо дали сте начинаещ или опитен професионалист, The Barber Shop има желание да работи с Вас.</p>
+					<p class="important-delay-500 text-left line-height-7 mb-0">Нашата мисия е да създадем не просто екип, а общност от майстори бръснари, обединени от любовта към занаята.</p>
 				</AnimatedComponent>
 			</section>
 
-			<section class="lg-pt-15 pb-20 pt-5 px-4 w-full" style="background-image: url(/assets/bg-2.jpg); background-position: center; background-repeat: no-repeat; background-size: cover;">
-				<section class="max-w-7xl mx-auto pt-10 px-4">
-					<div class="flex flex-col md:flex-row items-start gap-10 md:gap-20">
+			<section class="pb-20 px-4 w-full" style="background-image: url(/assets/bg-2.jpg); background-position: center; background-repeat: no-repeat; background-size: cover;">
+				<section class="max-w-7xl mx-auto px-4">
+					<div class="flex flex-col md:flex-row items-start md:gap-20">
 						<div class="w-full space-y-6">
 							<AnimatedComponent>
-								<h3 class="uppercase mb-4 pt-0 md:text-left c-paper important-mb-0">За начинаещ барбър</h3>
+								<img class="pb-2 pt-80px md:pt-120px flex flex-justify-center" src="/assets/heading-ic.png" />
+								<h3 class="c-paper text-left mb-7 pl-0 important-mt-0">За начинаещ барбър</h3>
 							</AnimatedComponent>
 							<AnimatedComponent>
-								<img class="md-mx-0 mx-auto pb-10 lg-pb-0 flex flex-justify-start" src="/assets/heading-ic.png" />
 								<p class="important-delay-300 lg-pt-0 sm-line-height-7 line-height-6.5 c-paper">Готови ли сте от любители бръснари да се превърнете в опитни професионалисти? Ако отговорът е да, значи сте на точното място.</p>
 								<p class="important-delay-500 sm-line-height-7 line-height-6.5 c-paper">Ако сте начинаещ барбър, който не знае откъде да започне, заповядайте при нас. В рамките на няколко месеца ще научите основните техники, както и тънкостите на бръснарството.</p>
-								<p class="important-delay-700 sm-line-height-7 line-height-6.5 c-paper">Ще разгърнете потенциала си и ще творите смело с помощта на нашия професионализъм.</p>
+								<p class="important-delay-700 sm-line-height-7 line-height-6.5 c-paper mb-0">Ще разгърнете потенциала си и ще творите смело с помощта на нашия професионализъм.</p>
 							</AnimatedComponent>
 						</div>
 
 						<div class="w-full space-y-6">
 							<AnimatedComponent>
-								<h3 class="uppercase mb-4 pt-0 md:text-left c-paper important-mb-0">За опитен барбър</h3>
+								<img class="pb-2 pt-80px md:pt-120px flex flex-justify-center" src="/assets/heading-ic.png" />
+								<h3 class="c-paper text-left mb-7 pl-0 important-mt-0">За опитен барбър</h3>
 							</AnimatedComponent>
 							<AnimatedComponent>
-								<img class="md-mx-0 mx-auto pb-10 lg-pb-0 flex flex-justify-start" src="/assets/heading-ic.png" />
 								<p class="important-delay-300 lg-pt-0 sm-line-height-7 line-height-6.5 c-paper">В случай, че вече имате професионален опит и с гордост можете да се наречете мастър барбър, елате да работим заедно.</p>
-								<p class="important-delay-500 sm-line-height-7 line-height-6.5 c-paper">Впуснете се в едно ново предизвикателство и развийте таланта си с помощта на нашия професионализъм.</p>
+								<p class="important-delay-500 sm-line-height-7 line-height-6.5 c-paper mb-0">Впуснете се в едно ново предизвикателство и развийте таланта си с помощта на нашия професионализъм.</p>
 							</AnimatedComponent>
 						</div>
 					</div>
 				</section>
 			</section>
 
-			<section class="lg-pt-15 pb-20 pt-5 px-4 w-full" style="background-attachment: fixed; background-image: url(/assets/designbg.png); background-position: center; background-repeat: repeat; background-size: cover;">
-				<section class="max-w-7xl mx-auto pt-10 px-4">
-					<div class="flex flex-col md:flex-row items-center gap-20">
+			<section class="pb-18 px-4 w-full">
+				<section class="max-w-7xl mx-auto px-4">
+					<div class="flex flex-col md:flex-row items-center gap-10 md:gap-20 md:pt-120px">
 						<AnimatedComponentSlide class="hidden md-block w-full md:w-1/2">
-							<div class="relative">
+							<div>
 								<img src="/assets/karieri/the-barber-shop-sofia-team.jpg" alt="Elegant interior design" class="w-full h-auto shadow-xl" />
+								<p class="important-my-0">text</p>
 							</div>
 						</AnimatedComponentSlide>
 
 						<div class="w-full md:w-1/2 space-y-6">
 							<AnimatedComponentSlide>
-								<h2 class="uppercase mb-4 md:text-left pt-0 mt-0 important-mb-0">Какво предлагаме</h2>
+								<img class="pb-2 mx-auto md:mx-0 pt-80px md:pt-0 flex flex-justify-center" src="/assets/heading-ic.png" />
+								<h2 class="md:text-left mb-7 pl-0 important-mt-0">Какво предлагаме</h2>
+
 							</AnimatedComponentSlide>
 							<AnimatedComponentSlide>
-								<img class="md-mx-0 mx-auto pb-10 lg-pb-0 flex flex-justify-start" src="/assets/heading-ic.png" />
 								<p class="important-delay-300 lg-pt-0 sm-line-height-7 line-height-6.5">Предлагаме не просто работа, а комбинация от непрекъснато развитие, разнообразно ежедневие и супер яки колеги.</p>
 								<div class="flex items-start">
 									<p class="flex items-start my-0">
 										<span class="flex items-center mt-1">
-											<MdiCircleSmall class="c-brand" />
+											<MdiCircleSmall class="c-brand-dark" />
 										</span>
 										работа сред млад и сплотен екип
 									</p>
@@ -210,7 +173,7 @@ export default function Page() {
 								<div class="flex items-start">
 									<p class="flex items-start my-0">
 										<span class="flex items-center mt-1">
-											<MdiCircleSmall class="c-brand" />
+											<MdiCircleSmall class="c-brand-dark" />
 										</span>
 										подкрепа в процеса на обучение
 									</p>
@@ -218,7 +181,7 @@ export default function Page() {
 								<div class="flex items-start">
 									<p class="flex items-start my-0">
 										<span class="flex items-center mt-1">
-											<MdiCircleSmall class="c-brand" />
+											<MdiCircleSmall class="c-brand-dark" />
 										</span>
 										процент от оборота
 									</p>
@@ -226,7 +189,7 @@ export default function Page() {
 								<div class="flex items-start">
 									<p class="flex items-start my-0">
 										<span class="flex items-center mt-1">
-											<MdiCircleSmall class="c-brand" />
+											<MdiCircleSmall class="c-brand-dark" />
 										</span>
 										гъвкаво работно време
 									</p>
@@ -234,7 +197,7 @@ export default function Page() {
 								<div class="flex items-start">
 									<p class="flex items-start my-0">
 										<span class="flex items-center mt-1">
-											<MdiCircleSmall class="c-brand" />
+											<MdiCircleSmall class="c-brand-dark" />
 										</span>
 										изградена клиентска база
 									</p>
@@ -242,7 +205,7 @@ export default function Page() {
 								<div class="flex items-start">
 									<p class="flex items-start my-0">
 										<span class="flex items-center mt-1">
-											<MdiCircleSmall class="c-brand" />
+											<MdiCircleSmall class="c-brand-dark" />
 										</span>
 										приятелска атмосфера
 									</p>
@@ -258,23 +221,21 @@ export default function Page() {
 				</section>
 			</section>
 
-			<section class="lg-pt-15 pb-20 pt-5 px-4 w-full" style="background-image: url(/assets/bg-2.jpg); background-position: center; background-repeat: no-repeat; background-size: cover;">
-				<section class="max-w-7xl mx-auto pt-10 px-4">
-					<div class="flex flex-col md:flex-row items-center gap-20">
-
+			<section class="pb-20 px-4 w-full" style="background-image: url(/assets/bg-2.jpg); background-position: center; background-repeat: no-repeat; background-size: cover;">
+				<section class="max-w-7xl mx-auto px-4">
+					<div class="flex flex-col md:flex-row items-center gap-10 md:gap-20 md:pt-120px">
 						<div class="w-full md:w-1/2 space-y-6">
 							<AnimatedComponentSlide>
-								<h2 class="uppercase mb-4 md:text-left pt-0 mt-0 c-paper important-mb-0">Какво изискваме</h2>
+								<img class="pb-2 mx-auto md:mx-0 pt-80px md:pt-0 flex flex-justify-center" src="/assets/heading-ic.png" />
+								<h2 class="md:text-left mb-7 pl-0 important-mt-0 c-paper">Какво изискваме</h2>
 							</AnimatedComponentSlide>
 							<AnimatedComponentSlide>
-								<img class="md-mx-0 mx-auto pb-10 lg-pb-0 flex flex-justify-start" src="/assets/heading-ic.png" />
 								<p class="important-delay-300 lg-pt-0 sm-line-height-7 line-height-6.5 c-paper">Търсим позитивен човек, търсещ нов кариерен старт!</p>
 								<p class="important-delay-500 sm-line-height-7 line-height-6.5 c-paper">Бръснарят в “The Barber Shop” e:</p>
-
 								<div class="flex items-start">
 									<p class="flex items-start my-0 c-paper">
 										<span class="flex items-center mt-1">
-											<MdiCircleSmall class="c-brand" />
+											<MdiCircleSmall class="c-brand " />
 										</span>
 										комуникативен и обичащ да общува с разнообразни хора
 									</p>
@@ -312,7 +273,7 @@ export default function Page() {
 									</p>
 								</div>
 
-								<p class="important-delay-700 sm-line-height-7 line-height-6.5 c-paper">Опитът не е задължителен, по-важно е да имате хъс и стремеж към нови знания.<br></br>
+								<p class="important-delay-700 sm-line-height-7 line-height-6.5 c-paper mb-0">Опитът не е задължителен, по-важно е да имате хъс и стремеж към нови знания.<br></br>
 									Ако смятате, че сте нашият човек, попълнете формата по-долу и ще обсъдим възможностите. За повече информация свържете се с нас.
 								</p>
 							</AnimatedComponentSlide>
@@ -322,67 +283,66 @@ export default function Page() {
 							<div class="relative">
 								<img src="/assets/karieri/бръснар-софия.jpg" alt="Elegant interior design" class="w-full h-auto shadow-xl" />
 							</div>
+							<p class="important-my-0 c-paper">text</p>
 						</AnimatedComponentSlide>
 					</div>
 				</section>
 			</section>
 
-			<section class="lg-pt-25 pb-20 pt-20 px-2 md:px-4 w-full" style="background-attachment: fixed; background-image: url(/assets/designbg.png); background-position: center; background-repeat: repeat; background-size: cover;">
-				<div class="flex flex-col-reverse lg:flex-row items-center justify-center gap-10 md:gap-20 mx-2 md:mx-20 lg:mx-50">
-					<div class="lg:w-1/2 flex flex-col justify-center lg:justify-start items-center lg:items-start">
+			<section class="pb-20 pt-20 md:pt-30 px-2 md:px-4 w-full">
+				<div class="flex flex-col lg:flex-row items-center justify-center gap-12 md:gap-20 mx-2 md:mx-15 xl:mx-45">
+					<div class="lg:w-1/2 flex flex-col justify-center sm:justify-start items-center lg:items-start">
 						<AnimatedComponent>
-							<h2 class="uppercase important-mb-0 md:mb-4 pt-0 mt-0 lg:text-left">Кандидатствай сега</h2>
-							<p class="c-#c27832 text-center lg:text-left mb-5">/ Присъедини се към нашия екип /</p>
+							<h2 class="uppercase important-mb-0 pt-0 mt-0 lg:text-left">Кандидатствай сега</h2>
+							<p class="c-brand-compliment text-center lg:text-left mb-6 font-500 important-mt-1">/ Присъедини се към нашия екип /</p>
 							<p class="text-center lg:text-left">
 								Ако обичаш занаята и искаш да работиш в модерен бръснарски салон, ние имаме място за теб! Стани част от нашия екип и развивай уменията си при нас.
 							</p>
 						</AnimatedComponent>
 						<AnimatedComponent>
 							<button
-								class="mt-3 cursor-pointer text-center w-50 lg-w-55 bg-brand hover:c-black b-solid b-2px b-brand uppercase font-size-4 lg-font-size-4.5 font-500 py-3 c-paper transition-colors" style="font-family: 'Oswald', sans-serif !important; letter-spacing: 1px;">
+								class="md:block hidden mt-3 cursor-pointer text-center w-50 lg-w-55 bg-brand-compliment hover:c-paper-inv b-solid b-2px b-brand-compliment uppercase font-size-4 lg-font-size-4.5 font-500 py-3 c-paper transition-colors" style="font-family: 'Oswald', sans-serif !important; letter-spacing: 1px;">
 								Курс за бръснар
 							</button>
 						</AnimatedComponent>
 					</div>
 
 					<AnimatedComponent class="container-form lg:w-1/2s">
-						<div class="form-container w-full max-w-150 glass-effect rounded-2xl overflow-hidden relative">
-							<div class="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-orange-900 to-red-600 opacity-10 rounded-full transform translate-x-16 -translate-y-16"></div>
-							<div class="absolute bottom-0 left-0 w-24 h-24 bg-gradient-to-tr from-red-400 to-amber-500 opacity-10 rounded-full transform -translate-x-12 translate-y-8"></div>
+						<div class="p-16px rounded-0 w-full max-w-150 glass-effect overflow-hidden relative bg-#14100c before:content-[''] before:absolute before:top-0 before:left-[80%] before:w-1/2 before:h-full before:bg-gradient-to-l before:from-[rgba(255,255,255,0.15)] before:to-transparent before:transform before:-skew-x-30 before:-translate-x-[160%]">
 
-							<div class="md:p-8 p-5">
-								<h2 class="important-mt-0 md:mt-5 mb-15">Форма за кандидатстване</h2>
+							<div class="md:px-12 md:pt-10 p-5">
+								<h2 class="important-mt-0 md:mt-5 mb-15 c-paper">Изпрати запитване</h2>
 								{!isSubmitted() && !isModalOpen() && (
 									<form class="space-y-6" onSubmit={sendEmail} method="post" enctype="multipart/form-data">
 										<div class="space-y-5">
 
-											<div class="input-highlight">
+											<div class="input-highlight relative overflow-hidden">
 												<input
 													type="text"
 													value={name()}
 													onChange={(e) => setName(e.target.value)}
 													placeholder="Име"
-													class="w-full px-4 py-3 bg-transparent border-0 border-b border-paper focus:outline-none focus:ring-0 text-gray-700"
+													class="w-full px-4 py-3 bg-transparent border-0 border-b border-paper focus:outline-none focus:ring-0 text-paper"
 													required
 												/>
 											</div>
-											<div class="input-highlight">
+											<div class="input-highlight relative overflow-hidden">
 												<input
 													type="text"
-													value={postCode()}
-													onChange={(e) => setPostCode(e.target.value)}
+													value={surname()}
+													onChange={(e) => setSurname(e.target.value)}
 													placeholder="Фамилия"
-													class="w-full px-4 py-3 bg-transparent border-0 border-b border-paper focus:outline-none focus:ring-0 text-gray-700"
+													class="w-full px-4 py-3 bg-transparent border-0 border-b border-paper focus:outline-none focus:ring-0 text-paper"
 													required
 												/>
 											</div>
-											<div class="input-highlight">
+											<div class="input-highlight relative overflow-hidden">
 												<input
 													type="email"
 													value={email()}
 													onChange={(e) => setEmail(e.target.value)}
 													placeholder="Email"
-													class="w-full px-4 py-3 bg-transparent border-0 border-b border-paper focus:outline-none focus:ring-0 text-gray-700"
+													class="w-full px-4 py-3 bg-transparent border-0 border-b border-paper focus:outline-none focus:ring-0 text-paper"
 													required
 												/>
 											</div>
@@ -391,64 +351,68 @@ export default function Page() {
 													value={text()}
 													onChange={(e) => setText(e.target.value)}
 													placeholder="Разкажи повече за себе си и бръснарството..."
-													class="w-full px-4 py-3 rounded-lg bg-white bg-opacity-50 border-paper focus:border-brand focus:ring-2 focus:ring-brand focus:ring-opacity-50 outline-none transition-all duration-200 h-32 resize-none"
+													class="rounded-0 w-full px-4 py-3 bg-white border-paper focus:border-brand focus:ring-2 focus:ring-brand focus:ring-opacity-50 outline-none transition-all duration-200 h-32 resize-none"
 												></textarea>
 											</div>
 										</div>
 										<button
 											type="submit"
-											class="cursor-pointer font-700 border-none luxury-button w-full text-white py-4 rounded-md font-medium transition-all duration-300 uppercase tracking-1.5px text-sm focus:outline-none focus:ring-4 focus:ring-indigo-300 focus:ring-opacity-50">
+											class="cursor-pointer font-700 border-none hover:shadow-xl hover:translate-y-[-2px] bg-gradient-to-br from-[#c29059] to-[#c27832] duration-200 ease-in-out shadow-[0_10px_15px_-3px_rgba(0,0,0,0.1),_0_4px_6px_-2px_rgba(252,252,252,0.05)] w-full text-white py-4 font-medium transition-all uppercase tracking-1.5px text-sm focus:outline-none focus:ring-4 focus:ring-indigo-300 focus:ring-opacity-50 rounded-0">
 											Кандидатствай
 										</button>
-										<div class="text-center text-xs text-gray-500 mt-4">
+
+										<div class="text-center text-xs text-paper mt-4">
 											Ще обработим вашето запитване с внимание. Очаквайте нашия отговор скоро!
 										</div>
 									</form>
 								)}
 
 								{isUploading() && (
-									<div class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50">
-										<div class="bg-white p-6 rounded-lg shadow-lg w-64">
-											<h3 class="text-lg font-semibold mb-3">Submitting...</h3>
-											<div class="w-full bg-gray-200 rounded h-4 overflow-hidden">
+									<div class="fixed inset-0 flex items-center justify-center bg-paper-inv bg-opacity-50 z-50">
+										<div class="bg-white p-6 rounded-1 shadow-lg w-64">
+											<h3 class="text-lg font-semibold mb-3">Изпращане...</h3>
+											<div class="w-full bg-gray-200 rounded-1 h-4 overflow-hidden relative">
 												<div
-													class="progress-bar-contacts-form h-full rounded bg-blue-500"
+													class="h-full rounded-1 bg-blue-500 relative"
 													style={{
-														animation: 'smoothProgress 15s linear forwards',
-														background: 'linear-gradient(to right, #0d2e29, #1a875e)'
+														background: 'linear-gradient(to right, #eba65b, #bf7e36)',
 													}}
-												/>
+												>
+													<div
+														class="progress-bar-contacts-form-span"
+													/>
+												</div>
 											</div>
 										</div>
 									</div>
 								)}
 
 								{isModalOpen() && (
-									<div class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-5 px-5">
-										<div class="bg-white p-8 rounded-lg shadow-lg max-w-md w-full">
-											<h2 class="text-2xl font-bold mb-4 mt-1">Success!</h2>
-											<p class="mb-5">The form has been sent successfully! We will get back to you as soon as possible.</p>
+									<div class="fixed inset-0 flex items-center justify-center bg-paper-inv bg-opacity-50 z-5 px-5">
+										<div class="bg-white p-8 shadow-lg max-w-md w-full">
+											<h2 class="text-2xl font-bold pl-0 md:mb-6 mt-1 text-left">Успешно изпращане!</h2>
+											<p class="mb-5">Съобщението е успешно изпратено. Ще се свържем с Вас възможно най-скоро.</p>
 											<button
 												onClick={closeModal}
-												class="bg-brand text-white px-5 py-3 b-none rounded hover:bg-brand-second-action-hover transition-colors">
-												Close
+												class="cursor-pointer bg-brand text-white px-5 py-3 b-none hover:bg-brand-dark transition-colors">
+												Затвори
 											</button>
 										</div>
 									</div>
 								)}
 
 								{errorMessage() && (
-									<div class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-5 px-5">
+									<div class="fixed inset-0 flex items-center justify-center bg-paper-inv bg-opacity-50 z-5 px-5">
 										<div class="bg-white p-10 pt-1 rounded-lg shadow-lg max-w-lg w-full relative">
 											<div
 												onClick={closeModal}
 												class="cursor-pointer b-none c-brand hover-c-brand-action transition-colors absolute top-4 right-4">
 												<MdiCloseThick class="w-8" />
 											</div>
-											<h3 class="font-semibold mb-3">Oops...</h3>
-											<div>It appears that our contact form is not working properly.</div>
-											<div>Please contact us via WhatsApp.</div>
-											<div class="mt-5 -ml-1"><a class="c-paper bg-brand text-white px-5 py-3 b-none rounded hover:bg-brand-second-action-hover transition-colors" href="https://wa.me/+447874333356" target="_blank" rel="noopener">Click to chat</a></div>
+											<h3 class="font-semibold mb-3 text-left">Oops...</h3>
+											<div>Изглежда, че нашата контактна форма не работи правилно.</div>
+											<div>Моля, свържете се с нас чрез WhatsApp.</div>
+											<div class="mt-5 -ml-1"><a class="c-paper bg-brand text-white px-5 py-3 b-none rounded hover:bg-brand-dark transition-colors" href="/" target="_blank" rel="noopener">Към чат</a></div>
 										</div>
 									</div>
 								)}

@@ -1,8 +1,5 @@
 import "solid-slider/slider.css";
 import { AnimatedComponent } from '../../components/AnimateOnView';
-import MdiBank from '~icons/mdi/bank';
-import MdiPhoneClassic from '~icons/mdi/phone-classic';
-import RiTimerFill from '~icons/ri/timer-fill';
 import MdiScissors from '~icons/mdi/scissors?width=24px&height=24px';
 import { createSignal, onCleanup, onMount } from "solid-js";
 
@@ -29,34 +26,43 @@ function useMediaQuery(query: string) {
 	return matches;
 }
 
-const cursor = document.querySelector('.cursor') as HTMLDivElement;
-const trail = document.querySelector('.cursor-trail') as HTMLDivElement;
-
-document.addEventListener('mousemove', (event: MouseEvent) => {
-	const { clientX: x, clientY: y } = event;
-
-	// Smoothly move cursor
-	cursor.style.transform = `translate(${x}px, ${y}px)`;
-
-	// Slight delay for trailing effect
-	setTimeout(() => {
-		trail.style.transform = `translate(${x}px, ${y}px)`;
-	}, 50);
-});
 
 
 function ServiceContainer(props: { href: string, title: string, desc: string, price?: string, time?: string, img: string, alt: string }) {
 	const isDesktop = useMediaQuery("(min-width: 768px)");
+	const [arrowWidth, setArrowWidth] = createSignal(50);
+	const [isVisible, setIsVisible] = createSignal(false);
+	let containerRef: HTMLDivElement | undefined;
+
+	onMount(() => {
+		const observer = new IntersectionObserver(
+			(entries) => {
+				entries.forEach((entry) => {
+					if (entry.isIntersecting) {
+						setArrowWidth(150);
+						setIsVisible(true);
+					} else {
+						setArrowWidth(50);
+						setIsVisible(false);
+					}
+				});
+			},
+			{ threshold: 0.5 }
+		);
+
+		if (containerRef) observer.observe(containerRef);
+		onCleanup(() => observer.disconnect());
+	});
 
 	return (
 		<>
-			<AnimatedComponent class="max-w-400px w-full h-450px md-w-400px md-h-550px">
+			<AnimatedComponent class="max-w-400px w-full h-500px md-w-400px md-h-550px">
 				{isDesktop() ? (
 					<a href={props.href}>
 						<div
 							class="block h-full relative flex flex-col justify-end group overflow-hidden"
 							style={{
-								"background-image": `linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8)), url(${props.img})`,
+								"background-image": `linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.9)), url(${props.img})`,
 								"background-position": "center",
 								"background-repeat": "no-repeat",
 								"background-size": "cover",
@@ -66,50 +72,59 @@ function ServiceContainer(props: { href: string, title: string, desc: string, pr
 							</span>
 							<span class="before:absolute before:content-empty before:bg-[#bbbbbb] before:z-[1] before:w-[1px] before:h-[80%] before:bottom-[1rem] before:right-[1rem] after:absolute after:content-empty after:bg-[#bbbbbb] after:z-[1] after:h-[1px] after:w-[80%] after:right-[1rem] after:bottom-[1rem] group-hover:before:h-[calc(100%-2rem)] group-hover:after:w-[calc(100%-2rem)] before:transition-all before:duration-700 before:ease-in-out after:transition-all after:duration-700 after:ease-in-out">
 							</span>
-							<div class="relative z-10 px-8 pb-8 flex flex-col items-center h-full">
-								<div class="flex flex-col items-center text-center absolute bottom-8 left-1/2 transform -translate-x-1/2 transition-all duration-700 ease-in-out group-hover:bottom-[33%]">
+							<div class="relative z-10 px-8 pb-8 flex flex-col items-center">
+								<div class="flex flex-col items-center text-center bottom-8 transition-all duration-700 ease-in-out group-hover:bottom-[33%]">
 									<MdiScissors class="c-paper mx-auto rotate-[270deg] w-8" />
 									<div class="w-300px">
-										<h3 class="c-paper mt-2 mb-3">{props.title}</h3>
+										<h3 class="c-paper mt-2 mb-1">{props.title}</h3>
 									</div>
-									<div class="h-[1px] w-[100px] group-hover:w-[300px] transition-all duration-900 ease-in-out bg-brand"></div>
-									<div class="c-paper mt-3">{props.price} лв. │ {props.time}</div>
+									<div class="h-[1px] w-[100px] group-hover:w-[300px] transition-all duration-900 ease-in-out bg-brand mb-4"></div>
 								</div>
-								<div class="c-paper text-center my-2 opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-700 ease-in-out text-lg leading-8 mt-auto">
+								<div class="c-paper text-left mb-4 px-4 text-lg leading-7 mt-auto">
 									{props.desc}
+								</div>
+								<div class="flex flex-col flex-items-center pb-2">
+									<div class="bg-none c-paper b-solid b-1px b-paper hover-b-brand hover-bg-brand transition-colors mx-auto uppercase font-size-4 font-500 px-7 py-2" style="font-family: 'Oswald', sans-serif !important; letter-spacing: 1px;">Вижте повече</div>
 								</div>
 							</div>
 						</div>
 					</a>
 				) : (
 					<div
+						ref={containerRef}
 						class="block h-full relative flex flex-col justify-end group overflow-hidden"
 						style={{
-							"background-image": `linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8)), url(${props.img})`,
+							"background-image": `linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.9)), url(${props.img})`,
 							"background-position": "center",
 							"background-repeat": "no-repeat",
 							"background-size": "cover",
 						}}
 						role="img" aria-label={props.alt}>
-						<span class="before:absolute before:content-empty before:bg-[#bbbbbb] before:z-[1] before:w-[1px] before:h-[80%] before:top-[1rem] before:left-[1rem] after:absolute after:content-empty after:bg-[#bbbbbb] after:z-[1] after:h-[1px] after:w-[80%] after:top-[1rem] after:left-[1rem] group-hover:before:h-[calc(100%-2rem)] group-hover:after:w-[calc(100%-2rem)] before:transition-all before:duration-700 before:ease-in-out after:transition-all after:duration-700 after:ease-in-out">
+						<span class={`before:absolute before:content-empty before:bg-[#bbbbbb] before:z-[1] before:w-[1px] before:h-[80%] before:top-[1rem] before:left-[1rem] 
+                  after:absolute after:content-empty after:bg-[#bbbbbb] after:z-[1] after:h-[1px] after:w-[80%] after:top-[1rem] after:left-[1rem]
+                  before:transition-all before:duration-700 before:ease-in-out after:transition-all after:duration-700 after:ease-in-out 
+                  ${isVisible() ? "before:h-[calc(100%-2rem)] after:w-[calc(100%-2rem)]" : ""}`}>
 						</span>
-						<span class="before:absolute before:content-empty before:bg-[#bbbbbb] before:z-[1] before:w-[1px] before:h-[80%] before:bottom-[1rem] before:right-[1rem] after:absolute after:content-empty after:bg-[#bbbbbb] after:z-[1] after:h-[1px] after:w-[80%] after:right-[1rem] after:bottom-[1rem] group-hover:before:h-[calc(100%-2rem)] group-hover:after:w-[calc(100%-2rem)] before:transition-all before:duration-700 before:ease-in-out after:transition-all after:duration-700 after:ease-in-out">
+						<span class={`before:absolute before:content-empty before:bg-[#bbbbbb] before:z-[1] before:w-[1px] before:h-[80%] before:bottom-[1rem] before:right-[1rem] 
+                  after:absolute after:content-empty after:bg-[#bbbbbb] after:z-[1] after:h-[1px] after:w-[80%] after:right-[1rem] after:bottom-[1rem]
+                  before:transition-all before:duration-700 before:ease-in-out after:transition-all after:duration-700 after:ease-in-out 
+                  ${isVisible() ? "before:h-[calc(100%-2rem)] after:w-[calc(100%-2rem)]" : ""}`}>
 						</span>
-						<div class="relative z-10 px-8 pb-8 flex flex-col items-center h-full">
-							<div class="flex flex-col items-center text-center absolute bottom-25 left-1/2 transform -translate-x-1/2 transition-all duration-700 ease-in-out group-hover:bottom-[44%]">
+						<div class="relative z-10 px-8 pb-8 flex flex-col items-center justify-end h-full">
+							<div class="flex flex-col items-center text-center transition-all duration-700 ease-in-out ">
 								<MdiScissors class="c-paper mx-auto rotate-[270deg] w-8" />
 								<div class="w-250px">
-									<h3 class="c-paper mt-1 mb-3">{props.title}</h3>
+									<h3 class="c-paper mt-1 important-mb-1">{props.title}</h3>
 								</div>
-								<div class="h-[1px] w-[100px] group-hover:w-[200px] transition-all duration-900 ease-in-out bg-brand"></div>
-								<div class="c-paper mt-2">{props.price} лв. │ {props.time}</div>
-							</div>
-							<div class="c-paper text-center opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-700 ease-in-out text-3.7 leading-6 mt-auto">
-								{props.desc}
-							</div>
-
-							<div class="flex flex-col flex-items-center pt-4 pb-2">
-								<a href={props.href} class="bg-brand c-black b-solid b-2px b-brand uppercase font-size-3.5 font-500 px-6 py-1.3 hover-c-paper transition-colors" style="font-family: 'Oswald', sans-serif !important; letter-spacing: 1px;">Вижте повече</a>
+								<div class="h-[1px] transition-all duration-900 ease-in-out bg-brand"
+									style={{ width: `${arrowWidth()}px` }}>
+								</div>
+								<div class="c-paper text-left pt-4 px-4 text-lg leading-7 mt-auto">
+									{props.desc}
+								</div>
+								<div class="flex flex-col flex-items-center pt-4">
+									<div class="bg-none c-paper b-solid b-1px b-paper hover-b-brand hover-bg-brand transition-colors mx-auto uppercase font-size-4 font-500 px-7 py-2" style="font-family: 'Oswald', sans-serif !important; letter-spacing: 1px;">Вижте повече</div>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -122,21 +137,17 @@ function ServiceContainer(props: { href: string, title: string, desc: string, pr
 export default function Page() {
 	return (
 		<>
-			<div style="background-position: center top; background-repeat: no-repeat; background-size: cover; height: auto;"><div style="background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.5) ), url(assets/The_Barber_Shop-144-2_17.jpg); background-position: center; background-repeat: no-repeat; background-size: cover;" class="md-h-50vh h-30vh"></div></div>
-
-			<div class="w-full bg-#212528">
-				<div class="max-w-1240px mx-auto">
-					<div class="flex flex-justify-center">
-						<div class="left-0 right-0 px-3 my-0 mx-auto absolute top-19% lg-top-30% text-center w-full max-w-800px" style="-webkit-transform: translateY(-50%);">
-							<AnimatedComponent>
-								<h1 class="uppercase c-paper mb-6 text-center">Кои сме ние</h1>
-							</AnimatedComponent>
-						</div>
+			<div class="max-w-1240px mx-auto">
+				<div class="flex flex-justify-center">
+					<div class="px-3 my-0 mx-auto text-center w-full">
+						<AnimatedComponent>
+							<h1 class="uppercase mt-30 md:mt-65 text-center">Всички наши услуги</h1>
+						</AnimatedComponent>
 					</div>
 				</div>
 			</div>
 
-			<section class="lg-pb-25 pb-20 md-pt-40 pt-25" style="background-attachment: fixed; background-image: url(/assets/designbg.png); background-position: center; background-repeat: repeat; background-size: cover;">
+			<section class="pb-17 md-pt-35 pt-15">
 				<div class="container-in-services flex md-flex-row flex-col flex-justify-center flex-items-center flex-wrap mb-5 gap-15 lg-gap-25 lg-px-10 px-5">
 					<ServiceContainer
 						img="/assets/uslugi/мъжко-подстригване-1-mobile.webp"

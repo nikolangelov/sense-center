@@ -16,6 +16,7 @@ import MdiBankOutline from '~icons/mdi/bank-outline';
 import MdiAccountFileTextOutline from '~icons/mdi/account-file-text-outline';
 import MdiAccountGroupOutline from '~icons/mdi/account-group-outline';
 import MdiDiamondOutline from '~icons/mdi/diamond-outline';
+import { H2WithImage } from '../components/H2WithImage';
 
 export default function LayoutDefault(props: { children?: JSX.Element }) {
   const childrenMemo = children(() => props.children)
@@ -38,44 +39,44 @@ export default function LayoutDefault(props: { children?: JSX.Element }) {
             <img src="/assets/the-barber-shop-logo1000-x-400-px.webp" class="lg-w-30 w-20 lg-ml-10 lg-mt-4" alt="the-barber-shop-logo" />
           </a>
         </div>
-        
-    <div class="flex whitespace-nowrap justify-end items-center font-semibold gap-5 xl:gap-12 md:pr-10 md:pl-5 xl:pl-10 pr-6">
-      <div
-        class="relative"
-        onMouseEnter={() => setServicesMenuOpen(true)}
-        onMouseLeave={() => setServicesMenuOpen(false)}
-      >
-        <ServiceMenuItem href="/uslugi">Услуги</ServiceMenuItem>
-        <DropDownMenuDesktop
-          isVisible={servicesMenuOpen()}
-          href="/mazhko-podstrigvane"
-          title="МЪЖКО ПОДСТРИГВАНЕ"
-        />
-      </div>
 
-      <MenuItem href="/">Цени</MenuItem>
-      <MenuItem href="/">Отзиви</MenuItem>
+        <div class="flex whitespace-nowrap justify-end items-center font-semibold gap-5 xl:gap-12 md:pr-10 md:pl-5 xl:pl-10 pr-6">
+          <div
+            class="relative"
+            onMouseEnter={() => setServicesMenuOpen(true)}
+            onMouseLeave={() => setServicesMenuOpen(false)}
+          >
+            <ServiceMenuItem href="/uslugi">Услуги</ServiceMenuItem>
+            <DropDownMenuDesktop
+              isVisible={servicesMenuOpen()}
+              href="/mazhko-podstrigvane"
+              title="МЪЖКО ПОДСТРИГВАНЕ"
+            />
+          </div>
 
-      <div
-        class="relative"
-        onMouseEnter={() => setAboutMenuOpen(true)}
-        onMouseLeave={() => setAboutMenuOpen(false)}
-      >
-        <ServiceMenuItem href="/za-nas">За нас</ServiceMenuItem>
-        <DropDownMenuDesktop
-          isVisible={aboutMenuOpen()}
-          href="/za-nas/kris"
-          title="КРИС"
-        />
-      </div>
-      <MenuItem href="/karieri">Кариери</MenuItem>
-      <MenuItem href="/">Магазин</MenuItem>
-      <MenuItem href="/kontakti">Контакти</MenuItem>
-    </div>
+          <MenuItem href="/">Цени</MenuItem>
+          <MenuItem href="/">Отзиви</MenuItem>
+
+          <div
+            class="relative"
+            onMouseEnter={() => setAboutMenuOpen(true)}
+            onMouseLeave={() => setAboutMenuOpen(false)}
+          >
+            <ServiceMenuItem href="/za-nas">За нас</ServiceMenuItem>
+            <DropDownMenuDesktop
+              isVisible={aboutMenuOpen()}
+              href="/za-nas/kris"
+              title="КРИС"
+            />
+          </div>
+          <MenuItem href="/karieri">Кариери</MenuItem>
+          <MenuItem href="/">Магазин</MenuItem>
+          <MenuItem href="/kontakti">Контакти</MenuItem>
+        </div>
 
         <a href="/test#test-id-page" class="hidden lg-block mr-10">
           <button onClick={closeMenu}
-            class="cursor-pointer bg-#d19d64 c-black b-solid b-2px b-#d19d64 uppercase font-size-4 font-500 px-7 py-2 hover-c-paper transition-colors b-rd-3px lg-block hidden" style="font-family: 'Oswald', sans-serif !important; letter-spacing: 1px;"
+            class="cursor-pointer bg-brand-compliment c-paper b-solid b-2px b-brand-compliment uppercase font-size-4 font-500 px-7 py-2 hover-c-paper-inv transition-colors lg-block hidden" style="font-family: 'Oswald', sans-serif !important; letter-spacing: 1px;"
           >
             Запазете час
           </button>
@@ -92,12 +93,12 @@ export default function LayoutDefault(props: { children?: JSX.Element }) {
               <GoogleMapIframe />
             </div>
 
-            <AnimatedComponent class="md-hidden flex flex-justify-center lg-flex-justify-center lg-mt-10 w-full gap-5 lg-gap-15 py-10">
-              <a href="/" class="text-center w-32 lg-w-42 bg-brand c-black b-solid b-2px b-brand uppercase font-size-4 lg-font-size-5 font-500 py-3 hover-c-paper transition-colors" style="font-family: 'Oswald', sans-serif !important; letter-spacing: 1px;">Запазете час</a>
-              <a href="/" class="text-center w-32 lg-w-42 bg-brand c-black b-solid b-2px b-brand uppercase font-size-4 lg-font-size-5 font-500 py-3 hover-c-paper transition-colors" style="font-family: 'Oswald', sans-serif !important; letter-spacing: 1px;">Цени</a>
+            <AnimatedComponent class="hidden  flex-justify-center lg-flex-justify-center lg-mt-10 w-full gap-5 lg-gap-15 py-10">
+              <a href="/" class="text-center w-32 lg-w-42 bg-brand c-paper-inv b-solid b-2px b-brand uppercase font-size-4 lg-font-size-5 font-500 py-3 hover-c-paper transition-colors" style="font-family: 'Oswald', sans-serif !important; letter-spacing: 1px;">Запазете час</a>
+              <a href="/" class="text-center w-32 lg-w-42 bg-brand c-paper-inv b-solid b-2px b-brand uppercase font-size-4 lg-font-size-5 font-500 py-3 hover-c-paper transition-colors" style="font-family: 'Oswald', sans-serif !important; letter-spacing: 1px;">Цени</a>
             </AnimatedComponent>
 
-            <div class="flex flex-col flex-justify-start flex-items-center py-2 md-gap-0 gap-1">
+            <div class="flex flex-col flex-justify-start flex-items-center py-2 md-gap-0 gap-1 mt-5 md-mt-0">
               <h3 class="c-brand font-600 mt-0 uppercase">Най-популярните<br></br>ни услуги</h3>
               <MainFooterMenuItem href="/">Мъжко подстригване</MainFooterMenuItem>
               <div>
@@ -139,10 +140,10 @@ export default function LayoutDefault(props: { children?: JSX.Element }) {
 
           <div class="flex flex-justify-center pt-11 pb-2 gap-3 b-t-solid b-t-0.5px mx-5 sm-mx-10 lg-mx-30" style="border-top-color: rgba(255, 255, 255, 0.12);">
             <a href="/">
-              <RiFacebookFill class="w-10 h-10 bg-brand hover-c-#07111c transition-colors p-1.5 c-paper" />
+              <RiFacebookFill class="w-10 h-10 bg-brand-compliment hover-c-paper-inv transition-colors p-1.5 c-paper" />
             </a>
             <a href="/">
-              <RiInstagramLine class="w-10 h-10 bg-brand hover-c-#07111c transition-colors p-1.5 c-paper" />
+              <RiInstagramLine class="w-10 h-10 bg-brand-compliment hover-c-paper-inv transition-colors p-1.5 c-paper" />
             </a>
           </div>
 
@@ -161,7 +162,7 @@ export default function LayoutDefault(props: { children?: JSX.Element }) {
           </div> */}
 
           <div class="b-t-solid b-t-0.5px mx-5 sm-mx-10 lg-mx-30 py-8 font-100 flex md-flex-row flex-col flex-justify-between flex-items-center" style="border-top-color: rgba(255, 255, 255, 0.12);">
-            <p class="text-center c-paper lg-font-size-3.5 md-font-size-3.3 font-size-3.2 line-height-6 font-sans">Copyright &copy; <CurrentYear /> <span class="c-brand">TheBarberShop</span></p>
+            <p class="text-center c-paper lg-font-size-3.5 md-font-size-3.3 font-size-3.2 line-height-6 font-sans">Copyright &copy; <CurrentYear /> <span class="c-brand"><BottomFooterMenuItem href="/">TheBarberShop</BottomFooterMenuItem></span></p>
             <div class="flex flex-col md-flex-row md-gap-2 lg-gap-5 flex-items-center flex-justify-end">
               <BottomFooterMenuItem href="/">Общи условия</BottomFooterMenuItem>
               <BottomFooterMenuItem href="/">Политика за поверителност</BottomFooterMenuItem>
@@ -194,50 +195,50 @@ function TopFooter() {
 
   return (
     <>
-      <div class="" style="background-position: center top; background-repeat: no-repeat; background-size: cover; height: auto;">
-        <div class="px-2 gap-15 lg-h-80vh h-100% lg-py-0 py-15 flex flex-col flex-justify-center flex-items-center" style="background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7) ), url(/assets/20.jpg); background-position: 50% 50% ; background-repeat: no-repeat; background-size: cover;" role="img" aria-label="">
+      <div style="background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7) ), url(/assets/20.jpg); background-position: 50% 50% ; background-repeat: no-repeat; background-size: cover;" role="img" aria-label="">
+        <div class="px-2 gap-15 h-100% lg-py-0 pb-12 flex flex-col flex-justify-center flex-items-center">
           <AnimatedComponent class="flex flex-col flex-justify-center">
-            <h2 class="c-paper important-my-0">Свържете се с нас</h2>
-            <img class="mx-auto pt-2" src="/assets/heading-ic.png" />
+            <H2WithImage class="c-paper important-mb-0" title="Свържете се с нас" />
           </AnimatedComponent>
 
           <div class="flex lg-flex-row flex-col lg-gap-0 gap-10 w-full flex-justify-center">
-            <AnimatedComponent class="flex flex-col text-center lg-w-25%">
+            <AnimatedComponent class="flex flex-col text-center lg-w-22%">
               <MdiBank class="c-paper-inv bg-paper b-rd-50% font-size-10 p-2 pl-2.3 mx-auto lg-mb-6 mb-3" />
-              <div class="c-brand mx-auto font-size-4.5 lg-font-size-4.8" style="font-family: 'Oswald', sans-serif !important; letter-spacing: 1px;">
+              <div class="c-brand mx-auto font-size-4.5 lg-font-size-4.8 text-center" style="font-family: 'Oswald', sans-serif !important; letter-spacing: 1px;">
                 Адрес:
               </div>
-              <div class="c-paper mx-auto font-size-4.5 lg-font-size-4.8" style="font-family: 'Oswald', sans-serif !important; letter-spacing: 1px;">
+              <div class="c-paper mx-auto font-size-4.5 lg-font-size-4.8 text-center" style="font-family: 'Oswald', sans-serif !important; letter-spacing: 1px;">
                 София, ул. "Николай Хайтов" 2
               </div>
             </AnimatedComponent>
 
-            <AnimatedComponent class="flex flex-col text-center lg-w-25%">
+            <AnimatedComponent class="flex flex-col text-center lg-w-22%">
+              <MdiPhoneClassic class="c-paper-inv bg-paper b-rd-50% font-size-10 p-2 mx-auto lg-mb-6 mb-3" />
+              <div class="c-brand mx-auto font-size-4.5 lg-font-size-4.8 text-center" style="font-family: 'Oswald', sans-serif !important; letter-spacing: 1px;">
+                Телефон:
+              </div>
+              <div class="c-paper mx-auto font-size-4.5 lg-font-size-4.8 text-center" style="font-family: 'Oswald', sans-serif !important; letter-spacing: 1px;">
+                +359 882 820 331
+              </div>
+            </AnimatedComponent>
+
+            <AnimatedComponent class="flex flex-col text-center lg-w-22%">
               <RiTimerFill class="c-paper-inv bg-paper b-rd-50% font-size-10 p-2 mx-auto lg-mb-6 mb-3" />
-              <div class="c-brand mx-auto font-size-4.5 lg-font-size-4.8" style="font-family: 'Oswald', sans-serif !important; letter-spacing: 1px;">
+              <div class="c-brand mx-auto font-size-4.5 lg-font-size-4.8 text-center" style="font-family: 'Oswald', sans-serif !important; letter-spacing: 1px;">
                 Работно време:
               </div>
-              <div class="c-paper mx-auto font-size-4.5 lg-font-size-4.8" style="font-family: 'Oswald', sans-serif !important; letter-spacing: 1px;">
+              <div class="c-paper mx-auto font-size-4.5 lg-font-size-4.8 text-center" style="font-family: 'Oswald', sans-serif !important; letter-spacing: 1px;">
                 Понеделник - Петък: 09.00 - 17.00
               </div>
             </AnimatedComponent>
-
-            <AnimatedComponent class="flex flex-col text-center lg-w-25%">
-              <MdiPhoneClassic class="c-paper-inv bg-paper b-rd-50% font-size-10 p-2 mx-auto lg-mb-6 mb-3" />
-              <div class="c-brand mx-auto font-size-4.5 lg-font-size-4.8" style="font-family: 'Oswald', sans-serif !important; letter-spacing: 1px;">
-                Телефон:
-              </div>
-              <div class="c-paper mx-auto font-size-4.5 lg-font-size-4.8" style="font-family: 'Oswald', sans-serif !important; letter-spacing: 1px;">
-                0882 820 331
-              </div>
-            </AnimatedComponent>
           </div>
-
-          <AnimatedComponent class="hidden md-flex flex-justify-evenly lg-flex-justify-center lg-mt-10 w-full lg-gap-15 max-w-90% lg-max-w-1200px border-t-solid b-paper b-1px pt-16 lg-pt-22">
-            <a href="/" class="text-center w-32 lg-w-42 bg-brand c-black b-solid b-2px b-brand uppercase font-size-4 lg-font-size-4.5 font-500 py-3 hover-c-paper transition-colors" style="font-family: 'Oswald', sans-serif !important; letter-spacing: 1px;">Запазете час</a>
-            <a href="/" class="text-center w-32 lg-w-42 bg-brand c-black b-solid b-2px b-brand uppercase font-size-4 lg-font-size-4.5 font-500 py-3 hover-c-paper transition-colors" style="font-family: 'Oswald', sans-serif !important; letter-spacing: 1px;">Цени</a>
-          </AnimatedComponent>
         </div>
+        <AnimatedComponent class="flex flex-justify-center pb-20">
+          <div class="flex flex-justify-evenly lg-flex-justify-center lg-mt-5 w-full lg-gap-15 max-w-80% lg-max-w-1100px lg:border-t-solid b-paper b-1px b-op-60% pt-5 lg-pt-20">
+            <a href="/" class="text-center w-32 lg-w-42 bg-brand c-paper-inv b-solid b-2px b-brand uppercase font-size-4 lg-font-size-4.5 font-500 py-3 hover-c-paper transition-colors" style="font-family: 'Oswald', sans-serif !important; letter-spacing: 1px;">Запазете час</a>
+            <a href="/" class="text-center w-32 lg-w-42 bg-brand c-paper-inv b-solid b-2px b-brand uppercase font-size-4 lg-font-size-4.5 font-500 py-3 hover-c-paper transition-colors" style="font-family: 'Oswald', sans-serif !important; letter-spacing: 1px;">Цени</a>
+          </div>
+        </AnimatedComponent>
       </div>
     </>
   )
@@ -261,7 +262,7 @@ function DropdownMenuItem(props: { href: string; children: any }) {
   return (
     <a href={props.href} class="flex justify-center items-center p-2 hover:bg-#d19d64 hover:bg-opacity-40 transition-all">
       <div class="text-center c-#10203b uppercase tracking-wider font-500 leading-normal font-size-4"
-      style="font-family: 'Oswald', sans-serif !important">
+        style="font-family: 'Oswald', sans-serif !important">
         {props.children}
       </div>
     </a>
@@ -272,9 +273,8 @@ function DropDownMenuDesktop(props: { isVisible: boolean; href: string; title: s
 
   return (
     <div
-      class={`absolute top-full left-0 w-55 bg-white shadow-lg z-10 py-4 px-4 rounded-lg transition-all duration-300 ease-out ${
-        props.isVisible ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-4 invisible"
-      }`}>
+      class={`absolute top-full left-0 w-55 bg-white shadow-lg z-10 py-4 px-4 rounded-lg transition-all duration-300 ease-out ${props.isVisible ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-4 invisible"
+        }`}>
       <DropdownMenuItem href={props.href}>{props.title}</DropdownMenuItem>
     </div>
   );
@@ -381,7 +381,7 @@ function HamburgerMenu() {
       <a href="/test">
         <button
           onClick={closeMenu}
-          class="cursor-pointer bg-#d19d64 c-black b-solid b-2px b-#d19d64 uppercase font-size-3.5 font-500 px-7 py-2 hover-c-paper transition-colors b-rd-3px block lg-hidden"
+          class="cursor-pointer bg-brand-compliment c-paper b-solid b-2px b-brand-compliment uppercase font-size-3.5 font-500 px-7 py-2 hover-c-paper-inv transition-colors block lg-hidden"
           style="font-family: 'Oswald', sans-serif !important; letter-spacing: 0.2px;"
         >
           Запазете час
@@ -402,14 +402,14 @@ function HamburgerMenu() {
       </div>
       <Show when={open()}>
         <div
-          class="fixed w-screen h-screen left-0 top-0 px-15 pt-15 transition-all transition-duration-400"
+          class="fixed w-full h-full left-0 top-0 px-15 pt-10 transition-all transition-duration-400"
           style={`
             height: 100vh;
             opacity: ${opacity()};
             transform: translateY(${translateY()});
             overflow-y: auto;
             transition: transform 0.6s ease-in-out, opacity 0.3s ease-in-out;
-            background: linear-gradient(180deg, #f5a574 0%, #423429 100%);
+            background: linear-gradient(180deg, #eba65b 0%, #423429 100%);
           `}
         >
           <div class="py-10 text-left">
@@ -422,12 +422,12 @@ function HamburgerMenu() {
 }
 import RiArrowRightSLine from '~icons/ri/arrow-right-s-line';
 
-function MobileDropdownMenuItem(props: { 
-  closeMenu: () => void; 
-  href?: string; 
-  text: string; 
-  icon: JSX.Element; 
-  subMenu?: { href: string; text: string }[]; 
+function MobileDropdownMenuItem(props: {
+  closeMenu: () => void;
+  href?: string;
+  text: string;
+  icon: JSX.Element;
+  subMenu?: { href: string; text: string }[];
 }) {
   const [open, setOpen] = createSignal(false);
 
@@ -438,7 +438,7 @@ function MobileDropdownMenuItem(props: {
 
   return (
     <div>
-      <div 
+      <div
         class="flex flex-items-center flex-nowrap c-paper hover-c-brand:hover font-size-6.5 font-400 uppercase active:bg-paper active:bg-opacity-15 active:c-paper hover:bg-paper hover-bg-opacity-10 hover:c-paper p-4 my-1 b-rd-2 transition-all cursor-pointer"
       >
         {props.icon && <span class="mr-3 c-paper flex items-center w-7">{props.icon}</span>}
@@ -453,13 +453,13 @@ function MobileDropdownMenuItem(props: {
           </span>
         )}
       </div>
-      
+
       {props.subMenu && open() && (
         <div class="pl-6 transition-all duration-300">
           {props.subMenu.map((item) => (
-            <a 
-              href={item.href} 
-              onClick={props.closeMenu} 
+            <a
+              href={item.href}
+              onClick={props.closeMenu}
               class="flex flex-items-center flex-nowrap c-paper hover-c-brand:hover font-size-5 font-400 uppercase active:bg-paper active:bg-opacity-15 active:c-paper hover:bg-paper hover-bg-opacity-10 hover:c-paper p-3 b-rd-2 transition-all cursor-pointer"
               style="font-family: 'Oswald', sans-serif"
             >
@@ -480,7 +480,7 @@ const MyDropdown = (props: { closeMenu: () => void; }) => {
           <MobileDropdownMenuItem
             closeMenu={props.closeMenu}
             text="Услуги"
-            href="/"
+            href="/uslugi"
             icon={<RiScissorsLine />}
             subMenu={[
               { href: "/mazhko-podstrigvane", text: "Мъжко подстригване" },
@@ -501,7 +501,7 @@ const MyDropdown = (props: { closeMenu: () => void; }) => {
           <MobileDropdownMenuItem
             closeMenu={props.closeMenu}
             text="За нас"
-            href="/"
+            href="/za-nas"
             icon={<MdiAccountGroupOutline />}
             subMenu={[
               { href: "/za-nas/kris", text: "Крис" },
@@ -532,7 +532,6 @@ const MyDropdown = (props: { closeMenu: () => void; }) => {
 };
 
 function MainFooter(props: { children: JSX.Element }) {
-
   return (
     <div
       class="flex flex-col flex-justify-center md-flex-justify-center bg-#14100c flex-shrink-0 flex-items-center flex-wrap b-t-solid b-t-1px" style="border-top-color: rgba(209, 157, 100, 0.3); background-image: url(/assets/1313131.png); background-position: center center; background-repeat: no-repeat; background-size: cover; filter: grayscale(0%);">
@@ -542,7 +541,6 @@ function MainFooter(props: { children: JSX.Element }) {
 }
 
 function BottomFooterMenuItem(props: { href: string, children: JSX.Element }) {
-
   return <a href={props.href} class="transition-colors c-brand hover-color-paper:hover font-400 lg-font-size-3.5 md-font-size-3.3 font-size-3.2 lg-py-1 md-py-2 font-sans line-height-6">{props.children}</a>
 }
 
@@ -553,7 +551,7 @@ function MainFooterMenuItem(props: { href: string, children: JSX.Element }) {
 function BackToTopButton(props: { onClick: JSX.EventHandlerUnion<HTMLButtonElement, MouseEvent> | undefined; children: number | boolean | Node | JSX.ArrayElement | (string & {}) | null | undefined; }) {
   return (
     <button
-      class="flex items-center justify-between cursor-pointer b-solid b-2px c-brand hover-c-#b56b1b b-brand hover-b-#b56b1b bg-transparent md-w-12 md-h-12 w-10 h-10 b-rd-50% transition-colors"
+      class="flex items-center justify-between cursor-pointer b-solid b-2px c-brand-dark hover-c-#d1934f b-brand-dark hover-b-#d1934f bg-transparent md-w-12 md-h-12 w-10 h-10 b-rd-50% transition-colors"
       onClick={props.onClick}
     >
       {props.children}

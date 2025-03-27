@@ -13,7 +13,6 @@ a {
   box-sizing: border-box;
 }
 
-/* Reset */
 body {
   margin: 0 auto;
   background-color: #fff3e3;
@@ -24,6 +23,12 @@ body {
 #page-content {
   margin: 0 auto;
   padding: 0px !important;
+  background-attachment: fixed; 
+  background-image: linear-gradient(rgba(122, 50, 8, 0.2), rgba(126, 78, 51, 0.1) ), url(/assets/designbg.png); 
+  background-position: center; 
+  background-repeat: repeat; 
+  background-size: cover;
+  overflow: hidden;
 }
 
 .page-view {
@@ -41,8 +46,8 @@ body.page-is-transitioning #page-content {
 }
 
 li::marker {
-  color: #d19d64;
-  font-size: 1.2rem !important;
+  color: #eba65b;
+  font-size: 0.8rem !important;
 }
 
 div,
@@ -90,6 +95,7 @@ h4 {
     line-height: 35px !important;
     font-weight: 900;
     letter-spacing: 0px;
+    margin: 0px 0px 20px 0px !important;
   }
 }
 
@@ -100,7 +106,7 @@ h4 {
     line-height: 45px !important;
     font-weight: 900;
     letter-spacing: 0px;
-    margin: 40px 0px !important;
+    margin: 0px 0px 40px 0px !important;
   }
 }
 
@@ -143,7 +149,7 @@ h1 {
 h2 {
   font-weight: 700;
   font-size: 2.5rem;
-  margin: 80px 0px;
+  margin: 0px 0px 60px 0px;
   letter-spacing: -0.02rem;
   line-height: 3.5rem;
 }
@@ -156,14 +162,13 @@ h3 {
   letter-spacing: 0.5px;
 }
 
-
 html::-webkit-scrollbar {
   width: 13px;
   background-color: #e0e0e0;
 }
 
 html::-webkit-scrollbar-thumb {
-  background-image: linear-gradient(30deg, #14100c 0%, #f5a574 80%);
+  background-image: linear-gradient(30deg, #14100c 0%, #eba65b 80%);
   border-radius: 10px;
   border: 3px solid transparent;
   background-clip: content-box;
@@ -245,32 +250,6 @@ html::-webkit-scrollbar-thumb {
   width: 100%;
 }
 
-/*.FAQ-wrapper::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  z-index: 0;
-  border-radius: 14px;
-}
-
-}.FAQ-wrapper .FAQ-button p,
-.FAQ-wrapper .FAQ-button span,
-.FAQ-wrapper .FAQ-button button {
-  color: #ffffff;
-  background: transparent;
-  font-family: 'HeyWowBook', sans-serif !important;
-}*/
-
-.FAQ-wrapper .FAQ-button button {
-  border: none;
-  outline: none;
-}
-
 @media (min-width: 1900px) {
   .container-in-services {
     gap: 17rem;
@@ -294,13 +273,13 @@ html::-webkit-scrollbar-thumb {
 
 @media (min-width: 640px) {
   .za-nas-img {
-    background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.65)), url('/assets/za-nas/the-barber-shop-sofia-2.webp') !important;
+    background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.65)), url('/assets/za-nas/the-barber-shop-sofia-2_result_result.webp') !important;
   }
 }
 
 @media (min-width: 640px) {
   .karieri-img {
-    background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8)), url('/assets/karieri/екип-бръснарница-софия.webp') !important;
+    background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.7)), url('assets/karieri/екип-бръснарница-софия.webp') !important;
   }
 }
 
@@ -310,21 +289,11 @@ html::-webkit-scrollbar-thumb {
 
 
 
-.glass-effect {
-  border: 1px solid rgba(255, 255, 255, 0.3);
-}
 
-.fancy-heading {
-  font-family: 'Playfair Display', serif;
-  background: linear-gradient(135deg, #2c3e50 0%, #4a5568 100%);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-}
 
-.input-highlight {
-  position: relative;
-  overflow: hidden;
+
+.input-highlight input::placeholder {
+color: white;
 }
 
 .input-highlight::after {
@@ -334,7 +303,7 @@ html::-webkit-scrollbar-thumb {
   left: 0;
   width: 0;
   height: 2px;
-  background: linear-gradient(90deg, #e9cbac 0%, #e08734 100%);
+  background: linear-gradient(90deg, #eba65b 0%, #bf7e36 100%);
   transition: width 0.4s ease;
 }
 
@@ -343,20 +312,43 @@ html::-webkit-scrollbar-thumb {
   width: 100%;
 }
 
-.luxury-button {
-  background: linear-gradient(135deg, #d19d64 0%, #c27832 100%);
-  transition: all 0.4s ease;
-  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(252, 252, 252, 0.05);
+
+
+
+
+
+
+
+
+
+
+
+
+
+.progress-bar-contacts-form-span {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-image: linear-gradient(-45deg, rgba(255, 255, 255, 0.5) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.5) 50%, rgba(255, 255, 255, 0.5) 75%, transparent 75%, transparent);
+  z-index: 1;
+  background-size: 50px 50px;
+  animation: move 2s linear infinite;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  overflow: hidden;
 }
 
-.luxury-button:hover {
-  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
-  transform: translateY(-2px);
-}
+@keyframes move {
+  0% {
+    background-position: 0 0;
+  }
 
-.form-container {
-  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
-  background: linear-gradient(89.96deg, rgba(255, 255, 255, 0.5) 0.03%, rgba(255, 255, 255, 0.233) 49.67%, rgba(255, 255, 255, 0.0) 99.96%);
-  border-radius: 26px;
-  padding: 16px;
+  100% {
+    background-position: 50px 50px;
+  }
 }

@@ -28,28 +28,18 @@ const transporter = nodemailer.createTransport({
 });
 
 app.post('/api/send-email', upload.array('attachments', 10), (req, res) => {
-    const { senderEmail, text, postCode, phone, name, services, howFound, otherText } = req.body;
+    const { senderEmail, text, phone, name, surname } = req.body;
     const attachments = req.files;
 
-    const emailContent = !phone || phone.length === 0
-    ? `
-        You have received a new message from your website contact form.
-        *𝐒𝐄𝐍𝐃𝐄𝐑:* ${senderEmail}
-        *𝐍𝐀𝐌𝐄:* ${name}
-        *𝐌𝐄𝐒𝐒𝐀𝐆𝐄:* ${text}
-    `
-    :
-    `
-        You have received a new message from your website contact form.
-        *𝐒𝐄𝐍𝐃𝐄𝐑:* ${senderEmail}
-        *𝐍𝐀𝐌𝐄:* ${name}
-        *𝐏𝐎𝐒𝐓 𝐂𝐎𝐃𝐄:* ${postCode}
-        *𝐏𝐇𝐎𝐍𝐄:* ${phone}
-        *𝐌𝐄𝐒𝐒𝐀𝐆𝐄:* ${text}
-        *𝐒𝐄𝐑𝐕𝐈𝐂𝐄𝐒 𝐑𝐄𝐐𝐔𝐈𝐑𝐄𝐃:*${services ? services.split(', ').join(', ') : 'No services selected'}
-        *𝐇𝐎𝐖 𝐃𝐈𝐃 𝐓𝐇𝐄𝐘 𝐅𝐈𝐍𝐃 𝐔𝐒:* ${howFound || 'Not specified'}
-        *𝐎𝐓𝐇𝐄𝐑:* ${otherText}
-    `
+    const emailContent = `
+        Ново съобщение от контактната форма в сайта.
+        ИМЕЙЛ: ${senderEmail}
+        ИМЕ: ${name}
+        ФАМИЛИЯ: ${surname}
+        ТЕЛЕФОН: ${phone}
+        СЪОБЩЕНИЕ: ${text}
+    `;
+    
     console.log("\n\n-------------------------------")
     const now = new Date()
     console.log(now.toTimeString() + " " + now.toDateString())
@@ -57,7 +47,7 @@ app.post('/api/send-email', upload.array('attachments', 10), (req, res) => {
 
     const mailOptions = {
         from: senderEmail,
-        replyTo: senderEmail, 
+        replyTo: senderEmail,
         to: 'office@finecarpetcleaning.co.uk',
         subject: 'New message from contact form',
         text: emailContent,

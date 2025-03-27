@@ -6,10 +6,6 @@ import { GallerySlider } from '../../components/GallerySlider';
 import { AnimatedComponent } from '../../components/AnimateOnView';
 import { AnimatedComponentSlide } from '../../components/AnimateOnViewSlide';
 import { ElementInOftenOT, OftenOT } from '../../components/OftenOT';
-import { OurShop, ElementInOurShop } from '../../components/OurShop';
-import MdiBank from '~icons/mdi/bank';
-import MdiPhoneClassic from '~icons/mdi/phone-classic';
-import RiTimerFill from '~icons/ri/timer-fill';
 import MdiProgressClock from '~icons/mdi/progress-clock?width=24px&height=24px';
 import RiShining2Line from '~icons/ri/shining-2-line?width=24px&height=24px';
 import MdiPlus from '~icons/mdi/plus?width=24px&height=24px';
@@ -22,6 +18,7 @@ import MdiRomanNumeral6 from '~icons/mdi/roman-numeral-6?width=24px&height=24px'
 import MdiRomanNumeral7 from '~icons/mdi/roman-numeral-7?width=24px&height=24px';
 import MdiRomanNumeral8 from '~icons/mdi/roman-numeral-8?width=24px&height=24px';
 import MdiRomanNumeral9 from '~icons/mdi/roman-numeral-9?width=24px&height=24px';
+import { H2WithImage } from "../../components/H2WithImage";
 
 function Collapse(props: { title: string; desc: string; children?: JSXElement }) {
 	const [isExpanded, setIsExpanded] = createSignal(false);
@@ -36,7 +33,7 @@ function Collapse(props: { title: string; desc: string; children?: JSXElement })
 					onClick={() => setIsExpanded(!isExpanded())}
 					class={`cursor-pointer important-b-none important-outline-none flex items-center justify-between w-full font-semibold text-lg py-3 md-px-6 focus:outline-none transition-all duration-700 ${isExpanded() ? 'bg-transparent' : 'bg-transparent'}`}
 				>
-					<div class="flex items-center justify-between w-full pb-30px" style="border-bottom: 1px solid rgb(168, 168, 168);">
+					<div class="flex items-center justify-between w-full pb-30px" style="border-bottom: 1px solid rgba(107, 81, 81, 0.3);">
 						<div class="flex items-center justify-between">
 							<RiShining2Line class="flex flex-justify-center flex-items-center flex-shrink-0 font-size-8 w-20px h-20px mr-5" />
 							<span class="w-full md-max-w-full md-line-height-34px line-height-24px font-size-14px md-font-size-20px uppercase font-500 -tracking-0.2px  border-b border-gray-500 hover-c-brand-dark transition-colors"
@@ -45,7 +42,7 @@ function Collapse(props: { title: string; desc: string; children?: JSXElement })
 							</span>
 						</div>
 						<div class="flex flex-self-center flex-justify-center">
-							<MdiPlus class={`text-brand w-8 h-8 transition-transform duration-700 mx-2 ${isExpanded() ? 'rotate-135deg' : ''}`} />
+							<MdiPlus class={`text-brand-dark w-8 h-8 transition-transform duration-700 mx-2 ${isExpanded() ? 'rotate-135deg' : ''}`} />
 						</div>
 					</div>
 				</button>
@@ -76,7 +73,7 @@ function SingleCollapse() {
 								онлайн чрез нашия уебсайт
 							</li>
 							<li class="">
-								по телефона на номер 0882 820 331
+								по телефона на номер +359 882 820 331
 							</li>
 							<li class="">
 								на място в бръснарницата ни кв. Изток, гр. София
@@ -93,7 +90,7 @@ function SingleCollapse() {
 
 				<Collapse title="Мога ли да закупя продукти на място от бръснарницата?" desc="Да, можете да разгледате нашия асортимент от мъжки професионални продукти за коса и брада и да ги закупите на място от бръснарницата." />
 
-				<Collapse title="The Barber Shop достъпен ли е за инвалиди?" desc="Бръснарницата е достъпна за инвалиди. В случай че изпитвате затруднения или имате въпроси, свържете се с нас на телефон 0882 820 331." />
+				<Collapse title="The Barber Shop достъпен ли е за инвалиди?" desc="Бръснарницата е достъпна за инвалиди. В случай че изпитвате затруднения или имате въпроси, свържете се с нас на телефон +359 882 820 331." />
 
 				<Collapse title="Осигурявате ли паркоместа за клиентите?" desc="Можете да се насладите на мъжко подстригване в град София, кв. Изток при нас в The Barber shop, където няма нужда да се притеснявате за паркирането. Осигурили сме 4 паркоместа пред входа на бръснарницата на разположение на клиентите." />
 
@@ -108,7 +105,7 @@ function SingleCollapse() {
 export default function Page() {
 	return (
 		<>
-			<div style="background-position: center top; background-repeat: no-repeat; background-size: cover; height: auto;"><div style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(/assets/home/the-barber-shop-sofia-mobile.webp); background-position: center top; background-repeat: no-repeat; background-size: cover;" class="h-135vh md-h-115vh home-img" role="img" aria-label="The barber shop Sofia"></div></div>
+			<div style="background-position: center top; background-repeat: no-repeat; background-size: cover; height: auto;"><div style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(/assets/home/the-barber-shop-sofia-mobile.webp); background-position: center top; background-repeat: no-repeat; background-size: cover;" class="h-100vh home-img" role="img" aria-label="The barber shop Sofia"></div></div>
 
 			<div class="w-full bg-#212528">
 				<div class="max-w-1240px mx-auto">
@@ -118,53 +115,52 @@ export default function Page() {
 								<h1 class="uppercase c-paper mb-6 text-center">Кои сме ние</h1>
 							</AnimatedComponent>
 							<AnimatedComponent>
-								<p class="important-delay-300 c-paper text-center lg-pt-10 font-size-14.5px md-font-size-18px line-height-7">В <span class="c-brand  font-900" style="font-family: 'Roboto'">The Barber Shop</span> не просто подстригваме. Предлагаме Ви преживяване, което съчетава удобство, майсторство и прецизност. С помощта на нашите бръснари ще определим стил на мъжкото подстригване, който не само подхожда на чертите Ви, но и отразява кой сте Вие.</p>
-								<p class="important-delay-500 c-paper text-center font-size-14.5px md-font-size-18px line-height-7">Нашата цел е да видите в огледалото мъж, който изглежда точно толкова добре, колкото се чувства.</p></AnimatedComponent>
+								<p class="important-delay-300 c-paper text-center lg-pt-10 font-size-15.5px md-font-size-18px line-height-6.5 md:line-height-7">В <span class="c-brand  font-900" style="font-family: 'Roboto'">The Barber Shop</span> не просто подстригваме. Предлагаме Ви преживяване, което съчетава удобство, майсторство и прецизност. С помощта на нашите бръснари ще определим стил на мъжкото подстригване, който не само подхожда на чертите Ви, но и отразява кой сте Вие.</p>
+								<p class="important-delay-500 c-paper text-center font-size-15.5px md-font-size-18px line-height-6.5 md:line-height-7">Нашата цел е да видите в огледалото мъж, който изглежда точно толкова добре, колкото се чувства.</p></AnimatedComponent>
 						</div>
 					</div>
 				</div>
 			</div>
 
-			<div class="pt-10 pb-10 lg--mt-30 -mt-45" style="background-image: url(/assets/bg-2.jpg); background-position: center; background-repeat: no-repeat; background-size: cover;">
+			<div class="pb-10" style="background-image: url(/assets/bg-2.jpg); background-position: center; background-repeat: no-repeat; background-size: cover;">
 				<AnimatedComponentSlide>
-					<h2 class="c-paper text-center important-mb-0">Бръснарница от класа</h2>
-					<img class="mx-auto pt-2 mb-15 flex flex-justify-center" src="/assets/heading-ic.png" />
+					<H2WithImage class="c-paper" title="Бръснарница от класа" />
 				</AnimatedComponentSlide>
 				<AnimatedComponentSlide>
 					<div class="lg-mt-0 lg-px-30 pb-10 max-w-1600px mx-auto flex lg-flex-row flex-col gap-6 lg-gap-13 flex-items-center">
 						<div class="lg-w-50% px-5 flex-self-start">
 							<div class="flex flex-col gap-5 c-paper">
-								<div class="flex flex-items-center gap-10px c-paper">
-									<MdiRomanNumeral1 class="flex flex-justify-center flex-items-center flex-shrink-0 font-size-8 w-40px h-40px c-brand" />Посрещане с усмивка и освежаваща напитка.<br></br>
+								<div class="flex flex-items-start gap-10px c-paper">
+									<MdiRomanNumeral1 class="flex flex-justify-center flex-items-center flex-shrink-0 font-size-8 w-40px h-40px c-brand" /><div class="mt-1 c-paper">Посрещане с усмивка и освежаваща напитка.</div><br></br>
 								</div>
-								<div class="flex flex-items-center gap-10px c-paper">
-									<MdiRomanNumeral2 class="flex flex-justify-center flex-items-center flex-shrink-0 font-size-8 w-40px h-40px c-brand" />Настаняване на бръснарския стол.<br></br>
+								<div class="flex flex-items-start gap-10px c-paper">
+									<MdiRomanNumeral2 class="flex flex-justify-center flex-items-center flex-shrink-0 font-size-8 w-40px h-40px c-brand" /><div class="mt-1 c-paper">Настаняване на бръснарския стол.</div><br></br>
 								</div>
-								<div class="flex flex-items-center gap-10px c-paper">
-									<MdiRomanNumeral3 class="flex flex-justify-center flex-items-center flex-shrink-0 font-size-8 w-40px h-40px c-brand" />Консултация относно желания стил на мъжко подстригване и стилизиране.<br></br>
+								<div class="flex flex-items-start gap-10px c-paper">
+									<MdiRomanNumeral3 class="flex flex-justify-center flex-items-center flex-shrink-0 font-size-8 w-40px h-40px c-brand" /><div class="mt-1 c-paper">Консултация относно желания стил на мъжко подстригване и стилизиране.</div><br></br>
 								</div>
-								<div class="flex flex-items-center gap-10px c-paper">
-									<MdiRomanNumeral4 class="flex flex-justify-center flex-items-center flex-shrink-0 font-size-8 w-40px h-40px c-brand" />Подстригване спрямо Вашите черти и изисквания.<br></br>
+								<div class="flex flex-items-start gap-10px c-paper">
+									<MdiRomanNumeral4 class="flex flex-justify-center flex-items-center flex-shrink-0 font-size-8 w-40px h-40px c-brand" /><div class="mt-1 c-paper">Подстригване спрямо Вашите черти и изисквания.</div><br></br>
 								</div>
-								<div class="flex flex-items-center gap-10px c-paper">
-									<MdiRomanNumeral5 class="flex flex-justify-center flex-items-center flex-shrink-0 font-size-8 w-40px h-40px c-brand" />Измиване на косата с професионален шампоан и балсам.
+								<div class="flex flex-items-start gap-10px c-paper">
+									<MdiRomanNumeral5 class="flex flex-justify-center flex-items-center flex-shrink-0 font-size-8 w-40px h-40px c-brand" /><div class="mt-1 c-paper">Измиване на косата с професионален шампоан и балсам.</div>
 								</div>
 							</div>
 						</div>
 
 						<div class="lg-w-50% pr-5 pl-5 lg-pl-0 flex-self-start">
 							<div class="flex flex-col gap-5 c-paper">
-								<div class="flex flex-items-center gap-10px c-paper">
-									<MdiRomanNumeral6 class="flex flex-justify-center flex-items-center flex-shrink-0 font-size-8 w-40px h-40px c-brand" />Изсушаване на косата със сешоар.<br></br>
+								<div class="flex flex-items-start gap-10px c-paper">
+									<MdiRomanNumeral6 class="flex flex-justify-center flex-items-center flex-shrink-0 font-size-8 w-40px h-40px c-brand" /><div class="mt-1 c-paper">Изсушаване на косата със сешоар.</div><br></br>
 								</div>
-								<div class="flex flex-items-center gap-10px c-paper">
-									<MdiRomanNumeral7 class="flex flex-justify-center flex-items-center flex-shrink-0 font-size-8 w-40px h-40px c-brand" />Оформяне и стилизиране на прическата с премиум козметика.<br></br>
+								<div class="flex flex-items-start gap-10px c-paper">
+									<MdiRomanNumeral7 class="flex flex-justify-center flex-items-center flex-shrink-0 font-size-8 w-40px h-40px c-brand" /><div class="mt-1 c-paper">Оформяне и стилизиране на прическата с премиум козметика.</div><br></br>
 								</div>
-								<div class="flex flex-items-center gap-10px c-paper">
-									<MdiRomanNumeral8 class="flex flex-justify-center flex-items-center flex-shrink-0 font-size-8 w-40px h-40px c-brand" />Представяне на повече информация относно предимствата от използваните продукти по време на мъжкото подстригване.<br></br>
+								<div class="flex flex-items-start gap-10px c-paper">
+									<MdiRomanNumeral8 class="flex flex-justify-center flex-items-center flex-shrink-0 font-size-8 w-40px h-40px c-brand" /><div class="mt-1 c-paper">Представяне на повече информация относно предимствата от използваните продукти по време на мъжкото подстригване.</div><br></br>
 								</div>
-								<div class="flex flex-items-center gap-10px c-paper">
-									<MdiRomanNumeral9 class="flex flex-justify-center flex-items-center flex-shrink-0 font-size-8 w-40px h-40px c-brand" />Перфектна визия и повишено самочувствие.
+								<div class="flex flex-items-start gap-10px c-paper">
+									<MdiRomanNumeral9 class="flex flex-justify-center flex-items-center flex-shrink-0 font-size-8 w-40px h-40px c-brand" /><div class="mt-1 c-paper">Перфектна визия и повишено самочувствие.</div>
 								</div>
 							</div>
 						</div>
@@ -172,19 +168,17 @@ export default function Page() {
 				</AnimatedComponentSlide>
 			</div>
 
-			<section class="lg-pb-25 pb-20 pt-10" style="background-attachment: fixed; background-image: url(/assets/designbg.png); background-position: center; background-repeat: repeat; background-size: cover;">
+			<section class="lg-pb-25 pb-20" style="background-attachment: fixed; background-image: url(/assets/designbg.png); background-position: center; background-repeat: repeat; background-size: cover;">
 				<AnimatedComponent>
-					<h2 class="important-mb-0">Професионално мъжко подстригване:<br></br>От идеята до завършения вид</h2>
-					<img class="mx-auto pt-2 mb-15 lg-mb--5 flex flex-justify-center" src="/assets/heading-ic.png" />
+					<H2WithImage class="max-w-750px mx-auto" title="Професионално мъжко подстригване: От идеята до завършения вид" />
 				</AnimatedComponent>
 				<AnimatedComponent>
 					<VideoPlayer src='https://www.youtube.com/embed/e2x0UXVU2yg?enablejsapi=1&mute=1' />
 				</AnimatedComponent>
 			</section>
 
-			<div class="pt-10 lg-pb-20 pb-15" style="background-image: url(/assets/bg-2.jpg); background-position: center; background-repeat: no-repeat; background-size: cover;">
-				<h2 class="c-paper text-center mb-7 important-mb-0">Цена на мъжко подстригване в София</h2>
-				<img class="mx-auto pt-2 mb-15 flex flex-justify-center" src="/assets/heading-ic.png" />
+			<div class="pb-20" style="background-image: url(/assets/bg-2.jpg); background-position: center; background-repeat: no-repeat; background-size: cover;">
+				<H2WithImage class="c-paper" title="Цена на мъжко подстригване в София" />
 				<AnimatedComponentSlide>
 					<div class="lg-mt-0 lg-px-30 md-px-10 pb-10 max-w-1600px mx-auto flex lg-flex-row flex-col gap-15 lg-gap-20 lg-flex-items-center">
 						<div class="lg-w-50% px-5 gap-15 flex flex-col">
@@ -258,22 +252,21 @@ export default function Page() {
 				</AnimatedComponentSlide>
 
 				<AnimatedComponentSlide class="mx-3 md-mx-10">
-					<div class="flex w-full px-20px lg-px-50px py-10 max-w-1320px mx-auto flex-justify-between flex-items-center b-solid b-2px b-gray-500 flex mt-8 hover-b-paper hover-bg-black transition-colors important-transition-duration-300">
+					<div class="flex w-full px-20px lg-px-50px py-10 max-w-1320px mx-auto flex-justify-between flex-items-center b-solid b-2px b-gray-500 flex mt-8 hover-b-paper hover-bg-paper-inv transition-colors important-transition-duration-300">
 						<div class="c-paper font-size-5 lg-font-size-6 flex flex-items-center" style="font-family: 'Oswald', sans-serif !important;">
 							<MdiProgressClock class="flex flex-self-center mr-2 lg-w-7 md-w-10 w-20 c-brand" />Работно време: Понеделник - Петък: 09.00 - 17.00
 						</div>
 						<div class="flex flex-col flex-items-center flex-self-center">
-							<a href="/" class="bg-brand c-black b-solid b-2px b-brand uppercase font-size-13px sm-font-size-4 font-500 px-7 ml-2 lg-text-left text-center py-2 hover-c-paper transition-colors line-height-5 sm-line-height-6" style="font-family: 'Oswald', sans-serif !important; letter-spacing: 1px;">Запазете час</a>
+							<a href="/" class="bg-brand-compliment c-paper b-solid b-2px b-brand-compliment uppercase font-size-13px sm-font-size-4 font-500 px-7 ml-2 lg-text-left text-center py-2 hover-c-paper-inv transition-colors line-height-5 sm-line-height-6" style="font-family: 'Oswald', sans-serif !important; letter-spacing: 1px;">Запазете час</a>
 						</div>
 					</div>
 				</AnimatedComponentSlide>
 			</div>
 
 			<section style="background-attachment: fixed; background-image: url(/assets/designbg.png); background-position: center; background-repeat: no-repeat; background-size: cover;">
-				<div class="lg-pb-25 pb-20 pt-10">
+				<div class="lg-pb-25 pb-20">
 					<AnimatedComponent>
-						<h2 class="important-mb-0">Мъжко подстригване в действие</h2>
-						<img class="mx-auto pt-2 pb-15 flex flex-justify-center" src="/assets/heading-ic.png" />
+						<H2WithImage title="Мъжко подстригване в действие" />
 					</AnimatedComponent>
 					<GallerySlider imgs={[
 						{ src: "/assets/mazhko-podstrigvane/мъжко-подстригване-3.webp", alt: "мъжко подстригване" },
@@ -291,106 +284,113 @@ export default function Page() {
 					/>
 				</div>
 
-				<div class="flex flex-col lg-pt-20 pb-20 pt-0">
-					<div class="flex flex-col flex-items-center">
-						<AnimatedComponent>
-							<h2 class="important-mb-2 lg-mb-9 mt-3 mb-0">Отзиви</h2>
-							<img class="mx-auto pt-2 pb-10 flex flex-justify-center" src="/assets/heading-ic.png" />
-						</AnimatedComponent>
-					</div>
-					<div>
-						<AnimatedComponent>
-							<ReviewSlider>
-								<StarReview
-									src="/assets/GoogleLogoPNGImage.png"
-									reviewText="I received excellent communications throughout the whole process. On the day, the cleaning experience was efficient with a considerate and friendly member of staff. Very competitive pricing."
-									name="Elizabeth Maurice"
-									date="June 2024"
-									stars={5}
-									hrefGoogleReview="https://g.co/kgs/HPqEYvL"
-								/>
-								<StarReview
-									src="/assets/GoogleLogoPNGImage.png"
-									reviewText="The best carpet cleaning service I have ever experienced. From start to finish was unbelievably smooth. The staff that attended extremely polite and moved all the items with utmost care. Would recommend using them as they are simply the best one has come across. Maya was absolutely fantastic in arranging this as the request was done at such a short notice."
-									name="Gen Tiski"
-									date="March 2024"
-									stars={5}
-									hrefGoogleReview="https://g.co/kgs/H3NeADN"
-								/>
-								<StarReview
-									src="/assets/GoogleLogoPNGImage.png"
-									reviewText="I had my carpet cleaned by Nikolay from Fine Carpet Cleaning. What a fantastic job he did ! He is very professional, efficient and organised in the way he works. My carpet looks new again. I highly recommend."
-									name="Samanta Federico"
-									date="January 2024"
-									stars={5}
-									hrefGoogleReview="https://g.co/kgs/WxWf2Bm"
-								/>
-								<StarReview
-									src="/assets/GoogleLogoPNGImage.png"
-									reviewText="I had my carpet cleaned by Nikolay from Fine Carpet Cleaning. What a fantastic job he did ! He is very professional, efficient and organised in the way he works. My carpet looks new again. I highly recommend."
-									name="Samanta Federico"
-									date="January 2024"
-									stars={5}
-									hrefGoogleReview="https://g.co/kgs/WxWf2Bm"
-								/>
-							</ReviewSlider>
-						</AnimatedComponent>
-					</div>
-					<AnimatedComponent>
+				<section style="background-color: #222222; background-image: url(/assets/bg-2.jpg); background-position: center center; background-repeat: no-repeat; background-size: cover;">
+					<div class="flex flex-col pb-20">
 						<div class="flex flex-col flex-items-center">
-							<a href="/" class="bg-brand c-black b-solid b-2px b-brand uppercase font-size-4 font-500 px-7 py-2 hover-c-paper transition-colors" style="font-family: 'Oswald', sans-serif !important; letter-spacing: 1px;">Вижте повече</a>
+							<AnimatedComponent>
+								<H2WithImage class="c-paper" title="Отзиви" />
+							</AnimatedComponent>
 						</div>
-					</AnimatedComponent>
-				</div>
+						<div>
+							<AnimatedComponent>
+								<ReviewSlider>
+									<StarReview
+										src="/assets/GoogleLogoPNGImage.png"
+										reviewText="I received excellent communications throughout the whole process. On the day, the cleaning experience was efficient with a considerate and friendly member of staff. Very competitive pricing."
+										name="Elizabeth Maurice"
+										date="June 2024"
+										stars={5}
+										hrefGoogleReview="https://g.co/kgs/HPqEYvL"
+									/>
+									<StarReview
+										src="/assets/GoogleLogoPNGImage.png"
+										reviewText="The best carpet cleaning service I have ever experienced. From start to finish was unbelievably smooth. The staff that attended extremely polite and moved all the items with utmost care. Would recommend using them as they are simply the best one has come across. Maya was absolutely fantastic in arranging this as the request was done at such a short notice."
+										name="Gen Tiski"
+										date="March 2024"
+										stars={5}
+										hrefGoogleReview="https://g.co/kgs/H3NeADN"
+									/>
+									<StarReview
+										src="/assets/GoogleLogoPNGImage.png"
+										reviewText="I had my carpet cleaned by Nikolay from Fine Carpet Cleaning. What a fantastic job he did ! He is very professional, efficient and organised in the way he works. My carpet looks new again. I highly recommend."
+										name="Samanta Federico"
+										date="January 2024"
+										stars={5}
+										hrefGoogleReview="https://g.co/kgs/WxWf2Bm"
+									/>
+									<StarReview
+										src="/assets/GoogleLogoPNGImage.png"
+										reviewText="I had my carpet cleaned by Nikolay from Fine Carpet Cleaning. What a fantastic job he did ! He is very professional, efficient and organised in the way he works. My carpet looks new again. I highly recommend."
+										name="Samanta Federico"
+										date="January 2024"
+										stars={5}
+										hrefGoogleReview="https://g.co/kgs/WxWf2Bm"
+									/>
+								</ReviewSlider>
+							</AnimatedComponent>
+						</div>
+						<AnimatedComponent>
+							<div class="flex flex-col flex-items-center">
+								<a href="/" class="bg-brand-compliment c-paper b-solid b-2px b-brand-compliment uppercase font-size-4 font-500 px-7 py-2 hover-c-paper-inv transition-colors" style="font-family: 'Oswald', sans-serif !important; letter-spacing: 1px;">Вижте повече</a>
+							</div>
+						</AnimatedComponent>
+					</div>
+				</section>
 
-				<div class="lg-pb-25 pb-20 pt-10">
+				<div class="pb-20">
 					<AnimatedComponent>
-						<h2 class="important-mb-0">Често поръчвани заедно</h2>
-						<img class="mx-auto pt-2 pb-15 flex flex-justify-center" src="/assets/heading-ic.png" />
+						<H2WithImage title="Често поръчвани заедно" />
 					</AnimatedComponent>
 
 					<AnimatedComponent>
 						<OftenOT>
 							<ElementInOftenOT
-								href="/"
-								title="Hot Towel Shave"
-								desc="Класическо мокро бръснене е ритуал в The Barber Shop Sofia, който е много повече от грижа – той е чиста проба удоволствие за един мъж. [1ч.]"
+								img="/assets/uslugi/мъжко-подстригване-1-mobile.webp"
+								alt="мъжко подстригване"
+								href=""
+								title="Мъжко подстригване"
+								desc="Класическо мокро бръснене е ритуал в The Barber Shop Sofia, който е много повече от грижа – той е чиста проба"
 							/>
 
 							<ElementInOftenOT
-								href="/"
-								title="Hot Towel Shave"
-								desc="Класическо мокро бръснене е ритуал в The Barber Shop Sofia, който е много повече от грижа – той е чиста проба удоволствие за един мъж. [1ч.]"
+								img="/assets/uslugi/мъжко-подстригване-1-mobile.webp"
+								alt="мъжко подстригване"
+								href=""
+								title="Мъжко подстригване"
+								desc="Класическо мокро бръснене е ритуал в The Barber Shop Sofia, който е много повече от грижа – той е чиста проба"
 							/>
 
 							<ElementInOftenOT
-								href="/"
-								title="Hot Towel Shave"
-								desc="Класическо мокро бръснене е ритуал в The Barber Shop Sofia, който е много повече от грижа – той е чиста проба удоволствие за един мъж. [1ч.]"
+								img="/assets/uslugi/мъжко-подстригване-1-mobile.webp"
+								alt="мъжко подстригване"
+								href=""
+								title="Мъжко подстригване"
+								desc="Класическо мокро бръснене е ритуал в The Barber Shop Sofia, който е много повече от грижа – той е чиста проба"
 							/>
 
 							<ElementInOftenOT
-								href="/"
-								title="Hot Towel Shave"
-								desc="Класическо мокро бръснене е ритуал в The Barber Shop Sofia, който е много повече от грижа – той е чиста проба удоволствие за един мъж. [1ч.]"
+								img="/assets/uslugi/мъжко-подстригване-1-mobile.webp"
+								alt="мъжко подстригване"
+								href=""
+								title="Мъжко подстригване"
+								desc="Класическо мокро бръснене е ритуал в The Barber Shop Sofia, който е много повече от грижа – той е чиста проба"
 							/>
 						</OftenOT>
 					</AnimatedComponent>
 
 					<AnimatedComponent>
 						<div class="flex flex-col flex-items-center pt-10">
-							<a href="/" class="bg-brand c-black b-solid b-2px b-brand uppercase font-size-4 font-500 px-7 py-2 hover-c-paper transition-colors" style="font-family: 'Oswald', sans-serif !important; letter-spacing: 1px;">Запазете час</a>
+							<a href="/" class="bg-brand-compliment c-paper b-solid b-2px b-brand-compliment uppercase font-size-4 font-500 px-7 py-2 hover-c-paper-inv transition-colors" style="font-family: 'Oswald', sans-serif !important; letter-spacing: 1px;">Запазете час</a>
 						</div>
 					</AnimatedComponent>
 				</div>
 			</section>
 
 			<section style="background-color: #222222; background-image: url(/assets/bg-2.jpg); background-position: center center; background-repeat: no-repeat; background-size: cover;">
-				<div class="lg-mx-30 mx-auto lg-pt-10 pt-10">
+				<div class="lg-mx-30 mx-auto">
 					<div class="flex md-flex flex-col lg-gap-5 flex-justify-center max-w-1440px lg-px-0 mx-auto pb-10">
 						<AnimatedComponent>
-							<h2 class="pb-3 lg-pb-0 important-mb-0 c-paper">Предимставата на The Barber Shop</h2>
-							<img class="mx-auto pt-2 pb-15 lg-pb-10 flex flex-justify-center" src="/assets/heading-ic.png" />
+							<H2WithImage class="c-paper" title="Предимставата на The Barber Shop" />
 						</AnimatedComponent>
 						<div class="px-5 lg-px-0 flex lg-flex-row flex-col lg-gap-10">
 							<div class="lg-w-33.33% flex flex-col">
@@ -414,8 +414,8 @@ export default function Page() {
 						</div>
 					</div>
 				</div>
-				<div class="lg-pb-20 pb-10">
-					<GallerySlider style="border-color:#d19d64; color:#d19d64;" imgs={[
+				<div class="pb-20">
+					<GallerySlider imgs={[
 						{ src: "/assets/mazhko-podstrigvane/инструменти-за-одстригване-мъжко-подстригване-изток.webp", alt: "инструменти за одстригване мъжко подстригване изток" },
 						{ src: "/assets/mazhko-podstrigvane/инструменти-за-мъжко-подстригване.webp", alt: "инструменти за мъжко подстригване" },
 						{ src: "/assets/mazhko-podstrigvane/козметика-за-мъжко-подстригване-софия.webp", alt: "козметика за мъжко подстригване София" },
@@ -456,22 +456,22 @@ export default function Page() {
 				</AnimatedComponent>
 
 				<AnimatedComponentSlide class="mx-auto pt-15">
-					<a href="/" class="bg-brand c-black b-solid b-2px b-brand uppercase font-size-4 font-500 px-7 py-2 hover-c-paper transition-colors" style="font-family: 'Oswald', sans-serif !important; letter-spacing: 1px;">Към магазин</a>
+					<a href="/" class="bg-brand c-paper-inv b-solid b-2px b-brand uppercase font-size-4 font-500 px-7 py-2 hover-c-paper transition-colors" style="font-family: 'Oswald', sans-serif !important; letter-spacing: 1px;">Към магазин</a>
 				</AnimatedComponentSlide>
 			</div> */}
 
-			{/*<div class="pt-10 pb-20 h-150vh" style="filter:; height: auto; background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ), url(/assets/v2-76u36-ghyye.webp); background-position: center top; background-repeat: no-repeat; background-size: cover;">*/}
-			<div class="pt-10 pb-20" style="background-attachment: fixed; background-image: url(/assets/designbg.png); background-position: center; background-repeat: repeat; background-size: cover;">
+			{/*<div class="pb-20 h-150vh" style="filter:; height: auto; background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ), url(/assets/v2-76u36-ghyye.webp); background-position: center top; background-repeat: no-repeat; background-size: cover;">*/}
+			<div class="pb-20" style="background-attachment: fixed; background-image: url(/assets/designbg.png); background-position: center; background-repeat: repeat; background-size: cover;">
 				<AnimatedComponent>
-					<h2 class="important-mb-0">Често задавани въпроси</h2>
-					<img class="mx-auto pt-2 pb-15 flex flex-justify-center" src="/assets/heading-ic.png" />
+					<H2WithImage title="Често задавани въпроси" />
 				</AnimatedComponent>
-				<div class="mx-0 md-flex gap-10 justify-center flex-items-center">
-					<div class="md-w-50%">
+				<div class="mx-0 lg:flex gap-10 justify-center flex-items-center">
+					<div class="lg:w-50%">
 						<SingleCollapse />
 					</div>
-					<div class="max-w-40%">
+					<div class="lg:block hidden lg:max-w-40% lg:px-0 md:px-10 px-5 lg:pt-0 md:pt-20 lg:pt-10">
 						<img class="mx-auto max-w-full" src="/assets/home/бръснари-софия.webp" alt="Бръснари София" />
+						<p class="important-my-0">text</p>
 					</div>
 				</div>
 			</div>

@@ -15,10 +15,10 @@ export const OurShop = ({ children, style }: { children: JSX.Element | JSX.Eleme
                         {children}
                     </Slider>
                     <SliderButton class="cursor-pointer position-absolute top-45% left--15 bg-transparent b-none" prev>
-                        <RiPlayReverseMiniLine class="-ml-2 font-size-10 b-solid b-3px p-1 important-hover-c-paper hover-bg-brand hover-b-brand transition-colors lg-c-black lg-b-black md-c-brand md-b-brand" />
+                        <RiPlayReverseMiniLine class="-ml-2 font-size-10 b-solid b-3px p-1 important-hover-c-paper hover-bg-brand hover-b-brand transition-colors lg-c-paper-inv lg-b-black md-c-brand md-b-brand" />
                     </SliderButton>
                     <SliderButton class="cursor-pointer position-absolute top-45% right--15 bg-transparent b-none" next>
-                        <RiPlayMiniLine class="-mr-2 font-size-10 b-solid b-3px p-1 important-hover-c-paper hover-bg-brand hover-b-brand transition-colors lg-c-black lg-b-black md-c-brand md-b-brand" />
+                        <RiPlayMiniLine class="-mr-2 font-size-10 b-solid b-3px p-1 important-hover-c-paper hover-bg-brand hover-b-brand transition-colors lg-c-paper-inv lg-b-black md-c-brand md-b-brand" />
                     </SliderButton>
                 </div>
             ) : (

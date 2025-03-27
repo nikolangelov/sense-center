@@ -19,8 +19,10 @@ export default defineConfig({
 			theme:
 			 {
 				colors: {
-					brand: "#d19d64",
-					"brand-dark": "#a6753f",
+					brand: "#eba65b",
+					"brand-dark": "#bf7e36",
+					"brand-compliment": "#8f1828",
+					"brand-title-light-bg": "#4f4234",
 					"brand-action": "#edb339",
 					"brand-action-hover": "#ebbc59",
 					"brand-second-action": "#228057",
@@ -30,7 +32,7 @@ export default defineConfig({
 
 					"brand-light": "#007faf",
 					"brand-inv": "#eee",
-					"paper": "#fff",
+					"paper": "#fdfdfd",
 					"paper-inv": "#07111c",
 					"paper-border": "#e7e7e7",
 				},
