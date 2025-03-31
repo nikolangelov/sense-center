@@ -168,7 +168,7 @@ export default function Page() {
 				</AnimatedComponentSlide>
 			</div>
 
-			<section class="lg-pb-25 pb-20" style="background-attachment: fixed; background-image: url(/assets/designbg.png); background-position: center; background-repeat: repeat; background-size: cover;">
+			<section class="lg-pb-25 pb-20">
 				<AnimatedComponent>
 					<H2WithImage class="max-w-750px mx-auto" title="Професионално мъжко подстригване: От идеята до завършения вид" />
 				</AnimatedComponent>
@@ -263,7 +263,7 @@ export default function Page() {
 				</AnimatedComponentSlide>
 			</div>
 
-			<section style="background-attachment: fixed; background-image: url(/assets/designbg.png); background-position: center; background-repeat: no-repeat; background-size: cover;">
+			<section>
 				<div class="lg-pb-25 pb-20">
 					<AnimatedComponent>
 						<H2WithImage title="Мъжко подстригване в действие" />
@@ -427,7 +427,7 @@ export default function Page() {
 				</div>
 			</section>
 
-			{/* <div class="lg-px-30 pt-10 pb-20 px-4 w-full flex flex-col flex-justify-center" style="background-attachment: fixed; background-image: url(/assets/designbg.png); background-position: center; background-repeat: repeat; background-size: cover;">
+			{/* <div class="lg-px-30 pt-10 pb-20 px-4 w-full flex flex-col flex-justify-center">
 				<AnimatedComponentSlide>
 					<h2 class="important-mb-0">Нашият магазин</h2>
 					<img class="mx-auto pt-2 pb-15 flex flex-justify-center" src="/assets/heading-ic.png" />
@@ -461,7 +461,7 @@ export default function Page() {
 			</div> */}
 
 			{/*<div class="pb-20 h-150vh" style="filter:; height: auto; background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ), url(/assets/v2-76u36-ghyye.webp); background-position: center top; background-repeat: no-repeat; background-size: cover;">*/}
-			<div class="pb-20" style="background-attachment: fixed; background-image: url(/assets/designbg.png); background-position: center; background-repeat: repeat; background-size: cover;">
+			<div class="pb-20">
 				<AnimatedComponent>
 					<H2WithImage title="Често задавани въпроси" />
 				</AnimatedComponent>

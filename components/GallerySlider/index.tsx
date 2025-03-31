@@ -48,8 +48,8 @@ function DotsUnderSlider(props: { imgs: { src?: string, alt?: string }[] }) {
         {props.imgs.map((_, index) => (
           <button
             onClick={() => goToSlide(index)}
-            class={`dot ${context().current() === index ? "active" : ""}`}
-            style={{ margin: "0 5px", padding: "8px", cursor: "pointer", border: "none", background: context().current() === index ? "#7c1d2a" : "#f0f0f0" }}
+            class={`dot ${context()?.current() === index ? "active" : ""}`}
+            style={{ margin: "0 5px", padding: "8px", cursor: "pointer", border: "none", background: context()?.current() === index ? "#7c1d2a" : "#f0f0f0" }}
           ></button>
         ))}
       </div>
@@ -142,14 +142,14 @@ const GallerySliderMobile = (props: { buttonClass?: string; imgs: { src: string,
             ))}
           </Slider>
 
-          <SliderButton next class="bg-transparent b-none cursor-pointer position-absolute top-47% right-0 bg-transparent b-none">
+          <SliderButton next class="hidden bg-transparent b-none cursor-pointer position-absolute top-47% right-0 bg-transparent b-none">
             <RiPlayMiniLine class={cn(`-ml-1 font-size-7 b-solid b-2px p-1 c-brand-compliment b-brand-compliment important-hover-c-paper hover-bg-brand-compliment hover-b-brand-compliment transition-colors`, props.buttonClass)} />
           </SliderButton>
-          <SliderButton prev class="bg-transparent b-none cursor-pointer position-absolute top-47% left-0 bg-transparent b-none">
+          <SliderButton prev class="hidden bg-transparent b-none cursor-pointer position-absolute top-47% left-0 bg-transparent b-none">
             <RiPlayReverseMiniLine class={cn(`-mr-1 font-size-7 b-solid b-2px p-1 c-brand-compliment b-brand-compliment important-hover-c-paper hover-bg-brand-compliment hover-b-brand-compliment transition-colors`, props.buttonClass)} />
           </SliderButton>
         </div>
-
+        <DotsUnderSlider imgs={props.imgs} />
       </SliderProvider>
 
       <Show when={open()}>

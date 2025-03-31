@@ -44,11 +44,11 @@ function BarberContainer(props: { title: string; href: string; img: string; alt:
 				</div>
 				<div class="relative pl-8 py-8.5 md:py-7 bg-paper-inv">
 					<div class="transition-all duration-500 flex justify-center items-center gap-3">
-						<div class="c-paper font-size-8 font-500 group-hover:c-brand transition-colors" style="font-family:'Oswald', sans-serif !important;">
+						<div class="c-paper font-size-8 font-500 flex justify-center items-center" style="font-family:'Oswald', sans-serif !important;">
 							<MdiScissors class="c-paper w-6 pt-1 mr-2" />
 							{props.title}
 						</div>
-						<MdiArrowRight class="c-brand font-size-8 pt-1 group-hover:ml-2 transition-all" />
+						<MdiArrowRight class="c-brand-compliment font-size-9.5 pt-1 group-hover:ml-2 transition-all" />
 					</div>
 				</div>
 			</div>
@@ -76,7 +76,7 @@ export default function Page() {
 				</div>
 			</div>
 
-			<section class="pb-20 px-4 w-full" style="background-attachment: fixed; background-image: url(/assets/designbg.png); background-position: center; background-repeat: repeat; background-size: cover;">
+			<section class="pb-20 px-4 w-full">
 				<section class="max-w-7xl mx-auto px-4">
 					<div class="md:pt-120px flex flex-col md:flex-row items-center gap-8 md:gap-20">
 						<div class="w-full md:w-1/2 space-y-4">
@@ -130,7 +130,7 @@ export default function Page() {
 					</div>
 				</div>
 				<div class="pb-20">
-					<GallerySlider style="border-color:#d19d64; color:#d19d64;" imgs={[
+					<GallerySlider imgs={[
 						{ src: "/assets/za-nas/инструменти-барбер-шоп.webp", alt: "инструменти барбер шоп" },
 						{ src: "/assets/za-nas/инструменти-бръснар-софия.webp", alt: "инструменти бръснар София" },
 						{ src: "/assets/za-nas/козметика-barber-shop-sofia.webp", alt: "козметика barber shop Sofia" },
@@ -142,7 +142,7 @@ export default function Page() {
 				</div>
 			</section>
 
-			<div class="pb-20 px-4 w-full" style="background-attachment: fixed; background-image: url(/assets/designbg.png); background-position: center; background-repeat: repeat; background-size: cover;">
+			<div class="pb-20 px-4 w-full">
 				<AnimatedComponentSlide>
 					<H2WithImage title="Екипът на The Barber Shop" />
 				</AnimatedComponentSlide>
@@ -194,8 +194,7 @@ export default function Page() {
 				</div>
 			</div>
 
-			<section style="background-attachment: fixed; background-image: url(/assets/designbg.png); background-position: center; background-repeat: no-repeat; background-size: cover;">
-
+			<section>
 				<div class="pb-20" style="background-image: url(/assets/bg-2.jpg); background-position: center; background-repeat: no-repeat; background-size: cover;">
 					<AnimatedComponentSlide>
 						<H2WithImage class="c-paper" title="Стани част от екипа на The Barber Shop" />
@@ -254,7 +253,7 @@ export default function Page() {
 				</div>
 			</section>
 
-			<section class="pb-20" style="background-attachment: fixed; background-image: url(/assets/designbg.png); background-position: center; background-repeat: repeat; background-size: cover;">
+			<section class="pb-20">
 				<AnimatedComponent>
 					<H2WithImage title="Видео" />
 				</AnimatedComponent>

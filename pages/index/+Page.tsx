@@ -124,7 +124,7 @@ export default function Page() {
 				</div>
 			</div>
 
-			<div class="pb-20 px-4 w-full" style="background-attachment: fixed; background-image: url(/assets/designbg.png); background-position: center; background-repeat: repeat; background-size: cover;">
+			<div class="pb-20 px-4 w-full">
 				<AnimatedComponentSlide>
 					<H2WithImage title="Нашите услуги" />
 				</AnimatedComponentSlide>
@@ -290,7 +290,7 @@ export default function Page() {
 				</div>
 			</section>
 
-			<section style="background-attachment: fixed; background-image: url(/assets/designbg.png); background-position: center; background-repeat: repeat; background-size: cover;">
+			<section>
 				<div class="lg-mx-30 mx-auto">
 					<div class="flex md-flex flex-col flex-justify-center max-w-1440px lg-px-0 mx-auto lg:pb-10">
 						<AnimatedComponent>
@@ -299,19 +299,19 @@ export default function Page() {
 						<div class="px-5 lg-px-0 flex lg-flex-row flex-col lg-gap-10">
 							<div class="lg-w-33.33% flex flex-col">
 								<AnimatedComponent>
-									<h3 class="c-brand-dark text-left mt-0">Опитни и квалифицирани барбъри</h3>
+									<h3 class="text-left mt-0">Опитни и квалифицирани барбъри</h3>
 									<div class="pb-10">Зад всяка перфектна прическа в The Barber Shop Sofia стои екип от изключителни професионалисти. Нашият барбър шоп е събрал част от най-добрите бръснари в София. Всеки от тях преминава през интензивно обучение, което обхваща както класическите бръснарски техники, така и най-новите тенденции в подстригването. Благодарение на това можем да ви предложим премиум обслужване на високо ниво и страхотни резултати.</div>
 								</AnimatedComponent>
 							</div>
 							<div class="lg-w-33.33% flex flex-col">
 								<AnimatedComponent>
-									<h3 class="c-brand-dark text-left mt-5 lg-mt-0">Професионални инструменти</h3>
+									<h3 class="text-left mt-5 lg-mt-0">Професионални инструменти</h3>
 									<div class="pb-10">Използваме висок клас бръснарски принадлежности, които са внимателно подбрани, за да съчетават качество, ефективност и прецизност. В нашата бръснарница разчитаме на световно признати марки като Wahl, Andis, BabylissPRO, Mühle, Thiers Issard, гарантиращи безопасност и комфорт. Независимо от това какъв стил предпочитате, ние имаме правилните инструменти, с който да постигнем отличен краен резултат.</div>
 								</AnimatedComponent>
 							</div>
 							<div class="lg-w-33.33% flex flex-col">
 								<AnimatedComponent>
-									<h3 class="c-brand-dark text-left mt-5 lg-mt-0">Висококачествена козметика</h3>
+									<h3 class="text-left mt-5 lg-mt-0">Висококачествена козметика</h3>
 									<div class="pb-10">В The Barber Shop Sofia не правим компромиси с качеството. За нас Вашите усмивки и безупречни визии са приоритет, затова използваме само най-добрите продукти за мъжка грижа. При нас ще откриете богато разнообразие от висок клас козметика Depot, American Crew, Lavish подходяща за всички видове кожа и коса. Нашата гама от козметика включва всичко необходимо – от шампоани и балсами до стилизиращи продукти.</div>
 								</AnimatedComponent>
 							</div>
@@ -333,7 +333,7 @@ export default function Page() {
 				</div>
 			</section>
 
-			{/* <div class="lg-px-30 pt-10 pb-20 px-4 w-full flex flex-col flex-justify-center" style="background-attachment: fixed; background-image: url(/assets/designbg.png); background-position: center; background-repeat: repeat; background-size: cover;">
+			{/* <div class="lg-px-30 pt-10 pb-20 px-4 w-full flex flex-col flex-justify-center">
 				<AnimatedComponentSlide>
 					<h2 class="important-mb-0">Нашият магазин</h2>
 					<img class="mx-auto pt-2 pb-15 flex flex-justify-center" src="/assets/heading-ic.png" />

@@ -107,7 +107,7 @@ export default function Page() {
 				</div>
 			</div>
 
-			<section class="pb-20 px-4 w-full block md:hidden" style="background-attachment: fixed; background-image: url(/assets/designbg.png); background-position: center; background-repeat: repeat; background-size: cover;">
+			<section class="pb-20 px-4 w-full block md:hidden">
 				<AnimatedComponent class="px-4">
 					<H2WithImage style="margin-left:0px;" class="text-left pl-0" title="Какво предлагаме" />
 					<p class="important-delay-500 text-left lg-pt-0 line-height-7">Независимо дали сте начинаещ или опитен професионалист, The Barber Shop има желание да работи с Вас.</p>
@@ -357,7 +357,7 @@ export default function Page() {
 										</div>
 										<button
 											type="submit"
-											class="cursor-pointer font-700 border-none hover:shadow-xl hover:translate-y-[-2px] bg-gradient-to-br from-[#c29059] to-[#c27832] duration-200 ease-in-out shadow-[0_10px_15px_-3px_rgba(0,0,0,0.1),_0_4px_6px_-2px_rgba(252,252,252,0.05)] w-full text-white py-4 font-medium transition-all uppercase tracking-1.5px text-sm focus:outline-none focus:ring-4 focus:ring-indigo-300 focus:ring-opacity-50 rounded-0">
+											class="cursor-pointer font-700 border-none hover:shadow-xl hover:translate-y-[-2px] translate-y-[0px] bg-gradient-to-br from-[#c29059] to-[#c27832] duration-200 ease-in-out shadow-[0_10px_15px_-3px_rgba(0,0,0,0.1),_0_4px_6px_-2px_rgba(252,252,252,0.05)] w-full text-white py-4 font-medium transition-all uppercase tracking-1.5px text-sm focus:outline-none focus:ring-4 focus:ring-orange-300 focus:ring-opacity-50 rounded-0">
 											Кандидатствай
 										</button>
 

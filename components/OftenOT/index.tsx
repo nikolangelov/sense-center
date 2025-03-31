@@ -3,9 +3,9 @@ import { Slider, SliderButton, SliderProvider } from "solid-slider";
 import RiPlayMiniLine from '~icons/ri/play-mini-line';
 import RiPlayReverseMiniLine from '~icons/ri/play-reverse-mini-line';
 import MdiScissors from '~icons/mdi/scissors';
-import { AnimatedComponent } from '../AnimateOnView';
+import { cn } from "../../utils/cn";
 
-export const OftenOT = ({ children, style }: { children: JSX.Element | JSX.Element[], style?: string }) => {
+export const OftenOT = ({ children, buttonClass }: { children: JSX.Element | JSX.Element[], buttonClass?: string }) => {
     const isDesktop = useMediaQuery("(min-width: 768px)");
 
     return (
@@ -16,10 +16,10 @@ export const OftenOT = ({ children, style }: { children: JSX.Element | JSX.Eleme
                         {children}
                     </Slider>
                     <SliderButton class="cursor-pointer position-absolute top-45% left--15 bg-transparent b-none" prev>
-                        <RiPlayReverseMiniLine class="md-ml-14 c-brand-compliment b-brand-compliment lg--ml-2 font-size-10 b-solid b-3px p-1 important-hover-c-paper hover-bg-brand-compliment hover-b-brand-compliment transition-colors" style={style} />
+                        <RiPlayReverseMiniLine class={cn(`lg:mr-15 xl:-mr-2 font-size-10 b-solid b-3px p-1 c-paper bg-brand-compliment hover-bg-transparent hover-b-brand-compliment transition-colors b-brand-compliment hover-c-brand-compliment`, buttonClass)} />
                     </SliderButton>
                     <SliderButton class="cursor-pointer position-absolute top-45% right--15 bg-transparent b-none" next>
-                        <RiPlayMiniLine class="md-mr-14 c-brand-compliment b-brand-compliment lg--mr-2 font-size-10 b-solid b-3px p-1 important-hover-c-paper hover-bg-brand-compliment hover-b-brand-compliment transition-colors" style={style} />
+                        <RiPlayMiniLine class={cn(`lg:ml-15 xl:-ml-2 font-size-10 b-solid b-3px p-1 c-paper bg-brand-compliment hover-bg-transparent hover-b-brand-compliment transition-colors b-brand-compliment hover-c-brand-compliment`, buttonClass)} />
                     </SliderButton>
                 </div>
             ) : (
@@ -28,10 +28,10 @@ export const OftenOT = ({ children, style }: { children: JSX.Element | JSX.Eleme
                         {children}
                     </Slider>
                     <SliderButton class="cursor-pointer position-absolute top-47% left-0 bg-transparent b-none" prev>
-                        <RiPlayReverseMiniLine class="-ml-1 font-size-7 b-solid b-2px p-1 c-brand b-brand important-hover-c-paper hover-bg-brand hover-b-brand transition-colors" style={style} />
+                        <RiPlayReverseMiniLine class={cn(`-ml-1 font-size-7 b-solid b-2px p-1 c-paper b-brand-compliment hover-c-brand-compliment bg-brand-compliment hover-bg-transparent hover-b-brand-compliment transition-colors`, buttonClass)} />
                     </SliderButton>
                     <SliderButton class="cursor-pointer position-absolute top-47% right-0 bg-transparent b-none" next>
-                        <RiPlayMiniLine class="-mr-1 font-size-7 b-solid b-2px p-1 c-brand b-brand important-hover-c-paper hover-bg-brand hover-b-brand transition-colors" style={style} />
+                        <RiPlayMiniLine class={cn(`-mr-1 font-size-7 b-solid b-2px p-1 c-paper b-brand-compliment hover-c-brand-compliment bg-brand-compliment hover-bg-transparent hover-b-brand-compliment transition-colors`, buttonClass)} />
                     </SliderButton>
                 </div>
             )}

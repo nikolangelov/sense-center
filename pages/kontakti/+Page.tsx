@@ -180,7 +180,7 @@ export default function Page() {
 
 	return (
 		<>
-			<section class="lg-pt-55 pb-20 pt-30 px-2 md:px-4 w-full" style="background-attachment: fixed; background-image: linear-gradient(rgba(126, 78, 51, 0.6), rgba(255, 255, 255, 0) ), url(/assets/designbg.png); background-position: center; background-repeat: repeat; background-size: cover;">
+			<section class="lg-pt-55 pb-20 pt-30 px-2 md:px-4 w-full">
 
 				<AnimatedComponent class="w-full mb-30">
 					<h1 class="uppercase md:important-mb-10 pt-0 mt-10">Контакти</h1>
@@ -193,7 +193,7 @@ export default function Page() {
 						</AnimatedComponent>
 						<AnimatedComponent>
 							<button
-								class="cursor-pointer text-center w-45 lg-w-55 bg-brand-dark hover:c-paper-inv b-solid b-2px b-brand-dark uppercase font-size-4 lg-font-size-4.5 font-500 py-3 c-paper transition-colors rounded-0" style="font-family: 'Oswald', sans-serif !important; letter-spacing: 1px;">
+								class="cursor-pointer text-center w-45 lg-w-55 bg-brand-compliment hover:c-paper-inv b-solid b-2px b-brand-compliment uppercase font-size-4 lg-font-size-4.5 font-500 py-3 c-paper transition-colors rounded-0" style="font-family: 'Oswald', sans-serif !important; letter-spacing: 1px;">
 								Запази час
 							</button>
 						</AnimatedComponent>
@@ -249,7 +249,7 @@ export default function Page() {
 										</div>
 										<button
 											type="submit"
-											class="cursor-pointer font-700 border-none hover:shadow-xl hover:translate-y-[-2px] bg-gradient-to-br from-[#c29059] to-[#c27832] duration-200 ease-in-out shadow-[0_10px_15px_-3px_rgba(0,0,0,0.1),_0_4px_6px_-2px_rgba(252,252,252,0.05)] w-full text-white py-4 font-medium transition-all uppercase tracking-1.5px text-sm focus:outline-none focus:ring-4 focus:ring-indigo-300 focus:ring-opacity-50 rounded-0">
+											class="cursor-pointer font-700 border-none hover:shadow-xl hover:translate-y-[-2px] translate-y-[0px] bg-gradient-to-br from-[#c29059] to-[#c27832] duration-200 ease-in-out shadow-[0_10px_15px_-3px_rgba(0,0,0,0.1),_0_4px_6px_-2px_rgba(252,252,252,0.05)] w-full text-white py-4 font-medium transition-all uppercase tracking-1.5px text-sm focus:outline-none focus:ring-4 focus:ring-orange-300 focus:ring-opacity-50 rounded-0">
 											Кандидатствай
 										</button>
 
