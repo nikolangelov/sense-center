@@ -1,45 +1,94 @@
-import { createSignal, JSX, onCleanup, onMount, Component } from 'solid-js';
-import { Slider, SliderButton, SliderProvider } from "solid-slider";
+import { createSignal, JSX, onCleanup, onMount, Component, useContext, Show } from 'solid-js';
+import { Slider, SliderButton, SliderContext, SliderProvider } from "solid-slider";
 import RiPlayMiniLine from '~icons/ri/play-mini-line';
 import RiPlayReverseMiniLine from '~icons/ri/play-reverse-mini-line';
 import MdiScissors from '~icons/mdi/scissors';
 import { cn } from "../../utils/cn";
 
-export const OftenOT = ({ children, buttonClass }: { children: JSX.Element | JSX.Element[], buttonClass?: string }) => {
+function DotsUnderSlider(props: { services: { title: string }[] }) {
+    const [context] = useContext(SliderContext);
+    const [isDesktop, setIsDesktop] = createSignal(false);
+
+    const goToSlide = (index: number) => {
+        context().moveTo(index);
+    };
+
+    onMount(() => {
+        const checkMediaQuery = () => setIsDesktop(window.matchMedia("(min-width: 768px)").matches);
+        checkMediaQuery();
+        window.addEventListener("resize", checkMediaQuery);
+        onCleanup(() => window.removeEventListener("resize", checkMediaQuery));
+    });
+
+    return (
+        <>
+            {isDesktop() ? (
+                <div class="dots-container" style="text-align: center; margin-top: 20px;">
+                    {props.services.map((service, index) => (
+                        <button
+                            onClick={() => goToSlide(index)}
+                            class={`dot ${context()?.current() === index ? "active" : ""}`}
+                            style={{ margin: "0 5px", padding: "8px", cursor: "pointer", border: "none", background: context()?.current() === index ? "#7c1d2a" : "#f0f0f0" }}
+                            title={service.title}
+                        >
+                        </button>
+                    ))}
+                </div>
+            ) : (
+                <div class="dots-container" style="text-align: center; margin-top: 5px;">
+                    {props.services.map((service, index) => (
+                        <button
+                            onClick={() => goToSlide(index)}
+                            class={`dot ${context()?.current() === index ? "active" : ""}`}
+                            style={{ margin: "0 3px", padding: "5px", cursor: "pointer", border: "none", background: context()?.current() === index ? "#7c1d2a" : "#f0f0f0" }}
+                            title={service.title}
+                        >
+                        </button>
+                    ))}
+                </div>
+            )}
+        </>
+    );
+}
+
+export const OftenOT = (props: { services: { title: string }[]; children: JSX.Element | JSX.Element[], buttonClass?: string }) => {
     const isDesktop = useMediaQuery("(min-width: 768px)");
 
     return (
         <SliderProvider>
             {isDesktop() ? (
-                <div class="max-w-900px mx-auto position-relative hidden md:block my-0">
+                <div class="max-w-1000px mx-auto position-relative hidden md:block my-0">
                     <Slider options={{ loop: true, slides: { perView: 2, spacing: 15 } }}>
-                        {children}
+                        <div class="mx-auto">
+                            {props.children}
+                        </div>
                     </Slider>
                     <SliderButton class="cursor-pointer position-absolute top-45% left--15 bg-transparent b-none" prev>
-                        <RiPlayReverseMiniLine class={cn(`lg:mr-15 xl:-mr-2 font-size-10 b-solid b-3px p-1 c-paper bg-brand-compliment hover-bg-transparent hover-b-brand-compliment transition-colors b-brand-compliment hover-c-brand-compliment`, buttonClass)} />
+                        <RiPlayReverseMiniLine class={cn(`lg:mr-15 xl:-mr-2 font-size-10 b-solid b-3px p-1 c-paper bg-brand-compliment hover-bg-transparent hover-b-brand-compliment transition-colors b-brand-compliment hover-c-brand-compliment`, props.buttonClass)} />
                     </SliderButton>
                     <SliderButton class="cursor-pointer position-absolute top-45% right--15 bg-transparent b-none" next>
-                        <RiPlayMiniLine class={cn(`lg:ml-15 xl:-ml-2 font-size-10 b-solid b-3px p-1 c-paper bg-brand-compliment hover-bg-transparent hover-b-brand-compliment transition-colors b-brand-compliment hover-c-brand-compliment`, buttonClass)} />
+                        <RiPlayMiniLine class={cn(`lg:ml-15 xl:-ml-2 font-size-10 b-solid b-3px p-1 c-paper bg-brand-compliment hover-bg-transparent hover-b-brand-compliment transition-colors b-brand-compliment hover-c-brand-compliment`, props.buttonClass)} />
                     </SliderButton>
                 </div>
             ) : (
                 <div class="max-w-1000px m-auto position-relative md:hidden block mx-4">
-                    <Slider options={{ loop: true }}>
-                        {children}
+                    <Slider options={{ loop: true, slides: { perView: 1.2, spacing: 10 } }}>
+                        {props.children}
                     </Slider>
-                    <SliderButton class="cursor-pointer position-absolute top-47% left-0 bg-transparent b-none" prev>
-                        <RiPlayReverseMiniLine class={cn(`-ml-1 font-size-7 b-solid b-2px p-1 c-paper b-brand-compliment hover-c-brand-compliment bg-brand-compliment hover-bg-transparent hover-b-brand-compliment transition-colors`, buttonClass)} />
+                    <SliderButton class="hidden cursor-pointer position-absolute top-47% left-0 bg-transparent b-none" prev>
+                        <RiPlayReverseMiniLine class={cn(`-ml-1 font-size-7 b-solid b-2px p-1 c-paper b-brand-compliment hover-c-brand-compliment bg-brand-compliment hover-bg-transparent hover-b-brand-compliment transition-colors`, props.buttonClass)} />
                     </SliderButton>
-                    <SliderButton class="cursor-pointer position-absolute top-47% right-0 bg-transparent b-none" next>
-                        <RiPlayMiniLine class={cn(`-mr-1 font-size-7 b-solid b-2px p-1 c-paper b-brand-compliment hover-c-brand-compliment bg-brand-compliment hover-bg-transparent hover-b-brand-compliment transition-colors`, buttonClass)} />
+                    <SliderButton class="hidden cursor-pointer position-absolute top-47% right-0 bg-transparent b-none" next>
+                        <RiPlayMiniLine class={cn(`-mr-1 font-size-7 b-solid b-2px p-1 c-paper b-brand-compliment hover-c-brand-compliment bg-brand-compliment hover-bg-transparent hover-b-brand-compliment transition-colors`, props.buttonClass)} />
                     </SliderButton>
                 </div>
             )}
+            <DotsUnderSlider services={props.services} />
         </SliderProvider>
     );
 };
 
-export const ElementInOftenOT: Component<{ href: string, title: string, desc: string, img: string, alt: string }> = (props) => {
+export const ElementInOftenOT: Component<{ href: string, title: string, img: string, alt: string }> = (props) => {
     const isDesktop = useMediaQuery("(min-width: 768px)");
     const [arrowWidth, setArrowWidth] = createSignal(50);
     const [isVisible, setIsVisible] = createSignal(false);
@@ -66,11 +115,11 @@ export const ElementInOftenOT: Component<{ href: string, title: string, desc: st
     });
 
     return (
-        <div class="block h-500px relative flex flex-col justify-end group">
+        <div class="block h-500px md:h-600px relative flex flex-col justify-end group">
             {isDesktop() ? (
                 <a href={props.href}>
                     <div
-                        class="block h-full relative flex flex-col justify-end group overflow-hidden h-500px"
+                        class="block h-full relative flex flex-col justify-end group overflow-hidden h-600px"
                         style={{
                             "background-image": `linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.9)), url(${props.img})`,
                             "background-position": "center",
@@ -91,47 +140,49 @@ export const ElementInOftenOT: Component<{ href: string, title: string, desc: st
                                 <div class="h-[1px] w-[100px] group-hover:w-[300px] transition-all duration-900 ease-in-out bg-brand mb-4"></div>
                             </div>
                             <div class="flex flex-col flex-items-center pb-2">
-                                <div class="bg-none c-paper b-solid b-1px b-paper hover-b-brand hover-bg-brand transition-colors mx-auto uppercase font-size-4 font-500 px-7 py-2" style="font-family: 'Oswald', sans-serif !important; letter-spacing: 1px;">Вижте повече</div>
+                                <div class="bg-none c-paper b-solid b-1px b-paper group-hover-b-brand group-hover-bg-brand transition-colors mx-auto uppercase font-size-4 font-500 px-7 py-2" style="font-family: 'Oswald', sans-serif !important; letter-spacing: 1px;">Вижте повече</div>
                             </div>
                         </div>
                     </div>
                 </a>
             ) : (
-                <div
-                    ref={containerRef}
-                    class="block h-500px relative flex flex-col justify-end group"
-                    style={{
-                        "background-image": `linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.9)), url(${props.img})`,
-                        "background-position": "center",
-                        "background-repeat": "no-repeat",
-                        "background-size": "cover",
-                    }}
-                    role="img" aria-label={props.alt}>
-                    <span class={`before:absolute before:content-empty before:bg-[#bbbbbb] before:z-[1] before:w-[1px] before:h-[80%] before:top-[1rem] before:left-[1rem] 
+                <a href={props.href}>
+                    <div
+                        ref={containerRef}
+                        class="block h-500px relative flex flex-col justify-end group"
+                        style={{
+                            "background-image": `linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.9)), url(${props.img})`,
+                            "background-position": "center",
+                            "background-repeat": "no-repeat",
+                            "background-size": "cover",
+                        }}
+                        role="img" aria-label={props.alt}>
+                        <span class={`before:absolute before:content-empty before:bg-[#bbbbbb] before:z-[1] before:w-[1px] before:h-[80%] before:top-[1rem] before:left-[1rem] 
           after:absolute after:content-empty after:bg-[#bbbbbb] after:z-[1] after:h-[1px] after:w-[80%] after:top-[1rem] after:left-[1rem]
           before:transition-all before:duration-700 before:ease-in-out after:transition-all after:duration-700 after:ease-in-out 
           ${isVisible() ? "before:h-[calc(100%-2rem)] after:w-[calc(100%-2rem)]" : ""}`}>
-                    </span>
-                    <span class={`before:absolute before:content-empty before:bg-[#bbbbbb] before:z-[1] before:w-[1px] before:h-[80%] before:bottom-[1rem] before:right-[1rem] 
+                        </span>
+                        <span class={`before:absolute before:content-empty before:bg-[#bbbbbb] before:z-[1] before:w-[1px] before:h-[80%] before:bottom-[1rem] before:right-[1rem] 
           after:absolute after:content-empty after:bg-[#bbbbbb] after:z-[1] after:h-[1px] after:w-[80%] after:right-[1rem] after:bottom-[1rem]
           before:transition-all before:duration-700 before:ease-in-out after:transition-all after:duration-700 after:ease-in-out 
           ${isVisible() ? "before:h-[calc(100%-2rem)] after:w-[calc(100%-2rem)]" : ""}`}>
-                    </span>
-                    <div class="relative z-10 px-8 pb-8 flex flex-col items-center justify-end h-full">
-                        <div class="flex flex-col items-center text-center transition-all duration-700 ease-in-out ">
-                            <MdiScissors class="c-paper mx-auto rotate-[270deg] w-8" />
-                            <div class="w-250px">
-                                <h3 class="c-paper mt-1 important-mb-1">{props.title}</h3>
-                            </div>
-                            <div class="h-[1px] transition-all duration-900 ease-in-out bg-brand mb-20px"
-                                style={{ width: `${arrowWidth()}px` }}>
-                            </div>
-                            <div class="flex flex-col flex-items-center">
-                                <div class="bg-none c-paper b-solid b-1px b-paper hover-b-brand hover-bg-brand transition-colors mx-auto uppercase font-size-4 font-500 px-7 py-2" style="font-family: 'Oswald', sans-serif !important; letter-spacing: 1px;">Вижте повече</div>
+                        </span>
+                        <div class="relative z-10 px-8 pb-8 flex flex-col items-center justify-end h-full">
+                            <div class="flex flex-col items-center text-center transition-all duration-700 ease-in-out ">
+                                <MdiScissors class="c-paper mx-auto rotate-[270deg] w-8" />
+                                <div class="w-250px">
+                                    <h3 class="c-paper mt-1 important-mb-1">{props.title}</h3>
+                                </div>
+                                <div class="h-[1px] transition-all duration-900 ease-in-out bg-brand mb-20px"
+                                    style={{ width: `${arrowWidth()}px` }}>
+                                </div>
+                                <div class="flex flex-col flex-items-center">
+                                    <div class="bg-none c-paper b-solid b-1px b-paper hover-b-brand hover-bg-brand transition-colors mx-auto uppercase font-size-4 font-500 px-7 py-2" style="font-family: 'Oswald', sans-serif !important; letter-spacing: 1px;">Вижте повече</div>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
+                </a>
             )}
         </div>
     );

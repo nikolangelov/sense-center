@@ -42,7 +42,7 @@ function BarberContainer(props: { title: string; href: string; img: string; alt:
 					</span>
 					<div class="absolute inset-0 h-100%"></div>
 				</div>
-				<div class="relative pl-8 py-8.5 md:py-7 bg-paper-inv">
+				<div class="relative pl-8 py-6.5 md:py-7 bg-#14100c">
 					<div class="transition-all duration-500 flex justify-center items-center gap-3">
 						<div class="c-paper font-size-8 font-500 flex justify-center items-center" style="font-family:'Oswald', sans-serif !important;">
 							<MdiScissors class="c-paper w-6 pt-1 mr-2" />
@@ -271,38 +271,53 @@ export default function Page() {
 					</div>
 					<div>
 						<AnimatedComponent>
-							<ReviewSlider>
+							<ReviewSlider
+								reviews={[
+									{ name: "cosmos garage" },
+									{ name: "Miguel Nigro" },
+									{ name: "Boyan Kushev" },
+									{ name: "Philip Betz" },
+									{ name: "Ivo Stoilov" },
+								]}>
 								<StarReview
 									src="/assets/GoogleLogoPNGImage.png"
-									reviewText="I received excellent communications throughout the whole process. On the day, the cleaning experience was efficient with a considerate and friendly member of staff. Very competitive pricing."
-									name="Elizabeth Maurice"
-									date="June 2024"
+									reviewText="Най-накрая намерих висококачествена бръснарница. Имат безплатен паркинг, безплатни напитки, система за онлайн резервации и работят всеки ден🔥"
+									name="cosmos garage"
+									date="Ноември 2024"
 									stars={5}
-									hrefGoogleReview="https://g.co/kgs/HPqEYvL"
+									hrefGoogleReview="https://maps.app.goo.gl/uTXLPqm9aGeL6rTz9"
 								/>
 								<StarReview
 									src="/assets/GoogleLogoPNGImage.png"
-									reviewText="The best carpet cleaning service I have ever experienced. From start to finish was unbelievably smooth. The staff that attended extremely polite and moved all the items with utmost care. Would recommend using them as they are simply the best one has come across. Maya was absolutely fantastic in arranging this as the request was done at such a short notice."
-									name="Gen Tiski"
-									date="March 2024"
+									reviewText="Най-добрата бръснарница в София - качествено обслужване и страхотен персонал!"
+									name="Miguel Nigro"
+									date="Декември 2024"
 									stars={5}
-									hrefGoogleReview="https://g.co/kgs/H3NeADN"
+									hrefGoogleReview="https://maps.app.goo.gl/WoLebiTRhB3xjo3q7"
 								/>
 								<StarReview
 									src="/assets/GoogleLogoPNGImage.png"
-									reviewText="I had my carpet cleaned by Nikolay from Fine Carpet Cleaning. What a fantastic job he did ! He is very professional, efficient and organised in the way he works. My carpet looks new again. I highly recommend."
-									name="Samanta Federico"
-									date="January 2024"
+									reviewText="Отлично обслужване, много приятно и чисто място! Определено се препоръчва 🤟🤟🤟"
+									name="Boyan Kushev"
+									date="Януари 2025"
 									stars={5}
-									hrefGoogleReview="https://g.co/kgs/WxWf2Bm"
+									hrefGoogleReview="https://maps.app.goo.gl/a5RSZRtyDHdj9VmM7"
 								/>
 								<StarReview
 									src="/assets/GoogleLogoPNGImage.png"
-									reviewText="I had my carpet cleaned by Nikolay from Fine Carpet Cleaning. What a fantastic job he did ! He is very professional, efficient and organised in the way he works. My carpet looks new again. I highly recommend."
-									name="Samanta Federico"
-									date="January 2024"
+									reviewText="Много ми хареса прическата! Всички които ме виждаха, казваха, че много ми отива. Плюс това атмосферата там е много приятна, хората са забавни и дружелюбни."
+									name="Philip Betz"
+									date="Октомври 2024"
 									stars={5}
-									hrefGoogleReview="https://g.co/kgs/WxWf2Bm"
+									hrefGoogleReview="https://maps.app.goo.gl/NGyPRo1gHdez8CLy6"
+								/>
+								<StarReview
+									src="/assets/GoogleLogoPNGImage.png"
+									reviewText="Професионално изпълнена услуга без нищо излишно. Горещо препоръчвам на онези, които се колебаят."
+									name="Ivo Stoilov"
+									date="Март 2025"
+									stars={5}
+									hrefGoogleReview="https://maps.app.goo.gl/xMX8mBdRdxEprALH9"
 								/>
 							</ReviewSlider>
 						</AnimatedComponent>

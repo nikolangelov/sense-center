@@ -14,16 +14,18 @@ function ServiceContaner(props: { title: string, href: string, img: string, alt:
 
 	return (
 		<AnimatedComponentSlide class="flex sm-w-65% md-w-50% lg-w-35% xl-w-23% max-w-full relative overflow-hidden " style="flex: 0 0 auto;">
-			<img class="w-full h-auto" src={props.img} alt={props.alt} />
-			<div class="w-full p-20px absolute bottom-0px text-center" style="background: -webkit-linear-gradient(top, transparent 0, rgba(0, 0, 0, .01) 1%, rgba(0, 0, 0, .95) 80%);">
-				<div class="flex flex-col gap-1">
-					<h4 class="c-paper relative font-size-27px mb-1">
-						{props.title}
-					</h4>
-					<div class="text-center h-1px w-60px bg-brand mx-auto mb-20px"></div>
-					<a href={props.href} class="bg-none c-paper b-solid b-1px b-paper hover-b-brand hover-bg-brand transition-colors mx-auto uppercase font-size-4 font-500 px-7 py-2" style="font-family: 'Oswald', sans-serif !important; letter-spacing: 1px;">Вижте повече</a>
+			<a class="group" href={props.href}>
+				<img class="w-full h-auto" src={props.img} alt={props.alt} />
+				<div class="w-full p-20px absolute bottom-0px text-center" style="background: -webkit-linear-gradient(top, transparent 0, rgba(0, 0, 0, .01) 1%, rgba(0, 0, 0, .95) 80%);">
+					<div class="flex flex-col gap-1">
+						<h4 class="c-paper relative font-size-20px md:font-size-27px mb-1">
+							{props.title}
+						</h4>
+						<div class="text-center h-1px w-60px bg-brand mx-auto mb-20px"></div>
+						<div class="bg-none c-paper b-solid b-1px b-paper group-hover-b-brand group-hover-bg-brand transition-colors mx-auto uppercase font-size-4 font-500 px-7 py-2" style="font-family: 'Oswald', sans-serif !important; letter-spacing: 1px;">Вижте повече</div>
+					</div>
 				</div>
-			</div>
+			</a>
 		</AnimatedComponentSlide>
 	)
 }
@@ -36,7 +38,7 @@ export default function Page() {
 			<div class="w-full bg-#212528">
 				<div class="max-w-1240px mx-auto">
 					<div class="flex flex-justify-center">
-						<div class="left-0 right-0 px-3 my-0 mx-auto absolute top-38% lg-top-45% text-center w-full max-w-700px" style="-webkit-transform: translateY(-50%);">
+						<div class="left-0 right-0 px-3 my-0 mx-auto absolute top-38% lg-top-50% text-center w-full max-w-700px" style="-webkit-transform: translateY(-50%);">
 							<AnimatedComponent>
 								<h1 class="uppercase c-paper mb-6">The Barber Shop Sofia</h1>
 							</AnimatedComponent>
@@ -94,32 +96,36 @@ export default function Page() {
 
 				<div class="lg-mt-0 lg-px-30 pb-10 max-w-1600px mx-auto flex lg-flex-row flex-col lg-gap-20">
 					<div class="lg-w-50% px-5">
-						<AnimatedComponentSlide>
+						<AnimatedComponent>
 							<img class="pb-2 pt-80px md:pt-120px flex flex-justify-center" src="/assets/heading-ic.png" />
 							<h2 class="c-paper text-left mb-7 pl-0 important-mt-0">Бръснарница от класа</h2>
-						</AnimatedComponentSlide>
-						<div class="flex flex-col gap-5">
-							<div class="c-paper">
-								<span class="c-brand  font-900" style="font-family: 'Roboto'">The Barber Shop Sofia</span> е нещо повече от просто бръснарница. Нашият барбър шоп се намира в квартал Изток, София на удобна и лесно достъпна локация в близост до ключови транспортни връзки и зелени градски зони.
+						</AnimatedComponent>
+						<AnimatedComponent>
+							<div class="flex flex-col gap-5">
+								<div class="c-paper">
+									<span class="c-brand  font-900" style="font-family: 'Roboto'">The Barber Shop Sofia</span> е нещо повече от просто бръснарница. Нашият барбър шоп се намира в квартал Изток, София на удобна и лесно достъпна локация в близост до ключови транспортни връзки и зелени градски зони.
+								</div>
+								<div class="c-paper">
+									<span class="c-brand font-900" style="font-family: 'Roboto'">The Barber Shop Sofia</span> е премиум бръснарница, където майсторството се преплита с вниманието към детайла, за да Ви осигури отлично ниво на комфорт и стил. Нашата мисия е да създадем цялостно ексклузивно преживяване за истински мъже.
+								</div>
 							</div>
-							<div class="c-paper">
-								<span class="c-brand font-900" style="font-family: 'Roboto'">The Barber Shop Sofia</span> е премиум бръснарница, където майсторството се преплита с вниманието към детайла, за да Ви осигури отлично ниво на комфорт и стил. Нашата мисия е да създадем цялостно ексклузивно преживяване за истински мъже.
-							</div>
-						</div>
+						</AnimatedComponent>
 					</div>
 
 					<div class="lg-w-50% pr-5 pl-5 lg-pl-0">
-						<AnimatedComponentSlide>
+						<AnimatedComponent>
 							<img class="pb-2 pt-80px md:pt-120px flex flex-justify-center" src="/assets/heading-ic.png" />
 							<h2 class="c-paper text-left mb-7 pl-0 important-mt-0">Стил и комфорт в едно</h2>
-						</AnimatedComponentSlide>
-						<ul class="c-paper ml--5 mt-0">
-							<li>Безплатно паркиране → бръснарница с място за паркиране</li>
-							<li>Топло посрещане с безплатно питие</li>
-							<li>Приятна и уютна атмосфера</li>
-							<li>Усещане за принадлежност към мъжка общност</li>
-							<li>Съчетание на традиционни техники с модерни подходи</li>
-						</ul>
+						</AnimatedComponent>
+						<AnimatedComponent>
+							<ul class="c-paper ml--5 mt-0">
+								<li>Безплатно паркиране → бръснарница с място за паркиране</li>
+								<li>Топло посрещане с безплатно питие</li>
+								<li>Приятна и уютна атмосфера</li>
+								<li>Усещане за принадлежност към мъжка общност</li>
+								<li>Съчетание на традиционни техники с модерни подходи</li>
+							</ul>
+						</AnimatedComponent>
 					</div>
 				</div>
 			</div>
@@ -134,49 +140,49 @@ export default function Page() {
 						img="/assets/home/stylish-buzz-cuts.webp"
 						alt="stylish buzz cuts"
 						title="Мъжко подстригване"
-						href="/"
+						href="/uslugi/mazhko-podstrigvane"
 					/>
 					<ServiceContaner
 						img="/assets/home/оформяне-на-брада.webp"
 						alt="оформяне на брада"
 						title="Оформяне на брада"
-						href="/"
+						href="/uslugi/oformiane-na-brada"
 					/>
 					<ServiceContaner
 						img="/assets/home/buzz-cut-and-beard.webp"
 						alt="buzz cut and beard"
 						title="Подстригване и оформяне на брада"
-						href="/"
+						href="/uslugi/mazhko-podstrigvane-i-oformiane-na-brada"
 					/>
 					<ServiceContaner
 						img="/assets/home/мокро-бръснене.webp"
 						alt="мокро бръснене"
 						title="Класическо мокро бръснене"
-						href="/"
+						href="/uslugi/klasichesko-mokro-brasnene"
 					/>
 					<ServiceContaner
 						img="/assets/about3.jpg"
-						alt=""
+						alt="тониране на сиви коси"
 						title="Тониране на сиви коси"
-						href="/"
+						href="/uslugi/klasichesko-mokro-brasnene"
 					/>
 					<ServiceContaner
 						img="/assets/about3.jpg"
-						alt=""
+						alt="бръснене на глава с бръснач"
 						title="Бръснене на глава с бръснач"
-						href="/"
+						href="/uslugi/brasnene-na-glava-s-brasnach"
 					/>
 					<ServiceContaner
 						img="/assets/home/детско-подстригване.webp"
 						alt="детско подстригване"
 						title="Детско подстригване"
-						href="/"
+						href="/uslugi/detsko-podstrigvane-momche"
 					/>
 					<ServiceContaner
 						img="/assets/about3.jpg"
-						alt=""
+						alt="подстригване на баща и син"
 						title="Подстригване на баща и син"
-						href="/"
+						href="/uslugi/podstrigvane-na-bashta-i-sin"
 					/>
 				</div>
 			</div>
@@ -187,7 +193,7 @@ export default function Page() {
 						<H2WithImage class="c-paper" title="Видео" />
 					</AnimatedComponent>
 					<AnimatedComponent>
-						<VideoPlayer src='https://www.youtube.com/embed/e2x0UXVU2yg?enablejsapi=1&mute=1' />
+						<VideoPlayer src='https://thebarbershop.bg/wp-content/uploads/2025/04/barbershopfinalmaster.mp4' />
 					</AnimatedComponent>
 				</div>
 			</div>
@@ -220,15 +226,15 @@ export default function Page() {
 					<AnimatedComponentSlide class="px-5">
 						<div class="flex flex-col gap-5">
 							<div>
-								<span class="c-brand-dark font-900">The Barber Shop Sofia</span> е нещо повече от просто бръснарница. Нашият барбър шоп се намира в квартал Изток, София на удобна и лесно достъпна локация в близост до ключови транспортни връзки и зелени градски зони.
+								<span class="font-700">The Barber Shop Sofia</span> е нещо повече от просто бръснарница. Нашият барбър шоп се намира в квартал Изток, София на удобна и лесно достъпна локация в близост до ключови транспортни връзки и зелени градски зони.
 							</div>
 							<div>
-								<span class="c-brand-dark font-900">The Barber Shop Sofia</span> е премиум бръснарница, където майсторството се преплита с вниманието към детайла, за да Ви осигури отлично ниво на комфорт и стил. Нашата мисия е да създадем цялостно ексклузивно преживяване за истински мъже.
+								<span class="font-700">The Barber Shop Sofia</span> е премиум бръснарница, където майсторството се преплита с вниманието към детайла, за да Ви осигури отлично ниво на комфорт и стил. Нашата мисия е да създадем цялостно ексклузивно преживяване за истински мъже.
 							</div>
 						</div>
 					</AnimatedComponentSlide>
 				</div>
-			<BeforeAfterSlider imgs={[
+				<BeforeAfterSlider imgs={[
 					{ src: "/assets/home/барбер-шоп-софия.webp", alt: "професионално мъжко подстригване в бръснарница в барбер шоп в София", hairstyle: "example-hairstyle" },
 					{ src: "/assets/home/barber-shops-sofia.webp", alt: "професионално измиване на глава в barber shops Sofia", hairstyle: "example-hairstyle" },
 					{ src: "/assets/home/подстригване-мъжко.webp", alt: "Подстригване мъжко", hairstyle: "example-hairstyle" },
@@ -246,7 +252,13 @@ export default function Page() {
 					</div>
 					<div>
 						<AnimatedComponent>
-							<ReviewSlider>
+							<ReviewSlider
+								reviews={[
+									{ name: "Elizabeth Maurice" },
+									{ name: "Gen Tiski" },
+									{ name: "Samanta Federico" },
+									{ name: "Samanta Federico" },
+								]}>
 								<StarReview
 									src="/assets/GoogleLogoPNGImage.png"
 									reviewText="I received excellent communications throughout the whole process. On the day, the cleaning experience was efficient with a considerate and friendly member of staff. Very competitive pricing."
@@ -299,19 +311,19 @@ export default function Page() {
 						<div class="px-5 lg-px-0 flex lg-flex-row flex-col lg-gap-10">
 							<div class="lg-w-33.33% flex flex-col">
 								<AnimatedComponent>
-									<h3 class="text-left mt-0">Опитни и квалифицирани барбъри</h3>
+									<h3 class="text-left mt-0 c-paper-inv op-70%">Опитни и квалифицирани барбъри</h3>
 									<div class="pb-10">Зад всяка перфектна прическа в The Barber Shop Sofia стои екип от изключителни професионалисти. Нашият барбър шоп е събрал част от най-добрите бръснари в София. Всеки от тях преминава през интензивно обучение, което обхваща както класическите бръснарски техники, така и най-новите тенденции в подстригването. Благодарение на това можем да ви предложим премиум обслужване на високо ниво и страхотни резултати.</div>
 								</AnimatedComponent>
 							</div>
 							<div class="lg-w-33.33% flex flex-col">
 								<AnimatedComponent>
-									<h3 class="text-left mt-5 lg-mt-0">Професионални инструменти</h3>
+									<h3 class="text-left mt-6 lg-mt-0 c-paper-inv op-70%">Професионални инструменти</h3>
 									<div class="pb-10">Използваме висок клас бръснарски принадлежности, които са внимателно подбрани, за да съчетават качество, ефективност и прецизност. В нашата бръснарница разчитаме на световно признати марки като Wahl, Andis, BabylissPRO, Mühle, Thiers Issard, гарантиращи безопасност и комфорт. Независимо от това какъв стил предпочитате, ние имаме правилните инструменти, с който да постигнем отличен краен резултат.</div>
 								</AnimatedComponent>
 							</div>
 							<div class="lg-w-33.33% flex flex-col">
 								<AnimatedComponent>
-									<h3 class="text-left mt-5 lg-mt-0">Висококачествена козметика</h3>
+									<h3 class="text-left mt-6 lg-mt-0 c-paper-inv op-70%">Висококачествена козметика</h3>
 									<div class="pb-10">В The Barber Shop Sofia не правим компромиси с качеството. За нас Вашите усмивки и безупречни визии са приоритет, затова използваме само най-добрите продукти за мъжка грижа. При нас ще откриете богато разнообразие от висок клас козметика Depot, American Crew, Lavish подходяща за всички видове кожа и коса. Нашата гама от козметика включва всичко необходимо – от шампоани и балсами до стилизиращи продукти.</div>
 								</AnimatedComponent>
 							</div>

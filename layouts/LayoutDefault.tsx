@@ -15,7 +15,7 @@ import MdiEmailMultipleOutline from '~icons/mdi/email-multiple-outline';
 import MdiBankOutline from '~icons/mdi/bank-outline';
 import MdiAccountFileTextOutline from '~icons/mdi/account-file-text-outline';
 import MdiAccountGroupOutline from '~icons/mdi/account-group-outline';
-import MdiDiamondOutline from '~icons/mdi/diamond-outline';
+import RiArrowRightSLine from '~icons/ri/arrow-right-s-line';
 import { H2WithImage } from '../components/H2WithImage';
 
 export default function LayoutDefault(props: { children?: JSX.Element }) {
@@ -40,7 +40,7 @@ export default function LayoutDefault(props: { children?: JSX.Element }) {
           </a>
         </div>
 
-        <div class="flex whitespace-nowrap justify-end items-center font-semibold gap-5 xl:gap-12 md:pr-10 md:pl-5 xl:pl-10 pr-6">
+        <div class="flex whitespace-nowrap justify-end items-center font-semibold gap-8 xl:gap-18 md:pr-10 md:pl-5 xl:pl-10 pr-6">
           <div
             class="relative"
             onMouseEnter={() => setServicesMenuOpen(true)}
@@ -49,13 +49,20 @@ export default function LayoutDefault(props: { children?: JSX.Element }) {
             <ServiceMenuItem href="/uslugi">Услуги</ServiceMenuItem>
             <DropDownMenuDesktop
               isVisible={servicesMenuOpen()}
-              href="/mazhko-podstrigvane"
-              title="МЪЖКО ПОДСТРИГВАНЕ"
+              items={[
+                { href: "/uslugi/mazhko-podstrigvane", title: "МЪЖКО ПОДСТРИГВАНЕ" },
+                { href: "/uslugi/oformiane-na-brada", title: "ОФОРМЯНЕ НА БРАДА" },
+                { href: "/uslugi/mazhko-podstrigvane-i-oformiane-na-brada", title: "МЪЖКО ПОДСТРИГВАНЕ И ОФОРМЯНЕ НА БРАДА" },
+                { href: "/uslugi/klasichesko-mokro-brasnene", title: "КЛАСИЧЕСКО МОКРО БРЪСНЕНЕ" },
+                { href: "/uslugi/profesionalno-tonirane-na-mazhka-kosa", title: "ПРОФЕСИОНАЛНО ТОНИРАНЕ НА МЪЖКА КОСА" },
+                { href: "/uslugi/brasnene-na-glava-s-brasnach", title: "БРЪСНЕНЕ НА ГЛАВА С БРЪСНАЧ" },
+                { href: "/uslugi/detsko-podstrigvane-momche", title: "ДЕТСКО ПОДСТРИГВАНЕ" },
+                { href: "/uslugi/podstrigvane-na-bashta-i-sin", title: "ПОДСТРИГВАНЕ НА БАЩА И СИН" },
+              ]}
             />
           </div>
 
-          <MenuItem href="/">Цени</MenuItem>
-          <MenuItem href="/">Отзиви</MenuItem>
+          <MenuItem href="/otzivi">Отзиви</MenuItem>
 
           <div
             class="relative"
@@ -65,16 +72,22 @@ export default function LayoutDefault(props: { children?: JSX.Element }) {
             <ServiceMenuItem href="/za-nas">За нас</ServiceMenuItem>
             <DropDownMenuDesktop
               isVisible={aboutMenuOpen()}
-              href="/za-nas/kris"
-              title="КРИС"
+              items={[
+                { href: "/za-nas/kris", title: "КРИС" },
+                { href: "/za-nas/mario", title: "МАРИО" },
+                { href: "/za-nas/blago", title: "БЛАГО" },
+                { href: "/za-nas/denis", title: "ДЕНИС" },
+              ]}
             />
           </div>
           <MenuItem href="/karieri">Кариери</MenuItem>
-          <MenuItem href="/">Магазин</MenuItem>
+          <div class="hidden">
+            <MenuItem href="/">Магазин</MenuItem>
+          </div>
           <MenuItem href="/kontakti">Контакти</MenuItem>
         </div>
 
-        <a href="/test#test-id-page" class="hidden lg-block mr-10">
+        <a href="/" class="hidden lg-block mr-10">
           <button onClick={closeMenu}
             class="cursor-pointer bg-brand-compliment c-paper b-solid b-2px b-brand-compliment uppercase font-size-4 font-500 px-7 py-2 hover-c-paper-inv transition-colors lg-block hidden" style="font-family: 'Oswald', sans-serif !important; letter-spacing: 1px;"
           >
@@ -95,41 +108,43 @@ export default function LayoutDefault(props: { children?: JSX.Element }) {
 
             <AnimatedComponent class="hidden  flex-justify-center lg-flex-justify-center lg-mt-10 w-full gap-5 lg-gap-15 py-10">
               <a href="/" class="text-center w-32 lg-w-42 bg-brand c-paper-inv b-solid b-2px b-brand uppercase font-size-4 lg-font-size-5 font-500 py-3 hover-c-paper transition-colors" style="font-family: 'Oswald', sans-serif !important; letter-spacing: 1px;">Запазете час</a>
-              <a href="/" class="text-center w-32 lg-w-42 bg-brand c-paper-inv b-solid b-2px b-brand uppercase font-size-4 lg-font-size-5 font-500 py-3 hover-c-paper transition-colors" style="font-family: 'Oswald', sans-serif !important; letter-spacing: 1px;">Цени</a>
+              <a href="/uslugi" class="text-center w-32 lg-w-42 bg-brand c-paper-inv b-solid b-2px b-brand uppercase font-size-4 lg-font-size-5 font-500 py-3 hover-c-paper transition-colors" style="font-family: 'Oswald', sans-serif !important; letter-spacing: 1px;">Услуги</a>
             </AnimatedComponent>
 
             <div class="flex flex-col flex-justify-start flex-items-center py-2 md-gap-0 gap-1 mt-5 md-mt-0">
               <h3 class="c-brand font-600 mt-0 uppercase">Най-популярните<br></br>ни услуги</h3>
-              <MainFooterMenuItem href="/">Мъжко подстригване</MainFooterMenuItem>
+              <MainFooterMenuItem href="/uslugi/mazhko-podstrigvane">Мъжко подстригване</MainFooterMenuItem>
               <div>
                 <MdiDot class="w-4 c-paper pt-2px mx-5 block" />
               </div>
-              <MainFooterMenuItem href="/">Оформяне на брада</MainFooterMenuItem>
+              <MainFooterMenuItem href="/uslugi/oformiane-na-brada">Оформяне на брада</MainFooterMenuItem>
               <div>
                 <MdiDot class="w-4 c-paper pt-2px mx-5 block" />
               </div>
-              <MainFooterMenuItem href="/">Комбо</MainFooterMenuItem>
+              <MainFooterMenuItem href="/uslugi/mazhko-podstrigvane-i-oformiane-na-brada">Комбо</MainFooterMenuItem>
               <div>
                 <MdiDot class="w-4 c-paper pt-2px mx-5 block" />
               </div>
-              <MainFooterMenuItem href="/">Тониране</MainFooterMenuItem>
+              <MainFooterMenuItem href="/uslugi/profesionalno-tonirane-na-mazhka-kosa">Тониране</MainFooterMenuItem>
             </div>
 
             <div class="hidden md-flex flex-col flex-justify-start flex-items-center py-2 md-gap-0 gap-1" style="border-right-color: rgba(255, 255, 255, 0.12); border-left-color: rgba(255, 255, 255, 0.2);">
               <h3 class="c-brand font-600 mt-0 uppercase">Полезни връзки</h3>
-              <MainFooterMenuItem href="/">Магазин</MainFooterMenuItem>
+              <div class="hidden">
+                <MainFooterMenuItem href="/">Магазин</MainFooterMenuItem>
+                <div>
+                  <MdiDot class="w-4 c-paper pt-2px mx-5 block" />
+                </div>
+              </div>
+              <MainFooterMenuItem href="/kontakti">Контакти</MainFooterMenuItem>
               <div>
                 <MdiDot class="w-4 c-paper pt-2px mx-5 block" />
               </div>
-              <MainFooterMenuItem href="/">Контакти</MainFooterMenuItem>
+              <MainFooterMenuItem href="/karieri">Кариери</MainFooterMenuItem>
               <div>
                 <MdiDot class="w-4 c-paper pt-2px mx-5 block" />
               </div>
-              <MainFooterMenuItem href="/">Кариери</MainFooterMenuItem>
-              <div>
-                <MdiDot class="w-4 c-paper pt-2px mx-5 block" />
-              </div>
-              <MainFooterMenuItem href="/">За нас</MainFooterMenuItem>
+              <MainFooterMenuItem href="/za-nas">За нас</MainFooterMenuItem>
 
             </div>
 
@@ -139,10 +154,10 @@ export default function LayoutDefault(props: { children?: JSX.Element }) {
           </div>
 
           <div class="flex flex-justify-center pt-11 pb-2 gap-3 b-t-solid b-t-0.5px mx-5 sm-mx-10 lg-mx-30" style="border-top-color: rgba(255, 255, 255, 0.12);">
-            <a href="/">
+            <a href="https://www.facebook.com/TheBarberShopSofia/?locale=en_GB" target="_blank" rel="noopener">
               <RiFacebookFill class="w-10 h-10 bg-brand-compliment hover-c-paper-inv transition-colors p-1.5 c-paper" />
             </a>
-            <a href="/">
+            <a href="https://www.instagram.com/the.barber.shop.sofia/?__d=1%3Futm_source%3Dig_embed" target="_blank" rel="noopener">
               <RiInstagramLine class="w-10 h-10 bg-brand-compliment hover-c-paper-inv transition-colors p-1.5 c-paper" />
             </a>
           </div>
@@ -164,10 +179,10 @@ export default function LayoutDefault(props: { children?: JSX.Element }) {
           <div class="b-t-solid b-t-0.5px mx-5 sm-mx-10 lg-mx-30 py-8 font-100 flex md-flex-row flex-col flex-justify-between flex-items-center" style="border-top-color: rgba(255, 255, 255, 0.12);">
             <p class="text-center c-paper lg-font-size-3.5 md-font-size-3.3 font-size-3.2 line-height-6 font-sans">Copyright &copy; <CurrentYear /> <span class="c-brand"><BottomFooterMenuItem href="/">TheBarberShop</BottomFooterMenuItem></span></p>
             <div class="flex flex-col md-flex-row md-gap-2 lg-gap-5 flex-items-center flex-justify-end">
-              <BottomFooterMenuItem href="/">Общи условия</BottomFooterMenuItem>
-              <BottomFooterMenuItem href="/">Политика за поверителност</BottomFooterMenuItem>
-              <BottomFooterMenuItem href="/">Карта на сайта</BottomFooterMenuItem>
-              <BottomFooterMenuItem href="/">Cookie Policy</BottomFooterMenuItem>
+              <BottomFooterMenuItem href="/obshti-uslovia">Общи условия</BottomFooterMenuItem>
+              <BottomFooterMenuItem href="/politika-za-poveritelnost">Политика за поверителност</BottomFooterMenuItem>
+              <BottomFooterMenuItem href="/karta-na-saita">Карта на сайта</BottomFooterMenuItem>
+              <BottomFooterMenuItem href="/politika-za-biskvitki">Cookie Policy</BottomFooterMenuItem>
             </div>
           </div>
         </div>
@@ -236,7 +251,7 @@ function TopFooter() {
         <AnimatedComponent class="flex flex-justify-center pb-20">
           <div class="flex flex-justify-evenly lg-flex-justify-center lg-mt-5 w-full lg-gap-15 max-w-80% lg-max-w-1100px lg:border-t-solid b-paper b-1px b-op-60% pt-5 lg-pt-20">
             <a href="/" class="text-center w-32 lg-w-42 bg-brand c-paper-inv b-solid b-2px b-brand uppercase font-size-4 lg-font-size-4.5 font-500 py-3 hover-c-paper transition-colors" style="font-family: 'Oswald', sans-serif !important; letter-spacing: 1px;">Запазете час</a>
-            <a href="/" class="text-center w-32 lg-w-42 bg-brand c-paper-inv b-solid b-2px b-brand uppercase font-size-4 lg-font-size-4.5 font-500 py-3 hover-c-paper transition-colors" style="font-family: 'Oswald', sans-serif !important; letter-spacing: 1px;">Цени</a>
+            <a href="/uslugi" class="text-center w-32 lg-w-42 bg-brand c-paper-inv b-solid b-2px b-brand uppercase font-size-4 lg-font-size-4.5 font-500 py-3 hover-c-paper transition-colors" style="font-family: 'Oswald', sans-serif !important; letter-spacing: 1px;">Услуги</a>
           </div>
         </AnimatedComponent>
       </div>
@@ -247,42 +262,50 @@ function TopFooter() {
 function ServiceMenuItem(props: { href: string; children: any }) {
 
   return (
+    <div class="relative group">
     <a
       href={props.href}
-      class="hidden lg-block relative dropdown font-ui lg:flex c-paper text-center font-size-5 uppercase font-sans hover:c-brand-hover tracking-wide font-500 transition-all desktop-menu-item"
+      class="hidden lg-block relative dropdown font-ui lg:flex c-paper text-center font-size-5 uppercase font-sans hover:c-brand-dark tracking-wide font-500 transition-all after:content-empty after:absolute after:bottom-0 after:left-0 after:right-0 after:w-0 after:h-0.5 after:bg-brand-dark after:transition-all group-hover:after:w-full"
       style="font-family: 'Oswald', sans-serif; letter-spacing: 0.5px;"
     >
       {props.children}
     </a>
+    </div>
   );
 }
 
 function DropdownMenuItem(props: { href: string; children: any }) {
-
   return (
-    <a href={props.href} class="flex justify-center items-center p-2 hover:bg-#d19d64 hover:bg-opacity-40 transition-all">
-      <div class="text-center c-#10203b uppercase tracking-wider font-500 leading-normal font-size-4"
-        style="font-family: 'Oswald', sans-serif !important">
+    <a
+      href={props.href}
+      class="flex items-center p-2 hover:bg-#d19d64 hover:bg-opacity-40 transition-all"
+    >
+      <div
+        class="c-#10203b uppercase tracking-wider font-500 leading-normal font-size-3.4 max-w-60 whitespace-normal"
+        style="font-family: 'Roboto', sans-serif !important"
+      >
         {props.children}
       </div>
     </a>
   );
 }
 
-function DropDownMenuDesktop(props: { isVisible: boolean; href: string; title: string }) {
-
+function DropDownMenuDesktop(props: { isVisible: boolean; items: { href: string; title: string }[] }) {
   return (
     <div
-      class={`absolute top-full left-0 w-55 bg-white shadow-lg z-10 py-4 px-4 rounded-lg transition-all duration-300 ease-out ${props.isVisible ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-4 invisible"
-        }`}>
-      <DropdownMenuItem href={props.href}>{props.title}</DropdownMenuItem>
+      class={`absolute top-full left-0 w-60 bg-white shadow-lg z-10 py-4 px-4 rounded-lg transition-all duration-300 ease-out ${props.isVisible ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-4 invisible"
+        }`}
+    >
+      {props.items.map((item) => (
+        <DropdownMenuItem href={item.href}>{item.title}</DropdownMenuItem>
+      ))}
     </div>
   );
 }
 
 function MenuItem(props: { href: string, children: JSX.Element }) {
 
-  return <a href={props.href} style="font-family: 'Oswald', sans-serif !important; letter-spacing: 0.5px;" class="relative py-2 dropdown hidden font-ui lg-flex c-paper text-center font-size-5 uppercase font-sans hover-c-brand-hover:hover tracking-wide font-500 transition-all desktop-menu-item">{props.children}</a>
+  return <div class="relative group"><a href={props.href} style="font-family: 'Oswald', sans-serif !important; letter-spacing: 0.5px;" class="relative py-2 dropdown hidden font-ui lg-flex c-paper text-center font-size-5 uppercase font-sans hover-c-brand-dark tracking-wide font-500 transition-all after:content-empty after:absolute after:bottom-0 after:left-0 after:right-0 after:w-0 after:h-0.5 after:bg-brand-dark after:transition-all group-hover:after:w-full">{props.children}</a></div>
 }
 
 const CurrentYear = () => {
@@ -375,7 +398,7 @@ function HamburgerMenu() {
     <div class="lg-hidden flex flex-content-center flex-items-center flex-justify-between w-full">
       <div class="flex flex-items-center flex-justify-center lg-pl-4 pl-0">
         <a href="/" onClick={closeMenu}>
-          <img src="/assets/The Barber Shop (2).png" class="w-23 ml--5 mr--4 mt-4" alt="fine-carpet-cleaning-logo" />
+          <img src="/assets/The Barber Shop (2).png" class="w-23 ml--11 mr--4 mt-4" alt="fine-carpet-cleaning-logo" />
         </a>
       </div>
       <a href="/test">
@@ -420,7 +443,6 @@ function HamburgerMenu() {
     </div>
   );
 }
-import RiArrowRightSLine from '~icons/ri/arrow-right-s-line';
 
 function MobileDropdownMenuItem(props: {
   closeMenu: () => void;
@@ -448,26 +470,26 @@ function MobileDropdownMenuItem(props: {
           <span class="flex-grow" style="font-family: 'Oswald', sans-serif">{props.text}</span>
         )}
         {props.subMenu && (
-          <span onClick={toggleSubMenu} class="p-1 cursor-pointer ml-auto transition-transform duration-300 flex items-center" style={{ transform: open() ? "rotate(90deg)" : "rotate(0)" }}>
+          <span onClick={toggleSubMenu} class="p-3 cursor-pointer ml-auto transition-transform duration-300 flex items-center" style={{ transform: open() ? "rotate(90deg)" : "rotate(0)" }}>
             <RiArrowRightSLine />
           </span>
         )}
       </div>
 
-      {props.subMenu && open() && (
-        <div class="pl-6 transition-all duration-300">
-          {props.subMenu.map((item) => (
-            <a
-              href={item.href}
-              onClick={props.closeMenu}
-              class="flex flex-items-center flex-nowrap c-paper hover-c-brand:hover font-size-5 font-400 uppercase active:bg-paper active:bg-opacity-15 active:c-paper hover:bg-paper hover-bg-opacity-10 hover:c-paper p-3 b-rd-2 transition-all cursor-pointer"
-              style="font-family: 'Oswald', sans-serif"
-            >
-              {item.text}
-            </a>
-          ))}
-        </div>
-      )}
+      <div
+        class={`pl-2 overflow-auto transition-all duration-300 ease-in-out ${open() ? "max-h-96 opacity-100" : "max-h-0 opacity-0"}`}
+      >
+        {props.subMenu?.map((item) => (
+          <a
+            href={item.href}
+            onClick={props.closeMenu}
+            class="flex flex-items-center flex-nowrap c-paper hover-c-brand:hover font-size-5 font-400 uppercase active:bg-paper active:bg-opacity-15 active:c-paper hover:bg-paper hover-bg-opacity-10 py-3.3 hover:c-paper b-rd-2 transition-all cursor-pointer"
+            style="font-family: 'Oswald', sans-serif"
+          >
+            {item.text}
+          </a>
+        ))}
+      </div>
     </div>
   );
 }
@@ -483,20 +505,21 @@ const MyDropdown = (props: { closeMenu: () => void; }) => {
             href="/uslugi"
             icon={<RiScissorsLine />}
             subMenu={[
-              { href: "/mazhko-podstrigvane", text: "Мъжко подстригване" },
+              { href: "/uslugi/mazhko-podstrigvane", text: "Мъжко подстригване" },
+              { href: "/uslugi/oformiane-na-brada", text: "ОФОРМЯНЕ НА БРАДА" },
+              { href: "/uslugi/mazhko-podstrigvane-i-oformiane-na-brada", text: "МЪЖКО ПОДСТРИГВАНЕ И ОФОРМЯНЕ НА БРАДА" },
+              { href: "/uslugi/klasichesko-mokro-brasnene", text: "КЛАСИЧЕСКО МОКРО БРЪСНЕНЕ" },
+              { href: "/uslugi/profesionalno-tonirane-na-mazhka-kosa", text: "ПРОФЕСИОНАЛНО ТОНИРАНЕ НА МЪЖКА КОСА" },
+              { href: "/uslugi/brasnene-na-glava-s-brasnach", text: "БРЪСНЕНЕ НА ГЛАВА С БРЪСНАЧ" },
+              { href: "/uslugi/detsko-podstrigvane-momche", text: "ДЕТСКО ПОДСТРИГВАНЕ" },
+              { href: "/uslugi/podstrigvane-na-bashta-i-sin", text: "ПОДСТРИГВАНЕ НА БАЩА И СИН" },
             ]}
-          />
-          <MobileDropdownMenuItem
-            closeMenu={props.closeMenu}
-            text="Цени"
-            icon={<MdiDiamondOutline />}
-            href="/"
           />
           <MobileDropdownMenuItem
             closeMenu={props.closeMenu}
             text="Отзиви"
             icon={<MdiCommentCheckOutline />}
-            href="/"
+            href="/otzivi"
           />
           <MobileDropdownMenuItem
             closeMenu={props.closeMenu}
@@ -505,6 +528,9 @@ const MyDropdown = (props: { closeMenu: () => void; }) => {
             icon={<MdiAccountGroupOutline />}
             subMenu={[
               { href: "/za-nas/kris", text: "Крис" },
+              { href: "/za-nas/mario", text: "МАРИО" },
+              { href: "/za-nas/blago", text: "БЛАГО" },
+              { href: "/za-nas/denis", text: "ДЕНИС" },
             ]}
           />
           <MobileDropdownMenuItem
@@ -513,12 +539,14 @@ const MyDropdown = (props: { closeMenu: () => void; }) => {
             icon={<MdiAccountFileTextOutline />}
             href="/karieri"
           />
-          <MobileDropdownMenuItem
-            closeMenu={props.closeMenu}
-            text="Магазин"
-            icon={<MdiBankOutline />}
-            href="/"
-          />
+          <div class="hidden">
+            <MobileDropdownMenuItem
+              closeMenu={props.closeMenu}
+              text="Магазин"
+              icon={<MdiBankOutline />}
+              href="/"
+            />
+          </div>
           <MobileDropdownMenuItem
             closeMenu={props.closeMenu}
             text="Контакти"
@@ -589,7 +617,7 @@ function BackToTopArrow() {
       }}
     >
       <BackToTopButton onClick={handleScrollToTop}>
-        <RiArrowDropUpFill class="mx-auto" />
+        <RiArrowDropUpFill class="mx-auto w-10 h-10" />
       </BackToTopButton>
     </div>
   );

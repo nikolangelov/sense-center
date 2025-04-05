@@ -1,46 +1,93 @@
-import { createSignal, JSX, onCleanup, onMount } from 'solid-js';
+import { createSignal, JSX, onCleanup, onMount, Show, useContext } from 'solid-js';
 import range from "lodash/range"
-import { Slider, SliderButton, SliderProvider } from "solid-slider";
+import { Slider, SliderButton, SliderContext, SliderProvider } from "solid-slider";
 import RiPlayMiniLine from '~icons/ri/play-mini-line';
 import RiPlayReverseMiniLine from '~icons/ri/play-reverse-mini-line';
 
-export const ReviewSlider = ( props : { style?: string | string, children: JSX.Element | JSX.Element[] }) => {
+function DotsUnderSlider(props: { reviews: { name: string }[] }) {
+    const [context] = useContext(SliderContext);
+    const [isDesktop, setIsDesktop] = createSignal(false);
+
+    const goToSlide = (index: number) => {
+        context().moveTo(index);
+    };
+
+    onMount(() => {
+        const checkMediaQuery = () => setIsDesktop(window.matchMedia("(min-width: 768px)").matches);
+        checkMediaQuery();
+        window.addEventListener("resize", checkMediaQuery);
+        onCleanup(() => window.removeEventListener("resize", checkMediaQuery));
+    });
+
+    return (
+        <>
+            {isDesktop() ? (
+                <div class="dots-container" style="text-align: center; margin-bottom: 40px;">
+                    {props.reviews.map((review, index) => (
+                        <button
+                            onClick={() => goToSlide(index)}
+                            class={`dot ${context()?.current() === index ? "active" : ""}`}
+                            style={{ margin: "0 5px", padding: "8px", cursor: "pointer", border: "none", background: context()?.current() === index ? "#7c1d2a" : "#f0f0f0" }}
+                            title={review.name}
+                        >
+                        </button>
+                    ))}
+                </div>
+            ) : (
+                <div class="dots-container" style="text-align: center; margin-bottom: 30px;">
+                    {props.reviews.map((review, index) => (
+                        <button
+                            onClick={() => goToSlide(index)}
+                            class={`dot ${context()?.current() === index ? "active" : ""}`}
+                            style={{ margin: "0 3px", padding: "5px", cursor: "pointer", border: "none", background: context()?.current() === index ? "#7c1d2a" : "#f0f0f0" }}
+                            title={review.name}
+                        >
+                        </button>
+                    ))}
+                </div>
+            )}
+        </>
+    );
+}
+
+export const ReviewSlider = (props: { reviews: { name: string }[]; children: JSX.Element | JSX.Element[] }) => {
     const isDesktop = useMediaQuery("(min-width: 768px)");
 
     return (
         <SliderProvider>
             {isDesktop() ? (
-                <div class="max-w-900px mx-auto position-relative hidden md:block my-0">
-                    <Slider options={{ loop: true, slides: { perView: 2, spacing: 15 } }}>
+                <div class="max-w-1000px mx-auto position-relative hidden md:block my-0">
+                    <Slider options={{ loop: true, slides: { perView: 2.2, spacing: 15 } }}>
                         {props.children}
                     </Slider>
                     <SliderButton class="cursor-pointer position-absolute top-45% left--15 bg-transparent b-none" prev>
-                        <RiPlayReverseMiniLine class="md-ml-14 bg-brand-compliment c-paper b-brand-compliment lg--ml-2 font-size-10 b-solid b-3px p-1 hover:c-brand-compliment hover-bg-transparent hover-b-brand-compliment transition-colors" style={props.style} />
+                        <RiPlayReverseMiniLine class="md-ml-14 bg-brand-compliment c-paper b-brand-compliment lg--ml-2 font-size-10 b-solid b-3px p-1 hover:c-brand-compliment hover-bg-transparent hover-b-brand-compliment transition-colors" />
                     </SliderButton>
                     <SliderButton class="cursor-pointer position-absolute top-45% right--15 bg-transparent b-none" next>
-                        <RiPlayMiniLine class="md-mr-14 bg-brand-compliment c-paper b-brand-compliment lg--mr-2 font-size-10 b-solid b-3px p-1 hover:c-brand-compliment hover-bg-transparent hover-b-brand-compliment transition-colors" style={props.style} />
+                        <RiPlayMiniLine class="md-mr-14 bg-brand-compliment c-paper b-brand-compliment lg--mr-2 font-size-10 b-solid b-3px p-1 hover:c-brand-compliment hover-bg-transparent hover-b-brand-compliment transition-colors" />
                     </SliderButton>
                 </div>
             ) : (
                 <div class="max-w-1000px m-auto position-relative md:hidden block mx-4">
-                    <Slider options={{ loop: true }}>
+                    <Slider options={{ loop: true, slides: { perView: 1.2, spacing: 10 } }}>
                         {props.children}
                     </Slider>
-                    <SliderButton class="cursor-pointer position-absolute top-47% left-0 bg-transparent b-none" prev>
-                        <RiPlayReverseMiniLine class="-ml-1 font-size-7 b-solid b-2px p-1 c-paper b-brand-compliment hover-c-brand-compliment bg-brand-compliment hover-bg-transparent hover-b-brand-compliment transition-colors" style={props.style} />
+                    <SliderButton class="hidden cursor-pointer position-absolute top-47% left-0 bg-transparent b-none" prev>
+                        <RiPlayReverseMiniLine class="-ml-1 font-size-7 b-solid b-2px p-1 c-paper b-brand-compliment hover-c-brand-compliment bg-brand-compliment hover-bg-transparent hover-b-brand-compliment transition-colors" />
                     </SliderButton>
-                    <SliderButton class="cursor-pointer position-absolute top-47% right-0 bg-transparent b-none" next>
-                        <RiPlayMiniLine class="-mr-1 font-size-7 b-solid b-2px p-1 c-paper b-brand-compliment hover-c-brand-compliment bg-brand-compliment hover-bg-transparent hover-b-brand-compliment transition-colors" style={props.style} />
+                    <SliderButton class="hidden cursor-pointer position-absolute top-47% right-0 bg-transparent b-none" next>
+                        <RiPlayMiniLine class="-mr-1 font-size-7 b-solid b-2px p-1 c-paper b-brand-compliment hover-c-brand-compliment bg-brand-compliment hover-bg-transparent hover-b-brand-compliment transition-colors" />
                     </SliderButton>
                 </div>
             )}
+            <DotsUnderSlider reviews={props.reviews} />
         </SliderProvider>
     );
 };
 
 export function StarReview(props: { src: string; stars: number; hrefGoogleReview: string; name: string; date: string; reviewText: string; }) {
     return (
-        <a class="mb-5 mt-0 m-auto px-8 py-10 bg-paper" target="_blank" rel="noopener" href={props.hrefGoogleReview}>
+        <a class="mb-2 md:mb-5 mt-0 m-auto px-2 md:px-8 py-10 bg-paper" target="_blank" rel="noopener" href={props.hrefGoogleReview}>
             <div class="flex flex-justify-center flex-items-center">
                 <div class="flex flex-col flex-justify-center flex-items-center">
                     <div class="flex flex-justify-center flex-items-center">

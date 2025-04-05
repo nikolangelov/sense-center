@@ -26,8 +26,6 @@ function useMediaQuery(query: string) {
 	return matches;
 }
 
-
-
 function ServiceContainer(props: { href: string, title: string, desc: string, price?: string, time?: string, img: string, alt: string }) {
 	const isDesktop = useMediaQuery("(min-width: 768px)");
 	const [arrowWidth, setArrowWidth] = createSignal(50);
@@ -62,7 +60,7 @@ function ServiceContainer(props: { href: string, title: string, desc: string, pr
 						<div
 							class="block h-full relative flex flex-col justify-end group overflow-hidden"
 							style={{
-								"background-image": `linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.9)), url(${props.img})`,
+								"background-image": `linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 1)), url(${props.img})`,
 								"background-position": "center",
 								"background-repeat": "no-repeat",
 								"background-size": "cover",
@@ -78,9 +76,9 @@ function ServiceContainer(props: { href: string, title: string, desc: string, pr
 									<div class="w-300px">
 										<h3 class="c-paper mt-2 mb-1">{props.title}</h3>
 									</div>
-									<div class="h-[1px] w-[100px] group-hover:w-[300px] transition-all duration-900 ease-in-out bg-brand mb-4"></div>
+									<div class="h-[1px] w-[100px] group-hover:w-[300px] transition-all duration-900 ease-in-out bg-brand mb-5"></div>
 								</div>
-								<div class="c-paper text-left mb-4 px-4 text-lg leading-7 mt-auto">
+								<div class="c-paper text-left mb-5 pr-4 pl-10 text-lg leading-7 mt-auto">
 									{props.desc}
 								</div>
 								<div class="flex flex-col flex-items-center pb-2">
@@ -94,7 +92,7 @@ function ServiceContainer(props: { href: string, title: string, desc: string, pr
 						ref={containerRef}
 						class="block h-full relative flex flex-col justify-end group overflow-hidden"
 						style={{
-							"background-image": `linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.9)), url(${props.img})`,
+							"background-image": `linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 1)), url(${props.img})`,
 							"background-position": "center",
 							"background-repeat": "no-repeat",
 							"background-size": "cover",
@@ -119,7 +117,7 @@ function ServiceContainer(props: { href: string, title: string, desc: string, pr
 								<div class="h-[1px] transition-all duration-900 ease-in-out bg-brand"
 									style={{ width: `${arrowWidth()}px` }}>
 								</div>
-								<div class="c-paper text-left pt-4 px-4 text-lg leading-7 mt-auto">
+								<div class="c-paper text-left pt-4 pr-6 pl-10 text-lg leading-7 mt-auto">
 									{props.desc}
 								</div>
 								<div class="flex flex-col flex-items-center pt-4">
@@ -148,77 +146,76 @@ export default function Page() {
 			</div>
 
 			<section class="pb-17 md-pt-35 pt-15">
-				<div class="container-in-services flex md-flex-row flex-col flex-justify-center flex-items-center flex-wrap mb-5 gap-15 lg-gap-25 lg-px-10 px-5">
+				<div class="container-in-services flex md-flex-row flex-col flex-justify-center flex-items-center flex-wrap mb-5 gap-15 lg-px-10 px-5">
 					<ServiceContainer
 						img="/assets/uslugi/мъжко-подстригване-1-mobile.webp"
 						alt="мъжко подстригване"
-						href=""
+						href="/uslugi/mazhko-podstrigvane"
 						title="Мъжко подстригване"
-						desc="Класическо мокро бръснене е ритуал в The Barber Shop Sofia, който е много повече от грижа – той е чиста проба"
+						desc="Подстригването на The Barber Shop е комбинация от различни бръснарски и фризьорски техники на подстригване и е в съответствие с международните тенденции в бръснарството, модата и мъжкия стил."
 						price="50"
 						time="1 ч."
 					/>
 					<ServiceContainer
 						img="/assets/uslugi/оформяне-на-брада-1-mobile.webp"
 						alt="оформяне на брада"
-						href=""
+						href="/uslugi/oformiane-na-brada"
 						title="Оформяне на брада"
-						desc="Класическо мокро бръснене е ритуал в The Barber Shop Sofia, който е много повече от грижа – той е чиста проба"
+						desc="Оформянето на брадата е специфична процедура, която изисква сериозни познания, бръснарска компетенция и известна доза талант."
 						price="50"
 						time="1 ч."
 					/>
 					<ServiceContainer
 						img="/assets/uslugi/подстригване-и-оформяне-на-брада-mobile.webp"
 						alt="подстригване и оформяне на брада"
-						href=""
+						href="/uslugi/mazhko-podstrigvane-i-oformiane-na-brada"
 						title="Подстригване и оформяне на брада"
-						desc="Класическо мокро бръснене е ритуал в The Barber Shop Sofia, който е много повече от грижа – той е чиста проба"
+						desc=""
 						price="50"
 						time="1 ч."
 					/>
 					<ServiceContainer
 						img="/assets/uslugi/класическо-мокро-бръснене-mobile.webp"
 						alt="класическо мокро бръснене"
-						href=""
+						href="/uslugi/klasichesko-mokro-brasnene"
 						title="Класическо мокро бръснене"
-						desc="Класическо мокро бръснене е ритуал в The Barber Shop Sofia, който е много повече от грижа – той е чиста проба"
+						desc="Класическо мокро бръснене е ритуал в The Barber Shop Sofia, който е много повече от грижа – той е чиста проба удоволствие за един мъж."
 						price="50"
 						time="1 ч."
 					/>
 					<ServiceContainer
 						img="/assets/about3.jpg"
-						alt=""
-						href=""
-						title="Услуга"
-						desc="Класическо мокро бръснене е ритуал в The Barber Shop Sofia, който е много повече от грижа – той е чиста проба"
+						alt="тониране на мъжка коса"
+						href="/uslugi/profesionalno-tonirane-na-mazhka-kosa"
+						title="Тониране на мъжка коса"
+						desc=""
 						price="50"
 						time="1 ч."
 					/>
 					<ServiceContainer
 						img="/assets/uslugi/бръснене-на-глава-с-бръснач-2-mobile.webp"
 						alt="бръснене на глава с бръснач"
-						href=""
+						href="/uslugi/brasnene-na-glava-s-brasnach"
 						title="Бръснене на глава с бръснач"
-						desc="Класическо мокро бръснене е ритуал в The Barber Shop Sofia, който е много повече от грижа – той е чиста проба"
+						desc=""
 						price="50"
 						time="1 ч."
 					/>
-
 					<ServiceContainer
 						img="/assets/uslugi/бръснене-на-глава-с-бръснач-1-mobile.webp"
-						alt="бръснене на глава с бръснач"
-						href=""
+						alt="детско подстригване"
+						href="/uslugi/detsko-podstrigvane-momche"
 						title="Детско подстригване"
-						desc="Класическо мокро бръснене е ритуал в The Barber Shop Sofia, който е много повече от грижа – той е чиста проба"
+						desc="Подстригване на деца и младежи до 10 г."
 						price="50"
 						time="1 ч."
 					/>
 					<ServiceContainer
 						img="/assets/about3.jpg"
-						alt="детско подстригване София"
-						href=""
-						title="Услуга"
-						desc="Класическо мокро бръснене е ритуал в The Barber Shop Sofia, който е много повече от грижа – той е чиста проба"
+						alt="подстригване на баща и син"
+						href="/uslugi/podstrigvane-na-bashta-i-sin"
+						title="Подстригване на баща и син"
+						desc="Вярваме, че посещението на бръснарницата създава не само добри навици, но и прекрасни спомени."
 						price="50"
 						time="1 ч."
 					/>

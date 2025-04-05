@@ -1,9 +1,5 @@
-/* Links */
-@import url('https://fonts.cdnfonts.com/css/mona-sans');
-@import url('https://fonts.cdnfonts.com/css/georgia');
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
 a {
   text-decoration: none;
@@ -23,10 +19,10 @@ body {
 #page-content {
   margin: 0 auto;
   padding: 0px !important;
-  background-attachment: fixed; 
-  background-image: linear-gradient(rgba(122, 50, 8, 0.2), rgba(126, 78, 51, 0.1) ), url(/assets/designbg.png); 
-  background-position: center; 
-  background-repeat: repeat; 
+  background-attachment: fixed;
+  background-image: linear-gradient(rgba(122, 50, 8, 0.2), rgba(126, 78, 51, 0.1)), url(/assets/designbg.png);
+  background-position: center;
+  background-repeat: repeat;
   background-size: cover;
   overflow: hidden;
 }
@@ -46,8 +42,9 @@ body.page-is-transitioning #page-content {
 }
 
 li::marker {
-  color: #eba65b;
-  font-size: 0.8rem !important;
+  color: #bf7e36;
+  font-size: 1.5rem !important;
+  content: "• ";
 }
 
 div,
@@ -234,22 +231,6 @@ html::-webkit-scrollbar-thumb {
   transform: translateX(0);
 }
 
-.desktop-menu-item:after {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  width: 0;
-  content: '';
-  background: #d19d64;
-  height: 2px;
-  transition: all 0.3s;
-}
-
-.desktop-menu-item:hover:after {
-  width: 100%;
-}
-
 @media (min-width: 1900px) {
   .container-in-services {
     gap: 17rem;
@@ -279,21 +260,39 @@ html::-webkit-scrollbar-thumb {
 
 @media (min-width: 640px) {
   .karieri-img {
-    background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.7)), url('assets/karieri/екип-бръснарница-софия.webp') !important;
+    background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.7)), url('/assets/karieri/екип-бръснарница-софия.webp') !important;
   }
 }
 
+@media (min-width: 640px) {
+  .mario-img {
+    background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.7)), url('/assets/mario/барбър-марио-индивидуална.webp') !important;
+    background-position: center top !important;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+  }
+}
 
+@media (min-width: 640px) {
+  .blago-img {
+    background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.7)), url('/assets/blago/барбър-благо-индивидуална.webp') !important;
+    background-position: center top !important;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+  }
+}
 
-
-
-
-
-
-
+@media (min-width: 640px) {
+  .martin-img {
+    background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.7)), url('/assets/martin/барбър-мартин-индивидуална.webp') !important;
+    background-position: center top !important;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+  }
+}
 
 .input-highlight input::placeholder {
-color: white;
+  color: white;
 }
 
 .input-highlight::after {
@@ -311,19 +310,6 @@ color: white;
 .input-highlight:focus-within::after {
   width: 100%;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 .progress-bar-contacts-form-span {
   content: "";

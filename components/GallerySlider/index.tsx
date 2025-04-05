@@ -16,7 +16,7 @@ export const GallerySlider = (props: { buttonClass?: string; imgs: { src: string
     setCurrentIndex(index);
     setOpen(true);
   };
-  
+
   onMount(() => {
     const checkMediaQuery = () => setIsDesktop(window.matchMedia("(min-width: 768px)").matches);
     checkMediaQuery();
@@ -37,23 +37,47 @@ export const GallerySlider = (props: { buttonClass?: string; imgs: { src: string
 
 function DotsUnderSlider(props: { imgs: { src?: string, alt?: string }[] }) {
   const [context] = useContext(SliderContext)
+  const [isDesktop, setIsDesktop] = createSignal(false);
 
   const goToSlide = (index: number) => {
     context().moveTo(index)
   };
 
+  onMount(() => {
+    const checkMediaQuery = () => setIsDesktop(window.matchMedia("(min-width: 768px)").matches);
+    checkMediaQuery();
+    window.addEventListener("resize", checkMediaQuery);
+    onCleanup(() => window.removeEventListener("resize", checkMediaQuery));
+  });
+
   return (
-    <Show when={props.imgs.length > 1}>
-      <div class="dots-container" style="text-align: center; margin-top: 20px;">
-        {props.imgs.map((_, index) => (
-          <button
-            onClick={() => goToSlide(index)}
-            class={`dot ${context()?.current() === index ? "active" : ""}`}
-            style={{ margin: "0 5px", padding: "8px", cursor: "pointer", border: "none", background: context()?.current() === index ? "#7c1d2a" : "#f0f0f0" }}
-          ></button>
-        ))}
-      </div>
-    </Show>
+    <>
+      {isDesktop() ? (
+        <Show when={props.imgs.length > 1}>
+          <div class="dots-container" style="text-align: center; margin-top: 20px;">
+            {props.imgs.map((_, index) => (
+              <button
+                onClick={() => goToSlide(index)}
+                class={`dot ${context()?.current() === index ? "active" : ""}`}
+                style={{ margin: "0 5px", padding: "8px", cursor: "pointer", border: "none", background: context()?.current() === index ? "#7c1d2a" : "#f0f0f0" }}
+              ></button>
+            ))}
+          </div>
+        </Show>
+      ) : (
+        <Show when={props.imgs.length > 1}>
+          <div class="dots-container" style="text-align: center; margin-top: 5px;">
+            {props.imgs.map((_, index) => (
+              <button
+                onClick={() => goToSlide(index)}
+                class={`dot ${context()?.current() === index ? "active" : ""}`}
+                style={{ margin: "0 3px", padding: "5px", cursor: "pointer", border: "none", background: context()?.current() === index ? "#7c1d2a" : "#f0f0f0" }}
+              ></button>
+            ))}
+          </div>
+        </Show>
+      )}
+    </>
   )
 }
 
