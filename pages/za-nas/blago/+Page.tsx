@@ -71,6 +71,7 @@ export default function Page() {
 					<ReviewSlider
 						reviews={[
 							{ name: "Nikola Stamenov" },
+							{ name: "Kalin Tabov" },
 						]}>
 						<StarReview
 							src="/assets/GoogleLogoPNGImage.png"
@@ -79,6 +80,14 @@ export default function Page() {
 							date="Март 2024"
 							stars={5}
 							hrefGoogleReview="https://maps.app.goo.gl/wvqPam4gNUKT266K8"
+						/>
+						<StarReview
+							src="/assets/GoogleLogoPNGImage.png"
+							reviewText="That is my first time here. Great place and service. Blago was extremely knowledgeable, skilled and nice to talk to. I love my haircut and will be back."
+							name="Kalin Tabov"
+							date="Септември 2024"
+							stars={5}
+							hrefGoogleReview="https://maps.app.goo.gl/KEBaLXBzUDJzAYqv7"
 						/>
 					</ReviewSlider>
 				</AnimatedComponent>

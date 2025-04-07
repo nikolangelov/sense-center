@@ -40,7 +40,7 @@ export default function LayoutDefault(props: { children?: JSX.Element }) {
           </a>
         </div>
 
-        <div class="flex whitespace-nowrap justify-end items-center font-semibold xl:gap-18 md:pr-10 md:pl-5 xl:pl-10 pr-6">
+        <div class="flex whitespace-nowrap justify-end items-center font-semibold lg:gap-8 xl:gap-18 md:pr-10 md:pl-5 xl:pl-10 pr-6">
           <div
             class="relative"
             onMouseEnter={() => setServicesMenuOpen(true)}
@@ -562,7 +562,7 @@ const MyDropdown = (props: { closeMenu: () => void; }) => {
 function MainFooter(props: { children: JSX.Element }) {
   return (
     <div
-      class="flex flex-col flex-justify-center md-flex-justify-center bg-#14100c flex-shrink-0 flex-items-center flex-wrap b-t-solid b-t-1px" style="border-top-color: rgba(209, 157, 100, 0.3); background-image: url(/assets/1313131.png); background-position: center center; background-repeat: no-repeat; background-size: cover; filter: grayscale(0%);">
+      class="flex flex-col flex-justify-center md-flex-justify-center bg-#14100c flex-shrink-0 flex-items-center flex-wrap b-t-solid b-t-1px" style="border-top-color: rgba(209, 157, 100, 0.3); background-position: center center; background-repeat: no-repeat; background-size: cover; filter: grayscale(0%);">
       {props.children}
     </div>
   );

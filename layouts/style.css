@@ -291,6 +291,51 @@ html::-webkit-scrollbar-thumb {
   }
 }
 
+@media (min-width: 640px) {
+  .detsko-pod-img {
+    background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.7)), url('/assets/detsko-podstrigvane-momche/детско-подстригване-момче-1.webp') !important;
+    background-position: center top !important;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+  }
+}
+
+@media (min-width: 640px) {
+  .brasnene-img {
+    background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.7)), url('/assets/klasichesko-mokro-brasnene/професионално-мокро-бръснене-1.webp') !important;
+    background-position: center top !important;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+  }
+}
+
+@media (min-width: 640px) {
+  .podstrigvane-img {
+    background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.7)), url('/assets/mazhko-podstrigvane/мъжко-подстригване-с-машинка.webp') !important;
+    background-position: center top !important;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+  }
+}
+
+@media (min-width: 640px) {
+  .kombo-img {
+    background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.7)), url('/assets/podstrigvane-i-oformiane-na-brada/подстригване-и-оформяне-на-брада-1.webp') !important;
+    background-position: center top !important;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+  }
+}
+
+@media (min-width: 640px) {
+  .brada-img {
+    background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.7)), url('/assets/oformiane-na-brada/оформяне-на-мъжка-брада-2.webp') !important;
+    background-position: center top !important;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+  }
+}
+
 .input-highlight input::placeholder {
   color: white;
 }
