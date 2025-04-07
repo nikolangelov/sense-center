@@ -170,7 +170,7 @@ export default function Page() {
 							img="/assets/za-nas/барбър-благо.webp"
 							alt="барбър Благо"
 							href=""
-							title="Благо"
+							title="Благовест"
 						/>
 					</AnimatedComponentSlide>
 
@@ -180,15 +180,6 @@ export default function Page() {
 							alt="барбър Марио"
 							href=""
 							title="Марио"
-						/>
-					</AnimatedComponentSlide>
-
-					<AnimatedComponentSlide>
-						<BarberContainer
-							img="/assets/za-nas/барбър-влади.webp"
-							alt="барбър Влади"
-							href=""
-							title="Влади"
 						/>
 					</AnimatedComponentSlide>
 				</div>

@@ -40,7 +40,7 @@ export default function LayoutDefault(props: { children?: JSX.Element }) {
           </a>
         </div>
 
-        <div class="flex whitespace-nowrap justify-end items-center font-semibold gap-8 xl:gap-18 md:pr-10 md:pl-5 xl:pl-10 pr-6">
+        <div class="flex whitespace-nowrap justify-end items-center font-semibold xl:gap-18 md:pr-10 md:pl-5 xl:pl-10 pr-6">
           <div
             class="relative"
             onMouseEnter={() => setServicesMenuOpen(true)}
@@ -73,9 +73,9 @@ export default function LayoutDefault(props: { children?: JSX.Element }) {
             <DropDownMenuDesktop
               isVisible={aboutMenuOpen()}
               items={[
-                { href: "/za-nas/kris", title: "КРИС" },
+                { href: "/za-nas/kris", title: "Кристиан" },
                 { href: "/za-nas/mario", title: "МАРИО" },
-                { href: "/za-nas/blago", title: "БЛАГО" },
+                { href: "/za-nas/blago", title: "Благовест" },
                 { href: "/za-nas/denis", title: "ДЕНИС" },
               ]}
             />
@@ -87,7 +87,7 @@ export default function LayoutDefault(props: { children?: JSX.Element }) {
           <MenuItem href="/kontakti">Контакти</MenuItem>
         </div>
 
-        <a href="/" class="hidden lg-block mr-10">
+        <a href="https://book.thebarbershop.bg/reservations/start?site=1" target="_blank" rel="noopener noreferrer" class="hidden lg-block mr-10">
           <button onClick={closeMenu}
             class="cursor-pointer bg-brand-compliment c-paper b-solid b-2px b-brand-compliment uppercase font-size-4 font-500 px-7 py-2 hover-c-paper-inv transition-colors lg-block hidden" style="font-family: 'Oswald', sans-serif !important; letter-spacing: 1px;"
           >
@@ -107,7 +107,7 @@ export default function LayoutDefault(props: { children?: JSX.Element }) {
             </div>
 
             <AnimatedComponent class="hidden  flex-justify-center lg-flex-justify-center lg-mt-10 w-full gap-5 lg-gap-15 py-10">
-              <a href="/" class="text-center w-32 lg-w-42 bg-brand c-paper-inv b-solid b-2px b-brand uppercase font-size-4 lg-font-size-5 font-500 py-3 hover-c-paper transition-colors" style="font-family: 'Oswald', sans-serif !important; letter-spacing: 1px;">Запазете час</a>
+              <a href="https://book.thebarbershop.bg/reservations/start?site=1" target="_blank" rel="noopener noreferrer" class="text-center w-32 lg-w-42 bg-brand c-paper-inv b-solid b-2px b-brand uppercase font-size-4 lg-font-size-5 font-500 py-3 hover-c-paper transition-colors" style="font-family: 'Oswald', sans-serif !important; letter-spacing: 1px;">Запазете час</a>
               <a href="/uslugi" class="text-center w-32 lg-w-42 bg-brand c-paper-inv b-solid b-2px b-brand uppercase font-size-4 lg-font-size-5 font-500 py-3 hover-c-paper transition-colors" style="font-family: 'Oswald', sans-serif !important; letter-spacing: 1px;">Услуги</a>
             </AnimatedComponent>
 
@@ -398,7 +398,7 @@ function HamburgerMenu() {
     <div class="lg-hidden flex flex-content-center flex-items-center flex-justify-between w-full">
       <div class="flex flex-items-center flex-justify-center lg-pl-4 pl-0">
         <a href="/" onClick={closeMenu}>
-          <img src="/assets/The Barber Shop (2).png" class="w-23 ml--11 mr--4 mt-4" alt="fine-carpet-cleaning-logo" />
+          <img src="/assets/The Barber Shop (2).png" class="w-23 ml--5 mr--4 mt-4" alt="fine-carpet-cleaning-logo" />
         </a>
       </div>
       <a href="/test">
@@ -527,9 +527,9 @@ const MyDropdown = (props: { closeMenu: () => void; }) => {
             href="/za-nas"
             icon={<MdiAccountGroupOutline />}
             subMenu={[
-              { href: "/za-nas/kris", text: "Крис" },
+              { href: "/za-nas/kris", text: "Кристиан" },
               { href: "/za-nas/mario", text: "МАРИО" },
-              { href: "/za-nas/blago", text: "БЛАГО" },
+              { href: "/za-nas/blago", text: "Благовест" },
               { href: "/za-nas/denis", text: "ДЕНИС" },
             ]}
           />

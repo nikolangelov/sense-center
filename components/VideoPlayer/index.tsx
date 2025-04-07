@@ -38,7 +38,7 @@ export const VideoPlayer = (props: { src: string; }) => {
   });
 
   return (
-    <div class="flex flex-justify-center flex-items-center mt-0 lg-mt-20 max-w-1400px mx-auto b-solid b-10px md:b-15px b-brand-dark">
+    <div class="flex flex-justify-center flex-items-center mt-0 lg-mt-20 max-w-1400px mx-auto">
       <iframe
         ref={iframeRef}
         class="b-none w-full bg-paper h-250px sm-h-400px md-h-600px lg-h-700px xl-h-750px"
