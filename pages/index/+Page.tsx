@@ -168,7 +168,7 @@ export default function Page() {
 				</div>
 			</div>
 
-			<div style="background-image: url(/assets/bg-2.jpg); background-position: center; background-repeat: no-repeat; background-size: cover;">
+			{/* <div style="background-image: url(/assets/bg-2.jpg); background-position: center; background-repeat: no-repeat; background-size: cover;">
 				<div class="pb-20">
 					<AnimatedComponent>
 						<H2WithImage class="c-paper" title="Стилът на The Barber Shop" />
@@ -177,7 +177,7 @@ export default function Page() {
 						<VideoPlayer src='/assets/Barbershop-video-home.mp4/' />
 					</AnimatedComponent>
 				</div>
-			</div>
+			</div> */}
 
 			<section class="pb-20">
 				<AnimatedComponent>

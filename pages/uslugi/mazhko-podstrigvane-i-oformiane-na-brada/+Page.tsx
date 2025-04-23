@@ -198,14 +198,14 @@ export default function Page() {
 				</AnimatedComponentSlide>
 			</div>
 
-			<section class="lg-pb-25 pb-20">
+			{/* <section class="lg-pb-25 pb-20">
 				<AnimatedComponent>
 					<H2WithImage class="max-w-750px mx-auto" title="Професионално мъжко подстригване и оформяне на брада: От идеята до завършения вид" />
 				</AnimatedComponent>
 				<AnimatedComponent>
 					<VideoPlayer src='/assets/barbershop-podstrigvane-i-brada.mp4/' />
 				</AnimatedComponent>
-			</section>
+			</section> */}
 
 			<div class="pb-20" style="background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8) ), url(/assets/brown-background-image.webp); background-position: center; background-repeat: no-repeat; background-size: cover;">
 				<H2WithImage class="c-paper" title="Цена на мъжко подстригване и оформяне на брада" />
