@@ -173,7 +173,7 @@ export default function Page() {
 					<H2WithImage class="max-w-750px mx-auto" title="Професионално мъжко подстригване: От идеята до завършения вид" />
 				</AnimatedComponent>
 				<AnimatedComponent>
-					<VideoPlayer src='https://thebarbershop.bg/wp-content/uploads/2025/04/the-barber-shop-test-0.13.mp4' />
+					<VideoPlayer src='/assets/barbershop-mazhko-podstrigvane.mp4' />
 				</AnimatedComponent>
 			</section>
 
