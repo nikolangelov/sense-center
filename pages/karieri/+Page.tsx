@@ -150,7 +150,6 @@ export default function Page() {
 						<AnimatedComponentSlide class="hidden md-block w-full md:w-1/2">
 							<div>
 								<img src="/assets/karieri/the-barber-shop-sofia-team.jpg" alt="Elegant interior design" class="w-full h-auto shadow-xl" />
-								<p class="important-my-0">text</p>
 							</div>
 						</AnimatedComponentSlide>
 
@@ -283,7 +282,6 @@ export default function Page() {
 							<div class="relative">
 								<img src="/assets/karieri/бръснар-софия.jpg" alt="Elegant interior design" class="w-full h-auto shadow-xl" />
 							</div>
-							<p class="important-my-0 c-paper">text</p>
 						</AnimatedComponentSlide>
 					</div>
 				</section>
@@ -299,16 +297,16 @@ export default function Page() {
 								Ако обичаш занаята и искаш да работиш в модерен бръснарски салон, ние имаме място за теб! Стани част от нашия екип и развивай уменията си при нас.
 							</p>
 						</AnimatedComponent>
-						<AnimatedComponent>
+						{/* <AnimatedComponent>
 							<button
 								class="md:block hidden mt-3 cursor-pointer text-center w-50 lg-w-55 bg-brand-compliment hover:c-paper-inv b-solid b-2px b-brand-compliment uppercase font-size-4 lg-font-size-4.5 font-500 py-3 c-paper transition-colors" style="font-family: 'Oswald', sans-serif !important; letter-spacing: 1px;">
 								Курс за бръснар
 							</button>
-						</AnimatedComponent>
+						</AnimatedComponent> */}
 					</div>
 
 					<AnimatedComponent class="lg:w-1/2s">
-						<div class="p-16px rounded-0 w-full max-w-150 overflow-hidden relative bg-#14100c" style="background-image: url(/assets/form-wood-bg.webp); background-position: center; background-repeat: no-repeat; background-size: cover;">
+					<div class="px-20px py-25px md:px-30px md:py-40px rounded-0 w-full max-w-150 overflow-hidden relative bg-#14100c" style="background-image: url(/assets/wood-bg-2.webp); background-position: center; background-repeat: no-repeat; background-size: cover;">
 
 							<div class="md:px-12 md:pt-10 p-5">
 								<h2 class="important-mt-0 md:mt-5 mb-15 c-paper">Изпрати запитване</h2>

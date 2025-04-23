@@ -235,42 +235,89 @@ export default function Page() {
 							<AnimatedComponent>
 								<ReviewSlider
 									reviews={[
-										{ name: "Elizabeth Maurice" },
-										{ name: "Gen Tiski" },
-										{ name: "Samanta Federico" },
-										{ name: "Samanta Federico" },
+										{ name: "Ivo Stoilov" },
+										{ name: "Georgi Pleshkov" },
+										{ name: "Kaloyan Iliev" },
+										{ name: "Philip Betz" },
+										{ name: "Atanas Todorov" },
+										{ name: "Boyan Kushev" },
+										{ name: "Kristian Yordanov" },
+										{ name: "Krasimir Daskalov" },
 									]}>
 									<StarReview
 										src="/assets/GoogleLogoPNGImage.png"
-										reviewText="I received excellent communications throughout the whole process. On the day, the cleaning experience was efficient with a considerate and friendly member of staff. Very competitive pricing."
-										name="Elizabeth Maurice"
-										date="June 2024"
+										reviewText="Професионално изпълнена услуга без нищо излишно. Горещо препоръчвам на онези, които се колебаят."
+										name="Ivo Stoilov"
+										date="Март 2025"
 										stars={5}
-										hrefGoogleReview="https://g.co/kgs/HPqEYvL"
+										hrefGoogleReview="https://maps.app.goo.gl/cRbTpEHPpCSXZhqo7"
 									/>
 									<StarReview
 										src="/assets/GoogleLogoPNGImage.png"
-										reviewText="The best carpet cleaning service I have ever experienced. From start to finish was unbelievably smooth. The staff that attended extremely polite and moved all the items with utmost care. Would recommend using them as they are simply the best one has come across. Maya was absolutely fantastic in arranging this as the request was done at such a short notice."
-										name="Gen Tiski"
-										date="March 2024"
+										reviewText={
+											<>
+												За първи път посещавам The Barber Shop. Крис ме изслуша и след това подстрига с изключително внимание към детайла и моите предпочитания. Атмосферата е много приятна, а за резултатите можете да прецените сами.<br />
+												С ръка на сърцето мога да кажа, че това е най-добрата бръснарница в София от тези, които съм посетил.
+											</>
+										}
+										name="Georgi Pleshkov"
+										date="Октомври 2024"
 										stars={5}
-										hrefGoogleReview="https://g.co/kgs/H3NeADN"
+										hrefGoogleReview="https://maps.app.goo.gl/pgSmLpppJkuxo1SH6"
 									/>
 									<StarReview
 										src="/assets/GoogleLogoPNGImage.png"
-										reviewText="I had my carpet cleaned by Nikolay from Fine Carpet Cleaning. What a fantastic job he did ! He is very professional, efficient and organised in the way he works. My carpet looks new again. I highly recommend."
-										name="Samanta Federico"
-										date="January 2024"
+										reviewText="Страхотна атмосфера в салона. Много приятно място. Заради такива готини професионалисти мъжете ходим на бръснар, а жените на козметични салони 😁. Горещо препоръчвам Крис и целия екип!"
+										name="Kaloyan Iliev"
+										date="Юни 2024"
 										stars={5}
-										hrefGoogleReview="https://g.co/kgs/WxWf2Bm"
+										hrefGoogleReview="https://maps.app.goo.gl/eEyH728ZHp56LiEy6"
 									/>
 									<StarReview
 										src="/assets/GoogleLogoPNGImage.png"
-										reviewText="I had my carpet cleaned by Nikolay from Fine Carpet Cleaning. What a fantastic job he did ! He is very professional, efficient and organised in the way he works. My carpet looks new again. I highly recommend."
-										name="Samanta Federico"
-										date="January 2024"
+										reviewText="Много ми хареса прическата! Всички които ме виждаха, казваха, че много ми отива. Плюс това атмосферата там е много приятна, хората са забавни и дружелюбни."
+										name="Philip Betz"
+										date="Октомври 2024"
 										stars={5}
-										hrefGoogleReview="https://g.co/kgs/WxWf2Bm"
+										hrefGoogleReview="https://maps.app.goo.gl/2GD7Gw3npQEQYSj47"
+									/>
+									<StarReview
+										src="/assets/GoogleLogoPNGImage.png"
+										reviewText={
+											<>
+												Страхотен и приветлив салон.<br />
+												Пълен с професионалисти!<br />
+												Винаги си тръгвам доволен и определено препоръчвам Крис!
+											</>
+										}
+										name="Atanas Todorov"
+										date="Февруари 2025"
+										stars={5}
+										hrefGoogleReview="https://maps.app.goo.gl/daCEELFuKS2NQa1r6"
+									/>
+									<StarReview
+										src="/assets/GoogleLogoPNGImage.png"
+										reviewText="Excellent service, very nice and clean place! Definitely recommended 🤟🤟🤟"
+										name="Boyan Kushev"
+										date="Януари 2025"
+										stars={5}
+										hrefGoogleReview="https://maps.app.goo.gl/oWw5UpYKUchbJcc76"
+									/>
+									<StarReview
+										src="/assets/GoogleLogoPNGImage.png"
+										reviewText="I got a haircut with Kris Mitov. It was much better than expected. He put quite a lot of effort to trim my side burns with a buzzer and to style the top of my head and my bangs with scissors. My friends now notice how much better my haircut is. As the month goes on my hair still looks good even when it is 5 weeks since my last trimming."
+										name="Kristian Yordanov"
+										date="Май 2024"
+										stars={5}
+										hrefGoogleReview="https://maps.app.goo.gl/3byH6be1pkLY1Hk59"
+									/>
+									<StarReview
+										src="/assets/GoogleLogoPNGImage.png"
+										reviewText="Chris perfectly understood the haircut I wanted. Nice atmosphere, 10/10 would recommend so far."
+										name="Krasimir Daskalov"
+										date="Февруари 2025"
+										stars={5}
+										hrefGoogleReview="https://maps.app.goo.gl/yF4GYJC7FGXCm6Xs6"
 									/>
 								</ReviewSlider>
 							</AnimatedComponent>
@@ -301,7 +348,7 @@ export default function Page() {
 								title="Класическо мокро бръснене"
 							/>
 							<ElementInOftenOT
-								img="/assets/about3.jpg"
+								img="/assets/tonirane-na-kosa/барбър-шоп-тониране-на-сиви-коси.webp"
 								alt="Тониране на сиви коси"
 								href="/uslugi/profesionalno-tonirane-na-mazhka-kosa"
 								title="Тониране на сиви коси"
@@ -402,7 +449,7 @@ export default function Page() {
 					</div>
 					<div class="lg:block hidden lg:max-w-40% lg:px-0 md:px-10 px-5 lg:pt-0 md:pt-20 lg:pt-10">
 						<img class="mx-auto max-w-full" src="/assets/home/бръснари-софия.webp" alt="Бръснари София" />
-						<p class="important-my-0">text</p>
+						{/* <p class="important-my-0">text</p> */}
 					</div>
 				</div>
 			</div>

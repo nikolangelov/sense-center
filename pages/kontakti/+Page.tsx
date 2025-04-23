@@ -24,11 +24,11 @@ const contacts = [
 function ContactSection() {
 	return (
 		<div>
-			<div class="space-y-6 mb-10 w-full">
+			<div class="space-y-8 mb-10 w-full">
 				{contacts.map(({ type, value, icon: Icon, link, className }) => (
 					<a
 						href={link}
-						class="flex md:flex-row flex-col items-center md:gap-4 hover:bg-white/30 transition-all duration-300 p-3 md:p-5 rounded-0 shadow-lg cursor-pointer border border-white/30 transform hover:scale-105 hover:shadow-2xl w-full bg-#14100c" style="background-image: url(/assets/form-wood-bg.webp); background-position: top; background-repeat: no-repeat; background-size: cover;"
+						class="flex md:flex-row flex-col items-center md:gap-4 hover:bg-white/30 transition-all duration-300 p-3 md:p-5 rounded-0 shadow-lg cursor-pointer border border-white/30 transform hover:scale-105 hover:shadow-2xl w-full bg-#14100c" style="background-image: url(/assets/wood-bg-2.webp); background-position: center; background-repeat: no-repeat; background-size: cover;"
 						target="_blank"
 						rel="noopener noreferrer"
 					>
@@ -192,15 +192,17 @@ export default function Page() {
 							<ContactSection />
 						</AnimatedComponent>
 						<AnimatedComponent>
-							<button
-								class="cursor-pointer text-center w-45 lg-w-55 bg-brand-compliment hover:c-paper-inv b-solid b-2px b-brand-compliment uppercase font-size-4 lg-font-size-4.5 font-500 py-3 c-paper transition-colors rounded-0" style="font-family: 'Oswald', sans-serif !important; letter-spacing: 1px;">
-								Запази час
-							</button>
+							<a href="https://book.thebarbershop.bg/reservations/start?site=1" target="_blank" rel="noopener noreferrer">
+								<button
+									class="cursor-pointer text-center w-45 lg-w-55 bg-brand-compliment hover:c-paper-inv b-solid b-2px b-brand-compliment uppercase font-size-4 lg-font-size-4.5 font-500 py-3 c-paper transition-colors rounded-0" style="font-family: 'Oswald', sans-serif !important; letter-spacing: 1px;">
+									Запази час
+								</button>
+							</a>
 						</AnimatedComponent>
 					</div>
 
 					<AnimatedComponent class="lg:w-1/2s">
-						<div class="p-16px rounded-0 w-full max-w-150 overflow-hidden relative bg-#14100c" style="background-image: url(/assets/form-wood-bg.webp); background-position: center; background-repeat: no-repeat; background-size: cover;">
+						<div class="px-20px py-25px md:px-30px md:py-40px rounded-0 w-full max-w-150 overflow-hidden relative bg-#14100c" style="background-image: url(/assets/wood-bg-2.webp); background-position: center; background-repeat: no-repeat; background-size: cover;">
 
 							<div class="md:px-12 md:pt-10 p-5">
 								<h2 class="important-mt-0 md:mt-5 mb-15 c-paper">Изпрати запитване</h2>

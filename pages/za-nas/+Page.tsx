@@ -60,7 +60,7 @@ export default function Page() {
 	return (
 		<>
 			<div style="background-position: center top; background-repeat: no-repeat; background-size: cover; height: auto;">
-				<div style="background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.7) ), url(/assets/za-nas/the-barber-shop-sofia-2_result_result.webp); background-position: right 55% bottom 100% ; background-repeat: no-repeat; background-size: cover;" class="h-100vh za-nas-img" role="img" aria-label="the barber shop Sofia">
+				<div style="background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.7) ), url(/assets/za-nas/the-barber-shop-sofia-2_result_result.webp); background-position: right 55% bottom 100%; background-repeat: no-repeat; background-size: cover;" class="h-100vh za-nas-img" role="img" aria-label="the barber shop Sofia">
 					<div class="w-full bg-#212528">
 						<div class="max-w-1240px mx-auto">
 							<div class="flex flex-justify-center">
@@ -94,7 +94,7 @@ export default function Page() {
 						<AnimatedComponent class="w-full md:w-1/2 hidden md:block">
 							<div class="relative">
 								<img src="/assets/za-nas/the-barber-shop-sofia-team-3.jpg" alt="Elegant interior design" class="w-full h-auto shadow-xl" />
-								<p class="important-my-0">text</p>
+								<p class="important-my-0">Екипът на The Barber Shop</p>
 							</div>
 						</AnimatedComponent>
 					</div>
@@ -151,17 +151,8 @@ export default function Page() {
 						<BarberContainer
 							img="/assets/za-nas/барбър-крис.webp"
 							alt="барбър Крис"
-							href=""
+							href="/za-nas/kris/"
 							title="Кристиан"
-						/>
-					</AnimatedComponentSlide>
-
-					<AnimatedComponentSlide>
-						<BarberContainer
-							img="/assets/za-nas/барбър-мартин.webp"
-							alt="барбър Мартин"
-							href=""
-							title="Мартин"
 						/>
 					</AnimatedComponentSlide>
 
@@ -169,7 +160,7 @@ export default function Page() {
 						<BarberContainer
 							img="/assets/za-nas/барбър-благо.webp"
 							alt="барбър Благо"
-							href=""
+							href="/za-nas/blago/"
 							title="Благовест"
 						/>
 					</AnimatedComponentSlide>
@@ -178,7 +169,7 @@ export default function Page() {
 						<BarberContainer
 							img="/assets/za-nas/барбър-марио.webp"
 							alt="барбър Марио"
-							href=""
+							href="/za-nas/mario/"
 							title="Марио"
 						/>
 					</AnimatedComponentSlide>
@@ -244,20 +235,22 @@ export default function Page() {
 				</div>
 			</section>
 
-			<section class="pb-20">
+			{/* <section class="pb-20">
 				<AnimatedComponent>
 					<H2WithImage title="Видео" />
 				</AnimatedComponent>
 				<AnimatedComponent>
 					<VideoPlayer src='https://www.youtube.com/embed/e2x0UXVU2yg?enablejsapi=1&mute=1' />
 				</AnimatedComponent>
-			</section>
+			</section> */}
 
-			<section style="background-color: #222222; background-image: url(/assets/bg-2.jpg); background-position: center center; background-repeat: no-repeat; background-size: cover;">
+			<section
+			// style="background-color: #222222; background-image: url(/assets/bg-2.jpg); background-position: center center; background-repeat: no-repeat; background-size: cover;"
+			>
 				<div class="flex flex-col pb-20">
 					<div class="flex flex-col flex-items-center">
 						<AnimatedComponent>
-							<H2WithImage class="c-paper" title="Какво казват нашите клиенти за нас" />
+							<H2WithImage title="Какво казват нашите клиенти за нас" />
 						</AnimatedComponent>
 					</div>
 					<div>
@@ -265,10 +258,15 @@ export default function Page() {
 							<ReviewSlider
 								reviews={[
 									{ name: "cosmos garage" },
-									{ name: "Miguel Nigro" },
 									{ name: "Boyan Kushev" },
 									{ name: "Philip Betz" },
-									{ name: "Ivo Stoilov" },
+									{ name: "Dimo Dinchev" },
+									{ name: "Atanas Todorov" },
+									{ name: "Илиян Станков" },
+									{ name: "Bernhard Lindorfer" },
+									{ name: "Ivaylo Petrov" },
+									{ name: "Nikola Marinov" },
+									{ name: "Kristiyan Trayanov" },
 								]}>
 								<StarReview
 									src="/assets/GoogleLogoPNGImage.png"
@@ -277,14 +275,6 @@ export default function Page() {
 									date="Ноември 2024"
 									stars={5}
 									hrefGoogleReview="https://maps.app.goo.gl/uTXLPqm9aGeL6rTz9"
-								/>
-								<StarReview
-									src="/assets/GoogleLogoPNGImage.png"
-									reviewText="Най-добрата бръснарница в София - качествено обслужване и страхотен персонал!"
-									name="Miguel Nigro"
-									date="Декември 2024"
-									stars={5}
-									hrefGoogleReview="https://maps.app.goo.gl/WoLebiTRhB3xjo3q7"
 								/>
 								<StarReview
 									src="/assets/GoogleLogoPNGImage.png"
@@ -304,11 +294,71 @@ export default function Page() {
 								/>
 								<StarReview
 									src="/assets/GoogleLogoPNGImage.png"
-									reviewText="Професионално изпълнена услуга без нищо излишно. Горещо препоръчвам на онези, които се колебаят."
-									name="Ivo Stoilov"
-									date="Март 2025"
+									reviewText="Barber shop е мястото, където се подстригвам от 5 години и става само по-добро! Атмосферата винаги е сякаш се виждаш със стари приятели"
+									name="Dimo Dinchev"
+									date="Юни 2025"
 									stars={5}
-									hrefGoogleReview="https://maps.app.goo.gl/xMX8mBdRdxEprALH9"
+									hrefGoogleReview="https://maps.app.goo.gl/z5xKLkNWNtmtqMvV9"
+								/>
+								<StarReview
+									src="/assets/GoogleLogoPNGImage.png"
+									reviewText={
+										<>
+											Страхотен и приветлив салон.<br />
+											Пълен с професионалисти!<br />
+											Винаги си тръгвам доволен и определено препоръчвам Крис!
+										</>
+									}
+									name="Atanas Todorov"
+									date="Февруари 2025"
+									stars={5}
+									hrefGoogleReview="https://maps.app.goo.gl/mCReWrgXZpgKZ4Vi7"
+								/>
+								<StarReview
+									src="/assets/GoogleLogoPNGImage.png"
+									reviewText="Крис е супер. От 3 години ги посещавам и винаги вършат страхотна работа."
+									name="Илиян Станков"
+									date="Май 2024"
+									stars={5}
+									hrefGoogleReview="https://maps.app.goo.gl/r7rNf1c41YMVxkwj8"
+								/>
+								<StarReview
+									src="/assets/GoogleLogoPNGImage.png"
+									reviewText="I’m their client for many years and service is consistently good. Atmosphere is great and the team speaks English (the reason I went there in the first place)."
+									name="Bernhard Lindorfer"
+									date="Март 2024"
+									stars={5}
+									hrefGoogleReview="https://maps.app.goo.gl/jJBgK8UA9EioFW969"
+								/>
+								<StarReview
+									src="/assets/GoogleLogoPNGImage.png"
+									reviewText="cool stuff, chill music and top quality service every time. fav barbers in sofia."
+									name="Ivaylo Petrov"
+									date="Март 2024"
+									stars={5}
+									hrefGoogleReview="https://maps.app.goo.gl/mLFpKTqr2BXniPfS9"
+								/>
+								<StarReview
+									src="/assets/GoogleLogoPNGImage.png"
+									reviewText={
+										<>
+											I really like the industrial look of the place.<br />
+											If you want to get the perfect cut in Sofia this is definitely the place to do it.<br />
+											Very friendly staff, great atmosphere and music.
+										</>
+									}
+									name="Nikola Marinov"
+									date="Април 2022"
+									stars={5}
+									hrefGoogleReview="https://maps.app.goo.gl/1wBncxNxuRheaWWJ8"
+								/>
+								<StarReview
+									src="/assets/GoogleLogoPNGImage.png"
+									reviewText="The barbers in this barbershop are really good and they are friendly, especially Mario is a very good person and barber. Recommending him for a good haircut and beard cut!"
+									name="Kristiyan Trayanov"
+									date="Март 2024"
+									stars={5}
+									hrefGoogleReview="https://maps.app.goo.gl/gHUitKtQREtBb2Uu8"
 								/>
 							</ReviewSlider>
 						</AnimatedComponent>

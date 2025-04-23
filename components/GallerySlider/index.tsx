@@ -5,7 +5,6 @@ import RiPlayReverseMiniLine from '~icons/ri/play-reverse-mini-line';
 import RiCloseFill from '~icons/ri/close-fill';
 import { cn } from "../../utils/cn";
 
-
 export const GallerySlider = (props: { buttonClass?: string; imgs: { src: string, alt: string }[] }) => {
   const [isDesktop, setIsDesktop] = createSignal(false);
 
@@ -35,7 +34,7 @@ export const GallerySlider = (props: { buttonClass?: string; imgs: { src: string
   );
 };
 
-function DotsUnderSlider(props: { imgs: { src?: string, alt?: string }[] }) {
+export function DotsUnderSlider(props: { imgs: { src?: string, alt?: string }[] }) {
   const [context] = useContext(SliderContext)
   const [isDesktop, setIsDesktop] = createSignal(false);
 

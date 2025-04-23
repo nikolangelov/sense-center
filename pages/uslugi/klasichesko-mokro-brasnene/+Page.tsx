@@ -209,14 +209,14 @@ export default function Page() {
 				</AnimatedComponentSlide>
 			</div>
 
-			<section class="lg-pb-25 pb-20">
+			{/* <section class="lg-pb-25 pb-20">
 				<AnimatedComponent>
 					<H2WithImage class="max-w-750px mx-auto" title="Класическо мокро бръснене: От идеята до завършения вид" />
 				</AnimatedComponent>
 				<AnimatedComponent>
 					<VideoPlayer src='https://www.youtube.com/embed/e2x0UXVU2yg?enablejsapi=1&mute=1' />
 				</AnimatedComponent>
-			</section>
+			</section> */}
 
 			<div class="pb-20" style="background-image: url(/assets/bg-2.jpg); background-position: center; background-repeat: no-repeat; background-size: cover;">
 				<H2WithImage class="c-paper" title="Цена на мокро бръснене" />
@@ -275,42 +275,90 @@ export default function Page() {
 							<AnimatedComponent>
 								<ReviewSlider
 									reviews={[
-										{ name: "Elizabeth Maurice" },
-										{ name: "Gen Tiski" },
-										{ name: "Samanta Federico" },
-										{ name: "Samanta Federico" },
+										{ name: "Borislav Bankov" },
+										{ name: "Atanas Todorov" },
+										{ name: "Илиян Станков" },
+										{ name: "Borislav Donchev" },
+										{ name: "Nikola Despotoski" },
+										{ name: "Vladimir Valchev" },
+										{ name: "Yordan Yordanov" },
+										{ name: "cosmos garage" },
 									]}>
 									<StarReview
 										src="/assets/GoogleLogoPNGImage.png"
-										reviewText="I received excellent communications throughout the whole process. On the day, the cleaning experience was efficient with a considerate and friendly member of staff. Very competitive pricing."
-										name="Elizabeth Maurice"
-										date="June 2024"
+										reviewText="Перфектната бръснарница! Много високо ниво на обслужване в мега приятна атмосфера."
+										name="Borislav Bankov"
+										date="Март 2024"
 										stars={5}
-										hrefGoogleReview="https://g.co/kgs/HPqEYvL"
+										hrefGoogleReview="https://maps.app.goo.gl/tCXYMiVnq4HbstkLA"
 									/>
 									<StarReview
 										src="/assets/GoogleLogoPNGImage.png"
-										reviewText="The best carpet cleaning service I have ever experienced. From start to finish was unbelievably smooth. The staff that attended extremely polite and moved all the items with utmost care. Would recommend using them as they are simply the best one has come across. Maya was absolutely fantastic in arranging this as the request was done at such a short notice."
-										name="Gen Tiski"
-										date="March 2024"
+										reviewText=
+										{
+											<>
+												Страхотен и приветлив салон.<br />
+												Пълен с професионалисти!<br />
+												Винаги си тръгвам доволен и определено препоръчвам Крис!
+											</>
+										}
+										name="Atanas Todorov"
+										date="Февруари 2025"
 										stars={5}
-										hrefGoogleReview="https://g.co/kgs/H3NeADN"
+										hrefGoogleReview="https://maps.app.goo.gl/9drdT9U5mDoSrECK7"
 									/>
 									<StarReview
 										src="/assets/GoogleLogoPNGImage.png"
-										reviewText="I had my carpet cleaned by Nikolay from Fine Carpet Cleaning. What a fantastic job he did ! He is very professional, efficient and organised in the way he works. My carpet looks new again. I highly recommend."
-										name="Samanta Federico"
-										date="January 2024"
+										reviewText="Крис е супер. От 3 години ги посещавам и винаги вършат страхотна работа."
+										name="Илиян Станков"
+										date="Май 2024"
 										stars={5}
-										hrefGoogleReview="https://g.co/kgs/WxWf2Bm"
+										hrefGoogleReview="https://maps.app.goo.gl/5KxegBbxFJtcwVrx7"
 									/>
 									<StarReview
 										src="/assets/GoogleLogoPNGImage.png"
-										reviewText="I had my carpet cleaned by Nikolay from Fine Carpet Cleaning. What a fantastic job he did ! He is very professional, efficient and organised in the way he works. My carpet looks new again. I highly recommend."
-										name="Samanta Federico"
-										date="January 2024"
+										reviewText={
+											<>
+												The Barber Shop е страхотно място! Най-обикновени неща като оформяне на брада, при тях е цяло изживяване. Кристиян Митов е ТОП бръснар! Евала момчета. Keep it going!<br />
+												Силно препоръчвам бръснарницата!!!
+											</>
+										}
+										name="Borislav Donchev"
+										date="Април 2020"
 										stars={5}
-										hrefGoogleReview="https://g.co/kgs/WxWf2Bm"
+										hrefGoogleReview="https://maps.app.goo.gl/sbvPAF9KzmWjTDjX9"
+									/>
+									<StarReview
+										src="/assets/GoogleLogoPNGImage.png"
+										reviewText="Really detailed and organized crew. Booked appointment thru maps and they responded swiftly. Upon arrival I was offeres whiskey, beer amd other beverages, unfortunately I refused alchol because I was driving. I totally recommend this barber shop."
+										name="Nikola Despotoski"
+										date="Януари 2021"
+										stars={5}
+										hrefGoogleReview="https://maps.app.goo.gl/M3mBfJMQEj3whcG37"
+									/>
+									<StarReview
+										src="/assets/GoogleLogoPNGImage.png"
+										reviewText="Excellent service and truly professional barbers."
+										name="Vladimir Valchev"
+										date="Май 2024"
+										stars={5}
+										hrefGoogleReview="https://maps.app.goo.gl/5RBhxcfpjHPtDHZg8"
+									/>
+									<StarReview
+										src="/assets/GoogleLogoPNGImage.png"
+										reviewText="Whenever in Sofia i only use this place. Staff is highly professional and can make you look good in no time. The place is usually busy so make sure to give them a call and book a slot."
+										name="Yordan Yordanov"
+										date="Април 2023"
+										stars={5}
+										hrefGoogleReview="https://maps.app.goo.gl/PtJgJ71qMJQGoqZY6"
+									/>
+									<StarReview
+										src="/assets/GoogleLogoPNGImage.png"
+										reviewText="Finally I found a high quality barbershop. They have free parking, free drinks, online booking system and they work every day🔥"
+										name="cosmos garage"
+										date="Ноември 2024"
+										stars={5}
+										hrefGoogleReview="https://maps.app.goo.gl/L9UbD5kvYcduUseU6"
 									/>
 								</ReviewSlider>
 							</AnimatedComponent>
@@ -329,7 +377,7 @@ export default function Page() {
 					</AnimatedComponent>
 
 					<AnimatedComponent>
-					<OftenOT
+						<OftenOT
 							services={[
 								{ title: "Тониране на сиви коси" },
 								{ title: "Бръснене на глава с бръснач" },
@@ -341,7 +389,7 @@ export default function Page() {
 								title="Мъжко подстригване"
 							/>
 							<ElementInOftenOT
-								img="/assets/about3.jpg"
+								img="/assets/uslugi/бръснене-на-глава-с-бръснач-2-mobile.webp"
 								alt="Бръснене на глава с бръснач"
 								href="/uslugi/brasnene-na-glava-s-brasnach"
 								title="Бръснене на глава с бръснач"
@@ -409,7 +457,7 @@ export default function Page() {
 					</div>
 					<div class="lg:block hidden lg:max-w-40% lg:px-0 md:px-10 px-5 lg:pt-0 md:pt-20 lg:pt-10">
 						<img class="mx-auto max-w-full" src="/assets/home/бръснари-софия.webp" alt="Бръснари София" />
-						<p class="important-my-0">text</p>
+						{/* <p class="important-my-0">text</p> */}
 					</div>
 				</div>
 			</div>

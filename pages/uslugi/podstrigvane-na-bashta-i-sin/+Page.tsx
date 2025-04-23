@@ -107,12 +107,12 @@ function SingleCollapse() {
 export default function Page() {
 	return (
 		<>
-			<div style="background-position: center top; background-repeat: no-repeat; background-size: cover; height: auto;"><div style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(/assets/home/the-barber-shop-sofia-mobile.webp); background-position: center top; background-repeat: no-repeat; background-size: cover;" class="h-100vh home-img" role="img" aria-label="The barber shop Sofia"></div></div>
+			<div style="background-position: center top; background-repeat: no-repeat; background-size: cover; height: auto;"><div style="background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.8) ), url(/assets/bashta-i-sin/подстригване-на-баща-и-син.webp); background-position: center top; background-repeat: no-repeat; background-size: cover;" class="h-95vh md:h-100vh bashta-i-sin-img" role="img" aria-label="подстригване на баща и син the barbershop"></div></div>
 
 			<div class="w-full bg-#212528">
 				<div class="max-w-1240px mx-auto">
 					<div class="flex flex-justify-center">
-						<div class="left-0 right-0 px-3 my-0 mx-auto absolute top-55% lg-top-58% text-center w-full max-w-1000px" style="-webkit-transform: translateY(-50%);">
+						<div class="left-0 right-0 px-3 my-0 mx-auto absolute top-55% lg-top-64% text-center w-full max-w-1000px" style="-webkit-transform: translateY(-50%);">
 							<AnimatedComponent>
 								<h1 class="uppercase c-paper mb-6 text-center">Подстригване на баща и син</h1>
 							</AnimatedComponent>
@@ -171,14 +171,14 @@ export default function Page() {
 				</AnimatedComponentSlide>
 			</div>
 
-			<section class="lg-pb-25 pb-20">
+			{/* <section class="lg-pb-25 pb-20">
 				<AnimatedComponent>
 					<H2WithImage class="max-w-750px mx-auto" title="Подстригване на баща и син: От идеята до завършения вид" />
 				</AnimatedComponent>
 				<AnimatedComponent>
 					<VideoPlayer src='https://www.youtube.com/embed/e2x0UXVU2yg?enablejsapi=1&mute=1' />
 				</AnimatedComponent>
-			</section>
+			</section> */}
 
 			<div class="pb-20" style="background-image: url(/assets/bg-2.jpg); background-position: center; background-repeat: no-repeat; background-size: cover;">
 				<H2WithImage class="c-paper" title="Цена на подстригване на баща и син" />
@@ -212,6 +212,19 @@ export default function Page() {
 						<H2WithImage title="Подстригване на баща и син в действие" />
 					</AnimatedComponent>
 					<GallerySlider imgs={[
+						{ src: "/assets/podstrigvane-na-bashta-i-sin/подстригване-на-баща-и-син-от-бръснари-в-софия.webp", alt: "подстригване на баща и син от бръснари в софия" },
+						{ src: "/assets/podstrigvane-na-bashta-i-sin/подстригване-на-баща-и-син-от-от-бръснар-в-софия.webp", alt: "подстригване на баща и син от бръснар в софия" },
+						{ src: "/assets/podstrigvane-na-bashta-i-sin/бръснарници-в-софия-подстригване-на-баща-и-син.webp", alt: "бръснарници в софия подстригване на баща и син" },
+						{ src: "/assets/podstrigvane-na-bashta-i-sin/подстригване-на-баща-и-син-в-barber-shop-sofia.webp", alt: "подстригване на баща и син barber shop sofia" },
+						{ src: "/assets/podstrigvane-na-bashta-i-sin/подстригване-на-баща-и-син-в-barbershop-софия.webp", alt: "подстригване на баща и син barbershop софия" },
+						{ src: "/assets/podstrigvane-na-bashta-i-sin/подстригване-на-баща-и-син-в-the-barber-shop-sofia.webp", alt: "подстригване на баща и син в the barber shop sofia" },
+						{ src: "/assets/podstrigvane-na-bashta-i-sin/подстригване-на-баща-и-син-в-барбер-шоп-софия.webp", alt: "подстригване на баща и син в барбер шоп софия" },
+						{ src: "/assets/podstrigvane-na-bashta-i-sin/подстригване-на-баща-и-син-в-барбершоп.webp", alt: "подстригване на баща и син в барбер шоп" },
+						{ src: "/assets/podstrigvane-na-bashta-i-sin/подстригване-на-баща-и-син-в-бръснарница-в-софия.webp", alt: "подстригване на баща и син бръснарница в софия" },
+						{ src: "/assets/podstrigvane-na-bashta-i-sin/подстригване-на-баща-и-син-в-бръснарница-софия.webp", alt: "подстригване на баща и син в бръснарница софия" },
+						{ src: "/assets/podstrigvane-na-bashta-i-sin/подстригване-на-баща-и-син-в-софия.webp", alt: "подстригване на баща и син в софия" },
+						{ src: "/assets/podstrigvane-na-bashta-i-sin/подстригване-на-баща-и-син-от-barbershop-в-софия.webp", alt: "подстригване на баща и син от barbershop в софия" },
+						{ src: "/assets/podstrigvane-na-bashta-i-sin/подстригване-на-баща-и-син-от-sofia-barber.webp", alt: "подстригване на баща и син от sofia barber" },
 					]}
 					/>
 				</div>
@@ -227,42 +240,78 @@ export default function Page() {
 							<AnimatedComponent>
 								<ReviewSlider
 									reviews={[
-										{ name: "Elizabeth Maurice" },
-										{ name: "Gen Tiski" },
-										{ name: "Samanta Federico" },
-										{ name: "Samanta Federico" },
+										{ name: "Galina Koleva" },
+										{ name: "Asen Markov" },
+										{ name: "Albert Hristov" },
+										{ name: "Dimitar Dodnikov" },
+										{ name: "Dimitar Stoyanov" },
+										{ name: "Petar Donchev" },
+										{ name: "Boyan Kushev" },
+										{ name: "Yav Kant" },
 									]}>
 									<StarReview
 										src="/assets/GoogleLogoPNGImage.png"
-										reviewText="I received excellent communications throughout the whole process. On the day, the cleaning experience was efficient with a considerate and friendly member of staff. Very competitive pricing."
-										name="Elizabeth Maurice"
-										date="June 2024"
+										reviewText="Много яко място за големи и малки момчета"
+										name="Galina Koleva"
+										date="Юли 2024"
 										stars={5}
-										hrefGoogleReview="https://g.co/kgs/HPqEYvL"
+										hrefGoogleReview="https://maps.app.goo.gl/nWyWC98LnQx8eVwg6"
 									/>
 									<StarReview
 										src="/assets/GoogleLogoPNGImage.png"
-										reviewText="The best carpet cleaning service I have ever experienced. From start to finish was unbelievably smooth. The staff that attended extremely polite and moved all the items with utmost care. Would recommend using them as they are simply the best one has come across. Maya was absolutely fantastic in arranging this as the request was done at such a short notice."
-										name="Gen Tiski"
-										date="March 2024"
+										reviewText="Перфектното място за мъжки отдих. Посрещнаха ме с вежливо обслужване и приятелска атмосфера. Работата им е на много високо ниво с внимание към детайла. Преопоръчвам!"
+										name="Asen Markov"
+										date="Март 2024"
 										stars={5}
-										hrefGoogleReview="https://g.co/kgs/H3NeADN"
+										hrefGoogleReview="https://maps.app.goo.gl/MzrKWa9opUhtry2x6"
 									/>
 									<StarReview
 										src="/assets/GoogleLogoPNGImage.png"
-										reviewText="I had my carpet cleaned by Nikolay from Fine Carpet Cleaning. What a fantastic job he did ! He is very professional, efficient and organised in the way he works. My carpet looks new again. I highly recommend."
-										name="Samanta Federico"
-										date="January 2024"
+										reviewText="Много стилно и хубаво място със специалисти които приемат предизвикателства. Крис е магьосник 🧙‍♂️…"
+										name="Albert Hristov"
+										date="Януари 2022"
 										stars={5}
-										hrefGoogleReview="https://g.co/kgs/WxWf2Bm"
+										hrefGoogleReview="https://maps.app.goo.gl/dRKPVt56gbgpdG1E9"
 									/>
 									<StarReview
 										src="/assets/GoogleLogoPNGImage.png"
-										reviewText="I had my carpet cleaned by Nikolay from Fine Carpet Cleaning. What a fantastic job he did ! He is very professional, efficient and organised in the way he works. My carpet looks new again. I highly recommend."
-										name="Samanta Federico"
-										date="January 2024"
+										reviewText="Препоръчвам. Изключително приятна обстановка. Страхотен салон и наистина кадърни момчета"
+										name="Dimitar Dodnikov"
+										date="Януари 2020"
 										stars={5}
-										hrefGoogleReview="https://g.co/kgs/WxWf2Bm"
+										hrefGoogleReview="https://maps.app.goo.gl/sitMfbX4dTjsm5Gi8"
+									/>
+									<StarReview
+										src="/assets/GoogleLogoPNGImage.png"
+										reviewText="Чудесна обстановка. Млади момчета със завидни умения. Горещо препоръчвам !"
+										name="Dimitar Stoyanov"
+										date="Ноември 2021"
+										stars={5}
+										hrefGoogleReview="https://maps.app.goo.gl/5NwhV395TLrdHThT6"
+									/>
+									<StarReview
+										src="/assets/GoogleLogoPNGImage.png"
+										reviewText="Never a bad haircut! The guys are true professionals at what they do and the experience itself is totally worth the price. Would not even consider another barber shop in Sofia again."
+										name="Petar Donchev"
+										date="Март 2019"
+										stars={5}
+										hrefGoogleReview="https://maps.app.goo.gl/J6E6yxpX3vhbDrUf8"
+									/>
+									<StarReview
+										src="/assets/GoogleLogoPNGImage.png"
+										reviewText="Excellent service, very nice and clean place! Definitely recommended 🤟🤟🤟"
+										name="Boyan Kushev"
+										date="Януари 2025"
+										stars={5}
+										hrefGoogleReview="https://maps.app.goo.gl/J1LBo8LHk1jTjx9y6"
+									/>
+									<StarReview
+										src="/assets/GoogleLogoPNGImage.png"
+										reviewText="There isn't a better place to get your hair cut in Sofia! Kris does magic!"
+										name="Yav Kant"
+										date="Март 2024"
+										stars={5}
+										hrefGoogleReview="https://maps.app.goo.gl/aB7baV3gRCyZ7Q3XA"
 									/>
 								</ReviewSlider>
 							</AnimatedComponent>
@@ -275,7 +324,7 @@ export default function Page() {
 					</div>
 				</section>
 
-				<div class="pb-20 hidden">
+				{/* <div class="pb-20 hidden">
 					<AnimatedComponent>
 						<H2WithImage title="Често поръчвани заедно" />
 					</AnimatedComponent>
@@ -299,7 +348,7 @@ export default function Page() {
 							<a href="https://book.thebarbershop.bg/reservations/start?site=1" target="_blank" rel="noopener noreferrer" class="bg-brand-compliment c-paper b-solid b-2px b-brand-compliment uppercase font-size-4 font-500 px-7 py-2 hover-c-paper-inv transition-colors" style="font-family: 'Oswald', sans-serif !important; letter-spacing: 1px;">Запазете час</a>
 						</div>
 					</AnimatedComponent>
-				</div>
+				</div> */}
 			</section>
 
 			<section style="background-color: #222222; background-image: url(/assets/bg-2.jpg); background-position: center center; background-repeat: no-repeat; background-size: cover;">
@@ -356,7 +405,7 @@ export default function Page() {
 					</div>
 					<div class="lg:block hidden lg:max-w-40% lg:px-0 md:px-10 px-5 lg:pt-0 md:pt-20 lg:pt-10">
 						<img class="mx-auto max-w-full" src="/assets/home/бръснари-софия.webp" alt="Бръснари София" />
-						<p class="important-my-0">text</p>
+						{/* <p class="important-my-0">text</p> */}
 					</div>
 				</div>
 			</div>

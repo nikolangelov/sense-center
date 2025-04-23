@@ -265,42 +265,89 @@ export default function Page() {
 							<AnimatedComponent>
 								<ReviewSlider
 									reviews={[
-										{ name: "Elizabeth Maurice" },
-										{ name: "Gen Tiski" },
-										{ name: "Samanta Federico" },
-										{ name: "Samanta Federico" },
+										{ name: "Atanas Todorov" },
+										{ name: "Borislav Donchev" },
+										{ name: "Nikola Stamenov" },
+										{ name: "Nikolay Mihaylov" },
+										{ name: "Asen Markov" },
+										{ name: "Dimitar Stoyanov" },
+										{ name: "Петър Кенаров" },
+										{ name: "Mario Kisov" },
 									]}>
 									<StarReview
 										src="/assets/GoogleLogoPNGImage.png"
-										reviewText="I received excellent communications throughout the whole process. On the day, the cleaning experience was efficient with a considerate and friendly member of staff. Very competitive pricing."
-										name="Elizabeth Maurice"
-										date="June 2024"
+										reviewText={
+											<>
+												Страхотен и приветлив салон.<br />
+												Пълен с професионалисти!<br />
+												Винаги си тръгвам доволен и определено препоръчвам Крис!
+											</>
+										}
+										name="Atanas Todorov"
+										date="Февруари 2025"
 										stars={5}
-										hrefGoogleReview="https://g.co/kgs/HPqEYvL"
+										hrefGoogleReview="https://maps.app.goo.gl/sjkDCYSsjHFX32BA9"
 									/>
 									<StarReview
 										src="/assets/GoogleLogoPNGImage.png"
-										reviewText="The best carpet cleaning service I have ever experienced. From start to finish was unbelievably smooth. The staff that attended extremely polite and moved all the items with utmost care. Would recommend using them as they are simply the best one has come across. Maya was absolutely fantastic in arranging this as the request was done at such a short notice."
-										name="Gen Tiski"
-										date="March 2024"
+										reviewText={
+											<>
+												The Barber Shop е страхотно място! Най-обикновени неща като оформяне на брада, при тях е цяло изживяване. Кристиян Митов е ТОП бръснар! Евала момчета. Keep it going!<br />
+												Силно препоръчвам бръснарницата!!!
+											</>
+										}
+										name="Borislav Donchev"
+										date="Април 2020"
 										stars={5}
-										hrefGoogleReview="https://g.co/kgs/H3NeADN"
+										hrefGoogleReview="https://maps.app.goo.gl/iEKHLYRadekGvbP87"
 									/>
 									<StarReview
 										src="/assets/GoogleLogoPNGImage.png"
-										reviewText="I had my carpet cleaned by Nikolay from Fine Carpet Cleaning. What a fantastic job he did ! He is very professional, efficient and organised in the way he works. My carpet looks new again. I highly recommend."
-										name="Samanta Federico"
-										date="January 2024"
+										reviewText="Най-добрият салон, в който съм бил. Атмосферата, отношението и уменията на бръснарите са на изключително високо ниво?"
+										name="Nikola Stamenov"
+										date="Май 2024"
 										stars={5}
-										hrefGoogleReview="https://g.co/kgs/WxWf2Bm"
+										hrefGoogleReview="https://maps.app.goo.gl/AxbBFsdVyJYUsW536"
 									/>
 									<StarReview
 										src="/assets/GoogleLogoPNGImage.png"
-										reviewText="I had my carpet cleaned by Nikolay from Fine Carpet Cleaning. What a fantastic job he did ! He is very professional, efficient and organised in the way he works. My carpet looks new again. I highly recommend."
-										name="Samanta Federico"
-										date="January 2024"
+										reviewText="Салонът предлага може би една от най-добрите услуги за мъжко подстригване и стайлинг на брада в София. Крис е невероятен професионалист и може да му имате доверие, че ще ви направи най-добрата прическа!"
+										name="Nikolay Mihaylov"
+										date="Май 2024"
 										stars={5}
-										hrefGoogleReview="https://g.co/kgs/WxWf2Bm"
+										hrefGoogleReview="https://maps.app.goo.gl/rAFy5cpcGFTxP8PR7"
+									/>
+									<StarReview
+										src="/assets/GoogleLogoPNGImage.png"
+										reviewText="Перфектното място за мъжки отдих. Посрещнаха ме с вежливо обслужване и приятелска атмосфера. Работата им е на много високо ниво с внимание към детайла. Преопоръчвам!"
+										name="Asen Markov"
+										date="Март 2024"
+										stars={5}
+										hrefGoogleReview="https://maps.app.goo.gl/R7ZJQMcubmDh82W8A"
+									/>
+									<StarReview
+										src="/assets/GoogleLogoPNGImage.png"
+										reviewText="Чудесна обстановка. Млади момчета със завидни умения. Горещо препоръчвам !"
+										name="Dimitar Stoyanov"
+										date="Ноември 2021"
+										stars={5}
+										hrefGoogleReview="https://maps.app.goo.gl/5NwhV395TLrdHThT6"
+									/>
+									<StarReview
+										src="/assets/GoogleLogoPNGImage.png"
+										reviewText="Perfect place for a haircut, beard grooming and meet new people and friends. Awesome crew, good athmosphere and great skills!"
+										name="Петър Кенаров"
+										date="Юни 2024"
+										stars={5}
+										hrefGoogleReview="https://maps.app.goo.gl/hRwLquSZhqZEBXJW9"
+									/>
+									<StarReview
+										src="/assets/GoogleLogoPNGImage.png"
+										reviewText="Amazing haircut! Totally recommend. Changed my look entirely and for the better."
+										name="Mario Kisov"
+										date="Юни 2024"
+										stars={5}
+										hrefGoogleReview="https://maps.app.goo.gl/L2iAbneuWELf7mE68"
 									/>
 								</ReviewSlider>
 							</AnimatedComponent>
@@ -320,7 +367,7 @@ export default function Page() {
 
 					<AnimatedComponent class="block h-500px md:h-600px max-w-500px mx-auto px-5">
 						<ElementInOftenOT
-							img="/assets/about3.jpg"
+							img="/assets/tonirane-na-kosa/барбър-шоп-тониране-на-сиви-коси.webp"
 							alt="Тониране на сиви коси"
 							href="/uslugi/profesionalno-tonirane-na-mazhka-kosa"
 							title="Тониране на сиви коси"
@@ -386,7 +433,7 @@ export default function Page() {
 					</div>
 					<div class="lg:block hidden lg:max-w-40% lg:px-0 md:px-10 px-5 lg:pt-0 md:pt-20 lg:pt-10">
 						<img class="mx-auto max-w-full" src="/assets/home/бръснари-софия.webp" alt="Бръснари София" />
-						<p class="important-my-0">text</p>
+						{/* <p class="important-my-0">text</p> */}
 					</div>
 				</div>
 			</div>

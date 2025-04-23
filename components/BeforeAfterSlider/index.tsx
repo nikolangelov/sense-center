@@ -1,36 +1,15 @@
-import { createSlider, Slider, SliderButton, SliderContext, SliderProvider } from "solid-slider";
+import { Slider, SliderButton, SliderContext, SliderProvider } from "solid-slider";
 import { createSignal, JSX, onCleanup, onMount, Show, useContext } from "solid-js";
 import RiPlayMiniLine from '~icons/ri/play-mini-line';
 import RiPlayReverseMiniLine from '~icons/ri/play-reverse-mini-line';
-import RiCloseFill from '~icons/ri/close-fill';
+import { cn } from "../../utils/cn";
 
-export const BeforeAfterSlider = (props: { style?: string | string; imgs: { src: string, alt: string, hairstyle: string }[] }) => {
-  const [isDesktop, setIsDesktop] = createSignal(false);
-
-  onMount(() => {
-    const checkMediaQuery = () => setIsDesktop(window.matchMedia("(min-width: 768px)").matches);
-    checkMediaQuery();
-    window.addEventListener("resize", checkMediaQuery);
-    onCleanup(() => window.removeEventListener("resize", checkMediaQuery));
-  });
-
-  return (
-    <>
-      {isDesktop() ? (
-        <GallerySliderDesktop imgs={props.imgs} style={props.style} />
-      ) : (
-        <GallerySliderMobile imgs={props.imgs} style={props.style} />
-      )}
-    </>
-  );
-};
-
-function DotsUnderSlider(props: { imgs: { src?: string, alt?: string }[] }) {
-  const [context] = useContext(SliderContext)
+export function DotsUnderSlider(props: { services: { title: string }[] }) {
+  const [context] = useContext(SliderContext);
   const [isDesktop, setIsDesktop] = createSignal(false);
 
   const goToSlide = (index: number) => {
-    context().moveTo(index)
+    context().moveTo(index);
   };
 
   onMount(() => {
@@ -43,177 +22,160 @@ function DotsUnderSlider(props: { imgs: { src?: string, alt?: string }[] }) {
   return (
     <>
       {isDesktop() ? (
-        <Show when={props.imgs.length > 1}>
-          <div class="dots-container" style="text-align: center; margin-top: 20px;">
-            {props.imgs.map((_, index) => (
-              <button
-                onClick={() => goToSlide(index)}
-                class={`dot ${context()?.current() === index ? "active" : ""}`}
-                style={{ margin: "0 5px", padding: "8px", cursor: "pointer", border: "none", background: context()?.current() === index ? "#7c1d2a" : "#f0f0f0" }}
-              ></button>
-            ))}
-          </div>
-        </Show>
+        <div class="dots-container" style="text-align: center; margin-top: 20px;">
+          {props.services.map((service, index) => (
+            <button
+              onClick={() => goToSlide(index)}
+              class={`dot ${context()?.current() === index ? "active" : ""}`}
+              style={{ margin: "0 5px", padding: "8px", cursor: "pointer", border: "none", background: context()?.current() === index ? "#7c1d2a" : "#f0f0f0" }}
+              title={service.title}
+            >
+            </button>
+          ))}
+        </div>
       ) : (
-        <Show when={props.imgs.length > 1}>
-          <div class="dots-container" style="text-align: center;">
-            {props.imgs.map((_, index) => (
-              <button
-                onClick={() => goToSlide(index)}
-                class={`dot ${context()?.current() === index ? "active" : ""}`}
-                style={{ margin: "0 3px", padding: "5px", cursor: "pointer", border: "none", background: context()?.current() === index ? "#7c1d2a" : "#f0f0f0" }}
-              ></button>
-            ))}
-          </div>
-        </Show>
+        <div class="dots-container" style="text-align: center; margin-top: 5px;">
+          {props.services.map((service, index) => (
+            <button
+              onClick={() => goToSlide(index)}
+              class={`dot ${context()?.current() === index ? "active" : ""}`}
+              style={{ margin: "0 3px", padding: "5px", cursor: "pointer", border: "none", background: context()?.current() === index ? "#7c1d2a" : "#f0f0f0" }}
+              title={service.title}
+            >
+            </button>
+          ))}
+        </div>
       )}
     </>
-  )
+  );
 }
 
-const GallerySliderDesktop = (props: { style?: string | string; imgs: { src: string, alt: string, hairstyle: string }[] }) => {
-  const [open, setOpen] = createSignal(false);
-  const [currentIndex, setCurrentIndex] = createSignal(0);
-  let sliderRef;
-
-  const openGallery = (index: number) => {
-    setCurrentIndex(index);
-    setOpen(true);
-  };
+export const BeforeAfterSlider = ({ children, buttonClass, ...props }: { children: JSX.Element | JSX.Element[], buttonClass?: string, services: { title: string }[] }) => {
+  const isDesktop = useMediaQuery("(min-width: 768px)");
 
   return (
-    <>
       <SliderProvider>
-        <div class="max-w-1300px m-auto position-relative hidden md:block cursor-pointer">
-          <Slider
-            ref={sliderRef}
-            options={{ loop: true, initial: currentIndex(), slides: { perView: 3.3, spacing: 20 } }}
-          >
-            {props.imgs.map((e, index) => (
-              <>
-                <div class="flex flex-col">
-                  <img
-                    src={e.src}
-                    alt={e.alt}
-                    class="object-contain w-full h-full"
-                    onClick={() => openGallery(index)}
-                  />
-                  <p class="mt-2 mb-0">{e.hairstyle}</p>
-                </div>
-              </>
-            ))}
-          </Slider>
-          <SliderButton class="cursor-pointer position-absolute top-45% left-0 lg-left--15 bg-transparent b-none" prev>
-            <RiPlayReverseMiniLine class="lg:ml-15 xl:-ml-2 font-size-10 b-solid b-3px p-1 c-paper bg-brand-compliment hover-bg-transparent hover-b-brand-compliment transition-colors b-brand-compliment hover-c-brand-compliment" style={props.style} />
-          </SliderButton>
-
-          <SliderButton class="cursor-pointer position-absolute top-45% right-0 lg-right--15 bg-transparent b-none" next>
-            <RiPlayMiniLine class="lg:mr-15 xl:-mr-2 font-size-10 b-solid b-3px p-1 c-paper bg-brand-compliment hover-bg-transparent hover-b-brand-compliment transition-colors b-brand-compliment hover-c-brand-compliment" style={props.style} />
-          </SliderButton>
-        </div>
-        <DotsUnderSlider imgs={props.imgs} />
+          {isDesktop() ? (
+              <div class="max-w-1300px mx-auto position-relative hidden md:block my-0">
+                  <Slider options={{ loop: true, drag: false, slides: { perView: 3.3, spacing: 15 } }}>
+                      {children}
+                  </Slider>
+                  <SliderButton class="cursor-pointer position-absolute top-45% left--15 bg-transparent b-none" prev>
+                      <RiPlayReverseMiniLine class={cn(`lg:mr-15 xl:-mr-2 font-size-10 b-solid b-3px p-1 c-paper bg-brand-compliment hover-bg-transparent hover-b-brand-compliment transition-colors b-brand-compliment hover-c-brand-compliment`, buttonClass)} />
+                  </SliderButton>
+                  <SliderButton class="cursor-pointer position-absolute top-45% right--15 bg-transparent b-none" next>
+                      <RiPlayMiniLine class={cn(`lg:ml-15 xl:-ml-2 font-size-10 b-solid b-3px p-1 c-paper bg-brand-compliment hover-bg-transparent hover-b-brand-compliment transition-colors b-brand-compliment hover-c-brand-compliment`, buttonClass)} />
+                  </SliderButton>
+              </div>
+          ) : (
+              <div class="max-w-1100px m-auto position-relative md:hidden block mx-4">
+                  <Slider options={{ loop: true, drag: false, slides: { perView: 1.3, spacing: 10 } }}>
+                      {children}
+                  </Slider>
+                  <SliderButton class="cursor-pointer position-absolute top-100% mt-1 left-0 bg-transparent b-none" prev>
+                      <RiPlayReverseMiniLine class={cn(`-ml-1 font-size-7 b-solid b-2px p-1 c-paper b-brand-compliment hover-c-brand-compliment bg-brand-compliment hover-bg-transparent hover-b-brand-compliment transition-colors`, buttonClass)} />
+                  </SliderButton>
+                  <SliderButton class="cursor-pointer position-absolute top-100% mt-1 right-0 bg-transparent b-none" next>
+                      <RiPlayMiniLine class={cn(`-mr-1 font-size-7 b-solid b-2px p-1 c-paper b-brand-compliment hover-c-brand-compliment bg-brand-compliment hover-bg-transparent hover-b-brand-compliment transition-colors`, buttonClass)} />
+                  </SliderButton>
+              </div>
+          )}
+          <DotsUnderSlider services={props.services} />
       </SliderProvider>
-
-      <Show when={open()}>
-        <SliderProvider>
-          <div class="bg-paper-inv bg-opacity-85 z-9999 hidden md:block fixed">
-            <div class="fixed top-0 left-0 w-full h-full m-auto bg-paper-inv px-10 flex flex-justify-center">
-              <Slider ref={sliderRef} options={{ loop: true, initial: currentIndex() }}>
-                {props.imgs.map((e) => (
-                  <img src={e.src} alt={e.alt} class="object-contain w-full h-full" />
-                ))}
-              </Slider>
-
-              <RiCloseFill onClick={() => setOpen(false)} class="hover:rotate-90 transition-all z-2 w-16 h-16 absolute top-0 right-0 mr-8 mt-8 p-2 bg-transparent c-brand-compliment cursor-pointer hover-color-paper:hover" />
-
-              <SliderButton class="cursor-pointer position-absolute top-50% left-20 bg-transparent b-none" prev>
-                <RiPlayReverseMiniLine class="font-size-10 b-solid b-3px p-1 c-paper bg-brand-compliment hover-bg-transparent hover-b-brand-compliment transition-colors b-brand-compliment hover-c-brand-compliment" />
-              </SliderButton>
-
-              <SliderButton class="cursor-pointer position-absolute top-50% right-20 bg-transparent b-none" next>
-                <RiPlayMiniLine class="font-size-10 b-solid b-3px p-1 c-paper bg-brand-compliment hover-bg-transparent hover-b-brand-compliment transition-colors b-brand-compliment hover-c-brand-compliment" />
-              </SliderButton>
-            </div>
-          </div>
-        </SliderProvider>
-      </Show>
-    </>
   );
 };
 
-const GallerySliderMobile = (props: { style?: string | string; imgs: { src: string, alt: string, hairstyle: string }[] }) => {
-  const [open, setOpen] = createSignal(false);
-  const [currentIndex, setCurrentIndex] = createSignal(0);
-  let sliderRef;
+interface BeforeAfterSliderProps {
+  before: string;
+  after: string;
+  altBefore?: string;
+  altAfter?: string;
+}
 
-  const openGallery = (index: number) => {
-    setCurrentIndex(index);
-    setOpen(true);
+export function BeforeAfterSliderContainer(props: BeforeAfterSliderProps) {
+  const [sliderPos, setSliderPos] = createSignal(50);
+  let containerRef: HTMLDivElement | undefined;
+
+  const updatePosition = (e: MouseEvent | TouchEvent) => {
+    const clientX = 'touches' in e ? e.touches[0].clientX : e.clientX;
+    if (!containerRef) return;
+    const rect = containerRef.getBoundingClientRect();
+    const offset = clientX - rect.left;
+    const percentage = Math.max(0, Math.min((offset / rect.width) * 100, 100));
+    setSliderPos(percentage);
+  };
+
+  const startDrag = (e: MouseEvent | TouchEvent) => {
+    updatePosition(e);
+    const move = (e: MouseEvent | TouchEvent) => updatePosition(e);
+    const stop = () => {
+      window.removeEventListener("mousemove", move);
+      window.removeEventListener("mouseup", stop);
+      window.removeEventListener("touchmove", move);
+      window.removeEventListener("touchend", stop);
+    };
+    window.addEventListener("mousemove", move);
+    window.addEventListener("mouseup", stop);
+    window.addEventListener("touchmove", move);
+    window.addEventListener("touchend", stop);
   };
 
   return (
-    <>
-      <SliderProvider>
-        <div class="max-w-1100px m-auto position-relative md:hidden block mx-4">
-          <Slider ref={sliderRef} options={{ loop: true, initial: currentIndex(), slides: { perView: 1.3, spacing: 20 } }}>
-            {props.imgs.map((e, index) => (
-              <>
-                <div class="flex flex-col">
-                  <img
-                    src={e.src}
-                    alt={e.alt}
-                    class="object-contain w-full h-full"
-                    onClick={() => openGallery(index)}
-                  />
-                  <p class="mt-2 mb-0">{e.hairstyle}</p>
-                </div >
-              </>
-            ))}
-          </Slider>
+    <div
+      ref={containerRef}
+      class="relative w-full max-w-3xl aspect-4/5 overflow-hidden touch-none"
+      onMouseDown={startDrag}
+      onTouchStart={startDrag}
+    >
+      <img
+        src={props.after}
+        alt={props.altAfter || "After"}
+        class="absolute inset-0 w-full h-full object-cover"
+      />
 
-          <SliderButton class="hidden cursor-pointer position-absolute top-47% left-0 bg-transparent b-none" prev>
-            <RiPlayReverseMiniLine
-              class="-ml-1 font-size-7 b-solid b-2px p-1 c-brand-compliment b-brand-compliment important-hover-c-paper hover-bg-brand-compliment hover-b-brand-compliment transition-colors"
-              style={props.style}
-            />
-          </SliderButton>
+      <img
+        src={props.before}
+        alt={props.altBefore || "Before"}
+        class="absolute inset-0 w-full h-full object-cover"
+        style={{
+          "clip-path": `inset(0 ${100 - sliderPos()}% 0 0)`
+        }}
+      />
 
-          <SliderButton class="hidden cursor-pointer position-absolute top-47% right-0 bg-transparent b-none" next>
-            <RiPlayMiniLine
-              class="-mr-1 font-size-7 b-solid b-2px p-1 c-brand-compliment b-brand-compliment important-hover-c-paper hover-bg-brand-compliment hover-b-brand-compliment transition-colors"
-              style={props.style}
-            />
-          </SliderButton>
+      <div
+        class="absolute top-0 bottom-0 z-10"
+        style={{
+          left: `${sliderPos()}%`,
+          transform: "translateX(-50%)",
+        }}
+      >
+        <div class="w-1 bg-white h-full shadow-md"></div>
+        <div class="cursor-ew-resize resizer absolute top-45% left-1/2 -translate-x-1/2 -translate-y-1/2 bg-white rounded shadow">
         </div>
-        <DotsUnderSlider imgs={props.imgs} />
-      </SliderProvider>
-
-      <Show when={open()}>
-        <SliderProvider>
-          <div class="bg-paper-inv bg-opacity-85 z-9999 h-full md:hidden block fixed">
-            <div class="fixed top-0 left-0 w-full h-full m-auto bg-paper-inv px-5 flex flex-items-center flex-justify-center">
-              <Slider ref={sliderRef} options={{ loop: true, initial: currentIndex() }}>
-                {props.imgs.map((e) => (
-                  <img src={e.src} alt={e.alt} class="object-contain w-full h-full" />
-                ))}
-              </Slider>
-
-              <RiCloseFill
-                onClick={() => setOpen(false)}
-                class="hover:rotate-90 transition-all z-2 w-12 h-12 absolute top-0 right-0 mr-2 mt-10 p-2 bg-transparent c-brand-compliment cursor-pointer hover-color-paper:hover"
-              />
-
-              <SliderButton class="cursor-pointer position-absolute top-50% left-0 bg-transparent b-none" prev>
-                <RiPlayReverseMiniLine class="ml-4 font-size-7 b-solid b-2px p-1 c-brand-compliment b-brand-compliment hover-c-paper hover-bg-brand-compliment hover-b-brand-compliment transition-colors" />
-              </SliderButton>
-
-              <SliderButton class="cursor-pointer position-absolute top-50% right-0 bg-transparent b-none" next>
-                <RiPlayMiniLine class="mr-4 font-size-7 b-solid b-2px p-1 c-brand-compliment b-brand-compliment hover-c-paper hover-bg-brand-compliment hover-b-brand-compliment transition-colors" />
-              </SliderButton>
-            </div>
-          </div>
-        </SliderProvider>
-      </Show>
-    </>
+      </div>
+    </div>
   );
-};
+}
+
+function useMediaQuery(query: string) {
+  const [matches, setMatches] = createSignal(false);
+
+  onMount(() => {
+      if (typeof window !== "undefined") {
+          const mediaQueryList = window.matchMedia(query);
+          setMatches(mediaQueryList.matches);
+
+          const handleChange = (event: MediaQueryListEvent) => {
+              setMatches(event.matches);
+          };
+
+          mediaQueryList.addEventListener('change', handleChange);
+
+          onCleanup(() => {
+              mediaQueryList.removeEventListener('change', handleChange);
+          });
+      }
+  });
+
+  return matches;
+}

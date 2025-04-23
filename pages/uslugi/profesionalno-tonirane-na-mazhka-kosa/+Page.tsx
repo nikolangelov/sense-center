@@ -123,12 +123,12 @@ function SingleCollapse() {
 export default function Page() {
 	return (
 		<>
-			<div style="background-position: center top; background-repeat: no-repeat; background-size: cover; height: auto;"><div style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(/assets/home/the-barber-shop-sofia-mobile.webp); background-position: center top; background-repeat: no-repeat; background-size: cover;" class="h-100vh home-img" role="img" aria-label="The barber shop Sofia"></div></div>
+			<div style="background-position: center top; background-repeat: no-repeat; background-size: cover; height: auto;"><div style="background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.6) ), url(/assets/tonirane-na-kosa/барбър-шоп-тониране-на-сиви-коси.webp); background-position: center top; background-repeat: no-repeat; background-size: cover;" class="h-100vh tonirane-img" role="img" aria-label="Тониране на сиви коси в барбър шоп"></div></div>
 
 			<div class="w-full bg-#212528">
 				<div class="max-w-1240px mx-auto">
 					<div class="flex flex-justify-center">
-						<div class="left-0 right-0 px-3 my-0 mx-auto absolute top-55% lg-top-58% text-center w-full max-w-1000px" style="-webkit-transform: translateY(-50%);">
+						<div class="left-0 right-0 px-3 my-0 mx-auto absolute top-55% lg-top-62% text-center w-full max-w-1000px" style="-webkit-transform: translateY(-50%);">
 							<AnimatedComponent>
 								<h1 class="uppercase c-paper mb-6 text-center">Професи&shy;о&shy;нал&shy;но тониране на мъжка коса</h1>
 							</AnimatedComponent>
@@ -191,14 +191,14 @@ export default function Page() {
 				</AnimatedComponentSlide>
 			</div>
 
-			<section class="lg-pb-25 pb-20">
+			{/* <section class="lg-pb-25 pb-20">
 				<AnimatedComponent>
 					<H2WithImage class="max-w-750px mx-auto" title="Професионално тониране на мъжка коса: От идеята до завършения вид" />
 				</AnimatedComponent>
 				<AnimatedComponent>
 					<VideoPlayer src='https://www.youtube.com/embed/e2x0UXVU2yg?enablejsapi=1&mute=1' />
 				</AnimatedComponent>
-			</section>
+			</section> */}
 
 			<div class="pb-20" style="background-image: url(/assets/bg-2.jpg); background-position: center; background-repeat: no-repeat; background-size: cover;">
 				<H2WithImage class="c-paper" title="Цена на тониране на коса" />
@@ -232,6 +232,12 @@ export default function Page() {
 						<H2WithImage title="Професионално тониране на мъжка коса в действие" />
 					</AnimatedComponent>
 					<GallerySlider imgs={[
+						{ src: "/assets/tonirane-na-kosa/модерно-тониране-на-сиви-коси.webp", alt: "модерно тониране на сиви коси" },
+						{ src: "/assets/tonirane-na-kosa/тониране-на-сиви-коси-с-професионални-продукти.webp", alt: "Тониране на сиви коси с професионални продукти" },
+						{ src: "/assets/tonirane-na-kosa/тониране-за-мъже-със-сиви-коси.webp", alt: "Тониране за мъже със сиви коси" },
+						{ src: "/assets/tonirane-na-kosa/качествено-тониране-на-сиви-коси.webp", alt: "Качествено тониране на сиви коси" },
+						{ src: "/assets/tonirane-na-kosa/професионално-тониране-на-сиви-коси-за-мъже.webp", alt: "Професионално тониране на сиви коси за мъже" },
+						{ src: "/assets/tonirane-na-kosa/барбър-шоп-софия-тониране-на-сиви-коси.webp", alt: "Барбър шоп софия тониране на сиви коси" },
 					]}
 					/>
 				</div>
@@ -247,42 +253,78 @@ export default function Page() {
 							<AnimatedComponent>
 								<ReviewSlider
 									reviews={[
-										{ name: "Elizabeth Maurice" },
-										{ name: "Gen Tiski" },
-										{ name: "Samanta Federico" },
-										{ name: "Samanta Federico" },
+										{ name: "Albert Hristov" },
+										{ name: "Dimitar Dodnikov" },
+										{ name: "Илиян Станков" },
+										{ name: "Ivaylo Hristov (Ivo)" },
+										{ name: "Asen Markov" },
+										{ name: "Petar Donchev" },
+										{ name: "Kalin Tabov" },
+										{ name: "Alex Guiman" },
 									]}>
 									<StarReview
 										src="/assets/GoogleLogoPNGImage.png"
-										reviewText="I received excellent communications throughout the whole process. On the day, the cleaning experience was efficient with a considerate and friendly member of staff. Very competitive pricing."
-										name="Elizabeth Maurice"
-										date="June 2024"
+										reviewText="Много стилно и хубаво място със специалисти които приемат предизвикателства. Крис е магьосник 🧙‍♂️"
+										name="Albert Hristov"
+										date="Юли 2022"
 										stars={5}
-										hrefGoogleReview="https://g.co/kgs/HPqEYvL"
+										hrefGoogleReview="https://maps.app.goo.gl/TE8fdZSeZvxS1po89"
 									/>
 									<StarReview
 										src="/assets/GoogleLogoPNGImage.png"
-										reviewText="The best carpet cleaning service I have ever experienced. From start to finish was unbelievably smooth. The staff that attended extremely polite and moved all the items with utmost care. Would recommend using them as they are simply the best one has come across. Maya was absolutely fantastic in arranging this as the request was done at such a short notice."
-										name="Gen Tiski"
-										date="March 2024"
+										reviewText="Препоръчвам. Изключително приятна обстановка. Страхотен салон и наистина кадърни момчета"
+										name="Dimitar Dodnikov"
+										date="Януари 2020"
 										stars={5}
-										hrefGoogleReview="https://g.co/kgs/H3NeADN"
+										hrefGoogleReview="https://maps.app.goo.gl/gbPYhzBAmovgG3YE7"
 									/>
 									<StarReview
 										src="/assets/GoogleLogoPNGImage.png"
-										reviewText="I had my carpet cleaned by Nikolay from Fine Carpet Cleaning. What a fantastic job he did ! He is very professional, efficient and organised in the way he works. My carpet looks new again. I highly recommend."
-										name="Samanta Federico"
-										date="January 2024"
+										reviewText="Крис е супер. От 3 години ги посещавам и винаги вършат страхотна работа."
+										name="Илиян Станков"
+										date="Май 2024"
 										stars={5}
-										hrefGoogleReview="https://g.co/kgs/WxWf2Bm"
+										hrefGoogleReview="https://maps.app.goo.gl/PjrjV7sQbj4BEQwZ8"
 									/>
 									<StarReview
 										src="/assets/GoogleLogoPNGImage.png"
-										reviewText="I had my carpet cleaned by Nikolay from Fine Carpet Cleaning. What a fantastic job he did ! He is very professional, efficient and organised in the way he works. My carpet looks new again. I highly recommend."
-										name="Samanta Federico"
-										date="January 2024"
+										reviewText="Много съм доволен. Луксозен салон. Общителни и приятни млади хора работят там. И правят отлични прически. Аз съм много доволен."
+										name="Ivaylo Hristov (Ivo)"
+										date="Септември 2019"
 										stars={5}
-										hrefGoogleReview="https://g.co/kgs/WxWf2Bm"
+										hrefGoogleReview="https://maps.app.goo.gl/JzPSXpCBG1jX8LiV8"
+									/>
+									<StarReview
+										src="/assets/GoogleLogoPNGImage.png"
+										reviewText="Перфектното място за мъжки отдих. Посрещнаха ме с вежливо обслужване и приятелска атмосфера. Работата им е на много високо ниво с внимание към детайла. Преопоръчвам!"
+										name="Asen Markov"
+										date="Март 2024"
+										stars={5}
+										hrefGoogleReview="https://maps.app.goo.gl/AoZhN74yXnKUREkT7"
+									/>
+									<StarReview
+										src="/assets/GoogleLogoPNGImage.png"
+										reviewText="Never a bad haircut! The guys are true professionals at what they do and the experience itself is totally worth the price. Would not even consider another barber shop in Sofia again."
+										name="Petar Donchev"
+										date="Март 2019"
+										stars={5}
+										hrefGoogleReview="https://maps.app.goo.gl/J6E6yxpX3vhbDrUf8"
+									/>
+									<StarReview
+										src="/assets/GoogleLogoPNGImage.png"
+										reviewText="That is my first time here. Great place and service. Blago was extremely knowledgeable, skilled and nice to talk to. I love my haircut and will be back."
+										name="Kalin Tabov"
+										date="Септември 2024"
+										stars={5}
+										hrefGoogleReview="https://maps.app.goo.gl/nPPkSY2SjhAi7HNaA"
+									/>
+									<StarReview
+										src="/assets/GoogleLogoPNGImage.png"
+										reviewText="Very polite staff, the place looks really nice and most important, i had a very nice haircut! They also speak english which helped a lot!"
+										name="Alex Guiman"
+										date="Юни 2023"
+										stars={5}
+										hrefGoogleReview="https://maps.app.goo.gl/6rvjPTh8xG9rTALV9"
 									/>
 								</ReviewSlider>
 							</AnimatedComponent>
@@ -320,7 +362,7 @@ export default function Page() {
 								title="Оформяне на брада"
 							/>
 							<ElementInOftenOT
-								img="/assets/about3.jpg"
+								img="/assets/bashta-i-sin/подстригване-на-баща-и-син.webp"
 								alt="Подстригване на баща и син"
 								href="/uslugi/podstrigvane-na-bashta-i-sin"
 								title="Подстригване на баща и син"
@@ -369,6 +411,13 @@ export default function Page() {
 				</div>
 				<div class="pb-20">
 					<GallerySlider imgs={[
+						{ src: "/assets/tonirane-na-kosa/каталог-за-тониране-на-сиви-коси.webp", alt: "каталог за тониране на сиви коси" },
+						{ src: "/assets/tonirane-na-kosa/тонер-за-коса.webp", alt: "тонер за коса" },
+						{ src: "/assets/tonirane-na-kosa/четка-за-тониране-на-сиви-коси.webp", alt: "четка за тониране на сиви коси" },
+						{ src: "/assets/tonirane-na-kosa/тонери-за-коса.webp", alt: "тонери за коса" },
+						{ src: "/assets/tonirane-na-kosa/тонер-за-коса.webp", alt: "тонер за коса" },
+						{ src: "/assets/tonirane-na-kosa/разбъркване-на-тонера.webp", alt: "разбъркване на тонера" },
+						{ src: "/assets/tonirane-na-kosa/подготвяне-за-тониране.webp", alt: "подготвяне за тониране" },
 					]}
 					/>
 				</div>
@@ -384,7 +433,7 @@ export default function Page() {
 					</div>
 					<div class="lg:block hidden lg:max-w-40% lg:px-0 md:px-10 px-5 lg:pt-0 md:pt-20 lg:pt-10">
 						<img class="mx-auto max-w-full" src="/assets/home/бръснари-софия.webp" alt="Бръснари София" />
-						<p class="important-my-0">text</p>
+						{/* <p class="important-my-0">text</p> */}
 					</div>
 				</div>
 			</div>

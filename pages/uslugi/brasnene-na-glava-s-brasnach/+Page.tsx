@@ -114,12 +114,12 @@ function SingleCollapse() {
 export default function Page() {
 	return (
 		<>
-			<div style="background-position: center top; background-repeat: no-repeat; background-size: cover; height: auto;"><div style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(/assets/home/the-barber-shop-sofia-mobile.webp); background-position: center top; background-repeat: no-repeat; background-size: cover;" class="h-100vh home-img" role="img" aria-label="The barber shop Sofia"></div></div>
+			<div style="background-position: center top; background-repeat: no-repeat; background-size: cover; height: auto;"><div style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(/assets/brasnene-na-glava-s-brasnach/бръснене-на-глава-с-бръснач-в-бръснарница.webp); background-position: left 100% top 100%; background-repeat: no-repeat; background-size: cover;" class="h-97vh md:h-100vh brasnene-na-glava-img" role="img" aria-label="бръснене на глава с бръснач в barber shop sofia"></div></div>
 
 			<div class="w-full bg-#212528">
 				<div class="max-w-1240px mx-auto">
 					<div class="flex flex-justify-center">
-						<div class="left-0 right-0 px-3 my-0 mx-auto absolute top-55% lg-top-58% text-center w-full max-w-1000px" style="-webkit-transform: translateY(-50%);">
+						<div class="left-0 right-0 px-3 my-0 mx-auto absolute top-58% lg-top-62% text-center w-full max-w-1000px" style="-webkit-transform: translateY(-50%);">
 							<AnimatedComponent>
 								<h1 class="uppercase c-paper mb-6 text-center">Бръснене на глава с бръснач</h1>
 							</AnimatedComponent>
@@ -198,14 +198,14 @@ export default function Page() {
 				</AnimatedComponentSlide>
 			</div>
 
-			<section class="lg-pb-25 pb-20">
+			{/* <section class="lg-pb-25 pb-20">
 				<AnimatedComponent>
 					<H2WithImage class="max-w-750px mx-auto" title="Как изглежда процеса на бръснене на глава" />
 				</AnimatedComponent>
 				<AnimatedComponent>
 					<VideoPlayer src='https://www.youtube.com/embed/e2x0UXVU2yg?enablejsapi=1&mute=1' />
 				</AnimatedComponent>
-			</section>
+			</section> */}
 
 			<div class="pb-20" style="background-image: url(/assets/bg-2.jpg); background-position: center; background-repeat: no-repeat; background-size: cover;">
 				<H2WithImage class="c-paper" title="Цена на бръснене на глава" />
@@ -239,6 +239,18 @@ export default function Page() {
 						<H2WithImage title="Бръснене на глава с бръснач в действие" />
 					</AnimatedComponent>
 					<GallerySlider imgs={[
+						{ src: "/assets/brasnene-na-glava-s-brasnach/бръснене-на-глава-с-бръснач-в-барбершоп.webp", alt: "бръснене на глава с бръснач в барбершоп" },
+						{ src: "/assets/brasnene-na-glava-s-brasnach/бръснене-на-глава-от-barbershop-в-софия.webp", alt: "бръснене на глава с бръснач от barbershop в софия" },
+						{ src: "/assets/brasnene-na-glava-s-brasnach/бръснене-на-глава-в-the-barber-shop-sofia.webp", alt: "бръснене на глава с бръснач в the barber shop sofia" },
+						{ src: "/assets/brasnene-na-glava-s-brasnach/бръснене-на-глава-с-бръснач-от-sofia-barber.webp", alt: "бръснене на глава с бръснач от sofia barber" },
+						{ src: "/assets/brasnene-na-glava-s-brasnach/бръснене-на-глава-с-бръснач.webp", alt: "бръснене на глава с бръснач" },
+						{ src: "/assets/brasnene-na-glava-s-brasnach/бръснене-на-глава-от-бръснар-в-софия.webp", alt: "бръснене на глава от бръснар в софия" },
+						{ src: "/assets/brasnene-na-glava-s-brasnach/бръснарници-в-софия-бръснене-на-глава.webp", alt: "бръснарници в софия бръснене на глава" },
+						{ src: "/assets/brasnene-na-glava-s-brasnach/бръснене-на-глава-в-барбер-шоп-софия.webp", alt: "бръснене на глава в барбер шоп софия" },
+						{ src: "/assets/brasnene-na-glava-s-brasnach/бръснене-на-глава-от-бръснари-в-софия.webp", alt: "бръснене на глава с бръснач от бръснари в софия" },
+						{ src: "/assets/brasnene-na-glava-s-brasnach/бръснене-на-глава-с-бръснач-в-барбер шоп.webp", alt: "бръснене на глава с бръснач в барбер шоп" },
+						{ src: "/assets/brasnene-na-glava-s-brasnach/бръснене-на-глава-от-от-бръснар-в-софия.webp", alt: "бръснене на глава с бръснач от бръснар в софия" },
+						{ src: "/assets/brasnene-na-glava-s-brasnach/бръснене-на-глава-с-бръснач-в-бръснарница-в-софия.webp", alt: "бръснене на глава с бръснач бръснарница в софия" },
 					]}
 					/>
 				</div>
@@ -254,42 +266,83 @@ export default function Page() {
 							<AnimatedComponent>
 								<ReviewSlider
 									reviews={[
-										{ name: "Elizabeth Maurice" },
-										{ name: "Gen Tiski" },
-										{ name: "Samanta Federico" },
-										{ name: "Samanta Federico" },
+										{ name: "Stanislav Radnev" },
+										{ name: "Albert Hristov" },
+										{ name: "Илиян Станков" },
+										{ name: "Vladimir Valchev" },
+										{ name: "Boyan Kushev" },
+										{ name: "Alex" },
+										{ name: "Finesse Fishing" },
+										{ name: "Hristo Velev" },
 									]}>
 									<StarReview
 										src="/assets/GoogleLogoPNGImage.png"
-										reviewText="I received excellent communications throughout the whole process. On the day, the cleaning experience was efficient with a considerate and friendly member of staff. Very competitive pricing."
-										name="Elizabeth Maurice"
-										date="June 2024"
+										reviewText={
+											<>
+												Ходя там през последните 7 години и обслужването е безупречно.<br />
+												Бих препоръчал на всички.
+											</>
+										}
+										name="Stanislav Radnev"
+										date="Февруари 2024"
 										stars={5}
-										hrefGoogleReview="https://g.co/kgs/HPqEYvL"
+										hrefGoogleReview="https://maps.app.goo.gl/Mra4TTCYEH4noiN8A"
 									/>
 									<StarReview
 										src="/assets/GoogleLogoPNGImage.png"
-										reviewText="The best carpet cleaning service I have ever experienced. From start to finish was unbelievably smooth. The staff that attended extremely polite and moved all the items with utmost care. Would recommend using them as they are simply the best one has come across. Maya was absolutely fantastic in arranging this as the request was done at such a short notice."
-										name="Gen Tiski"
-										date="March 2024"
+										reviewText="Много стилно и хубаво място със специалисти които приемат предизвикателства. Крис е магьосник 🧙‍♂️…"
+										name="Albert Hristov"
+										date="Януари 2022"
 										stars={5}
-										hrefGoogleReview="https://g.co/kgs/H3NeADN"
+										hrefGoogleReview="https://maps.app.goo.gl/dRKPVt56gbgpdG1E9"
 									/>
 									<StarReview
 										src="/assets/GoogleLogoPNGImage.png"
-										reviewText="I had my carpet cleaned by Nikolay from Fine Carpet Cleaning. What a fantastic job he did ! He is very professional, efficient and organised in the way he works. My carpet looks new again. I highly recommend."
-										name="Samanta Federico"
-										date="January 2024"
+										reviewText="Крис е супер. От 3 години ги посещавам и винаги вършат страхотна работа."
+										name="Илиян Станков"
+										date="Май 2024"
 										stars={5}
-										hrefGoogleReview="https://g.co/kgs/WxWf2Bm"
+										hrefGoogleReview="https://maps.app.goo.gl/r7rNf1c41YMVxkwj8"
 									/>
 									<StarReview
 										src="/assets/GoogleLogoPNGImage.png"
-										reviewText="I had my carpet cleaned by Nikolay from Fine Carpet Cleaning. What a fantastic job he did ! He is very professional, efficient and organised in the way he works. My carpet looks new again. I highly recommend."
-										name="Samanta Federico"
-										date="January 2024"
+										reviewText="Excellent service and truly professional barbers."
+										name="Vladimir Valchev"
+										date="Май 2024"
 										stars={5}
-										hrefGoogleReview="https://g.co/kgs/WxWf2Bm"
+										hrefGoogleReview="https://maps.app.goo.gl/5Xr7evZ2baMg1ZgJ8"
+									/>
+									<StarReview
+										src="/assets/GoogleLogoPNGImage.png"
+										reviewText="Excellent service, very nice and clean place! Definitely recommended 🤟🤟🤟"
+										name="Boyan Kushev"
+										date="Януари 2025"
+										stars={5}
+										hrefGoogleReview="https://maps.app.goo.gl/J1LBo8LHk1jTjx9y6"
+									/>
+									<StarReview
+										src="/assets/GoogleLogoPNGImage.png"
+										reviewText="Professional and best hair salon in Sofia. Highly recommend."
+										name="Alex"
+										date="Май 2024"
+										stars={5}
+										hrefGoogleReview="https://maps.app.goo.gl/KJKdFm9ZBb4QdzH28"
+									/>
+									<StarReview
+										src="/assets/GoogleLogoPNGImage.png"
+										reviewText="Great place! Amazing service and professional staff! Totally recommend!"
+										name="Finesse Fishing"
+										date="Февруари 2024"
+										stars={5}
+										hrefGoogleReview="https://maps.app.goo.gl/hNzA5HqpUHS7k9nf7"
+									/>
+									<StarReview
+										src="/assets/GoogleLogoPNGImage.png"
+										reviewText="The guys are pros! Good music, good atmosphere and offer a free drink. They also have free parking but is limited to number of spaces, so better call them in advance if you are planning to visit with a car."
+										name="Hristo Velev"
+										date="Март 2024"
+										stars={5}
+										hrefGoogleReview="https://maps.app.goo.gl/hTviWSgBNaeRdZ7u5"
 									/>
 								</ReviewSlider>
 							</AnimatedComponent>
@@ -390,7 +443,7 @@ export default function Page() {
 					</div>
 					<div class="lg:block hidden lg:max-w-40% lg:px-0 md:px-10 px-5 lg:pt-0 md:pt-20 lg:pt-10">
 						<img class="mx-auto max-w-full" src="/assets/home/бръснари-софия.webp" alt="Бръснари София" />
-						<p class="important-my-0">text</p>
+						{/* <p class="important-my-0">text</p> */}
 					</div>
 				</div>
 			</div>

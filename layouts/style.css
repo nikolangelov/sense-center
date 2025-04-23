@@ -239,7 +239,7 @@ html::-webkit-scrollbar-thumb {
 
 @media (min-width: 640px) {
   .home-img {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.8)), url('/assets/home/the-barber-shop-sofia.webp') !important;
+    background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.7)), url('/assets/za-nas/the-barber-shop-sofia-2_result_result.webp') !important;
     background-position: center top !important;
     background-repeat: no-repeat !important;
     background-size: cover !important;
@@ -254,7 +254,10 @@ html::-webkit-scrollbar-thumb {
 
 @media (min-width: 640px) {
   .za-nas-img {
-    background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.65)), url('/assets/za-nas/the-barber-shop-sofia-2_result_result.webp') !important;
+    background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.45)), url('/assets/za-nas/бръснарски-салон-софия-център.jpg') !important;
+    background-position: left 100% bottom 10% !important;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
   }
 }
 
@@ -336,6 +339,33 @@ html::-webkit-scrollbar-thumb {
   }
 }
 
+@media (min-width: 640px) {
+  .tonirane-img {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.7)), url('/assets/tonirane-na-kosa/тониране-на-сиви-коси-в-барбър-шоп.webp') !important;
+    background-position: center top !important;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+  }
+}
+
+@media (min-width: 640px) {
+  .bashta-i-sin-img {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.7)), url('/assets/bashta-i-sin/детско-и-мъжко-подстригване.webp') !important;
+    background-position: center top !important;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+  }
+}
+
+@media (min-width: 640px) {
+  .brasnene-na-glava-img {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.7)), url('/assets/brasnene-na-glava-s-brasnach/бръснене-на-глава-с-бръснач-в-barber-shop-sofia.webp') !important;
+    background-position: center top !important;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+  }
+}
+
 .input-highlight input::placeholder {
   color: white;
 }
@@ -383,3 +413,37 @@ html::-webkit-scrollbar-thumb {
     background-position: 50px 50px;
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.resizer:after {
+  background: #8f1828;
+  content:'\21FF';
+  font-weight:900;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  color:white;
+  position:absolute;
+  margin: 0 0 0 -22px;
+  width:40px;
+  height:40px;
+  border-radius:50%;
+  border:3px solid white;
+}
+
+

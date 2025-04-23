@@ -1,4 +1,4 @@
-import { createSignal, JSX, onCleanup, onMount, Show, useContext } from 'solid-js';
+import { createSignal, JSX, JSXElement, onCleanup, onMount, Show, useContext } from 'solid-js';
 import range from "lodash/range"
 import { Slider, SliderButton, SliderContext, SliderProvider } from "solid-slider";
 import RiPlayMiniLine from '~icons/ri/play-mini-line';
@@ -85,7 +85,7 @@ export const ReviewSlider = (props: { reviews: { name: string }[]; children: JSX
     );
 };
 
-export function StarReview(props: { src: string; stars: number; hrefGoogleReview: string; name: string; date: string; reviewText: string; }) {
+export function StarReview(props: { src: string; stars: number; hrefGoogleReview: string; name: string; date: string; reviewText: string | JSXElement; }) {
     return (
         <a class="mb-2 md:mb-5 mt-0 m-auto px-2 md:px-8 py-10 bg-paper" target="_blank" rel="noopener" href={props.hrefGoogleReview}>
             <div class="flex flex-justify-center flex-items-center">

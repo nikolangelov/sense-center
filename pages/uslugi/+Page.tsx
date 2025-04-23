@@ -74,13 +74,13 @@ function ServiceContainer(props: { href: string, title: string, desc: string, pr
 								<div class="flex flex-col items-center text-center bottom-8 transition-all duration-700 ease-in-out group-hover:bottom-[33%]">
 									<MdiScissors class="c-paper mx-auto rotate-[270deg] w-8" />
 									<div class="w-300px">
-										<h3 class="c-paper mt-2 mb-1">{props.title}</h3>
+										<h3 class="c-paper mt-2 mb-2">{props.title}</h3>
 									</div>
-									<div class="h-[1px] w-[100px] group-hover:w-[300px] transition-all duration-900 ease-in-out bg-brand mb-5"></div>
+									<div class="h-[1px] w-[100px] group-hover:w-[300px] transition-all duration-900 ease-in-out bg-brand mb-6"></div>
 								</div>
-								<div class="c-paper text-left mb-5 pr-4 pl-10 text-lg leading-7 mt-auto">
+								{/* <div class="c-paper text-left mb-5 pr-4 pl-10 text-lg leading-7 mt-auto">
 									{props.desc}
-								</div>
+								</div> */}
 								<div class="flex flex-col flex-items-center pb-2">
 									<div class="bg-none c-paper b-solid b-1px b-paper hover-b-brand hover-bg-brand transition-colors mx-auto uppercase font-size-4 font-500 px-7 py-2" style="font-family: 'Oswald', sans-serif !important; letter-spacing: 1px;">Вижте повече</div>
 								</div>
@@ -184,7 +184,7 @@ export default function Page() {
 						time="1 ч."
 					/>
 					<ServiceContainer
-						img="/assets/about3.jpg"
+						img="/assets/tonirane-na-kosa/барбър-шоп-тониране-на-сиви-коси.webp"
 						alt="тониране на мъжка коса"
 						href="/uslugi/profesionalno-tonirane-na-mazhka-kosa"
 						title="Тониране на мъжка коса"
@@ -211,7 +211,7 @@ export default function Page() {
 						time="1 ч."
 					/>
 					<ServiceContainer
-						img="/assets/about3.jpg"
+						img="/assets/bashta-i-sin/подстригване-на-баща-и-син.webp"
 						alt="подстригване на баща и син"
 						href="/uslugi/podstrigvane-na-bashta-i-sin"
 						title="Подстригване на баща и син"

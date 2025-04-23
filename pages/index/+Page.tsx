@@ -2,15 +2,16 @@ import "solid-slider/slider.css";
 import { ReviewSlider, StarReview } from '../../components/ReviewSlider';
 import { VideoPlayer } from '../../components/VideoPlayer';
 import { GallerySlider } from '../../components/GallerySlider';
-import { BeforeAfterSlider } from '../../components/BeforeAfterSlider';
+import { BeforeAfterSlider, BeforeAfterSliderContainer } from '../../components/BeforeAfterSlider';
 import { AnimatedComponent } from '../../components/AnimateOnView';
 import { AnimatedComponentSlide } from '../../components/AnimateOnViewSlide';
 import { H2WithImage } from '../../components/H2WithImage';
 import MdiBank from '~icons/mdi/bank';
 import MdiPhoneClassic from '~icons/mdi/phone-classic';
 import RiTimerFill from '~icons/ri/timer-fill';
+import MdiScissors from '~icons/mdi/scissors';
 
-function ServiceContaner(props: { title: string, href: string, img: string, alt: string }) {
+export function ServiceContaner(props: { title: string, href: string, img: string, alt: string }) {
 
 	return (
 		<AnimatedComponentSlide class="flex sm-w-65% md-w-50% lg-w-35% xl-w-23% max-w-full relative overflow-hidden " style="flex: 0 0 auto;">
@@ -18,7 +19,8 @@ function ServiceContaner(props: { title: string, href: string, img: string, alt:
 				<img class="w-full h-auto" src={props.img} alt={props.alt} />
 				<div class="w-full p-20px absolute bottom-0px text-center" style="background: -webkit-linear-gradient(top, transparent 0, rgba(0, 0, 0, .01) 1%, rgba(0, 0, 0, .95) 80%);">
 					<div class="flex flex-col gap-1">
-						<h4 class="c-paper relative font-size-20px md:font-size-27px mb-1">
+						<MdiScissors class="c-paper mx-auto rotate-[270deg] w-8" />
+						<h4 class="c-paper relative font-size-20px md:font-size-27px my-1">
 							{props.title}
 						</h4>
 						<div class="text-center h-1px w-60px bg-brand mx-auto mb-20px"></div>
@@ -33,12 +35,12 @@ function ServiceContaner(props: { title: string, href: string, img: string, alt:
 export default function Page() {
 	return (
 		<>
-			<div style="background-position: center top; background-repeat: no-repeat; background-size: cover; height: auto;"><div style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(/assets/home/the-barber-shop-sofia-mobile.webp); background-position: center top; background-repeat: no-repeat; background-size: cover;" class="h-105vh home-img" role="img" aria-label="The barber shop Sofia"></div></div>
+			<div style="background-position: center top; background-repeat: no-repeat; background-size: cover; height: auto;"><div style="background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5) ), url(/assets/za-nas/the-barber-shop-sofia-2_result_result.webp); background-position: right 55% bottom 100%; background-repeat: no-repeat; background-size: cover;" class="h-105vh" role="img" aria-label="бръснарски салон софия център"></div></div>
 
 			<div class="w-full bg-#212528">
 				<div class="max-w-1240px mx-auto">
 					<div class="flex flex-justify-center">
-						<div class="left-0 right-0 px-3 my-0 mx-auto absolute top-38% lg-top-50% text-center w-full max-w-700px" style="-webkit-transform: translateY(-50%);">
+						<div class="left-0 right-0 px-3 my-0 mx-auto absolute top-25% lg-top-60% text-center w-full max-w-700px" style="-webkit-transform: translateY(-50%);">
 							<AnimatedComponent>
 								<h1 class="uppercase c-paper mb-6">The Barber Shop Sofia</h1>
 							</AnimatedComponent>
@@ -103,7 +105,7 @@ export default function Page() {
 						<AnimatedComponent>
 							<div class="flex flex-col gap-5">
 								<div class="c-paper">
-									<span class="c-brand  font-900" style="font-family: 'Roboto'">The Barber Shop Sofia</span> е нещо повече от просто бръснарница. Нашият барбър шоп се намира в квартал Изток, София на удобна и лесно достъпна локация в близост до ключови транспортни връзки и зелени градски зони.
+									<span class="c-brand font-900" style="font-family: 'Roboto'">The Barber Shop Sofia</span> е нещо повече от просто бръснарница. Нашият барбър шоп се намира в квартал Изток, София на удобна и лесно достъпна локация в близост до ключови транспортни връзки и зелени градски зони.
 								</div>
 								<div class="c-paper">
 									<span class="c-brand font-900" style="font-family: 'Roboto'">The Barber Shop Sofia</span> е премиум бръснарница, където майсторството се преплита с вниманието към детайла, за да Ви осигури отлично ниво на комфорт и стил. Нашата мисия е да създадем цялостно ексклузивно преживяване за истински мъже.
@@ -161,13 +163,13 @@ export default function Page() {
 						href="/uslugi/klasichesko-mokro-brasnene"
 					/>
 					<ServiceContaner
-						img="/assets/about3.jpg"
+						img="/assets/tonirane-na-kosa/барбър-шоп-тониране-на-сиви-коси.webp"
 						alt="тониране на сиви коси"
 						title="Тониране на сиви коси"
 						href="/uslugi/klasichesko-mokro-brasnene"
 					/>
 					<ServiceContaner
-						img="/assets/about3.jpg"
+						img="/assets/brasnene-na-glava-s-brasnach/бръснене-на-глава-с-бръснач-в-бръснарница.webp"
 						alt="бръснене на глава с бръснач"
 						title="Бръснене на глава с бръснач"
 						href="/uslugi/brasnene-na-glava-s-brasnach"
@@ -179,7 +181,7 @@ export default function Page() {
 						href="/uslugi/detsko-podstrigvane-momche"
 					/>
 					<ServiceContaner
-						img="/assets/about3.jpg"
+						img="/assets/bashta-i-sin/подстригване-на-баща-и-син.webp"
 						alt="подстригване на баща и син"
 						title="Подстригване на баща и син"
 						href="/uslugi/podstrigvane-na-bashta-i-sin"
@@ -190,7 +192,7 @@ export default function Page() {
 			<div style="background-image: url(/assets/bg-2.jpg); background-position: center; background-repeat: no-repeat; background-size: cover;">
 				<div class="pb-20">
 					<AnimatedComponent>
-						<H2WithImage class="c-paper" title="Видео" />
+						<H2WithImage class="c-paper" title="Стилът на The Barber Shop" />
 					</AnimatedComponent>
 					<AnimatedComponent>
 						<VideoPlayer src='https://thebarbershop.bg/wp-content/uploads/2025/04/barbershopfinalmaster.mp4' />
@@ -226,21 +228,39 @@ export default function Page() {
 					<AnimatedComponentSlide class="px-5">
 						<div class="flex flex-col gap-5">
 							<div>
-								<span class="font-700">The Barber Shop Sofia</span> е нещо повече от просто бръснарница. Нашият барбър шоп се намира в квартал Изток, София на удобна и лесно достъпна локация в близост до ключови транспортни връзки и зелени градски зони.
+								<span class="font-700">Всеки детайл има значение.</span> От избора на ножица до последния щрих с бръснача – всичко при нас е въпрос на прецизност и стил. Вярваме, че добрата визия започва с качествена грижа и правилен подход. Ето защо отделяме време, за да разберем какво точно търси всеки клиент.
 							</div>
 							<div>
-								<span class="font-700">The Barber Shop Sofia</span> е премиум бръснарница, където майсторството се преплита с вниманието към детайла, за да Ви осигури отлично ниво на комфорт и стил. Нашата мисия е да създадем цялостно ексклузивно преживяване за истински мъже.
+								<span class="font-700">Ние не просто подстригваме – създаваме увереност.</span> В модерната мъжка визия няма място за компромиси, затова при нас ще откриете баланс между класика и съвременност, между техника и творчество. Просто се отпуснете – ние ще се погрижим за останалото.
 							</div>
 						</div>
 					</AnimatedComponentSlide>
 				</div>
-				<BeforeAfterSlider imgs={[
-					{ src: "/assets/home/барбер-шоп-софия.webp", alt: "професионално мъжко подстригване в бръснарница в барбер шоп в София", hairstyle: "example-hairstyle" },
-					{ src: "/assets/home/barber-shops-sofia.webp", alt: "професионално измиване на глава в barber shops Sofia", hairstyle: "example-hairstyle" },
-					{ src: "/assets/home/подстригване-мъжко.webp", alt: "Подстригване мъжко", hairstyle: "example-hairstyle" },
-					{ src: "/assets/home/buzz-cut.webp", alt: "buzz cut", hairstyle: "example-hairstyle" },
-				]}
-				/>
+
+				<BeforeAfterSlider
+					services={[
+						{ title: "Мъжко подстригване" },
+						{ title: "Бръснене на глава с бръснач" },
+						{ title: "Мъжко подстригване" },
+						{ title: "Бръснене на глава с бръснач" },
+					]}>
+					<BeforeAfterSliderContainer
+						before="/assets/before-and-after/09.The_Barber_Shop_B&A-3-before_result.webp"
+						after="/assets/before-and-after/10.The_Barber_Shop_B&A-3-before_result.webp"
+					/>
+					<BeforeAfterSliderContainer
+						before="/assets/before-and-after/02.The_Barber_Shop_B&A-1-between_result.webp"
+						after="/assets/before-and-after/03.The_Barber_Shop_B&A-1-after_result.webp"
+					/>
+					<BeforeAfterSliderContainer
+						before="/assets/before-and-after/04.The_Barber_Shop_B&A-combo-before_result.webp"
+						after="/assets/before-and-after/05.The_Barber_Shop_B&A-combo-after_result.webp"
+					/>
+					<BeforeAfterSliderContainer
+						before="/assets/before-and-after/07.The_Barber_Shop_B&A-3-before_result.webp"
+						after="/assets/before-and-after/08.The_Barber_Shop_B&A-3-after_result.webp"
+					/>
+				</BeforeAfterSlider>
 			</section>
 
 			<section style="background-color: #222222; background-image: url(/assets/bg-2.jpg); background-position: center center; background-repeat: no-repeat; background-size: cover;">
@@ -254,42 +274,109 @@ export default function Page() {
 						<AnimatedComponent>
 							<ReviewSlider
 								reviews={[
-									{ name: "Elizabeth Maurice" },
-									{ name: "Gen Tiski" },
-									{ name: "Samanta Federico" },
-									{ name: "Samanta Federico" },
+									{ name: "Iliyan Asenov" },
+									{ name: "Georgi Pleshkov" },
+									{ name: "Ivaylo Hristov (Ivo)" },
+									{ name: "Asen Markov" },
+									{ name: "Dimitar Stoyanov" },
+									{ name: "Borislav Bankov" },
+									{ name: "Hristo Velev" },
+									{ name: "Asen Georgiev" },
+									{ name: "Nikola Despotoski" },
+									{ name: "Martin Dimitrov" },
 								]}>
 								<StarReview
 									src="/assets/GoogleLogoPNGImage.png"
-									reviewText="I received excellent communications throughout the whole process. On the day, the cleaning experience was efficient with a considerate and friendly member of staff. Very competitive pricing."
-									name="Elizabeth Maurice"
-									date="June 2024"
+									reviewText="Страхотна бръснарница. След няколко погрешни опита намерих точното място. Вниманието към клиента е на високо ниво. От вратата те посрещат с нещо за пиене кафе, вода, безалкохолно или Bullet бърбън. Вайба е чудесен, музиката не е прекалено силна или натрапваща. Всичко е уникално. Отидохме с няколко момчета и всички останахме очаровани. Крис беше нашия бръснар и силно го препоръчвам в момента и на други приятели."
+									name="Iliyan Asenov"
+									date="Януари 2024"
 									stars={5}
-									hrefGoogleReview="https://g.co/kgs/HPqEYvL"
+									hrefGoogleReview="https://maps.app.goo.gl/sye2Me5vsxUajS8a6"
 								/>
 								<StarReview
 									src="/assets/GoogleLogoPNGImage.png"
-									reviewText="The best carpet cleaning service I have ever experienced. From start to finish was unbelievably smooth. The staff that attended extremely polite and moved all the items with utmost care. Would recommend using them as they are simply the best one has come across. Maya was absolutely fantastic in arranging this as the request was done at such a short notice."
-									name="Gen Tiski"
-									date="March 2024"
+									reviewText={
+										<>
+											За първи път посещавам The Barber Shop. Крис ме изслуша и след това подстрига с изключително внимание към детайла и моите предпочитания. Атмосферата е много приятна, а за резултатите можете да прецените сами.<br />
+											С ръка на сърцето мога да кажа, че това е най-добрата бръснарница в София от тези, които съм посетил.
+										</>
+									}
+									name="Georgi Pleshkov"
+									date="Октомври 2024"
 									stars={5}
-									hrefGoogleReview="https://g.co/kgs/H3NeADN"
+									hrefGoogleReview="https://maps.app.goo.gl/pgSmLpppJkuxo1SH6"
 								/>
 								<StarReview
 									src="/assets/GoogleLogoPNGImage.png"
-									reviewText="I had my carpet cleaned by Nikolay from Fine Carpet Cleaning. What a fantastic job he did ! He is very professional, efficient and organised in the way he works. My carpet looks new again. I highly recommend."
-									name="Samanta Federico"
-									date="January 2024"
+									reviewText="Много съм доволен. Луксозен салон. Общителни и приятни млади хора работят там. И правят отлични прически. Аз съм много доволен."
+									name="Ivaylo Hristov (Ivo)"
+									date="Септември 2019"
 									stars={5}
-									hrefGoogleReview="https://g.co/kgs/WxWf2Bm"
+									hrefGoogleReview="https://maps.app.goo.gl/JzPSXpCBG1jX8LiV8"
 								/>
 								<StarReview
 									src="/assets/GoogleLogoPNGImage.png"
-									reviewText="I had my carpet cleaned by Nikolay from Fine Carpet Cleaning. What a fantastic job he did ! He is very professional, efficient and organised in the way he works. My carpet looks new again. I highly recommend."
-									name="Samanta Federico"
-									date="January 2024"
+									reviewText="Перфектното място за мъжки отдих. Посрещнаха ме с вежливо обслужване и приятелска атмосфера. Работата им е на много високо ниво с внимание към детайла. Преопоръчвам!"
+									name="Asen Markov"
+									date="Март 2024"
 									stars={5}
-									hrefGoogleReview="https://g.co/kgs/WxWf2Bm"
+									hrefGoogleReview="https://maps.app.goo.gl/R7ZJQMcubmDh82W8A"
+								/>
+								<StarReview
+									src="/assets/GoogleLogoPNGImage.png"
+									reviewText="Чудесна обстановка. Млади момчета със завидни умения. Горещо препоръчвам !"
+									name="Dimitar Stoyanov"
+									date="Ноември 2021"
+									stars={5}
+									hrefGoogleReview="https://maps.app.goo.gl/5NwhV395TLrdHThT6"
+								/>
+								<StarReview
+									src="/assets/GoogleLogoPNGImage.png"
+									reviewText="Перфектната бръснарница! Много високо ниво на обслужване в мега приятна атмосфера."
+									name="Borislav Bankov"
+									date="Март 2024"
+									stars={5}
+									hrefGoogleReview="https://maps.app.goo.gl/tCXYMiVnq4HbstkLA"
+								/>
+								<StarReview
+									src="/assets/GoogleLogoPNGImage.png"
+									reviewText="The guys are pros! Good music, good atmosphere and offer a free drink. They also have free parking but is limited to number of spaces, so better call them in advance if you are planning to visit with a car."
+									name="Hristo Velev"
+									date="Март 2024"
+									stars={5}
+									hrefGoogleReview="https://maps.app.goo.gl/hTviWSgBNaeRdZ7u5"
+								/>
+								<StarReview
+									src="/assets/GoogleLogoPNGImage.png"
+									reviewText="Absolutely fantastic service. I have long, thick hair but that didn’t stop the barber. Couldn’t recommend The Barber Shop more!"
+									name="Asen Georgiev"
+									date="Март 2024"
+									stars={5}
+									hrefGoogleReview="https://maps.app.goo.gl/3RGkmd9NLraJbQRcA"
+								/>
+								<StarReview
+									src="/assets/GoogleLogoPNGImage.png"
+									reviewText="Really detailed and organized crew. Booked appointment thru maps and they responded swiftly. Upon arrival I was offeres whiskey, beer amd other beverages, unfortunately I refused alchol because I was driving. I totally recommend this barber shop."
+									name="Nikola Despotoski"
+									date="Януари 2021"
+									stars={5}
+									hrefGoogleReview="https://maps.app.goo.gl/M3mBfJMQEj3whcG37"
+								/>
+								<StarReview
+									src="/assets/GoogleLogoPNGImage.png"
+									reviewText={
+										<>
+											Easy to reserve via their website and platform.<br />
+											The most precise and highest caliber of professional service there is in Sofia!<br />
+											Consistent quality and attention to every detail along with customer-oriented tailored services and experience!<br />
+											Highly recommended!<br />
+											Keep up the awesome work, team!
+										</>
+									}
+									name="Martin Dimitrov"
+									date="Април 2024"
+									stars={5}
+									hrefGoogleReview="https://maps.app.goo.gl/RTMRbg9PKtp9Ldvt7"
 								/>
 							</ReviewSlider>
 						</AnimatedComponent>

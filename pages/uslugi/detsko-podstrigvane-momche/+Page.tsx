@@ -190,14 +190,14 @@ export default function Page() {
 				</AnimatedComponentSlide>
 			</div>
 
-			<section class="lg-pb-25 pb-20">
+			{/* <section class="lg-pb-25 pb-20">
 				<AnimatedComponent>
 					<H2WithImage class="max-w-750px mx-auto" title="Детско подстригване: От идеята до завършения вид" />
 				</AnimatedComponent>
 				<AnimatedComponent>
 					<VideoPlayer src='https://www.youtube.com/embed/e2x0UXVU2yg?enablejsapi=1&mute=1' />
 				</AnimatedComponent>
-			</section>
+			</section> */}
 
 			<div class="pb-20" style="background-image: url(/assets/bg-2.jpg); background-position: center; background-repeat: no-repeat; background-size: cover;">
 				<H2WithImage class="c-paper" title="Цена на детско подстригване" />
@@ -255,42 +255,78 @@ export default function Page() {
 							<AnimatedComponent>
 								<ReviewSlider
 									reviews={[
-										{ name: "Elizabeth Maurice" },
-										{ name: "Gen Tiski" },
-										{ name: "Samanta Federico" },
-										{ name: "Samanta Federico" },
+										{ name: "Galina Koleva" },
+										{ name: "Albert Hristov" },
+										{ name: "Dimitar Dodnikov" },
+										{ name: "Сергей Тодоров" },
+										{ name: "Boyan Kushev" },
+										{ name: "Miguel Nigro" },
+										{ name: "kwphoto (kaiwphoto)" },
+										{ name: "Yannis Petridis" },
 									]}>
 									<StarReview
 										src="/assets/GoogleLogoPNGImage.png"
-										reviewText="I received excellent communications throughout the whole process. On the day, the cleaning experience was efficient with a considerate and friendly member of staff. Very competitive pricing."
-										name="Elizabeth Maurice"
-										date="June 2024"
+										reviewText="Много яко място за големи и малки момчета"
+										name="Galina Koleva"
+										date="Юли 2024"
 										stars={5}
-										hrefGoogleReview="https://g.co/kgs/HPqEYvL"
+										hrefGoogleReview="https://maps.app.goo.gl/1qoL6Xz6K7hK2fRt9"
 									/>
 									<StarReview
 										src="/assets/GoogleLogoPNGImage.png"
-										reviewText="The best carpet cleaning service I have ever experienced. From start to finish was unbelievably smooth. The staff that attended extremely polite and moved all the items with utmost care. Would recommend using them as they are simply the best one has come across. Maya was absolutely fantastic in arranging this as the request was done at such a short notice."
-										name="Gen Tiski"
-										date="March 2024"
+										reviewText="Много стилно и хубаво място със специалисти които приемат предизвикателства. Крис е магьосник 🧙‍♂️…"
+										name="Albert Hristov"
+										date="Януари 2022"
 										stars={5}
-										hrefGoogleReview="https://g.co/kgs/H3NeADN"
+										hrefGoogleReview="https://maps.app.goo.gl/npZjrFWCGExXCWJ99"
 									/>
 									<StarReview
 										src="/assets/GoogleLogoPNGImage.png"
-										reviewText="I had my carpet cleaned by Nikolay from Fine Carpet Cleaning. What a fantastic job he did ! He is very professional, efficient and organised in the way he works. My carpet looks new again. I highly recommend."
-										name="Samanta Federico"
-										date="January 2024"
+										reviewText="Препоръчвам. Изключително приятна обстановка. Страхотен салон и наистина кадърни момчета"
+										name="Dimitar Dodnikov"
+										date="Януари 2020"
 										stars={5}
-										hrefGoogleReview="https://g.co/kgs/WxWf2Bm"
+										hrefGoogleReview="https://maps.app.goo.gl/sitMfbX4dTjsm5Gi8"
 									/>
 									<StarReview
 										src="/assets/GoogleLogoPNGImage.png"
-										reviewText="I had my carpet cleaned by Nikolay from Fine Carpet Cleaning. What a fantastic job he did ! He is very professional, efficient and organised in the way he works. My carpet looks new again. I highly recommend."
-										name="Samanta Federico"
-										date="January 2024"
+										reviewText="С Крис прическата винаги е топ!"
+										name="Сергей Тодоров"
+										date="Юли 2024"
 										stars={5}
-										hrefGoogleReview="https://g.co/kgs/WxWf2Bm"
+										hrefGoogleReview="https://maps.app.goo.gl/ogrU4t2SYZgEnz6u9"
+									/>
+									<StarReview
+										src="/assets/GoogleLogoPNGImage.png"
+										reviewText="Excellent service, very nice and clean place! Definitely recommended 🤟🤟🤟"
+										name="Boyan Kushev"
+										date="Януари 2025"
+										stars={5}
+										hrefGoogleReview="https://maps.app.goo.gl/o8wuFD9fosLPz3XA9"
+									/>
+									<StarReview
+										src="/assets/GoogleLogoPNGImage.png"
+										reviewText="Best barbershop in Sofia - quality service and amazing staff!"
+										name="Miguel Nigro"
+										date="Декември 2024"
+										stars={5}
+										hrefGoogleReview="https://maps.app.goo.gl/GBd4cUXEz5PPfTZX7"
+									/>
+									<StarReview
+										src="/assets/GoogleLogoPNGImage.png"
+										reviewText="Great friendly service and excellent haircut, highly recommend!"
+										name="kwphoto (kaiwphoto)"
+										date="Септември 2024"
+										stars={5}
+										hrefGoogleReview="https://maps.app.goo.gl/4Uh5PiZRmEFxErZC8"
+									/>
+									<StarReview
+										src="/assets/GoogleLogoPNGImage.png"
+										reviewText="Excellent service and friendly, professional guys. English speaking as well. Highly recommended!"
+										name="Yannis Petridis"
+										date="Март 2023"
+										stars={5}
+										hrefGoogleReview="https://maps.app.goo.gl/GmqjmHFsoM1vsoQB6"
 									/>
 								</ReviewSlider>
 							</AnimatedComponent>
@@ -303,7 +339,7 @@ export default function Page() {
 					</div>
 				</section>
 
-				<div class="pb-20 hidden">
+				{/* <div class="pb-20 hidden">
 					<AnimatedComponent>
 						<H2WithImage title="Често поръчвани заедно" />
 					</AnimatedComponent>
@@ -351,7 +387,7 @@ export default function Page() {
 							<a href="https://book.thebarbershop.bg/reservations/start?site=1" target="_blank" rel="noopener noreferrer" class="bg-brand-compliment c-paper b-solid b-2px b-brand-compliment uppercase font-size-4 font-500 px-7 py-2 hover-c-paper-inv transition-colors" style="font-family: 'Oswald', sans-serif !important; letter-spacing: 1px;">Запазете час</a>
 						</div>
 					</AnimatedComponent>
-				</div>
+				</div> */}
 			</section>
 
 			<section style="background-color: #222222; background-image: url(/assets/bg-2.jpg); background-position: center center; background-repeat: no-repeat; background-size: cover;">
@@ -409,7 +445,7 @@ export default function Page() {
 					</div>
 					<div class="lg:block hidden lg:max-w-40% lg:px-0 md:px-10 px-5 lg:pt-0 md:pt-20 lg:pt-10">
 						<img class="mx-auto max-w-full" src="/assets/home/бръснари-софия.webp" alt="Бръснари София" />
-						<p class="important-my-0">text</p>
+						{/* <p class="important-my-0">text</p> */}
 					</div>
 				</div>
 			</div>

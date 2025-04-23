@@ -17,19 +17,274 @@ import MdiAccountFileTextOutline from '~icons/mdi/account-file-text-outline';
 import MdiAccountGroupOutline from '~icons/mdi/account-group-outline';
 import RiArrowRightSLine from '~icons/ri/arrow-right-s-line';
 import { H2WithImage } from '../components/H2WithImage';
+import Cookies from 'js-cookie';
+import MdiCookie from '~icons/mdi/cookie';
+
+declare global {
+  interface Window {
+    dataLayer: any[];
+    gtag: (...args: any[]) => void;
+  }
+}
+
+const GA_MEASUREMENT_ID = 'G-XXXXXXXXXX'; // Replace with your actual GA measurement ID
+
+const CookieConsent = () => {
+
+  const [hasMadeChoice, setHasMadeChoice] = createSignal(false);
+  const [showBanner, setShowBanner] = createSignal(false);
+  const [showSettings, setShowSettings] = createSignal(false);
+  const [cookiePreferences, setCookiePreferences] = createSignal({
+    necessary: true,
+    functional: false,
+    analytics: false,
+    advertising: false,
+    thirdParty: false,
+  });
+
+  const loadGoogleAnalytics = () => {
+    const script = document.createElement("script");
+    script.src = `https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`;
+    script.async = true;
+    document.head.appendChild(script);
+
+    script.onload = () => {
+      window.dataLayer = window.dataLayer || [];
+      window.gtag = function () {
+        window.dataLayer.push(arguments);
+      };
+      window.gtag("js", new Date());
+      window.gtag("config", GA_MEASUREMENT_ID, { anonymize_ip: true });
+    };
+  };
+
+  const removeGoogleAnalytics = () => {
+    Cookies.remove("_ga");
+    Cookies.remove("_gat");
+    Cookies.remove("_gid");
+    window.gtag &&
+      window.gtag("config", GA_MEASUREMENT_ID, { send_page_view: false });
+    const gaScript = document.querySelector(
+      `script[src^="https://www.googletagmanager.com/gtag/js"]`
+    );
+    if (gaScript) {
+      gaScript.remove();
+    }
+  };
+
+  const applyPreferences = () => {
+    const preferences = cookiePreferences();
+    console.log("[CookieConsent] Applying preferences:", preferences);
+  
+    Cookies.set("necessary_cookie", "true", { expires: 30 });
+  
+    if (preferences.functional) {
+      Cookies.set("functional_cookie", "true", { expires: 30 });
+    } else {
+      Cookies.remove("functional_cookie");
+    }
+  
+    if (preferences.analytics) {
+      Cookies.set("analytics_cookie", "true", { expires: 30 });
+      console.log("[CookieConsent] Loading Google Analytics");
+      loadGoogleAnalytics();
+    } else {
+      Cookies.remove("analytics_cookie");
+      console.log("[CookieConsent] Removing Google Analytics");
+      removeGoogleAnalytics();
+    }
+  
+    if (preferences.advertising) {
+      Cookies.set("advertising_cookie", "true", { expires: 30 });
+    } else {
+      Cookies.remove("advertising_cookie");
+    }
+  
+    if (preferences.thirdParty) {
+      Cookies.set("third_party_cookie", "true", { expires: 30 });
+    } else {
+      Cookies.remove("third_party_cookie");
+    }
+  };  
+
+  onMount(() => {
+    const savedPreferences = Cookies.get("cookiePreferences");
+    const bannerClosed = Cookies.get("bannerClosed");
+  
+    console.log("[CookieConsent] onMount called");
+  
+    if (savedPreferences) {
+      const preferences = JSON.parse(savedPreferences);
+      console.log("[CookieConsent] Loaded saved preferences:", preferences);
+      setCookiePreferences(preferences);
+      setHasMadeChoice(true);
+      applyPreferences();
+    } else {
+      const initialPrefs = {
+        necessary: true,
+        functional: true,
+        analytics: true,
+        advertising: true,
+        thirdParty: false,
+      };
+      console.log("[CookieConsent] No saved preferences, auto-applying initialPrefs:", initialPrefs);
+  
+      setCookiePreferences(initialPrefs);
+      Cookies.set("cookiePreferences", JSON.stringify(initialPrefs), {
+        expires: 365,
+        path: "/",
+      });
+      Cookies.set("bannerClosed", "true", { expires: 365, path: "/" });
+      setHasMadeChoice(true);
+      applyPreferences();
+    }
+  
+    if (bannerClosed !== "true" && !savedPreferences) {
+      setShowBanner(true);
+    }
+  });
+  
+  const closeBanner = () => {
+    Cookies.set("bannerClosed", "true", { expires: 365, path: "/" });
+    setShowBanner(false);
+  };
+
+const savePreferences = () => {
+  const preferences = cookiePreferences();
+  Cookies.set("cookiePreferences", JSON.stringify(preferences), {
+    expires: 365,
+    path: "/",
+  });
+  Cookies.set("bannerClosed", "true", { expires: 365, path: "/" });
+  setHasMadeChoice(true);
+  applyPreferences();
+  setShowSettings(false);
+};
+
+  const acceptAll = () => {
+    setCookiePreferences({
+      necessary: true,
+      functional: true,
+      analytics: true,
+      advertising: true,
+      thirdParty: true,
+    });
+    savePreferences();
+  };  
+
+  const CookieCategory = (props: {
+    title: string;
+    description: string;
+    name:
+    | "necessary"
+    | "functional"
+    | "analytics"
+    | "advertising"
+    | "thirdParty";
+  }) => {
+    const isChecked = () => cookiePreferences()[props.name];
+
+    const toggle = () => {
+      if (props.name === "necessary") return;
+      setCookiePreferences({
+        ...cookiePreferences(),
+        [props.name]: !isChecked(),
+      });
+    };
+
+    return (
+      <div class="flex flex-col my-3">
+        <h4 class="mb-1 mt-2 text-lg font-semibold">{props.title}</h4>
+        <div class="flex flex-row items-center justify-between gap-4">
+          <p class="text-left text-sm sm:text-base">{props.description}</p>
+          <button
+            onClick={toggle}
+            disabled={props.name === "necessary"}
+            class={`relative min-w-12 h-6 flex items-center rounded-full p-1 transition-colors duration-300 b-none ${isChecked() ? "bg-brand-compliment" : "bg-gray-300"
+              } ${props.name === "necessary" ? "opacity-60 cursor-not-allowed" : "cursor-pointer"}`}
+          >
+            <span
+              class={`bg-white w-4 h-4 rounded-full shadow-md transform transition-transform duration-300 ${isChecked() ? "translate-x-6" : "translate-x-0"
+                }`}
+            />
+          </button>
+        </div>
+      </div>
+    );
+  };
+
+  return (
+    <>
+      <Show when={showBanner()}>
+        <div
+          class={`fixed bottom-0 left-0 right-0 justify-center items-center z-100 transition-opacity duration-500 ease-in-out ${showBanner() ? "opacity-100" : "opacity-0 hidden"}`}
+        >
+          <div class="flex flex-justify-between flex-items-center md-mr-8 md-gap-0 gap-2">
+            <div
+              class="font-size-10 cursor-pointer c-brand-dark mb-1 ml-2"
+              onClick={() => setShowSettings(true)}
+            >
+              <MdiCookie />
+            </div>
+          </div>
+        </div>
+      </Show>
+
+      <Show when={showSettings()}>
+        <div class="fixed inset-0 bg-gray-800 bg-opacity-50 flex justify-center items-center z-9 botom-0">
+          <div class="bg-paper px-10 pt-10 pb-8 w-11/12 md:w-3/4 lg:w-2/3">
+            <h2 class="mb-0 md-mb-8 md-mt-3 mt-0 line-height-7 sm-line-height-6 md-line-height-8 font-size-6 md-font-size-10">Cookie Settings</h2>
+
+            <CookieCategory
+              name="necessary"
+              title="Strictly Necessary Cookies"
+              description="These cookies are necessary for the website to function and cannot be disabled."
+            />
+
+            <CookieCategory
+              name="functional"
+              title="Functional Cookies"
+              description="These cookies allow the website to provide enhanced functionality and personalization."
+            />
+
+            <CookieCategory
+              name="analytics"
+              title="Analytics Cookies"
+              description="These cookies help us understand how visitors interact with the website."
+            />
+
+            <CookieCategory
+              name="advertising"
+              title="Advertising Cookies"
+              description="These cookies are used to display relevant advertisements."
+            />
+
+            <CookieCategory
+              name="thirdParty"
+              title="Third-Party Cookies"
+              description="These cookies are set by external services that we add to the website."
+            />
+
+            <div class="flex justify-center md-justify-end gap-3 mt-1 md-mt-0 pt-0">
+              <button class="b-solid b-2 b-brand-compliment bg-brand-compliment hover-bg-brand transition-colors hover-b-brand font-700 font-size-2.7 md-font-size-4 uppercase c-paper cursor-pointer py-1.5 md-py-3.5 px-4 md-px-5 mt-4 md-mt-10 line-height-4" style="font-family: 'Oswald', sans-serif !important; letter-spacing: 1px;" onClick={acceptAll}>Accept all</button> 
+              <button class="b-solid b-2 b-brand-compliment bg-paper hover-c-brand transition-colors hover-b-brand font-700 font-size-2.7 md-font-size-4 uppercase c-brand-compliment cursor-pointer py-1.5 md-py-3.5 px-4 md-px-5 mt-4 md-mt-10 line-height-4" style="font-family: 'Oswald', sans-serif !important; letter-spacing: 1px;" onClick={savePreferences}>Save settings</button>
+              <button class="b-solid b-2 b-brand-compliment bg-paper hover-c-brand transition-colors hover-b-brand font-700 font-size-2.7 md-font-size-4 uppercase c-brand-compliment cursor-pointer py-1.5 md-py-3.5 px-4 md-px-5 mt-4 md-mt-10 line-height-4" style="font-family: 'Oswald', sans-serif !important; letter-spacing: 1px;" onClick={() => setShowSettings(false)}>Close</button>
+            </div>
+          </div>
+        </div>
+      </Show>
+    </>
+  );
+};
 
 export default function LayoutDefault(props: { children?: JSX.Element }) {
   const childrenMemo = children(() => props.children)
 
   const [isMenuOpen, setIsMenuOpen] = createSignal(false);
-
   const [servicesMenuOpen, setServicesMenuOpen] = createSignal(false);
   const [aboutMenuOpen, setAboutMenuOpen] = createSignal(false);
 
-  const handleMouseEnter = () => setIsMenuOpen(true);
-  const handleMouseLeave = () => setIsMenuOpen(false);
   const closeMenu = () => setIsMenuOpen(false);
-  const [menuOpen, setMenuOpen] = createSignal(false);
 
   return (
     <div class="flex flex-col">
@@ -76,7 +331,7 @@ export default function LayoutDefault(props: { children?: JSX.Element }) {
                 { href: "/za-nas/kris", title: "Кристиан" },
                 { href: "/za-nas/mario", title: "МАРИО" },
                 { href: "/za-nas/blago", title: "Благовест" },
-                { href: "/za-nas/denis", title: "ДЕНИС" },
+                // { href: "/za-nas/denis", title: "ДЕНИС" },
               ]}
             />
           </div>
@@ -97,6 +352,7 @@ export default function LayoutDefault(props: { children?: JSX.Element }) {
         <HamburgerMenu />
       </Topbar>
       <Content>{childrenMemo()}</Content>
+      <CookieConsent />
       <BackToTopArrow></BackToTopArrow>
       <TopFooter />
       <MainFooter>
@@ -162,21 +418,7 @@ export default function LayoutDefault(props: { children?: JSX.Element }) {
             </a>
           </div>
 
-          {/* <div class="b-t-solid b-t-0.5px mx-30 py-8" style="border-top-color: rgba(255, 255, 255, 0.12);">
-            <p class="text-center c-paper lg-font-size-4 md-font-size-3 font-size-3.7 font-400 line-height-6 font-sans mb-0">Copyright &copy; <CurrentYear /> TheBarberShop</p>
-            <div class="flex flex-col md-flex-row md-gap-5 flex-items-center flex-justify-center">
-              <BottomFooterMenuItem href="/">Общи условия</BottomFooterMenuItem>
-              <div class="hidden md-block c-paper">┃</div>
-              <BottomFooterMenuItem href="/">Политика за поверителност</BottomFooterMenuItem>
-              <div class="hidden md-block c-paper">┃</div>
-              <BottomFooterMenuItem href="/">Карта на сайта</BottomFooterMenuItem>
-            </div>
-            <div class="flex flex-justify-center">
-              <a class="c-paper hover:c-brand transition-colors font-normal lg-font-size-4 md-font-size-4 font-size-4" href="/sitemap">Cookie Policy</a>
-            </div>
-          </div> */}
-
-          <div class="b-t-solid b-t-0.5px mx-5 sm-mx-10 lg-mx-30 py-8 font-100 flex md-flex-row flex-col flex-justify-between flex-items-center" style="border-top-color: rgba(255, 255, 255, 0.12);">
+          {/* <div class="b-t-solid b-t-0.5px mx-5 sm-mx-10 lg-mx-30 py-8 font-100 flex md-flex-row flex-col flex-justify-between flex-items-center" style="border-top-color: rgba(255, 255, 255, 0.12);">
             <p class="text-center c-paper lg-font-size-3.5 md-font-size-3.3 font-size-3.2 line-height-6 font-sans">Copyright &copy; <CurrentYear /> <span class="c-brand"><BottomFooterMenuItem href="/">TheBarberShop</BottomFooterMenuItem></span></p>
             <div class="flex flex-col md-flex-row md-gap-2 lg-gap-5 flex-items-center flex-justify-end">
               <BottomFooterMenuItem href="/obshti-uslovia">Общи условия</BottomFooterMenuItem>
@@ -184,7 +426,7 @@ export default function LayoutDefault(props: { children?: JSX.Element }) {
               <BottomFooterMenuItem href="/karta-na-saita">Карта на сайта</BottomFooterMenuItem>
               <BottomFooterMenuItem href="/politika-za-biskvitki">Cookie Policy</BottomFooterMenuItem>
             </div>
-          </div>
+          </div> */}
         </div>
       </MainFooter>
     </div>
@@ -250,7 +492,7 @@ function TopFooter() {
         </div>
         <AnimatedComponent class="flex flex-justify-center pb-20">
           <div class="flex flex-justify-evenly lg-flex-justify-center lg-mt-5 w-full lg-gap-15 max-w-80% lg-max-w-1100px lg:border-t-solid b-paper b-1px b-op-60% pt-5 lg-pt-20">
-            <a href="/" class="text-center w-32 lg-w-42 bg-brand c-paper-inv b-solid b-2px b-brand uppercase font-size-4 lg-font-size-4.5 font-500 py-3 hover-c-paper transition-colors" style="font-family: 'Oswald', sans-serif !important; letter-spacing: 1px;">Запазете час</a>
+          <a href="https://book.thebarbershop.bg/reservations/start?site=1" target="_blank" rel="noopener noreferrer" class="text-center w-32 lg-w-42 bg-brand c-paper-inv b-solid b-2px b-brand uppercase font-size-4 lg-font-size-4.5 font-500 py-3 hover-c-paper transition-colors" style="font-family: 'Oswald', sans-serif !important; letter-spacing: 1px;">Запазете час</a>
             <a href="/uslugi" class="text-center w-32 lg-w-42 bg-brand c-paper-inv b-solid b-2px b-brand uppercase font-size-4 lg-font-size-4.5 font-500 py-3 hover-c-paper transition-colors" style="font-family: 'Oswald', sans-serif !important; letter-spacing: 1px;">Услуги</a>
           </div>
         </AnimatedComponent>
@@ -263,13 +505,13 @@ function ServiceMenuItem(props: { href: string; children: any }) {
 
   return (
     <div class="relative group">
-    <a
-      href={props.href}
-      class="hidden lg-block relative dropdown font-ui lg:flex c-paper text-center font-size-5 uppercase font-sans hover:c-brand-dark tracking-wide font-500 transition-all after:content-empty after:absolute after:bottom-0 after:left-0 after:right-0 after:w-0 after:h-0.5 after:bg-brand-dark after:transition-all group-hover:after:w-full"
-      style="font-family: 'Oswald', sans-serif; letter-spacing: 0.5px;"
-    >
-      {props.children}
-    </a>
+      <a
+        href={props.href}
+        class="hidden lg-block relative dropdown font-ui lg:flex c-paper text-center font-size-5 uppercase font-sans hover:c-brand-dark tracking-wide font-500 transition-all after:content-empty after:absolute after:bottom-0 after:left-0 after:right-0 after:w-0 after:h-0.5 after:bg-brand-dark after:transition-all group-hover:after:w-full"
+        style="font-family: 'Oswald', sans-serif; letter-spacing: 0.5px;"
+      >
+        {props.children}
+      </a>
     </div>
   );
 }
@@ -278,10 +520,10 @@ function DropdownMenuItem(props: { href: string; children: any }) {
   return (
     <a
       href={props.href}
-      class="flex items-center p-2 hover:bg-#d19d64 hover:bg-opacity-40 transition-all"
+      class="flex items-center p-2.5 hover:bg-#d19d64 hover:bg-opacity-40 transition-all last:b-b-none b-b-solid b-b-1px b-b-#d19d64 b-b-opacity-30"
     >
       <div
-        class="c-#10203b uppercase tracking-wider font-500 leading-normal font-size-3.4 max-w-60 whitespace-normal"
+        class="c-#10203b uppercase tracking-wider important-font-500 leading-normal font-size-3.4 max-w-60 whitespace-normal"
         style="font-family: 'Roboto', sans-serif !important"
       >
         {props.children}
@@ -293,7 +535,7 @@ function DropdownMenuItem(props: { href: string; children: any }) {
 function DropDownMenuDesktop(props: { isVisible: boolean; items: { href: string; title: string }[] }) {
   return (
     <div
-      class={`absolute top-full left-0 w-60 bg-white shadow-lg z-10 py-4 px-4 rounded-lg transition-all duration-300 ease-out ${props.isVisible ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-4 invisible"
+      class={`absolute top-full left-0 w-60 bg-white shadow-lg z-10 py-4.5 px-4 transition-all duration-300 ease-out ${props.isVisible ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-4 invisible"
         }`}
     >
       {props.items.map((item) => (
@@ -336,12 +578,12 @@ function Topbar(props: { children: JSX.Element }) {
 
   return (
     <div
-      class={`h-${isScrolled() ? "92px" : "172px"} w-full z-3 fixed top-0 flex-content-center ${isScrolled() ? "lg-p-0px" : "lg-p-40px"} p-0px transition-all duration-300 ease-in-out ${isScrolled() ? "bg-#14100c" : "bg-transparent"
-        }`}
+      class={`h-${isScrolled() ? "92px" : "172px"} w-full z-4 fixed top-0 flex-content-center ${isScrolled() ? "lg-p-0px" : "lg-p-40px"} p-0px transition-all duration-300 ease-in-out`}
+        style={`${isScrolled() ? "background: rgba(20, 16, 12, 0.85); box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);" : ""}`}
     >
       <div
         style={`${isScrolled() ? "border-bottom: none;" : "border-bottom-color: rgba(255, 255, 255, 0.1);"} `}
-        class={`header-border block lg-b-rd-4px lg-b-#dedede lg-b-2px border-b-solid border-b-1px ${isScrolled() ? "lg-b-none" : "lg-b-solid"} w-full relative line-height-92px ${isScrolled() ? "h-72px" : "h-92px"
+        class={`header-border block lg-b-rd-0px lg-b-#dedede lg-b-2px border-b-solid border-b-1px ${isScrolled() ? "lg-b-none" : "lg-b-solid"} w-full relative line-height-92px ${isScrolled() ? "h-72px" : "h-92px"
           } bg-${isScrolled() ? "#333" : "#fff"} text-${isScrolled() ? "#fff" : "#000"}`}
       >
         <div class="mx-auto max-w-full flex flex-justify-between flex-items-center h-full">
@@ -477,7 +719,7 @@ function MobileDropdownMenuItem(props: {
       </div>
 
       <div
-        class={`pl-2 overflow-auto transition-all duration-300 ease-in-out ${open() ? "max-h-96 opacity-100" : "max-h-0 opacity-0"}`}
+        class={`pl-2 overflow-auto transition-all duration-300 ease-in-out ${open() ? "max-h-200 opacity-100" : "max-h-0 opacity-0"}`}
       >
         {props.subMenu?.map((item) => (
           <a
@@ -530,7 +772,7 @@ const MyDropdown = (props: { closeMenu: () => void; }) => {
               { href: "/za-nas/kris", text: "Кристиан" },
               { href: "/za-nas/mario", text: "МАРИО" },
               { href: "/za-nas/blago", text: "Благовест" },
-              { href: "/za-nas/denis", text: "ДЕНИС" },
+              // { href: "/za-nas/denis", text: "ДЕНИС" },
             ]}
           />
           <MobileDropdownMenuItem

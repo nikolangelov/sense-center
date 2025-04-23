@@ -5,7 +5,7 @@ import RiPlayReverseMiniLine from '~icons/ri/play-reverse-mini-line';
 import MdiScissors from '~icons/mdi/scissors';
 import { cn } from "../../utils/cn";
 
-function DotsUnderSlider(props: { services: { title: string }[] }) {
+export function DotsUnderSlider(props: { services: { title: string }[] }) {
     const [context] = useContext(SliderContext);
     const [isDesktop, setIsDesktop] = createSignal(false);
 

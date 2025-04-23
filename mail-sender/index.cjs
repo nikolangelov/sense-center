@@ -22,8 +22,8 @@ const transporter = nodemailer.createTransport({
     port: 465,
     secure: true,
     auth: {
-        user: "testemail@finecarpetcleaning.co.uk",
-        pass: "M1(f6@o8f121",
+        user: "test@thebarbershop.bg",
+        pass: "f4b24y@)_121",
     }
 });
 
@@ -48,8 +48,8 @@ app.post('/api/send-email', upload.array('attachments', 10), (req, res) => {
     const mailOptions = {
         from: senderEmail,
         replyTo: senderEmail,
-        to: 'office@finecarpetcleaning.co.uk',
-        subject: 'New message from contact form',
+        to: 'info@thebarbershop.bg',
+        subject: 'Ново съобщение от контактната форма на сайта',
         text: emailContent,
         attachments: attachments ? attachments.map(file => ({
             filename: file.originalname,
