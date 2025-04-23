@@ -306,7 +306,7 @@ export default function Page() {
 					</div>
 
 					<AnimatedComponent class="lg:w-1/2s">
-					<div class="px-20px py-25px md:px-30px md:py-40px rounded-0 w-full max-w-150 overflow-hidden relative bg-#14100c" style="background-image: url(/assets/wood-bg-2.webp); background-position: center; background-repeat: no-repeat; background-size: cover;">
+						<div class="px-20px py-25px md:px-30px md:py-40px rounded-0 w-full max-w-150 overflow-hidden relative bg-#14100c" style="background-image: url(/assets/wood-bg-2.webp); background-position: center; background-repeat: no-repeat; background-size: cover;">
 
 							<div class="md:px-12 md:pt-10 p-5">
 								<h2 class="important-mt-0 md:mt-5 mb-15 c-paper">Изпрати запитване</h2>
@@ -364,61 +364,61 @@ export default function Page() {
 										</div>
 									</form>
 								)}
-
-								{isUploading() && (
-									<div class="fixed inset-0 flex items-center justify-center bg-paper-inv bg-opacity-50 z-50">
-										<div class="bg-white p-6 rounded-1 shadow-lg w-64">
-											<h3 class="text-lg font-semibold mb-3">Изпращане...</h3>
-											<div class="w-full bg-gray-200 rounded-1 h-4 overflow-hidden relative">
-												<div
-													class="h-full rounded-1 bg-blue-500 relative"
-													style={{
-														background: 'linear-gradient(to right, #eba65b, #bf7e36)',
-													}}
-												>
-													<div
-														class="progress-bar-contacts-form-span"
-													/>
-												</div>
-											</div>
-										</div>
-									</div>
-								)}
-
-								{isModalOpen() && (
-									<div class="fixed inset-0 flex items-center justify-center bg-paper-inv bg-opacity-50 z-5 px-5">
-										<div class="bg-white p-8 shadow-lg max-w-md w-full">
-											<h2 class="text-2xl font-bold pl-0 md:mb-6 mt-1 text-left">Успешно изпращане!</h2>
-											<p class="mb-5">Съобщението е успешно изпратено. Ще се свържем с Вас възможно най-скоро.</p>
-											<button
-												onClick={closeModal}
-												class="cursor-pointer bg-brand text-white px-5 py-3 b-none hover:bg-brand-dark transition-colors">
-												Затвори
-											</button>
-										</div>
-									</div>
-								)}
-
-								{errorMessage() && (
-									<div class="fixed inset-0 flex items-center justify-center bg-paper-inv bg-opacity-50 z-5 px-5">
-										<div class="bg-white p-10 pt-1 rounded-lg shadow-lg max-w-lg w-full relative">
-											<div
-												onClick={closeModal}
-												class="cursor-pointer b-none c-brand hover-c-brand-action transition-colors absolute top-4 right-4">
-												<MdiCloseThick class="w-8" />
-											</div>
-											<h3 class="font-semibold mb-3 text-left">Oops...</h3>
-											<div>Изглежда, че нашата контактна форма не работи правилно.</div>
-											<div>Моля, свържете се с нас чрез WhatsApp.</div>
-											<div class="mt-5 -ml-1"><a class="c-paper bg-brand text-white px-5 py-3 b-none rounded hover:bg-brand-dark transition-colors" href="/" target="_blank" rel="noopener">Към чат</a></div>
-										</div>
-									</div>
-								)}
 							</div>
 						</div>
 					</AnimatedComponent>
 				</div>
 			</section>
+
+			{isUploading() && (
+				<div class="fixed inset-0 flex items-center justify-center bg-paper-inv bg-opacity-50 z-50">
+					<div class="bg-white p-6 rounded-lg shadow-lg w-64">
+						<h3 class="text-lg font-semibold mb-3">Изпращане...</h3>
+						<div class="w-full bg-gray-200 rounded h-4 overflow-hidden relative">
+							<div
+								class="h-full rounded bg-blue-500 relative"
+								style={{
+									background: 'linear-gradient(to right, #eba65b, #bf7e36)',
+								}}
+							>
+								<div
+									class="progress-bar-contacts-form-span"
+								/>
+							</div>
+						</div>
+					</div>
+				</div>
+			)}
+
+			{isModalOpen() && (
+				<div class="fixed inset-0 flex items-center justify-center bg-paper-inv bg-opacity-50 z-5 px-5">
+					<div class="bg-white p-8 shadow-lg max-w-md w-full">
+						<h2 class="text-2xl font-bold pl-0 md:mb-6 mt-1 text-left">Успешно изпращане!</h2>
+						<p class="mb-5">Съобщението е успешно изпратено. Ще се свържем с Вас възможно най-скоро.</p>
+						<button
+							onClick={closeModal}
+							class="cursor-pointer bg-brand text-white px-5 py-3 b-none hover:bg-brand-dark transition-colors">
+							Затвори
+						</button>
+					</div>
+				</div>
+			)}
+
+			{errorMessage() && (
+				<div class="fixed inset-0 flex items-center justify-center bg-paper-inv bg-opacity-50 z-5 px-5">
+					<div class="bg-white p-10 pt-1 rounded-lg shadow-lg max-w-lg w-full relative">
+						<div
+							onClick={closeModal}
+							class="cursor-pointer b-none c-brand hover-c-brand-action transition-colors absolute top-4 right-4">
+							<MdiCloseThick class="w-8" />
+						</div>
+						<h3 class="font-semibold mb-3 text-left">Oops...</h3>
+						<div>Изглежда, че нашата контактна форма не работи правилно.</div>
+						<div>Моля, свържете се с нас чрез Viber.</div>
+						<div class="mt-5 -ml-1"><a class="c-paper bg-brand text-white px-5 py-3 b-none rounded hover:bg-brand-dark transition-colors" href="viber://chat?number=%2B359882820331" target="_blank" rel="noopener">Към чат</a></div>
+					</div>
+				</div>
+			)}
 		</>
 	);
 }
