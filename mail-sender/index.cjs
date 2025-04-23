@@ -67,7 +67,7 @@ app.post('/api/send-email', upload.array('attachments', 10), (req, res) => {
     });
 });
 
-const port = 3045;
+const port = 3046;
 app.listen(port, () => {
     console.log(`Server is running on http://localhost:${port}`);
 });
