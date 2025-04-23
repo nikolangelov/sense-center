@@ -68,7 +68,7 @@ export default function Page() {
 									<AnimatedComponent>
 										<h1 class="uppercase c-paper mb-10 text-center pt-10">Кои сме ние</h1>
 									</AnimatedComponent>
-									<AnimatedComponent class="important-delay-300 c-paper text-center mb-0 font-size-4.5 lg-font-size-5 sm-px-0 px-12"><span class="c-#cf9353 font-900" style="font-family: 'Roboto'">The Barber Shop</span>, намиращ се в сърцето на кв. Изток е пионер в американския стил бръснарство в България.</AnimatedComponent>
+									<AnimatedComponent class="important-delay-300 c-paper text-center mb-0 font-size-4.5 lg-font-size-5 sm-px-0 px-12"><span class="c-brand font-900" style="font-family: 'Roboto'">The Barber Shop</span>, намиращ се в сърцето на кв. Изток е пионер в американския стил бръснарство в България.</AnimatedComponent>
 								</div>
 							</div>
 						</div>
@@ -177,7 +177,7 @@ export default function Page() {
 			</div>
 
 			<section>
-				<div class="pb-20" style="background-image: url(/assets/bg-2.jpg); background-position: center; background-repeat: no-repeat; background-size: cover;">
+				<div class="pb-20" style="background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8) ), url(/assets/brown-background-image.webp); background-position: center; background-repeat: no-repeat; background-size: cover;">
 					<AnimatedComponentSlide>
 						<H2WithImage class="c-paper" title="Стани част от екипа на The Barber Shop" />
 					</AnimatedComponentSlide>

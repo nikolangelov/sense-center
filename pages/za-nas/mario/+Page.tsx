@@ -26,14 +26,14 @@ export default function Page() {
 				</div>
 			</div>
 
-			<section class="pb-20 bg-#f2e0c2" style="background-color: #222222; background-image: url(/assets/bg-2.jpg); background-position: center center; background-repeat: no-repeat; background-size: cover;">
+			{/* <section class="pb-20 bg-#f2e0c2" style="background-color: #222222; background-image: url(/assets/bg-2.jpg); background-position: center center; background-repeat: no-repeat; background-size: cover;">
 				<AnimatedComponent>
 					<H2WithImage class="c-paper" title="Видео" />
 				</AnimatedComponent>
 				<AnimatedComponent>
 					<VideoPlayer src='https://www.youtube.com/embed/e2x0UXVU2yg?enablejsapi=1&mute=1' />
 				</AnimatedComponent>
-			</section>
+			</section> */}
 
 			<section>
 				<div class="lg-mx-30 mx-auto">

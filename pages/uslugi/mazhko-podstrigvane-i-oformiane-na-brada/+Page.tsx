@@ -207,7 +207,7 @@ export default function Page() {
 				</AnimatedComponent>
 			</section>
 
-			<div class="pb-20" style="background-image: url(/assets/bg-2.jpg); background-position: center; background-repeat: no-repeat; background-size: cover;">
+			<div class="pb-20" style="background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8) ), url(/assets/brown-background-image.webp); background-position: center; background-repeat: no-repeat; background-size: cover;">
 				<H2WithImage class="c-paper" title="Цена на мъжко подстригване и оформяне на брада" />
 				<AnimatedComponentSlide>
 					<div class="mt-15 md-mt-20 px-20px sm-px-50px md-pb-10 pb-5 max-w-1400px mx-auto">
@@ -216,7 +216,7 @@ export default function Page() {
 								<div class="font-size-6 uppercase c-paper font-500 text-left pb-1" style="font-family: 'Oswald', sans-serif !important;">Подстригване и оформяне на брада</div>
 								<div class="c-brand font-size-6 uppercase font-500 whitespace-nowrap" style="font-family: 'Oswald', sans-serif !important;">70 лв.</div>
 							</div>
-							<div class="c-gray-400 font-size-4.2 pt-3">Подстригване и оформяне на брада. Услугата включва:подстригване, измиване, стилизиране с продукт, избран спрямо предпочитанията на клиента и спецификата на косата му, оформяне на дължината, очертаване на контур на брадата с тример и/или бръснач (изцяло по избор на клиента), нанасяне на продукти за грижа на брадата, съобразени с преценката на бръснаря и предпочитанията на клиента. [1ч.30мин.]</div>
+							<div class="c-gray-300 font-size-4.2 pt-3">Подстригване и оформяне на брада. Услугата включва:подстригване, измиване, стилизиране с продукт, избран спрямо предпочитанията на клиента и спецификата на косата му, оформяне на дължината, очертаване на контур на брадата с тример и/или бръснач (изцяло по избор на клиента), нанасяне на продукти за грижа на брадата, съобразени с преценката на бръснаря и предпочитанията на клиента. [1ч.30мин.]</div>
 						</div>
 					</div>
 				</AnimatedComponentSlide>

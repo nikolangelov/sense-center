@@ -35,14 +35,14 @@ export function ServiceContaner(props: { title: string, href: string, img: strin
 export default function Page() {
 	return (
 		<>
-			<div style="background-position: center top; background-repeat: no-repeat; background-size: cover; height: auto;"><div style="background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5) ), url(/assets/za-nas/the-barber-shop-sofia-2_result_result.webp); background-position: right 55% bottom 100%; background-repeat: no-repeat; background-size: cover;" class="h-105vh" role="img" aria-label="бръснарски салон софия център"></div></div>
+			<div style="background-position: center top; background-repeat: no-repeat; background-size: cover; height: auto;"><div style="background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.65) ), url(/assets/za-nas/the-barber-shop-sofia-2_result_result.webp); background-position: right 55% bottom 100%; background-repeat: no-repeat; background-size: cover;" class="h-105vh" role="img" aria-label="бръснарски салон софия център"></div></div>
 
 			<div class="w-full bg-#212528">
 				<div class="max-w-1240px mx-auto">
 					<div class="flex flex-justify-center">
-						<div class="left-0 right-0 px-3 my-0 mx-auto absolute top-25% lg-top-60% text-center w-full max-w-700px" style="-webkit-transform: translateY(-50%);">
+						<div class="left-0 right-0 px-3 my-0 mx-auto absolute top-30% lg-top-68% text-center w-full" style="-webkit-transform: translateY(-50%);">
 							<AnimatedComponent>
-								<h1 class="uppercase c-paper mb-6">The Barber Shop Sofia</h1>
+								<h1 class="uppercase c-paper mb-6 md:px-0 px-5">The Barber Shop Sofia</h1>
 							</AnimatedComponent>
 							<AnimatedComponent class="important-delay-300 c-paper text-center mb-0 font-size-4.3 lg-font-size-5 sm-px-0 px-12 leading-6">Само за мъже.<br></br>За добре прекарано време или за добре загубено време.</AnimatedComponent>
 						</div>
@@ -53,7 +53,7 @@ export default function Page() {
 									<div class="block md:hidden mx-auto h-1px w-full bg-gray-200 my-10px op-30%"></div>
 									<div class="flex flex-col flex-justify-center flex-items-center gap-2">
 										<MdiBank class="font-size-5.2 c-brand" />
-										<div class="relative min-h-1px px-8px lg-px-15px c-paper flex text-center flex-justify-center font-size-4.3 lg-font-size-5.2" style="font-family: 'Oswald', sans-serif !important;">
+										<div class="relative min-h-1px px-8px lg-px-15px c-paper flex text-center flex-justify-center tracking-1.3px font-size-5 lg-font-size-5.2" style="font-family: 'Oswald', sans-serif !important;">
 											София, ул. "Николай Хайтов" 2
 										</div>
 									</div>
@@ -65,7 +65,7 @@ export default function Page() {
 									<div class="block md:hidden mx-auto h-1px w-full bg-gray-200 my-10px op-30%"></div>
 									<div class="flex flex-col flex-justify-center flex-items-center gap-2">
 										<RiTimerFill class="font-size-5.7 c-brand" />
-										<div class="relative min-h-1px px-8px lg-px-15px c-paper flex text-center flex-justify-center font-size-4.3 lg-font-size-5.2" style="font-family: 'Oswald', sans-serif !important;">
+										<div class="relative min-h-1px px-8px lg-px-15px c-paper flex text-center flex-justify-center tracking-1.3px font-size-5 lg-font-size-5.2" style="font-family: 'Oswald', sans-serif !important;">
 											Понеделник - Петък: 09.00 - 17.00
 										</div>
 									</div>
@@ -78,7 +78,7 @@ export default function Page() {
 									<div class="flex flex-col flex-justify-center flex-items-center gap-2">
 										<MdiPhoneClassic class="font-size-5.7 c-brand" />
 										<div class="relative min-h-1px px-8px lg-px-15px c-paper text-center flex flex-row flex-justify-center font-size-4.3 lg-font-size-4.8" style="font-family: 'Oswald', sans-serif !important;">
-											<div class="c-paper text-center flex flex-justify-center font-size-4.5 lg-font-size-4.8" style="font-family: 'Oswald', sans-serif !important;">
+											<div class="c-paper text-center flex flex-justify-center tracking-1.3px font-size-5 lg-font-size-5" style="font-family: 'Oswald', sans-serif !important;">
 												Телефон:&nbsp;
 											</div>
 											<div class="c-paper text-center flex flex-justify-center font-size-4.8 lg-font-size-5.2" style="font-family: 'Oswald', sans-serif !important;">
@@ -263,7 +263,7 @@ export default function Page() {
 				</BeforeAfterSlider>
 			</section>
 
-			<section style="background-color: #222222; background-image: url(/assets/bg-2.jpg); background-position: center center; background-repeat: no-repeat; background-size: cover;">
+			<section style="background-color: #222222; background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8) ), url(/assets/brown-background-image.webp); background-position: center center; background-repeat: no-repeat; background-size: cover;">
 				<div class="flex flex-col pb-20">
 					<div class="flex flex-col flex-items-center">
 						<AnimatedComponent>

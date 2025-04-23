@@ -578,8 +578,8 @@ function Topbar(props: { children: JSX.Element }) {
 
   return (
     <div
-      class={`h-${isScrolled() ? "92px" : "172px"} w-full z-4 fixed top-0 flex-content-center ${isScrolled() ? "lg-p-0px" : "lg-p-40px"} p-0px transition-all duration-300 ease-in-out`}
-        style={`${isScrolled() ? "background: rgba(20, 16, 12, 0.85); box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);" : ""}`}
+      class={`h-${isScrolled() ? "92px" : "172px"} w-full z-4 fixed top-0 flex-content-center ${isScrolled() ? "lg-p-0px" : "lg-p-40px"} p-0px transition-all duration-300 ease-in-out ${isScrolled() ? "bg-#14100c" : "bg-transparent"
+        }`}
     >
       <div
         style={`${isScrolled() ? "border-bottom: none;" : "border-bottom-color: rgba(255, 255, 255, 0.1);"} `}
@@ -640,7 +640,7 @@ function HamburgerMenu() {
     <div class="lg-hidden flex flex-content-center flex-items-center flex-justify-between w-full">
       <div class="flex flex-items-center flex-justify-center lg-pl-4 pl-0">
         <a href="/" onClick={closeMenu}>
-          <img src="/assets/The Barber Shop (2).png" class="w-23 ml--5 mr--4 mt-4" alt="fine-carpet-cleaning-logo" />
+          <img src="/assets/logo-mobile.png" class="w-13 mr--4 mt-4" alt="fine-carpet-cleaning-logo" />
         </a>
       </div>
       <a href="/test">

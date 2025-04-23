@@ -177,7 +177,7 @@ export default function Page() {
 				</AnimatedComponent>
 			</section>
 
-			<div class="pb-20" style="background-image: url(/assets/bg-2.jpg); background-position: center; background-repeat: no-repeat; background-size: cover;">
+			<div class="pb-20" style="background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8) ), url(/assets/brown-background-image.webp); background-position: center; background-repeat: no-repeat; background-size: cover;">
 				<H2WithImage class="c-paper" title="Цена на мъжко подстригване в София" />
 				<AnimatedComponentSlide>
 					<div class="mt-15 md-mt-20 px-20px sm-px-50px md-pb-10 pb-5 max-w-1400px mx-auto">
@@ -186,7 +186,7 @@ export default function Page() {
 								<div class="font-size-6 uppercase c-paper font-500 text-left pb-1" style="font-family: 'Oswald', sans-serif !important;">Мъжко подстригване</div>
 								<div class="c-brand font-size-6 uppercase font-500 whitespace-nowrap" style="font-family: 'Oswald', sans-serif !important;">50 лв.</div>
 							</div>
-							<div class="c-gray-400 font-size-4.2 pt-3">Подстригването на The Barber Shop е комбинация от различни бръснарски и фризьорски техники на подстригване и е в съответствие с международните тенденции в бръснарството, модата и мъжкия стил. [1ч.]</div>
+							<div class="c-gray-300 font-size-4.2 pt-3">Подстригването на The Barber Shop е комбинация от различни бръснарски и фризьорски техники на подстригване и е в съответствие с международните тенденции в бръснарството, модата и мъжкия стил. [1ч.]</div>
 						</div>
 					</div>
 				</AnimatedComponentSlide>
