@@ -10,42 +10,8 @@ import RiPlayReverseMiniLine from '~icons/ri/play-reverse-mini-line';
 import { cn } from "../../utils/cn";
 import RiDoubleQuotesL from '~icons/ri/double-quotes-l';
 import RiDoubleQuotesR from '~icons/ri/double-quotes-r';
-import { ServiceContaner } from "../index/+Page";
+import { ServiceContaner } from '../../components/ServiceContainer';
 import { FacebookLikeGallery } from "../../components/FacebookLikeGallery";
-
-const [reviews, { refetch }] = createResource(async () => {
-	const res = await fetch("http://localhost:3001/api/reviews");
-	return res.json();
-});
-
-function StarReview(props: { src: string; stars: number; hrefGoogleReview: string; name: string; date: string; reviewText: string; }) {
-	return (
-		<a class="mb-2 md:mb-5 mt-0 m-auto px-2 md:px-8 py-15 bg-paper w-500px b-rd-1 shadow-xl" target="_blank" rel="noopener" href={props.hrefGoogleReview}>
-			<div class="flex flex-justify-center flex-items-center">
-				<div class="flex flex-col flex-justify-center flex-items-center">
-					<div class="flex flex-justify-center flex-items-center">
-						<img class="w-12 h-12 mx-auto" style="filter: saturate(130%);" src={props.src} alt="profile" />
-					</div>
-					<div class="important-text-center py-7 lg-px-0 px-3 font-300 font-size-4.3 md-font-size-4.5 line-height-7 lg-line-height-8" style="font-family:'Roboto', sans-serif; text-align: left;">
-						{props.reviewText}
-					</div>
-					<div class="">
-						{range(props.stars).map(() => (
-							<img class="m-r-2 w-5" style="filter: saturate(14);" src="/assets/output-onlinepngtools.png" alt="star" />
-						))}
-						{range(5 - props.stars).map(() => (
-							<img class="w-5 m-r-2" style="filter: saturate(14);" src="/assets/output-onlinepngtools-e1707480352597.png" alt="star" />
-						))}
-					</div>
-					<p class="flex flex-col flex-justify-center flex-items-center mb-0 mt-0">
-						<b>{props.name}</b>
-						{props.date}
-					</p>
-				</div>
-			</div>
-		</a>
-	);
-}
 
 export const ImageWithFrameReviewSlider = ({ children, buttonClass, ...props }: { children: JSX.Element | JSX.Element[], buttonClass?: string, services: { title: string }[] }) => {
 	const isDesktop = useMediaQuery("(min-width: 768px)");
