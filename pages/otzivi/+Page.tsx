@@ -454,7 +454,7 @@ export default function Page() {
 				</QuotationReviewsSlider>
 			</section>
 
-			{/* <section class="pb-20" style="background-color: #222222; background-image: url(/assets/bg-2.jpg); background-position: center center; background-repeat: no-repeat; background-size: cover;">
+			<section class="pb-20" style="background-color: #222222; background-image: url(/assets/bg-2.jpg); background-position: center center; background-repeat: no-repeat; background-size: cover;">
 				<H2WithImage class="c-paper" title="Най-добрите знаят къде да отидат" />
 				<div class="flex flex-col justify-center items-center gap-15 px-4 md:px-6">
 					<SquareImageReview
@@ -472,7 +472,7 @@ export default function Page() {
 						date="Ивайло Иванов"
 					/>
 				</div>
-			</section> */}
+			</section>
 
 			<section class="pb-20" style="background-color: #222222; background-image: url(/assets/bg-2.jpg); background-position: center center; background-repeat: no-repeat; background-size: cover;">
 				<H2WithImage class="c-paper" title="Открий своя стил" />
@@ -528,7 +528,7 @@ export default function Page() {
 				</div>
 			</section>
 
-			{/* <section class="pb-14 md:pb-18" style="background-color: #222222; background-image: url(/assets/bg-2.jpg); background-position: center center; background-repeat: no-repeat; background-size: cover;">
+			<section class="pb-14 md:pb-18" style="background-color: #222222; background-image: url(/assets/bg-2.jpg); background-position: center center; background-repeat: no-repeat; background-size: cover;">
 				<H2WithImage class="c-paper" title="Виж защо 600+ мъже ни оценяват с 5 звезди" />
 				<div class="max-w-900px m-auto px-5">
 					<FacebookLikeGallery imgs={[
@@ -552,7 +552,7 @@ export default function Page() {
 						},
 					]} />
 				</div>
-			</section> */}
+			</section>
 
 			{/* <section class="pb-20">
 				<H2WithImage title="Какво казват клиентите за нас" />
