@@ -286,8 +286,8 @@ html::-webkit-scrollbar-thumb {
 }
 
 @media (min-width: 640px) {
-  .martin-img {
-    background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.7)), url('/assets/martin/барбър-мартин-индивидуална.webp') !important;
+  .denis-img {
+    background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.7)), url('/assets/denis/барбър-денис-индивидуална.webp') !important;
     background-position: center top !important;
     background-repeat: no-repeat !important;
     background-size: cover !important;

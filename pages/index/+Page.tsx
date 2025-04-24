@@ -168,16 +168,16 @@ export default function Page() {
 				</div>
 			</div>
 
-			{/* <div style="background-image: url(/assets/bg-2.jpg); background-position: center; background-repeat: no-repeat; background-size: cover;">
+			<div style="background-image: url(/assets/bg-2.jpg); background-position: center; background-repeat: no-repeat; background-size: cover;">
 				<div class="pb-20">
 					<AnimatedComponent>
 						<H2WithImage class="c-paper" title="Стилът на The Barber Shop" />
 					</AnimatedComponent>
 					<AnimatedComponent>
-						<VideoPlayer src='/assets/Barbershop-video-home.mp4/' />
+						<VideoPlayer src='/assets/Barbershop-video-home.mp4' />
 					</AnimatedComponent>
 				</div>
-			</div> */}
+			</div>
 
 			<section class="pb-20">
 				<AnimatedComponent>
@@ -207,10 +207,10 @@ export default function Page() {
 					<AnimatedComponentSlide class="px-5">
 						<div class="flex flex-col gap-5">
 							<div>
-								<span class="font-700">Всеки детайл има значение.</span> От избора на ножица до последния щрих с бръснача – всичко при нас е въпрос на прецизност и стил. Вярваме, че добрата визия започва с качествена грижа и правилен подход. Ето защо отделяме време, за да разберем какво точно търси всеки клиент.
+								В <span class="font-700">The Barber Shop</span> ще получите повече от просто подстригване или оформяне на брада – ще се насладите на автентично мъжко изживяване. В <span class="font-700">бръснарницата Ви очаква</span> уютна и приятелска атмосфера, която ще Ви накара да забравите напрежението и стреса.
 							</div>
 							<div>
-								<span class="font-700">Ние не просто подстригваме – създаваме увереност.</span> В модерната мъжка визия няма място за компромиси, затова при нас ще откриете баланс между класика и съвременност, между техника и творчество. Просто се отпуснете – ние ще се погрижим за останалото.
+								В нашия <span class="font-700">барбър шоп</span> ще получите персонално отношение и грижа, за да опознаем Вашия индивидуален стил и заедно да създадем визия, която Ви кара да изглеждате и да се чувствате като най-добрата версия на себе си. Защото всеки уважаващ себе си мъж знае, че добрият външен вид изготвен в <span class="font-700">барбър шоп</span> подчертава увереността и оставя трайно впечатление.
 							</div>
 						</div>
 					</AnimatedComponentSlide>
