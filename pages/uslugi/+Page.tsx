@@ -117,9 +117,9 @@ function ServiceContainer(props: { href: string, title: string, desc: string, pr
 								<div class="h-[1px] transition-all duration-900 ease-in-out bg-brand"
 									style={{ width: `${arrowWidth()}px` }}>
 								</div>
-								<div class="c-paper text-left pt-4 pr-6 pl-10 text-lg leading-7 mt-auto">
+								{/* <div class="c-paper text-left pt-4 pr-6 pl-10 text-lg leading-7 mt-auto">
 									{props.desc}
-								</div>
+								</div> */}
 								<div class="flex flex-col flex-items-center pt-4">
 									<div class="bg-none c-paper b-solid b-1px b-paper hover-b-brand hover-bg-brand transition-colors mx-auto uppercase font-size-4 font-500 px-7 py-2" style="font-family: 'Oswald', sans-serif !important; letter-spacing: 1px;">Вижте повече</div>
 								</div>

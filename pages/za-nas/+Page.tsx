@@ -146,33 +146,43 @@ export default function Page() {
 				<AnimatedComponentSlide>
 					<H2WithImage title="Екипът на The Barber Shop" />
 				</AnimatedComponentSlide>
-				<div class="flex flex-wrap flex-justify-center lg-gap-20 gap-15">
-					<AnimatedComponentSlide>
-						<BarberContainer
-							img="/assets/za-nas/барбър-крис.webp"
-							alt="барбър Крис"
-							href="/za-nas/kris/"
-							title="Кристиан"
-						/>
-					</AnimatedComponentSlide>
-
-					<AnimatedComponentSlide>
-						<BarberContainer
-							img="/assets/za-nas/барбър-благо.webp"
-							alt="барбър Благо"
-							href="/za-nas/blago/"
-							title="Благовест"
-						/>
-					</AnimatedComponentSlide>
-
-					<AnimatedComponentSlide>
-						<BarberContainer
-							img="/assets/za-nas/барбър-марио.webp"
-							alt="барбър Марио"
-							href="/za-nas/mario/"
-							title="Марио"
-						/>
-					</AnimatedComponentSlide>
+				<div class="flex flex-wrap flex-justify-center gap-8">
+					<div class="flex flex-wrap justify-center items-center gap-8">
+						<AnimatedComponentSlide>
+							<BarberContainer
+								img="/assets/za-nas/барбър-крис.webp"
+								alt="барбър Крис"
+								href="/za-nas/kris/"
+								title="Кристиан"
+							/>
+						</AnimatedComponentSlide>
+						<AnimatedComponentSlide>
+							<BarberContainer
+								img="/assets/za-nas/барбър-благо.webp"
+								alt="барбър Благо"
+								href="/za-nas/blago/"
+								title="Благовест"
+							/>
+						</AnimatedComponentSlide>
+					</div>
+					<div class="flex flex-wrap justify-center items-center gap-8">
+						<AnimatedComponentSlide>
+							<BarberContainer
+								img="/assets/za-nas/барбър-марио.webp"
+								alt="барбър Марио"
+								href="/za-nas/mario/"
+								title="Марио"
+							/>
+						</AnimatedComponentSlide>
+						<AnimatedComponentSlide>
+							<BarberContainer
+								img="/assets/denis/барбър-денис-индивидуална-мобилно.webp"
+								alt="барбър Денис"
+								href="/za-nas/denis/"
+								title="Денис"
+							/>
+						</AnimatedComponentSlide>
+					</div>
 				</div>
 			</div>
 

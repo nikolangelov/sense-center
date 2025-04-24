@@ -331,7 +331,7 @@ export default function LayoutDefault(props: { children?: JSX.Element }) {
                 { href: "/za-nas/kris", title: "Кристиан" },
                 { href: "/za-nas/mario", title: "МАРИО" },
                 { href: "/za-nas/blago", title: "Благовест" },
-                // { href: "/za-nas/denis", title: "ДЕНИС" },
+                { href: "/za-nas/denis", title: "ДЕНИС" },
               ]}
             />
           </div>
@@ -772,7 +772,7 @@ const MyDropdown = (props: { closeMenu: () => void; }) => {
               { href: "/za-nas/kris", text: "Кристиан" },
               { href: "/za-nas/mario", text: "МАРИО" },
               { href: "/za-nas/blago", text: "Благовест" },
-              // { href: "/za-nas/denis", text: "ДЕНИС" },
+              { href: "/za-nas/denis", text: "ДЕНИС" },
             ]}
           />
           <MobileDropdownMenuItem

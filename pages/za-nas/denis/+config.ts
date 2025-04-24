@@ -7,7 +7,7 @@ import { createEffect } from "solid-js";
 export default {
   // <title>
   title: "The Barber Shop Sofia | Бръснар Денис",
-  description: "Кристиан е опитен бръснар, който чудесно комбинира ретро и модерни техники, като пресъздава пътуване във времето и стила. Запазете час при Кристиан!",
+  description: "Денис е бръснар със страст към детайла и усет към модерното създавайки визии с характер и стил. Запазете час при Денис!",
   // <meta name="description">
   extends: vikeSolid,
 } satisfies Config;

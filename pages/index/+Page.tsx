@@ -222,22 +222,42 @@ export default function Page() {
 						{ title: "Бръснене на глава с бръснач" },
 						{ title: "Мъжко подстригване" },
 						{ title: "Бръснене на глава с бръснач" },
+						{ title: "Мъжко подстригване" },
+						{ title: "Бръснене на глава с бръснач" },
+						{ title: "Мъжко подстригване" },
+						{ title: "Бръснене на глава с бръснач" },
 					]}>
 					<BeforeAfterSliderContainer
-						before="/assets/before-and-after/09.The_Barber_Shop_B&A-3-before_result.webp"
-						after="/assets/before-and-after/10.The_Barber_Shop_B&A-3-before_result.webp"
+						before="/assets/otzivi/men_s-haircut-and-beard-before.webp"
+						after="/assets/otzivi/men_s-haircut-and-beard-after.webp"
 					/>
 					<BeforeAfterSliderContainer
-						before="/assets/before-and-after/02.The_Barber_Shop_B&A-1-between_result.webp"
-						after="/assets/before-and-after/03.The_Barber_Shop_B&A-1-after_result.webp"
+						before="/assets/otzivi/мъжко-подстригване-и-оформяне-на-брада-преди.webp"
+						after="/assets/otzivi/мъжко-подстригване-и-оформяне-на-брада-след.webp"
 					/>
 					<BeforeAfterSliderContainer
-						before="/assets/before-and-after/04.The_Barber_Shop_B&A-combo-before_result.webp"
-						after="/assets/before-and-after/05.The_Barber_Shop_B&A-combo-after_result.webp"
+						before="/assets/otzivi/мокро-бръснене-преди.webp"
+						after="/assets/otzivi/мокро-бръснене-след.webp"
 					/>
 					<BeforeAfterSliderContainer
-						before="/assets/before-and-after/07.The_Barber_Shop_B&A-3-before_result.webp"
-						after="/assets/before-and-after/08.The_Barber_Shop_B&A-3-after_result.webp"
+						before="/assets/otzivi/мъжко-подстригване-софия-преди.webp"
+						after="/assets/otzivi/мъжко-подстригване-софия-след.webp"
+					/>
+					<BeforeAfterSliderContainer
+						before="/assets/otzivi/детско-подстригване-момче-преди (1).webp"
+						after="/assets/otzivi/детско-подстригване-момче-след (1).webp"
+					/>
+					<BeforeAfterSliderContainer
+						before="/assets/otzivi/детско-подстригване-преди.webp"
+						after="/assets/otzivi/детско-подстригване-след.webp"
+					/>
+					<BeforeAfterSliderContainer
+						before="/assets/otzivi/мъжко-подстригване-преди.webp"
+						after="/assets/otzivi/мъжко-подстригване-след.webp"
+					/>
+					<BeforeAfterSliderContainer
+						before="/assets/otzivi/buzz-cut-and-beard-before.webp"
+						after="/assets/otzivi/buzz-cut-and-beard-after.webp"
 					/>
 				</BeforeAfterSlider>
 			</section>
@@ -372,7 +392,7 @@ export default function Page() {
 				<div class="lg-mx-30 mx-auto">
 					<div class="flex md-flex flex-col flex-justify-center max-w-1440px lg-px-0 mx-auto lg:pb-10">
 						<AnimatedComponent>
-							<H2WithImage title="Предимставата на The Barber Shop" />
+							<H2WithImage title="Предимствата на The Barber Shop" />
 						</AnimatedComponent>
 						<div class="px-5 lg-px-0 flex lg-flex-row flex-col lg-gap-10">
 							<div class="lg-w-33.33% flex flex-col">
