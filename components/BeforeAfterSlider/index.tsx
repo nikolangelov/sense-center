@@ -88,8 +88,8 @@ export const BeforeAfterSlider = ({ children, buttonClass, ...props }: { childre
 interface BeforeAfterSliderProps {
   before: string;
   after: string;
-  altBefore?: string;
-  altAfter?: string;
+  altBefore: string;
+  altAfter: string;
 }
 
 export function BeforeAfterSliderContainer(props: BeforeAfterSliderProps) {

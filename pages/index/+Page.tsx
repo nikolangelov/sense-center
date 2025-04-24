@@ -45,7 +45,7 @@ export default function Page() {
 									<div class="flex flex-col flex-justify-center flex-items-center gap-2">
 										<RiTimerFill class="font-size-5.7 c-brand" />
 										<div class="relative min-h-1px px-8px lg-px-15px c-paper flex text-center flex-justify-center tracking-1.3px font-size-5 lg-font-size-5.2" style="font-family: 'Oswald', sans-serif !important;">
-											Понеделник - Петък: 09.00 - 17.00
+											Понеделник - Петък: 10:00 - 20:00
 										</div>
 									</div>
 								</div>
@@ -228,34 +228,50 @@ export default function Page() {
 						{ title: "Бръснене на глава с бръснач" },
 					]}>
 					<BeforeAfterSliderContainer
+						altBefore="преди снимка на men's haircut and beard"
+						altAfter="след снимка на men's haircut and beard"
 						before="/assets/otzivi/men_s-haircut-and-beard-before.webp"
 						after="/assets/otzivi/men_s-haircut-and-beard-after.webp"
 					/>
 					<BeforeAfterSliderContainer
+						altBefore="преди снимка на подстригване и оформяне на брада"
+						altAfter="след снимка на подстригване и оформяне на брада"
 						before="/assets/otzivi/мъжко-подстригване-и-оформяне-на-брада-преди.webp"
 						after="/assets/otzivi/мъжко-подстригване-и-оформяне-на-брада-след.webp"
 					/>
 					<BeforeAfterSliderContainer
+						altBefore="преди снимка на мокро бръснене"
+						altAfter="след снимка на мокро бръснене"
 						before="/assets/otzivi/мокро-бръснене-преди.webp"
 						after="/assets/otzivi/мокро-бръснене-след.webp"
 					/>
 					<BeforeAfterSliderContainer
+						altBefore="преди снимка на мъжко подстригване софия"
+						altAfter="след снимка на мъжко подстригване софия"
 						before="/assets/otzivi/мъжко-подстригване-софия-преди.webp"
 						after="/assets/otzivi/мъжко-подстригване-софия-след.webp"
 					/>
 					<BeforeAfterSliderContainer
+						altBefore="преди снимка на детско подстригване момче"
+						altAfter="след снимка на детско подстригване момче"
 						before="/assets/otzivi/детско-подстригване-момче-преди (1).webp"
 						after="/assets/otzivi/детско-подстригване-момче-след (1).webp"
 					/>
 					<BeforeAfterSliderContainer
+						altBefore="преди снимка на детско подстригване"
+						altAfter="след снимка на детско подстригване"
 						before="/assets/otzivi/детско-подстригване-преди.webp"
 						after="/assets/otzivi/детско-подстригване-след.webp"
 					/>
 					<BeforeAfterSliderContainer
+						altBefore="преди снимка на мъжко подстригване"
+						altAfter="след снимка на мъжко подстригване"
 						before="/assets/otzivi/мъжко-подстригване-преди.webp"
 						after="/assets/otzivi/мъжко-подстригване-след.webp"
 					/>
 					<BeforeAfterSliderContainer
+						altBefore="преди снимка на buzz cut styles"
+						altAfter="след снимка на buzz cut styles"
 						before="/assets/otzivi/buzz-cut-and-beard-before.webp"
 						after="/assets/otzivi/buzz-cut-and-beard-after.webp"
 					/>
@@ -400,7 +416,7 @@ export default function Page() {
 									<h3 class="text-left mt-0 c-paper-inv op-70%">Опитни и квалифицирани барбъри</h3>
 									<div class="pb-10">Зад всяка перфектна прическа в The Barber Shop Sofia стои екип от изключителни професионалисти. Нашият барбър шоп е събрал част от най-добрите бръснари в София. Всеки от тях преминава през интензивно обучение, което обхваща както класическите бръснарски техники, така и най-новите тенденции в подстригването. Благодарение на това можем да ви предложим премиум обслужване на високо ниво и страхотни резултати.</div>
 								</AnimatedComponent>
-							</div>
+							</div> 
 							<div class="lg-w-33.33% flex flex-col">
 								<AnimatedComponent>
 									<h3 class="text-left mt-6 lg-mt-0 c-paper-inv op-70%">Професионални инструменти</h3>

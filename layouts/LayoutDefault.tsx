@@ -485,7 +485,7 @@ function TopFooter() {
                 Работно време:
               </div>
               <div class="c-paper mx-auto font-size-4.5 lg-font-size-4.8 text-center" style="font-family: 'Oswald', sans-serif !important; letter-spacing: 1px;">
-                Понеделник - Петък: 09.00 - 17.00
+                Понеделник - Петък: 10:00 - 20:00
               </div>
             </AnimatedComponent>
           </div>

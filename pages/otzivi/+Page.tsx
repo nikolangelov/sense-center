@@ -1,7 +1,7 @@
 import "solid-slider/slider.css";
 import range from "lodash/range";
 import { AnimatedComponent } from "../../components/AnimateOnView";
-import { createResource, createSignal, JSX, onCleanup, onMount } from "solid-js";
+import { createResource, createSignal, JSX, JSXElement, onCleanup, onMount } from "solid-js";
 import { BeforeAfterSlider, BeforeAfterSliderContainer, DotsUnderSlider } from "../../components/BeforeAfterSlider";
 import { H2WithImage } from "../../components/H2WithImage";
 import { Slider, SliderButton, SliderProvider } from "solid-slider";
@@ -19,7 +19,7 @@ export const ImageWithFrameReviewSlider = ({ children, buttonClass, ...props }: 
 	return (
 		<SliderProvider>
 			{isDesktop() ? (
-				<div class="max-w-1000px mx-auto position-relative hidden md:block mb-0 pt-5">
+				<div class="max-w-900px mx-auto position-relative hidden md:block mb-0 pt-5">
 					<Slider options={{ loop: true, slides: { perView: 1, spacing: 15 } }}>
 						{children}
 					</Slider>
@@ -173,16 +173,16 @@ function QuotationReview(props: { text: string | JSX.Element; name: string; prof
 	);
 }
 
-function SquareImageReview(props: { text: string; src: string; date: string; service: string; hrefGoogleReview: string; }) {
+function SquareImageReview(props: { text: string | JSXElement; src: string; date: string; hrefGoogleReview: string; }) {
 	return (
 		<a target="_blank" rel="noopener" href={props.hrefGoogleReview}>
-			<div class="max-w-1300px flex items-center justify-center relative gap-4 md:gap-5 md:pl-5 md:pr-10">
+			<div class="max-w-1300px flex flex-col sm:flex-row items-center justify-center relative gap-4 md:gap-5 md:pl-5 md:pr-10">
 				<div class="relative w-auto">
 					<div class="w-auto h-auto">
-						<img class="w-auto h-auto max-h-150px md:max-h-200px" src={props.src} alt="profile" />
+						<img class="w-auto h-auto max-h-250px md:max-h-200px" src={props.src} alt="profile" />
 					</div>
 				</div>
-				<div class="w-1/2 pl-1 md:pl-4 flex flex-col justify-center items-center">
+				<div class="md:w-1/2 pl-1 md:pl-4 flex flex-col justify-center items-center">
 					<div class="flex flex-col justify-center">
 						<p class="c-paper mb-2 mt-0 leading-5.6 md:leading-6 italic font-size-15px md:font-size-4.5">"{props.text}"</p>
 						<div class="text-left h-1px w-[calc(100%-1em)] bg-brand my-6px md:my-20px"></div>
@@ -209,8 +209,8 @@ export default function Page() {
 					</div>
 					<p class="font-500 c-paper my-2">(607 отзива)</p>
 				</div>
-				<h1 class="uppercase pt-0 mt-10 mb-4 font-size-100px max-w-1200px mx-auto">Виж защо 600+ мъже ни оценяват с 5 звезди</h1>
-				<h2 class="font-400 lg:pb-6">Увери се сам</h2>
+				<h1 class="uppercase pt-0 mt-10 mb-2 font-size-100px max-w-1200px mx-auto">Виж защо 600+ мъже ни оценяват с 5 звезди</h1>
+				<h2 class="font-500 lg:pb-6" style="font-family: 'Roboto', sans-serif !important;">Увери се сам</h2>
 				{/* <div class="flex flex-col items-center justify-center gap-20 md:gap-20 mx-2 md:mx-20 lg:mx-10 xl:mx-45">
 						{reviews.loading && <p>Loading reviews...</p>}
 						{reviews.error && <p>Error loading reviews: {reviews.error.message}</p>}
@@ -242,34 +242,50 @@ export default function Page() {
 						{ title: "Бръснене на глава с бръснач" },
 					]}>
 					<BeforeAfterSliderContainer
+						altBefore="преди снимка на men's haircut and beard"
+						altAfter="след снимка на men's haircut and beard"
 						before="/assets/otzivi/men_s-haircut-and-beard-before.webp"
 						after="/assets/otzivi/men_s-haircut-and-beard-after.webp"
 					/>
 					<BeforeAfterSliderContainer
+						altBefore="преди снимка на подстригване и оформяне на брада"
+						altAfter="след снимка на подстригване и оформяне на брада"
 						before="/assets/otzivi/мъжко-подстригване-и-оформяне-на-брада-преди.webp"
 						after="/assets/otzivi/мъжко-подстригване-и-оформяне-на-брада-след.webp"
 					/>
 					<BeforeAfterSliderContainer
+						altBefore="преди снимка на мокро бръснене"
+						altAfter="след снимка на мокро бръснене"
 						before="/assets/otzivi/мокро-бръснене-преди.webp"
 						after="/assets/otzivi/мокро-бръснене-след.webp"
 					/>
 					<BeforeAfterSliderContainer
+						altBefore="преди снимка на мъжко подстригване софия"
+						altAfter="след снимка на мъжко подстригване софия"
 						before="/assets/otzivi/мъжко-подстригване-софия-преди.webp"
 						after="/assets/otzivi/мъжко-подстригване-софия-след.webp"
 					/>
 					<BeforeAfterSliderContainer
+						altBefore="преди снимка на детско подстригване момче"
+						altAfter="след снимка на детско подстригване момче"
 						before="/assets/otzivi/детско-подстригване-момче-преди (1).webp"
 						after="/assets/otzivi/детско-подстригване-момче-след (1).webp"
 					/>
 					<BeforeAfterSliderContainer
+						altBefore="преди снимка на детско подстригване"
+						altAfter="след снимка на детско подстригване"
 						before="/assets/otzivi/детско-подстригване-преди.webp"
 						after="/assets/otzivi/детско-подстригване-след.webp"
 					/>
 					<BeforeAfterSliderContainer
+						altBefore="преди снимка на мъжко подстригване"
+						altAfter="след снимка на мъжко подстригване"
 						before="/assets/otzivi/мъжко-подстригване-преди.webp"
 						after="/assets/otzivi/мъжко-подстригване-след.webp"
 					/>
 					<BeforeAfterSliderContainer
+						altBefore="преди снимка на buzz cut styles"
+						altAfter="след снимка на buzz cut styles"
 						before="/assets/otzivi/buzz-cut-and-beard-before.webp"
 						after="/assets/otzivi/buzz-cut-and-beard-after.webp"
 					/>
@@ -283,23 +299,7 @@ export default function Page() {
 						{ title: "Мъжко подстригване" },
 						{ title: "Мъжко подстригване" },
 						{ title: "Мъжко подстригване" },
-						{ title: "Мъжко подстригване" },
-						{ title: "Мъжко подстригване" },
-						{ title: "Мъжко подстригване" },
 					]}>
-
-					<ImageWithFrameReview
-						hrefGoogleReview="https://maps.app.goo.gl/MFgb7yr9u2GwzyFj6"
-						src="https://lh3.googleusercontent.com/geougc-cs/AIHozJKvrDzJpa_uGWCit98-T5hkTC9qffYLdrZDf6Vu8V0whlaPemo5DoifMygjzWjJugF-rId0VgNNnhNJiZtuYRNf5KucaUtmzAWVjfAffVZg-BNW1SLQNkelpG3A6ZQGGFA603id=w300-h450-p"
-						service="Мъжко подстригване"
-						text={
-							<>
-								За първи път посещавам The Barber Shop. Крис ме изслуша и след това подстрига с изключително внимание към детайла и моите предпочитания. Атмосферата е много приятна, а за резултатите можете да прецените сами.<br />
-								С ръка на сърцето мога да кажа, че това е най-добрата бръснарница в София от тези, които съм посетил.
-							</>
-						}
-						date="Октомври 2024"
-					/>
 					<ImageWithFrameReview
 						hrefGoogleReview="https://maps.app.goo.gl/E3BJm1q3Fj3j51Bh7"
 						style="filter: brightness(1.1); filter: saturate(1.1);"
@@ -309,33 +309,12 @@ export default function Page() {
 						date="Септември 2022"
 					/>
 					<ImageWithFrameReview
-						hrefGoogleReview="https://maps.app.goo.gl/2qfKt276thdqUeKV9"
-						style="filter: brightness(1.2); filter: saturate(1.3);"
-						src="/assets/otzivi/podstrigvane-barbershop-otzivi.jpg"
-						service="Подстригване и оформяне на брада"
-						text={
-							<>
-								The Barber Shop е страхотно място! Най-обикновени неща като оформяне на брада, при тях е цяло изживяване. Кристиян Митов е ТОП бръснар! Евала момчета. Keep it going!<br />
-								Силно препоръчвам бръснарницата!!!
-							</>
-						}
-						date="Април 2020"
-					/>
-					<ImageWithFrameReview
 						hrefGoogleReview="https://maps.app.goo.gl/NjWquoiBcNHEHHzC9"
 						style="filter: brightness(1.1); filter: saturate(1.1);"
 						src="/assets/otzivi/detska-pricheska-otzivi.jpg"
 						service="Детско подстригване"
 						text="супер за мъжко подстригване! любими!"
 						date="Март 2020"
-					/>
-					<ImageWithFrameReview
-						hrefGoogleReview="https://maps.app.goo.gl/te9fL5NdeUBiGoia7"
-						style="filter: saturate(1.3);"
-						src="/assets/otzivi/barbershop-mazhko-podstrigvane-otzivi.png"
-						service="Мъжко подстригване"
-						text="Страхотна бръснарница. След няколко погрешни опита намерих точното място. Вниманието към клиента е на високо ниво. От вратата те посрещат с нещо за пиене кафе, вода, безалкохолно или Bullet бърбън. Вайба е чудесен, музиката не е прекалено силна или натрапваща. Всичко е уникално. Отидохме с няколко момчета и всички останахме очаровани. Крис беше нашия бръснар и силно го препоръчвам в момента и на други приятели."
-						date="Август 2024"
 					/>
 					<ImageWithFrameReview
 						hrefGoogleReview="https://maps.app.goo.gl/vLrS9ffAGBgeZ6xf9"
@@ -458,24 +437,27 @@ export default function Page() {
 				<H2WithImage class="c-paper" title="Най-добрите знаят къде да отидат" />
 				<div class="flex flex-col justify-center items-center gap-15 px-4 md:px-6">
 					<SquareImageReview
-						hrefGoogleReview=""
-						src="/assets/example-photo.jpg"
-						service="Top Service"
-						text="Като бивш и настоящ гангстер, за мен визията е изкл. важна за да мога да съм представителен пред враговете ми."
+						hrefGoogleReview="https://maps.app.goo.gl/3HrojookYmXtUJyF9"
+						src="/assets/otzivi/ivailo-otzivi-snimka.jpg"
+						text="Като бивш и настоящ гангстер, за мен визията е изкл. важна за да мога да съм представителен пред враговете ми. Професионалистите от Барбършоп винаги знаят какъв е най-добрия стил за мен, така че да изглеждам и заплашителен и привлекателен. Всеки мафия бос трябва да ги избере. Генг Генг"
 						date="Ивайло Иванов"
 					/>
 					<SquareImageReview
-						hrefGoogleReview=""
-						src="/assets/example-photo.jpg"
-						service="Top Service"
-						text="Като бивш и настоящ гангстер, за мен визията е изкл. важна за да мога да съм представителен пред враговете ми."
-						date="Ивайло Иванов"
+						hrefGoogleReview="https://maps.app.goo.gl/SnazZcBVWAQrvcn7A"
+						src="/assets/otzivi/georgi-otzivi-snimka.jpg"
+						text={
+							<>
+								За първи път посещавам The Barber Shop. Крис ме изслуша и след това подстрига с изключително внимание към детайла и моите предпочитания. Атмосферата е много приятна, а за резултатите можете да прецените сами.<br />
+								С ръка на сърцето мога да кажа, че това е най-добрата бръснарница в София от тези, които съм посетил.
+							</>
+						}
+						date="Georgi Pleshkov"
 					/>
 				</div>
 			</section>
 
-			<section class="pb-20" style="background-color: #222222; background-image: url(/assets/bg-2.jpg); background-position: center center; background-repeat: no-repeat; background-size: cover;">
-				<H2WithImage class="c-paper" title="Открий своя стил" />
+			<section class="pb-20">
+				<H2WithImage title="Открий своя стил" />
 				<div class="flex flex-wrap flex-justify-center lg-gap-15 gap-15 px-5">
 					<ServiceContaner
 						img="/assets/home/stylish-buzz-cuts.webp"
@@ -533,22 +515,22 @@ export default function Page() {
 				<div class="max-w-900px m-auto px-5">
 					<FacebookLikeGallery imgs={[
 						{
-							src: "/assets/example-photo.jpg",
-							alt: "1-dry-organic-carpet-cleaning",
-							name: "Atanas Todorov",
-							reviewtext: "Като бивш и настоящ гангстер, за мен визията е изкл. важна за да мога да съм представителен пред враговете ми.Професионалистите от Барбършоп винаги знаят какъв е най-добрия стил за мен."
+							src: "/assets/otzivi/podstrigvane-barbershop-otzivi.jpg",
+							alt: "mazhka-pricheska-otzivi",
+							name: "Borislav Donchev",
+							reviewtext: "The Barber Shop е страхотно място! Най-обикновени неща като оформяне на брада, при тях е цяло изживяване. Кристиян Митов е ТОП бръснар! Евала момчета. Keep it going! Силно препоръчвам бръснарницата!!!"
 						},
 						{
-							src: "/assets/example-photo.jpg",
-							alt: "1-dry-organic-carpet-cleaning",
-							name: "Atanas Todorov",
-							reviewtext: "важна за да мога да съм представителен пред враговете ми.Професионалистите от Барбършоп винаги знаят какъв е най-добрия стил за мен."
+							src: "/assets/otzivi/podstrigvane-na-mazhka-kosa-barbershop.jpg",
+							alt: "mazhko-podstrigvane-otzivi",
+							name: "Georgi Pleshkov",
+							reviewtext: "За първи път посещавам The Barber Shop. Крис ме изслуша и след това подстрига с изключително внимание към детайла и моите предпочитания. Атмосферата е много приятна, а за резултатите можете да прецените сами. С ръка на сърцето мога да кажа, че това е най-добрата бръснарница в София от тези, които съм посетил."
 						},
 						{
-							src: "/assets/example-photo.jpg",
-							alt: "1-dry-organic-carpet-cleaning",
-							name: "Atanas Todorov",
-							reviewtext: "Като бивш и настоящ гангстер, за мен визията е изкл. важна за да мога да съм представителен пред враговете ми.Професионалистите от Барбършоп винаги знаят какъв е най-добрия стил за мен."
+							src: "/assets/otzivi/barbershop-mazhko-podstrigvane-otzivi.png",
+							alt: "mazhka-pricheska-i-oformiane-na-brada-otzivi",
+							name: "Iliyan Asenov",
+							reviewtext: "Страхотна бръснарница. След няколко погрешни опита намерих точното място. Вниманието към клиента е на високо ниво. От вратата те посрещат с нещо за пиене кафе, вода, безалкохолно или Bullet бърбън. Вайба е чудесен, музиката не е прекалено силна или натрапваща. Всичко е уникално. Отидохме с няколко момчета и всички останахме очаровани. Крис беше нашия бръснар и силно го препоръчвам в момента и на други приятели."
 						},
 					]} />
 				</div>
