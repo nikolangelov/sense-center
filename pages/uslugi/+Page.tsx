@@ -141,13 +141,13 @@ export default function Page() {
 				<div class="flex flex-justify-center">
 					<div class="px-3 my-0 mx-auto text-center w-full">
 						<AnimatedComponent>
-							<h1 class="uppercase mt-30 md:mt-65 text-center">Всички наши услуги</h1>
+							<h1 class="uppercase mt-35 md:mt-65 text-center">Всички наши услуги</h1>
 						</AnimatedComponent>
 					</div>
 				</div>
 			</div>
 
-			<section class="pb-17 md-pt-35 pt-15">
+			<section class="pb-17 md-pt-35 pt-10">
 				<div class="container-in-services flex md-flex-row flex-col flex-justify-center flex-items-center flex-wrap mb-5 gap-15 lg-px-10 px-5">
 					<ServiceContainer
 						img="/assets/uslugi/мъжко-подстригване-1-mobile.webp"

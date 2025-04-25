@@ -237,12 +237,9 @@ html::-webkit-scrollbar-thumb {
   }
 }
 
-@media (min-width: 640px) {
+@media (max-width: 640px) {
   .home-img {
-    background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.7)), url('/assets/za-nas/the-barber-shop-sofia-2_result_result.webp') !important;
-    background-position: center top !important;
-    background-repeat: no-repeat !important;
-    background-size: cover !important;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.7)), url('/assets/za-nas/the-barber-shop-sofia-2_result_result.webp') !important;
   }
 }
 

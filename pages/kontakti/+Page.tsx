@@ -66,7 +66,7 @@ function WorkingHoursTable() {
 	const [today] = createSignal(getToday());
 
 	return (
-		<div class="w-full mx-auto lg:max-w-lg bg-white shadow-xl rounded-0 pt-6 pb-2 pt-10 md:p-8">
+		<div class="w-full mx-auto lg:max-w-lg bg-white shadow-xl rounded-0 pt-6 pb-4 pt-10 px-4 md:p-8">
 			<div>
 				<h2 class="text-2xl font-bold text-gray-800 text-center mb-4 flex items-center justify-center gap-3 mt-6">
 					<RiTimerLine class="c-brand" /> Работно време

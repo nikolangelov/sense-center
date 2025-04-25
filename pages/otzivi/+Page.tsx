@@ -12,6 +12,7 @@ import RiDoubleQuotesL from '~icons/ri/double-quotes-l';
 import RiDoubleQuotesR from '~icons/ri/double-quotes-r';
 import { ServiceContaner } from '../../components/ServiceContainer';
 import { FacebookLikeGallery } from "../../components/FacebookLikeGallery";
+import { AnimatedComponentSlide } from "../../components/AnimateOnViewSlide";
 
 export const ImageWithFrameReviewSlider = ({ children, buttonClass, ...props }: { children: JSX.Element | JSX.Element[], buttonClass?: string, services: { title: string }[] }) => {
 	const isDesktop = useMediaQuery("(min-width: 768px)");
@@ -198,19 +199,21 @@ export default function Page() {
 	return (
 		<>
 			<section class="lg-pt-50 pb-20 pt-30 px-2 md:px-4 w-full">
-				<div class="flex justify-center items-center mt-10 bg-paper-inv max-w-320px mx-auto">
-					<p class="font-500 c-paper my-2">4,8</p>
-					<div class="flex justify-center items-center gap-1 mx-2 mb-1">
-						<img class="w-5 h-5" src="/assets/output-onlinepngtools.png" />
-						<img class="w-5 h-5" src="/assets/output-onlinepngtools.png" />
-						<img class="w-5 h-5" src="/assets/output-onlinepngtools.png" />
-						<img class="w-5 h-5" src="/assets/output-onlinepngtools.png" />
-						<img class="w-5 h-5" src="/assets/output-onlinepngtools.png" />
+				<AnimatedComponent>
+					<div class="flex justify-center items-center mt-10 bg-paper-inv max-w-320px mx-auto">
+						<p class="font-500 c-paper my-2">4,8</p>
+						<div class="flex justify-center items-center gap-1 mx-2 mb-1">
+							<img class="w-5 h-5" src="/assets/output-onlinepngtools.png" />
+							<img class="w-5 h-5" src="/assets/output-onlinepngtools.png" />
+							<img class="w-5 h-5" src="/assets/output-onlinepngtools.png" />
+							<img class="w-5 h-5" src="/assets/output-onlinepngtools.png" />
+							<img class="w-5 h-5" src="/assets/output-onlinepngtools.png" />
+						</div>
+						<p class="font-500 c-paper my-2">(607 отзива)</p>
 					</div>
-					<p class="font-500 c-paper my-2">(607 отзива)</p>
-				</div>
-				<h1 class="uppercase pt-0 mt-10 mb-2 font-size-100px max-w-1200px mx-auto">Виж защо 600+ мъже ни оценяват с 5 звезди</h1>
-				<h2 class="font-500 lg:pb-6" style="font-family: 'Roboto', sans-serif !important;">Увери се сам</h2>
+					<h1 class="uppercase pt-0 mt-10 mb-2 font-size-100px max-w-1200px mx-auto">Виж защо 600+ мъже ни оценяват с 5 звезди</h1>
+					<h2 class="font-500 lg:pb-6" style="font-family: 'Roboto', sans-serif !important;">Увери се сам</h2>
+				</AnimatedComponent>
 				{/* <div class="flex flex-col items-center justify-center gap-20 md:gap-20 mx-2 md:mx-20 lg:mx-10 xl:mx-45">
 						{reviews.loading && <p>Loading reviews...</p>}
 						{reviews.error && <p>Error loading reviews: {reviews.error.message}</p>}
@@ -230,234 +233,245 @@ export default function Page() {
 						<p>No reviews available.</p>
 						)}
 					</div> */}
-				<BeforeAfterSlider
-					services={[
-						{ title: "Мъжко подстригване" },
-						{ title: "Бръснене на глава с бръснач" },
-						{ title: "Мъжко подстригване" },
-						{ title: "Бръснене на глава с бръснач" },
-						{ title: "Мъжко подстригване" },
-						{ title: "Бръснене на глава с бръснач" },
-						{ title: "Мъжко подстригване" },
-						{ title: "Бръснене на глава с бръснач" },
-					]}>
-					<BeforeAfterSliderContainer
-						altBefore="преди снимка на men's haircut and beard"
-						altAfter="след снимка на men's haircut and beard"
-						before="/assets/otzivi/men_s-haircut-and-beard-before.webp"
-						after="/assets/otzivi/men_s-haircut-and-beard-after.webp"
-					/>
-					<BeforeAfterSliderContainer
-						altBefore="преди снимка на подстригване и оформяне на брада"
-						altAfter="след снимка на подстригване и оформяне на брада"
-						before="/assets/otzivi/мъжко-подстригване-и-оформяне-на-брада-преди.webp"
-						after="/assets/otzivi/мъжко-подстригване-и-оформяне-на-брада-след.webp"
-					/>
-					<BeforeAfterSliderContainer
-						altBefore="преди снимка на мокро бръснене"
-						altAfter="след снимка на мокро бръснене"
-						before="/assets/otzivi/мокро-бръснене-преди.webp"
-						after="/assets/otzivi/мокро-бръснене-след.webp"
-					/>
-					<BeforeAfterSliderContainer
-						altBefore="преди снимка на мъжко подстригване софия"
-						altAfter="след снимка на мъжко подстригване софия"
-						before="/assets/otzivi/мъжко-подстригване-софия-преди.webp"
-						after="/assets/otzivi/мъжко-подстригване-софия-след.webp"
-					/>
-					<BeforeAfterSliderContainer
-						altBefore="преди снимка на детско подстригване момче"
-						altAfter="след снимка на детско подстригване момче"
-						before="/assets/otzivi/детско-подстригване-момче-преди (1).webp"
-						after="/assets/otzivi/детско-подстригване-момче-след (1).webp"
-					/>
-					<BeforeAfterSliderContainer
-						altBefore="преди снимка на детско подстригване"
-						altAfter="след снимка на детско подстригване"
-						before="/assets/otzivi/детско-подстригване-преди.webp"
-						after="/assets/otzivi/детско-подстригване-след.webp"
-					/>
-					<BeforeAfterSliderContainer
-						altBefore="преди снимка на мъжко подстригване"
-						altAfter="след снимка на мъжко подстригване"
-						before="/assets/otzivi/мъжко-подстригване-преди.webp"
-						after="/assets/otzivi/мъжко-подстригване-след.webp"
-					/>
-					<BeforeAfterSliderContainer
-						altBefore="преди снимка на buzz cut styles"
-						altAfter="след снимка на buzz cut styles"
-						before="/assets/otzivi/buzz-cut-and-beard-before.webp"
-						after="/assets/otzivi/buzz-cut-and-beard-after.webp"
-					/>
-				</BeforeAfterSlider>
+
+				<AnimatedComponent>
+					<BeforeAfterSlider
+						services={[
+							{ title: "Мъжко подстригване" },
+							{ title: "Бръснене на глава с бръснач" },
+							{ title: "Мъжко подстригване" },
+							{ title: "Бръснене на глава с бръснач" },
+							{ title: "Мъжко подстригване" },
+							{ title: "Бръснене на глава с бръснач" },
+							{ title: "Мъжко подстригване" },
+							{ title: "Бръснене на глава с бръснач" },
+						]}>
+						<BeforeAfterSliderContainer
+							altBefore="преди снимка на men's haircut and beard"
+							altAfter="след снимка на men's haircut and beard"
+							before="/assets/otzivi/men_s-haircut-and-beard-before.webp"
+							after="/assets/otzivi/men_s-haircut-and-beard-after.webp"
+						/>
+						<BeforeAfterSliderContainer
+							altBefore="преди снимка на подстригване и оформяне на брада"
+							altAfter="след снимка на подстригване и оформяне на брада"
+							before="/assets/otzivi/мъжко-подстригване-и-оформяне-на-брада-преди.webp"
+							after="/assets/otzivi/мъжко-подстригване-и-оформяне-на-брада-след.webp"
+						/>
+						<BeforeAfterSliderContainer
+							altBefore="преди снимка на мокро бръснене"
+							altAfter="след снимка на мокро бръснене"
+							before="/assets/otzivi/мокро-бръснене-преди.webp"
+							after="/assets/otzivi/мокро-бръснене-след.webp"
+						/>
+						<BeforeAfterSliderContainer
+							altBefore="преди снимка на мъжко подстригване софия"
+							altAfter="след снимка на мъжко подстригване софия"
+							before="/assets/otzivi/мъжко-подстригване-софия-преди.webp"
+							after="/assets/otzivi/мъжко-подстригване-софия-след.webp"
+						/>
+						<BeforeAfterSliderContainer
+							altBefore="преди снимка на детско подстригване момче"
+							altAfter="след снимка на детско подстригване момче"
+							before="/assets/otzivi/детско-подстригване-момче-преди (1).webp"
+							after="/assets/otzivi/детско-подстригване-момче-след (1).webp"
+						/>
+						<BeforeAfterSliderContainer
+							altBefore="преди снимка на детско подстригване"
+							altAfter="след снимка на детско подстригване"
+							before="/assets/otzivi/детско-подстригване-преди.webp"
+							after="/assets/otzivi/детско-подстригване-след.webp"
+						/>
+						<BeforeAfterSliderContainer
+							altBefore="преди снимка на мъжко подстригване"
+							altAfter="след снимка на мъжко подстригване"
+							before="/assets/otzivi/мъжко-подстригване-преди.webp"
+							after="/assets/otzivi/мъжко-подстригване-след.webp"
+						/>
+						<BeforeAfterSliderContainer
+							altBefore="преди снимка на buzz cut styles"
+							altAfter="след снимка на buzz cut styles"
+							before="/assets/otzivi/buzz-cut-and-beard-before.webp"
+							after="/assets/otzivi/buzz-cut-and-beard-after.webp"
+						/>
+					</BeforeAfterSlider>
+				</AnimatedComponent>
 			</section>
 
 			<section class="pb-20" style="background-color: #222222; background-image: url(/assets/bg-2.jpg); background-position: center center; background-repeat: no-repeat; background-size: cover;">
-				<H2WithImage class="c-paper" title="Над 25 000 мъже ни се довериха" />
-				<ImageWithFrameReviewSlider
-					services={[
-						{ title: "Мъжко подстригване" },
-						{ title: "Мъжко подстригване" },
-						{ title: "Мъжко подстригване" },
-					]}>
-					<ImageWithFrameReview
-						hrefGoogleReview="https://maps.app.goo.gl/E3BJm1q3Fj3j51Bh7"
-						style="filter: brightness(1.1); filter: saturate(1.1);"
-						src="/assets/otzivi/mazhko-podstrigvane-otzivi.png"
-						service="Подстригване и оформяне на брада"
-						text="Чудесна обстановка. Млади момчета със завидни умения. Горещо препоръчвам !"
-						date="Септември 2022"
-					/>
-					<ImageWithFrameReview
-						hrefGoogleReview="https://maps.app.goo.gl/NjWquoiBcNHEHHzC9"
-						style="filter: brightness(1.1); filter: saturate(1.1);"
-						src="/assets/otzivi/detska-pricheska-otzivi.jpg"
-						service="Детско подстригване"
-						text="супер за мъжко подстригване! любими!"
-						date="Март 2020"
-					/>
-					<ImageWithFrameReview
-						hrefGoogleReview="https://maps.app.goo.gl/vLrS9ffAGBgeZ6xf9"
-						style="filter: saturate(1.3);"
-						src="/assets/otzivi/barbershop-podstrigvane-otzivi.jpg"
-						service="Мъжко подстригване"
-						text={
-							<>
-								Put the “bar” in barber. 🥃<br />
-								Cool place and great work.
-							</>
-						}
-						date="Юни 2024"
-					/>
-				</ImageWithFrameReviewSlider>
+				<AnimatedComponent>
+					<H2WithImage class="c-paper" title="Над 25 000 мъже ни се довериха" />
+					<ImageWithFrameReviewSlider
+						services={[
+							{ title: "Мъжко подстригване" },
+							{ title: "Мъжко подстригване" },
+							{ title: "Мъжко подстригване" },
+						]}>
+						<ImageWithFrameReview
+							hrefGoogleReview="https://maps.app.goo.gl/E3BJm1q3Fj3j51Bh7"
+							style="filter: brightness(1.1); filter: saturate(1.1);"
+							src="/assets/otzivi/mazhko-podstrigvane-otzivi.png"
+							service="Подстригване и оформяне на брада"
+							text="Чудесна обстановка. Млади момчета със завидни умения. Горещо препоръчвам !"
+							date="Септември 2022"
+						/>
+						<ImageWithFrameReview
+							hrefGoogleReview="https://maps.app.goo.gl/NjWquoiBcNHEHHzC9"
+							style="filter: brightness(1.1); filter: saturate(1.1);"
+							src="/assets/otzivi/detska-pricheska-otzivi.jpg"
+							service="Детско подстригване"
+							text="супер за мъжко подстригване! любими!"
+							date="Март 2020"
+						/>
+						<ImageWithFrameReview
+							hrefGoogleReview="https://maps.app.goo.gl/vLrS9ffAGBgeZ6xf9"
+							style="filter: saturate(1.3);"
+							src="/assets/otzivi/barbershop-podstrigvane-otzivi.jpg"
+							service="Мъжко подстригване"
+							text={
+								<>
+									Put the “bar” in barber. 🥃<br />
+									Cool place and great work.
+								</>
+							}
+							date="Юни 2024"
+						/>
+					</ImageWithFrameReviewSlider>
+				</AnimatedComponent>
 			</section>
 
 			<section class="pb-20">
-				<H2WithImage title="Истинският стил не остарява" />
-				<QuotationReviewsSlider
-					services={[
-						{ title: "Ivo Stoilov" },
-						{ title: "Atanas Todorov" },
-						{ title: "Boyan Kushev" },
-						{ title: "Владислав Кръстев" },
-						{ title: "Emil Petrov" },
-						{ title: "kwphoto (kaiwphoto)" },
-						{ title: "Сергей Тодоров" },
-						{ title: "Stanislav Radnev" },
-						{ title: "Milen Stoychev" },
-						{ title: "Asen Milushev" },
-						{ title: "Peter Porcsin" },
-					]}>
-					<QuotationReview
-						hrefGoogleReview="https://maps.app.goo.gl/KBUVDZYnpP5LVvvV9"
-						profile="https://lh3.googleusercontent.com/a/ACg8ocLWnMywRvuwLG7VQ139JpqiZ6wPoPXsTsqwFfPSiCwgRtJaUQ=w60-h60-p-rp-mo-ba4-br100"
-						name="Ivo Stoilov"
-						text="Професионално изпълнена услуга без нищо излишно. Горещо препоръчвам на онези, които се колебаят."
-					/>
-					<QuotationReview
-						hrefGoogleReview="https://maps.app.goo.gl/XZXwyFAayeZytLyw7"
-						profile="https://lh3.googleusercontent.com/a/ACg8ocJ_KKHOzZE4Ftt0W8DLSyBKEax5yf70TschrH7TeFjbB9L0Lewf=w60-h60-p-rp-mo-ba4-br100"
-						name="Atanas Todorov"
-						text={
-							<>
-								Страхотен и приветлив салон.<br />
-								Пълен с професионалисти!<br />
-								Винаги си тръгвам доволен и определено препоръчвам Крис!
-							</>
-						}
-					/>
-					<QuotationReview
-						hrefGoogleReview="https://maps.app.goo.gl/94QfkBnJtyiCdZyy7"
-						profile="https://lh3.googleusercontent.com/a-/ALV-UjUhQYeQnFgrsAMbQarajSe_IJCdyJMpaetviwsOTST7tBzT5YbHEA=w60-h60-p-rp-mo-ba2-br100"
-						name="Boyan Kushev"
-						text="Excellent service, very nice and clean place! Definitely recommended 🤟🤟🤟"
-					/>
-					<QuotationReview
-						hrefGoogleReview="https://maps.app.goo.gl/bjzxPpPaPNJREgWX7"
-						profile="https://lh3.googleusercontent.com/a-/ALV-UjXHkShzrEvrn1Msl-90BRv6kr0QGUE9lZfnJMVgR3rwUpDH8x0F=w60-h60-p-rp-mo-br100"
-						name="Владислав Кръстев"
-						text="Жестоко обслужване, останах впечатлен от колектива🔥"
-					/>
-					<QuotationReview
-						hrefGoogleReview="https://maps.app.goo.gl/BspTBGPhpDrx6dW88"
-						profile="https://lh3.googleusercontent.com/a/ACg8ocJ1zjYvAOS79Z60hlPT9tWl46x1tM6IaSF4QHT__nqvhCODnw=w60-h60-p-rp-mo-br100"
-						name="Emil Petrov"
-						text="Топ обслужване! Топ чистота! Топ професионалисти! Препоръчвам ГОРЕЩО!!"
-					/>
-					<QuotationReview
-						hrefGoogleReview="https://maps.app.goo.gl/qUyHy2FyXvYmSTbD8"
-						profile="https://lh3.googleusercontent.com/a-/ALV-UjX3u2X5QdDO4v7TUP7exT8ozRWLW4yt1YFPMkjypWtHr90dyiGz9w=w60-h60-p-rp-mo-ba3-br100"
-						name="kwphoto (kaiwphoto)"
-						text="Great friendly service and excellent haircut, highly recommend!"
-					/>
-					<QuotationReview
-						hrefGoogleReview="https://maps.app.goo.gl/Y7ajmTmu2VnNR8626"
-						profile="https://lh3.googleusercontent.com/a-/ALV-UjVBq5stDsmvj2NzlYeLZPQ8_CZXIeShUqBOMFxjtWsxfUS_QSbr=w60-h60-p-rp-mo-ba4-br100"
-						name="Сергей Тодоров"
-						text="С Крис прическата винаги е топ!"
-					/>
-					<QuotationReview
-						hrefGoogleReview="https://maps.app.goo.gl/Xb4ZVyjj6gBee3yk6"
-						profile="https://lh3.googleusercontent.com/a/ACg8ocLDzToQ_w571qNxKr2Bcc3SV5kCpqLqB43eGDZmyn0bUhCShQ=w60-h60-p-rp-mo-br100"
-						name="Stanislav Radnev"
-						text={
-							<>
-								I have been going there for the last 7 years and the service is impeccable.<br />
-								Would recommend to everyone.
-							</>
-						}
-					/>
-					<QuotationReview
-						hrefGoogleReview="https://maps.app.goo.gl/gBoXpqFRDBN7WHnh8"
-						profile="https://lh3.googleusercontent.com/a/ACg8ocKv-zkwq_FEtAeVKkzw1R6PofmnSjtBbIb0fqPiHTkFZNOOHA=w60-h60-p-rp-mo-ba4-br100"
-						name="Milen Stoychev"
-						text="Работят добре и се грижат клиента да се чувства удобно"
-					/>
-					<QuotationReview
-						hrefGoogleReview="https://maps.app.goo.gl/U8reoTq5zDHnu4fw9"
-						profile="https://lh3.googleusercontent.com/a/ACg8ocL-dqaTsWyJG5MpcbqdPJL69PxxtxOnezmEvyrGs56AwUHPbQ=w60-h60-p-rp-mo-ba2-br100"
-						name="Asen Milushev"
-						text="Най-доброто подстригване, съчетано с перфектен experience и приятни разговори. 10/10"
-					/>
-					<QuotationReview
-						hrefGoogleReview="https://maps.app.goo.gl/JMqfb2ZeC8QM7Y3b9"
-						profile="https://lh3.googleusercontent.com/a-/ALV-UjX-kRra9VJsAQ--TuBQuRTgk5QVlb28ko4j0PxNESFoPleqeleJ=w60-h60-p-rp-mo-ba3-br100"
-						name="Peter Porcsin"
-						text={
-							<>
-								I am very satisfied.<br />
-								I can only recommend it, after trimming my beard I got two new girlfriends. ;)
-							</>
-						}
-					/>
-				</QuotationReviewsSlider>
+				<AnimatedComponent>
+					<H2WithImage title="Истинският стил не остарява" />
+					<QuotationReviewsSlider
+						services={[
+							{ title: "Ivo Stoilov" },
+							{ title: "Atanas Todorov" },
+							{ title: "Boyan Kushev" },
+							{ title: "Владислав Кръстев" },
+							{ title: "Emil Petrov" },
+							{ title: "kwphoto (kaiwphoto)" },
+							{ title: "Сергей Тодоров" },
+							{ title: "Stanislav Radnev" },
+							{ title: "Milen Stoychev" },
+							{ title: "Asen Milushev" },
+							{ title: "Peter Porcsin" },
+						]}>
+						<QuotationReview
+							hrefGoogleReview="https://maps.app.goo.gl/KBUVDZYnpP5LVvvV9"
+							profile="https://lh3.googleusercontent.com/a/ACg8ocLWnMywRvuwLG7VQ139JpqiZ6wPoPXsTsqwFfPSiCwgRtJaUQ=w60-h60-p-rp-mo-ba4-br100"
+							name="Ivo Stoilov"
+							text="Професионално изпълнена услуга без нищо излишно. Горещо препоръчвам на онези, които се колебаят."
+						/>
+						<QuotationReview
+							hrefGoogleReview="https://maps.app.goo.gl/XZXwyFAayeZytLyw7"
+							profile="https://lh3.googleusercontent.com/a/ACg8ocJ_KKHOzZE4Ftt0W8DLSyBKEax5yf70TschrH7TeFjbB9L0Lewf=w60-h60-p-rp-mo-ba4-br100"
+							name="Atanas Todorov"
+							text={
+								<>
+									Страхотен и приветлив салон.<br />
+									Пълен с професионалисти!<br />
+									Винаги си тръгвам доволен и определено препоръчвам Крис!
+								</>
+							}
+						/>
+						<QuotationReview
+							hrefGoogleReview="https://maps.app.goo.gl/94QfkBnJtyiCdZyy7"
+							profile="https://lh3.googleusercontent.com/a-/ALV-UjUhQYeQnFgrsAMbQarajSe_IJCdyJMpaetviwsOTST7tBzT5YbHEA=w60-h60-p-rp-mo-ba2-br100"
+							name="Boyan Kushev"
+							text="Excellent service, very nice and clean place! Definitely recommended 🤟🤟🤟"
+						/>
+						<QuotationReview
+							hrefGoogleReview="https://maps.app.goo.gl/bjzxPpPaPNJREgWX7"
+							profile="https://lh3.googleusercontent.com/a-/ALV-UjXHkShzrEvrn1Msl-90BRv6kr0QGUE9lZfnJMVgR3rwUpDH8x0F=w60-h60-p-rp-mo-br100"
+							name="Владислав Кръстев"
+							text="Жестоко обслужване, останах впечатлен от колектива🔥"
+						/>
+						<QuotationReview
+							hrefGoogleReview="https://maps.app.goo.gl/BspTBGPhpDrx6dW88"
+							profile="https://lh3.googleusercontent.com/a/ACg8ocJ1zjYvAOS79Z60hlPT9tWl46x1tM6IaSF4QHT__nqvhCODnw=w60-h60-p-rp-mo-br100"
+							name="Emil Petrov"
+							text="Топ обслужване! Топ чистота! Топ професионалисти! Препоръчвам ГОРЕЩО!!"
+						/>
+						<QuotationReview
+							hrefGoogleReview="https://maps.app.goo.gl/qUyHy2FyXvYmSTbD8"
+							profile="https://lh3.googleusercontent.com/a-/ALV-UjX3u2X5QdDO4v7TUP7exT8ozRWLW4yt1YFPMkjypWtHr90dyiGz9w=w60-h60-p-rp-mo-ba3-br100"
+							name="kwphoto (kaiwphoto)"
+							text="Great friendly service and excellent haircut, highly recommend!"
+						/>
+						<QuotationReview
+							hrefGoogleReview="https://maps.app.goo.gl/Y7ajmTmu2VnNR8626"
+							profile="https://lh3.googleusercontent.com/a-/ALV-UjVBq5stDsmvj2NzlYeLZPQ8_CZXIeShUqBOMFxjtWsxfUS_QSbr=w60-h60-p-rp-mo-ba4-br100"
+							name="Сергей Тодоров"
+							text="С Крис прическата винаги е топ!"
+						/>
+						<QuotationReview
+							hrefGoogleReview="https://maps.app.goo.gl/Xb4ZVyjj6gBee3yk6"
+							profile="https://lh3.googleusercontent.com/a/ACg8ocLDzToQ_w571qNxKr2Bcc3SV5kCpqLqB43eGDZmyn0bUhCShQ=w60-h60-p-rp-mo-br100"
+							name="Stanislav Radnev"
+							text={
+								<>
+									I have been going there for the last 7 years and the service is impeccable.<br />
+									Would recommend to everyone.
+								</>
+							}
+						/>
+						<QuotationReview
+							hrefGoogleReview="https://maps.app.goo.gl/gBoXpqFRDBN7WHnh8"
+							profile="https://lh3.googleusercontent.com/a/ACg8ocKv-zkwq_FEtAeVKkzw1R6PofmnSjtBbIb0fqPiHTkFZNOOHA=w60-h60-p-rp-mo-ba4-br100"
+							name="Milen Stoychev"
+							text="Работят добре и се грижат клиента да се чувства удобно"
+						/>
+						<QuotationReview
+							hrefGoogleReview="https://maps.app.goo.gl/U8reoTq5zDHnu4fw9"
+							profile="https://lh3.googleusercontent.com/a/ACg8ocL-dqaTsWyJG5MpcbqdPJL69PxxtxOnezmEvyrGs56AwUHPbQ=w60-h60-p-rp-mo-ba2-br100"
+							name="Asen Milushev"
+							text="Най-доброто подстригване, съчетано с перфектен experience и приятни разговори. 10/10"
+						/>
+						<QuotationReview
+							hrefGoogleReview="https://maps.app.goo.gl/JMqfb2ZeC8QM7Y3b9"
+							profile="https://lh3.googleusercontent.com/a-/ALV-UjX-kRra9VJsAQ--TuBQuRTgk5QVlb28ko4j0PxNESFoPleqeleJ=w60-h60-p-rp-mo-ba3-br100"
+							name="Peter Porcsin"
+							text={
+								<>
+									I am very satisfied.<br />
+									I can only recommend it, after trimming my beard I got two new girlfriends. ;)
+								</>
+							}
+						/>
+					</QuotationReviewsSlider>
+				</AnimatedComponent>
 			</section>
 
 			<section class="pb-20" style="background-color: #222222; background-image: url(/assets/bg-2.jpg); background-position: center center; background-repeat: no-repeat; background-size: cover;">
-				<H2WithImage class="c-paper" title="Най-добрите знаят къде да отидат" />
-				<div class="flex flex-col justify-center items-center gap-15 px-4 md:px-6">
-					<SquareImageReview
-						hrefGoogleReview="https://maps.app.goo.gl/3HrojookYmXtUJyF9"
-						src="/assets/otzivi/ivailo-otzivi-snimka.jpg"
-						text="Като бивш и настоящ гангстер, за мен визията е изкл. важна за да мога да съм представителен пред враговете ми. Професионалистите от Барбършоп винаги знаят какъв е най-добрия стил за мен, така че да изглеждам и заплашителен и привлекателен. Всеки мафия бос трябва да ги избере. Генг Генг"
-						date="Ивайло Иванов"
-					/>
-					<SquareImageReview
-						hrefGoogleReview="https://maps.app.goo.gl/SnazZcBVWAQrvcn7A"
-						src="/assets/otzivi/georgi-otzivi-snimka.jpg"
-						text={
-							<>
-								За първи път посещавам The Barber Shop. Крис ме изслуша и след това подстрига с изключително внимание към детайла и моите предпочитания. Атмосферата е много приятна, а за резултатите можете да прецените сами.<br />
-								С ръка на сърцето мога да кажа, че това е най-добрата бръснарница в София от тези, които съм посетил.
-							</>
-						}
-						date="Georgi Pleshkov"
-					/>
-				</div>
+				<AnimatedComponent>
+					<H2WithImage class="c-paper" title="Най-добрите знаят къде да отидат" />
+					<div class="flex flex-col justify-center items-center gap-15 px-4 md:px-6">
+						<SquareImageReview
+							hrefGoogleReview="https://maps.app.goo.gl/3HrojookYmXtUJyF9"
+							src="/assets/otzivi/ivailo-otzivi-snimka.jpg"
+							text="Като бивш и настоящ гангстер, за мен визията е изкл. важна за да мога да съм представителен пред враговете ми. Професионалистите от Барбършоп винаги знаят какъв е най-добрия стил за мен, така че да изглеждам и заплашителен и привлекателен. Всеки мафия бос трябва да ги избере. Генг Генг"
+							date="Ивайло Иванов"
+						/>
+						<SquareImageReview
+							hrefGoogleReview="https://maps.app.goo.gl/SnazZcBVWAQrvcn7A"
+							src="/assets/otzivi/georgi-otzivi-snimka.jpg"
+							text={
+								<>
+									За първи път посещавам The Barber Shop. Крис ме изслуша и след това подстрига с изключително внимание към детайла и моите предпочитания. Атмосферата е много приятна, а за резултатите можете да прецените сами.<br />
+									С ръка на сърцето мога да кажа, че това е най-добрата бръснарница в София от тези, които съм посетил.
+								</>
+							}
+							date="Georgi Pleshkov"
+						/>
+					</div>
+				</AnimatedComponent>
 			</section>
 
 			<section class="pb-20">
-				<H2WithImage title="Открий своя стил" />
+				<AnimatedComponentSlide>
+					<H2WithImage title="Открий своя стил" />
+				</AnimatedComponentSlide>
 				<div class="flex flex-wrap flex-justify-center lg-gap-15 gap-15 px-5">
 					<ServiceContaner
 						img="/assets/home/stylish-buzz-cuts.webp"
@@ -511,29 +525,31 @@ export default function Page() {
 			</section>
 
 			<section class="pb-14 md:pb-18" style="background-color: #222222; background-image: url(/assets/bg-2.jpg); background-position: center center; background-repeat: no-repeat; background-size: cover;">
-				<H2WithImage class="c-paper" title="Виж защо 600+ мъже ни оценяват с 5 звезди" />
-				<div class="max-w-900px m-auto px-5">
-					<FacebookLikeGallery imgs={[
-						{
-							src: "/assets/otzivi/podstrigvane-barbershop-otzivi.jpg",
-							alt: "mazhka-pricheska-otzivi",
-							name: "Borislav Donchev",
-							reviewtext: "The Barber Shop е страхотно място! Най-обикновени неща като оформяне на брада, при тях е цяло изживяване. Кристиян Митов е ТОП бръснар! Евала момчета. Keep it going! Силно препоръчвам бръснарницата!!!"
-						},
-						{
-							src: "/assets/otzivi/podstrigvane-na-mazhka-kosa-barbershop.jpg",
-							alt: "mazhko-podstrigvane-otzivi",
-							name: "Georgi Pleshkov",
-							reviewtext: "За първи път посещавам The Barber Shop. Крис ме изслуша и след това подстрига с изключително внимание към детайла и моите предпочитания. Атмосферата е много приятна, а за резултатите можете да прецените сами. С ръка на сърцето мога да кажа, че това е най-добрата бръснарница в София от тези, които съм посетил."
-						},
-						{
-							src: "/assets/otzivi/barbershop-mazhko-podstrigvane-otzivi.png",
-							alt: "mazhka-pricheska-i-oformiane-na-brada-otzivi",
-							name: "Iliyan Asenov",
-							reviewtext: "Страхотна бръснарница. След няколко погрешни опита намерих точното място. Вниманието към клиента е на високо ниво. От вратата те посрещат с нещо за пиене кафе, вода, безалкохолно или Bullet бърбън. Вайба е чудесен, музиката не е прекалено силна или натрапваща. Всичко е уникално. Отидохме с няколко момчета и всички останахме очаровани. Крис беше нашия бръснар и силно го препоръчвам в момента и на други приятели."
-						},
-					]} />
-				</div>
+				<AnimatedComponent>
+					<H2WithImage class="c-paper" title="Виж защо 600+ мъже ни оценяват с 5 звезди" />
+					<div class="max-w-900px m-auto px-5">
+						<FacebookLikeGallery imgs={[
+							{
+								src: "/assets/otzivi/podstrigvane-barbershop-otzivi.jpg",
+								alt: "mazhka-pricheska-otzivi",
+								name: "Borislav Donchev",
+								reviewtext: "The Barber Shop е страхотно място! Най-обикновени неща като оформяне на брада, при тях е цяло изживяване. Кристиян Митов е ТОП бръснар! Евала момчета. Keep it going! Силно препоръчвам бръснарницата!!!"
+							},
+							{
+								src: "/assets/otzivi/podstrigvane-na-mazhka-kosa-barbershop.jpg",
+								alt: "mazhko-podstrigvane-otzivi",
+								name: "Georgi Pleshkov",
+								reviewtext: "За първи път посещавам The Barber Shop. Крис ме изслуша и след това подстрига с изключително внимание към детайла и моите предпочитания. Атмосферата е много приятна, а за резултатите можете да прецените сами. С ръка на сърцето мога да кажа, че това е най-добрата бръснарница в София от тези, които съм посетил."
+							},
+							{
+								src: "/assets/otzivi/barbershop-mazhko-podstrigvane-otzivi.png",
+								alt: "mazhka-pricheska-i-oformiane-na-brada-otzivi",
+								name: "Iliyan Asenov",
+								reviewtext: "Страхотна бръснарница. След няколко погрешни опита намерих точното място. Вниманието към клиента е на високо ниво. От вратата те посрещат с нещо за пиене кафе, вода, безалкохолно или Bullet бърбън. Вайба е чудесен, музиката не е прекалено силна или натрапваща. Всичко е уникално. Отидохме с няколко момчета и всички останахме очаровани. Крис беше нашия бръснар и силно го препоръчвам в момента и на други приятели."
+							},
+						]} />
+					</div>
+				</AnimatedComponent>
 			</section>
 
 			{/* <section class="pb-20">

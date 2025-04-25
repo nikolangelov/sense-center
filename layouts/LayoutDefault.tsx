@@ -675,7 +675,7 @@ function HamburgerMenu() {
       </div>
       <Show when={open()}>
         <div
-          class="fixed w-full h-full left-0 top-0 px-15 pt-10 transition-all transition-duration-400"
+          class="fixed w-full h-full left-0 top-0 px-10 pt-10 transition-all transition-duration-400"
           style={`
             height: 100vh;
             opacity: ${opacity()};
@@ -727,7 +727,7 @@ function MobileDropdownMenuItem(props: {
       </div>
 
       <div
-        class={`pl-2 overflow-auto transition-all duration-300 ease-in-out ${open() ? "max-h-200 opacity-100" : "max-h-0 opacity-0"}`}
+        class={`pl-4 overflow-auto transition-all duration-300 ease-in-out ${open() ? "max-h-200 opacity-100" : "max-h-0 opacity-0"}`}
       >
         {props.subMenu?.map((item) => (
           <a
