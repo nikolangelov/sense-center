@@ -651,7 +651,7 @@ function HamburgerMenu() {
           <img src="/assets/logo-mobile.png" class="w-13 mr--4 mt-4" alt="fine-carpet-cleaning-logo" />
         </a>
       </div>
-      <a href="/test">
+      <a href="https://book.thebarbershop.bg/reservations/start?site=1" target="_blank" rel="noopener noreferrer">
         <button
           onClick={closeMenu}
           class="cursor-pointer bg-brand-compliment c-paper b-solid b-2px b-brand-compliment uppercase font-size-3.5 font-500 px-7 py-2 hover-c-paper-inv transition-colors block lg-hidden"
