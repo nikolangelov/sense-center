@@ -88,44 +88,46 @@ function ServiceContainer(props: { href: string, title: string, desc: string, pr
 						</div>
 					</a>
 				) : (
-					<div
-						ref={containerRef}
-						class="block h-full relative flex flex-col justify-end group overflow-hidden"
-						style={{
-							"background-image": `linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 1)), url(${props.img})`,
-							"background-position": "center",
-							"background-repeat": "no-repeat",
-							"background-size": "cover",
-						}}
-						role="img" aria-label={props.alt}>
-						<span class={`before:absolute before:content-empty before:bg-[#bbbbbb] before:z-[1] before:w-[1px] before:h-[80%] before:top-[1rem] before:left-[1rem] 
+					<a href={props.href}>
+						<div
+							ref={containerRef}
+							class="block h-full relative flex flex-col justify-end group overflow-hidden"
+							style={{
+								"background-image": `linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 1)), url(${props.img})`,
+								"background-position": "center",
+								"background-repeat": "no-repeat",
+								"background-size": "cover",
+							}}
+							role="img" aria-label={props.alt}>
+							<span class={`before:absolute before:content-empty before:bg-[#bbbbbb] before:z-[1] before:w-[1px] before:h-[80%] before:top-[1rem] before:left-[1rem] 
                   after:absolute after:content-empty after:bg-[#bbbbbb] after:z-[1] after:h-[1px] after:w-[80%] after:top-[1rem] after:left-[1rem]
                   before:transition-all before:duration-700 before:ease-in-out after:transition-all after:duration-700 after:ease-in-out 
                   ${isVisible() ? "before:h-[calc(100%-2rem)] after:w-[calc(100%-2rem)]" : ""}`}>
-						</span>
-						<span class={`before:absolute before:content-empty before:bg-[#bbbbbb] before:z-[1] before:w-[1px] before:h-[80%] before:bottom-[1rem] before:right-[1rem] 
+							</span>
+							<span class={`before:absolute before:content-empty before:bg-[#bbbbbb] before:z-[1] before:w-[1px] before:h-[80%] before:bottom-[1rem] before:right-[1rem] 
                   after:absolute after:content-empty after:bg-[#bbbbbb] after:z-[1] after:h-[1px] after:w-[80%] after:right-[1rem] after:bottom-[1rem]
                   before:transition-all before:duration-700 before:ease-in-out after:transition-all after:duration-700 after:ease-in-out 
                   ${isVisible() ? "before:h-[calc(100%-2rem)] after:w-[calc(100%-2rem)]" : ""}`}>
-						</span>
-						<div class="relative z-10 px-8 pb-8 flex flex-col items-center justify-end h-full">
-							<div class="flex flex-col items-center text-center transition-all duration-700 ease-in-out ">
-								<MdiScissors class="c-paper mx-auto rotate-[270deg] w-8" />
-								<div class="w-250px">
-									<h3 class="c-paper mt-1 important-mb-1">{props.title}</h3>
-								</div>
-								<div class="h-[1px] transition-all duration-900 ease-in-out bg-brand"
-									style={{ width: `${arrowWidth()}px` }}>
-								</div>
-								{/* <div class="c-paper text-left pt-4 pr-6 pl-10 text-lg leading-7 mt-auto">
-									{props.desc}
-								</div> */}
-								<div class="flex flex-col flex-items-center pt-4">
-									<div class="bg-none c-paper b-solid b-1px b-paper hover-b-brand hover-bg-brand transition-colors mx-auto uppercase font-size-4 font-500 px-7 py-2" style="font-family: 'Oswald', sans-serif !important; letter-spacing: 1px;">Вижте повече</div>
+							</span>
+							<div class="relative z-10 px-8 pb-8 flex flex-col items-center justify-end h-full">
+								<div class="flex flex-col items-center text-center transition-all duration-700 ease-in-out ">
+									<MdiScissors class="c-paper mx-auto rotate-[270deg] w-8" />
+									<div class="w-250px">
+										<h3 class="c-paper mt-1 important-mb-2">{props.title}</h3>
+									</div>
+									<div class="h-[1px] transition-all duration-900 ease-in-out bg-brand"
+										style={{ width: `${arrowWidth()}px` }}>
+									</div>
+									{/* <div class="c-paper text-left pt-4 pr-6 pl-10 text-lg leading-7 mt-auto">
+										{props.desc}
+									</div> */}
+									<div class="flex flex-col flex-items-center pt-6">
+										<div class="bg-none c-paper b-solid b-1px b-paper hover-b-brand hover-bg-brand transition-colors mx-auto uppercase font-size-4 font-500 px-7 py-2" style="font-family: 'Oswald', sans-serif !important; letter-spacing: 1px;">Вижте повече</div>
+									</div>
 								</div>
 							</div>
 						</div>
-					</div>
+					</a>
 				)}
 			</AnimatedComponent>
 		</>

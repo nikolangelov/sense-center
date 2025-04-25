@@ -75,15 +75,15 @@ const CookieConsent = () => {
   const applyPreferences = () => {
     const preferences = cookiePreferences();
     console.log("[CookieConsent] Applying preferences:", preferences);
-  
+
     Cookies.set("necessary_cookie", "true", { expires: 30 });
-  
+
     if (preferences.functional) {
       Cookies.set("functional_cookie", "true", { expires: 30 });
     } else {
       Cookies.remove("functional_cookie");
     }
-  
+
     if (preferences.analytics) {
       Cookies.set("analytics_cookie", "true", { expires: 30 });
       console.log("[CookieConsent] Loading Google Analytics");
@@ -93,26 +93,26 @@ const CookieConsent = () => {
       console.log("[CookieConsent] Removing Google Analytics");
       removeGoogleAnalytics();
     }
-  
+
     if (preferences.advertising) {
       Cookies.set("advertising_cookie", "true", { expires: 30 });
     } else {
       Cookies.remove("advertising_cookie");
     }
-  
+
     if (preferences.thirdParty) {
       Cookies.set("third_party_cookie", "true", { expires: 30 });
     } else {
       Cookies.remove("third_party_cookie");
     }
-  };  
+  };
 
   onMount(() => {
     const savedPreferences = Cookies.get("cookiePreferences");
     const bannerClosed = Cookies.get("bannerClosed");
-  
+
     console.log("[CookieConsent] onMount called");
-  
+
     if (savedPreferences) {
       const preferences = JSON.parse(savedPreferences);
       console.log("[CookieConsent] Loaded saved preferences:", preferences);
@@ -128,7 +128,7 @@ const CookieConsent = () => {
         thirdParty: false,
       };
       console.log("[CookieConsent] No saved preferences, auto-applying initialPrefs:", initialPrefs);
-  
+
       setCookiePreferences(initialPrefs);
       Cookies.set("cookiePreferences", JSON.stringify(initialPrefs), {
         expires: 365,
@@ -138,28 +138,28 @@ const CookieConsent = () => {
       setHasMadeChoice(true);
       applyPreferences();
     }
-  
+
     if (bannerClosed !== "true" && !savedPreferences) {
       setShowBanner(true);
     }
   });
-  
+
   const closeBanner = () => {
     Cookies.set("bannerClosed", "true", { expires: 365, path: "/" });
     setShowBanner(false);
   };
 
-const savePreferences = () => {
-  const preferences = cookiePreferences();
-  Cookies.set("cookiePreferences", JSON.stringify(preferences), {
-    expires: 365,
-    path: "/",
-  });
-  Cookies.set("bannerClosed", "true", { expires: 365, path: "/" });
-  setHasMadeChoice(true);
-  applyPreferences();
-  setShowSettings(false);
-};
+  const savePreferences = () => {
+    const preferences = cookiePreferences();
+    Cookies.set("cookiePreferences", JSON.stringify(preferences), {
+      expires: 365,
+      path: "/",
+    });
+    Cookies.set("bannerClosed", "true", { expires: 365, path: "/" });
+    setHasMadeChoice(true);
+    applyPreferences();
+    setShowSettings(false);
+  };
 
   const acceptAll = () => {
     setCookiePreferences({
@@ -170,7 +170,15 @@ const savePreferences = () => {
       thirdParty: true,
     });
     savePreferences();
-  };  
+  };
+
+  const Cookie = (props: {}) => {
+    return (
+      <>
+
+      </>
+    )
+  }
 
   const CookieCategory = (props: {
     title: string;
@@ -266,7 +274,7 @@ const savePreferences = () => {
             />
 
             <div class="flex justify-center md-justify-end gap-3 mt-1 md-mt-0 pt-0">
-              <button class="b-solid b-2 b-brand-compliment bg-brand-compliment hover-bg-brand transition-colors hover-b-brand font-700 font-size-2.7 md-font-size-4 uppercase c-paper cursor-pointer py-1.5 md-py-3.5 px-4 md-px-5 mt-4 md-mt-10 line-height-4" style="font-family: 'Oswald', sans-serif !important; letter-spacing: 1px;" onClick={acceptAll}>Accept all</button> 
+              <button class="b-solid b-2 b-brand-compliment bg-brand-compliment hover-bg-brand transition-colors hover-b-brand font-700 font-size-2.7 md-font-size-4 uppercase c-paper cursor-pointer py-1.5 md-py-3.5 px-4 md-px-5 mt-4 md-mt-10 line-height-4" style="font-family: 'Oswald', sans-serif !important; letter-spacing: 1px;" onClick={acceptAll}>Accept all</button>
               <button class="b-solid b-2 b-brand-compliment bg-paper hover-c-brand transition-colors hover-b-brand font-700 font-size-2.7 md-font-size-4 uppercase c-brand-compliment cursor-pointer py-1.5 md-py-3.5 px-4 md-px-5 mt-4 md-mt-10 line-height-4" style="font-family: 'Oswald', sans-serif !important; letter-spacing: 1px;" onClick={savePreferences}>Save settings</button>
               <button class="b-solid b-2 b-brand-compliment bg-paper hover-c-brand transition-colors hover-b-brand font-700 font-size-2.7 md-font-size-4 uppercase c-brand-compliment cursor-pointer py-1.5 md-py-3.5 px-4 md-px-5 mt-4 md-mt-10 line-height-4" style="font-family: 'Oswald', sans-serif !important; letter-spacing: 1px;" onClick={() => setShowSettings(false)}>Close</button>
             </div>
@@ -352,7 +360,7 @@ export default function LayoutDefault(props: { children?: JSX.Element }) {
         <HamburgerMenu />
       </Topbar>
       <Content>{childrenMemo()}</Content>
-      <CookieConsent />
+      {/* <CookieConsent /> */}
       <BackToTopArrow></BackToTopArrow>
       <TopFooter />
       <MainFooter>
@@ -492,7 +500,7 @@ function TopFooter() {
         </div>
         <AnimatedComponent class="flex flex-justify-center pb-20">
           <div class="flex flex-justify-evenly lg-flex-justify-center lg-mt-5 w-full lg-gap-15 max-w-80% lg-max-w-1100px lg:border-t-solid b-paper b-1px b-op-60% pt-5 lg-pt-20">
-          <a href="https://book.thebarbershop.bg/reservations/start?site=1" target="_blank" rel="noopener noreferrer" class="text-center w-32 lg-w-42 bg-brand c-paper-inv b-solid b-2px b-brand uppercase font-size-4 lg-font-size-4.5 font-500 py-3 hover-c-paper transition-colors" style="font-family: 'Oswald', sans-serif !important; letter-spacing: 1px;">Запазете час</a>
+            <a href="https://book.thebarbershop.bg/reservations/start?site=1" target="_blank" rel="noopener noreferrer" class="text-center w-32 lg-w-42 bg-brand c-paper-inv b-solid b-2px b-brand uppercase font-size-4 lg-font-size-4.5 font-500 py-3 hover-c-paper transition-colors" style="font-family: 'Oswald', sans-serif !important; letter-spacing: 1px;">Запазете час</a>
             <a href="/uslugi" class="text-center w-32 lg-w-42 bg-brand c-paper-inv b-solid b-2px b-brand uppercase font-size-4 lg-font-size-4.5 font-500 py-3 hover-c-paper transition-colors" style="font-family: 'Oswald', sans-serif !important; letter-spacing: 1px;">Услуги</a>
           </div>
         </AnimatedComponent>

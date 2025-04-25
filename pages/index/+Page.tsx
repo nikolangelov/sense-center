@@ -14,7 +14,7 @@ import { ServiceContaner } from '../../components/ServiceContainer';
 export default function Page() {
 	return (
 		<>
-			<div style="background-position: center top; background-repeat: no-repeat; background-size: cover; height: auto;"><div style="background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.65) ), url(/assets/za-nas/the-barber-shop-sofia-2_result_result.webp); background-position: right 55% bottom 100%; background-repeat: no-repeat; background-size: cover;" class="h-105vh" role="img" aria-label="бръснарски салон софия център"></div></div>
+			<div style="background-position: center top; background-repeat: no-repeat; background-size: cover; height: auto;"><div style="background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.55) ), url(/assets/za-nas/the-barber-shop-sofia-2_result_result.webp); background-position: right 55% bottom 100%; background-repeat: no-repeat; background-size: cover;" class="h-105vh" role="img" aria-label="бръснарски салон софия център"></div></div>
 
 			<div class="w-full bg-#212528">
 				<div class="max-w-1240px mx-auto">
