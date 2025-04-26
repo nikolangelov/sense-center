@@ -69,7 +69,7 @@ export const BeforeAfterSlider = ({ children, buttonClass, ...props }: { childre
               </div>
           ) : (
               <div class="max-w-1100px m-auto position-relative md:hidden block mx-4">
-                  <Slider options={{ loop: true, slides: { perView: 1.3, spacing: 10 } }}>
+                  <Slider options={{ loop: true, drag:false, slides: { perView: 1.3, spacing: 10 } }}>
                       {children}
                   </Slider>
                   <SliderButton class="cursor-pointer position-absolute top-100% mt-1 left-0 bg-transparent b-none" prev>
@@ -94,6 +94,7 @@ interface BeforeAfterSliderProps {
 
 export function BeforeAfterSliderContainer(props: BeforeAfterSliderProps) {
   const [sliderPos, setSliderPos] = createSignal(50);
+  const [touchLock, setTouchLock] = createSignal(false); // NEW: track if dragging
   let containerRef: HTMLDivElement | undefined;
 
   let isDraggingDivider = false;
@@ -120,8 +121,8 @@ export function BeforeAfterSliderContainer(props: BeforeAfterSliderProps) {
     const distanceToDivider = Math.abs(offset - currentDividerX);
 
     if (distanceToDivider <= dividerThresholdPx) {
-
       isDraggingDivider = true;
+      setTouchLock(true); // 🔥 NEW: lock touch
       e.preventDefault();
       e.stopPropagation();
       updatePosition(e);
@@ -133,14 +134,14 @@ export function BeforeAfterSliderContainer(props: BeforeAfterSliderProps) {
       };
       const stop = () => {
         isDraggingDivider = false;
+        setTouchLock(false); // 🔥 unlock after drag
         window.removeEventListener("pointermove", move);
         window.removeEventListener("pointerup", stop);
       };
 
-      window.addEventListener("pointermove", move);
+      window.addEventListener("pointermove", move, { passive: false });
       window.addEventListener("pointerup", stop);
     }
-
   };
 
   onMount(() => {
@@ -158,6 +159,9 @@ export function BeforeAfterSliderContainer(props: BeforeAfterSliderProps) {
     <div
       ref={containerRef}
       class="relative w-full max-w-3xl aspect-4/5 overflow-hidden touch-none"
+      style={{
+        "touch-action": touchLock() ? "none" : "auto", // 🔥 NEW: lock touch when dragging
+      }}
     >
       <img
         src={props.after}
