@@ -9,7 +9,7 @@ import { H2WithImage } from "../../../components/H2WithImage";
 export default function Page() {
 	return (
 		<>
-			<div style="background-position: center top; background-repeat: no-repeat; background-size: cover; height: auto;"><div style="background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.7) ), url(/assets/mario/барбър-марио-индивидуална-мобилно.webp); background-position: bottom 0px left 27%;; background-repeat: no-repeat; background-size: cover;" class="h-100vh mario-img" role="img" aria-label="Барбър Крис - Индивидуална"></div></div>
+			<div style="background-position: center top; background-repeat: no-repeat; background-size: cover; height: auto;"><div style="background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.7) ), url(/assets/mario/барбър-марио-индивидуална-мобилно.webp); background-position: bottom 0px left 30%;; background-repeat: no-repeat; background-size: cover;" class="h-100vh mario-img" role="img" aria-label="Барбър Крис - Индивидуална"></div></div>
 
 			<div class="w-full bg-#212528">
 				<div class="max-w-1240px mx-auto">

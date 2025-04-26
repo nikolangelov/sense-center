@@ -72,6 +72,7 @@ export default function Page() {
 						reviews={[
 							{ name: "Nikola Stamenov" },
 							{ name: "Kalin Tabov" },
+							{ name: "Martin Dimitrov" },
 						]}>
 						<StarReview
 							src="/assets/GoogleLogoPNGImage.png"
@@ -88,6 +89,23 @@ export default function Page() {
 							date="Септември 2024"
 							stars={5}
 							hrefGoogleReview="https://maps.app.goo.gl/KEBaLXBzUDJzAYqv7"
+						/>
+
+						<StarReview
+							src="/assets/GoogleLogoPNGImage.png"
+							reviewText={
+								<>
+									Easy to reserve via their website and platform.<br />
+									The most precise and highest caliber of professional service there is in Sofia!<br />
+									Consistent quality and attention to every detail along with customer-oriented tailored services and experience!<br />
+									Highly recommended!<br />
+									Keep up the awesome work, team!
+								</>
+							}
+							name="Martin Dimitrov"
+							date="Април 2024"
+							stars={5}
+							hrefGoogleReview="https://maps.app.goo.gl/RTMRbg9PKtp9Ldvt7"
 						/>
 					</ReviewSlider>
 				</AnimatedComponent>

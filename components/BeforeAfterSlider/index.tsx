@@ -57,7 +57,7 @@ export const BeforeAfterSlider = ({ children, buttonClass, ...props }: { childre
       <SliderProvider>
           {isDesktop() ? (
               <div class="max-w-1300px mx-auto position-relative hidden md:block my-0">
-                  <Slider options={{ loop: true, drag: false, slides: { perView: 3.3, spacing: 15 } }}>
+                  <Slider options={{ loop: true, slides: { perView: 3.3, spacing: 15 } }}>
                       {children}
                   </Slider>
                   <SliderButton class="cursor-pointer position-absolute top-45% left--15 bg-transparent b-none" prev>
@@ -69,7 +69,7 @@ export const BeforeAfterSlider = ({ children, buttonClass, ...props }: { childre
               </div>
           ) : (
               <div class="max-w-1100px m-auto position-relative md:hidden block mx-4">
-                  <Slider options={{ loop: true, drag: false, slides: { perView: 1.3, spacing: 10 } }}>
+                  <Slider options={{ loop: true, slides: { perView: 1.3, spacing: 10 } }}>
                       {children}
                   </Slider>
                   <SliderButton class="cursor-pointer position-absolute top-100% mt-1 left-0 bg-transparent b-none" prev>
@@ -96,36 +96,68 @@ export function BeforeAfterSliderContainer(props: BeforeAfterSliderProps) {
   const [sliderPos, setSliderPos] = createSignal(50);
   let containerRef: HTMLDivElement | undefined;
 
-  const updatePosition = (e: MouseEvent | TouchEvent) => {
-    const clientX = 'touches' in e ? e.touches[0].clientX : e.clientX;
+  let isDraggingDivider = false;
+  const dividerThresholdPx = 30;
+
+  const getClientX = (e: PointerEvent) => e.clientX;
+
+  const updatePosition = (e: PointerEvent) => {
     if (!containerRef) return;
     const rect = containerRef.getBoundingClientRect();
+    const clientX = getClientX(e);
     const offset = clientX - rect.left;
     const percentage = Math.max(0, Math.min((offset / rect.width) * 100, 100));
     setSliderPos(percentage);
   };
 
-  const startDrag = (e: MouseEvent | TouchEvent) => {
-    updatePosition(e);
-    const move = (e: MouseEvent | TouchEvent) => updatePosition(e);
-    const stop = () => {
-      window.removeEventListener("mousemove", move);
-      window.removeEventListener("mouseup", stop);
-      window.removeEventListener("touchmove", move);
-      window.removeEventListener("touchend", stop);
-    };
-    window.addEventListener("mousemove", move);
-    window.addEventListener("mouseup", stop);
-    window.addEventListener("touchmove", move);
-    window.addEventListener("touchend", stop);
+  const startDrag = (e: PointerEvent) => {
+    if (!containerRef) return;
+    const rect = containerRef.getBoundingClientRect();
+    const clientX = getClientX(e);
+    const offset = clientX - rect.left;
+    const currentDividerX = (sliderPos() / 100) * rect.width;
+
+    const distanceToDivider = Math.abs(offset - currentDividerX);
+
+    if (distanceToDivider <= dividerThresholdPx) {
+
+      isDraggingDivider = true;
+      e.preventDefault();
+      e.stopPropagation();
+      updatePosition(e);
+
+      const move = (e: PointerEvent) => {
+        if (isDraggingDivider) {
+          updatePosition(e);
+        }
+      };
+      const stop = () => {
+        isDraggingDivider = false;
+        window.removeEventListener("pointermove", move);
+        window.removeEventListener("pointerup", stop);
+      };
+
+      window.addEventListener("pointermove", move);
+      window.addEventListener("pointerup", stop);
+    }
+
   };
+
+  onMount(() => {
+    if (containerRef) {
+      containerRef.addEventListener("pointerdown", startDrag);
+    }
+    onCleanup(() => {
+      if (containerRef) {
+        containerRef.removeEventListener("pointerdown", startDrag);
+      }
+    });
+  });
 
   return (
     <div
       ref={containerRef}
       class="relative w-full max-w-3xl aspect-4/5 overflow-hidden touch-none"
-      onMouseDown={startDrag}
-      onTouchStart={startDrag}
     >
       <img
         src={props.after}
