@@ -237,12 +237,6 @@ html::-webkit-scrollbar-thumb {
   }
 }
 
-@media (max-width: 640px) {
-  .home-img {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.4)), url('/assets/za-nas/the-barber-shop-sofia-2_result_result.webp') !important;
-  }
-}
-
 @media (min-width: 640px) {
   .kris-img {
     background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.6)), url('/assets/kris/барбър-крис-индивидуална-мобилно.webp') !important;
