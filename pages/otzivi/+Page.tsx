@@ -180,10 +180,10 @@ function SquareImageReview(props: { text: string | JSXElement; src: string; date
 			<div class="max-w-1300px flex flex-col sm:flex-row items-center justify-center relative gap-4 md:gap-5 md:pl-5 md:pr-10">
 				<div class="relative w-auto">
 					<div class="w-auto h-auto">
-						<img class="w-auto h-auto max-h-250px md:max-h-200px" src={props.src} alt="profile" />
+						<img class="w-auto h-auto max-h-300px md:max-h-200px" src={props.src} alt="profile" />
 					</div>
 				</div>
-				<div class="md:w-1/2 pl-1 md:pl-4 flex flex-col justify-center items-center">
+				<div class="md:w-1/2 md:px-0 px-6 md:pl-4 md:pr-0 flex flex-col justify-center items-center">
 					<div class="flex flex-col justify-center">
 						<p class="c-paper mb-2 mt-0 leading-5.6 md:leading-6 italic font-size-15px md:font-size-4.5">"{props.text}"</p>
 						<div class="text-left h-1px w-[calc(100%-1em)] bg-brand my-6px md:my-20px"></div>
@@ -200,7 +200,7 @@ export default function Page() {
 		<>
 			<section class="lg-pt-50 pb-20 pt-30 px-2 md:px-4 w-full">
 				<AnimatedComponent>
-					<div class="flex justify-center items-center mt-10 bg-paper-inv max-w-320px mx-auto">
+					<div class="flex justify-center items-center mt-4 bg-paper-inv max-w-320px mx-auto">
 						<p class="font-500 c-paper my-2">4,8</p>
 						<div class="flex justify-center items-center gap-1 mx-2 mb-1">
 							<img class="w-5 h-5" src="/assets/output-onlinepngtools.png" />

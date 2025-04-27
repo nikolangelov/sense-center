@@ -82,7 +82,7 @@ export default function Page() {
 						<div class="w-full md:w-1/2 space-y-4">
 							<AnimatedComponent>
 								<img class="pb-2 mx-auto md:mx-0 pt-80px md:pt-0 flex flex-justify-center" src="/assets/heading-ic.png" />
-								<h2 class="md:text-left mb-7 pl-0 important-mt-0">Примерно заглавие</h2>
+								<h2 class="md:text-left mb-7 pl-0 important-mt-0">Нашата история</h2>
 								<div class="w-full relative block md:hidden pb-4">
 									<img src="/assets/za-nas/the-barber-shop-sofia-team-3.jpg" alt="Elegant interior design" class="w-full h-auto shadow-xl" />
 								</div>

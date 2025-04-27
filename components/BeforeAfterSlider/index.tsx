@@ -69,7 +69,7 @@ export const BeforeAfterSlider = ({ children, buttonClass, ...props }: { childre
               </div>
           ) : (
               <div class="max-w-1100px m-auto position-relative md:hidden block mx-4">
-                  <Slider options={{ loop: true, drag:false, slides: { perView: 1.3, spacing: 10 } }}>
+                  <Slider options={{ loop: true, slides: { perView: 1.3, spacing: 10 } }}>
                       {children}
                   </Slider>
                   <SliderButton class="cursor-pointer position-absolute top-100% mt-1 left-0 bg-transparent b-none" prev>
@@ -94,7 +94,7 @@ interface BeforeAfterSliderProps {
 
 export function BeforeAfterSliderContainer(props: BeforeAfterSliderProps) {
   const [sliderPos, setSliderPos] = createSignal(50);
-  const [touchLock, setTouchLock] = createSignal(false); // NEW: track if dragging
+  const [touchLock, setTouchLock] = createSignal(false);
   let containerRef: HTMLDivElement | undefined;
 
   let isDraggingDivider = false;
@@ -122,7 +122,7 @@ export function BeforeAfterSliderContainer(props: BeforeAfterSliderProps) {
 
     if (distanceToDivider <= dividerThresholdPx) {
       isDraggingDivider = true;
-      setTouchLock(true); // 🔥 NEW: lock touch
+      setTouchLock(true);
       e.preventDefault();
       e.stopPropagation();
       updatePosition(e);
@@ -134,7 +134,7 @@ export function BeforeAfterSliderContainer(props: BeforeAfterSliderProps) {
       };
       const stop = () => {
         isDraggingDivider = false;
-        setTouchLock(false); // 🔥 unlock after drag
+        setTouchLock(false);
         window.removeEventListener("pointermove", move);
         window.removeEventListener("pointerup", stop);
       };
@@ -160,7 +160,7 @@ export function BeforeAfterSliderContainer(props: BeforeAfterSliderProps) {
       ref={containerRef}
       class="relative w-full max-w-3xl aspect-4/5 overflow-hidden touch-none"
       style={{
-        "touch-action": touchLock() ? "none" : "auto", // 🔥 NEW: lock touch when dragging
+        "touch-action": touchLock() ? "none" : "auto",
       }}
     >
       <img
