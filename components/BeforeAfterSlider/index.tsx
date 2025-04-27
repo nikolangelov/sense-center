@@ -69,7 +69,7 @@ export const BeforeAfterSlider = ({ children, buttonClass, ...props }: { childre
               </div>
           ) : (
               <div class="max-w-1100px m-auto position-relative md:hidden block mx-4">
-                  <Slider options={{ loop: true, slides: { perView: 1.3, spacing: 10 } }}>
+                  <Slider options={{ loop: true, drag: false, slides: { perView: 1.3, spacing: 10 } }}>
                       {children}
                   </Slider>
                   <SliderButton class="cursor-pointer position-absolute top-100% mt-1 left-0 bg-transparent b-none" prev>
@@ -112,38 +112,31 @@ export function BeforeAfterSliderContainer(props: BeforeAfterSliderProps) {
 
   const startDrag = (e: PointerEvent) => {
     if (!containerRef) return;
-
     const rect = containerRef.getBoundingClientRect();
     const clientX = getClientX(e);
     const offset = clientX - rect.left;
     const currentDividerX = (sliderPos() / 100) * rect.width;
+
     const distanceToDivider = Math.abs(offset - currentDividerX);
 
     if (distanceToDivider <= dividerThresholdPx) {
       isDraggingDivider = true;
       e.preventDefault();
       e.stopPropagation();
-
-      // 🧠 Critical! Capture the pointer so slider can't steal it
-      (e.target as HTMLElement).setPointerCapture(e.pointerId);
-
       updatePosition(e);
 
       const move = (e: PointerEvent) => {
         if (isDraggingDivider) {
           e.preventDefault();
-          e.stopPropagation();
+          e.stopPropagation(); // 🛑 <- THIS IS NEW: prevent solid-slider from thinking user is swiping
           updatePosition(e);
         }
       };
 
-      const stop = (e: PointerEvent) => {
+      const stop = () => {
         isDraggingDivider = false;
         window.removeEventListener("pointermove", move);
         window.removeEventListener("pointerup", stop);
-
-        // ✨ Release the pointer when done dragging
-        (e.target as HTMLElement).releasePointerCapture(e.pointerId);
       };
 
       window.addEventListener("pointermove", move, { passive: false });
@@ -155,7 +148,21 @@ export function BeforeAfterSliderContainer(props: BeforeAfterSliderProps) {
     <div
       ref={containerRef}
       class="relative w-full max-w-3xl aspect-4/5 overflow-hidden"
-      onPointerDown={(e) => startDrag(e)}
+      onPointerDown={(e) => {
+        if (!containerRef) return;
+        const rect = containerRef.getBoundingClientRect();
+        const clientX = e.clientX;
+        const offset = clientX - rect.left;
+        const currentDividerX = (sliderPos() / 100) * rect.width;
+
+        const distanceToDivider = Math.abs(offset - currentDividerX);
+
+        if (distanceToDivider <= dividerThresholdPx) {
+          e.preventDefault();
+          e.stopPropagation();
+          startDrag(e);
+        }
+      }}
       style={{
         "touch-action": "none",
       }}
@@ -182,7 +189,6 @@ export function BeforeAfterSliderContainer(props: BeforeAfterSliderProps) {
     </div>
   );
 }
-
 
 
 function useMediaQuery(query: string) {
