@@ -239,7 +239,7 @@ html::-webkit-scrollbar-thumb {
 
 @media (max-width: 640px) {
   .home-img {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.6)), url('/assets/za-nas/the-barber-shop-sofia-2_result_result.webp') !important;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.75)), url('/assets/za-nas/the-barber-shop-sofia-2_result_result.webp') !important;
   }
 }
 

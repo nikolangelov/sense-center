@@ -94,7 +94,6 @@ interface BeforeAfterSliderProps {
 
 export function BeforeAfterSliderContainer(props: BeforeAfterSliderProps) {
   const [sliderPos, setSliderPos] = createSignal(50);
-  const [touchLock, setTouchLock] = createSignal(false);
   let containerRef: HTMLDivElement | undefined;
 
   let isDraggingDivider = false;
@@ -122,19 +121,20 @@ export function BeforeAfterSliderContainer(props: BeforeAfterSliderProps) {
 
     if (distanceToDivider <= dividerThresholdPx) {
       isDraggingDivider = true;
-      setTouchLock(true);
       e.preventDefault();
       e.stopPropagation();
       updatePosition(e);
 
       const move = (e: PointerEvent) => {
         if (isDraggingDivider) {
+          e.preventDefault();
+          e.stopPropagation(); // 🛑 <- THIS IS NEW: prevent solid-slider from thinking user is swiping
           updatePosition(e);
         }
       };
+
       const stop = () => {
         isDraggingDivider = false;
-        setTouchLock(false);
         window.removeEventListener("pointermove", move);
         window.removeEventListener("pointerup", stop);
       };
@@ -144,40 +144,38 @@ export function BeforeAfterSliderContainer(props: BeforeAfterSliderProps) {
     }
   };
 
-  onMount(() => {
-    if (containerRef) {
-      containerRef.addEventListener("pointerdown", startDrag);
-    }
-    onCleanup(() => {
-      if (containerRef) {
-        containerRef.removeEventListener("pointerdown", startDrag);
-      }
-    });
-  });
-
   return (
     <div
       ref={containerRef}
-      class="relative w-full max-w-3xl aspect-4/5 overflow-hidden touch-none"
+      class="relative w-full max-w-3xl aspect-4/5 overflow-hidden"
+      onPointerDown={(e) => {
+        if (!containerRef) return;
+        const rect = containerRef.getBoundingClientRect();
+        const clientX = e.clientX;
+        const offset = clientX - rect.left;
+        const currentDividerX = (sliderPos() / 100) * rect.width;
+
+        const distanceToDivider = Math.abs(offset - currentDividerX);
+
+        if (distanceToDivider <= dividerThresholdPx) {
+          e.preventDefault();
+          e.stopPropagation();
+          startDrag(e);
+        }
+      }}
       style={{
-        "touch-action": touchLock() ? "none" : "auto",
+        "touch-action": "none",
       }}
     >
-      <img
-        src={props.after}
-        alt={props.altAfter || "After"}
-        class="absolute inset-0 w-full h-full object-cover"
-      />
-
-      <img
-        src={props.before}
-        alt={props.altBefore || "Before"}
-        class="absolute inset-0 w-full h-full object-cover"
+      {/* images */}
+      <img src={props.after} alt={props.altAfter || "After"} class="absolute inset-0 w-full h-full object-cover" />
+      <img src={props.before} alt={props.altBefore || "Before"} class="absolute inset-0 w-full h-full object-cover"
         style={{
           "clip-path": `inset(0 ${100 - sliderPos()}% 0 0)`
         }}
       />
-
+      
+      {/* Divider */}
       <div
         class="absolute top-0 bottom-0 z-10"
         style={{
@@ -186,12 +184,12 @@ export function BeforeAfterSliderContainer(props: BeforeAfterSliderProps) {
         }}
       >
         <div class="w-1 bg-white h-full shadow-md"></div>
-        <div class="cursor-ew-resize resizer absolute top-45% left-1/2 -translate-x-1/2 -translate-y-1/2 bg-white rounded shadow">
-        </div>
+        <div class="cursor-ew-resize resizer absolute top-45% left-1/2 -translate-x-1/2 -translate-y-1/2 bg-white rounded shadow"></div>
       </div>
     </div>
   );
 }
+
 
 function useMediaQuery(query: string) {
   const [matches, setMatches] = createSignal(false);
