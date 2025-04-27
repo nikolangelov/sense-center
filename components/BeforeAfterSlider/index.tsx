@@ -112,31 +112,38 @@ export function BeforeAfterSliderContainer(props: BeforeAfterSliderProps) {
 
   const startDrag = (e: PointerEvent) => {
     if (!containerRef) return;
+
     const rect = containerRef.getBoundingClientRect();
     const clientX = getClientX(e);
     const offset = clientX - rect.left;
     const currentDividerX = (sliderPos() / 100) * rect.width;
-
     const distanceToDivider = Math.abs(offset - currentDividerX);
 
     if (distanceToDivider <= dividerThresholdPx) {
       isDraggingDivider = true;
       e.preventDefault();
       e.stopPropagation();
+
+      // 🧠 Critical! Capture the pointer so slider can't steal it
+      (e.target as HTMLElement).setPointerCapture(e.pointerId);
+
       updatePosition(e);
 
       const move = (e: PointerEvent) => {
         if (isDraggingDivider) {
           e.preventDefault();
-          e.stopPropagation(); // 🛑 <- THIS IS NEW: prevent solid-slider from thinking user is swiping
+          e.stopPropagation();
           updatePosition(e);
         }
       };
 
-      const stop = () => {
+      const stop = (e: PointerEvent) => {
         isDraggingDivider = false;
         window.removeEventListener("pointermove", move);
         window.removeEventListener("pointerup", stop);
+
+        // ✨ Release the pointer when done dragging
+        (e.target as HTMLElement).releasePointerCapture(e.pointerId);
       };
 
       window.addEventListener("pointermove", move, { passive: false });
@@ -148,21 +155,7 @@ export function BeforeAfterSliderContainer(props: BeforeAfterSliderProps) {
     <div
       ref={containerRef}
       class="relative w-full max-w-3xl aspect-4/5 overflow-hidden"
-      onPointerDown={(e) => {
-        if (!containerRef) return;
-        const rect = containerRef.getBoundingClientRect();
-        const clientX = e.clientX;
-        const offset = clientX - rect.left;
-        const currentDividerX = (sliderPos() / 100) * rect.width;
-
-        const distanceToDivider = Math.abs(offset - currentDividerX);
-
-        if (distanceToDivider <= dividerThresholdPx) {
-          e.preventDefault();
-          e.stopPropagation();
-          startDrag(e);
-        }
-      }}
+      onPointerDown={(e) => startDrag(e)}
       style={{
         "touch-action": "none",
       }}
@@ -189,6 +182,7 @@ export function BeforeAfterSliderContainer(props: BeforeAfterSliderProps) {
     </div>
   );
 }
+
 
 
 function useMediaQuery(query: string) {
