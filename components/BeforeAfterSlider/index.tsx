@@ -128,7 +128,7 @@ export function BeforeAfterSliderContainer(props: BeforeAfterSliderProps) {
       const move = (e: PointerEvent) => {
         if (isDraggingDivider) {
           e.preventDefault();
-          e.stopPropagation(); // 🛑 <- THIS IS NEW: prevent solid-slider from thinking user is swiping
+          e.stopPropagation();
           updatePosition(e);
         }
       };
@@ -167,7 +167,6 @@ export function BeforeAfterSliderContainer(props: BeforeAfterSliderProps) {
         "touch-action": "none",
       }}
     >
-      {/* images */}
       <img src={props.after} alt={props.altAfter || "After"} class="absolute inset-0 w-full h-full object-cover" />
       <img src={props.before} alt={props.altBefore || "Before"} class="absolute inset-0 w-full h-full object-cover"
         style={{
@@ -175,7 +174,6 @@ export function BeforeAfterSliderContainer(props: BeforeAfterSliderProps) {
         }}
       />
       
-      {/* Divider */}
       <div
         class="absolute top-0 bottom-0 z-10"
         style={{
@@ -189,7 +187,6 @@ export function BeforeAfterSliderContainer(props: BeforeAfterSliderProps) {
     </div>
   );
 }
-
 
 function useMediaQuery(query: string) {
   const [matches, setMatches] = createSignal(false);

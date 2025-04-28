@@ -58,8 +58,8 @@ const workingHours = [
 	{ day: "сряда", open: "10:00", close: "20:00" },
 	{ day: "четвъртък", open: "10:00", close: "20:00" },
 	{ day: "петък", open: "10:00", close: "20:00" },
-	{ day: "събота", open: "Затворено", close: "Затворено" },
-	{ day: "неделя", open: "Затворено", close: "Затворено" },
+	{ day: "събота", open: "10:00", close: "20:00" },
+	{ day: "неделя", open: "10:00", close: "20:00" },
 ];
 
 function WorkingHoursTable() {

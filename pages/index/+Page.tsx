@@ -45,7 +45,7 @@ export default function Page() {
 									<div class="flex flex-col flex-justify-center flex-items-center gap-2">
 										<RiTimerFill class="font-size-5.7 c-brand" />
 										<div class="relative min-h-1px px-8px lg-px-15px c-paper flex text-center flex-justify-center tracking-1.3px font-size-5 lg-font-size-5.2" style="font-family: 'Oswald', sans-serif !important;">
-											Понеделник - Петък: 10:00 - 20:00
+											Понеделник - Неделя: 10:00 - 20:00
 										</div>
 									</div>
 								</div>
@@ -100,7 +100,7 @@ export default function Page() {
 						</AnimatedComponent>
 						<AnimatedComponent>
 							<ul class="c-paper ml--5 mt-0">
-								<li>Безплатно паркиране → бръснарница с място за паркиране</li>
+								<li>Безплатно паркиране</li>
 								<li>Топло посрещане с безплатно питие</li>
 								<li>Приятна и уютна атмосфера</li>
 								<li>Усещане за принадлежност към мъжка общност</li>
