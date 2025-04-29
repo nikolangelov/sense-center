@@ -56,39 +56,34 @@ export const BeforeAfterSlider = ({ children, buttonClass, ...props }: { childre
   const isDesktop = useMediaQuery("(min-width: 768px)");
 
   return (
-    <SliderProvider>
-      {isDesktop() ? (
-        <div class="max-w-1300px mx-auto position-relative hidden md:block my-0">
-          <Slider options={{ loop: true, slides: { perView: 3.3, spacing: 15 } }}>
-            {children}
-          </Slider>
-          <SliderButton class="cursor-pointer position-absolute top-45% left--15 bg-transparent b-none" prev>
-            <RiPlayReverseMiniLine class={cn(`lg:mr-15 xl:-mr-2 font-size-10 b-solid b-3px p-1 c-paper bg-brand-compliment hover-bg-transparent hover-b-brand-compliment transition-colors b-brand-compliment hover-c-brand-compliment`, buttonClass)} />
-          </SliderButton>
-          <SliderButton class="cursor-pointer position-absolute top-45% right--15 bg-transparent b-none" next>
-            <RiPlayMiniLine class={cn(`lg:ml-15 xl:-ml-2 font-size-10 b-solid b-3px p-1 c-paper bg-brand-compliment hover-bg-transparent hover-b-brand-compliment transition-colors b-brand-compliment hover-c-brand-compliment`, buttonClass)} />
-          </SliderButton>
-        </div>
-      ) : (
-        <div class="max-w-1100px m-auto position-relative md:hidden block mx-4">
-          <Slider options={{
-            loop: true,
-            drag: !disableSliderDrag(),
-            slides: { perView: 1.3, spacing: 10 }
-          }}>
-            {children}
-          </Slider>
-
-          <SliderButton class="cursor-pointer position-absolute top-100% mt-1 left-0 bg-transparent b-none" prev>
-            <RiPlayReverseMiniLine class={cn(`-ml-1 font-size-7 b-solid b-2px p-1 c-paper b-brand-compliment hover-c-brand-compliment bg-brand-compliment hover-bg-transparent hover-b-brand-compliment transition-colors`, buttonClass)} />
-          </SliderButton>
-          <SliderButton class="cursor-pointer position-absolute top-100% mt-1 right-0 bg-transparent b-none" next>
-            <RiPlayMiniLine class={cn(`-mr-1 font-size-7 b-solid b-2px p-1 c-paper b-brand-compliment hover-c-brand-compliment bg-brand-compliment hover-bg-transparent hover-b-brand-compliment transition-colors`, buttonClass)} />
-          </SliderButton>
-        </div>
-      )}
-      <DotsUnderSlider services={props.services} />
-    </SliderProvider>
+      <SliderProvider>
+          {isDesktop() ? (
+              <div class="max-w-1300px mx-auto position-relative hidden md:block my-0">
+                  <Slider options={{ loop: true, slides: { perView: 3.3, spacing: 15 } }}>
+                      {children}
+                  </Slider>
+                  <SliderButton class="cursor-pointer position-absolute top-45% left--15 bg-transparent b-none" prev>
+                      <RiPlayReverseMiniLine class={cn(`lg:mr-15 xl:-mr-2 font-size-10 b-solid b-3px p-1 c-paper bg-brand-compliment hover-bg-transparent hover-b-brand-compliment transition-colors b-brand-compliment hover-c-brand-compliment`, buttonClass)} />
+                  </SliderButton>
+                  <SliderButton class="cursor-pointer position-absolute top-45% right--15 bg-transparent b-none" next>
+                      <RiPlayMiniLine class={cn(`lg:ml-15 xl:-ml-2 font-size-10 b-solid b-3px p-1 c-paper bg-brand-compliment hover-bg-transparent hover-b-brand-compliment transition-colors b-brand-compliment hover-c-brand-compliment`, buttonClass)} />
+                  </SliderButton>
+              </div>
+          ) : (
+              <div class="max-w-1100px m-auto position-relative md:hidden block mx-4">
+                  <Slider options={{ loop: true, drag: false, slides: { perView: 1.3, spacing: 10 } }}>
+                      {children}
+                  </Slider>
+                  <SliderButton class="cursor-pointer position-absolute top-100% mt-1 left-0 bg-transparent b-none" prev>
+                      <RiPlayReverseMiniLine class={cn(`-ml-1 font-size-7 b-solid b-2px p-1 c-paper b-brand-compliment hover-c-brand-compliment bg-brand-compliment hover-bg-transparent hover-b-brand-compliment transition-colors`, buttonClass)} />
+                  </SliderButton>
+                  <SliderButton class="cursor-pointer position-absolute top-100% mt-1 right-0 bg-transparent b-none" next>
+                      <RiPlayMiniLine class={cn(`-mr-1 font-size-7 b-solid b-2px p-1 c-paper b-brand-compliment hover-c-brand-compliment bg-brand-compliment hover-bg-transparent hover-b-brand-compliment transition-colors`, buttonClass)} />
+                  </SliderButton>
+              </div>
+          )}
+          <DotsUnderSlider services={props.services} />
+      </SliderProvider>
   );
 };
 
@@ -123,16 +118,16 @@ export function BeforeAfterSliderContainer(props: BeforeAfterSliderProps) {
     const clientX = getClientX(e);
     const offset = clientX - rect.left;
     const currentDividerX = (sliderPos() / 100) * rect.width;
-
+  
     const distanceToDivider = Math.abs(offset - currentDividerX);
-
+  
     if (distanceToDivider <= dividerThresholdPx) {
       isDraggingDivider = true;
       setDisableSliderDrag(true); // 🔑 LOCK slider drag
       e.preventDefault();
       e.stopPropagation();
       updatePosition(e);
-
+  
       const move = (e: PointerEvent) => {
         if (isDraggingDivider) {
           e.preventDefault();
@@ -140,26 +135,39 @@ export function BeforeAfterSliderContainer(props: BeforeAfterSliderProps) {
           updatePosition(e);
         }
       };
-
+  
       const stop = () => {
         isDraggingDivider = false;
         setDisableSliderDrag(false); // 🔓 UNLOCK slider drag
         window.removeEventListener("pointermove", move);
         window.removeEventListener("pointerup", stop);
       };
-
+  
       window.addEventListener("pointermove", move, { passive: false });
       window.addEventListener("pointerup", stop);
     }
   };
-
+  
 
   return (
     <div
       ref={containerRef}
       class="relative w-full max-w-3xl aspect-4/5 overflow-hidden"
-      onPointerDown={startDrag}
-    
+      onPointerDown={(e) => {
+        if (!containerRef) return;
+        const rect = containerRef.getBoundingClientRect();
+        const clientX = e.clientX;
+        const offset = clientX - rect.left;
+        const currentDividerX = (sliderPos() / 100) * rect.width;
+
+        const distanceToDivider = Math.abs(offset - currentDividerX);
+
+        if (distanceToDivider <= dividerThresholdPx) {
+          e.preventDefault();
+          e.stopPropagation();
+          startDrag(e);
+        }
+      }}
       style={{
         "touch-action": "none",
       }}
@@ -170,7 +178,7 @@ export function BeforeAfterSliderContainer(props: BeforeAfterSliderProps) {
           "clip-path": `inset(0 ${100 - sliderPos()}% 0 0)`
         }}
       />
-
+      
       <div
         class="absolute top-0 bottom-0 z-10"
         style={{
@@ -189,20 +197,20 @@ function useMediaQuery(query: string) {
   const [matches, setMatches] = createSignal(false);
 
   onMount(() => {
-    if (typeof window !== "undefined") {
-      const mediaQueryList = window.matchMedia(query);
-      setMatches(mediaQueryList.matches);
+      if (typeof window !== "undefined") {
+          const mediaQueryList = window.matchMedia(query);
+          setMatches(mediaQueryList.matches);
 
-      const handleChange = (event: MediaQueryListEvent) => {
-        setMatches(event.matches);
-      };
+          const handleChange = (event: MediaQueryListEvent) => {
+              setMatches(event.matches);
+          };
 
-      mediaQueryList.addEventListener('change', handleChange);
+          mediaQueryList.addEventListener('change', handleChange);
 
-      onCleanup(() => {
-        mediaQueryList.removeEventListener('change', handleChange);
-      });
-    }
+          onCleanup(() => {
+              mediaQueryList.removeEventListener('change', handleChange);
+          });
+      }
   });
 
   return matches;
