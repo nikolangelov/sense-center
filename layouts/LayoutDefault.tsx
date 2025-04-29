@@ -1,6 +1,6 @@
 import 'uno.css'
 import "./style.css";
-import { children, createEffect, createSignal, JSX, onCleanup, onMount, Show } from "solid-js";
+import { children, createEffect, createSignal, JSX, JSXElement, onCleanup, onMount, Show } from "solid-js";
 import MdiDot from '~icons/mdi/dot';
 import RiFacebookFill from '~icons/ri/facebook-fill';
 import RiInstagramLine from '~icons/ri/instagram-line';
@@ -19,6 +19,8 @@ import RiArrowRightSLine from '~icons/ri/arrow-right-s-line';
 import { H2WithImage } from '../components/H2WithImage';
 import Cookies from 'js-cookie';
 import MdiCookie from '~icons/mdi/cookie';
+import RiShining2Line from '~icons/ri/shining-2-line';
+import MdiPlus from '~icons/mdi/plus';
 
 declare global {
   interface Window {
@@ -29,8 +31,56 @@ declare global {
 
 const GA_MEASUREMENT_ID = 'G-XXXXXXXXXX'; // Replace with your actual GA measurement ID
 
-const CookieConsent = () => {
+const cookies = [
+  {
+    label: "Задължителни",
+    key: "mandatory",
+    cookies: [
+      { name: "_ga", source: "Google Analytics", duration: "2 години", description: "Разпознава потребителя с уникален ID." },
+      { name: "_gid", source: "Google Analytics", duration: "24 часа", description: "Разграничава потребителите." },
+      { name: "_gcl_au", source: "Google Ads", duration: "3 месеца", description: "Проследява конверсии чрез Google Ads." },
+      { name: "_ga_*", source: "Google Analytics 4", duration: "2 години", description: "Събира данни за взаимодействия със сайта." },
+      { name: "_fbp", source: "Meta Pixel", duration: "3 месеца", description: "Проследява посещенията за Facebook реклами." },
+      { name: "booking_session", source: "Онлайн резервации", duration: "сесия", description: "Поддържа потребителската сесия за резервации." },
+      { name: "cart_id", source: "Онлайн магазин", duration: "30 дни", description: "Съхранява количката на клиента." },
+    ]
+  },
+  {
+    label: "Аналитични",
+    key: "analytics",
+    cookies: [
+      { name: "_hjSessionUser_*", source: "Hotjar", duration: "1 година", description: "Идентифицира уникален потребител за сайта." },
+      { name: "_hjSession_*", source: "Hotjar", duration: "30 минути", description: "Поддържа сесия на потребителя." },
+      { name: "cluid", source: "Microsoft Clarity", duration: "1 година", description: "За топлинни карти и сесии." },
+      { name: "_pk_id.*", source: "Matomo", duration: "13 месеца", description: "Анонимна статистика за потребителите." },
+      { name: "_pk_ses.*", source: "Matomo", duration: "30 минути", description: "Следи сесиите на потребителите." },
+    ]
+  },
+  {
+    label: "Маркетингови",
+    key: "marketing",
+    cookies: [
+      { name: "_tt_enable_cookie", source: "TikTok", duration: "13 месеца", description: "Проследява действия след реклама." },
+      { name: "fr", source: "Facebook", duration: "3 месеца", description: "Подобрява релевантността на рекламите." },
+      { name: "IDE", source: "Google DoubleClick", duration: "13 месеца", description: "Показва персонализирани реклами." },
+      { name: "anj", source: "AppNexus", duration: "3 месеца", description: "Ремаркетинг и профилиране." },
+      { name: "MUID", source: "Bing", duration: "1 година", description: "Проследява действия на потребителя." },
+    ]
+  },
+  {
+    label: "Функционални",
+    key: "functional",
+    cookies: [
+      { name: "intercom-id-*", source: "Intercom", duration: "9 месеца", description: "Поддържа потребителски чат сесии." },
+      { name: "zabUserId", source: "Zendesk", duration: "1 година", description: "Проследява поддръжка на клиентите." },
+      { name: "pll_language", source: "Polylang", duration: "1 година", description: "Запомня избора на език." },
+      { name: "cookieconsent_status", source: "CookieConsent", duration: "1 година", description: "Запомня съгласието за бисквитки." },
+      { name: "theme_preference", source: "Custom", duration: "1 година", description: "Запомня предпочитания за тема." },
+    ]
+  }
+];
 
+export const CookieConsent = () => {
   const [hasMadeChoice, setHasMadeChoice] = createSignal(false);
   const [showBanner, setShowBanner] = createSignal(false);
   const [showSettings, setShowSettings] = createSignal(false);
@@ -41,6 +91,7 @@ const CookieConsent = () => {
     advertising: false,
     thirdParty: false,
   });
+  const [showCookieIcon, setShowCookieIcon] = createSignal(true);
 
   const loadGoogleAnalytics = () => {
     const script = document.createElement("script");
@@ -65,7 +116,7 @@ const CookieConsent = () => {
     window.gtag &&
       window.gtag("config", GA_MEASUREMENT_ID, { send_page_view: false });
     const gaScript = document.querySelector(
-      `script[src^="https://www.googletagmanager.com/gtag/js"]`
+      'script[src^="https://www.googletagmanager.com/gtag/js"]'
     );
     if (gaScript) {
       gaScript.remove();
@@ -111,11 +162,8 @@ const CookieConsent = () => {
     const savedPreferences = Cookies.get("cookiePreferences");
     const bannerClosed = Cookies.get("bannerClosed");
 
-    console.log("[CookieConsent] onMount called");
-
     if (savedPreferences) {
       const preferences = JSON.parse(savedPreferences);
-      console.log("[CookieConsent] Loaded saved preferences:", preferences);
       setCookiePreferences(preferences);
       setHasMadeChoice(true);
       applyPreferences();
@@ -127,8 +175,6 @@ const CookieConsent = () => {
         advertising: true,
         thirdParty: false,
       };
-      console.log("[CookieConsent] No saved preferences, auto-applying initialPrefs:", initialPrefs);
-
       setCookiePreferences(initialPrefs);
       Cookies.set("cookiePreferences", JSON.stringify(initialPrefs), {
         expires: 365,
@@ -139,9 +185,10 @@ const CookieConsent = () => {
       applyPreferences();
     }
 
-    if (bannerClosed !== "true" && !savedPreferences) {
-      setShowBanner(true);
-    }
+    setShowBanner(false);
+
+    const shouldShowIcon = sessionStorage.getItem("showCookieIcon") !== "false";
+    setShowCookieIcon(shouldShowIcon);
   });
 
   const closeBanner = () => {
@@ -159,6 +206,9 @@ const CookieConsent = () => {
     setHasMadeChoice(true);
     applyPreferences();
     setShowSettings(false);
+
+    sessionStorage.setItem("showCookieIcon", "false");
+    setShowCookieIcon(false);
   };
 
   const acceptAll = () => {
@@ -172,24 +222,18 @@ const CookieConsent = () => {
     savePreferences();
   };
 
-  const Cookie = (props: {}) => {
-    return (
-      <>
-
-      </>
-    )
-  }
-
   const CookieCategory = (props: {
     title: string;
     description: string;
-    name:
-    | "necessary"
-    | "functional"
-    | "analytics"
-    | "advertising"
-    | "thirdParty";
+    name: "necessary" | "functional" | "analytics" | "advertising" | "thirdParty";
+    cookies?: {
+      name: string;
+      source: string;
+      duration: string;
+      description: string;
+    }[];
   }) => {
+    const [isExpanded, setIsExpanded] = createSignal(false);
     const isChecked = () => cookiePreferences()[props.name];
 
     const toggle = () => {
@@ -201,82 +245,114 @@ const CookieConsent = () => {
     };
 
     return (
-      <div class="flex flex-col my-3">
-        <h4 class="mb-1 mt-2 text-lg font-semibold">{props.title}</h4>
+      <div class="flex flex-col my-6 md:my-8">
+        <h4 class="mb-1 mt-2 text-lg font-semibold text-left md:text-center">{props.title}</h4>
         <div class="flex flex-row items-center justify-between gap-4">
           <p class="text-left text-sm sm:text-base">{props.description}</p>
           <button
             onClick={toggle}
             disabled={props.name === "necessary"}
-            class={`relative min-w-12 h-6 flex items-center rounded-full p-1 transition-colors duration-300 b-none ${isChecked() ? "bg-brand-compliment" : "bg-gray-300"
-              } ${props.name === "necessary" ? "opacity-60 cursor-not-allowed" : "cursor-pointer"}`}
+            class={`relative min-w-12 h-6 flex items-center rounded-full p-1 transition-colors duration-300 b-none ${isChecked() ? "bg-brand-compliment" : "bg-gray-300"} ${props.name === "necessary" ? "opacity-60 cursor-not-allowed" : "cursor-pointer"}`}
           >
             <span
-              class={`bg-white w-4 h-4 rounded-full shadow-md transform transition-transform duration-300 ${isChecked() ? "translate-x-6" : "translate-x-0"
-                }`}
+              class={`bg-white w-4 h-4 rounded-full shadow-md transform transition-transform duration-300 ${isChecked() ? "translate-x-6" : "translate-x-0"}`}
             />
           </button>
         </div>
+
+        {props.cookies && props.cookies.length > 0 && (
+          <div class="mt-3">
+            <div
+              class="flex items-center justify-between w-full py-2 px-4 text-left transition-all cursor-pointer b-solid b-2px b-gray-500"
+              onClick={() => setIsExpanded(!isExpanded())}
+            >
+              <span class="text-sm font-semibold uppercase text-gray-700">
+                {isExpanded() ? "Скрий детайли" : "Виж всички бисквитки"}
+              </span>
+              <div class={`transform transition-transform duration-300 ${isExpanded() ? "rotate-45" : ""}`}>
+                <MdiPlus class="w-5 h-5 mt-2 text-gray-700" />
+              </div>
+            </div>
+
+            <div
+              class={`transition-all duration-500 ease-in-out overflow-hidden ${isExpanded() ? "max-h-[1000px] opacity-100" : "max-h-0 opacity-0"}`}
+            >
+              <div class="mt-3 md:pl-4 pl-1">
+                {props.cookies.map((cookie) => (
+                  <div class="mb-3 text-gray-600">
+                    <div class="text-3 md:text-3.5 h-5 line-height-1rem">Име: {cookie.name}</div>
+                    <div class="text-3 md:text-3.5 h-5 line-height-1rem">Източник: {cookie.source}</div>
+                    <div class="text-3 md:text-3.5 h-5 line-height-1rem">Продължителност: {cookie.duration}</div>
+                    <div class="text-3 md:text-3.5 h-5 line-height-1rem">Описание: {cookie.description}</div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        )}
       </div>
     );
   };
 
   return (
     <>
-      <Show when={showBanner()}>
+      <Show when={showCookieIcon()}>
         <div
-          class={`fixed bottom-0 left-0 right-0 justify-center items-center z-100 transition-opacity duration-500 ease-in-out ${showBanner() ? "opacity-100" : "opacity-0 hidden"}`}
+          class="fixed bottom-0 left-4 z-100 cursor-pointer c-brand-dark"
+          onClick={() => setShowSettings(true)}
         >
-          <div class="flex flex-justify-between flex-items-center md-mr-8 md-gap-0 gap-2">
-            <div
-              class="font-size-10 cursor-pointer c-brand-dark mb-1 ml-2"
-              onClick={() => setShowSettings(true)}
-            >
-              <MdiCookie />
-            </div>
-          </div>
+          <MdiCookie class="font-size-8" />
         </div>
       </Show>
 
       <Show when={showSettings()}>
-        <div class="fixed inset-0 bg-gray-800 bg-opacity-50 flex justify-center items-center z-9 botom-0">
-          <div class="bg-paper px-10 pt-10 pb-8 w-11/12 md:w-3/4 lg:w-2/3">
-            <h2 class="mb-0 md-mb-8 md-mt-3 mt-0 line-height-7 sm-line-height-6 md-line-height-8 font-size-6 md-font-size-10">Cookie Settings</h2>
+        <div class="fixed inset-0 bg-gray-800 bg-opacity-50 z-9">
+          <div class="fixed inset-0 bg-gray-800 bg-opacity-50 z-50 flex justify-center items-center p-4">
+            <div class="relative bg-paper shadow-lg max-h-[90vh] overflow-auto w-11/12 md:w-3/4 lg:w-2/3 pt-8 p-5 md:p-10">
+              <h2 class="important-mb-0 important-md-mb-12 md-mt-10 mt-0 line-height-7 sm-line-height-6 md-line-height-8 font-size-6 md-font-size-10">
+                Настройки на бисквитки
+              </h2>
 
-            <CookieCategory
-              name="necessary"
-              title="Strictly Necessary Cookies"
-              description="These cookies are necessary for the website to function and cannot be disabled."
-            />
+              <CookieCategory
+                name="necessary"
+                title="Задължителни бисквитки"
+                description="Тези „бисквитки“ са необходими за функционирането на уебсайта и не могат да бъдат деактивирани."
+                cookies={cookies.find(c => c.key === "mandatory")?.cookies}
+              />
 
-            <CookieCategory
-              name="functional"
-              title="Functional Cookies"
-              description="These cookies allow the website to provide enhanced functionality and personalization."
-            />
+              <CookieCategory
+                name="functional"
+                title="Функционални бисквитки"
+                description="Тези „бисквитки“ позволяват на уебсайта да предоставя подобрена функционалност и персонализация."
+                cookies={cookies.find(c => c.key === "functional")?.cookies}
+              />
 
-            <CookieCategory
-              name="analytics"
-              title="Analytics Cookies"
-              description="These cookies help us understand how visitors interact with the website."
-            />
+              <CookieCategory
+                name="analytics"
+                title="Аналитични бисквитки"
+                description="Тези „бисквитки“ ни помагат да разберем как посетителите взаимодействат с уебсайта."
+                cookies={cookies.find(c => c.key === "analytics")?.cookies}
+              />
 
-            <CookieCategory
-              name="advertising"
-              title="Advertising Cookies"
-              description="These cookies are used to display relevant advertisements."
-            />
+              <CookieCategory
+                name="advertising"
+                title="Маркетингови бисквитки"
+                description="Тези „бисквитки“ се използват за показване на подходящи реклами."
+                cookies={cookies.find(c => c.key === "marketing")?.cookies}
+              />
 
-            <CookieCategory
-              name="thirdParty"
-              title="Third-Party Cookies"
-              description="These cookies are set by external services that we add to the website."
-            />
+              <CookieCategory
+                name="thirdParty"
+                title="Бисквитки на трети страни"
+                description="Тези „бисквитки“ се задават от външни услуги, които добавяме към уебсайта."
+                cookies={[]}
+              />
 
-            <div class="flex justify-center md-justify-end gap-3 mt-1 md-mt-0 pt-0">
-              <button class="b-solid b-2 b-brand-compliment bg-brand-compliment hover-bg-brand transition-colors hover-b-brand font-700 font-size-2.7 md-font-size-4 uppercase c-paper cursor-pointer py-1.5 md-py-3.5 px-4 md-px-5 mt-4 md-mt-10 line-height-4" style="font-family: 'Oswald', sans-serif !important; letter-spacing: 1px;" onClick={acceptAll}>Accept all</button>
-              <button class="b-solid b-2 b-brand-compliment bg-paper hover-c-brand transition-colors hover-b-brand font-700 font-size-2.7 md-font-size-4 uppercase c-brand-compliment cursor-pointer py-1.5 md-py-3.5 px-4 md-px-5 mt-4 md-mt-10 line-height-4" style="font-family: 'Oswald', sans-serif !important; letter-spacing: 1px;" onClick={savePreferences}>Save settings</button>
-              <button class="b-solid b-2 b-brand-compliment bg-paper hover-c-brand transition-colors hover-b-brand font-700 font-size-2.7 md-font-size-4 uppercase c-brand-compliment cursor-pointer py-1.5 md-py-3.5 px-4 md-px-5 mt-4 md-mt-10 line-height-4" style="font-family: 'Oswald', sans-serif !important; letter-spacing: 1px;" onClick={() => setShowSettings(false)}>Close</button>
+              <div class="flex justify-center md-justify-end gap-3 mt-1 md-mt-0 pt-0">
+                <button class="b-solid b-2 b-brand-compliment bg-brand-compliment hover-bg-brand transition-colors hover-b-brand font-700 font-size-2.7 md-font-size-4 uppercase c-paper cursor-pointer py-1.5 md-py-3.5 px-4 md-px-5 mt-4 md-mt-10 line-height-4" onClick={acceptAll}>Приеми всички</button>
+                <button class="b-solid b-2 b-brand-compliment bg-paper hover-c-brand transition-colors hover-b-brand font-700 font-size-2.7 md-font-size-4 uppercase c-brand-compliment cursor-pointer py-1.5 md-py-3.5 px-4 md-px-5 mt-4 md-mt-10 line-height-4" onClick={savePreferences}>Запази настройки</button>
+                <button class="b-solid b-2 b-brand-compliment bg-paper hover-c-brand transition-colors hover-b-brand font-700 font-size-2.7 md-font-size-4 uppercase c-brand-compliment cursor-pointer py-1.5 md-py-3.5 px-4 md-px-5 mt-4 md-mt-10 line-height-4" onClick={() => setShowSettings(false)}>Затвори</button>
+              </div>
             </div>
           </div>
         </div>
@@ -360,7 +436,7 @@ export default function LayoutDefault(props: { children?: JSX.Element }) {
         <HamburgerMenu />
       </Topbar>
       <Content>{childrenMemo()}</Content>
-      {/* <CookieConsent /> */}
+      <CookieConsent />
       <BackToTopArrow></BackToTopArrow>
       <TopFooter />
       <MainFooter>
@@ -515,7 +591,7 @@ function ServiceMenuItem(props: { href: string; children: any }) {
     <div class="relative group">
       <a
         href={props.href}
-        class="hidden lg-block relative dropdown font-ui lg:flex c-paper text-center font-size-5 uppercase font-sans hover:c-brand-dark tracking-wide font-500 transition-all after:content-empty after:absolute after:bottom-0 after:left-0 after:right-0 after:w-0 after:h-0.5 after:bg-brand-dark after:transition-all group-hover:after:w-full"
+        class="hidden lg-block relative dropdown font-ui lg:flex c-paper text-center font-size-5 uppercase font-sans hover:c-brand-compliment tracking-wide font-500 transition-all after:content-empty after:absolute after:bottom-0 after:left-0 after:right-0 after:w-0 after:h-0.5 after:bg-brand-compliment after:transition-all group-hover:after:w-full"
         style="font-family: 'Oswald', sans-serif; letter-spacing: 0.5px;"
       >
         {props.children}
@@ -555,7 +631,7 @@ function DropDownMenuDesktop(props: { isVisible: boolean; items: { href: string;
 
 function MenuItem(props: { href: string, children: JSX.Element }) {
 
-  return <div class="relative group"><a href={props.href} style="font-family: 'Oswald', sans-serif !important; letter-spacing: 0.5px;" class="relative py-2 dropdown hidden font-ui lg-flex c-paper text-center font-size-5 uppercase font-sans hover-c-brand-dark tracking-wide font-500 transition-all after:content-empty after:absolute after:bottom-0 after:left-0 after:right-0 after:w-0 after:h-0.5 after:bg-brand-dark after:transition-all group-hover:after:w-full">{props.children}</a></div>
+  return <div class="relative group"><a href={props.href} style="font-family: 'Oswald', sans-serif !important; letter-spacing: 0.5px;" class="relative py-2 dropdown hidden font-ui lg-flex c-paper text-center font-size-5 uppercase font-sans hover-c-brand-compliment tracking-wide font-500 transition-all after:content-empty after:absolute after:bottom-0 after:left-0 after:right-0 after:w-0 after:h-0.5 after:bg-brand-compliment after:transition-all group-hover:after:w-full">{props.children}</a></div>
 }
 
 const CurrentYear = () => {
@@ -675,14 +751,14 @@ function HamburgerMenu() {
       </div>
       <Show when={open()}>
         <div
-          class="fixed w-full h-full left-0 top-0 px-10 pt-10 transition-all transition-duration-400"
+          class="fixed w-full h-full left-0 top-0 px-10 pt-10 transition-all transition-duration-400 bg-#15151599 backdrop-blur-[10px] border border-[rgba(235,166,91,0.3)]"
           style={`
             height: 100vh;
             opacity: ${opacity()};
             transform: translateY(${translateY()});
             overflow-y: auto;
             transition: transform 0.6s ease-in-out, opacity 0.3s ease-in-out;
-            background: linear-gradient(180deg, #eba65b 0%, #423429 100%);
+            
           `}
         >
           <div class="py-10 text-left">
