@@ -204,11 +204,11 @@ export default function Page() {
 					<AnimatedComponent class="lg:w-1/2s">
 						<div class="px-20px py-25px md:px-30px md:py-40px rounded-0 w-full max-w-150 overflow-hidden relative bg-#14100c" style="background-image: url(/assets/wood-bg-2.webp); background-position: center; background-repeat: no-repeat; background-size: cover;">
 
-							<div class="md:px-12 md:pt-10 p-5">
-								<h2 class="important-mt-0 md:mt-5 mb-15 c-paper">Изпрати запитване</h2>
+							<div class="md:px-12 md:pt-10 py-5 px-3">
+								<h2 class="important-mt-0 md:mt-5 mb-10 c-paper">Изпрати запитване</h2>
 								{!isSubmitted() && !isModalOpen() && (
 									<form class="space-y-6" onSubmit={sendEmail} method="post" enctype="multipart/form-data">
-										<div class="space-y-5">
+										<div class="space-y-4">
 
 											<div class="input-highlight relative overflow-hidden">
 												<input
@@ -232,6 +232,17 @@ export default function Page() {
 											</div>
 											<div class="input-highlight relative overflow-hidden">
 												<input
+													type="tel"
+													pattern="^\+?[0-9\s\-]{7,15}$"
+													value={phone()}
+													onChange={(e) => setPhone(e.target.value)}
+													placeholder="Phone"
+													class="w-full px-4 py-3 bg-transparent border-0 border-b border-paper focus:outline-none focus:ring-0 text-paper"
+													required
+												/>
+											</div>
+											<div class="input-highlight relative overflow-hidden">
+												<input
 													type="email"
 													value={email()}
 													onChange={(e) => setEmail(e.target.value)}
@@ -240,7 +251,7 @@ export default function Page() {
 													required
 												/>
 											</div>
-											<div class="mt-6">
+											<div class="pt-2">
 												<textarea
 													value={text()}
 													onChange={(e) => setText(e.target.value)}
