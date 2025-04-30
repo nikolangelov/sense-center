@@ -425,9 +425,9 @@ export default function LayoutDefault(props: { children?: JSX.Element }) {
           </div>
           <MenuItem href="/kontakti">Контакти</MenuItem>
 
-          <MenuItem href="/shop">Shop</MenuItem>
+          {/* <MenuItem href="/shop">Shop</MenuItem>
           <MenuItem href="/cart">Cart</MenuItem>
-          <MenuItem href="/product">Product</MenuItem>
+          <MenuItem href="/product">Product</MenuItem> */}
         </div>
 
         <a href="https://book.thebarbershop.bg/reservations/start?site=1" target="_blank" rel="noopener noreferrer" class="hidden lg-block mr-10">
