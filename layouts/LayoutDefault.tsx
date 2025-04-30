@@ -424,6 +424,10 @@ export default function LayoutDefault(props: { children?: JSX.Element }) {
             <MenuItem href="/">Магазин</MenuItem>
           </div>
           <MenuItem href="/kontakti">Контакти</MenuItem>
+
+          <MenuItem href="/shop">Shop</MenuItem>
+          <MenuItem href="/cart">Cart</MenuItem>
+          <MenuItem href="/product">Product</MenuItem>
         </div>
 
         <a href="https://book.thebarbershop.bg/reservations/start?site=1" target="_blank" rel="noopener noreferrer" class="hidden lg-block mr-10">
@@ -436,7 +440,7 @@ export default function LayoutDefault(props: { children?: JSX.Element }) {
         <HamburgerMenu />
       </Topbar>
       <Content>{childrenMemo()}</Content>
-      <CookieConsent />
+      {/* <CookieConsent /> */}
       <BackToTopArrow></BackToTopArrow>
       <TopFooter />
       <MainFooter>

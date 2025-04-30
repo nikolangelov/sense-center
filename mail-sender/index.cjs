@@ -18,12 +18,12 @@ app.use(bodyParser.json());
 const upload = multer({ dest: "./upload" });
 
 const transporter = nodemailer.createTransport({
-    host: "uk1009.siteground.eu",
+    host: "mail.thebarbershop.bg",
     port: 465,
     secure: true,
     auth: {
-        user: "test@thebarbershop.bg",
-        pass: "f4b24y@)_121",
+        user: "info@thebarbershop.bg",
+        pass: "m1&p6bs)k#f1",
     }
 });
 
@@ -46,15 +46,11 @@ app.post('/api/send-email', upload.array('attachments', 10), (req, res) => {
     console.log(emailContent)
 
     const mailOptions = {
-        from: senderEmail,
+        from: 'info@thebarbershop.bg',
         replyTo: senderEmail,
         to: 'info@thebarbershop.bg',
         subject: 'Ново съобщение от контактната форма на сайта',
         text: emailContent,
-        attachments: attachments ? attachments.map(file => ({
-            filename: file.originalname,
-            path: file.path
-        })) : []
     };
 
     transporter.sendMail(mailOptions, (error, info) => {
