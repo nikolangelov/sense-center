@@ -6,7 +6,7 @@ const cors = require('cors');
 
 const app = express();
 
-app.use(express.json()); // Middleware to parse JSON
+app.use(express.json());
 
 app.use(cors({
     origin: '*',
@@ -22,14 +22,15 @@ const transporter = nodemailer.createTransport({
     port: 465,
     secure: true,
     auth: {
-        user: "info@thebarbershop.bg",
-        pass: "m1&p6bs)k#f1",
-    }
+        user: "test@thebarbershop.bg",
+        pass: "is7wqFlkhWGrfcFzx6dQ",
+    },
+    logger: true,
+    debug: true,
 });
 
 app.post('/api/send-email', upload.array('attachments', 10), (req, res) => {
     const { senderEmail, text, phone, name, surname } = req.body;
-    const attachments = req.files;
 
     const emailContent = `
         Ново съобщение от контактната форма в сайта.
@@ -39,14 +40,14 @@ app.post('/api/send-email', upload.array('attachments', 10), (req, res) => {
         ТЕЛЕФОН: ${phone}
         СЪОБЩЕНИЕ: ${text}
     `;
-    
+
     console.log("\n\n-------------------------------")
     const now = new Date()
     console.log(now.toTimeString() + " " + now.toDateString())
     console.log(emailContent)
 
     const mailOptions = {
-        from: 'info@thebarbershop.bg',
+        from: '"The Barbershop" <info@thebarbershop.bg>',
         replyTo: senderEmail,
         to: 'info@thebarbershop.bg',
         subject: 'Ново съобщение от контактната форма на сайта',
