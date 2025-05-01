@@ -123,7 +123,7 @@ export default function Page() {
 							<div class="lg-w-33.33% flex flex-col">
 								<AnimatedComponent>
 									<h3 class="c-brand text-left mt-5 lg-mt-0">Висококачествена козметика</h3>
-									<div class="pb-8 c-paper">В “<strong>The Barber Shop</strong>” никога не правим компромис с качеството. Използваме широка гама от професионални продукти специално създадени за <strong>мъжката кожа и коса</strong>. Залагаме на реномирани марки като <strong>Depot, American Crew, Lavish</strong>, специализирали се във <strong>висококачествената козметика за мъже</strong>. Те съдържат внимателно подбрани съставки, <strong>щадящи кожата и косата</strong> и осигуряват страхотни резултати.</div>
+									<div class="pb-8 c-paper">В <strong>The Barber Shop</strong> никога не правим компромис с качеството. Използваме широка гама от професионални продукти специално създадени за <strong>мъжката кожа и коса</strong>. Залагаме на реномирани марки като <strong>Depot, American Crew, Lavish</strong>, специализирали се във <strong>висококачествената козметика за мъже</strong>. Те съдържат внимателно подбрани съставки, <strong>щадящи кожата и косата</strong> и осигуряват страхотни резултати.</div>
 								</AnimatedComponent>
 							</div>
 						</div>

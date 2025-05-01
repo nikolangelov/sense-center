@@ -91,14 +91,6 @@ export default function Page() {
 						]}>
 						<StarReview
 							src="/assets/GoogleLogoPNGImage.png"
-							reviewText="Крис прекрасно разбираше прическата, която исках. Приятна атмосфера, 10/10 бих препоръчал досега.e process. On the day, the cleaning experience was efficient with a considerate and friendly member of staff. Very competitive pricing."
-							name="Krasimir Daskalov"
-							date="Февруари 2025"
-							stars={5}
-							hrefGoogleReview="https://maps.app.goo.gl/GCERGbXeDzg2LofQ6"
-						/>
-						<StarReview
-							src="/assets/GoogleLogoPNGImage.png"
 							reviewText={
 								<>
 									The Barber Shop е страхотно място! Най-обикновени неща като оформяне на брада, при тях е цяло изживяване. Кристиян Митов е ТОП бръснар! Евала момчета. Keep it going!<br />
@@ -192,6 +184,14 @@ export default function Page() {
 							date="Март 2024"
 							stars={5}
 							hrefGoogleReview="https://maps.app.goo.gl/im5WgKinKzt8hgER6"
+						/>
+						<StarReview
+							src="/assets/GoogleLogoPNGImage.png"
+							reviewText="Chris perfectly understood the haircut I wanted. Nice atmosphere, 10/10 would recommend so far."
+							name="Krasimir Daskalov"
+							date="Февруари 2025"
+							stars={5}
+							hrefGoogleReview="https://maps.app.goo.gl/GCERGbXeDzg2LofQ6"
 						/>
 						<StarReview
 							src="/assets/GoogleLogoPNGImage.png"

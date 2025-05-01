@@ -1,6 +1,6 @@
-import { createSignal } from "solid-js";
+import { createSignal, JSXElement } from "solid-js";
 
-export function FacebookLikeGallery(props: { imgs: { src: string; alt: string; name: string; reviewtext: string }[] }) {
+export function FacebookLikeGallery(props: { imgs: { src: string; alt: string; name: string; reviewtext: string | JSXElement }[] }) {
     const [currentIndex, setCurrentIndex] = createSignal(0);
 
     return (
@@ -20,7 +20,7 @@ export function FacebookLikeGallery(props: { imgs: { src: string; alt: string; n
                         <img class="w-5 h-5" src="/assets/output-onlinepngtools.png" />
                         <img class="w-5 h-5" src="/assets/output-onlinepngtools.png" />
                     </div>
-                    <p class="c-paper font-size-3.8 md:font-size-4.2 leading-6">{props.imgs[currentIndex()].reviewtext}</p>
+                    <p class="c-paper flex justify-center font-size-3.8 md:font-size-4.2 leading-6">{props.imgs[currentIndex()].reviewtext}</p>
                 </div>
             </div>
 

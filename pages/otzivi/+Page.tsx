@@ -68,10 +68,10 @@ function useMediaQuery(query: string) {
 function ImageWithFrameReview(props: { text: string | JSX.Element; src: string; date: string; service: string; style?: string; hrefGoogleReview: string; }) {
 	return (
 		<a target="_blank" rel="noopener" href={props.hrefGoogleReview}>
-			<div class="max-w-600px sm:max-w-900px mx-auto flex justify-center items-center relative gap-2 sm:gap-6 md:gap-10 overflow-hidden">
+			<div class="max-w-600px sm:max-w-900px mx-auto flex flex-col lg:flex-row justify-center items-center relative gap-2 sm:gap-6 md:gap-10 overflow-hidden">
 				<div class="relative w-auto">
-					<div class="w-auto h-auto max-h-230px sm:max-h-400px">
-						<img class="w-auto h-auto max-h-230px sm:max-h-400px" style={props.style} src={props.src} alt="profile" />
+					<div class="w-auto h-auto sm:max-h-400px">
+						<img class="w-auto h-auto max-h-400px sm:max-h-400px" style={props.style} src={props.src} alt="profile" />
 						<div class="absolute inset-0 pointer-events-none">
 							<span class={`before:absolute before:content-empty before:bg-[#f2f2f2] before:z-[1] before:w-[2px] before:h-[80%] before:top-[1rem]  before:left-[1rem] 
 								after:absolute after:content-empty after:bg-[#f2f2f2] after:z-[1] after:h-[2px] after:w-[72%] after:top-[1rem] after:left-[1rem]
@@ -86,10 +86,10 @@ function ImageWithFrameReview(props: { text: string | JSX.Element; src: string; 
 						</div>
 					</div>
 				</div>
-				<div class="w-1/2 pl-1 flex flex-col justify-evenly items-start">
+				<div class="w-full sm:w-1/2 px-16 sm:px-6 sm:pl-1 flex flex-col justify-evenly items-center sm:items-start">
 					<div>
-						<h3 class="c-paper text-left important-mb-1 md:mb-3 important-sm:font-size-24px important-font-size-20px">{props.service}</h3>
-						<div class="flex justify-start items-center gap-1">
+						<h3 class="c-paper text-center sm:text-left important-mb-3 important-sm:font-size-24px important-font-size-20px important-line-height-normal">{props.service}</h3>
+						<div class="flex justify-center sm:justify-start items-center gap-1">
 							<img class="w-4 h-4" src="/assets/output-onlinepngtools.png" />
 							<img class="w-4 h-4" src="/assets/output-onlinepngtools.png" />
 							<img class="w-4 h-4" src="/assets/output-onlinepngtools.png" />
@@ -98,8 +98,8 @@ function ImageWithFrameReview(props: { text: string | JSX.Element; src: string; 
 						</div>
 					</div>
 					<div>
-						<p class="c-paper mb-1 md:mb-2 leading-5.3 sm:leading-8 font-size-15px sm:font-size-19px">{props.text}</p>
-						<p class="c-paper mt-0 mb-0 font-100 font-size-15px" style="font-family:'Roboto', sans-serif !important;">{props.date}</p>
+						<p class="c-paper mb-1 sm:mb-2 leading-5.3 sm:leading-8 font-size-15px sm:font-size-19px">{props.text}</p>
+						<p class="c-paper mt-0 mb-0 font-100 font-size-15px text-center sm:text-left" style="font-family:'Roboto', sans-serif !important;">{props.date}</p>
 					</div>
 				</div>
 			</div>
@@ -303,38 +303,42 @@ export default function Page() {
 					<H2WithImage class="c-paper" title="Над 25 000 мъже ни се довериха" />
 					<ImageWithFrameReviewSlider
 						services={[
-							{ title: "Мъжко подстригване" },
-							{ title: "Мъжко подстригване" },
-							{ title: "Мъжко подстригване" },
+							{ title: "Dimitar Stoyanov" },
+							{ title: "Borislav Donchev" },
+							{ title: "Ivailo Ivanov" },
 						]}>
 						<ImageWithFrameReview
 							hrefGoogleReview="https://maps.app.goo.gl/E3BJm1q3Fj3j51Bh7"
 							style="filter: brightness(1.1); filter: saturate(1.1);"
 							src="/assets/otzivi/mazhko-podstrigvane-otzivi.png"
-							service="Подстригване и оформяне на брада"
+							service="Dimitar Stoyanov"
 							text="Чудесна обстановка. Млади момчета със завидни умения. Горещо препоръчвам !"
 							date="Септември 2022"
 						/>
 						<ImageWithFrameReview
-							hrefGoogleReview="https://maps.app.goo.gl/NjWquoiBcNHEHHzC9"
+							hrefGoogleReview="https://maps.app.goo.gl/PoRcZdsGQVp1HrWR7"
 							style="filter: brightness(1.1); filter: saturate(1.1);"
-							src="/assets/otzivi/detska-pricheska-otzivi.jpg"
-							service="Детско подстригване"
-							text="супер за мъжко подстригване! любими!"
-							date="Март 2020"
-						/>
-						<ImageWithFrameReview
-							hrefGoogleReview="https://maps.app.goo.gl/vLrS9ffAGBgeZ6xf9"
-							style="filter: saturate(1.3);"
-							src="/assets/otzivi/barbershop-podstrigvane-otzivi.jpg"
-							service="Мъжко подстригване"
+							src="/assets/otzivi/podstrigvane-barbershop-otzivi.jpg"
+							service="Borislav Donchev"
 							text={
 								<>
-									Put the “bar” in barber. 🥃<br />
-									Cool place and great work.
+									The Barber Shop е страхотно място! Най-обикновени неща като оформяне на брада, при тях е цяло изживяване. Кристиян Митов е ТОП бръснар! Евала момчета. Keep it going!<br />
+									Силно препоръчвам бръснарницата!!!
 								</>
 							}
-							date="Юни 2024"
+							date="Април 2020"
+						/>
+						<ImageWithFrameReview
+							hrefGoogleReview="https://maps.app.goo.gl/3HrojookYmXtUJyF9"
+							style="filter: saturate(1.3);"
+							src="/assets/otzivi/thebarbershop-otzivi-mazhko-podstrigvane.webp"
+							service="Ivailo Ivanov"
+							text={
+								<>
+									Като бивш и настоящ гангстер, за мен визията е изкл. важна за да мога да съм представителен пред враговете ми. Професионалистите от Барбършоп винаги знаят какъв е най-добрия стил за мен, така че да изглеждам и заплашителен и привлекателен. Всеки мафия бос трябва да ги избере. Генг Генг
+								</>
+							}
+							date="Юли 2024"
 						/>
 					</ImageWithFrameReviewSlider>
 				</AnimatedComponent>
@@ -462,7 +466,7 @@ export default function Page() {
 									С ръка на сърцето мога да кажа, че това е най-добрата бръснарница в София от тези, които съм посетил.
 								</>
 							}
-							date="Georgi Pleshkov"
+							date="Георги Плешков"
 						/>
 					</div>
 				</AnimatedComponent>
@@ -530,27 +534,32 @@ export default function Page() {
 					<div class="max-w-900px m-auto px-5">
 						<FacebookLikeGallery imgs={[
 							{
-								src: "/assets/otzivi/podstrigvane-barbershop-otzivi.jpg",
-								alt: "mazhka-pricheska-otzivi",
-								name: "Borislav Donchev",
-								reviewtext: "The Barber Shop е страхотно място! Най-обикновени неща като оформяне на брада, при тях е цяло изживяване. Кристиян Митов е ТОП бръснар! Евала момчета. Keep it going! Силно препоръчвам бръснарницата!!!"
-							},
-							{
-								src: "/assets/otzivi/podstrigvane-na-mazhka-kosa-barbershop.jpg",
-								alt: "mazhko-podstrigvane-otzivi",
-								name: "Georgi Pleshkov",
-								reviewtext: "За първи път посещавам The Barber Shop. Крис ме изслуша и след това подстрига с изключително внимание към детайла и моите предпочитания. Атмосферата е много приятна, а за резултатите можете да прецените сами. С ръка на сърцето мога да кажа, че това е най-добрата бръснарница в София от тези, които съм посетил."
-							},
-							{
 								src: "/assets/otzivi/barbershop-mazhko-podstrigvane-otzivi.png",
-								alt: "mazhka-pricheska-i-oformiane-na-brada-otzivi",
+								alt: "barbershop-mazhko-podstrigvane-otzivi",
 								name: "Iliyan Asenov",
 								reviewtext: "Страхотна бръснарница. След няколко погрешни опита намерих точното място. Вниманието към клиента е на високо ниво. От вратата те посрещат с нещо за пиене кафе, вода, безалкохолно или Bullet бърбън. Вайба е чудесен, музиката не е прекалено силна или натрапваща. Всичко е уникално. Отидохме с няколко момчета и всички останахме очаровани. Крис беше нашия бръснар и силно го препоръчвам в момента и на други приятели."
+							},
+							{
+								src: "/assets/otzivi/the-barber-shop-detsko-podstrigvane.jpg",
+								alt: "the-barber-shop-detsko-podstrigvane",
+								name: "Georgi Ivanov",
+								reviewtext: "супер за мъжко подстригване! любими!"
+							},
+							{
+								src: "/assets/otzivi/barber-shop-otzivi-usluga-podstrigvane.jpg",
+								alt: "barber-shop-otzivi-usluga-podstrigvane",
+								name: "Craig & Jenny Wilson",
+								reviewtext: (
+									<>
+										Put the “bar” in barber. 🥃<br />
+										Cool place and great work.
+									</>
+								),
 							},
 						]} />
 					</div>
 				</AnimatedComponent>
-			</section>
+			</section >
 
 			{/* <section class="pb-20">
 				<H2WithImage title="Какво казват клиентите за нас" />

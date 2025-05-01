@@ -229,7 +229,7 @@ export default function Page() {
 								<h2 class="md:text-left mb-7 pl-0 important-mt-0 c-paper">Какво изискваме</h2>
 							</AnimatedComponentSlide>
 							<AnimatedComponentSlide>
-								<p class="important-delay-300 lg-pt-0 sm-line-height-7 line-height-6.5 c-paper">Търсим позитивен човек, търсещ нов кариерен старт!</p>
+								<p class="important-delay-300 lg-pt-0 sm-line-height-7 line-height-6.5 c-paper">Търсим позитивен човек, мотивиран за нов кариерен старт!</p>
 								<p class="important-delay-500 sm-line-height-7 line-height-6.5 c-paper">Бръснарят в “The Barber Shop” e:</p>
 								<div class="flex items-start">
 									<p class="flex items-start my-0 c-paper">

@@ -367,6 +367,12 @@ export default function Page() {
 								href="/uslugi/podstrigvane-na-bashta-i-sin"
 								title="Подстригване на баща и син"
 							/>
+							<ElementInOftenOT
+								img="/assets/uslugi/мъжко-подстригване-1-mobile.webp"
+								alt="Мъжко подстригване"
+								href="/uslugi/mazhko-podstrigvane"
+								title="Мъжко подстригване"
+							/>
 						</OftenOT>
 					</AnimatedComponent>
 
