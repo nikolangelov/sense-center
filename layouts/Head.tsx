@@ -1,5 +1,5 @@
 // Default <head> (can be overridden by pages)
-import logoUrl from "../assets/the-barber-shop-logo1000-x-400-px.webp";
+import logoUrl from "../assets/lotus-icon.png";
 
 export default function Head() {
   return (

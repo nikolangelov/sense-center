@@ -1,485 +1,330 @@
 import "solid-slider/slider.css";
 import { ReviewSlider, StarReview } from '../../components/ReviewSlider';
-import { VideoPlayer } from '../../components/VideoPlayer';
-import { GallerySlider } from '../../components/GallerySlider';
-import { BeforeAfterSlider, BeforeAfterSliderContainer } from '../../components/BeforeAfterSlider';
+import { VideoHero } from '../../components/VideoPlayer';
 import { AnimatedComponent } from '../../components/AnimateOnView';
-import { AnimatedComponentSlide } from '../../components/AnimateOnViewSlide';
 import { H2WithImage } from '../../components/H2WithImage';
-import MdiBank from '~icons/mdi/bank';
-import MdiPhoneClassic from '~icons/mdi/phone-classic';
-import RiTimerFill from '~icons/ri/timer-fill';
 import { ServiceContaner } from '../../components/ServiceContainer';
+import { createSignal, JSX, Show } from 'solid-js';
+import RiCloseLargeLine from '~icons/ri/close-large-line';
+
+export function AuthorContainer(props: {
+	title: string;
+	img: string;
+	alt: string;
+	author: string;
+	description: string | JSX.Element;
+}) {
+	return (
+		<AnimatedComponent
+			class="w-[85%] md:w-[40%] max-w-full relative overflow-hidden flex-shrink-0"
+			style="flex: 0 0 auto;"
+		>
+			<div class="flex xl:flex-row flex-col items-center bg-white overflow-hidden">
+				<div class="w-full md:w-auto flex-shrink-0">
+					<img
+						class="w-full h-auto max-h-[400px] object-cover"
+						src={props.img}
+						alt={props.alt}
+					/>
+				</div>
+
+				<div class="w-full px-5 py-4 text-left">
+					<div class="flex flex-col gap-1">
+						<p
+							class="text-sm font-light mb-1 italic"
+							style="font-family: 'Abel', sans-serif !important;"
+						>
+							{props.author}
+						</p>
+						<h4
+							class="text-left font-semibold my-0"
+							style="font-family: 'Abel', sans-serif !important;"
+						>
+							{props.title}
+						</h4>
+						<p class="font-size-16px leading-6.5 mt-1">{props.description}</p>
+					</div>
+				</div>
+			</div>
+		</AnimatedComponent>
+	);
+}
+
+function GalleryImage(props: { img1: string, img2: string, alt1: string, alt2: string }) {
+	const [open, setOpen] = createSignal(false);
+	const [currentIndex, setCurrentIndex] = createSignal(0);
+
+	const openGallery = (index: number) => {
+		setCurrentIndex(index);
+		setOpen(true);
+	};
+
+	return (
+		<>
+			<img src={props.img1} alt={props.alt1} class="hidden md:block w-full object-cover rounded shadow mb-4" onClick={() => openGallery(0)} />
+			<img src={props.img2} alt={props.alt2} class="md:hidden block w-full object-cover rounded shadow mb-4" onClick={() => openGallery(0)} />
+
+			<Show when={open()}>
+				<div class="facebook-like-gallery fixed top-0 left-0 w-screen h-screen bg-black bg-opacity-85 z-9999">
+					<div class="flex items-center justify-center h-full w-full">
+						<img class="hidden md:block max-w-full max-h-full" src={props.img1} alt={props.alt1} />
+						<img class="md:hidden block max-w-full max-h-full" src={props.img2} alt={props.alt2} />
+					</div>
+					<button onClick={() => setOpen(false)}>
+						<RiCloseLargeLine class="hover:rotate-90 transition-transform z-2 w-10 h-10 md:w-13 md:h-13 absolute top-0 right-0 mr-8 md:mr-12 mt-8 p-2 text-white bg-transparent color-paper cursor-pointer hover-color-gray-400:hover transition-colors" />
+					</button>
+				</div>
+			</Show>
+		</>
+	)
+}
 
 export default function Page() {
 	return (
 		<>
-			<div style="background-position: center top; background-repeat: no-repeat; background-size: cover; height: auto;"><div style="background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.55) ), url(/assets/za-nas/the-barber-shop-sofia-2_result_result.webp); background-position: right 55% bottom 100%; background-repeat: no-repeat; background-size: cover;" class="h-105vh home-img" role="img" aria-label="бръснарски салон софия център"></div></div>
-
-			<div class="w-full bg-#212528">
-				<div class="max-w-1240px mx-auto">
-					<div class="flex flex-justify-center">
-						<div class="left-0 right-0 px-3 my-0 mx-auto absolute top-30% lg-top-68% text-center w-full" style="-webkit-transform: translateY(-50%);">
-							<AnimatedComponent>
-								<h1 class="uppercase c-paper mb-6 md:px-0 px-5">The Barber Shop Sofia</h1>
-							</AnimatedComponent>
-							<AnimatedComponent class="important-delay-300 c-paper text-center mb-0 font-size-4.3 lg-font-size-5 sm-px-0 px-12 leading-6">Само за мъже.<br></br>За добре прекарано време или за добре загубено време.</AnimatedComponent>
-						</div>
-
-						<AnimatedComponent class="important-delay-600 float-left md:pr-5px relative text-center lg--top-170px -top-315px w-100% max-w-1240px md:border-2 md:border-solid md:border-[rgba(255,255,255,0.5)]">
-							<div class="md:w-33.333% md:float-left px-2 md:px-0">
-								<div class="float-left w-full py-0px md:py-25px">
-									<div class="block md:hidden mx-auto h-1px w-full bg-gray-200 my-10px op-30%"></div>
-									<div class="flex flex-col flex-justify-center flex-items-center gap-2">
-										<MdiBank class="font-size-5.2 c-brand" />
-										<div class="relative min-h-1px px-8px lg-px-15px c-paper flex text-center flex-justify-center tracking-1.3px font-size-5 lg-font-size-5.2" style="font-family: 'Oswald', sans-serif !important;">
-											София, ул. "Николай Хайтов" 2
-										</div>
-									</div>
-								</div>
-							</div>
-
-							<div class="md:w-33.333% md:float-left px-2 md:px-0">
-								<div class="float-left w-full py-0px md:py-25px md:border-[rgba(255,255,255,0.5)] md:border-r-2 md:border-r-[rgba(255,255,255,0.5)] md:border-r-solid md:border-l-solid">
-									<div class="block md:hidden mx-auto h-1px w-full bg-gray-200 my-10px op-30%"></div>
-									<div class="flex flex-col flex-justify-center flex-items-center gap-2">
-										<RiTimerFill class="font-size-5.7 c-brand" />
-										<div class="relative min-h-1px px-8px lg-px-15px c-paper flex text-center flex-justify-center tracking-1.3px font-size-5 lg-font-size-5.2" style="font-family: 'Oswald', sans-serif !important;">
-											Понеделник - Неделя: 10:00 - 20:00
-										</div>
-									</div>
-								</div>
-							</div>
-
-							<div class="md:w-33.333% md:float-left px-2 md:px-0">
-								<div class="float-left w-full py-0px md:py-25px">
-									<div class="block md:hidden mx-auto h-1px w-full bg-gray-200 my-10px op-30%"></div>
-									<div class="flex flex-col flex-justify-center flex-items-center gap-2">
-										<MdiPhoneClassic class="font-size-5.7 c-brand" />
-										<div class="relative min-h-1px px-8px lg-px-15px c-paper text-center flex flex-row flex-justify-center font-size-4.3 lg-font-size-4.8" style="font-family: 'Oswald', sans-serif !important;">
-											<div class="c-paper text-center flex flex-justify-center tracking-1.3px font-size-5 lg-font-size-5" style="font-family: 'Oswald', sans-serif !important;">
-												Телефон:&nbsp;
-											</div>
-											<div class="c-paper text-center flex flex-justify-center font-size-4.8 lg-font-size-5.2" style="font-family: 'Oswald', sans-serif !important;">
-												+359 882 820 331
-											</div>
-										</div>
-									</div>
-									<div class="block md:hidden mx-auto h-1px w-full bg-gray-200 my-15px op-30%"></div>
-								</div>
-							</div>
-						</AnimatedComponent>
-					</div>
-				</div>
-			</div>
-
-			<div class="pb-10 lg--mt-30 -mt-80" style="background-image: url(/assets/bg-2.jpg); background-position: center; background-repeat: no-repeat; background-size: cover;">
-
-				<div class="lg-mt-0 lg-px-30 pb-10 max-w-1600px mx-auto flex lg-flex-row flex-col lg-gap-20">
-					<div class="lg-w-50% px-5">
-						<AnimatedComponent>
-							<img class="pb-2 pt-80px md:pt-120px flex flex-justify-center" src="/assets/heading-ic.png" />
-							<h2 class="c-paper text-left mb-7 pl-0 important-mt-0">Бръснарница от класа</h2>
-						</AnimatedComponent>
-						<AnimatedComponent>
-							<div class="flex flex-col gap-5">
-								<div class="c-paper">
-									<span class="c-brand font-900" style="font-family: 'Roboto'">The Barber Shop Sofia</span> е нещо повече от просто бръснарница. Нашият барбър шоп се намира в квартал Изток, София на удобна и лесно достъпна локация в близост до ключови транспортни връзки и зелени градски зони.
-								</div>
-								<div class="c-paper">
-									<span class="c-brand font-900" style="font-family: 'Roboto'">The Barber Shop Sofia</span> е премиум бръснарница, където майсторството се преплита с вниманието към детайла, за да Ви осигури отлично ниво на комфорт и стил. Нашата мисия е да създадем цялостно ексклузивно преживяване за истински мъже.
-								</div>
-							</div>
-						</AnimatedComponent>
-					</div>
-
-					<div class="lg-w-50% pr-5 pl-5 lg-pl-0">
-						<AnimatedComponent>
-							<img class="pb-2 pt-80px md:pt-120px flex flex-justify-center" src="/assets/heading-ic.png" />
-							<h2 class="c-paper text-left mb-7 pl-0 important-mt-0">Стил и комфорт в едно</h2>
-						</AnimatedComponent>
-						<AnimatedComponent>
-							<ul class="c-paper ml--5 mt-0">
-								<li>Безплатно паркиране</li>
-								<li>Топло посрещане с безплатно питие</li>
-								<li>Приятна и уютна атмосфера</li>
-								<li>Усещане за принадлежност към мъжка общност</li>
-								<li>Съчетание на традиционни техники с модерни подходи</li>
-							</ul>
-						</AnimatedComponent>
-					</div>
-				</div>
-			</div>
-
-			<div class="pb-20 px-4 w-full">
-				<AnimatedComponentSlide>
-					<H2WithImage title="Нашите услуги" />
-				</AnimatedComponentSlide>
-				<div class="flex flex-wrap flex-justify-center lg-gap-15 gap-15">
-
-					<ServiceContaner
-						img="/assets/home/stylish-buzz-cuts.webp"
-						alt="stylish buzz cuts"
-						title="Мъжко подстригване"
-						href="/uslugi/mazhko-podstrigvane"
-					/>
-					<ServiceContaner
-						img="/assets/home/оформяне-на-брада.webp"
-						alt="оформяне на брада"
-						title="Оформяне на брада"
-						href="/uslugi/oformiane-na-brada"
-					/>
-					<ServiceContaner
-						img="/assets/home/buzz-cut-and-beard.webp"
-						alt="buzz cut and beard"
-						title="Подстригване и оформяне на брада"
-						href="/uslugi/mazhko-podstrigvane-i-oformiane-na-brada"
-					/>
-					<ServiceContaner
-						img="/assets/home/мокро-бръснене.webp"
-						alt="мокро бръснене"
-						title="Класическо мокро бръснене"
-						href="/uslugi/klasichesko-mokro-brasnene"
-					/>
-					<ServiceContaner
-						img="/assets/tonirane-na-kosa/барбър-шоп-тониране-на-сиви-коси.webp"
-						alt="тониране на сиви коси"
-						title="Тониране на сиви коси"
-						href="/uslugi/klasichesko-mokro-brasnene"
-					/>
-					<ServiceContaner
-						img="/assets/brasnene-na-glava-s-brasnach/бръснене-на-глава-с-бръснач-в-бръснарница.webp"
-						alt="бръснене на глава с бръснач"
-						title="Бръснене на глава с бръснач"
-						href="/uslugi/brasnene-na-glava-s-brasnach"
-					/>
-					<ServiceContaner
-						img="/assets/home/детско-подстригване.webp"
-						alt="детско подстригване"
-						title="Детско подстригване"
-						href="/uslugi/detsko-podstrigvane-momche"
-					/>
-					<ServiceContaner
-						img="/assets/bashta-i-sin/подстригване-на-баща-и-син.webp"
-						alt="подстригване на баща и син"
-						title="Подстригване на баща и син"
-						href="/uslugi/podstrigvane-na-bashta-i-sin"
-					/>
-				</div>
-			</div>
-
-			<div style="background-image: url(/assets/bg-2.jpg); background-position: center; background-repeat: no-repeat; background-size: cover;">
-				<div class="pb-20">
-					<AnimatedComponent>
-						<H2WithImage class="c-paper" title="Стилът на The Barber Shop" />
-					</AnimatedComponent>
-					<AnimatedComponent>
-						<VideoPlayer src='https://cherrycarpetcleaning.co.uk/wp-content/uploads/2025/04/Barbershop-video-home.mp4' />
-					</AnimatedComponent>
-				</div>
-			</div>
-
-			<section class="pb-20">
-				<AnimatedComponent>
-					<H2WithImage title="Как го правим" />
-				</AnimatedComponent>
-				<GallerySlider imgs={[
-					{ src: "/assets/home/барбер-шоп-софия.webp", alt: "професионално мъжко подстригване в бръснарница в барбер шоп в София" },
-					{ src: "/assets/home/barber-shops-sofia.webp", alt: "професионално измиване на глава в barber shops Sofia" },
-					{ src: "/assets/home/подстригване-мъжко.webp", alt: "Подстригване мъжко" },
-					{ src: "/assets/home/buzz-cut.webp", alt: "buzz cut" },
-					{ src: "/assets/home/бръснарница-софия.webp", alt: "професионално мъжко подстригване в бръснарница в София" },
-					{ src: "/assets/home/барбер-шоп.webp", alt: "оформяне на брада в барбер шоп" },
-					{ src: "/assets/home/бръснарница-студентски-град.webp", alt: "професионално мъжко подстригване в бръснарница в студентски-град" },
-					{ src: "/assets/home/бръснарница.webp", alt: "мъжко подстригване в бръснарница" },
-					{ src: "/assets/home/барбершоп.webp", alt: "снимка от барбершоп процеса на работа" },
-					{ src: "/assets/home/барбершоп-софия-1.webp", alt: "гореща кърпа в барбершоп в София" },
-					{ src: "/assets/home/бръснарници-в-софия.webp", alt: "измиване на глава в бръснарница в София" },
-					{ src: "/assets/home/мъжко-подстригване.webp", alt: "мъжко подстригване" },
-					{ src: "/assets/home/мъжко-подстригване-софия.webp", alt: "мъжко подстригване София" },
-					{ src: "/assets/home/мъжко-подстригване-софия-център.webp", alt: "мъжко подстригване в София център" },
-					{ src: "/assets/home/мъжко-подстригване-студентски-град.webp", alt: "мъжко подстригване студентски град" },
-					{ src: "/assets/home/подстригване-с-машинка-мъжко.webp", alt: "подстригване с машинка мъжко" },
-				]}
+			<div class="">
+				<VideoHero
+					fallbackImageUrl="/assets/fallback-image-video.webp"
+					overlayImageUrl="/assets/zhen-shan-ren-SVG.svg"
 				/>
+			</div>
 
-				<div class="lg-mt-0 lg-px-30 xl-px-58 py-15 lg-py-25 max-w-1600px mx-auto flex lg-flex-row flex-col gap-8 lg-gap-20">
-					<AnimatedComponentSlide class="px-5">
-						<div class="flex flex-col gap-5">
-							<div>
-								В <span class="font-700">The Barber Shop</span> ще получите повече от просто подстригване или оформяне на брада – ще се насладите на автентично мъжко изживяване. В <span class="font-700">бръснарницата Ви очаква</span> уютна и приятелска атмосфера, която ще Ви накара да забравите напрежението и стреса.
-							</div>
-							<div>
-								В нашия <span class="font-700">барбър шоп</span> ще получите персонално отношение и грижа, за да опознаем Вашия индивидуален стил и заедно да създадем визия, която Ви кара да изглеждате и да се чувствате като най-добрата версия на себе си. Защото всеки уважаващ себе си мъж знае, че добрият външен вид изготвен в <span class="font-700">барбър шоп</span> подчертава увереността и оставя трайно впечатление.
-							</div>
+			<section id="info-section" class="relative inline-block w-full h-full min-h-500px" style="background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2) ), url(/assets/Fulfilling-Vows.webp); background-position: center center; background-repeat: no-repeat; background-size: cover;" data-orig-width="1207" data-orig-height="720">
+				<AnimatedComponent>
+					<div class="max-w-1000px w-full h-full">
+						<div class="bg-paper md:mr-0 pb-50px max-w-1050px px-30px md:px-50px pt-50px md:ml-20% my-70px mx-20px md:mx-0">
+							<H2WithImage class="mb-10" title="Международна изложба „Изкуството на Джън-Шан-Жен“" />
+							<p class="pb-0 mb-0 md:font-size-19px font-size-15px leading-1.6rem md:leading-1.8rem">
+								Изложбата „Изкуството на Джън-Шан-Жен” е създадена през 2004 г. и се състои от близо 40 произведения. Идеята за изложбата се поражда от преживявания на професор Кунлун Джан, който е неин основател. Той е един от най-известните и уважавани скулптури на модерен Китай. Завършил е Факултета по скулптура на Китайската академия по изкуствата, заемал е постовете на директор на Института по скулптура към Института по изкуствата в Шандун, Китай, както и директор на Института по изследване на скулптурата в Шандун. Носител е на множество награди, участвал е в редица изложби, както в родината си Китай, така и по целия свят.
+							</p>
+							<p class="pb-0 mb-0 md:font-size-19px font-size-15px leading-1.6rem md:leading-1.8rem">
+								Професор Джан е бил незаконно държан като затворник на съвестта в Китай от комунистическата власт. Причината за задържането му са неговите духовни убеждения. Професор Джан практикува древната китайска практика за усъвършенстване на съзнанието и тялото Фалун Дафа, основана на принципите Истинност, Доброта, Търпение (на китайски Джън, Шан, Жен). Фалун Дафа е представен за пръв път публично през 1992 г. В продължение на едва няколко години Фалун Дафа набира огромна популярност – правителствено проучване посочва, че към 1998 г. между 70 и 100 милиона души се занимават с практиката.
+							</p>
+							<p class="pb-0 mb-0 md:font-size-19px font-size-15px leading-1.6rem md:leading-1.8rem">
+								За съжаление комунистическият режим вижда във Фалун Дафа идеологическа заплаха. Причината е, че духовната практика съживява традиционните китайски ценности на стремеж към високи морални стандарти и на вяра в божественото, които са противоположни на проповядваният от комунизма атеизъм, който отрича божественото и идолизира единствено лидерите на Комунистическата партия. В резултат комунистическият режим на Китай започва да извършва репресии над хората, които практикуват Фалун Дафа, един от които е именно професор Джан. През периода, прекаран в лагерите за принудителен труд, професор Джан е бил подложен на жестоки психически и физически изтезания, оставили траен отпечатък в съзнанието му. След освобождаването си той се посвещава на това да сподели с хората по света своите преживявания чрез магията на изобразителното изкуство.
+							</p>
 						</div>
-					</AnimatedComponentSlide>
-				</div>
-
-				<BeforeAfterSlider
-					services={[
-						{ title: "Мъжко подстригване" },
-						{ title: "Бръснене на глава с бръснач" },
-						{ title: "Мъжко подстригване" },
-						{ title: "Бръснене на глава с бръснач" },
-						{ title: "Мъжко подстригване" },
-						{ title: "Бръснене на глава с бръснач" },
-						{ title: "Мъжко подстригване" },
-						{ title: "Бръснене на глава с бръснач" },
-					]}>
-					<BeforeAfterSliderContainer
-						altBefore="преди снимка на men's haircut and beard"
-						altAfter="след снимка на men's haircut and beard"
-						before="/assets/otzivi/men_s-haircut-and-beard-before.webp"
-						after="/assets/otzivi/men_s-haircut-and-beard-after.webp"
-					/>
-					<BeforeAfterSliderContainer
-						altBefore="преди снимка на подстригване и оформяне на брада"
-						altAfter="след снимка на подстригване и оформяне на брада"
-						before="/assets/otzivi/мъжко-подстригване-и-оформяне-на-брада-преди.webp"
-						after="/assets/otzivi/мъжко-подстригване-и-оформяне-на-брада-след.webp"
-					/>
-					<BeforeAfterSliderContainer
-						altBefore="преди снимка на мокро бръснене"
-						altAfter="след снимка на мокро бръснене"
-						before="/assets/otzivi/мокро-бръснене-преди.webp"
-						after="/assets/otzivi/мокро-бръснене-след.webp"
-					/>
-					<BeforeAfterSliderContainer
-						altBefore="преди снимка на мъжко подстригване софия"
-						altAfter="след снимка на мъжко подстригване софия"
-						before="/assets/otzivi/мъжко-подстригване-софия-преди.webp"
-						after="/assets/otzivi/мъжко-подстригване-софия-след.webp"
-					/>
-					<BeforeAfterSliderContainer
-						altBefore="преди снимка на детско подстригване момче"
-						altAfter="след снимка на детско подстригване момче"
-						before="/assets/otzivi/детско-подстригване-момче-преди (1).webp"
-						after="/assets/otzivi/детско-подстригване-момче-след (1).webp"
-					/>
-					<BeforeAfterSliderContainer
-						altBefore="преди снимка на детско подстригване"
-						altAfter="след снимка на детско подстригване"
-						before="/assets/otzivi/детско-подстригване-преди.webp"
-						after="/assets/otzivi/детско-подстригване-след.webp"
-					/>
-					<BeforeAfterSliderContainer
-						altBefore="преди снимка на мъжко подстригване"
-						altAfter="след снимка на мъжко подстригване"
-						before="/assets/otzivi/мъжко-подстригване-преди.webp"
-						after="/assets/otzivi/мъжко-подстригване-след.webp"
-					/>
-					<BeforeAfterSliderContainer
-						altBefore="преди снимка на buzz cut styles"
-						altAfter="след снимка на buzz cut styles"
-						before="/assets/otzivi/buzz-cut-and-beard-before.webp"
-						after="/assets/otzivi/buzz-cut-and-beard-after.webp"
-					/>
-				</BeforeAfterSlider>
+					</div>
+				</AnimatedComponent>
 			</section>
 
-			<section style="background-color: #222222; background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8) ), url(/assets/brown-background-image.webp); background-position: center center; background-repeat: no-repeat; background-size: cover;">
-				<div class="flex flex-col pb-20">
+			<section id="art-section" class="my-70px">
+				<H2WithImage title="Примерни произведения на изкуството" />
+
+				<div class="flex flex-row flex-justify-center flex-wrap px-5 gap-12 pt-50px md:px-30">
+					<div class="flex flex-col gap-12">
+						<ServiceContaner
+							img="/assets/Fulfilling-Vows.webp"
+							alt=""
+							title="Изпълняване на обетите"
+							description="Множество божествени същества слизат от небето в човешкия свят, за да изпълнят обетите си. Фалун (Колелото на закона) е високо, а героите изглеждат достойни, миролюбиви и носещи надежда."
+							author="Сяопин Чън, Сицян Дун, Тинин Шъ"
+						/>
+						<ServiceContaner
+							img="/assets/Tears-of-Grief-and-Joy.webp"
+							alt=""
+							title="Сълзи на печал и радост"
+							description={
+								<>
+									Преди повече от 5000 години човешкият морал е пропаднал ужасно ниско. В отговор катастрофално наводнение почти унищожава целия свят. Три хиляди години по-късно Римската империя брутално преследва християните. Заради това поредица от епидемии убива почти половината от населението. За съжаление историята сякаш се повтаря. Днес влошаването на моралните ценности отново е достигнало опасно ниво.<br />
+									Религиите в миналото са говорили за „Страшния съд“. Казва се, че Бог ще се появи отново, за да приеме добрите хора в рая и да запрати лошите в ада. „Доброто и злото ще получат дължимата си награда“ е неизменна истина на космоса. Универсалните принципи на Фалун Дафа „Истинност, Доброта, Търпение“ носят надежда на човечеството. От 1999 г. обаче Китайската комунистическа партия извършва брутално преследване на тази мирна медитативна практика.<br />
+									Печеленето на пари от робски труд и отнемането на органи на практикуващите Фалун Дафа доведе човечеството до ново дъно. Лъжите и пропагандата породиха неразбиране и омраза срещу Фалун Дафа. Поради страх от последици или заради финансови стимули, световните правителства, бизнес общността и международните медии не смеят да говорят за тази човешка катастрофа. На думи такива организации държат на съвестта, свободата на вярата и човешките права. Обаче тишината е оглушителна пред лицето на тези престъпления срещу човечеството. Така че зависи от самите практикуващи Фалун Дафа, стоящи в центъра на това преследване, да повишат осведомеността и да разкрият истината. Те непрекъснато казват истината, за да предоставят възможност на хората по света да заемат своето място и да се позиционират. Композицията на картината във формата на S свързва двете крайности – добрите хора, които се възнасят на небето, и нечестивите, изправени пред унищожение. Това е решение, което хората следва да вземат сами.
+									Художникът искрено пожелава светло бъдеще на тези, които имат възможност да видят тази картина.
+								</>
+							}
+							author="Кунлун Джан"
+						/>
+					</div>
+					<div class="flex flex-col gap-12">
+					<ServiceContaner
+							img="/assets/Mending-the-Cosmos.webp"
+							alt=""
+							title="Коригиране на Космоса"
+							description="Седнал в драконова колесница, Буда жестикулира с мудра, докато води множество небесни същества на великата мисия за коригиране на космоса. Фалун се издига пред Буда и е изобразен на синята книга, носена тържествено долу вдясно. Мултиетническият микс от божествени фигури отразява приобщаващата природа на Фалун Дафа."
+							author="Джънпин Чън"
+						/>
+						<ServiceContaner
+							img="/assets/042.-Lecturing-on-the-Fa.webp"
+							alt=""
+							title="Изнасяне на лекции по Фа"
+							description={
+								<>
+									Фалун Дафа е култивационна практика за самоусъвършенстване  към високи нива, водена  от характеристиките на вселената: Истинност, Доброта и Търпение. Без излишна помпозност  Фалун Дафа (наричана още Фалун Гонг) е представена на обществеността през 1992 г.<br />
+									Когато Исус и Буда Шакямуни слизат в човешкото царство, за да предложат спасение на човешките същества, те се появяват като обикновени хора и проповядват, използвайки обикновен език. За да помогне на повече хора да научат за Фалун Дафа, г-н Ли Хонгджъ представя принципите на вселената, използвайки прост език и под формата на популярния тогава чигонг. Скоро над 100 милиона души в Китай възприемат практиката разпространявана от уста на уста.<br />
+									Тази картина показва разпространението на Фалун Дафа в човешкия свят, което не изглежда никак необичайно. В действителност обаче съзнателни същества на различни космически нива учат този несравнимо свещен Дафа. От тази перспектива художникът е написал следното стихотворение:<br />
+
+									Какъв би могъл да бъде смисълът на живота в бушуващия водовъртеж на съществуването?
+									Да научиш Дао, каква вечна радост е това.
+									Колко обаче биха могли да постигнат ученията на Краля на Будите?
+									Ние трябва да ценим тази свещена възможност, идваща веднъж на много хилядолетия.
+								</>
+							}
+							author="Юен Ли, Сяопин Чън, Кунлун Джан"
+						/>
+					</div>
+					<div class="flex flex-col gap-12">
+						<ServiceContaner
+							img="/assets/The-Coming-of-the-Holy-Falun-King.webp"
+							alt=""
+							title="Идването на Светия крал на Фалун"
+							description="От върховете на космоса слиза Свещеният  Фалун („Колелото на закона“). Неговото лъчезарно присъствие тук прелива от спасителна благодат. Разнообразните слоеве от нюанси под краката изобразяват различни нива на съществуване, през които осветената фигура пътува, образувайки на всяка стъпка от своето слизане антураж от обвързани с клетва божествени помощници. Със слизането надолу и наближаването на земния свят, чистите кристални небеса отстъпват място на мрак и тежест. В основата на Фалун Дафа е вярата, че вселената е фундаментално добра и е населена от същества, надарени с божествени  качества."
+							author="Кунлун Джан, Сяопин Чън"
+						/>
+						<ServiceContaner
+							img="/assets/Entering-the-Divine-Realm-with-Purity.webp"
+							alt=""
+							title="Влизане в Божественото царство с чистота"
+							description="Това произведение на изкуството показва истинското състояние на тялото на практикуваща Фалун Дафа в нейното самоусъвършенстване. То изобразява преживяната от нея изключителна чистота по време на медитация. Малкото дете с чисто сърце лесно вижда истината в другите измерения чрез своето небесно око."
+							author="Сяопин Чън"
+						/>
+					</div>
+				</div>
+			</section>
+
+			<section id="artists-section" class="my-70px bg-paper py-70px">
+				<AnimatedComponent>
+					<H2WithImage title="Запознайте се с художниците" />
+				</AnimatedComponent>
+
+				<div class="flex flex-wrap flex-justify-center gap-12">
+					<AuthorContainer
+						img="/assets/Zhang-Kunlun.jpg"
+						alt=""
+						title="Джан Кунлун"
+						description="Професор Джан Кунлун е един от най-успешните скулптори на съвременния Китай. Завършил е катедра „Скулптура“ на Китайската академия на изкуствата и се е специализирал в скулптура, маслена живопис и китайска живопис. Основава катедра „Скулптура“ в Шандонския университет по изкуствата, а по-късно става изпълнителен директор на Института за изследване на скулптурата. Професор Джан е получил много награди за изкуство, а много от направените от него паметници се намират в Китай, Съединените щати и Канада. Неговите картини и скулптури са били излагани в много страни. Той и неговите произведения са публикувани в „Кой кой е в света“, „Енциклопедията на изключителните китайци“ и „Събрани произведения на световната скулптура“, както и в много други издания."
+						author="Отава, Канада"
+					/>
+					<AuthorContainer
+						img="/assets/Chen-Xiaoping.jpg"
+						alt=""
+						title="Чен Сяопин"
+						description={
+							<>
+								Чен Сяопин е утвърдена художничка, родена в Китай, която сега живее в Канада. Тя е изучавала традиционна китайска калиграфия и пейзажна живопис в ранна възраст, а по-късно е учила и маслена живопис. Чен е носител на множество награди на провинциално и национално ниво.<br />
+
+								Чен е учила акварел и керамика в Университета на Марианата през 1997 г. и е представяла творбите си в няколко частни изложби. Нейни творби са били избирани и за репродукция в различни медии, включително арт календари, илюстрации на книги и корици на книги. През 1998 г. е обявена за „Изключителен художник“ от губернатора на Северните Мариански острови. Тя е била бивш арт директор на Общинския съвет по изкуствата в Ричмънд, Британска Колумбия, Канада.
+							</>
+						}
+						author="Ванкувър, Канада"
+					/>
+					<AuthorContainer
+						img="/assets/Dong-Xiqiang.jpg"
+						alt=""
+						title="Донг Сицян"
+						description="Донг Сицян е бивш професор и резидентен художник в Академията за изящни изкуства в Тиендзин, както и художник в Централния институт за изящни изкуства в Китай. Г-н Донг е носител на множество награди. През 1993 г. неговите творби са изложени в престижната Национална художествена галерия на Китай, където печелят най-високото отличие на Международната младежка художествена изложба. През 2004 г. неговите творби печелят най-голямата награда на изложбата на Асоциацията на художниците в Лос Анджелис."
+						author="Ню Джърси, САЩ"
+					/>
+					<AuthorContainer
+						img="/assets/Kathleen-Gillis.jpg"
+						alt=""
+						title="Катлийн Гилис"
+						description="Катлийн Гилис е художничка и преподавателка по изобразително изкуство с бакалавърска степен по изкуства от Университета в Отава. Участвала е в множество изложби в обществени галерии, търговски галерии и алтернативни пространства в Канада и чужбина. Получавала е стипендии и награди на регионално, провинциално и национално ниво. Нейните творби са част от колекции, намиращи се в Канадската инвестиционна банка за изкуство, град Отава, Университета Карлтън и Университета в Отава. Нейните самостоятелни изложби са предимно инсталации, ленд арт и картини с голям мащаб."
+						author="Отава, Канада"
+					/>
+				</div>
+			</section>
+
+			<section id="reviews-section" class="my-70px">
+				<AnimatedComponent>
+					<H2WithImage title="Отзиви от нашите изложби" />
+
+					<ReviewSlider
+						reviews={[
+							{ name: "Karl Stirner" },
+							{ name: "Ann Panillo" },
+							{ name: "Peter Hughes" },
+							{ name: "Aldon James" },
+						]}>
+						<StarReview
+							reviewText="This is the best classical arts I have seen. Words cannot describe how precious these paintings are. As a local artist, I am proud to see such wonderful paintings on display here."
+							name="Karl Stirner"
+							date="A renowned sculptor in Pennsylvania"
+						/>
+						<StarReview
+							reviewText="The paintings and sculptures are exquisite and showcase the artists' great skills. In a totalitarian country, the government has too much power and does things against the human conscience. I cherish my freedom even more now that I have attended this exhibit."
+							name="Ann Panillo"
+							date="TV hostess in Albany, New York"
+						/>
+						<StarReview
+							reviewText="I had a real desire to bring this art exhibition to this city. This art exhibition includes the works of many painters with many different styles. We hoped that we could provide a venue to exhibit these very beautiful, wonderful paintings."
+							name="Peter Hughes"
+							date="Poster Designer for Proctor's Theatre in Schenectady, New York"
+						/>
+						<StarReview
+							reviewText="This exhibition is of high quality with a strong message, and thus will attract many people."
+							name="Aldon James"
+							date="Director of the National Arts Club, Manhattan, New York"
+						/>
+					</ReviewSlider>
+				</AnimatedComponent>
+			</section>
+
+			<section id="tour-section" class="bg-paper">
+				<div class="flex flex-col py-70px">
 					<div class="flex flex-col flex-items-center">
 						<AnimatedComponent>
-							<H2WithImage class="c-paper" title="Какво казват нашите клиенти за нас" />
+							<H2WithImage title="Къде ще бъдем" />
+							<div class="relative max-w-7xl mx-auto px-15px">
+								<div class="absolute top-0 bottom-0 left-1/2 transform -translate-x-1 bg-paper-inv w-2px"></div>
+
+								<div class="flex flex-row-reverse justify-start items-center mb-10 relative">
+									<div class="w-1/2 pl-5 md:pl-8 text-left">
+										<p class="text-4 text-gray-800">07.05.2025 - 24.05.2025</p>
+										<h3 class="text-left important-font-size-5 important-line-height-7.5 uppercase my-6">град Варна</h3>
+										<p class="text-4.6 italic text-gray-800">Graffit Gallery Hotel - бул. "Княз Борис I" 65</p>
+										{/* <p>
+											The Truth, Compassion, Tolerance Art Exhibit has toured more than 40 countries and 200 cities worldwide since its debut in July 2004 at the Rayburn House, U.S. Congress Building, in Washington, DC.
+										</p> */}
+									</div>
+									<div class="w-1/2 pr-5 md:pr-8 text-right z-2">
+										<img src="/assets/graffiti-hotel-image.jpg" alt="Sculptor" class="hidden md:block w-full object-cover rounded shadow mb-4" />
+										<img src="/assets/IMG_4977-768x1024.jpg" alt="Sculptor" class="md:hidden block w-full object-cover rounded shadow mb-4" />
+									</div>
+									<div class="w-2 h-2 bg-paper-inv absolute left-1/2 top-1/2 transform -translate-x-90% -translate-y-1/2 z-1 rounded-lg">
+										<div class="w-8 h-0.5 bg-paper-inv absolute -left-8 top-1/2 transform -translate-y-1/2"></div>
+									</div>
+								</div>
+
+								<div class="flex justify-end items-center mb-10 relative">
+									<div class="w-1/2 pr-5 md:pr-8 text-right">
+										<p class="text-4 text-gray-800">13.08.2025 - 29.08.2025</p>
+										<h3 class="text-left important-font-size-5 important-line-height-7.5 uppercase my-6">село Равадиново</h3>
+										<p class="text-4.6 italic text-gray-800">Замъка Равадиново</p>
+										{/* <p>
+											Art of Zhen Shan Ren Museum opens in Arizona. The exhibition received acclaim in 900 cities and 50 countries. It is now receiving its first permanent home in Tempe, Arizona.
+										</p> */}
+									</div>
+									<div class="w-1/2 pl-4 md:pl-8 text-right z-2">
+										<img src="/assets/castle-Ravadinovo-image.webp" alt="Sculptor" class="hidden md:block w-full object-cover rounded shadow mb-4" />
+										<img src="/assets/castle-Ravadinovo.webp" alt="Sculptor" class="md:hidden block w-full object-cover rounded shadow mb-4" />
+									</div>
+									<div class="w-2 h-2 bg-paper-inv absolute left-1/2 top-1/2 transform -translate-x-90% -translate-y-1/2 z-1 rounded-lg">
+										<div class="w-8 h-0.5 bg-paper-inv absolute left-full top-1/2 transform -translate-y-1/2"></div>
+									</div>
+								</div>
+
+								<div class="flex flex-row-reverse justify-start items-center mb-10 relative">
+									<div class="w-1/2 pl-5 md:pl-8 text-left">
+										<p class="text-4 text-gray-800">10.09.2025 - 20.09.2025</p>
+										<h3 class="text-left important-font-size-5 important-line-height-7.5 uppercase my-6">град Созопол</h3>
+										<p class="text-4.6 italic text-gray-800">Художествена галерия (Старото училище) - Център, ул. "Кирил и Методий" 63</p>
+										{/* <p>
+											Since its debut in 2004 in Washington, D.C., the exhibition has toured over 900 cities, in over 50 countries, with over 800 shows and inspired millions.
+										</p> */}
+									</div>
+									<div class="w-1/2 pr-5 md:pr-8 text-right z-2">
+										<img src="/assets/staroto-uchilishte-image.webp" alt="Sculptor" class="hidden md:block w-full object-cover rounded shadow mb-4" />
+										<img src="/assets/staroto-uchilishte.webp" alt="Sculptor" class="md:hidden block w-full object-cover rounded shadow mb-4" />
+									</div>
+									<div class="w-2 h-2 bg-paper-inv absolute left-1/2 top-1/2 transform -translate-x-90% -translate-y-1/2 z-1 rounded-lg">
+										<div class="w-8 h-0.5 bg-paper-inv absolute -left-8 top-1/2 transform -translate-y-1/2"></div>
+									</div>
+								</div>
+							</div>
 						</AnimatedComponent>
 					</div>
-					<div>
-						<AnimatedComponent>
-							<ReviewSlider
-								reviews={[
-									{ name: "Iliyan Asenov" },
-									{ name: "Georgi Pleshkov" },
-									{ name: "Ivaylo Hristov (Ivo)" },
-									{ name: "Asen Markov" },
-									{ name: "Dimitar Stoyanov" },
-									{ name: "Borislav Bankov" },
-									{ name: "Hristo Velev" },
-									{ name: "Asen Georgiev" },
-									{ name: "Nikola Despotoski" },
-									{ name: "Martin Dimitrov" },
-								]}>
-								<StarReview
-									src="/assets/GoogleLogoPNGImage.png"
-									reviewText="Страхотна бръснарница. След няколко погрешни опита намерих точното място. Вниманието към клиента е на високо ниво. От вратата те посрещат с нещо за пиене кафе, вода, безалкохолно или Bullet бърбън. Вайба е чудесен, музиката не е прекалено силна или натрапваща. Всичко е уникално. Отидохме с няколко момчета и всички останахме очаровани. Крис беше нашия бръснар и силно го препоръчвам в момента и на други приятели."
-									name="Iliyan Asenov"
-									date="Януари 2024"
-									stars={5}
-									hrefGoogleReview="https://maps.app.goo.gl/sye2Me5vsxUajS8a6"
-								/>
-								<StarReview
-									src="/assets/GoogleLogoPNGImage.png"
-									reviewText={
-										<>
-											За първи път посещавам The Barber Shop. Крис ме изслуша и след това подстрига с изключително внимание към детайла и моите предпочитания. Атмосферата е много приятна, а за резултатите можете да прецените сами.<br />
-											С ръка на сърцето мога да кажа, че това е най-добрата бръснарница в София от тези, които съм посетил.
-										</>
-									}
-									name="Georgi Pleshkov"
-									date="Октомври 2024"
-									stars={5}
-									hrefGoogleReview="https://maps.app.goo.gl/pgSmLpppJkuxo1SH6"
-								/>
-								<StarReview
-									src="/assets/GoogleLogoPNGImage.png"
-									reviewText="Много съм доволен. Луксозен салон. Общителни и приятни млади хора работят там. И правят отлични прически. Аз съм много доволен."
-									name="Ivaylo Hristov (Ivo)"
-									date="Септември 2019"
-									stars={5}
-									hrefGoogleReview="https://maps.app.goo.gl/JzPSXpCBG1jX8LiV8"
-								/>
-								<StarReview
-									src="/assets/GoogleLogoPNGImage.png"
-									reviewText="Перфектното място за мъжки отдих. Посрещнаха ме с вежливо обслужване и приятелска атмосфера. Работата им е на много високо ниво с внимание към детайла. Преопоръчвам!"
-									name="Asen Markov"
-									date="Март 2024"
-									stars={5}
-									hrefGoogleReview="https://maps.app.goo.gl/R7ZJQMcubmDh82W8A"
-								/>
-								<StarReview
-									src="/assets/GoogleLogoPNGImage.png"
-									reviewText="Чудесна обстановка. Млади момчета със завидни умения. Горещо препоръчвам !"
-									name="Dimitar Stoyanov"
-									date="Ноември 2021"
-									stars={5}
-									hrefGoogleReview="https://maps.app.goo.gl/5NwhV395TLrdHThT6"
-								/>
-								<StarReview
-									src="/assets/GoogleLogoPNGImage.png"
-									reviewText="Перфектната бръснарница! Много високо ниво на обслужване в мега приятна атмосфера."
-									name="Borislav Bankov"
-									date="Март 2024"
-									stars={5}
-									hrefGoogleReview="https://maps.app.goo.gl/tCXYMiVnq4HbstkLA"
-								/>
-								<StarReview
-									src="/assets/GoogleLogoPNGImage.png"
-									reviewText="The guys are pros! Good music, good atmosphere and offer a free drink. They also have free parking but is limited to number of spaces, so better call them in advance if you are planning to visit with a car."
-									name="Hristo Velev"
-									date="Март 2024"
-									stars={5}
-									hrefGoogleReview="https://maps.app.goo.gl/hTviWSgBNaeRdZ7u5"
-								/>
-								<StarReview
-									src="/assets/GoogleLogoPNGImage.png"
-									reviewText="Absolutely fantastic service. I have long, thick hair but that didn’t stop the barber. Couldn’t recommend The Barber Shop more!"
-									name="Asen Georgiev"
-									date="Март 2024"
-									stars={5}
-									hrefGoogleReview="https://maps.app.goo.gl/3RGkmd9NLraJbQRcA"
-								/>
-								<StarReview
-									src="/assets/GoogleLogoPNGImage.png"
-									reviewText="Really detailed and organized crew. Booked appointment thru maps and they responded swiftly. Upon arrival I was offeres whiskey, beer amd other beverages, unfortunately I refused alchol because I was driving. I totally recommend this barber shop."
-									name="Nikola Despotoski"
-									date="Януари 2021"
-									stars={5}
-									hrefGoogleReview="https://maps.app.goo.gl/M3mBfJMQEj3whcG37"
-								/>
-								<StarReview
-									src="/assets/GoogleLogoPNGImage.png"
-									reviewText={
-										<>
-											Easy to reserve via their website and platform.<br />
-											The most precise and highest caliber of professional service there is in Sofia!<br />
-											Consistent quality and attention to every detail along with customer-oriented tailored services and experience!<br />
-											Highly recommended!<br />
-											Keep up the awesome work, team!
-										</>
-									}
-									name="Martin Dimitrov"
-									date="Април 2024"
-									stars={5}
-									hrefGoogleReview="https://maps.app.goo.gl/RTMRbg9PKtp9Ldvt7"
-								/>
-							</ReviewSlider>
-						</AnimatedComponent>
-					</div>
-					<AnimatedComponent>
-						<div class="flex flex-col flex-items-center">
-							<a href="https://www.google.com/maps/place/The+Barber+Shop+Sofia/@42.6709892,23.3495634,17z/data=!4m14!1m5!8m4!1e1!2s116520566335663544524!3m1!1e1!3m7!1s0x40aa85cc743ddfd7:0xfdafbdb8cd44f23!8m2!3d42.6709899!4d23.3521502!9m1!1b1!16s%2Fg%2F11g9n1jlq8?hl=en-GB&entry=ttu&g_ep=EgoyMDI1MDQyMi4wIKXMDSoJLDEwMjExNDUzSAFQAw%3D%3D" target="_blank" rel="noopener noreferrer" class="bg-brand-compliment c-paper b-solid b-2px b-brand-compliment uppercase font-size-4 font-500 px-7 py-2 hover-c-paper-inv transition-colors" style="font-family: 'Oswald', sans-serif !important; letter-spacing: 1px;">Вижте повече</a>
-						</div>
-					</AnimatedComponent>
 				</div>
 			</section>
-
-			<section>
-				<div class="lg-mx-30 mx-auto">
-					<div class="flex md-flex flex-col flex-justify-center max-w-1440px lg-px-0 mx-auto lg:pb-10">
-						<AnimatedComponent>
-							<H2WithImage title="Предимствата на The Barber Shop" />
-						</AnimatedComponent>
-						<div class="px-5 lg-px-0 flex lg-flex-row flex-col lg-gap-10">
-							<div class="lg-w-33.33% flex flex-col">
-								<AnimatedComponent>
-									<h3 class="text-left mt-0 c-paper-inv op-70%">Опитни и квалифицирани барбъри</h3>
-									<div class="pb-10">Зад всяка перфектна прическа в The Barber Shop Sofia стои екип от изключителни професионалисти. Нашият барбър шоп е събрал част от най-добрите бръснари в София. Всеки от тях преминава през интензивно обучение, което обхваща както класическите бръснарски техники, така и най-новите тенденции в подстригването. Благодарение на това можем да Ви предложим премиум обслужване на високо ниво и страхотни резултати.</div>
-								</AnimatedComponent>
-							</div> 
-							<div class="lg-w-33.33% flex flex-col">
-								<AnimatedComponent>
-									<h3 class="text-left mt-6 lg-mt-0 c-paper-inv op-70%">Професионални инструменти</h3>
-									<div class="pb-10">Използваме висок клас бръснарски принадлежности, които са внимателно подбрани, за да съчетават качество, ефективност и прецизност. В нашата бръснарница разчитаме на световно признати марки като Wahl, Andis, BabylissPRO, Mühle, Thiers Issard, гарантиращи безопасност и комфорт. Независимо от това какъв стил предпочитате, ние имаме правилните инструменти, с който да постигнем отличен краен резултат.</div>
-								</AnimatedComponent>
-							</div>
-							<div class="lg-w-33.33% flex flex-col">
-								<AnimatedComponent>
-									<h3 class="text-left mt-6 lg-mt-0 c-paper-inv op-70%">Висококачествена козметика</h3>
-									<div class="pb-10">В The Barber Shop Sofia не правим компромиси с качеството. За нас Вашите усмивки и безупречни визии са приоритет, затова използваме само най-добрите продукти за мъжка грижа. При нас ще откриете богато разнообразие от висок клас козметика Depot, American Crew, Lavish подходяща за всички видове кожа и коса. Нашата гама от козметика включва всичко необходимо – от шампоани и балсами до стилизиращи продукти.</div>
-								</AnimatedComponent>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="pb-20">
-					<GallerySlider imgs={[
-						{ src: "/assets/home/инструменти-за-buzz-cut-hairstyles.webp", alt: "инструменти за buzz cut hairstyles" },
-						{ src: "/assets/home/инструменти-за-бръснарница-софия.webp", alt: "мъжко подстригване в София център" },
-						{ src: "/assets/home/професионална-козметика-от-barber-shops-sofia.webp", alt: "професионална козметика от barber shops Sofia" },
-						{ src: "/assets/home/инструменти-за-barber-barber-shop-sofia.webp", alt: "инструменти за barber barber shop Sofia" },
-						{ src: "/assets/home/инструменти-за-buzz-cut.webp", alt: "инструменти за buzz cut" },
-						{ src: "/assets/home/козметиката-в-бръснарница-софия.webp", alt: "Kозметиката в бръснарница София" },
-						{ src: "/assets/home/инструменти-за-buzz-cut-fade.webp", alt: "инструменти за buzz cut fade" },
-						{ src: "/assets/home/козметиката-на-barber-shops-sofia.webp", alt: "козметиката на barber shops Sofia" },
-					]}
-					/>
-				</div>
-			</section>
-
-			{/* <div class="lg-px-30 pt-10 pb-20 px-4 w-full flex flex-col flex-justify-center">
-				<AnimatedComponentSlide>
-					<h2 class="important-mb-0">Нашият магазин</h2>
-					<img class="mx-auto pt-2 pb-15 flex flex-justify-center" src="/assets/heading-ic.png" />
-				</AnimatedComponentSlide>
-
-				<AnimatedComponent>
-					<OurShop>
-						<ElementInOurShop
-							img="/assets/home/козметиката-в-бръснарница-софия.webp"
-							alt="Kозметиката в бръснарница София"
-							href="/"
-							title="Козметика"
-						/>
-						<ElementInOurShop
-							img="/assets/home/козметиката-на-barber-shops-sofia.webp"
-							alt="козметиката на barber shops Sofia"
-							href="/"
-							title="Козметика"
-						/>
-						<ElementInOurShop
-							img="/assets/home/професионална-козметика-от-barber-shops-sofia.webp"
-							alt="професионална козметика от barber shops Sofia"
-							href="/"
-							title="Козметика"
-						/>
-					</OurShop>
-				</AnimatedComponent>
-
-				<AnimatedComponentSlide class="mx-auto pt-15">
-					<a href="/" class="bg-brand c-paper-inv b-solid b-2px b-brand uppercase font-size-4 font-500 px-7 py-2 hover-c-paper transition-colors" style="font-family: 'Oswald', sans-serif !important; letter-spacing: 1px;">Към магазин</a>
-				</AnimatedComponentSlide>
-			</div> */}
 		</>
 	);
 }

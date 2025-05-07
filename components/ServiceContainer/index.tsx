@@ -1,23 +1,50 @@
-import { AnimatedComponentSlide } from "../AnimateOnViewSlide";
-import MdiScissors from '~icons/mdi/scissors';
+import { createSignal, JSX, Show } from "solid-js";
+import { AnimatedComponent } from "../AnimateOnView";
+import RiCloseLargeLine from '~icons/ri/close-large-line';
 
-export function ServiceContaner(props: { title: string, href: string, img: string, alt: string }) {
+export function ServiceContaner(props: { title: string, img: string, alt: string, author: string, description: string | JSX.Element}) {
+	const [open, setOpen] = createSignal(false);
+	const [currentIndex, setCurrentIndex] = createSignal(0);
+
+	const openGallery = (index: number) => {
+		setCurrentIndex(index);
+		setOpen(true);
+	};
 
 	return (
-		<AnimatedComponentSlide class="flex sm-w-65% md-w-50% lg-w-35% xl-w-23% max-w-full relative overflow-hidden " style="flex: 0 0 auto;">
-			<a class="group" href={props.href}>
-				<img class="w-full h-auto" src={props.img} alt={props.alt} />
-				<div class="w-full p-20px absolute bottom-0px text-center" style="background: -webkit-linear-gradient(top, transparent 0, rgba(0, 0, 0, .01) 1%, rgba(0, 0, 0, .95) 80%);">
-					<div class="flex flex-col gap-1">
-						<MdiScissors class="c-paper mx-auto rotate-[270deg] w-8" />
-						<h4 class="c-paper relative font-size-20px md:font-size-27px my-1">
-							{props.title}
-						</h4>
-						<div class="text-center h-1px w-60px bg-brand mx-auto mb-20px"></div>
-						<div class="bg-none c-paper b-solid b-1px b-paper group-hover-b-brand group-hover-bg-brand transition-colors mx-auto uppercase font-size-4 font-500 px-7 py-2" style="font-family: 'Oswald', sans-serif !important; letter-spacing: 1px;">Вижте повече</div>
+		<div>
+			<AnimatedComponent class="max-w-400px sm:w-400px flex flex-col max-w-full relative overflow-hidden" style="flex: 0 0 auto;">
+				<div>
+					<div class="-mb-3">
+						<img class="w-full h-full" src={props.img} alt={props.alt} onClick={() => openGallery(0)} />
+					</div>
+
+					<div class="w-full p-20px text-center bg-white">
+						<div class="flex flex-col gap-1">
+							<p class="italic font-size-15px my-3" style="font-family: 'Abel', sans-serif !important;">
+								{props.author}
+							</p>
+							<h4 class="relative font-size-20px important-line-height-8.5 my-0 py-0 text-left" style="font-family: 'Abel', sans-serif !important;">
+								{props.title}
+							</h4>
+							<p class="">
+								{props.description}
+							</p>
+						</div>
 					</div>
 				</div>
-			</a>
-		</AnimatedComponentSlide>
+			</AnimatedComponent>
+
+			<Show when={open()}>
+				<div class="facebook-like-gallery fixed top-0 left-0 w-screen h-screen bg-black bg-opacity-85 z-9999">
+					<div class="flex items-center justify-center h-full w-full">
+						<img class="max-w-full max-h-full" src={props.img} alt={props.alt} />
+					</div>
+					<button onClick={() => setOpen(false)}>
+						<RiCloseLargeLine class="hover:rotate-90 transition-transform z-2 w-10 h-10 md:w-13 md:h-13 absolute top-0 right-0 mr-8 md:mr-12 mt-8 p-2 text-white bg-transparent color-paper cursor-pointer hover-color-gray-400:hover transition-colors" />
+					</button>
+				</div>
+			</Show>
+		</div>
 	)
 }

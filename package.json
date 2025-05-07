@@ -5,7 +5,7 @@
     "dev": "vite dev",
     "copyfiles": "copyfiles -u 1 \"assets/**/*.{html,css,scss,ttf,woff,woff2,webp,eot,svg,jpg,png,js}\" dist/client/assets",
     "build": "vite build && npm run copyfiles",
-    "deploy": "cp -r -v ./dist/client/* /home/thebarbershop/htdocs/thebarbershop.bg",
+    "deploy": "cp -r -v ./dist/client/* /home/zhen-shan-ren-art/htdocs/zhen-shan-ren-art.bg",
     "preview": "vite preview",
     "test": "tsc --noEmit",
     "start-mailer": "node mail-sender/index.cjs"
