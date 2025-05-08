@@ -368,12 +368,12 @@ export default function LayoutDefault(props: { children?: JSX.Element }) {
     <div class="flex flex-col">
       <Topbar>
         <a href="/" class="md:w-33% flex whitespace-nowrap justify-center items-center font-semibold lg:gap-8 xl:gap-18 my-auto md:mb-0 md:mt-1">
-          <img src="/assets/zhen-shan-ren-logo.png" class="lg-w-35 w-20" alt="the-barber-shop-logo" />
+          <img src="/assets/zhen-shan-ren-logo.png" class="lg-w-35 w-20" alt="zhen-shan-ren-art-logo" />
         </a>
 
         {/* <div class="md:w-33% flex items-center justify-center lg-pl-4 z-99">
           <a href="/" class="block w-40px h-40px lg-mb-4" onClick={closeMenu}>
-            <img src="/assets/lotus-icon.png" class="lg-w-15 w-10" alt="the-barber-shop-logo" />
+            <img src="/assets/lotus-icon.png" class="lg-w-15 w-10" alt="zhen-shan-ren-art-logo" />
           </a>
         </div> */}
 
@@ -400,17 +400,6 @@ export default function LayoutDefault(props: { children?: JSX.Element }) {
             <p>Българска Фалун Дафа Асоциация
             </p>
           </div>
-
-          {/* <div class="flex flex-justify-center pt-11 pb-7 gap-3 b-t-solid b-t-0.5px mx-5 sm-mx-10 lg-mx-30" style="border-top-color: rgba(14, 14, 14, 0.12);">
-            <AnimatedComponent class="flex flex-justify-center gap-3">
-              <a href="https://www.facebook.com/TheBarberShopSofia/?locale=en_GB" target="_blank" rel="noopener">
-                <RiFacebookFill class="w-10 h-10 bg-brand hover-c-paper-inv transition-colors p-1.5 c-paper" />
-              </a>
-              <a href="https://www.instagram.com/the.barber.shop.sofia/?__d=1%3Futm_source%3Dig_embed" target="_blank" rel="noopener">
-                <RiInstagramLine class="w-10 h-10 bg-brand hover-c-paper-inv transition-colors p-1.5 c-paper" />
-              </a>
-            </AnimatedComponent>
-          </div> */}
         </div>
       </MainFooter>
     </div>
