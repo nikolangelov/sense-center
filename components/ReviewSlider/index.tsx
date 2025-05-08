@@ -95,7 +95,8 @@ export function StarReview(props: { name: string; date: string; reviewText: stri
                         <img src="/assets/lotus-icon.png" class="w-10 h-10 mx-auto c-brand" />
                     </div>
                     <div class="important-text-center py-7 lg-px-0 px-3 font-300 font-size-4.3 md-font-size-4.5 line-height-7 lg-line-height-8" style="font-family:'Roboto', sans-serif; text-align: left;">{props.reviewText}</div>
-                    <p class="flex flex-col flex-justify-center flex-items-center mb-0 mt-0"><b>{props.name}</b>{props.date}</p>
+                    <p class="flex flex-justify-center flex-items-center mb-0 mt-0"><b>{props.name}</b></p>
+                    <p class="flex flex-justify-center flex-items-center mb-0 mt-0 text-center">{props.date}</p>
                 </div>
             </div>
         </div>

@@ -9,7 +9,7 @@ export const VideoHero = (props: VideoHeroProps) => {
   const [shouldLoad, setShouldLoad] = createSignal(false);
   const [showOverlay, setShowOverlay] = createSignal(true);
 
-  const videoUrl = "https://cherrycarpetcleaning.co.uk/wp-content/uploads/2025/05/HeroVideo.mp4";
+  const videoUrl = "/assets/HeroVideo.mp4";
 
   onMount(() => {
     setTimeout(() => {
@@ -25,7 +25,7 @@ export const VideoHero = (props: VideoHeroProps) => {
   };
 
   return (
-    <div class="relative w-full h-[50vh] sm:h-screen overflow-hidden bg-black">
+    <div class="relative w-full h-[55vh] sm:h-screen overflow-hidden bg-black">
 
       {shouldLoad() ? (
         <video
