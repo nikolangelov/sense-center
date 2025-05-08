@@ -9,7 +9,7 @@ export const VideoHero = (props: VideoHeroProps) => {
   const [shouldLoad, setShouldLoad] = createSignal(false);
   const [showOverlay, setShowOverlay] = createSignal(true);
 
-  const videoUrl = "/assets/HeroVideo.mp4";
+  const videoUrl = "https://cherrycarpetcleaning.co.uk/wp-content/uploads/2025/05/HeroVideo.mp4";
 
   onMount(() => {
     setTimeout(() => {
