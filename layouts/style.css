@@ -105,36 +105,32 @@ h4 {
 }
 
 h1 {
+  margin: 0;
   text-transform: capitalize;
-  margin: 3rem 0;
-  font-weight: 600 !important;
-  font-size: 115px;
-  line-height: 136px;
-  letter-spacing: 0.6px;
+  font-weight: 500 !important;
+  font-size: 50px;
+  line-height: 70px;
+  letter-spacing: 0.5px;
 }
 
 @media (max-width: 900px) {
   h1 {
-    font-size: 70px !important;
-    line-height: 80px !important;
-    font-weight: 900;
-    letter-spacing: 1px;
+    font-size: 40px !important;
+    line-height: 55px !important;
   }
 }
 
 @media (max-width: 500px) {
   h1 {
-    font-size: 52px !important;
-    line-height: 70px !important;
-    font-weight: 900;
-    letter-spacing: 1px;
+    font-size: 32px !important;
+    line-height: 50px !important;
   }
 }
 
 @media (max-width: 370px) {
   h1 {
-    font-size: 50px !important;
-    line-height: 70px !important;
+    font-size: 23px !important;
+    line-height: 35px !important;
     font-weight: 900;
     letter-spacing: 1px;
   }

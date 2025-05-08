@@ -25,7 +25,7 @@ export const VideoHero = (props: VideoHeroProps) => {
   };
 
   return (
-    <div class="relative w-full h-[55vh] sm:h-screen overflow-hidden bg-black">
+    <div class="relative w-full h-[50vh] sm:h-screen overflow-hidden bg-black">
 
       {shouldLoad() ? (
         <video
@@ -49,15 +49,15 @@ export const VideoHero = (props: VideoHeroProps) => {
           <img
             src={props.overlayImageUrl}
             alt="Overlay"
-            class="absolute top-1/2 left-1/2 w-80% sm:w-50% lg:w-[35%] mx-auto pb-20 sm:pb-10 transform -translate-x-1/2 -translate-y-1/2 z-2 pointer-events-none"
+            class="absolute top-1/2 left-1/2 w-70% sm:w-50% lg:w-[35%] mx-auto pb-15 sm:pb-10 transform -translate-x-1/2 -translate-y-1/2 z-2 pointer-events-none"
           />
         )}
 
         <button
           onClick={scrollToNextSection}
           class="
-         cursor-pointer absolute bottom-25 sm:bottom-50 transform -translate-x-1/2 z-30
-          w-12 h-12 rounded-full border-2 border-white text-white bg-transparent b-solid
+         cursor-pointer absolute bottom-10 sm:bottom-50 transform -translate-x-1/2 z-30
+          sm:w-12 sm:h-12 w-10 h-10 rounded-full border-2 border-white text-white bg-transparent b-solid
           flex items-center justify-center
           animate-bounce
         "

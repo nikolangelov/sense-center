@@ -367,9 +367,9 @@ export default function LayoutDefault(props: { children?: JSX.Element }) {
   return (
     <div class="flex flex-col">
       <Topbar>
-        <div class="md:w-33% flex whitespace-nowrap justify-center items-center font-semibold lg:gap-8 xl:gap-18 pt-5 sm:pt-0">
+        <a href="/" class="md:w-33% flex whitespace-nowrap justify-center items-center font-semibold lg:gap-8 xl:gap-18 my-auto md:mb-0 md:mt-1">
           <img src="/assets/zhen-shan-ren-logo.png" class="lg-w-35 w-20" alt="the-barber-shop-logo" />
-        </div>
+        </a>
 
         {/* <div class="md:w-33% flex items-center justify-center lg-pl-4 z-99">
           <a href="/" class="block w-40px h-40px lg-mb-4" onClick={closeMenu}>
@@ -377,7 +377,7 @@ export default function LayoutDefault(props: { children?: JSX.Element }) {
           </a>
         </div> */}
 
-        <div class="w-full md:w-33% flex whitespace-nowrap justify-center md:justify-end items-center font-semibold gap-2 lg:gap-8 xl:gap-12 md:pr-10 md:pl-5 xl:pl-10">
+        <div class="hidden sm:flex w-full md:w-33% whitespace-nowrap justify-center md:justify-end items-center font-semibold gap-2 lg:gap-8 xl:gap-12 md:pr-10 md:pl-5 xl:pl-10">
           <MenuItem href="#info-section">Информация</MenuItem>
 
           <MenuItem href="#art-section">Картини</MenuItem>
@@ -394,8 +394,8 @@ export default function LayoutDefault(props: { children?: JSX.Element }) {
       <BackToTopArrow></BackToTopArrow>
       <MainFooter>
         <div class="flex flex-col gap-5 flex-wrap line-height-0 mx-auto w-full">
-          <div class="flex flex-col justify-center items-center md:gap-2 lg-gap-5 xl-gap-0 pb-8 py-10">
-            <p>Всички права запазени © Copyright Zhen-Shan-Ren-Art.bg</p>
+          <div class="flex flex-col justify-center items-center md:gap-2 lg-gap-5 xl-gap-0 pb-8 py-10 px-3">
+            <p class="text-center">Всички права запазени © Copyright Zhen-Shan-Ren-Art.bg</p>
             <img src="/assets/lotus-icon.png" class="c-brand w-10 h-10" />
             <p>Българска Фалун Дафа Асоциация
             </p>
@@ -462,7 +462,7 @@ function Topbar(props: { children: JSX.Element }) {
 
   return (
     <div
-      class={`h-90px md:h-80px w-full z-4 fixed top-0 flex-content-center lg-p-40px p-0px transition-all duration-300 ease-in-out ${isScrolled() ? "bg-paper" : "bg-transparent" }`}>
+      class={`h-50px sm:h-80px w-full z-35 fixed top-0 flex-content-center lg-p-40px p-0px transition-all duration-300 ease-in-out ${isScrolled() ? "bg-paper" : "bg-transparent" }`}>
       <div class="mx-auto max-w-full flex md:flex-row flex-col justify-start sm:justify-center md:justify-between flex-items-center h-full">
         {props.children}
       </div>

@@ -92,8 +92,8 @@ export default function Page() {
 			<section id="info-section" class="relative inline-block w-full h-full min-h-500px" style="background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2) ), url(/assets/Fulfilling-Vows.webp); background-position: center center; background-repeat: no-repeat; background-size: cover;" data-orig-width="1207" data-orig-height="720">
 				<AnimatedComponent>
 					<div class="max-w-1000px w-full h-full">
-						<div class="bg-paper md:mr-0 pb-50px max-w-1050px px-30px md:px-50px pt-50px md:ml-20% my-70px mx-20px md:mx-0">
-							<H2WithImage class="mb-10" title="Международна изложба „Изкуството на Джън-Шан-Жен“" />
+						<div class="bg-paper md:mr-0 pb-50px max-w-1050px px-30px md:px-50px pt-40px md:pt-50px md:ml-20% my-70px mx-20px md:mx-0">
+							<h1 class="mb-7 md:mb-10">Международна изложба „Изкуството на Джън-Шан-Жен“</h1>
 							<p class="pb-0 mb-0 md:font-size-19px font-size-15px leading-1.6rem md:leading-1.8rem">
 								Изложбата „Изкуството на Джън-Шан-Жен” е създадена през 2004 г. и се състои от близо 40 произведения. Идеята за изложбата се поражда от преживявания на професор Кунлун Джан, който е неин основател. Той е един от най-известните и уважавани скулптури на модерен Китай. Завършил е Факултета по скулптура на Китайската академия по изкуствата, заемал е постовете на директор на Института по скулптура към Института по изкуствата в Шандун, Китай, както и директор на Института по изследване на скулптурата в Шандун. Носител е на множество награди, участвал е в редица изложби, както в родината си Китай, така и по целия свят.
 							</p>
@@ -190,19 +190,19 @@ export default function Page() {
 					<AuthorContainer
 						img="/assets/Zhang-Kunlun.jpg"
 						alt=""
-						title="Джан Кунлун"
+						title="Кунлун Джан"
 						description="Професор Джан Кунлун е един от най-успешните скулптори на съвременния Китай. Завършил е катедра „Скулптура“ на Китайската академия на изкуствата и се е специализирал в скулптура, маслена живопис и китайска живопис. Основава катедра „Скулптура“ в Шандонския университет по изкуствата, а по-късно става изпълнителен директор на Института за изследване на скулптурата. Професор Джан е получил много награди за изкуство, а много от направените от него паметници се намират в Китай, Съединените щати и Канада. Неговите картини и скулптури са били излагани в много страни. Той и неговите произведения са публикувани в „Кой кой е в света“, „Енциклопедията на изключителните китайци“ и „Събрани произведения на световната скулптура“, както и в много други издания."
 						author="Отава, Канада"
 					/>
 					<AuthorContainer
 						img="/assets/Chen-Xiaoping.jpg"
 						alt=""
-						title="Чен Сяопин"
+						title="Сяопин Чън"
 						description={
 							<>
-								Чен Сяопин е утвърдена художничка, родена в Китай, която сега живее в Канада. Тя е изучавала традиционна китайска калиграфия и пейзажна живопис в ранна възраст, а по-късно е учила и маслена живопис. Чен е носител на множество награди на провинциално и национално ниво.<br />
+								Сяопин Чън е утвърдена художничка, родена в Китай, която сега живее в Канада. Тя е изучавала традиционна китайска калиграфия и пейзажна живопис в ранна възраст, а по-късно е учила и маслена живопис. Чен е носител на множество награди на провинциално и национално ниво.<br />
 
-								Чен е учила акварел и керамика в Университета на Марианата през 1997 г. и е представяла творбите си в няколко частни изложби. Нейни творби са били избирани и за репродукция в различни медии, включително арт календари, илюстрации на книги и корици на книги. През 1998 г. е обявена за „Изключителен художник“ от губернатора на Северните Мариански острови. Тя е била бивш арт директор на Общинския съвет по изкуствата в Ричмънд, Британска Колумбия, Канада.
+								Чън е учила акварел и керамика в Университета на Марианата през 1997 г. и е представяла творбите си в няколко частни изложби. Нейни творби са били избирани и за репродукция в различни медии, включително арт календари, илюстрации на книги и корици на книги. През 1998 г. е обявена за „Изключителен художник“ от губернатора на Северните Мариански острови. Тя е била бивш арт директор на Общинския съвет по изкуствата в Ричмънд, Британска Колумбия, Канада.
 							</>
 						}
 						author="Ванкувър, Канада"
@@ -210,8 +210,8 @@ export default function Page() {
 					<AuthorContainer
 						img="/assets/Dong-Xiqiang.jpg"
 						alt=""
-						title="Донг Сицян"
-						description="Донг Сицян е бивш професор и резидентен художник в Академията за изящни изкуства в Тиендзин, както и художник в Централния институт за изящни изкуства в Китай. Г-н Донг е носител на множество награди. През 1993 г. неговите творби са изложени в престижната Национална художествена галерия на Китай, където печелят най-високото отличие на Международната младежка художествена изложба. През 2004 г. неговите творби печелят най-голямата награда на изложбата на Асоциацията на художниците в Лос Анджелис."
+						title="Сицян Донг"
+						description="Сицян Донг е бивш професор и резидентен художник в Академията за изящни изкуства в Тиендзин, както и художник в Централния институт за изящни изкуства в Китай. Г-н Донг е носител на множество награди. През 1993 г. неговите творби са изложени в престижната Национална художествена галерия на Китай, където печелят най-високото отличие на Международната младежка художествена изложба. През 2004 г. неговите творби печелят най-голямата награда на изложбата на Асоциацията на художниците в Лос Анджелис."
 						author="Ню Джърси, САЩ"
 					/>
 					<AuthorContainer
@@ -270,7 +270,7 @@ export default function Page() {
 								<div class="flex flex-row-reverse justify-start items-center mb-10 relative">
 									<div class="w-1/2 pl-5 md:pl-8 text-left">
 										<p class="text-4 text-gray-800">07.05.2025 - 24.05.2025</p>
-										<h3 class="text-left important-font-size-5 important-line-height-7.5 uppercase my-6">град Варна</h3>
+										<h3 class="text-left important-font-size-4.5 important-line-height-7.5 uppercase my-6">град Варна</h3>
 										<p class="text-4.6 italic text-gray-800">Graffit Gallery Hotel - бул. "Княз Борис I" 65</p>
 										{/* <p>
 											The Truth, Compassion, Tolerance Art Exhibit has toured more than 40 countries and 200 cities worldwide since its debut in July 2004 at the Rayburn House, U.S. Congress Building, in Washington, DC.
@@ -288,8 +288,8 @@ export default function Page() {
 								<div class="flex justify-end items-center mb-10 relative">
 									<div class="w-1/2 pr-5 md:pr-8 text-right">
 										<p class="text-4 text-gray-800">13.08.2025 - 29.08.2025</p>
-										<h3 class="text-left important-font-size-5 important-line-height-7.5 uppercase my-6">село Равадиново</h3>
-										<p class="text-4.6 italic text-gray-800">Замъка Равадиново</p>
+										<h3 class="text-left important-font-size-4.5 important-line-height-7.5 uppercase my-6">село Равадиново</h3>
+										<p class="text-4.5 italic text-gray-800">Замъка Равадиново</p>
 										{/* <p>
 											Art of Zhen Shan Ren Museum opens in Arizona. The exhibition received acclaim in 900 cities and 50 countries. It is now receiving its first permanent home in Tempe, Arizona.
 										</p> */}
@@ -306,7 +306,7 @@ export default function Page() {
 								<div class="flex flex-row-reverse justify-start items-center mb-10 relative">
 									<div class="w-1/2 pl-5 md:pl-8 text-left">
 										<p class="text-4 text-gray-800">10.09.2025 - 20.09.2025</p>
-										<h3 class="text-left important-font-size-5 important-line-height-7.5 uppercase my-6">град Созопол</h3>
+										<h3 class="text-left important-font-size-4.5 important-line-height-7.5 uppercase my-6">град Созопол</h3>
 										<p class="text-4.6 italic text-gray-800">Художествена галерия (Старото училище) - Център, ул. "Кирил и Методий" 63</p>
 										{/* <p>
 											Since its debut in 2004 in Washington, D.C., the exhibition has toured over 900 cities, in over 50 countries, with over 800 shows and inspired millions.
