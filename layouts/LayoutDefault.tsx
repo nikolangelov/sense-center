@@ -394,11 +394,9 @@ export default function LayoutDefault(props: { children?: JSX.Element }) {
       <BackToTopArrow></BackToTopArrow>
       <MainFooter>
         <div class="flex flex-col gap-5 flex-wrap line-height-0 mx-auto w-full">
-          <div class="flex flex-col justify-center items-center md:gap-2 lg-gap-5 xl-gap-0 pb-8 py-10 px-3">
-            <p class="text-center">Всички права запазени © Copyright Zhen-Shan-Ren-Art.bg</p>
+          <div class="flex flex-col justify-center items-center md:gap-2 lg-gap-5 xl-gap-0 pb-5 py-10 px-3">
             <img src="/assets/lotus-icon.png" class="c-brand w-10 h-10" />
-            <p>Българска Фалун Дафа Асоциация
-            </p>
+            <p class="text-center">Всички права запазени © Copyright Zhen-Shan-Ren-Art.bg</p>
           </div>
         </div>
       </MainFooter>
@@ -420,7 +418,7 @@ function MenuItem(props: { href: string, children: JSX.Element }) {
     onCleanup(() => window.removeEventListener("scroll", checkScroll));
   });
 
-  return <div class="relative group"><a href={props.href} style="font-family: 'TrajanPro3', sans-serif" class={`block relative py-1 font-ui lg-flex ${isScrolled() ? "c-paper-inv" : "c-paper" } text-center font-size-3.5 md:font-size-4 font-sans hover-c-brand tracking-wide font-500 transition-all after:content-empty after:absolute after:bottom-0 after:left-0 after:right-0 after:w-0 after:h-0.5 after:bg-brand after:transition-all group-hover:after:w-full`}>{props.children}</a></div>
+  return <div class="relative group"><a href={props.href} style="font-family: 'Lora', serif" class={`block relative py-1 font-ui lg-flex ${isScrolled() ? "c-paper-inv" : "c-paper"} text-center font-size-3.3 md:font-size-3.8 tracking-0.3 hover-c-brand font-500 transition-all after:content-empty after:absolute after:bottom-0 after:left-0 after:right-0 after:w-0 after:h-0.5 after:bg-brand after:transition-all group-hover:after:w-full`}>{props.children}</a></div>
 }
 
 const CurrentYear = () => {
@@ -451,7 +449,7 @@ function Topbar(props: { children: JSX.Element }) {
 
   return (
     <div
-      class={`h-50px sm:h-80px w-full z-35 fixed top-0 flex-content-center lg-p-40px p-0px transition-all duration-300 ease-in-out ${isScrolled() ? "bg-paper" : "bg-transparent" }`}>
+      class={`h-50px sm:h-80px w-full z-35 fixed top-0 flex-content-center lg-p-40px p-0px transition-all duration-300 ease-in-out ${isScrolled() ? "bg-paper" : "bg-transparent"}`}>
       <div class="mx-auto max-w-full flex md:flex-row flex-col justify-start sm:justify-center md:justify-between flex-items-center h-full">
         {props.children}
       </div>

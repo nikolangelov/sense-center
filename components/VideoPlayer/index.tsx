@@ -2,12 +2,10 @@ import { onMount, createSignal } from 'solid-js';
 
 type VideoHeroProps = {
   fallbackImageUrl: string;
-  overlayImageUrl?: string;
 };
 
 export const VideoHero = (props: VideoHeroProps) => {
   const [shouldLoad, setShouldLoad] = createSignal(false);
-  const [showOverlay, setShowOverlay] = createSignal(true);
 
   const videoUrl = "/assets/HeroVideo.mp4";
 
@@ -45,13 +43,16 @@ export const VideoHero = (props: VideoHeroProps) => {
       )}
 
       <div class="flex flex-col items-center justify-center w-full h-full z-10">
-        {props.overlayImageUrl && showOverlay() && (
-          <img
-            src={props.overlayImageUrl}
-            alt="Overlay"
-            class="absolute top-1/2 left-1/2 w-70% sm:w-50% lg:w-[35%] mx-auto pb-15 sm:pb-10 transform -translate-x-1/2 -translate-y-1/2 z-2 pointer-events-none"
-          />
-        )}
+        <img
+          src="/assets/zhen-shan-ren-text-SVG.svg"
+          alt="Overlay"
+          class="absolute w-70% sm:w-50% lg:w-[35%] mx-auto pb-15 sm:pb-10 transform z-2 pointer-events-none"
+        />
+        <img
+          src="/assets/zhen-shan-ren-SVG.svg"
+          alt="Overlay"
+          class="absolute w-70% sm:w-50% lg:w-[35%] mx-auto pb-15 sm:pb-10 transform z-2 pointer-events-none"
+        />
 
         <button
           onClick={scrollToNextSection}
