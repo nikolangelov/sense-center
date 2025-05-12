@@ -48,11 +48,6 @@ export const VideoHero = (props: VideoHeroProps) => {
           alt="Overlay"
           class="absolute w-70% sm:w-50% lg:w-[35%] mx-auto pb-15 sm:pb-10 transform z-2 pointer-events-none"
         />
-        <img
-          src="/assets/zhen-shan-ren-SVG.svg"
-          alt="Overlay"
-          class="absolute w-70% sm:w-50% lg:w-[35%] mx-auto pb-15 sm:pb-10 transform z-2 pointer-events-none"
-        />
 
         <button
           onClick={scrollToNextSection}

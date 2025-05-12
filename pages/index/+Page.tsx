@@ -275,7 +275,7 @@ export default function Page() {
 									</div>
 									<div class="w-1/2 pr-5 md:pr-8 text-right z-2">
 										<img src="/assets/graffiti-hotel-image.jpg" alt="Sculptor" class="hidden md:block w-full object-cover rounded shadow mb-4" />
-										<img src="/assets/IMG_4977-768x1024.jpg" alt="Sculptor" class="md:hidden block w-full object-cover rounded shadow mb-4" />
+										<img src="/assets/graffit-hotel-mobile-image.jpg" alt="Sculptor" class="md:hidden block w-full object-cover rounded shadow mb-4" />
 									</div>
 									<div class="w-2 h-2 bg-paper-inv absolute left-1/2 top-1/2 transform -translate-x-90% -translate-y-1/2 z-1 rounded-lg">
 										<div class="w-8 h-0.5 bg-paper-inv absolute -left-8 top-1/2 transform -translate-y-1/2"></div>
