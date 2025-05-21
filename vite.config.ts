@@ -20,7 +20,7 @@ export default defineConfig({
 			 {
 				colors: {
 					brand: "#d6a636",
-					"brand-dark": "#bf7e36",
+					"brand-dark": "#ad7a32",
 					"brand-compliment": "#8f1828",
 					"brand-title-light-bg": "#4f4234",
 					"brand-action": "#edb339",
