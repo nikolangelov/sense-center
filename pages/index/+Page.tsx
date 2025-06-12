@@ -82,6 +82,12 @@ function GalleryImage(props: { img1: string, img2: string, alt1: string, alt2: s
 export default function Page() {
 	return (
 		<>
+			<noscript>
+				<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PKZ5TXCB"
+					height="0" width="0" style="display:none;visibility:hidden">
+				</iframe>
+			</noscript>
+
 			<div class="">
 				<VideoHero
 					fallbackImageUrl="/assets/fallback-image-video.webp"
