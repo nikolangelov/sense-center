@@ -1,84 +1,46 @@
-import { onMount, createSignal } from 'solid-js';
+import { createSignal } from "solid-js";
 
-type VideoHeroProps = {
-  fallbackImageUrl: string;
-};
+export const VideoPlayer = (props: { youtubeId: string; thumbnail: string }) => {
+  const [isPlaying, setIsPlaying] = createSignal(false);
 
-export const VideoHero = (props: VideoHeroProps) => {
-  const [shouldLoad, setShouldLoad] = createSignal(false);
-
-  const videoUrl = "/assets/HeroVideo.mp4";
-
-  onMount(() => {
-    setTimeout(() => {
-      setShouldLoad(true);
-    }, 0);
-  });
-
-  const scrollToNextSection = () => {
-    const nextSection = document.getElementById("info-section");
-    if (nextSection) {
-      nextSection.scrollIntoView({ behavior: 'smooth' });
-    }
+  const handlePlay = () => {
+    setIsPlaying(true);
   };
 
   return (
-    <div class="relative w-full h-[55vh] sm:h-screen overflow-hidden bg-black">
-
-      {shouldLoad() ? (
-        <video
-          src={videoUrl}
-          autoplay
-          muted
-          playsinline
-          loop
-          class="absolute inset-0 w-full h-full object-cover"
+    <div
+      class="relative flex justify-center items-center mt-0 lg:mt-20 max-w-[1500px] mx-auto cursor-pointer"
+      onClick={handlePlay}
+    >
+      {isPlaying() ? (
+        <iframe
+          class="rounded-[10px] w-full h-[250px] sm:h-[400px] md:h-[600px] lg:h-[700px] xl:h-[750px] bg-black object-cover"
+          src={`https://www.youtube.com/embed/${props.youtubeId}?autoplay=1&modestbranding=1&rel=0&showinfo=0`}
+          title="YouTube video player"
+          allow="autoplay; encrypted-media"
+          allowfullscreen
         />
       ) : (
-        <img
-          src={props.fallbackImageUrl}
-          alt="Video preview"
-          class="absolute inset-0 w-full h-full object-cover z-0"
-        />
-      )}
-
-      <div class="flex flex-col items-center justify-center w-full h-full z-10">
-        <img
-          src="/assets/zhen-shan-ren-text-SVG.svg"
-          alt="Overlay"
-          class="absolute w-70% sm:w-50% lg:w-[35%] mx-auto pb-15 sm:pb-10 transform z-2 pointer-events-none"
-        />
-
-        <button
-          onClick={scrollToNextSection}
-          class="
-         cursor-pointer absolute bottom-10 sm:bottom-50 transform -translate-x-1/2 z-30
-          sm:w-12 sm:h-12 w-10 h-10 rounded-full border-2 border-white text-white bg-transparent b-solid
-          flex items-center justify-center
-          animate-bounce
-        "
-          aria-label="Scroll down"
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            class="h-6 w-6"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-            stroke-width="2"
+        <>
+          <img
+            src={props.thumbnail}
+            alt="Video thumbnail"
+            class="absolute w-full h-full object-cover z-10 pointer-events-none rounded-[10px]"
+          />
+          <div
+            class="h-16 w-16 font-size-8 pl-1 flex justify-center items-center absolute z-20 text-brand-purple bg-[#f0f0f0] hover:bg-white rounded-[10px] transition-all duration-200"
+            style={{
+              top: "50%",
+              left: "50%",
+              transform: "translate(-50%, -50%)",
+              "pointer-events": "none",
+            }}
           >
-            <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
-          </svg>
-        </button>
-      </div>
-
-      <noscript>
-        <img
-          src={props.fallbackImageUrl}
-          alt="Video preview"
-          class="absolute top-0 left-0 w-full h-full object-cover"
-        />
-      </noscript>
+            ▶
+          </div>
+          <div class="rounded-[10px] w-full h-[250px] sm:h-[400px] md:h-[600px] lg:h-[700px] xl:h-[750px] bg-black" />
+        </>
+      )}
     </div>
   );
 };

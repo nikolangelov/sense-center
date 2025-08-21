@@ -1,5 +1,5 @@
 // Default <head> (can be overridden by pages)
-import logoUrl from "../assets/lotus-icon.png";
+import logoUrl from "../assets/sense-logo-30px.webp";
 
 export default function Head() {
   return (

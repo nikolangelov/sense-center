@@ -1,8 +1,8 @@
-import {defineConfig} from "vite"
+import { defineConfig } from "vite"
 import vike from "vike/plugin";
 import vikeSolid from "vike-solid/vite";
 
-import {fileURLToPath, URL} from "node:url"
+import { fileURLToPath, URL } from "node:url"
 import Icons from "unplugin-icons/vite"
 import UnoCSS from 'unocss/vite'
 
@@ -17,31 +17,29 @@ export default defineConfig({
 	plugins: [
 		UnoCSS({
 			theme:
-			 {
+			{
 				colors: {
-					brand: "#d6a636",
-					"brand-dark": "#ad7a32",
-					"brand-compliment": "#8f1828",
-					"brand-title-light-bg": "#4f4234",
-					"brand-action": "#edb339",
-					"brand-action-hover": "#ebbc59",
-					"brand-second-action": "#228057",
-					"brand-second-action-hover": "#01874c",
-					"paper-link": "#56B665",
-					"paper-link-hover": "#268c5f",
+					brand: "#E11172",
+					"brand-hover": "#eb2a84",
+					"brand-orange": "#FA7402",
+					"brand-orange-hover": "#ff8217",
+					"brand-purple": "#742C8F",
+					"brand-purple-hover": "#8431a3",
+					"brand-blue": "#088F9D",
+					"brand-blue-hover": "#067480",
+					"brand-yellow": "#FFAE01",
+					"brand-yellow-hover": "#ffbb29",
 
-					"brand-light": "#007faf",
-					"brand-inv": "#eee",
 					"paper": "#fcfcfc",
 					"paper-inv": "#07111c",
 					"paper-border": "#e7e7e7",
 				},
-				fonts: {
-					letter: "font-family:'Roboto', sans-serif;"
-				}
+				fontFamily: {
+					roboto: ['"Roboto"', 'sans-serif'],
+				},
 			}
 		}),
-		vike({prerender: true}),
+		vike({ prerender: true }),
 		vikeSolid(),
 		// @ts-ignore
 		// only https://icon-sets.iconify.design/material-symbols/
@@ -51,7 +49,7 @@ export default defineConfig({
 		Icons({ compiler: "solid" }),
 		// markdownHotModuleReload(),
 	],
-	
+
 	resolve: {
 		alias: {
 			// must also be defined in tsconfig!

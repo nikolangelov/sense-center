@@ -3,6 +3,8 @@
 @import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Sofia+Sans+Condensed:ital,wght@0,1..1000;1,1..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
 
 a {
   text-decoration: none;
@@ -14,15 +16,17 @@ a {
 
 body {
   margin: 0 auto;
-  background-color: #fff3e3;
+  background-color: #fcfcfc;
   /* background-color: #f5eee7; */
   background-size: 10%;
+  overflow-x: hidden;
 }
 
 #page-content {
   margin: 0 auto;
   padding: 0px !important;
-  background-color: #f3f3f3;
+  background-color: #fcfcfc;
+  overflow: hidden;
 }
 
 .page-view {
@@ -31,44 +35,111 @@ body {
 }
 
 @font-face {
-  font-family: 'SofiaSans';
-  src: url('/assets/fonts/SofiaSans-Regular.ttf') format('truetype');
+  font-family: 'MYRIADPRO-Regular';
+  src: url('/assets/fonts/MYRIADPRO-REGULAR.OTF') format('opentype');
+  font-weight: normal;
+  font-style: normal;
 }
 
 @font-face {
-  font-family: 'TrajanPro3';
-  src: url('/assets/fonts/TrajanPro3-Regular.otf') format('truetype');
+  font-family: 'MYRIADPRO-Bold';
+  src: url('/assets/fonts/MYRIADPRO-BOLD.OTF') format('opentype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'MYRIADPRO-Semibold';
+  src: url('/assets/fonts/MYRIADPRO-SEMIBOLD.OTF') format('opentype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'MYRIADPRO-Light';
+  src: url('/assets/fonts/MyriadPro-Light.otf') format('opentype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'MYRIADPRO-CONDIT';
+  src: url('/assets/fonts/MYRIADPRO-CONDIT.OTF') format('opentype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'MYRIADPRO-COND';
+  src: url('/assets/fonts/MYRIADPRO-COND.OTF') format('opentype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'MYRIADPRO-SEMIBOLDIT';
+  src: url('/assets/fonts/MYRIADPRO-SEMIBOLDIT.OTF') format('opentype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'MYRIADPRO-BOLDCOND';
+  src: url('/assets/fonts/MYRIADPRO-BOLDCOND.OTF') format('opentype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'MyriadPro-SemiboldCond';
+  src: url('/assets/fonts/MyriadPro-SemiboldCond.otf') format('opentype');
+  font-weight: bold;
+  font-style: normal;
 }
 
 body.page-is-transitioning #page-content {
   opacity: 0;
 }
 
-li::marker {
-  color: #bf7e36;
-  font-size: 1.5rem !important;
-  content: "• ";
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  border-radius: 12px !important;
+}
+
+section {
+  margin-left: 20px;
+  margin-right: 20px;
 }
 
 div,
 p {
-  font-family: "Sofia Sans Condensed", sans-serif !important;
-  color: #07111c;
+  font-family: 'MYRIADPRO-Regular', sans-serif;
+  color: #373c3f;
   font-weight: 300;
   letter-spacing: 0.04rem;
   word-spacing: 0.01rem;
   font-size: 18px;
   line-height: 1.8rem;
   text-align: left;
+  z-index: 1;
 }
 
 @media (max-width: 900px) {
+
   div,
   p {
     letter-spacing: 0.04rem;
     word-spacing: 0.01rem;
     font-size: 16px;
-    line-height: 1.5rem;
+    line-height: 1.45rem;
   }
 }
 
@@ -76,8 +147,8 @@ h1,
 h2,
 h3,
 h4 {
-  font-family: "Lora", serif  !important;
-  color: #07111c;
+  font-family: 'MYRIADPRO-Bold', sans-serif !important;
+  color: #26292c;
   text-align: center;
 }
 
@@ -87,82 +158,103 @@ h4 {
   }
 }
 
-@media (max-width: 900px) {
-  h3 {
-    font-size: 24px !important;
-    line-height: 35px !important;
-    font-weight: 900;
-    letter-spacing: 0px;
-    margin: 0px !important;
-  }
-}
-
-@media (max-width: 900px) {
-  h2 {
-    padding: 0rem 1.25rem;
-    font-size: 26px !important;
-    line-height: 40px !important;
-    font-weight: 500;
-    letter-spacing: 0px;
-    margin: 0px 0px 40px 0px !important;
-  }
-}
-
 h1 {
   margin: 0;
-  text-transform: capitalize;
-  font-weight: 400 !important;
-  font-size: 50px;
-  line-height: 70px;
-  letter-spacing: 0.5px;
+  font-weight: 600 !important;
+  font-size: 100px;
+  line-height: 90px;
+  letter-spacing: 1px;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 940px) {
   h1 {
-    font-size: 40px !important;
-    line-height: 55px !important;
+    font-size: 45px !important;
+    line-height: 50px !important;
   }
 }
 
 @media (max-width: 500px) {
   h1 {
-    font-size: 32px !important;
+    font-size: 45px !important;
     line-height: 50px !important;
-  }
-}
-
-@media (max-width: 370px) {
-  h1 {
-    font-size: 23px !important;
-    line-height: 35px !important;
     font-weight: 900;
-    letter-spacing: 1px;
+    letter-spacing: 1.2px;
   }
 }
 
 h2 {
-  font-weight: 400;
-  font-size: 2.2rem;
-  margin: 0px 0px 60px 0px;
+  text-transform: uppercase;
+  margin: 0;
+  text-align: center;
+  font-weight: 700;
+  font-size: 4.5rem;
   letter-spacing: 0rem;
-  line-height: 3.3rem;
+  line-height: 5.3rem;
+}
+
+@media (max-width: 900px) {
+  h2 {
+    font-size: 45px !important;
+    line-height: 55px !important;
+    font-weight: 700;
+    letter-spacing: 0px;
+  }
 }
 
 h3 {
   text-transform: none;
-  font-size: 1.7rem;
-  line-height: 2.2rem;
-  font-weight: 500;
-  letter-spacing: 0.5px;
+  text-align: left;
+  font-size: 55px !important;
+  line-height: 60px !important;
+}
+
+@media (max-width: 900px) {
+  h3 {
+    font-size: 36px !important;
+    line-height: 40px !important;
+    letter-spacing: 0px;
+    margin: 0px 0px 40px 0px !important;
+  }
+}
+
+.h2-za-nas {
+  text-transform: none;
+  text-align: left;
+  font-size: 55px !important;
+  line-height: 60px !important;
+  font-weight: 700;
+}
+
+@media (max-width: 900px) {
+  .h2-za-nas {
+    font-size: 36px !important;
+    line-height: 40px !important;
+    font-weight: 700;
+    letter-spacing: 0px;
+    margin: 0px 0px 40px 0px !important;
+  }
+}
+
+h4 {
+  font-size: 26px;
+  line-height: 35px !important;
+  text-align: left;
+}
+
+@media (min-width: 900px) {
+  h4 {
+    font-size: 26px !important;
+    line-height: 35px !important;
+  }
 }
 
 html::-webkit-scrollbar {
-  width: 13px;
-  background-color: #2b2b2b;
+  width: 11px;
+  background-color: #dbdbdb;
 }
 
 html::-webkit-scrollbar-thumb {
-  background-image: linear-gradient(30deg, #afafaf 100%, #eba65b 0%);
+  background-image: linear-gradient(30deg, #E11172 0%, #FFAE01 80%);
   border-radius: 10px;
   border: 3px solid transparent;
   background-clip: content-box;
@@ -177,4 +269,54 @@ html::-webkit-scrollbar-thumb {
 .animate {
   opacity: 1;
   transform: translateY(0);
+}
+
+.hamburger .line {
+  width: 100%;
+  border-radius: 100px;
+  height: 2px;
+  background-color: #742C8F;
+  transition: all 0.4s ease;
+}
+
+.hamburger .line:nth-child(1) {
+  transform-origin: top left;
+}
+
+.hamburger .line:nth-child(2) {
+  opacity: 1;
+}
+
+.hamburger .line:nth-child(3) {
+  transform-origin: bottom left;
+}
+
+.hamburger .open:nth-child(1) {
+  transform: rotate(33deg);
+}
+
+.hamburger .open:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger .open:nth-child(3) {
+  transform: rotate(-33deg);
+}
+
+@media (min-width: 1500px) {
+  .googlereview-container {
+    height: 400px !important;
+  }
+}
+
+@media (min-width: 640px) and (max-width: 768px) {
+  .googlereview-container {
+    height: 350px !important;
+  }
+}
+
+@media (min-width: 1500px) {
+  .googlereview-container-in-page {
+    height: 550px !important;
+  }
 }
