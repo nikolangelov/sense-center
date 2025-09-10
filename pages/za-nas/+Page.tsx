@@ -5,10 +5,9 @@ import { H2Echo, H3Blue, H3Pink } from '../../components/H2WithImage';
 import { PuzzleButton, PuzzleButton2 } from "../../components/PuzzleButton";
 import { DoodleDecor } from "../../components/BackgroundDecor";
 import { BackgroundIcons } from "../../components/BackgroundIcons";
-import MdiEmail from '~icons/mdi/email';
-import MdiClockTimeTwo from '~icons/mdi/clock-time-two';
-import MdiPhone from '~icons/mdi/phone';
-import { GifHero } from "../../components/HeroVideo";
+import { createSignal } from "solid-js";
+import { VideoHero } from "../../components/HeroVideo";
+import { GradientFooter } from "../../components/GradientFooter";
 
 function GoogleMapIframe() {
 	const mapSrc = `https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2934.749670548677!2d23.25135671550783!3d42.6696015791651!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40aa9be9899f1247%3A0x9c53f8ec4847cb64!2zU0VOU0Ug0L3QsNGD0YHRgtC-INCf0L7QvdC40LrQsA!5e0!3m2!1sen!2sbg!4v1719513278453!5m2!1sen!2sbg`;
@@ -25,31 +24,53 @@ function GoogleMapIframe() {
 	);
 }
 
+const [isPlaying, setIsPlaying] = createSignal(false);
+
 export default function Page() {
 	return (
 		<>
 			<div class="relative w-full">
-				<GifHero gifPreview="/assets/home/2025-07-08 10-35-35.mp4" />
+				<VideoHero
+					class="important-h-full important-aspect-auto"
+					videoSrc="/assets/ergoterapia/Сенс-Център-Ерготерапия-Деца-1.mp4"
+					videoSrcMobile="/assets/ergoterapia/Сенс-Център-Ерготерапия-Деца-Мобилно-1.mp4"
+					gifPreview="/assets/ergoterapia/Сенс-Център-Ерготерапия-Деца.mp4"
+					gifPreviewMobile="/assets/ergoterapia/Сенс-Център-Ерготерапия-Деца-Мобилно.mp4"
+					isPlaying={isPlaying()}
+					onPlay={() => setIsPlaying(true)}
+				/>
 
-				<div class="w-full bg-#212528">
-					<div class="max-w-1240px mx-auto">
-						<div class="flex flex-justify-center">
-							<div class="flex flex-col justify-center items-center left-0 right-0 px-3 my-0 mx-auto absolute top-70% lg-top-70% text-center w-full" style="-webkit-transform: translateY(-50%);">
-								<AnimatedComponent>
-									<h1 class="tracking-0.3px c-paper mb-2.5 md:mb-7 px-0 md:px-15 xl:px-55 important-lg:font-size-70px important-lg:leading-17 important-md:font-size-45px important-md:leading-13 important-font-size-40px important-leading-9.5">Sense Center подкрепя семейството на деца със СОП в справянето с ежедневните предизвикателства</h1>
-								</AnimatedComponent>
-
-								<AnimatedComponent class="important-delay-600 mt-6 float-left md:pr-5px relative text-center max-w-1240px">
-									<div class="flex md:flex-row flex-col justify-center items-center gap-3">
-										<PuzzleButton />
-										<PuzzleButton2
-											style2="padding-left:0px !important; font-weight:500; font-size:14px !important;"
-											img="/assets/sense-orange-puzzle-piece.svg"
-											href=""
-											text="Вижте успешни истории"
-										/>
-									</div>
-								</AnimatedComponent>
+				<div class="absolute inset-0 z-30 pointer-events-none flex flex-col items-center justify-end pb-18 md:pb-10 text-center px-4 text-white">
+					<div class={`absolute ${isPlaying() ? 'top-92% sm:top-95% lg:top-100% mt-30' : 'top-42% md:top-55% mt-0'}`}>
+						<div>
+							<div
+								class={`mb-2 md:mb-6 transition-colors duration-500 important-font-size-48px important-md:font-size-90px important-leading-46px important-md:leading-80px important-font-[MYRIADPRO-Bold] text-center px-10 ${isPlaying()
+									? 'text-brand'
+									: 'text-white'}`}>
+								Помагаме на децата да се справят по-лесно с ежедневните задачи
+							</div>
+						</div>
+						<h1
+							class={`important-delay-300 font-400 text-center mb-0 important-font-size-5.5 lg-font-size-7 sm-px-0 px-12 md:leading-7 leading-5.5 transition-colors duration-500 important-font-[MYRIADPRO-Light] ${isPlaying()
+								? 'text-brand'
+								: 'text-white'}`}>
+							Ерготерапия за деца
+						</h1>
+						<div class={`important-delay-600 mt-8 md:mt-10 relative text-center ${isPlaying() ? 'md:pb-30' : 'md:pb-0'}`}>
+							<div class="flex md:flex-row flex-col justify-center items-center gap-3 pointer-events-auto">
+								<PuzzleButton2
+									class="important-bg-brand important-hover:bg-brand-hover"
+									style2="font-weight:500; font-size:14px !important;"
+									img="/assets/sense-puzzle-piece.svg"
+									href=""
+									text={<>Запазете час за<br />първична оценка</>}
+								/>
+								<PuzzleButton2
+									style2="font-weight:500; font-size:14px !important;"
+									img="/assets/sense-orange-puzzle-piece.svg"
+									href=""
+									text="Вижте успешни истории"
+								/>
 							</div>
 						</div>
 					</div>
@@ -108,35 +129,31 @@ export default function Page() {
 					<div class="">
 						<AnimatedComponent>
 							<ReviewSlider
-								variant="dots3"
+								variant="dots2"
 								reviews={[
-									{ name: "Karl Stirner" },
-									{ name: "Ann Panillo" },
-									{ name: "Peter Hughes" },
-									{ name: "Peter Hughes" },
+									{ name: "1" },
+									{ name: "2" },
+									{ name: "3" },
+									{ name: "4" },
 								]}>
 								<StarReview
 									reviewText="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged."
 									name="Iliyan Asenov"
-									date="Януари 2024"
 									hrefGoogleReview="https://maps.app.goo.gl/sye2Me5vsxUajS8a6"
 								/>
 								<StarReview
 									reviewText="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged."
 									name="Iliyan Asenov"
-									date="Януари 2024"
 									hrefGoogleReview="https://maps.app.goo.gl/sye2Me5vsxUajS8a6"
 								/>
 								<StarReview
 									reviewText="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged."
 									name="Iliyan Asenov"
-									date="Януари 2024"
 									hrefGoogleReview="https://maps.app.goo.gl/sye2Me5vsxUajS8a6"
 								/>
 								<StarReview
 									reviewText="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged."
 									name="Iliyan Asenov"
-									date="Януари 2024"
 									hrefGoogleReview="https://maps.app.goo.gl/sye2Me5vsxUajS8a6"
 								/>
 							</ReviewSlider>
@@ -190,7 +207,6 @@ export default function Page() {
 								puzzleclass="c-brand w-6 mr-2"
 								img="/assets/Mending-the-Cosmos.webp"
 								alt=""
-								href="/za-nas/blago/"
 								title="Използване на визуални помощни средства"
 								desc="Карти, таблици и схеми улесняват разбирането на информация и подкрепят комуникацията. Визуалните графици помагат на детето да се ориентира в ежедневните задачи."
 							/>
@@ -199,7 +215,6 @@ export default function Page() {
 								puzzleclass="c-brand-purple w-6 mr-2"
 								img="/assets/Mending-the-Cosmos.webp"
 								alt=""
-								href="/za-nas/blago/"
 								title="Въвеждане на сензорни активности"
 								desc="Активности като игра с пясък, вода, пластилин или сензорни топки подпомагат развитието на сетивата и насърчават спокойствието."
 							/>
@@ -208,7 +223,6 @@ export default function Page() {
 								puzzleclass="c-brand-orange w-6 mr-2"
 								img="/assets/Mending-the-Cosmos.webp"
 								alt=""
-								href="/za-nas/blago/"
 								title="Изграждане на рутинни действия"
 								desc="Рутините осигуряват предсказуемост, която помага на децата с аутизъм да се чувстват по-сигурни и спокойни. Например, създайте последователност за сутрешната подготовка или времето за игра."
 							/>
@@ -217,7 +231,6 @@ export default function Page() {
 								puzzleclass="c-brand-blue w-6 mr-2"
 								img="/assets/Mending-the-Cosmos.webp"
 								alt=""
-								href="/za-nas/blago/"
 								title="Използване на игрови методи"
 								desc="Включете ролеви или настолни игри, които развиват социалните умения и насърчават взаимодействието с другите."
 							/>
@@ -580,7 +593,7 @@ export default function Page() {
 						<GoogleMapIframe />
 						<div class="flex justify-center mt-5 md:ml-0 ml--10">
 							<img class="w-20 h-20 ml-0 mr--10 z-2" src="/assets/sense-logo-100px.webp" />
-							<p class="flex py-4 md:px-11 px-14 b-rd-12px bg-brand-purple c-paper font-600 md:font-size-22px font-size-18px w-full leading-8">гр. София, кв. Карпузица,<br />бул. "Никола Петков" 95А</p>
+							<p class="flex py-4 md:px-11 px-14 b-rd-12px bg-brand-purple w-full"><a href="https://maps.app.goo.gl/SKMstkcc8QTk1BzR7" target="_blank" rel="noopener noreferrer" class="c-paper font-[MYRIADPRO-Semibold] md:font-size-22px font-size-18px leading-8">гр. София, кв. Карпузица,<br />бул. "Никола Петков" 95А</a></p>
 						</div>
 					</div>
 				</AnimatedComponent>
@@ -630,6 +643,7 @@ export default function Page() {
 				</AnimatedComponent>
 				<PuzzleButton />
 			</section>
+			<GradientFooter />
 		</>
 	);
 }

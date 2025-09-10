@@ -9,6 +9,7 @@ import { VideoHero } from "../../components/HeroVideo";
 import { createSignal, JSX } from 'solid-js';
 import { VideoPlayer } from "../../components/VideoPlayer";
 import { Slider, SliderProvider } from "solid-slider";
+import { GradientFooter } from "../../components/GradientFooter";
 
 export const StaffSlider = (props: {
 	reviews: { name: string }[];
@@ -73,6 +74,7 @@ export default function Page() {
 				<VideoHero
 					youtubeId="R1kPm_q7vCc"
 					gifPreview="/assets/home/2025-07-08 10-35-35.mp4"
+					gifPreviewMobile=""
 					isPlaying={isPlaying()}
 					onPlay={() => setIsPlaying(true)}
 				/>
@@ -82,8 +84,8 @@ export default function Page() {
 						<div>
 							<h1
 								class={`mb-4 md:mb-7 transition-colors duration-500 ${isPlaying()
-										? 'text-black md:text-white md:hidden'
-										: 'text-white md:text-white md:block'
+									? 'text-black md:text-white md:hidden'
+									: 'text-white md:text-white md:block'
 									}`}>
 								Присъединете се към екип, който вярва в потенциала на всяко дете
 							</h1>
@@ -218,7 +220,7 @@ export default function Page() {
 					<div class="">
 						<AnimatedComponent>
 							<ReviewSlider
-								variant="dots3"
+								variant="dots2"
 								reviews={[
 									{ name: "Karl Stirner" },
 									{ name: "Ann Panillo" },
@@ -228,25 +230,21 @@ export default function Page() {
 								<StarReview
 									reviewText="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged."
 									name="Iliyan Asenov"
-									date="Януари 2024"
 									hrefGoogleReview="https://maps.app.goo.gl/sye2Me5vsxUajS8a6"
 								/>
 								<StarReview
 									reviewText="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged."
 									name="Iliyan Asenov"
-									date="Януари 2024"
 									hrefGoogleReview="https://maps.app.goo.gl/sye2Me5vsxUajS8a6"
 								/>
 								<StarReview
 									reviewText="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged."
 									name="Iliyan Asenov"
-									date="Януари 2024"
 									hrefGoogleReview="https://maps.app.goo.gl/sye2Me5vsxUajS8a6"
 								/>
 								<StarReview
 									reviewText="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged."
 									name="Iliyan Asenov"
-									date="Януари 2024"
 									hrefGoogleReview="https://maps.app.goo.gl/sye2Me5vsxUajS8a6"
 								/>
 							</ReviewSlider>
@@ -633,6 +631,7 @@ export default function Page() {
 					</AnimatedComponent>
 				</div>
 			</section>
+			<GradientFooter />
 		</>
 	);
 }

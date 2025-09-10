@@ -9,6 +9,7 @@ import { GallerySlider2 } from "../../components/GallerySlider";
 import { DoodleDecor } from "../../components/BackgroundDecor";
 import { BackgroundIcons } from "../../components/BackgroundIcons";
 import { WorkProcess } from "../../components/WorkProcess";
+import { GradientFooter } from "../../components/GradientFooter";
 
 export default function Page() {
 	return (
@@ -94,37 +95,34 @@ export default function Page() {
 							<div class="block xl:hidden">
 								<ContainerSlider
 									reviews={[
-										{ name: "Review 1" },
-										{ name: "Review 2" },
-										{ name: "Review 3" },
+										{ name: "1" },
+										{ name: "2" },
+										{ name: "3" },
 									]}
 								>
 									<ContainerBox
-										link=""
 										class2="important-h-55"
 										style="background-color:#FA7402;"
 										title="Забавено развитие на речта"
-										text="По-късно проговаряне от връстниците си и ограничен речников запас. Това е сред най-честите комуникативни нарушения при деца с умствена изостаналост"
+										text="По-късно проговаряне от връстниците си и ограничен речников запас. Това е сред най-честите комуникативни нарушения при деца с умствена изостаналост."
 										img="/assets/umstvena-izostanalost/комуникативни-нарушения-деца-умствена-изостаналост.webp"
 										alt="Комуникативни нарушения при деца с умствена изостаналост."
 									/>
 									<ContainerBox
-										link=""
 										class2="important-h-55"
 										style="background-color:#FA7402;"
 										style2=""
 										title="Трудности при учене и запомняне"
-										text="Запомнянето на нова информация и овладяването на нови умения отнемат повече време и усилия"
+										text="Запомнянето на нова информация и овладяването на нови умения отнемат повече време и усилия."
 										img="/assets/umstvena-izostanalost/деца-умствени-забавяния.webp"
 										alt="Дете с умствено забавяне."
 									/>
 									<ContainerBox
-										link=""
 										class2="important-h-55"
 										style="background-color:#FA7402;"
 										style2=""
 										title="Проблеми с логическото мислене"
-										text="Затруднения при установяване на причинно-следствена връзка или решаване на елементарни задачи"
+										text="Затруднения при установяване на причинно-следствена връзка или решаване на елементарни задачи."
 										img="/assets/umstvena-izostanalost/умствена-изостаналост-деца.webp"
 										alt="Умствена изостаналост при дете."
 									/>
@@ -134,35 +132,32 @@ export default function Page() {
 							<div class="hidden xl:flex mx-auto gap-4 w-full">
 								<div class="w-1/3">
 									<ContainerBox
-										link=""
 										class2="important-h-55"
 										style="background-color:#FA7402;"
 										title="Забавено развитие на речта"
-										text="По-късно проговаряне от връстниците си и ограничен речников запас. Това е сред най-честите комуникативни нарушения при деца с умствена изостаналост"
+										text="По-късно проговаряне от връстниците си и ограничен речников запас. Това е сред най-честите комуникативни нарушения при деца с умствена изостаналост."
 										img="/assets/umstvena-izostanalost/комуникативни-нарушения-деца-умствена-изостаналост.webp"
 										alt="Комуникативни нарушения при деца с умствена изостаналост."
 									/>
 								</div>
 								<div class="w-1/3">
 									<ContainerBox
-										link=""
 										class2="important-h-55"
 										style="background-color:#FA7402;"
 										style2=""
 										title="Трудности при учене и запомняне"
-										text="Запомнянето на нова информация и овладяването на нови умения отнемат повече време и усилия"
+										text="Запомнянето на нова информация и овладяването на нови умения отнемат повече време и усилия."
 										img="/assets/umstvena-izostanalost/деца-умствени-забавяния.webp"
 										alt="Дете с умствено забавяне."
 									/>
 								</div>
 								<div class="w-1/3">
 									<ContainerBox
-										link=""
 										class2="important-h-55"
 										style="background-color:#FA7402;"
 										style2=""
 										title="Проблеми с логическото мислене"
-										text="Затруднения при установяване на причинно-следствена връзка или решаване на елементарни задачи"
+										text="Затруднения при установяване на причинно-следствена връзка или решаване на елементарни задачи."
 										img="/assets/umstvena-izostanalost/умствена-изостаналост-деца.webp"
 										alt="Умствена изостаналост при дете."
 									/>
@@ -187,7 +182,6 @@ export default function Page() {
 									]}
 								>
 									<ContainerBox
-										link=""
 										style="background-color:#742C8F;"
 										title="Затруднена социална адаптация"
 										text="Социализацията на деца с умствена изостаналост е предизвикателство. Те често се чувстват неуверени в нова среда и трудно се включват в групови дейности."
@@ -195,7 +189,6 @@ export default function Page() {
 										alt="Социализация на деца с умствена изостаналост."
 									/>
 									<ContainerBox
-										link=""
 										style="background-color:#742C8F;"
 										title="Забавено развитие на двигателните умения"
 										text="При някои деца с умствени забавяния ходенето, хващането на предмети и координираните движения се случват по-бавно."
@@ -203,10 +196,9 @@ export default function Page() {
 										alt="работа с деца с умствена изостаналост​."
 									/>
 									<ContainerBox
-										link=""
 										style="background-color:#742C8F;"
 										title="Трудности при следване на инструкции"
-										text="Детето не успява да изпълни указания, особено ако са сложни или неясно формулирани"
+										text="Детето не успява да изпълни указания, особено ако са сложни или неясно формулирани."
 										img="/assets/umstvena-izostanalost/деца-лека-умствена-изостаналост.webp"
 										alt="Деца с лека умствена изостаналост."
 									/>
@@ -216,7 +208,6 @@ export default function Page() {
 							<div class="hidden xl:flex mx-auto gap-4 w-full">
 								<div class="w-1/3">
 									<ContainerBox
-										link=""
 										style="background-color:#742C8F;"
 										title="Затруднена социална адаптация"
 										text="Социализацията на деца с умствена изостаналост е предизвикателство. Те често се чувстват неуверени в нова среда и трудно се включват в групови дейности."
@@ -226,7 +217,6 @@ export default function Page() {
 								</div>
 								<div class="w-1/3">
 									<ContainerBox
-										link=""
 										style="background-color:#742C8F;"
 										title="Забавено развитие на двигателните умения"
 										text="При някои деца с умствени забавяния ходенето, хващането на предмети и координираните движения се случват по-бавно."
@@ -236,10 +226,9 @@ export default function Page() {
 								</div>
 								<div class="w-1/3">
 									<ContainerBox
-										link=""
 										style="background-color:#742C8F;"
 										title="Трудности при следване на инструкции"
-										text="Детето не успява да изпълни указания, особено ако са сложни или неясно формулирани"
+										text="Детето не успява да изпълни указания, особено ако са сложни или неясно формулирани."
 										img="/assets/umstvena-izostanalost/деца-лека-умствена-изостаналост.webp"
 										alt="Деца с лека умствена изостаналост."
 									/>
@@ -370,8 +359,6 @@ export default function Page() {
 						<div class="pt-10 flex md:flex-row flex-col justify-center items-center gap-2">
 							<PuzzleButton />
 							<PuzzleButton2
-								style2="padding-left:0px !important; font-weight:600; font-size:16px !important;"
-								img="/assets/sense-orange-puzzle-piece.svg"
 								href=""
 								text="+ 359 879 800 013"
 							/>
@@ -393,16 +380,16 @@ export default function Page() {
 										{ name: "3" },
 									]}>
 									<ReviewersImageReview
-										style="background:linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0.8)),url(/assets/umstvena-izostanalost/родител-дете-умствено-изоставане-5.webp); background-position: right 50% bottom 85% !important; background-size: cover;"
-										reviewText="“Много се развиха уменията на децата откъм моторика, откъм междуличностни взаимоотношения, емоционалната интелигентност е изключително развита откакто работят тук.”"
-										name="Александър Соклев"
-										date="баща на Елисавета, 7г., в норма, и Александър, 5 г., съмнение за аутизъм"
+										style="background:linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0.8)),url(/assets/2.webp); background-position: right 50% bottom 85% !important; background-size: cover;"
+										reviewText="“Винаги знам, че винаги мога да разчитам на тях. Те са доста отзивчиви, откликват веднага на нашите въпроси.”"
+										name="Станимира Миленова"
+										date="майка на Самуил, 6 г. разстройство на речта"
 									/>
 									<ReviewersImageReview
-										style="background:linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0.8)),url(/assets/umstvena-izostanalost/родител-дете-умствено-изоставане-5.webp); background-position: right 50% bottom 85% !important; background-size: cover;"
-										reviewText="““Изключително грижовни, изключително отдадени, хора, подбрани наистина с огромна любов към децата. Хора, които ги е грижа. Винаги, когато сме имали нужда от някаква подкрепа сме я срещали тук.”"
-										name="Александър Соклев"
-										date="баща на Елисавета, 7г., в норма, и Александър, 5 г., съмнение за аутизъм"
+										style="background:linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0.8)),url(/assets/SOP/петя-дунчева.webp); background-position: right 50% bottom 85% !important; background-size: cover;"
+										reviewText="“Децата не се разбираха добре, постоянно се караха и бяха в страхотна конкуренция. След терапията децата се разбират много добре. Комуникират добре чувствата си, когато са ядосани, вместо да се карат и бият”"
+										name="Петя Дунчева"
+										date="майка на Луиза 6 г. и Максин 4 г., в норма, имат конфликт помежду си"
 									/>
 									<ReviewersImageReview
 										style="background:linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0.8)),url(/assets/5.webp); background-position: right 50% bottom 85% !important; background-size: cover;"
@@ -415,16 +402,16 @@ export default function Page() {
 
 							<div class="hidden xl:grid mx-auto grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-4 items-stretch">
 								<ReviewersImageReview
-									style="background:linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0.8)),url(/assets/umstvena-izostanalost/родител-дете-умствено-изоставане-5.webp); background-position: right 50% bottom 85% !important; background-size: cover;"
-									reviewText="“Много се развиха уменията на децата откъм моторика, откъм междуличностни взаимоотношения, емоционалната интелигентност е изключително развита откакто работят тук.”"
-									name="Александър Соклев"
-									date="баща на Елисавета, 7г., в норма, и Александър, 5 г., съмнение за аутизъм"
+									style="background:linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0.8)),url(/assets/2.webp); background-position: right 50% bottom 85% !important; background-size: cover;"
+									reviewText="“Винаги знам, че винаги мога да разчитам на тях. Те са доста отзивчиви, откликват веднага на нашите въпроси.”"
+									name="Станимира Миленова"
+									date="майка на Самуил, 6 г. разстройство на речта"
 								/>
 								<ReviewersImageReview
-									style="background:linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0.8)),url(/assets/umstvena-izostanalost/родител-дете-умствено-изоставане-5.webp); background-position: right 50% bottom 85% !important; background-size: cover;"
-									reviewText="““Изключително грижовни, изключително отдадени, хора, подбрани наистина с огромна любов към децата. Хора, които ги е грижа. Винаги, когато сме имали нужда от някаква подкрепа сме я срещали тук.”"
-									name="Александър Соклев"
-									date="баща на Елисавета, 7г., в норма, и Александър, 5 г., съмнение за аутизъм"
+									style="background:linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0.8)),url(/assets/SOP/петя-дунчева.webp); background-position: right 50% bottom 85% !important; background-size: cover;"
+									reviewText="“Децата не се разбираха добре, постоянно се караха и бяха в страхотна конкуренция. След терапията децата се разбират много добре. Комуникират добре чувствата си, когато са ядосани, вместо да се карат и бият”"
+									name="Петя Дунчева"
+									date="майка на Луиза 6 г. и Максин 4 г., в норма, имат конфликт помежду си"
 								/>
 								<ReviewersImageReview
 									style="background:linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0.8)),url(/assets/5.webp); background-position: right 50% bottom 85% !important; background-size: cover;"
@@ -461,7 +448,7 @@ export default function Page() {
 										Потърсете надеждна информация от достоверни източници
 									</h4>
 									<p class="text-left mt-2">
-										Четете материали от утвърдени центрове за деца и младежи с умствена изостаналост, медицински платформи и организации, които работят с деца с умствена изостаналост. Информираността ще Ви помогне да избирате правилни подходи и да се чувствате по-уверени в грижата за детето.
+										Четете материали от утвърдени центрове за деца и младежи с умствена изостаналост, медицински платформи и организации, които работят с деца с умствена изостаналост. Информираността ще Ви помогне да избирате верни подходи и да се чувствате по-уверени в грижата за детето.
 									</p>
 								</div>
 							</div>
@@ -533,7 +520,7 @@ export default function Page() {
 						/>
 						<AuthorContainer
 							href=""
-							style="background:linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0.6)),url(/assets/sindrom-na-daun/детски-логопед.webp); background-position: right 50% bottom 85% !important; background-repeat: no-repeat; background-size: cover;"
+							style="background:linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0.6)),url(/assets/home/детски-логопед.webp); background-position: right 50% bottom 85% !important; background-repeat: no-repeat; background-size: cover;"
 							name="Детски логопед"
 							description="Терапията подобрява разбирането и изпълнението на команди, формирането на самостоятелни изречения и умението за водене на диалог"
 						/>
@@ -599,7 +586,7 @@ export default function Page() {
 								/>
 							</div>
 							<p class="text-left mt-2 mb-12">
-								Професионалната работа с деца с умствена изостаналост се персонализира според  индивидуалните им потребности и темпо на развитие. При постоянна подкрепа и правилен подход, може да се постигне значително подобрение в комуникацията, ученето, социалните умения и самостоятелността. С времето децата с лека умствена изостаналост често стават по-уверени, справят се по-добре в ежедневието и се интегрират по-успешно в училищната и социалната среда.
+								Професионалната работа с деца с умствена изостаналост се персонализира според  индивидуалните им потребности и темпо на развитие. При постоянна подкрепа и верен подход, може да се постигне значително подобрение в комуникацията, ученето, социалните умения и самостоятелността. С времето децата с лека умствена изостаналост често стават по-уверени, справят се по-добре в ежедневието и се интегрират по-успешно в училищната и социалната среда.
 							</p>
 							<PuzzleButton />
 						</AnimatedComponent>
@@ -706,7 +693,6 @@ export default function Page() {
 										puzzleclass="c-brand w-6 mr-2"
 										img="/assets/umstvena-izostanalost/създаване-дневна-рутина-дете-умствена-изостаналост.webp"
 										alt="Създаване на дневна рутинана дете с умствена изостаналост."
-										href="/za-nas/blago/"
 										title="Създаване на рутина"
 										desc="Структурирането на ежедневните дейности ще улесни разбирането и изпълнението им. Осигурете обстановка, в която детето се чувства сигурно и прието. Избягвайте внезапни промени, които могат да създадат тревожност."
 									/>
@@ -716,7 +702,6 @@ export default function Page() {
 										puzzleclass="c-brand-purple w-6 mr-2"
 										img="/assets/umstvena-izostanalost/объркано-дете-комуникира.webp"
 										alt="Объркано дете се опитва да комуникира."
-										href="/za-nas/blago/"
 										title="Работа върху социалните умения"
 										desc="Насърчавайте детето да изразява нуждите си с думи или жестове. Можете да организирате съвместни дейности под формата на игра като четене на книги, пеене или ролеви игри, които изграждат социални умения."
 									/>
@@ -726,7 +711,6 @@ export default function Page() {
 										puzzleclass="c-brand-orange w-6 mr-2"
 										img="/assets/umstvena-izostanalost/учене-чрез-ежедневни-дейности.webp"
 										alt="Учене чрез ежедневни дейности на дете с умствена изостаналост."
-										href="/za-nas/blago/"
 										title="Учене чрез ежедневни дейности"
 										desc="Включвайте детето в задачи като подреждане на играчки, сервиране на масата или грижа за домашните любимци. Можете да използвате пъзели и образователни игри за развиване на моторните и когнитивните умения."
 									/>
@@ -741,7 +725,6 @@ export default function Page() {
 										puzzleclass="c-brand w-6 mr-2"
 										img="/assets/umstvena-izostanalost/създаване-дневна-рутина-дете-умствена-изостаналост.webp"
 										alt="Игри с различни текстури и предмети."
-										href="/za-nas/blago/"
 										title="Създаване на рутина"
 										desc="Структурирането на ежедневните дейности ще улесни разбирането и изпълнението им. Осигурете обстановка, в която детето се чувства сигурно и прието. Избягвайте внезапни промени, които могат да създадат тревожност."
 									/>
@@ -753,7 +736,6 @@ export default function Page() {
 										puzzleclass="c-brand-purple w-6 mr-2"
 										img="/assets/umstvena-izostanalost/объркано-дете-комуникира.webp"
 										alt="Групиране на предмети по цветове и форми."
-										href="/za-nas/blago/"
 										title="Работа върху социалните умения"
 										desc="Насърчавайте детето да изразява нуждите си с думи или жестове. Можете да организирате съвместни дейности под формата на игра като четене на книги, пеене или ролеви игри, които изграждат социални умения."
 									/>
@@ -765,7 +747,6 @@ export default function Page() {
 										puzzleclass="c-brand-orange w-6 mr-2"
 										img="/assets/umstvena-izostanalost/учене-чрез-ежедневни-дейности.webp"
 										alt="Четене на книжки с картинки при деца със синдром на Даун."
-										href="/za-nas/blago/"
 										title="Учене чрез ежедневни дейности"
 										desc="Включвайте детето в задачи като подреждане на играчки, сервиране на масата или грижа за домашните любимци. Можете да използвате пъзели и образователни игри за развиване на моторните и когнитивните умения."
 									/>
@@ -824,7 +805,7 @@ export default function Page() {
 							<div class="">
 								<AnimatedComponent>
 									<ReviewSlider
-										variant="dots3"
+										variant="dots2"
 										reviews={[
 											{ name: "1" },
 											{ name: "2" },
@@ -882,6 +863,7 @@ export default function Page() {
 					</section>
 				</div>
 			</section>
+			<GradientFooter />
 		</>
 	);
 }

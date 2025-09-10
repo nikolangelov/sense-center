@@ -9,6 +9,7 @@ import { GallerySlider2 } from "../../components/GallerySlider";
 import { DoodleDecor } from "../../components/BackgroundDecor";
 import { BackgroundIcons } from "../../components/BackgroundIcons";
 import { WorkProcess } from "../../components/WorkProcess";
+import { GradientFooter } from "../../components/GradientFooter";
 
 export default function Page() {
 	return (
@@ -40,8 +41,8 @@ export default function Page() {
 					maintitle="Какво са специални образователни способности (СОП)"
 					title="способности"
 					bgImage="/assets/SOP/ограмотяване-деца-специални-образователни-потребности.webp"
-					bgSize="250%"
-					bgPosition="right 20% top 89%"
+					bgSize="350%"
+					bgPosition="right 10% top 100%"
 				/>
 			</div>
 
@@ -52,7 +53,7 @@ export default function Page() {
 							<div class="bg-paper mx-auto">
 								<div class="">
 									<div class="mx--20px">
-										<img src="/assets/SOP/ограмотяване-деца-специални-образователни-потребности.webp" alt="психично развитие и обучение на деца с умствена изостаналост." class="important-b-rd-0 important-md:b-rd-12px w-full h-auto object-cover shadow" />
+										<img src="/assets/SOP/ограмотяване-деца-специални-образователни-потребности.webp" alt="Ограмотяване на деца със специални образователни потребности." class="important-b-rd-0 important-md:b-rd-12px w-full h-auto object-cover shadow" />
 									</div>
 									<div class="flex flex-col items-center gap-1 relative md:hidden">
 										<h2 class="text-transparent bg-clip-text bg-[url(/assets/SOP/ограмотяване-деца-специални-образователни-потребности.webp)] bg-cover bg-center opacity-8 scale-30 md:scale-50" style="background-position: right 0% top 0%;">
@@ -103,33 +104,30 @@ export default function Page() {
 									]}
 								>
 									<ContainerBox
-										link=""
 										class2="important-h-55"
 										style="background-color:#FA7402;"
 										title="Забавяне в развитието на речта и езиковите умения"
 										text="По-късно проговаряне от връстниците си или използва ограничен речников запас."
 										img="/assets/SOP/ограмотяване-деца-със-специални-образователни-потребности.webp"
-										alt="Комуникативни нарушения при деца с умствена изостаналост."
+										alt="Дете със специални образователни потребности."
 									/>
 									<ContainerBox
-										link=""
 										class2="important-h-55"
 										style="background-color:#FA7402;"
 										style2=""
 										title="Проблем с ученето и концентрацията"
 										text="Трудности с фокусирането, следването на инструкции или запомнянето на информация."
-										img="/assets/SOP/обучение-деца-специални-образователни-потребности.PNG"
-										alt="Дете с умствено забавяне."
+										img="/assets/SOP/обучение-деца-специални-образователни-потребности.webp"
+										alt="Обучение на деца със специални образователни потребности."
 									/>
 									<ContainerBox
-										link=""
 										class2="important-h-55"
 										style="background-color:#FA7402;"
 										style2=""
 										title="Проблеми с фината и грубата моторика"
 										text="Затруднения при дейности като рисуване, закопчаване на копчета или тичане и скачане."
-										img="/assets/SOP/проблеми-фината-грубата-моторика.png"
-										alt="Умствена изостаналост при дете."
+										img="/assets/SOP/проблеми-фината-моторика.webp"
+										alt="Проблеми с фината и грубата моторика на дете със соп."
 									/>
 								</ContainerSlider>
 							</div>
@@ -137,37 +135,34 @@ export default function Page() {
 							<div class="hidden xl:flex mx-auto gap-4 w-full">
 								<div class="w-1/3">
 									<ContainerBox
-										link=""
 										class2="important-h-55"
 										style="background-color:#FA7402;"
 										title="Забавяне в развитието на речта и езиковите умения"
 										text="По-късно проговаряне от връстниците си или използва ограничен речников запас."
 										img="/assets/SOP/ограмотяване-деца-със-специални-образователни-потребности.webp"
-										alt="Комуникативни нарушения при деца с умствена изостаналост."
+										alt="Дете със специални образователни потребности."
 									/>
 								</div>
 								<div class="w-1/3">
 									<ContainerBox
-										link=""
 										class2="important-h-55"
 										style="background-color:#FA7402;"
 										style2=""
 										title="Проблем с ученето и концентрацията"
 										text="Трудности с фокусирането, следването на инструкции или запомнянето на информация."
-										img="/assets/SOP/обучение-деца-специални-образователни-потребности.PNG"
-										alt="Дете с умствено забавяне."
+										img="/assets/SOP/обучение-деца-специални-образователни-потребности.webp"
+										alt="Обучение на деца със специални образователни потребности."
 									/>
 								</div>
 								<div class="w-1/3">
 									<ContainerBox
-										link=""
 										class2="important-h-55"
 										style="background-color:#FA7402;"
 										style2=""
 										title="Проблеми с фината и грубата моторика"
 										text="Затруднения при дейности като рисуване, закопчаване на копчета или тичане и скачане."
-										img="/assets/SOP/проблеми-фината-грубата-моторика.png"
-										alt="Умствена изостаналост при дете."
+										img="/assets/SOP/проблеми-фината-моторика.webp"
+										alt="Проблеми с фината и грубата моторика на дете със соп."
 									/>
 								</div>
 							</div>
@@ -190,28 +185,25 @@ export default function Page() {
 									]}
 								>
 									<ContainerBox
-										link=""
 										style="background-color:#742C8F;"
 										title="Социални затруднения"
 										text="Избягва контакт с връстници или изпитва трудности при създаване на приятелства."
-										img="/assets/umstvena-izostanalost/социализация-деца-умствена-изостаналост.webp"
-										alt="Социализация на деца с умствена изостаналост."
+										img="/assets/SOP/решаване-казуси-деца-соп.webp"
+										alt="Социални затруднения и решаване на казуси за деца със соп."
 									/>
 									<ContainerBox
-										link=""
 										style="background-color:#742C8F;"
 										title="Поведенчески проблеми"
 										text="Проявява хиперактивност, агресия или чести избухвания без видима причина."
-										img="/assets/umstvena-izostanalost/работа-деца-умствена-изостаналост_.webp"
-										alt="работа с деца с умствена изостаналост​."
+										img="/assets/SOP/упражнения-деца-соп.webp"
+										alt="Упражнения за деца със соп и поведенчески проблеми."
 									/>
 									<ContainerBox
-										link=""
 										style="background-color:#742C8F;"
 										title="Емоционална нестабилност и тревожност"
 										text="Изпитва чести промени в настроението, страхове или силна чувствителност към стрес."
-										img="/assets/umstvena-izostanalost/деца-лека-умствена-изостаналост.webp"
-										alt="Деца с лека умствена изостаналост."
+										img="/assets/SOP/приобщаващо-образование-деца-соп.webp"
+										alt="Емоционална нестабилност и тревожност при деца със соп."
 									/>
 								</ContainerSlider>
 							</div>
@@ -219,32 +211,29 @@ export default function Page() {
 							<div class="hidden xl:flex mx-auto gap-4 w-full">
 								<div class="w-1/3">
 									<ContainerBox
-										link=""
 										style="background-color:#742C8F;"
 										title="Социални затруднения"
 										text="Избягва контакт с връстници или изпитва трудности при създаване на приятелства."
-										img="/assets/umstvena-izostanalost/социализация-деца-умствена-изостаналост.webp"
-										alt="Социализация на деца с умствена изостаналост."
+										img="/assets/SOP/решаване-казуси-деца-соп.webp"
+										alt="Социални затруднения и решаване на казуси за деца със соп."
 									/>
 								</div>
 								<div class="w-1/3">
 									<ContainerBox
-										link=""
 										style="background-color:#742C8F;"
 										title="Поведенчески проблеми"
 										text="Проявява хиперактивност, агресия или чести избухвания без видима причина."
-										img="/assets/umstvena-izostanalost/работа-деца-умствена-изостаналост_.webp"
-										alt="работа с деца с умствена изостаналост​."
+										img="/assets/SOP/упражнения-деца-соп.webp"
+										alt="Упражнения за деца със соп и поведенчески проблеми."
 									/>
 								</div>
 								<div class="w-1/3">
 									<ContainerBox
-										link=""
 										style="background-color:#742C8F;"
 										title="Емоционална нестабилност и тревожност"
 										text="Изпитва чести промени в настроението, страхове или силна чувствителност към стрес."
-										img="/assets/umstvena-izostanalost/деца-лека-умствена-изостаналост.webp"
-										alt="Деца с лека умствена изостаналост."
+										img="/assets/SOP/приобщаващо-образование-деца-соп.webp"
+										alt="Емоционална нестабилност и тревожност при деца със соп."
 									/>
 								</div>
 							</div>
@@ -261,7 +250,7 @@ export default function Page() {
 							<img src="/assets/exclamation-mark-icon.webp" class="w-10 h-10" />
 							<p class="font-[MYRIADPRO-Semibold] c-paper uppercase font-size-17px lg:font-size-21px">80-90% от мозъка на детето се развива до 7-годишна възраст</p>
 						</div>
-						<p class="font-size-15px lg:font-size-18px c-paper mt-2">Ето защо колкото по-рано бъде започната терапия или програма за работа с деца със СОП, толкова по-голяма е възможността за видимо подобрение на състоянието и напредване в развитието.</p>
+						<p class="font-size-15px lg:font-size-18px c-paper mt-2">Ето защо колкото по-рано бъде започната терапия или програма за работа с деца със СОП, толкова по-голяма е възможността за видимо подобрение на актуалното състояние и напредване в развитието.</p>
 					</div>
 				</AnimatedComponent>
 				{/* <AnimatedComponent class="mt-10 mx-auto">
@@ -280,22 +269,22 @@ export default function Page() {
 					<div class="flex flex-col lg:flex-row justify-center gap-10 xl:gap-20">
 						<ServiceContaner
 							link=""
-							img="/assets/umstvena-izostanalost/дете-умствена-изостаналост_.webp"
-							alt="Дете с умствена изостаналост."
+							img="/assets/SOP/програми-деца-специални-образователни-потребности.webp"
+							alt="Програми за деца със соп и забавено когнитивно развитие."
 							title="Забавено когнитивно развитие"
 							description="Децата със СОП често изпитват затруднения в процеса на обучение. Липсата на терапия и специализирано обучение за деца със специални образователни потребности може да ограничи способността им да развиват основни когнитивни умения като четене, писане, математика и други основни учебни дейности, което води до трайни затруднения в академичен план."
 						/>
 						<ServiceContaner
 							link=""
-							img="/assets/umstvena-izostanalost/социална-изолация-трудности-комуникацията.webp"
-							alt="Социална изолация и трудности в комуникацията при дете с умствена изостаналост."
+							img="/assets/SOP/социална-изолация-деца-соп.webp"
+							alt="Социална изолация при деца със соп."
 							title="Социална изолация"
 							description="Трудностите в общуването и социализацията, които много деца със СОП изпитват, могат да се задълбочат. Без подходяща подкрепа, трудностите в комуникацията могат да отдалечат детето от връстниците му, да понижат самочувствието му и да го изолират от социалната среда."
 						/>
 						<ServiceContaner
 							link=""
-							img="/assets/umstvena-izostanalost/поведение-деца-умствена-изостаналост.webp"
-							alt="Поведение на деца с умствена изостаналост."
+							img="/assets/SOP/поведенчески-проблеми-деца-соп.webp"
+							alt="Поведенчески проблеми при деца със соп."
 							title="Поведенчески проблеми"
 							description="Неотработените затруднения често водят до емоционален дискомфорт, който може да се прояви като агресия, тревожност или депресия. Навременната помощ и интеграцията на деца със специални образователни потребности предотвратяват задълбочаването на тези състояния."
 						/>
@@ -315,18 +304,20 @@ export default function Page() {
 								</>
 							}
 							title="разпознаване"
-							bgImage="/assets/umstvena-izostanalost/разпознаване-деца-лека-умствена-изостаналост.webp"
+							bgImage="/assets/SOP/разпознаване-специални-образователни-потребности.webp"
 							bgSize="250%"
-							bgPosition="right 70% top 70%"
+							bgPosition="right 100% top 70%"
 						/>
 					</div>
 				</AnimatedComponent>
 				<div class="flex md:flex-row flex-col justify-center items-center md:gap-8 max-w-1500px mx-auto">
 					<AnimatedComponent class="md:w-1/2">
-						<img src="/assets/umstvena-izostanalost/разпознаване-деца-лека-умствена-изостаналост.webp" alt="Правилно разпознаване на деца с лека умствена изостаналост." class="w-full h-auto object-cover rounded shadow" />
+						<div class="mx--20px">
+							<img src="/assets/SOP/разпознаване-специални-образователни-потребности.webp" alt="Правилно разпознаване на специални образователни потребности." class="important-b-rd-0 important-md:b-rd-12px w-full h-auto object-cover shadow" />
+						</div>
 					</AnimatedComponent>
 					<AnimatedComponent class="flex flex-col items-center gap-1 relative mb-2 md:hidden">
-						<h2 class="text-transparent bg-clip-text bg-[url(/assets/umstvena-izostanalost/разпознаване-деца-лека-умствена-изостаналост.webp)] bg-cover bg-center opacity-8 scale-30 md:scale-50" style="background-position: right 0% top 0%;">
+						<h2 class="text-transparent bg-clip-text bg-[url(/assets/SOP/разпознаване-специални-образователни-потребности.webp)] bg-cover bg-center opacity-8 scale-30 md:scale-50" style="background-position: right 0% top 0%;">
 							разпознаване
 						</h2>
 					</AnimatedComponent>
@@ -360,18 +351,16 @@ export default function Page() {
 						<p class="c-paper">
 							По време на консултацията се извършва обследване на развитието, поведението и способностите на детето, като се използват утвърдени диагностични методи и се обсъждат възможностите за адаптация на деца със СОП към учебната и социална среда.
 						</p>
-						<img src="/assets/home/наблюдение-на-дете-с-нарушения-в-развитието.webp" alt="Първична оценка при съмнение за умствена изостаналост." class="my-5 w-full h-auto object-cover rounded shadow" />
+						<img src="/assets/home/наблюдение-на-дете-с-нарушения-в-развитието.webp" alt="Първична оценка при съмнение за соп." class="my-5 w-full h-auto object-cover rounded shadow" />
 						<p class="c-paper mb-1">
 							Едновременно с това специалистите интервюират родителите за техните наблюдения и за училищното представяне на детето.
 						</p>
-						<img src="/assets/home/семейство-на-дете-с-нарушения-в-развитието.webp" alt="Резултат от първична оценка при съмнение за умствена изостаналост." class="mt-5 w-full h-auto object-cover rounded shadow" />
+						<img src="/assets/home/семейство-на-дете-с-нарушения-в-развитието.webp" alt="Резултат от безплатна първична оценка при соп." class="mt-5 w-full h-auto object-cover rounded shadow" />
 						<p class="c-paper italic font-300 mt-1 op-90%" style="font-family: 'Oswald', sans-serif !important; letter-spacing: 1px;">
 							Препоръчително е да донесете всички налични медицински документи, които могат да бъдат от полза за изясняване на актуалното състояние.</p>
 						<div class="pt-10 flex md:flex-row flex-col justify-center items-center gap-2">
 							<PuzzleButton />
 							<PuzzleButton2
-								style2="padding-left:0px !important; font-weight:600; font-size:16px !important;"
-								img="/assets/sense-orange-puzzle-piece.svg"
 								href=""
 								text="+ 359 879 800 013"
 							/>
@@ -444,7 +433,7 @@ export default function Page() {
 					<AnimatedComponent class="max-w-300px sm:w-300px md:w-700px flex flex-col max-w-full relative overflow-hidden mx-auto" style="flex: 0 0 auto;">
 						<div>
 							<div class="">
-								<img class="w-full h-full" src="/assets/umstvena-izostanalost/подкрепяща-домашна-среда-дете-умствено-изоставане.webp" alt="Подкрепяща домашна среда дете и дядо." />
+								<img class="w-full h-full" src="/assets/SOP/малки-стъпки-всеки-ден.webp" alt="Малки стъпки всеки ден при деца със соп." />
 							</div>
 							<div class="w-full py-20px text-center">
 								<div class="flex flex-col gap-1">
@@ -455,7 +444,7 @@ export default function Page() {
 										Ако нямате достъп до терапевт, опитайте с рутинни дейности у дома. Визуални графици, игри за развитие на фината моторика и ролеви ситуации могат да помогнат значително. Упражнения за деца със СОП, адаптирани към конкретните им затруднения, могат да окажат положителен ефект. Вниманието и подкрепата Ви са ключови за развитието на детето.
 									</p>
 									<div class="my-5">
-										<img class="w-full h-full" src="/assets/umstvena-izostanalost/търсене-надеждна-информация-достоверни-източници.webp" alt="Търсене на надеждна информация от достоверни източници." />
+										<img class="w-full h-full" src="/assets/SOP/търсене-надеждна-информация-деца-соп.webp" alt="Търсене на надеждна информация от достоверни източници за деца със соп." />
 									</div>
 									<h4 class="relative my-0 pt-3 pb-0 text-left">
 										Потърсете надеждна информация от достоверни източници
@@ -480,9 +469,9 @@ export default function Page() {
 				<H2Echo
 					maintitle="Методи за терапия"
 					title="терапия"
-					bgImage="/assets/umstvena-izostanalost/поведение-дете-умствена-изостаналост.webp"
-					bgSize="250%"
-					bgPosition="right 50% top 10%"
+					bgImage="/assets/SOP/методи-работа-деца-соп.webp"
+					bgSize="350%"
+					bgPosition="right 80% top 80%"
 				/>
 
 				<section class="max-w-1500px md:pt-10 xl:mx-auto md:mx-20px mx--20px flex md:flex-row flex-col justify-center items-center md:gap-8">
@@ -492,10 +481,10 @@ export default function Page() {
 								<div class="bg-paper mx-auto">
 									<div class="">
 										<div class="mx--20px">
-											<img src="/assets/umstvena-izostanalost/поведение-дете-умствена-изостаналост.webp" alt="Поведение на дете с умствена изостаналост." class="important-b-rd-0 important-md:b-rd-12px w-full h-auto object-cover shadow" />
+											<img src="/assets/SOP/методи-работа-деца-соп.webp" alt="Методи за работа с деца със соп." class="important-b-rd-0 important-md:b-rd-12px w-full h-auto object-cover shadow" />
 										</div>
 										<div class="flex flex-col items-center gap-1 relative md:hidden">
-											<h2 class="text-transparent bg-clip-text bg-[url(/assets/umstvena-izostanalost/поведение-дете-умствена-изостаналост.webp)] bg-cover bg-center opacity-8 scale-30 md:scale-50" style="background-position: right 0% top 0%;">
+											<h2 class="text-transparent bg-clip-text bg-[url(/assets/SOP/методи-работа-деца-соп.webp)] bg-cover bg-center opacity-8 scale-30 md:scale-50" style="background-position: right 0% top 0%;">
 												терапия
 											</h2>
 										</div>
@@ -514,7 +503,7 @@ export default function Page() {
 									Специалните образователни потребности не могат да бъдат "излекувани" в традиционния смисъл, тъй като те не са заболяване, а поведенческо състояние.
 								</p>
 								<p class="text-left mt-2">
-									Вместо това, чрез правилните подходи, терапии и индивидуални програми децата със СОП могат да развият своите умения и да се интегрират по-добре в обществото и образователната система.
+									Вместо това, чрез верните подходи, терапии и индивидуални програми децата със СОП могат да развият своите умения и да се интегрират по-добре в обществото и образователната система.
 								</p>
 								<p class="text-left mt-2">
 									Прогресът зависи от интензивността и качеството на подбраните методи за работа с деца със СОП, както и от индивидуалните възможности на детето.
@@ -542,7 +531,7 @@ export default function Page() {
 						/>
 						<AuthorContainer
 							href=""
-							style="background:linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0.6)),url(/assets/sindrom-na-daun/детски-логопед.webp); background-position: right 50% bottom 85% !important; background-repeat: no-repeat; background-size: cover;"
+							style="background:linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0.6)),url(/assets/home/детски-логопед.webp); background-position: right 50% bottom 85% !important; background-repeat: no-repeat; background-size: cover;"
 							name="Детски логопед"
 							description="Терапията подобрява разбирането и изпълнението на команди, формирането на самостоятелни изречения и умението за водене на диалог"
 						/>
@@ -610,15 +599,7 @@ export default function Page() {
 					<H3Blue title="Резултати от терапията" />
 					<div class="w-full sm:w-300px md:w-700px flex flex-col max-w-full relative md:mx-auto">
 						<AnimatedComponent class="flex flex-col gap-1">
-							<div class="my-5">
-								<GallerySlider2
-									imgs={[
-										{ src: "/assets/umstvena-izostanalost/резултат-терапия-дете-играе.webp", alt: "Резултат от терапия дете играе щастливо." },
-										{ src: "/assets/umstvena-izostanalost/резултат-терапия-дете-тича.webp", alt: "Резултат от терапия дете тича щастливо." },
-										{ src: "/assets/umstvena-izostanalost/резултат-терапия-дете-комуникира.webp", alt: "Резултат от терапия дете комуникира щастливо." },
-									]}
-								/>
-							</div>
+							<img class="mb-7" src="/assets/SOP/подобрение-терапия-деца-соп.webp" alt="Подобрение след терапия на дете със соп." />
 							<p class="text-left mt-2 mb-12">
 								Ранната терапевтична подкрепа носи множество ползи за развитието на детето. Тя подпомага по-бързото развитие на речта и комуникативните умения. Значително се подобряват и двигателните и когнитивните способности, като детето придобива нови физически умения и развива логическо мислене. Чрез участие в групови терапии се насърчава социалната интеграция и се изграждат важни умения за бъдещата училищна среда. Терапиите в Sense Center са съобразени с индивидуалните нужди на всяко дете, извършваме и консултиране на родители на деца със СОП по време на целия процес. Освен това специалистите помагат за идентифициране и справяне със съпътстващи затруднения, като проблеми с храненето или други здравословни състояния.
 							</p>
@@ -723,9 +704,8 @@ export default function Page() {
 									style="background-color:#742C8F;"
 									class="important-lg:h-570px important-h-580px"
 									puzzleclass="c-brand w-6 mr-2"
-									img="/assets/umstvena-izostanalost/създаване-дневна-рутина-дете-умствена-изостаналост.webp"
-									alt="Създаване на дневна рутинана дете с умствена изостаналост."
-									href="/za-nas/blago/"
+									img="/assets/SOP/стимулиране-речта-чрез-ежедневна-комуникация.webp"
+									alt="Стимулиране на речта чрез ежедневна комуникация при деца със соп."
 									title="Стимулиране на речта чрез ежедневна комуникация"
 									desc="Говорете често с детето, назовавайте предмети и действия, използвайте кратки и ясни изречения. Насърчавайте го да изразява желанията си с думи или жестове. Това е важна част от ограмотяването на деца със специални образователни потребности."
 								/>
@@ -733,9 +713,8 @@ export default function Page() {
 									style="background-color:#E11172;"
 									class="important-lg:h-570px important-h-580px"
 									puzzleclass="c-brand-purple w-6 mr-2"
-									img="/assets/umstvena-izostanalost/объркано-дете-комуникира.webp"
-									alt="Объркано дете се опитва да комуникира."
-									href="/za-nas/blago/"
+									img="/assets/SOP/развиване-двигателни-когнитивни-умения-чрез-игра.webp"
+									alt="Развиване на двигателни и когнитивни умения чрез игра за деца със соп."
 									title="Развиване на двигателни и когнитивни умения чрез игра"
 									desc="Практикувайте ежедневни упражнения за деца със СОП като игри с подреждане, сортиране, строене и рисуване. Те подпомагат фината моторика, координацията и логическото мислене."
 								/>
@@ -743,19 +722,17 @@ export default function Page() {
 									style="background-color:#088F9D;"
 									class="important-lg:h-570px important-h-580px"
 									puzzleclass="c-brand-orange w-6 mr-2"
-									img="/assets/umstvena-izostanalost/учене-чрез-ежедневни-дейности.webp"
-									alt="Учене чрез ежедневни дейности на дете с умствена изостаналост."
-									href="/za-nas/blago/"
+									img="/assets/SOP/насърчаване-социални-умения-семейна-среда.webp"
+									alt="Насърчаване на социални умения в семейна среда на деца със соп."
 									title="Насърчаване на социални умения в семейна среда"
 									desc="Играйте заедно, редувайте се, задавайте въпроси и стимулирайте взаимодействието дори обикновените семейни игри могат да подкрепят адаптацията на деца със СОП."
 								/>
 								<PuzzleIconReview
-									style="background-color:#088F9D;"
+									style="background-color:#FA7402;"
 									class="important-lg:h-570px important-h-580px"
-									puzzleclass="c-brand-orange w-6 mr-2"
-									img="/assets/umstvena-izostanalost/учене-чрез-ежедневни-дейности.webp"
-									alt="Учене чрез ежедневни дейности на дете с умствена изостаналост."
-									href="/za-nas/blago/"
+									puzzleclass="c-brand-blue w-6 mr-2"
+									img="/assets/SOP/предсказуема-спокойна-среда-дете-соп.webp"
+									alt="Създаване на предсказуема и спокойна среда за деца със соп."
 									title="Създаване на предсказуема и спокойна среда"
 									desc="Ясната последователност от действия през деня дава сигурност и улеснява обучението на деца със специални образователни потребности. Използвайте визуални графици или картинки, които да помагат на детето да се ориентира в ежедневието."
 								/>
@@ -798,7 +775,7 @@ export default function Page() {
 						<h4>Какъв резултат можете да очаквате?</h4>
 						<AnimatedComponent class="mb-10">
 							<div class="flex flex-col justify-center items-start ">
-								<p class="mt-0">С правилния подход децата със СОП могат да постигнат видими успехи в образованието и в развитието си. Ежедневно вложените усилия в образователни занимания могат да доведат до постепенно подобрение в комуникативните и двигателните умения, независимо изпълнение на ежедневни дейности и социализиране.</p>
+								<p class="mt-0">С верния подход децата със СОП могат да постигнат видими успехи в образованието и в развитието си. Ежедневно вложените усилия в образователни занимания могат да доведат до постепенно подобрение в комуникативните и двигателните умения, независимо изпълнение на ежедневни дейности и социализиране.</p>
 								<p>Важно е да се има предвид, че без професионална подкрепа резултатите може да се появяват по-бавно и да бъдат по-ограничени.</p>
 							</div>
 						</AnimatedComponent>
@@ -811,7 +788,7 @@ export default function Page() {
 							<div class="">
 								<AnimatedComponent>
 									<ReviewSlider
-										variant="dots3"
+										variant="dots2"
 										reviews={[
 											{ name: "1" },
 											{ name: "2" },
@@ -871,6 +848,7 @@ export default function Page() {
 					</section>
 				</div>
 			</section>
+			<GradientFooter />
 		</>
 	);
 }

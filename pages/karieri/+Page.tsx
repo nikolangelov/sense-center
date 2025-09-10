@@ -9,6 +9,7 @@ import { BackgroundIcons } from "../../components/BackgroundIcons";
 import { Collapse } from "../../components/FAQ";
 import { VideoHero } from "../../components/HeroVideo";
 import { createSignal } from 'solid-js';
+import { GradientFooter } from "../../components/GradientFooter";
 
 const [isPlaying, setIsPlaying] = createSignal(false);
 
@@ -68,6 +69,7 @@ export default function Page() {
 				<VideoHero
 					youtubeId="R1kPm_q7vCc"
 					gifPreview="/assets/home/2025-07-08 10-35-35.mp4"
+					gifPreviewMobile=""
 					isPlaying={isPlaying()}
 					onPlay={() => setIsPlaying(true)}
 				/>
@@ -77,8 +79,8 @@ export default function Page() {
 						<div>
 							<h1
 								class={`mb-4 md:mb-7 transition-colors duration-500 ${isPlaying()
-										? 'text-black md:text-white md:hidden'
-										: 'text-white md:text-white md:block'
+									? 'text-black md:text-white md:hidden'
+									: 'text-white md:text-white md:block'
 									}`}
 							>
 								Присъединете се към екип, който вярва в потенциала на всяко дете
@@ -126,7 +128,6 @@ export default function Page() {
 								puzzleclass="c-brand w-6 mr-2"
 								img="/assets/Mending-the-Cosmos.webp"
 								alt=""
-								href="/za-nas/blago/"
 								title="Позитивна и сплотена среда"
 								desc="Вярваме в силата на сплотения екип и работим в подкрепяща среда, където доверието, уважението и взаимопомощта са водещи."
 							/>
@@ -135,7 +136,6 @@ export default function Page() {
 								puzzleclass="c-brand-purple w-6 mr-2"
 								img="/assets/Mending-the-Cosmos.webp"
 								alt=""
-								href="/za-nas/blago/"
 								title="Обучения и супервизии"
 								desc="Осигуряваме регулярна подкрепа и възможности за професионално израстване на всяко ниво от кариерата Ви."
 							/>
@@ -144,7 +144,6 @@ export default function Page() {
 								puzzleclass="c-brand-orange w-6 mr-2"
 								img="/assets/Mending-the-Cosmos.webp"
 								alt=""
-								href="/za-nas/blago/"
 								title="Разнообразие от случаи и възможности за развитие"
 								desc="Работим с деца с различни потребности и възрасти, което Ви позволява да надграждате уменията си и да растете професионално."
 							/>
@@ -153,7 +152,6 @@ export default function Page() {
 								puzzleclass="c-brand-blue w-6 mr-2"
 								img="/assets/Mending-the-Cosmos.webp"
 								alt=""
-								href="/za-nas/blago/"
 								title="Смислена работа с реално въздействие"
 								desc="Всяка терапевтична сесия е възможност да допринесете за развитието на детето и да почувствате, че работата Ви има значение."
 							/>
@@ -429,7 +427,6 @@ export default function Page() {
 								puzzleclass="c-brand w-6 mr-2"
 								img="/assets/Mending-the-Cosmos.webp"
 								alt=""
-								href="/za-nas/blago/"
 								title="Работа под супервизия"
 								desc="Получавате професионална подкрепа и обратна връзка, която Ви помага да се развивате уверено."
 							/>
@@ -438,7 +435,6 @@ export default function Page() {
 								puzzleclass="c-brand-purple w-6 mr-2"
 								img="/assets/Mending-the-Cosmos.webp"
 								alt=""
-								href="/za-nas/blago/"
 								title="Ежеседмични екипни срещи"
 								desc="Споделяме опит, обсъждаме случаи и взимаме решения заедно, защото всяко мнение е важно, а колективният подход носи най-добри резултати."
 							/>
@@ -447,7 +443,6 @@ export default function Page() {
 								puzzleclass="c-brand-orange w-6 mr-2"
 								img="/assets/Mending-the-Cosmos.webp"
 								alt=""
-								href="/za-nas/blago/"
 								title="Подкрепяща общност"
 								desc="Ще бъдеш част от сплотен и отзивчив екип, в който взаимопомощта и доверието са ключови."
 							/>
@@ -456,7 +451,6 @@ export default function Page() {
 								puzzleclass="c-brand-blue w-6 mr-2"
 								img="/assets/Mending-the-Cosmos.webp"
 								alt=""
-								href="/za-nas/blago/"
 								title="Работа в приветливо пространство"
 								desc="Просторна, светла и уютна среда, в която и децата, и специалистите се чувстват добре."
 							/>
@@ -465,7 +459,6 @@ export default function Page() {
 								puzzleclass="c-brand-blue w-6 mr-2"
 								img="/assets/Mending-the-Cosmos.webp"
 								alt=""
-								href="/za-nas/blago/"
 								title="Разнообразие от случаи и възрастови групи"
 								desc="Работим с деца от 18 месеца до 18 години, което Ви дава възможност да натрупате богат опит и възможност да развивате различни умения."
 							/>
@@ -591,7 +584,7 @@ export default function Page() {
 						<GoogleMapIframe />
 						<div class="flex justify-center mt-5 md:ml-0 ml--10">
 							<img class="w-20 h-20 ml-0 mr--10 z-2" src="/assets/sense-logo-100px.webp" />
-							<p class="flex py-4 md:px-11 px-14 b-rd-12px bg-brand-purple c-paper font-600 md:font-size-22px font-size-18px w-full leading-8">гр. София, кв. Карпузица,<br />бул. "Никола Петков" 95А</p>
+							<p class="flex py-4 md:px-11 px-14 b-rd-12px bg-brand-purple w-full"><a href="https://maps.app.goo.gl/SKMstkcc8QTk1BzR7" target="_blank" rel="noopener noreferrer" class="c-paper font-[MYRIADPRO-Semibold] md:font-size-22px font-size-18px leading-8">гр. София, кв. Карпузица,<br />бул. "Никола Петков" 95А</a></p>
 						</div>
 					</div>
 				</AnimatedComponent>
@@ -694,6 +687,7 @@ export default function Page() {
 				<H3Blue variant="h2" title="Въпроси и отговори" />
 				<SingleCollapse />
 			</section>
+			<GradientFooter />
 		</>
 	);
 }

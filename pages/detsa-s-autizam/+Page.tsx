@@ -12,25 +12,32 @@ import { BackgroundIcons } from "../../components/BackgroundIcons";
 import { WorkProcess } from "../../components/WorkProcess";
 import { createSignal } from "solid-js";
 import { VideoHero } from "../../components/HeroVideo";
-const [isPlaying, setIsPlaying] = createSignal(false);
+import { GradientFooter } from "../../components/GradientFooter";
+
+const [isPlayingHero, setIsPlayingHero] = createSignal(false);
+const [isPlayingPlayer, setIsPlayingPlayer] = createSignal(false);
 
 export default function Page() {
+	function isPlayingPlayer(): boolean {
+		throw new Error("Function not implemented.");
+	}
+
 	return (
 		<>
 			<div class="relative w-full">
 				<VideoHero
-					youtubeId="R1kPm_q7vCc"
-					gifPreview="/assets/detsa-s-autizam/сенс-център-практически-занимания.mov"
-					gifPreviewMobile="/assets/detsa-s-autizam/Сенс-Център-Практически-Занимания-Мобилно.mp4"
-					isPlaying={isPlaying()}
-					onPlay={() => setIsPlaying(true)}
+					videoSrc="/assets/detsa-s-autizam/Sense-Center-Autism-Desktop-Hero.mp4"
+					gifPreview="/assets/detsa-s-autizam/Sense-Center-Autism-Desktop.mp4"
+					gifPreviewMobile="/assets/detsa-s-autizam/Sense-Center-Autism-Mobile.mp4"
+					isPlaying={isPlayingHero()}
+					onPlay={() => setIsPlayingHero(true)}
 				/>
 
 				<div class="absolute inset-0 z-30 pointer-events-none flex flex-col items-center justify-end pb-18 md:pb-10 text-center px-4 text-white">
-					<div class={`absolute ${isPlaying() ? 'top-32% sm:top-95% lg:top-100% mt-30' : 'top-66% md:top-60% mt-0'}`}>
+					<div class={`absolute ${isPlayingHero() ? 'top-32% sm:top-95% lg:top-100% mt-30' : 'top-66% md:top-60% mt-0'}`}>
 						<div>
 							<h1
-								class={`mb-4 md:mb-7 transition-colors duration-500 ${isPlaying()
+								class={`mb-4 md:mb-7 transition-colors duration-500 ${isPlayingHero()
 									? 'text-brand'
 									: 'text-white'
 									}`}
@@ -40,7 +47,7 @@ export default function Page() {
 						</div>
 
 						<div
-							class={`important-delay-300 font-400 text-center mb-0 font-size-4.5 lg-font-size-7 sm-px-0 px-12 md:leading-7 leading-5.5 transition-colors duration-500 ${isPlaying()
+							class={`important-delay-300 font-400 text-center mb-0 font-size-4.5 lg-font-size-7 sm-px-0 px-12 md:leading-7 leading-5.5 transition-colors duration-500 ${isPlayingHero()
 								? 'text-brand'
 								: 'text-white'
 								}`}
@@ -49,7 +56,7 @@ export default function Page() {
 						</div>
 
 						<div
-							class={`important-delay-600 mt-8 md:mt-10 relative text-center ${isPlaying() ? 'md:pb-30' : 'md:pb-0'
+							class={`important-delay-600 mt-8 md:mt-10 relative text-center ${isPlayingHero() ? 'md:pb-30' : 'md:pb-0'
 								}`}
 						>
 							<div class="flex md:flex-row flex-col justify-center items-center gap-3 pointer-events-auto">
@@ -60,7 +67,7 @@ export default function Page() {
 				</div>
 			</div>
 
-			<div class={`md:pb-10 pt-30 md:pt-40 ${isPlaying() ? 'mt-20 sm:mt-90 md:mt-110 lg:mt-120' : 'mt-0'}`}>
+			<div class={`md:pb-10 pt-30 md:pt-40 ${isPlayingHero() ? 'mt-20 sm:mt-90 md:mt-110 lg:mt-120' : 'mt-0'}`}>
 				<H2Echo
 					maintitle="Какво е детски аутизъм"
 					title="аутизъм"
@@ -122,8 +129,12 @@ export default function Page() {
 			<div>
 				<AnimatedComponent class="mt-15 md:mt-30 mx-20px md:mx-0">
 					<VideoPlayer
-						youtubeId="PUYw2e-X-Vw"
-						thumbnail="/assets/Fulfilling-Vows.webp"
+						desktopSource={{ type: "file", src: "/assets/detsa-s-autizam/Sense-Center-Autism-Desktop-Hero.mp4", poster: "/thumbs/desktop.jpg" }}
+						mobileSource={{ type: "file", src: "/assets/detsa-s-autizam/Sense-Center-Autism-Mobile-Hero.mp4" }}
+						desktopGif=""
+						mobileGif=""
+						isPlaying={isPlayingPlayer()}
+						onPlay={() => setIsPlayingPlayer(true)}
 					/>
 				</AnimatedComponent>
 			</div>
@@ -145,7 +156,6 @@ export default function Page() {
 									]}
 								>
 									<ContainerBox
-										link=""
 										class2="important-h-43"
 										style="background-color:#FA7402;"
 										title="Избухвания без видима причина"
@@ -154,7 +164,6 @@ export default function Page() {
 										alt="Дете с аутизъм се справя с агресия"
 									/>
 									<ContainerBox
-										link=""
 										class2="important-h-43"
 										style="background-color:#FA7402;"
 										style2=""
@@ -164,7 +173,6 @@ export default function Page() {
 										alt="Често повтарящи се движения от деца с аутизъм"
 									/>
 									<ContainerBox
-										link=""
 										class2="important-h-43"
 										style="background-color:#FA7402;"
 										style2=""
@@ -179,7 +187,6 @@ export default function Page() {
 							<div class="hidden xl:flex mx-auto gap-4">
 								<div class="w-1/3">
 									<ContainerBox
-										link=""
 										class2="important-h-43"
 										style="background-color:#FA7402;"
 										title="Избухвания без видима причина"
@@ -190,7 +197,6 @@ export default function Page() {
 								</div>
 								<div class="w-1/3">
 									<ContainerBox
-										link=""
 										class2="important-h-43"
 										style="background-color:#FA7402;"
 										style2=""
@@ -202,7 +208,6 @@ export default function Page() {
 								</div>
 								<div class="w-1/3">
 									<ContainerBox
-										link=""
 										class2="important-h-43"
 										style="background-color:#FA7402;"
 										style2=""
@@ -233,7 +238,6 @@ export default function Page() {
 									]}
 								>
 									<ContainerBox
-										link=""
 										style="background-color:#742C8F;"
 										style2="filter: saturate(130%);"
 										title="Забавено развитие на речта"
@@ -242,7 +246,6 @@ export default function Page() {
 										alt="Дете с аутизъм не отговаря на името си"
 									/>
 									<ContainerBox
-										link=""
 										style="background-color:#742C8F;"
 										style2="filter: saturate(130%);"
 										title="Трудности в комуникацията"
@@ -251,7 +254,6 @@ export default function Page() {
 										alt="Забавено развитие на речта при аутизъм"
 									/>
 									<ContainerBox
-										link=""
 										style="background-color:#742C8F;"
 										style2="filter: brightness(130%);"
 										title="Липса на очен контакт"
@@ -260,7 +262,6 @@ export default function Page() {
 										alt="Дете с аутизъм с липса на очен контакт"
 									/>
 									<ContainerBox
-										link=""
 										style="background-color:#742C8F;"
 										title="Детето не отговаря на името си"
 										text="При повикване не реагира или изглежда, сякаш не чува."
@@ -272,7 +273,6 @@ export default function Page() {
 
 							<div class="hidden xl:grid mx-auto grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-4 items-stretch">
 								<ContainerBox
-									link=""
 									style="background-color:#742C8F;"
 									style2="filter: saturate(130%);"
 									title="Забавено развитие на речта"
@@ -281,7 +281,6 @@ export default function Page() {
 									alt="Дете с аутизъм не отговаря на името си"
 								/>
 								<ContainerBox
-									link=""
 									style="background-color:#742C8F;"
 									style2="filter: saturate(130%);"
 									title="Трудности в комуникацията"
@@ -290,7 +289,6 @@ export default function Page() {
 									alt="Забавено развитие на речта при аутизъм"
 								/>
 								<ContainerBox
-									link=""
 									style="background-color:#742C8F;"
 									style2="filter: brightness(130%);"
 									title="Липса на очен контакт"
@@ -299,7 +297,6 @@ export default function Page() {
 									alt="Дете с аутизъм с липса на очен контакт"
 								/>
 								<ContainerBox
-									link=""
 									style="background-color:#742C8F;"
 									title="Детето не отговаря на името си"
 									text="При повикване не реагира или изглежда, сякаш не чува."
@@ -431,8 +428,6 @@ export default function Page() {
 						<div class="pt-10 flex md:flex-row flex-col justify-center items-center gap-2">
 							<PuzzleButton />
 							<PuzzleButton2
-								style2="padding-left:0px !important; font-weight:600; font-size:16px !important;"
-								img="/assets/sense-orange-puzzle-piece.svg"
 								href=""
 								text="+ 359 879 800 013"
 							/>
@@ -606,7 +601,7 @@ export default function Page() {
 						/>
 						<AuthorContainer
 							href=""
-							style="background:linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0.5)),url(/assets/sindrom-na-daun/детски-логопед.webp); background-position: right 50% bottom 85% !important; background-repeat: no-repeat; background-size: cover;"
+							style="background:linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0.5)),url(/assets/home/детски-логопед.webp); background-position: right 50% bottom 85% !important; background-repeat: no-repeat; background-size: cover;"
 							name="Детски логопед"
 							description="Терапията подобрява разбирането и изпълнението на команди, езиковото и речевото развитие на деца с аутизъм"
 						/>
@@ -787,7 +782,6 @@ export default function Page() {
 									puzzleclass="c-brand w-6 mr-2"
 									img="/assets/detsa-s-autizam/визуални-помощни-средства-детски-аутизъм.webp"
 									alt="Използване на визуални помощни средства за детски с аутизъм"
-									href="/za-nas/blago/"
 									title="Използване на визуални помощни средства"
 									desc="Карти, таблици и схеми улесняват разбирането на информация и подкрепят комуникацията. Визуалната терапия при деца с аутизъм подпомага ориентирането в ежедневните задачи."
 								/>
@@ -796,7 +790,6 @@ export default function Page() {
 									puzzleclass="c-brand-purple w-6 mr-2"
 									img="/assets/detsa-s-autizam/използване-на-визуални-помощни-средства-за-детски-с-аутизъм.webp"
 									alt="Въвеждане на сензорни активности при детски аутизъм"
-									href="/za-nas/blago/"
 									title="Въвеждане на сензорни активности"
 									desc="Активности като игра с пясък, вода, пластилин активират сензорното стимулиране при деца с аутизъм, развиват сетивата и насърчават спокойствието."
 								/>
@@ -805,7 +798,6 @@ export default function Page() {
 									puzzleclass="c-brand-orange w-6 mr-2"
 									img="assets/detsa-s-autizam/изграждане-рутинни-действия-аутизъм.webp"
 									alt="Изграждане на рутинни действия на деца с аутизъм"
-									href="/za-nas/blago/"
 									title="Изграждане на рутинни действия"
 									desc="Рутините осигуряват предсказуемост, която помага на децата с аутизъм да се чувстват по-сигурни и спокойни. Например, създайте последователност в сутрешната подготовка или времето за игра."
 								/>
@@ -814,7 +806,6 @@ export default function Page() {
 									puzzleclass="c-brand-blue w-6 mr-2"
 									img="/assets/detsa-s-autizam/игрови-методи-деца-аутизъм.webp"
 									alt="Използване на игрови методи за деца с аутизъм"
-									href="/za-nas/blago/"
 									title="Използване на игрови методи"
 									desc="Включете ролеви или настолни игри, които развиват социалните умения и емоционалната интелигентност при деца с аутизъм."
 								/>
@@ -937,6 +928,7 @@ export default function Page() {
 					</div>
 				</div>
 			</section>
+			<GradientFooter />
 		</>
 	);
 }

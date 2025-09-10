@@ -20,7 +20,7 @@ export default defineConfig({
 			{
 				colors: {
 					brand: "#E11172",
-					"brand-hover": "#eb2a84",
+					"brand-hover": "#f72888",
 					"brand-orange": "#FA7402",
 					"brand-orange-hover": "#ff8217",
 					"brand-purple": "#742C8F",

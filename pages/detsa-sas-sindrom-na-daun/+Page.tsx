@@ -9,6 +9,7 @@ import { GallerySlider2 } from "../../components/GallerySlider";
 import { DoodleDecor } from "../../components/BackgroundDecor";
 import { BackgroundIcons } from "../../components/BackgroundIcons";
 import { WorkProcess } from "../../components/WorkProcess";
+import { GradientFooter } from "../../components/GradientFooter";
 
 export default function Page() {
 	return (
@@ -119,7 +120,6 @@ export default function Page() {
 									]}
 								>
 									<ContainerBox
-										link=""
 										class2="important-h-55"
 										style="background-color:#FA7402;"
 										title="Бадемовидни очи"
@@ -128,7 +128,6 @@ export default function Page() {
 										alt="Бадемовидни очи синдром на Даун."
 									/>
 									<ContainerBox
-										link=""
 										class2="important-h-55"
 										style="background-color:#FA7402;"
 										style2=""
@@ -138,7 +137,6 @@ export default function Page() {
 										alt="Дете с малка глава синдром на Даун."
 									/>
 									<ContainerBox
-										link=""
 										class2="important-h-55"
 										style="background-color:#FA7402;"
 										style2=""
@@ -148,7 +146,6 @@ export default function Page() {
 										alt="Живот със синдром на Даун."
 									/>
 									<ContainerBox
-										link=""
 										class2="important-h-55"
 										style="background-color:#FA7402;"
 										style2=""
@@ -163,7 +160,6 @@ export default function Page() {
 							<div class="hidden xl:flex mx-auto gap-4 w-full">
 								<div class="w-1/4">
 									<ContainerBox
-										link=""
 										class2="important-h-65"
 										style="background-color:#FA7402;"
 										title="Бадемовидни очи"
@@ -174,7 +170,6 @@ export default function Page() {
 								</div>
 								<div class="w-1/4">
 									<ContainerBox
-										link=""
 										class2="important-h-65"
 										style="background-color:#FA7402;"
 										style2=""
@@ -186,7 +181,6 @@ export default function Page() {
 								</div>
 								<div class="w-1/4">
 									<ContainerBox
-										link=""
 										class2="important-h-65"
 										style="background-color:#FA7402;"
 										style2=""
@@ -198,7 +192,6 @@ export default function Page() {
 								</div>
 								<div class="w-1/4">
 									<ContainerBox
-										link=""
 										class2="important-h-65"
 										style="background-color:#FA7402;"
 										style2=""
@@ -229,7 +222,6 @@ export default function Page() {
 									]}
 								>
 									<ContainerBox
-										link=""
 										style="background-color:#742C8F;"
 										title="Забавено развитие на речта"
 										text="Късно проговаряне, трудности с артикулацията и формирането на сложни изречения са често срещани при деца със Синдром на Даун"
@@ -237,7 +229,6 @@ export default function Page() {
 										alt="Забавено развитие на речта синдром на Даун."
 									/>
 									<ContainerBox
-										link=""
 										style="background-color:#742C8F;"
 										title="Слаба или никаква концентрация"
 										text="Краткотрайната концентрация и лесното разсейване са типични за децата със Синдром на Даун"
@@ -245,7 +236,6 @@ export default function Page() {
 										alt="Слаба концентрация при синдром Даун."
 									/>
 									<ContainerBox
-										link=""
 										style="background-color:#742C8F;"
 										title="Проблеми с научаването на нови неща"
 										text="Децата със Синдром на Даун учат по-бавно и имат нужда от повече повторения, визуални помощни средства и индивидуална подкрепа"
@@ -253,7 +243,6 @@ export default function Page() {
 										alt="Проблеми с научаването на нови неща синдром на Даун."
 									/>
 									<ContainerBox
-										link=""
 										style="background-color:#742C8F;"
 										title="Трудности с координацията"
 										text="Забавено развитие на двигателните умения, което затруднява самообслужването, четенето и писането"
@@ -266,7 +255,6 @@ export default function Page() {
 							<div class="hidden xl:flex mx-auto gap-4 w-full">
 								<div class="w-1/4">
 									<ContainerBox
-										link=""
 										style="background-color:#742C8F;"
 										title="Забавено развитие на речта"
 										text="Късно проговаряне, трудности с артикулацията и формирането на сложни изречения са често срещани при деца със Синдром на Даун"
@@ -276,7 +264,6 @@ export default function Page() {
 								</div>
 								<div class="w-1/4">
 									<ContainerBox
-										link=""
 										style="background-color:#742C8F;"
 										title="Слаба или никаква концентрация"
 										text="Краткотрайната концентрация и лесното разсейване са типични за децата със Синдром на Даун"
@@ -286,7 +273,6 @@ export default function Page() {
 								</div>
 								<div class="w-1/4">
 									<ContainerBox
-										link=""
 										style="background-color:#742C8F;"
 										title="Проблеми с научаването на нови неща"
 										text="Децата със Синдром на Даун учат по-бавно и имат нужда от повече повторения, визуални помощни средства и индивидуална подкрепа"
@@ -296,7 +282,6 @@ export default function Page() {
 								</div>
 								<div class="w-1/4">
 									<ContainerBox
-										link=""
 										style="background-color:#742C8F;"
 										title="Трудности с координацията"
 										text="Забавено развитие на двигателните умения, което затруднява самообслужването, четенето и писането"
@@ -453,8 +438,6 @@ export default function Page() {
 						<div class="pt-10 flex md:flex-row flex-col justify-center items-center gap-2">
 							<PuzzleButton />
 							<PuzzleButton2
-								style2="padding-left:0px !important; font-weight:600; font-size:16px !important;"
-								img="/assets/sense-orange-puzzle-piece.svg"
 								href=""
 								text="+ 359 879 800 013"
 							/>
@@ -576,7 +559,7 @@ export default function Page() {
 										</div>
 										<div class="flex flex-col items-center gap-1 relative md:hidden">
 											<h2 class="text-transparent bg-clip-text bg-[url(/assets/detsa-s-autizam/различни-методи-терапии.webp)] bg-cover bg-center opacity-8 scale-30 md:scale-50" style="background-position: right 0% top 0%;">
-												хиперактивност
+												терапия
 											</h2>
 										</div>
 									</div>
@@ -622,7 +605,7 @@ export default function Page() {
 						/>
 						<AuthorContainer
 							href=""
-							style="background:linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0.6)),url(/assets/sindrom-na-daun/детски-логопед.webp); background-position: right 50% bottom 85% !important; background-repeat: no-repeat; background-size: cover;"
+							style="background:linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0.6)),url(/assets/home/детски-логопед.webp); background-position: right 50% bottom 85% !important; background-repeat: no-repeat; background-size: cover;"
 							name="Детски логопед"
 							description="Терапията подобрява разбирането и изпълнението на команди, формирането на самостоятелни изречения и умението за водене на диалог"
 						/>
@@ -800,7 +783,6 @@ export default function Page() {
 									puzzleclass="c-brand w-6 mr-2"
 									img="/assets/sindrom-na-daun/игри-различни-текстури-предмети.webp"
 									alt="Игри с различни текстури и предмети."
-									href="/za-nas/blago/"
 									title="Игри с различни текстури и предмети"
 									desc="Осигурете на детето предмети с различни форми, текстури и звуци за докосване и изследване."
 								/>
@@ -810,7 +792,6 @@ export default function Page() {
 									puzzleclass="c-brand-purple w-6 mr-2"
 									img="/assets/sindrom-na-daun/групиране-предмети-цветове-форми.webp"
 									alt="Групиране на предмети по цветове и форми."
-									href="/za-nas/blago/"
 									title="Групиране на предмети по цветове и форми"
 									desc="Научете детето да обобщава и групира предмети по цветове или по вид."
 								/>
@@ -820,7 +801,6 @@ export default function Page() {
 									puzzleclass="c-brand-orange w-6 mr-2"
 									img="/assets/sindrom-na-daun/четене-книжки-картинки-синдром-даун.webp"
 									alt="Четене на книжки с картинки  при деца със синдром на Даун."
-									href="/za-nas/blago/"
 									title="Четене на книжки с картинки"
 									desc="Давайте на детето книжки с ярки и ясни илюстрации и стимулирайте имитация на звуци и действия."
 								/>
@@ -830,7 +810,6 @@ export default function Page() {
 									puzzleclass="c-brand-blue w-6 mr-2"
 									img="/assets/sindrom-na-daun/имитиране-движения-звуци.webp"
 									alt="Имитиране на движения и звуци при деца със синдром на Даун."
-									href="/za-nas/blago/"
 									title="Имитиране на движения и звуци"
 									desc="Играйте игри с прости звуци и движения, като духане на балони, гримаси, и игри с пръсти."
 								/>
@@ -949,6 +928,7 @@ export default function Page() {
 					</section>
 				</div>
 			</section>
+			<GradientFooter />
 		</>
 	);
 }

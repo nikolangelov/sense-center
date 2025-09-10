@@ -16,7 +16,7 @@ export function Collapse(props: { title: string; desc: string; children?: JSXEle
 				>
 					<div class="flex items-center justify-between w-full py-5 px-3 bg-gradient-to-r from-brand to-brand-orange b-rd-12px">
 						<div class="flex items-center justify-between">
-							<span class="ml-5 w-full md-max-w-full leading-6 c-paper font-size-14px md-font-size-20px font-500 transition-colors" style="font-family: 'Abel', sans-serif;">
+							<span class="ml-5 w-full md-max-w-full leading-6 c-paper font-size-16px md-font-size-20px font-500 transition-colors font-[MYRIADPRO-Regular]">
 								{props.title}
 							</span>
 						</div>

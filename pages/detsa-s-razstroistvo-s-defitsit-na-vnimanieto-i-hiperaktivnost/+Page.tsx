@@ -9,6 +9,7 @@ import { GallerySlider2 } from "../../components/GallerySlider";
 import { DoodleDecor } from "../../components/BackgroundDecor";
 import { BackgroundIcons } from "../../components/BackgroundIcons";
 import { WorkProcess } from "../../components/WorkProcess";
+import { GradientFooter } from "../../components/GradientFooter";
 
 export default function Page() {
 	return (
@@ -142,7 +143,6 @@ export default function Page() {
 									]}
 								>
 									<ContainerBox
-										link=""
 										class2="important-h-43"
 										style="background-color:#FA7402;"
 										title="Бърза загуба на интерес"
@@ -151,7 +151,6 @@ export default function Page() {
 										alt=""
 									/>
 									<ContainerBox
-										link=""
 										class2="important-h-43"
 										style="background-color:#FA7402;"
 										style2=""
@@ -161,7 +160,6 @@ export default function Page() {
 										alt=""
 									/>
 									<ContainerBox
-										link=""
 										class2="important-h-43"
 										style="background-color:#FA7402;"
 										style2=""
@@ -171,7 +169,6 @@ export default function Page() {
 										alt=""
 									/>
 									<ContainerBox
-										link=""
 										class2="important-h-43"
 										style="background-color:#FA7402;"
 										style2=""
@@ -186,7 +183,6 @@ export default function Page() {
 							<div class="hidden xl:flex mx-auto gap-4 w-full">
 								<div class="w-1/4">
 									<ContainerBox
-										link=""
 										class2="important-h-43"
 										style="background-color:#FA7402;"
 										title="Бърза загуба на интерес"
@@ -197,7 +193,6 @@ export default function Page() {
 								</div>
 								<div class="w-1/4">
 									<ContainerBox
-										link=""
 										class2="important-h-43"
 										style="background-color:#FA7402;"
 										style2=""
@@ -209,7 +204,6 @@ export default function Page() {
 								</div>
 								<div class="w-1/4">
 									<ContainerBox
-										link=""
 										class2="important-h-43"
 										style="background-color:#FA7402;"
 										style2=""
@@ -221,7 +215,6 @@ export default function Page() {
 								</div>
 								<div class="w-1/4">
 									<ContainerBox
-										link=""
 										class2="important-h-43"
 										style="background-color:#FA7402;"
 										style2=""
@@ -252,7 +245,6 @@ export default function Page() {
 									]}
 								>
 									<ContainerBox
-										link=""
 										style="background-color:#742C8F;"
 										title="Постоянно движение"
 										text="Тича, катери се или се движи непрекъснато, дори на неподходящи места"
@@ -260,7 +252,6 @@ export default function Page() {
 										alt=""
 									/>
 									<ContainerBox
-										link=""
 										style="background-color:#742C8F;"
 										title="Прекомерно говорене"
 										text="Говори без да спира, често прекъсва другите и не изчаква реда си"
@@ -268,7 +259,6 @@ export default function Page() {
 										alt=""
 									/>
 									<ContainerBox
-										link=""
 										style="background-color:#742C8F;"
 										title="Трудно стои на едно място"
 										text="Изпитва затруднение да остане спокойно в седнало положение – например по време на хранене"
@@ -276,7 +266,6 @@ export default function Page() {
 										alt=""
 									/>
 									<ContainerBox
-										link=""
 										style="background-color:#742C8F;"
 										title="Бурно изразяване на емоции"
 										text="Реагира с прекомерен гняв, радост или разочарование, често без видима причина"
@@ -289,7 +278,6 @@ export default function Page() {
 							<div class="hidden xl:flex mx-auto gap-4 w-full">
 								<div class="w-1/4">
 									<ContainerBox
-										link=""
 										style="background-color:#742C8F;"
 										title="Постоянно движение"
 										text="Тича, катери се или се движи непрекъснато, дори на неподходящи места"
@@ -299,7 +287,6 @@ export default function Page() {
 								</div>
 								<div class="w-1/4">
 									<ContainerBox
-										link=""
 										style="background-color:#742C8F;"
 										title="Прекомерно говорене"
 										text="Говори без да спира, често прекъсва другите и не изчаква реда си"
@@ -309,7 +296,6 @@ export default function Page() {
 								</div>
 								<div class="w-1/4">
 									<ContainerBox
-										link=""
 										style="background-color:#742C8F;"
 										title="Трудно стои на едно място"
 										text="Изпитва затруднение да остане спокойно в седнало положение – например по време на хранене"
@@ -319,7 +305,6 @@ export default function Page() {
 								</div>
 								<div class="w-1/4">
 									<ContainerBox
-										link=""
 										style="background-color:#742C8F;"
 										title="Бурно изразяване на емоции"
 										text="Реагира с прекомерен гняв, радост или разочарование, често без видима причина"
@@ -808,7 +793,6 @@ export default function Page() {
 									puzzleclass="c-brand w-6 mr-2"
 									img="/assets/HADV/домашна-терапия-adhd-при-деца.webp"
 									alt=""
-									href="/za-nas/blago/"
 									title="Използвайте напомнящи бележки и съобщения"
 									desc="Те биха помогнали при разсейване и евентуално забравяне на някоя важна задача."
 								/>
@@ -817,7 +801,6 @@ export default function Page() {
 									puzzleclass="c-brand-purple w-6 mr-2"
 									img="/assets/HADV/съвместни-дейности-дете-хадв.webp"
 									alt=""
-									href="/za-nas/blago/"
 									title="Създайте график съвместно с детето за ежедневните дейности"
 									desc="Това би подобрило организацията и дисциплината, както и ще улесни преминаването от една задача към друга."
 								/>
@@ -826,7 +809,6 @@ export default function Page() {
 									puzzleclass="c-brand-orange w-6 mr-2"
 									img="/assets/HADV/лечение-на-adhd-при-деца.webp"
 									alt=""
-									href="/za-nas/blago/"
 									title="Давайте кратки и ясни инструкции"
 									desc="Избягвайте дълги обяснения и използвайте визуални средства за представяне на информация."
 								/>
@@ -835,7 +817,6 @@ export default function Page() {
 									puzzleclass="c-brand-blue w-6 mr-2"
 									img="/assets/HADV/хиперкинетично-разстройство-поведението-лечение.webp"
 									alt=""
-									href="/za-nas/blago/"
 									title="Дайте възможност на детето да изразходва натрупаната енергия"
 									desc="Чести паузи между дейностите биха помогнали като постепенно се опитвате да увеличавате продължителността на работния процес и да намалявате времето за почивка."
 								/>
@@ -894,7 +875,7 @@ export default function Page() {
 							<div class="">
 								<AnimatedComponent>
 									<ReviewSlider
-										variant="dots3"
+										variant="dots2"
 										reviews={[
 											{ name: "1" },
 											{ name: "2" },
@@ -952,6 +933,7 @@ export default function Page() {
 					</section>
 				</div>
 			</section>
+			<GradientFooter />
 		</>
 	);
 }

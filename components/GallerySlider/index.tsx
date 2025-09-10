@@ -110,7 +110,7 @@ export function DotsUnderSlider(props: { imgs: { src?: string, alt?: string }[] 
     <>
       {isDesktop() ? (
         <Show when={props.imgs.length > 1}>
-          <div class="dots-container fixed w-full" style="text-align: center; margin-top: -50px; margin-bottom: 20px;">
+          <div class="dots-container relative w-full" style="text-align: center; margin-top: -50px; margin-bottom: 20px;">
             {props.imgs.map((_, index) => (
               <button
                 onClick={() => goToSlide(index)}
@@ -156,7 +156,7 @@ export function DotsUnderSlider2(props: { imgs: { src?: string, alt?: string }[]
     <>
       {isDesktop() ? (
         <Show when={props.imgs.length > 1}>
-          <div class="dots-container fixed w-full" style="text-align: center; margin-top: -80px; margin-bottom: 20px;">
+          <div class="dots-container relative w-full" style="text-align: center; margin-top: -50px; margin-bottom: 20px;">
             {props.imgs.map((_, index) => (
               <button
                 onClick={() => goToSlide(index)}
@@ -168,7 +168,7 @@ export function DotsUnderSlider2(props: { imgs: { src?: string, alt?: string }[]
         </Show>
       ) : (
         <Show when={props.imgs.length > 1}>
-          <div class="dots-container fixed w-full" style="text-align: center; margin-top: -60px; margin-bottom: 20px;">
+          <div class="dots-container relative w-full" style="text-align: center; margin-top: -40px; margin-bottom: 20px;">
             {props.imgs.map((_, index) => (
               <button
                 onClick={() => goToSlide(index)}

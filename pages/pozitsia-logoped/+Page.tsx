@@ -8,6 +8,7 @@ import { BackgroundIcons } from "../../components/BackgroundIcons";
 import { VideoHero } from "../../components/HeroVideo";
 import { createSignal } from 'solid-js';
 import { ContainerSlider } from "../../components/ContainerSlider";
+import { GradientFooter } from "../../components/GradientFooter";
 
 const [isPlaying, setIsPlaying] = createSignal(false);
 
@@ -18,6 +19,7 @@ export default function Page() {
 				<VideoHero
 					youtubeId="R1kPm_q7vCc"
 					gifPreview="/assets/home/2025-07-08 10-35-35.mp4"
+					gifPreviewMobile="/assets/home/2025-07-08 10-35-35.mp4"
 					isPlaying={isPlaying()}
 					onPlay={() => setIsPlaying(true)}
 				/>
@@ -82,7 +84,6 @@ export default function Page() {
 								puzzleclass="c-brand w-6 mr-2"
 								img="/assets/Mending-the-Cosmos.webp"
 								alt=""
-								href="/za-nas/blago/"
 								title="Позитивна и сплотена среда"
 								desc="Вярваме в силата на сплотения екип и работим в подкрепяща среда, където доверието, уважението и взаимопомощта са водещи."
 							/>
@@ -91,7 +92,6 @@ export default function Page() {
 								puzzleclass="c-brand-purple w-6 mr-2"
 								img="/assets/Mending-the-Cosmos.webp"
 								alt=""
-								href="/za-nas/blago/"
 								title="Обучения и супервизии"
 								desc="Осигуряваме регулярна подкрепа и възможности за професионално израстване на всяко ниво от кариерата Ви."
 							/>
@@ -100,7 +100,6 @@ export default function Page() {
 								puzzleclass="c-brand-orange w-6 mr-2"
 								img="/assets/Mending-the-Cosmos.webp"
 								alt=""
-								href="/za-nas/blago/"
 								title="Разнообразие от случаи и възможности за развитие"
 								desc="Работим с деца с различни потребности и възрасти, което Ви позволява да надграждате уменията си и да растете професионално."
 							/>
@@ -109,7 +108,6 @@ export default function Page() {
 								puzzleclass="c-brand-blue w-6 mr-2"
 								img="/assets/Mending-the-Cosmos.webp"
 								alt=""
-								href="/za-nas/blago/"
 								title="Смислена работа с реално въздействие"
 								desc="Всяка терапевтична сесия е възможност да допринесете за развитието на детето и да почувствате, че работата Ви има значение."
 							/>
@@ -131,7 +129,36 @@ export default function Page() {
 							{ name: "1" },
 							{ name: "2" },
 							{ name: "3" },
+							{ name: "4" },
+							{ name: "5" },
+
 						]}>
+						<div class="flex flex-col max-w-full relative overflow-hidden mx-auto">
+							<div>
+								<div class="">
+									<img class="w-full h-full" src="/assets/testing-image.jpg" alt="" />
+								</div>
+								<div class="w-full py-20px text-center">
+									<div class="flex flex-col">
+										<h4 class="mb-0 important-font-[MYRIADPRO-SEMIBOLDIT]">Ако трябва да опишеш Sense Center с една дума коя би била тя?</h4>
+										<p class="text-left mt-0">
+											Мечта
+										</p>
+										<h4 class="mb-0 important-font-[MYRIADPRO-SEMIBOLDIT]">Какво най-много ти харесва в работата?</h4>
+										<p class="text-left mt-1">
+											Това, което най-много ме вдъхновява и ми носи удовлетворение, е възможността да бъда част от реална промяна в живота на децата и техните семейства. Всеки малък напредък – една първа дума, установен зрителен контакт, или постигане на умение, което доскоро е изглеждало недостижимо – е огромна победа както за детето, така и за целия ни екип.
+										</p>
+										<h4 class="mb-0 important-font-[MYRIADPRO-SEMIBOLDIT]">Какво ти харесва в екипа?</h4>
+										<p class="text-left mt-1">
+											Възможността ежедневно да общувам с професионалисти от различни области, да обменяме гледни точки, да съгласуваме стратегии и да се подкрепяме в процеса. Това обогатява не само нашата експертиза, но и качеството на терапията, която предоставяме.
+										</p>
+										<p class="font-size-15px mb-0 font-[MYRIADPRO-Semibold]">Марчела Йорданова</p>
+										<p class="font-size-15px mt-0">Главен логопед</p>
+									</div>
+								</div>
+							</div>
+						</div>
+
 						<div class="flex flex-col max-w-full relative overflow-hidden mx-auto">
 							<div>
 								<div class="">
@@ -157,56 +184,80 @@ export default function Page() {
 								</div>
 							</div>
 						</div>
+
 						<div class="flex flex-col max-w-full relative overflow-hidden mx-auto">
 							<div>
 								<div class="">
 									<img class="w-full h-full" src="/assets/testing-image.jpg" alt="" />
 								</div>
 								<div class="w-full py-20px text-center">
-									<div class="w-full py-20px text-center">
-										<div class="flex flex-col">
-											<h4 class="mb-0 important-font-[MYRIADPRO-SEMIBOLDIT]">Ако трябва да опишеш Sense Center с една дума коя би била тя?</h4>
-											<p class="text-left mt-0">
-												Отговор
-											</p>
-											<h4 class="mb-0 important-font-[MYRIADPRO-SEMIBOLDIT]">Какво най-много ти харесва в работата?</h4>
-											<p class="text-left mt-1">
-												Отговор
-											</p>
-											<h4 class="mb-0 important-font-[MYRIADPRO-SEMIBOLDIT]">Какво ти харесва в екипа?</h4>
-											<p class="text-left mt-1">
-												Отговор
-											</p>
-											<p class="font-size-15px mb-0 font-[MYRIADPRO-Semibold]">Марчела Йорданова</p>
-											<p class="font-size-15px mt-0">Главен Логопед</p>
-										</div>
+									<div class="flex flex-col">
+										<h4 class="mb-0 important-font-[MYRIADPRO-SEMIBOLDIT]">Ако трябва да опишеш Sense Center с една дума коя би била тя?</h4>
+										<p class="text-left mt-0">
+											Вдъхновение
+										</p>
+										<h4 class="mb-0 important-font-[MYRIADPRO-SEMIBOLDIT]">Какво най-много ти харесва в работата?</h4>
+										<p class="text-left mt-1">
+											Работата с деца е като игра, която ме увлича, надгражда и удовлетворява.
+										</p>
+										<h4 class="mb-0 important-font-[MYRIADPRO-SEMIBOLDIT]">Какво ти харесва в екипа?</h4>
+										<p class="text-left mt-1">
+											Подкрепата и синхрона, в който дерзаем. Приемане и споделено израстване.
+										</p>
+										<p class="font-size-15px mb-0 font-[MYRIADPRO-Semibold]">Ваня Витанова</p>
+										<p class="font-size-15px mt-0">Логопед</p>
 									</div>
 								</div>
 							</div>
 						</div>
+
 						<div class="flex flex-col max-w-full relative overflow-hidden mx-auto">
 							<div>
 								<div class="">
 									<img class="w-full h-full" src="/assets/testing-image.jpg" alt="" />
 								</div>
 								<div class="w-full py-20px text-center">
-									<div class="w-full py-20px text-center">
-										<div class="flex flex-col">
-											<h4 class="mb-0 important-font-[MYRIADPRO-SEMIBOLDIT]">Ако трябва да опишеш Sense Center с една дума коя би била тя?</h4>
-											<p class="text-left mt-0">
-												Отговор
-											</p>
-											<h4 class="mb-0 important-font-[MYRIADPRO-SEMIBOLDIT]">Какво най-много ти харесва в работата?</h4>
-											<p class="text-left mt-1">
-												Отговор
-											</p>
-											<h4 class="mb-0 important-font-[MYRIADPRO-SEMIBOLDIT]">Какво ти харесва в екипа?</h4>
-											<p class="text-left mt-1">
-												Отговор
-											</p>
-											<p class="font-size-15px mb-0 font-[MYRIADPRO-Semibold]">Ваня Витанова</p>
-											<p class="font-size-15px mt-0">Логопед</p>
-										</div>
+									<div class="flex flex-col">
+										<h4 class="mb-0 important-font-[MYRIADPRO-SEMIBOLDIT]">Ако трябва да опишеш Sense Center с една дума коя би била тя?</h4>
+										<p class="text-left mt-0">
+											Разнообразие
+										</p>
+										<h4 class="mb-0 important-font-[MYRIADPRO-SEMIBOLDIT]">Какво най-много ти харесва в работата?</h4>
+										<p class="text-left mt-1">
+											Да виждам прогреса в децата.
+										</p>
+										<h4 class="mb-0 important-font-[MYRIADPRO-SEMIBOLDIT]">Какво ти харесва в екипа?</h4>
+										<p class="text-left mt-1">
+											Получаване на различни гледни точки.
+										</p>
+										<p class="font-size-15px mb-0 font-[MYRIADPRO-Semibold]">Рада Гергинина</p>
+										<p class="font-size-15px mt-0">Логопед</p>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="flex flex-col max-w-full relative overflow-hidden mx-auto">
+							<div>
+								<div class="">
+									<img class="w-full h-full" src="/assets/testing-image.jpg" alt="" />
+								</div>
+								<div class="w-full py-20px text-center">
+									<div class="flex flex-col">
+										<h4 class="mb-0 important-font-[MYRIADPRO-SEMIBOLDIT]">Ако трябва да опишеш Sense Center с една дума коя би била тя?</h4>
+										<p class="text-left mt-0">
+											Общност
+										</p>
+										<h4 class="mb-0 important-font-[MYRIADPRO-SEMIBOLDIT]">Какво най-много ти харесва в работата?</h4>
+										<p class="text-left mt-1">
+											Усещането за принадлежност и радостта в очите на децата след постигане на резултат.
+										</p>
+										<h4 class="mb-0 important-font-[MYRIADPRO-SEMIBOLDIT]">Какво ти харесва в екипа?</h4>
+										<p class="text-left mt-1">
+											Впечатлена съм колко сплотен е екипът от терапевти, работят като добре смазана машина.
+										</p>
+										<p class="font-size-15px mb-0 font-[MYRIADPRO-Semibold]">Райна Патова</p>
+										<p class="font-size-15px mt-0">Логопед</p>
 									</div>
 								</div>
 							</div>
@@ -335,7 +386,7 @@ export default function Page() {
 									</div>
 									<div class="flex items-center justify-center gap-4 ml-1.5">
 										<div>
-											<img src="/assets/sense-puzzle-piece.svg" class="w-9.5 h-9.5" alt="" />
+											<img src="/assets/bg-puzzle-5.svg" class="w-11 h-11" alt="" />
 										</div>
 										<p class="">
 											Проактивност и целеустременост
@@ -390,9 +441,9 @@ export default function Page() {
 											Желание за професионално развитие и усвояване на нови техники и подходи
 										</p>
 									</div>
-									<div class="flex items-center justify-center gap-3">
+									<div class="mt-3 flex items-center justify-center gap-3">
 										<div>
-											<img src="/assets/yellow-puzzle-piece-li-100px.svg" class="w-12 h-12" alt="" />
+											<img src="/assets/pink-puzzle-piece-li-100px.svg" class="w-12 h-12" alt="" />
 										</div>
 										<p class="">
 											Базови ИТ умения
@@ -589,6 +640,7 @@ export default function Page() {
 			</section>
 
 			<DoodleDecor variant="purple" />
+			<GradientFooter />
 		</>
 	);
 }

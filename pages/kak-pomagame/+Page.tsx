@@ -2,6 +2,7 @@ import "solid-slider/slider.css";
 import { AnimatedComponent } from '../../components/AnimateOnView';
 import { JSX } from "solid-js";
 import { DoodleDecor } from "../../components/BackgroundDecor";
+import { GradientFooter } from "../../components/GradientFooter";
 
 export function AuthorContainer(props: { href: string; style: string; name: string; description: string | JSX.Element; }) {
 	return (
@@ -218,6 +219,7 @@ export default function Page() {
 					/>
 				</div>
 			</div>
+			<GradientFooter />
 		</>
 	);
 }

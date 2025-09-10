@@ -11,6 +11,7 @@ import MdiEmail from '~icons/mdi/email';
 import MdiClockTimeTwo from '~icons/mdi/clock-time-two';
 import MdiPhone from '~icons/mdi/phone';
 import { Collapse } from "../../components/FAQ";
+import { GradientFooter } from "../../components/GradientFooter";
 
 function SingleCollapse() {
 	return (
@@ -119,8 +120,8 @@ export default function Page() {
 					mx-[-21px]
 					relative 
 					h-[100vh] 
-					bg-[linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.55)),url(/assets/Fulfilling-Vows.webp)] 
-					bg-[position:right_85%_bottom_100%] 
+					bg-[linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.55)),url(/assets/Fulfilling-Vows.webp)]
+					bg-[position:right_85%_bottom_100%]
 					bg-no-repeat 
 					bg-cover 
 					[mask-image:linear-gradient(to_bottom,_rgba(252,252,252,1)_80%,_rgba(252,252,252,0.9)_85%,_rgba(252,252,252,0.5)_90%,_rgba(252,252,252,0)_100%)] 
@@ -144,8 +145,6 @@ export default function Page() {
 								<div class="flex md:flex-row flex-col justify-center items-center gap-3">
 									<PuzzleButton />
 									<PuzzleButton2
-										style2="padding-left:0px !important; font-weight:500; font-size:14px !important;"
-										img="/assets/sense-orange-puzzle-piece.svg"
 										href=""
 										text="Вижте успешни истории"
 									/>
@@ -174,7 +173,6 @@ export default function Page() {
 									]}
 								>
 									<ContainerBox
-										link=""
 										style="background-color:#742C8F;"
 										title="Избухвания без видима причина"
 										text="Проявява внезапни и силни емоции като плач и гняв, без видима причина."
@@ -182,7 +180,6 @@ export default function Page() {
 										alt=""
 									/>
 									<ContainerBox
-										link=""
 										style="background-color:#E11172;"
 										title="Често повтарящи се движения"
 										text="Размахване на ръце, поклащане, въртене в кръг и др."
@@ -190,7 +187,6 @@ export default function Page() {
 										alt=""
 									/>
 									<ContainerBox
-										link=""
 										style="background-color:#088F9D;"
 										title="Трудна адаптация към промени"
 										text="Детето се чувства силно разстроено или притеснено, когато рутината му се променя."
@@ -198,7 +194,6 @@ export default function Page() {
 										alt=""
 									/>
 									<ContainerBox
-										link=""
 										style="background-color:#FA7402;"
 										title="Трудна адаптация към промени"
 										text="Детето се чувства силно разстроено или притеснено, когато рутината му се променя."
@@ -210,7 +205,6 @@ export default function Page() {
 
 							<div class="hidden xl:flex mx-auto gap-4">
 								<ContainerBox
-									link=""
 									style="background-color:#742C8F;"
 									title="Избухвания без видима причина"
 									text="Проявява внезапни и силни емоции като плач и гняв, без видима причина."
@@ -218,7 +212,6 @@ export default function Page() {
 									alt=""
 								/>
 								<ContainerBox
-									link=""
 									style="background-color:#E11172;"
 									title="Често повтарящи се движения"
 									text="Размахване на ръце, поклащане, въртене в кръг и др."
@@ -226,7 +219,6 @@ export default function Page() {
 									alt=""
 								/>
 								<ContainerBox
-									link=""
 									style="background-color:#088F9D;"
 									title="Трудна адаптация към промени"
 									text="Детето се чувства силно разстроено или притеснено, когато рутината му се променя."
@@ -234,7 +226,6 @@ export default function Page() {
 									alt=""
 								/>
 								<ContainerBox
-									link=""
 									style="background-color:#FA7402;"
 									title="Трудна адаптация към промени"
 									text="Детето се чувства силно разстроено или притеснено, когато рутината му се променя."
@@ -260,35 +251,31 @@ export default function Page() {
 					<div class="">
 						<AnimatedComponent>
 							<ReviewSlider
-								variant="dots3"
+								variant="dots2"
 								reviews={[
-									{ name: "Karl Stirner" },
-									{ name: "Ann Panillo" },
-									{ name: "Peter Hughes" },
-									{ name: "Peter Hughes" },
+									{ name: "1" },
+									{ name: "2" },
+									{ name: "3" },
+									{ name: "4" },
 								]}>
 								<StarReview
 									reviewText="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged."
 									name="Iliyan Asenov"
-									date="Януари 2024"
 									hrefGoogleReview="https://maps.app.goo.gl/sye2Me5vsxUajS8a6"
 								/>
 								<StarReview
 									reviewText="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged."
 									name="Iliyan Asenov"
-									date="Януари 2024"
 									hrefGoogleReview="https://maps.app.goo.gl/sye2Me5vsxUajS8a6"
 								/>
 								<StarReview
 									reviewText="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged."
 									name="Iliyan Asenov"
-									date="Януари 2024"
 									hrefGoogleReview="https://maps.app.goo.gl/sye2Me5vsxUajS8a6"
 								/>
 								<StarReview
 									reviewText="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged."
 									name="Iliyan Asenov"
-									date="Януари 2024"
 									hrefGoogleReview="https://maps.app.goo.gl/sye2Me5vsxUajS8a6"
 								/>
 							</ReviewSlider>
@@ -381,8 +368,6 @@ export default function Page() {
 							</AnimatedComponent>
 							<PuzzleButton2
 								class="important-mt-25px"
-								style2="margin-left:-5px !important; font-weight:500; font-size:14px !important;"
-								img="/assets/sense-orange-puzzle-piece.svg"
 								href=""
 								text="Вижте всички състояния"
 							/>
@@ -498,7 +483,6 @@ export default function Page() {
 									]}
 								>
 									<ContainerBox
-										link=""
 										style="background-color:#E11172;"
 										title="Избухвания без видима причина"
 										text="Проявява внезапни и силни емоции като плач и гняв, без видима причина."
@@ -506,7 +490,6 @@ export default function Page() {
 										alt=""
 									/>
 									<ContainerBox
-										link=""
 										style="background-color:#E11172;"
 										title="Често повтарящи се движения"
 										text="Размахване на ръце, поклащане, въртене в кръг и др."
@@ -514,7 +497,6 @@ export default function Page() {
 										alt=""
 									/>
 									<ContainerBox
-										link=""
 										style="background-color:#E11172;"
 										title="Трудна адаптация към промени"
 										text="Детето се чувства силно разстроено или притеснено, когато рутината му се променя."
@@ -526,7 +508,6 @@ export default function Page() {
 
 							<div class="hidden xl:flex mx-auto gap-4">
 								<ContainerBox
-									link=""
 									style="background-color:#E11172;"
 									title="Избухвания без видима причина"
 									text="Проявява внезапни и силни емоции като плач и гняв, без видима причина."
@@ -534,7 +515,6 @@ export default function Page() {
 									alt=""
 								/>
 								<ContainerBox
-									link=""
 									style="background-color:#E11172;"
 									title="Често повтарящи се движения"
 									text="Размахване на ръце, поклащане, въртене в кръг и др."
@@ -542,7 +522,6 @@ export default function Page() {
 									alt=""
 								/>
 								<ContainerBox
-									link=""
 									style="background-color:#E11172;"
 									title="Трудна адаптация към промени"
 									text="Детето се чувства силно разстроено или притеснено, когато рутината му се променя."
@@ -571,7 +550,6 @@ export default function Page() {
 									]}
 								>
 									<ContainerBox
-										link=""
 										style="background-color:#088F9D;"
 										title="Избухвания без видима причина"
 										text="Проявява внезапни и силни емоции като плач и гняв, без видима причина."
@@ -579,7 +557,6 @@ export default function Page() {
 										alt=""
 									/>
 									<ContainerBox
-										link=""
 										style="background-color:#088F9D;"
 										title="Често повтарящи се движения"
 										text="Размахване на ръце, поклащане, въртене в кръг и др."
@@ -587,7 +564,6 @@ export default function Page() {
 										alt=""
 									/>
 									<ContainerBox
-										link=""
 										style="background-color:#088F9D;"
 										title="Трудна адаптация към промени"
 										text="Детето се чувства силно разстроено или притеснено, когато рутината му се променя."
@@ -599,7 +575,6 @@ export default function Page() {
 
 							<div class="hidden xl:flex mx-auto gap-4">
 								<ContainerBox
-									link=""
 									style="background-color:#088F9D;"
 									title="Избухвания без видима причина"
 									text="Проявява внезапни и силни емоции като плач и гняв, без видима причина."
@@ -607,7 +582,6 @@ export default function Page() {
 									alt=""
 								/>
 								<ContainerBox
-									link=""
 									style="background-color:#088F9D;"
 									title="Често повтарящи се движения"
 									text="Размахване на ръце, поклащане, въртене в кръг и др."
@@ -615,7 +589,6 @@ export default function Page() {
 									alt=""
 								/>
 								<ContainerBox
-									link=""
 									style="background-color:#088F9D;"
 									title="Трудна адаптация към промени"
 									text="Детето се чувства силно разстроено или притеснено, когато рутината му се променя."
@@ -654,8 +627,6 @@ export default function Page() {
 						<div class="pt-10 flex md:flex-row flex-col justify-center items-center gap-2">
 							<PuzzleButton />
 							<PuzzleButton2
-								style2="padding-left:0px !important; font-weight:600; font-size:16px !important;"
-								img="/assets/sense-orange-puzzle-piece.svg"
 								href=""
 								text="+ 359 879 800 013"
 							/>
@@ -854,7 +825,6 @@ export default function Page() {
 								puzzleclass="c-brand w-6 mr-2"
 								img="/assets/Mending-the-Cosmos.webp"
 								alt=""
-								href="/za-nas/blago/"
 								title="Използване на визуални помощни средства"
 								desc="Карти, таблици и схеми улесняват разбирането на информация и подкрепят комуникацията. Визуалните графици помагат на детето да се ориентира в ежедневните задачи."
 							/>
@@ -863,7 +833,6 @@ export default function Page() {
 								puzzleclass="c-brand-purple w-6 mr-2"
 								img="/assets/Mending-the-Cosmos.webp"
 								alt=""
-								href="/za-nas/blago/"
 								title="Въвеждане на сензорни активности"
 								desc="Активности като игра с пясък, вода, пластилин или сензорни топки подпомагат развитието на сетивата и насърчават спокойствието."
 							/>
@@ -872,7 +841,6 @@ export default function Page() {
 								puzzleclass="c-brand-orange w-6 mr-2"
 								img="/assets/Mending-the-Cosmos.webp"
 								alt=""
-								href="/za-nas/blago/"
 								title="Изграждане на рутинни действия"
 								desc="Рутините осигуряват предсказуемост, която помага на децата с аутизъм да се чувстват по-сигурни и спокойни. Например, създайте последователност за сутрешната подготовка или времето за игра."
 							/>
@@ -881,7 +849,6 @@ export default function Page() {
 								puzzleclass="c-brand-blue w-6 mr-2"
 								img="/assets/Mending-the-Cosmos.webp"
 								alt=""
-								href="/za-nas/blago/"
 								title="Използване на игрови методи"
 								desc="Включете ролеви или настолни игри, които развиват социалните умения и насърчават взаимодействието с другите."
 							/>
@@ -1175,7 +1142,6 @@ export default function Page() {
 								<ReviewPuzzlePiece
 									style="background-color:#088F9D;"
 									puzzleclass="c-brand-pink w-6 mr-2"
-									href="/za-nas/blago/"
 									title="Използване на игрови методи"
 									desc="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
 									name="Родител на марти,"
@@ -1184,7 +1150,6 @@ export default function Page() {
 								<ReviewPuzzlePiece
 									style="background-color:#E11172;"
 									puzzleclass="c-brand-blue w-6 mr-2"
-									href="/za-nas/blago/"
 									title="Използване на игрови методи"
 									desc="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
 									name="Родител на марти,"
@@ -1193,7 +1158,6 @@ export default function Page() {
 								<ReviewPuzzlePiece
 									style="background-color:#FA7402;"
 									puzzleclass="c-brand-purple w-6 mr-2"
-									href="/za-nas/blago/"
 									title="Използване на игрови методи"
 									desc="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
 									name="Родител на марти,"
@@ -1203,8 +1167,6 @@ export default function Page() {
 						</AnimatedComponent>
 						<PuzzleButton2
 							class="important-mt-30px"
-							style2="margin-left:-15px !important; font-weight:500; font-size:14px !important;"
-							img="/assets/sense-orange-puzzle-piece.svg"
 							href=""
 							text="Вижте всички успешни истории"
 						/>
@@ -1218,6 +1180,7 @@ export default function Page() {
 				<H3Blue title="Първите сигнали на аутизъм, които не бива да игнорирате" />
 				<SingleCollapse />
 			</section>
+			<GradientFooter />
 		</>
 	);
 }

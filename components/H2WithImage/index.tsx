@@ -83,7 +83,7 @@ export const H3Pink = (props: { title: string; variant?: "h2" | "h3"; }) => {
   );
 };
 
-export const H3SolidPink = (props: { title: string; variant?: "h2" | "h3"; }) => {
+export const H3SolidPink = (props: { title: string | JSXElement; variant?: "h2" | "h3"; }) => {
   const { variant = "h3" } = props;
 
   return (
@@ -122,6 +122,7 @@ export const H2Echo = (props: {
   bgImage?: string;
   bgPosition?: string;
   bgSize?: string;
+  class?: string;
 }) => {
   const backgroundImage = props.bgImage ?? '/assets/home-bg-h1.png';
   const backgroundPosition = props.bgPosition ?? 'center';
@@ -148,7 +149,7 @@ export const H2Echo = (props: {
       <h2 class="text-transparent bg-clip-text bg-cover bg-center opacity-20 scale-50 md:scale-70 bg-right bg-top mb--5" style={commonStyle}>
         {props.title}
       </h2>
-      <h2 class="text-transparent bg-clip-text bg-cover bg-center font-bold bg-right bg-top" style={commonStyle}>
+      <h2 class={`text-transparent bg-clip-text bg-cover bg-center font-bold bg-right bg-top ${props.class ?? ''}`} style={commonStyle}>
         {props.maintitle}
       </h2>
       <h2 class="text-transparent bg-clip-text bg-cover bg-center opacity-20 scale-50 md:scale-70 bg-right bg-top mt--5" style={commonStyle}>

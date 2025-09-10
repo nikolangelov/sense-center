@@ -2,52 +2,207 @@ import 'uno.css'
 import "./style.css";
 import { children, createEffect, createSignal, JSX, onCleanup, onMount, Show } from "solid-js";
 import RiArrowDropUpFill from '~icons/ri/arrow-drop-up-fill';
-import { AnimatedComponent } from '../components/AnimateOnView';
-import MdiEmail from '~icons/mdi/email';
-import MdiClockTimeTwo from '~icons/mdi/clock-time-two';
-import MdiPhone from '~icons/mdi/phone';
-import { PuzzleButton, PuzzleButton2 } from '../components/PuzzleButton';
 import MdiArrowUp from '~icons/mdi/arrow-up';
+import RiFacebookFill from '~icons/ri/facebook-fill';
+import RiInstagramLine from '~icons/ri/instagram-line';
+import RiPhoneFill from '~icons/ri/phone-fill';
+import MdiMagnify from '~icons/mdi/magnify';
 
 export default function LayoutDefault(props: { children?: JSX.Element }) {
-  const childrenMemo = children(() => props.children)
+  const childrenMemo = children(() => props.children);
+
+  const menuItems = [
+    { href: "/na-kogo-pomagame", label: "НА КОГО ПОМАГАМЕ" },
+    { href: "/kak-pomagame", label: "КАК ПОМАГАМЕ" },
+    { href: "/tseni", label: "ЦЕНИ" },
+    { href: "/za-nas", label: "ЗА НАС" },
+    { href: "/otzivi", label: "ОТЗИВИ" },
+    { href: "/karieri", label: "КАРИЕРИ" },
+    { href: "/kontakti", label: "КОНТАКТИ" },
+  ];
+
+  const [showSearch, setShowSearch] = createSignal(false);
 
   return (
     <div class="flex flex-col">
-      <div class="fixed top-0 left-0 w-full h-[53px] bg-brand z-50 flex items-center justify-center text-white text-center text-sm md:text-lg">
+      {/* <div class="fixed top-0 left-0 w-full h-[53px] bg-brand z-50 flex items-center justify-center c-paper text-center text-sm md:text-lg">
         По случай деня на детето можете да се възползвате от безплатна първична оценка!
+      </div> */}
+
+      <div class="fixed top-0 left-0 w-full z-50 flex items-center justify-center text-white text-center text-sm md:text-lg">
+        <div class="px-10 bg-brand-blue hidden fixed top-70px sm:top-100px sm:block w-full gap-4">
+          <MenuItem2 href="/detsa-s-autizam">Аутизъм</MenuItem2>
+          <MenuItem2 href="/detski-logoped">Детски логопед</MenuItem2>
+          <MenuItem2 href="/kak-pomagame">Как помагаме</MenuItem2>
+          <MenuItem2 href="/na-kogo-pomagame">На кого помагаме</MenuItem2>
+          <MenuItem2 href="/za-nas">За нас</MenuItem2>
+          <MenuItem2 href="/karieri">Кариери</MenuItem2>
+          <MenuItem2 href="/otzivi">Отзиви</MenuItem2>
+          <MenuItem2 href="/detsa-s-razstroistvo-s-defitsit-na-vnimanieto-i-hiperaktivnost/">ХАДВ</MenuItem2>
+          <MenuItem2 href="/detsa-sas-sindrom-na-daun">Синдром на Даун</MenuItem2>
+          <MenuItem2 href="/pozitsia-logoped">Логопед-позиция</MenuItem2>
+          <MenuItem2 href="/detsa-s-umstvena-izostanalost">Деца с умствена изостаналост</MenuItem2>
+          <MenuItem2 href="/detsa-sas-spetsialni-obrazovatelni-potrebnosti">Деца със СОП</MenuItem2>
+          <MenuItem2 href="/detsa-sas-sindrom-na-asperger">Деца с Аспергер</MenuItem2>
+          <MenuItem2 href="/detsa-s-posttravmatichno-razstroistvo">Деца с посттравматично разстройство</MenuItem2>
+          <MenuItem2 href="/detsa-s-disleksia">Деца с дислекция</MenuItem2>
+          <MenuItem2 href="/detski-psiholog">Деткси психолог</MenuItem2>
+          <MenuItem2 href="/tseni">Цени</MenuItem2>
+          <MenuItem2 href="/ergoterapia-za-detsa">Ерготерапия за деца</MenuItem2>
+          <MenuItem2 href="/politika-za-poveritelnost">Политика за поверителност</MenuItem2>
+          <MenuItem2 href="/obshti-uslovia">Общи условия</MenuItem2>
+          <MenuItem2 href="/politika-za-biskvitki">Политика за бисквитки</MenuItem2>
+          <MenuItem2 href="/prakticheski-zanimania-za-deca-s-autizam">Практ зан за деца с аутизъм</MenuItem2>
+        </div>
       </div>
+
       <Topbar>
-        <div class="md:block hidden md:w-33% md:my-0">
-          <a href="/">
-            <img src="/assets/sense-head-logo.svg" class="w-15 md:w-18 md:ml-20" alt="sense-center-sofia-logo" />
+        <>
+          <a href="/" class="flex items-center">
+            <img
+              src="/assets/sense_logo_heart_text.webp"
+              class="w-20 md:w-25 pb-2 z-99"
+              alt="sense-center-sofia-logo"
+            />
+          </a>
+
+          <div class="hidden lg:flex flex-row xl:gap-6 gap-3 text-white font-semibold">
+            {menuItems.map((item) => (
+              <MenuItem href={item.href}>{item.label}</MenuItem>
+            ))}
+          </div>
+
+          <div class="flex items-center gap-1">
+            <a href="/"
+              class="group relative rounded-8px shadow-md overflow-hidden text-white text-lg font-[MyriadPro-SemiboldCond] px-7 pb-1.5 pt-2 xl:mr-12"
+              style={{
+                "background-image": `url(/assets/detsa-s-autizam/терапия-на-дете-с-аутизъм.webp)`,
+                "background-size": "cover",
+                "background-position": "center",
+              }}>
+              <div class="absolute inset-0 bg-brand/80 group-hover-bg-brand-hover/80 transition-all"></div>
+              <div class="flex justify-center items-center c-paper">
+                <div class="text-white font-[MyriadPro-SemiboldCond] text-center leading-4.5 md:leading-5.5 font-size-14px md:font-size-16px">
+                  ЗАПАЗЕТЕ ЧАС ЗА<br />ПЪРВИЧНА ОЦЕНКА
+                </div>
+              </div>
+            </a>
+            <a
+              href="tel:+359000000000"
+              class="hidden md:block text-white text-5 md:text-7 hover:text-brand transition-all pt-1.5"
+            >
+              <RiPhoneFill />
+            </a>
+            <button
+              onClick={() => setShowSearch(!showSearch())}
+              class="hidden md:block cursor-pointer text-white text-5 md:text-7 hover:text-brand transition-all bg-transparent b-none pt-1.5"
+            >
+              <MdiMagnify />
+            </button>
+          </div>
+          <HamburgerMenu items={menuItems} />
+        </>
+      </Topbar>
+      <Show when={showSearch()}>
+        <div class="fixed inset-0 bg-black/80 flex items-center justify-center z-50">
+          <div class="bg-white rounded-lg p-4 w-3/4 max-w-md flex flex-col gap-2">
+            <input
+              type="text"
+              placeholder="Търсене..."
+              class="border border-gray-300 rounded p-2 w-full"
+            />
+            <button
+              class="bg-brand transition-all text-white px-4 py-2 rounded-lg"
+              onClick={() => setShowSearch(false)}
+            >
+              Затвори
+            </button>
+          </div>
+        </div>
+      </Show>
+      <Content>{childrenMemo()}</Content>
+      <CookieConsentModal />
+      <MainFooter />
+      <div class="bg-brand-purple flex flex-col justify-center items-center gap-0 py-1.5">
+        <div class="flex">
+          <a
+            href="/politika-za-poveritelnost"
+            class="relative important-tracking-0.2 mr-2 text-shadow-[4px_4px_10px_rgba(0,0,0,0.3)] font-[MYRIADPRO-Light] font-size-11px md:font-size-14px md:text-lg tracking-tight text-white hover:text-brand-hover transition-all">
+            Политика за поверителност
+          </a>
+          <a
+            href="/obshti-uslovia"
+            class="relative important-tracking-0.2 mr-2 text-shadow-[4px_4px_10px_rgba(0,0,0,0.3)] font-[MYRIADPRO-Light] font-size-11px md:font-size-14px md:text-lg tracking-tight text-white hover:text-brand-hover transition-all">
+            Общи условия
+          </a>
+          <a
+            href="/politika-za-biskvitki"
+            class="relative important-tracking-0.2 mr-2 text-shadow-[4px_4px_10px_rgba(0,0,0,0.3)] font-[MYRIADPRO-Light] font-size-11px md:font-size-14px md:text-lg tracking-tight text-white hover:text-brand-hover transition-all">
+            Политика за бисквитки
           </a>
         </div>
-
-        <div class="md:block hidden md:w-33% md:my-0">
-          <img src="/assets/SENSE-text-purple-logo.svg" class="w-25" alt="sense-center-sofia-text-logo" />
+        <div class="flex ">
+          <p class="my-0 important-tracking-0.2 mr-2 text-shadow-[4px_4px_10px_rgba(0,0,0,0.3)] font-[MYRIADPRO-Light] font-size-11px md:font-size-14px md:text-lg tracking-tight text-white">Всички права запазени <span><RiCopyrightLine class="w-4 h-4 pt-1.3"/></span> <CurrentYear /></p>
         </div>
-
-        <div class="hidden sm:flex w-full md:w-53% whitespace-nowrap flex-wrap justify-center md:justify-end items-center gap-1 font-semibold md:pr-10 md:pl-5 xl:pl-10 mr-6">
-          <MenuItem href="/detsa-s-autizam">Аутизъм</MenuItem>
-          <MenuItem href="/detski-logoped">Детски логопед</MenuItem>
-          <MenuItem href="/kak-pomagame">Как помагаме</MenuItem>
-          <MenuItem href="/na-kogo-pomagame">На кого помагаме</MenuItem>
-          <MenuItem href="/za-nas">За нас</MenuItem>
-          <MenuItem href="/karieri">Кариери</MenuItem>
-          <MenuItem href="/otzivi">Отзиви</MenuItem>
-          <MenuItem href="/detsa-s-razstroistvo-s-defitsit-na-vnimanieto-i-hiperaktivnost/">ХАДВ</MenuItem>
-          <MenuItem href="/detsa-sas-sindrom-na-daun">Синдром на Даун</MenuItem>
-          <MenuItem href="/pozitsia-logoped">Логопед-позиция</MenuItem>
-          <MenuItem href="/detsa-s-umstvena-izostanalost">Деца с умствена изостаналост</MenuItem>
-          <MenuItem href="/detsa-sas-spetsialni-obrazovatelni-potrebnosti">Деца със СОП</MenuItem>
-        </div>
-        <HamburgerMenu />
-      </Topbar >
-      <Content>{childrenMemo()}</Content>
-      <div id="footer-sentinel" class="h-1"></div>
-      <GradientFooter />
+      </div>
       <BackToTopArrow />
+    </div>
+  );
+}
+import RiCopyrightLine from '~icons/ri/copyright-line';
+import MdiCopyright from '~icons/mdi/copyright';
+
+function MenuItem2(props: { href: string; children: string }) {
+  return (
+    <a
+      href={props.href}
+      class="relative important-tracking-0.2 mr-2 text-shadow-[4px_4px_10px_rgba(0,0,0,0.3)] font-[MyriadPro-Regular] md:font-size-16px xl:font-size-18px md:text-lg tracking-tight text-white hover:text-brand-hover transition-all after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-brand-hover after:transition-all hover:after:w-full">
+      {props.children}
+    </a>
+  );
+}
+
+function MenuItem(props: { href: string; children: string }) {
+  return (
+    <a
+      href={props.href}
+      class="relative important-tracking-0.2 text-shadow-[4px_4px_10px_rgba(0,0,0,0.3)] font-[MyriadPro-SemiboldCond] md:font-size-16px xl:font-size-18px md:text-lg tracking-tight text-white hover:text-brand-hover transition-all after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-brand-hover after:transition-all hover:after:w-full">
+      {props.children}
+    </a>
+  );
+}
+
+function HamburgerMenu(props: { items: { href: string; label: string }[] }) {
+  const [open, setOpen] = createSignal(false);
+
+  return (
+    <div class="lg:hidden relative z-50">
+      <button
+        class="relative w-10 h-10 flex items-center justify-center group bg-transparent b-none cursor-pointer"
+        onClick={() => setOpen(!open())}
+      >
+        <span
+          class={`block absolute h-1 w-7 bg-brand rounded transition-all duration-500 ease-in-out
+            ${open() ? "rotate-45 translate-y-0" : "-translate-y-2"}`}
+        ></span>
+        <span
+          class={`block absolute h-1 w-7 bg-#fa4652 rounded transition-all duration-500 ease-in-out
+            ${open() ? "opacity-0 scale-50" : "opacity-100"}`}
+        ></span>
+        <span
+          class={`block absolute h-1 w-7 bg-brand-orange rounded transition-all duration-500 ease-in-out
+            ${open() ? "-rotate-45 translate-y-0" : "translate-y-2"}`}
+        ></span>
+      </button>
+      <Show when={open()}>
+        <div class="w-full mx-auto flex justify-end">
+          <div class="fixed mt-69px mx-auto b-rd-8px top-[53px] left-0 w-full bg-brand-blue/95 flex flex-col items-center gap-4 p-4 z-40 animate-bounce-in">
+            {props.items.map((item) => (
+              <MenuItem href={item.href}>{item.label}</MenuItem>
+            ))}
+          </div>
+        </div>
+      </Show>
     </div>
   );
 }
@@ -56,8 +211,7 @@ function Topbar(props: { children: JSX.Element }) {
   const [isScrolled, setIsScrolled] = createSignal(false);
 
   const checkScroll = () => {
-    const isScrolledNow = window.scrollY > 0;
-    setIsScrolled(isScrolledNow);
+    setIsScrolled(window.scrollY > 0);
   };
 
   onMount(() => {
@@ -68,8 +222,13 @@ function Topbar(props: { children: JSX.Element }) {
 
   return (
     <div
-      class={`h-50px sm:h-80px w-full z-40 fixed top-53px flex-content-center transition-all duration-300 ease-in-out ${isScrolled() ? "bg-paper" : "bg-transparent"}`}>
-      <div class="mx-auto max-w-full flex flex-row justify-center md:justify-between items-center h-full">
+      class="h-70px sm:h-100px w-full z-40 fixed top-[0] flex-content-center transition-all duration-300 ease-in-out">
+      <div
+        class="absolute inset-0 bg-cover bg-top"
+        style={{ "background-image": "url('/assets/detsa-s-autizam/наблюдение-дете-аутизъм.webp')" }}
+      ></div>
+      <div class="absolute inset-0 bg-brand-blue/70"></div>
+      <div class="mx-auto w-full flex flex-row justify-between items-center px-4 md:px-10">
         {props.children}
       </div>
     </div>
@@ -89,77 +248,6 @@ function Content(props: { children: JSX.Element }) {
       >
         {props.children}
       </div>
-    </div>
-  );
-}
-
-function HamburgerMenu() {
-  const [open, setOpen] = createSignal(false);
-  const [opacity, setOpacity] = createSignal(0);
-  const [translateY, setTranslateY] = createSignal("-100%");
-
-  const handleToggle = () => {
-    if (open()) {
-      setOpacity(0);
-      setTranslateY("-100%");
-      setTimeout(() => setOpen(false), 400);
-    } else {
-      setOpen(true);
-      setTimeout(() => {
-        setTranslateY("0");
-        setOpacity(1);
-      }, 10);
-    }
-  };
-
-  const closeMenu = () => {
-    setOpacity(0);
-    setTranslateY("-100%");
-    setTimeout(() => setOpen(false), 400);
-  };
-
-  return (
-    <div class="z-99 lg-hidden flex flex-content-center flex-items-center flex-justify-between w-full">
-      <div class="flex flex-items-center flex-justify-center lg-pl-4 pl-0">
-        <a href="/" onClick={closeMenu}>
-          <img width="52" height="52" loading="lazy" src="/assets/sense-head-logo.svg" class="w-11 ml-20px md:mt-2" alt="sense-center-sofia-logo" />
-        </a>
-      </div>
-      <div class="flex justify-center items-center md:mt-2">
-        <img src="/assets/SENSE-text-purple-logo.svg" class="w-18" alt="sense-center-sofia-text-logo" />
-      </div>
-      <div class="ml-6 md-mr-10 z-93">
-        <input type="checkbox" id="menu-checkbox" class="hidden" />
-        <label
-          id="burger-menu"
-          for="menu-checkbox"
-          onClick={handleToggle}
-          class="relative cursor-pointer flex flex col flex-justify-between flex-col w-30px h-18px right-6 hamburger"
-        >
-          <div class={`line ${open() ? "open" : ""}`}></div>
-          <div class={`line ${open() ? "open" : ""}`}></div>
-          <div class={`line ${open() ? "open" : ""}`}></div>
-        </label>
-      </div>
-      <Show when={open()}>
-        <div
-          class="z-92 fixed w-full h-full left-0 top-0 px-10 pt-10 
-          
-          "
-        // style={`
-        //   height: 100vh;
-        //   opacity: ${opacity()};
-        //   transform: translateY(${translateY()});
-        //   overflow-y: auto;
-        //   transition: transform 0.6s ease-in-out, opacity 0.3s ease-in-out;
-        // `}
-        // transition-all transition-duration-400 bg-#15151599 backdrop-blur-[10px] border border-[rgba(235,166,91,0.3)]
-        >
-          {/* <div class="py-10 text-left">
-            <MyDropdown closeMenu={closeMenu} />
-          </div> */}
-        </div>
-      </Show>
     </div>
   );
 }
@@ -195,7 +283,6 @@ function MobileDropdownMenuItem(props: {
           </span>
         )}
       </div>
-
       <div
         class={`pl-4 overflow-auto transition-all duration-300 ease-in-out ${open() ? "max-h-200 opacity-100" : "max-h-0 opacity-0"}`}
       >
@@ -212,23 +299,6 @@ function MobileDropdownMenuItem(props: {
       </div>
     </div>
   );
-}
-
-function MenuItem(props: { href: string, children: JSX.Element }) {
-  const [isScrolled, setIsScrolled] = createSignal(false);
-
-  const checkScroll = () => {
-    const isScrolledNow = window.scrollY > 0;
-    setIsScrolled(isScrolledNow);
-  };
-
-  onMount(() => {
-    checkScroll();
-    window.addEventListener("scroll", checkScroll);
-    onCleanup(() => window.removeEventListener("scroll", checkScroll));
-  });
-
-  return <div class="relative group"><a href={props.href} class={`block relative font-ui lg-flex ${isScrolled() ? "c-paper-inv" : "c-paper"} text-center font-size-3.3 md:font-size-3.8 tracking-0.3 hover-c-brand font-500 transition-all after:content-empty after:absolute after:bottom-0 after:left-0 after:right-0 after:w-0 after:h-0.5 after:bg-brand after:transition-all group-hover:after:w-full`}>{props.children}</a></div>
 }
 
 const CurrentYear = () => {
@@ -349,91 +419,294 @@ function BackToTopArrow() {
   );
 }
 
-function GradientFooter() {
+function MainFooter() {
   return (
-    <div id="gradient-footer">
-      <div class="[background-color:#fcfcfc]">
-        <div class="
-					
-					relative 
-					h-[100vh] 
-					bg-gradient-to-b from-brand-yellow to-#db3985 
-					bg-[position:right_55%_top_100%] 
-					bg-no-repeat 
-					bg-cover 
-					[mask-image:linear-gradient(to_top,_rgba(252,252,252,1)_60%,_rgba(252,252,252,0.9)_70%,_rgba(252,252,252,0.5)_85%,_rgba(252,252,252,0)_100%)] 
-					[-webkit-mask-image:linear-gradient(to_top,_rgba(252,252,252,1)_60%,_rgba(252,252,252,0.9)_70%,_rgba(252,252,252,0.5)_85%,_rgba(252,252,252,0)_100%)]
-					"
-          role="img"
-          aria-label=""
-        >
+    <div id="gradient-footer" class="relative">
+      <footer class="relative px-6 pt-25 md:pt-35 pb-10 mt--0.2">
+        <div
+          class="absolute inset-0 bg-cover bg-center"
+          style={{
+            "background-image": "url('/assets/detsa-s-autizam/наблюдение-дете-аутизъм.webp')",
+          }}
+        ></div>
+        <div class="absolute inset-0 bg-pink-600/70"></div>
 
+        <div class="absolute top-0 left-0 w-full h-60 bg-gradient-to-t from-transparent to-white" />
+
+        <div
+          class="absolute top-0 left-0 w-full h-60
+          [mask-image:linear-gradient(to_bottom,
+            rgba(255,255,255,1) 0%,
+            rgba(255,255,255,1) 30%,
+            rgba(255,255,255,0) 100%)]
+          [-webkit-mask-image:linear-gradient(to_bottom,
+            rgba(255,255,255,1) 0%,
+            rgba(255,255,255,1) 30%,
+            rgba(255,255,255,0) 100%)]"
+        />
+
+        <div class="relative max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
+          <div class="md:hidden block">
+            <img src="/assets/sense_logo_heart_text.webp" class="w-50 mb-10" alt="sense-center-sofia-text-logo" />
+            <h2 class="c-paper important-leading-12 md:px-30 important-font-[MYRIADPRO-BOLDCOND] text-shadow-[4px_4px_10px_rgba(0,0,0,0.2)]">Център за деца с нарушения в развитието</h2>
+          </div>
+          <div class="mb-15 md:mb-20 h-450px md:h-350px md:px-25 py-10 md:p-0 w-full md:hidden block">
+            <GoogleMapIframe />
+            <p class="mt-0 text-center text-5 leading-11 important-font-[MYRIADPRO-SemiboldCond] uppercase c-paper text-shadow-[4px_4px_10px_rgba(0,0,0,0.2)]">Кв. Карпузица, бул. Никола Петков 95А</p>
+          </div>
+          <div>
+            <h3 class="text-center important-font-size-9 important-md:font-size-11 important-leading-10 important-md:leading-11 important-font-[MYRIADPRO-BOLDCOND] mb-7 md:mb-9 uppercase c-paper text-shadow-[4px_4px_10px_rgba(0,0,0,0.2)]">Най-популярните терапии</h3>
+            <ul class="flex flex-col gap-3 justify-center items-center">
+              <FooterMenuItem>Практически занимания за деца с аутизъм</FooterMenuItem>
+              <FooterMenuItem>Детски логопед</FooterMenuItem>
+              <FooterMenuItem>Детски психолог</FooterMenuItem>
+              <FooterMenuItem>Ерготерапия</FooterMenuItem>
+              <FooterMenuItem>Психомоторика</FooterMenuItem>
+            </ul>
+          </div>
+          <div class="hidden md:block">
+            <h3 class="text-center important-font-size-9 important-md:font-size-11 important-leading-10 important-md:leading-11 important-font-[MYRIADPRO-BOLDCOND] mb-7 md:mb-9 uppercase c-paper text-shadow-[4px_4px_10px_rgba(0,0,0,0.2)]">Полезни<br />връзки</h3>
+            <ul class="flex flex-col gap-3 justify-center items-center">
+              <FooterMenuItem>Цени</FooterMenuItem>
+              <FooterMenuItem>Контакти</FooterMenuItem>
+              <FooterMenuItem>Кариери</FooterMenuItem>
+              <FooterMenuItem>За нас</FooterMenuItem>
+            </ul>
+          </div>
+          <div class="mt-10 h-500px px-10 md:px-0 w-full hidden md:block">
+            <GoogleMapIframe />
+            <p class="mt-0 text-center text-5 leading-11 important-font-[MYRIADPRO-SemiboldCond] uppercase c-paper text-shadow-[4px_4px_10px_rgba(0,0,0,0.2)]">Кв. Карпузица, бул. Никола Петков 95А</p>
+          </div>
         </div>
-        <div class="flex flex-col justify-center items-center mx-auto relative w-full" style="">
-          <div class="z-99 md:mt--850px mt--730px">
-            <AnimatedComponent>
-              <h3 class="md:hidden block c-paper uppercase text-center important-mb-6">Свържете<br />се с нас</h3>
-              <h3 class="hidden md:block c-paper uppercase text-center pb-15">Свържете се с нас</h3>
-            </AnimatedComponent>
-            <AnimatedComponent class="flex md:flex-row flex-col justify-between items-between md:gap-70 gap-7 md:mb-30 mb-10 md:ml-0 ml--3">
-              <div class="flex flex-col gap-7 md:gap-15">
-                <div class="flex flex-row gap-5 justify-start items-center">
-                  <div class="mb--9 mt--9 mx--4.5 md:mx--6 bg-[position:right_55%_bottom_50%] bg-no-repeat bg-cover bg-[url(/assets/house-bg.svg)] w-25 h-25 md:w-38 md:h-38 flex justify-center items-center" >
-                    <img class="mx-0 pt-2 md:w-20 w-13" src="/assets/sense-logo-100px.webp" />
-                  </div>
-                  <div class="flex flex-col mt-3">
-                    <p class="c-paper my-0 font-300">Адрес:</p>
-                    <p class="c-paper my-0 font-500">Гр. София, кв. Карпузица</p>
-                    <p class="c-paper my-0 font-500">бул. Никола Петков 95А</p>
-                  </div>
+        <div class="w-full mt-20 md:mt-10 flex flex-col md:flex-row justify-center items-center">
+          <div class="flex gap-2 md:gap-4 text-8">
+            <a href="#" aria-label="Facebook" class="c-paper hover-c-brand-yellow transition-all">
+              <RiFacebookFill />
+            </a>
+            <a href="#" aria-label="Instagram" class="c-paper hover-c-brand-yellow transition-all">
+              <RiInstagramLine />
+            </a>
+          </div>
+        </div>
+      </footer>
+    </div>
+  );
+};
+
+function GoogleMapIframe() {
+  const mapSrc = `https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2934.749670548677!2d23.25135671550783!3d42.6696015791651!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40aa9be9899f1247%3A0x9c53f8ec4847cb64!2zU0VOU0Ug0L3QsNGD0YHRgtC-INCf0L7QvdC40LrQsA!5e0!3m2!1sen!2sbg!4v1719513278453!5m2!1sen!2sbg`;
+
+  return (
+    <iframe
+      src={mapSrc}
+      width="100%"
+      height="350"
+      style="border: 0; border-radius: 12px;"
+      loading="lazy"
+      referrerPolicy="no-referrer-when-downgrade"
+    ></iframe>
+  );
+}
+
+function FooterMenuItem(props: { href?: string, children?: JSX.Element }) {
+  return (
+    <div>
+      <a href={props.href} class="c-paper text-center font-size-4.5 md:font-size-4.8 tracking-0.3 transition-all cursor-pointer hover-c-brand-yellow uppercase font-[Myriad-Pro-Light-Condensed] text-shadow-[4px_4px_10px_rgba(0,0,0,0.4)]">
+        {props.children}
+      </a>
+    </div>
+  );
+}
+
+export type CookieConsent = "accepted" | "rejected" | "custom";
+
+export type CookieSettings = {
+  functional: boolean;
+  analytics: boolean;
+  advertising: boolean;
+  socialMedia: boolean;
+  personalization: boolean;
+  partner: boolean;
+};
+
+const COOKIE_KEY = "senscenter_cookie_consent";
+const SETTINGS_KEY = "senscenter_cookie_settings";
+
+const cookieCategories: Record<
+  string,
+  {
+    title: string;
+    description: string;
+    cookies: { name: string; source: string; duration: string; description: string }[];
+  }
+> = {
+  functional: {
+    title: "Функционални (задължителни)",
+    description: "Необходими за функционирането на сайта и не могат да бъдат деактивирани.",
+    cookies: [],
+  },
+  analytics: {
+    title: "Аналитични (GA4)",
+    description: "Помагат да разберем как посетителите използват сайта.",
+    cookies: [],
+  },
+  advertising: {
+    title: "Маркетингови (Ads & Pixel)",
+    description: "Използват се за показване на подходящи реклами.",
+    cookies: [],
+  },
+  socialMedia: {
+    title: "Социални медии",
+    description: "За интеграция на съдържание от социални мрежи.",
+    cookies: [],
+  },
+  personalization: {
+    title: "Персонализация",
+    description: "За персонализирано съдържание и препоръки.",
+    cookies: [],
+  },
+  partner: {
+    title: "Партньорски (трети страни)",
+    description: "Бисквитки от външни услуги и партньори.",
+    cookies: [],
+  },
+};
+
+const pushDataLayer = (data: Record<string, any>) => {
+  const w = window as typeof window & { dataLayer?: any[] };
+  if (!w.dataLayer) w.dataLayer = [];
+  w.dataLayer.push(data);
+};
+
+function CookieConsentModal() {
+  const [consent, setConsent] = createSignal<CookieConsent>("accepted");
+  const [showSettings, setShowSettings] = createSignal(false);
+
+  const [settings, setSettings] = createSignal<CookieSettings>({
+    functional: true,
+    analytics: true,
+    advertising: true,
+    socialMedia: false,
+    personalization: false,
+    partner: false,
+  });
+
+  const applyConsent = (value: CookieConsent) => {
+    const s = settings();
+    const data = {
+      event: "cookie_consent_update",
+      functional: true,
+      analytics: value === "rejected" ? false : s.analytics,
+      advertising: value === "rejected" ? false : s.advertising,
+      socialMedia: value === "rejected" ? false : s.socialMedia,
+      personalization: value === "rejected" ? false : s.personalization,
+      partner: value === "rejected" ? false : s.partner,
+    };
+    pushDataLayer(data);
+  };
+
+  onMount(() => {
+    const savedConsent = localStorage.getItem(COOKIE_KEY) as CookieConsent;
+    const savedSettings = localStorage.getItem(SETTINGS_KEY);
+
+    if (savedConsent) {
+      setConsent(savedConsent);
+      if (savedSettings) setSettings(JSON.parse(savedSettings));
+      applyConsent(savedConsent);
+    } else {
+      applyConsent("accepted");
+    }
+  });
+
+  const handleAcceptAll = () => {
+    setConsent("accepted");
+    const acceptedSettings = {
+      functional: true,
+      analytics: true,
+      advertising: true,
+      socialMedia: true,
+      personalization: true,
+      partner: true,
+    };
+    setSettings(acceptedSettings);
+    localStorage.setItem(COOKIE_KEY, "accepted");
+    localStorage.setItem(SETTINGS_KEY, JSON.stringify(acceptedSettings));
+    applyConsent("accepted");
+    setShowSettings(false);
+  };
+
+  const handleRejectAll = () => {
+    setConsent("rejected");
+    const rejectedSettings = {
+      functional: true,
+      analytics: false,
+      advertising: false,
+      socialMedia: false,
+      personalization: false,
+      partner: false,
+    };
+    setSettings(rejectedSettings);
+    localStorage.setItem(COOKIE_KEY, "rejected");
+    localStorage.setItem(SETTINGS_KEY, JSON.stringify(rejectedSettings));
+    applyConsent("rejected");
+    setShowSettings(false);
+  };
+
+  const handleSaveSettings = () => {
+    setConsent("custom");
+    localStorage.setItem(COOKIE_KEY, "custom");
+    localStorage.setItem(SETTINGS_KEY, JSON.stringify(settings()));
+    applyConsent("accepted");
+    setShowSettings(false);
+  };
+
+  const toggleSetting = (key: keyof CookieSettings) => {
+    if (key === "functional" || key === "analytics" || key === "advertising") return;
+    setSettings((prev) => ({ ...prev, [key]: !prev[key] }));
+  };
+
+  return (
+    <>
+      <button
+        class="fixed bottom-3 left-3 text-white p-3 b-none bg-transparent z-50"
+        title="Управление на бисквитки"
+        onClick={() => setShowSettings(true)}
+      >
+        <img src="/assets/home/cookie.png" class="w-10 h-10 cursor-pointer" />
+      </button>
+      <Show when={showSettings()}>
+        <div class="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50 p-4">
+          <div class="bg-white rounded-2 shadow-lg w-full max-w-2xl max-h-[90vh] overflow-y-auto py-6 px-6 md:px-8">
+            <h2 class="important-text-8 important-md:text-12 important-leading-10 mb-4 c-brand">Настройки на бисквитки</h2>
+            <div class="space-y-4 py-4">
+              {Object.entries(cookieCategories).map(([key, cat]) => (
+                <div>
+                  <label class="flex items-center gap-2">
+                    {(key === "functional" || key === "analytics" || key === "advertising") ? (
+                      <input type="checkbox" checked disabled class="h-4 w-4" />
+                    ) : (
+                      <input
+                        type="checkbox"
+                        checked={settings()[key as keyof CookieSettings]}
+                        onChange={() => toggleSetting(key as keyof CookieSettings)}
+                        class="h-4 w-4"
+                      />
+                    )}
+                    <span class="font-medium">{cat.title}</span>
+                  </label>
+                  <p class="text-sm text-gray-600 ml-6">{cat.description}</p>
                 </div>
-                <div class="flex flex-row gap-5 justify-start items-center">
-                  <div class="md:w-25 md:h-25 w-15 h-15 flex justify-center items-center bg-paper b-rd-12px">
-                    <MdiPhone class="c-brand md:font-size-12 font-size-9" />
-                  </div>
-                  <div class="flex flex-col">
-                    <p class="c-paper my-0 font-300">Телефон:</p>
-                    <p class="c-paper my-0 font-500">+359 879 800 013</p>
-                    <p class="c-paper my-0 font-500">+359 877 800 770</p>
-                  </div>
-                </div>
-              </div>
-              <div class="flex flex-col gap-7 md:gap-15">
-                <div class="flex flex-row gap-5 justify-start items-center">
-                  <div class="md:w-25 md:h-25 w-15 h-15 flex justify-center items-center bg-paper b-rd-12px">
-                    <MdiEmail class="c-brand-blue md:font-size-12 font-size-9" />
-                  </div>
-                  <div class="flex flex-col">
-                    <p class="c-paper my-0 font-300">Имейл:</p>
-                    <p class="c-paper my-0 font-500">+359 879 800 013</p>
-                    <p class="c-paper my-0 font-500">+359 877 800 770</p>
-                  </div>
-                </div>
-                <div class="flex flex-row gap-5 justify-start items-center">
-                  <div class="md:w-25 md:h-25 w-15 h-15 flex justify-center items-center bg-paper b-rd-12px">
-                    <MdiClockTimeTwo class="c-brand-purple md:font-size-12 font-size-9" />
-                  </div>
-                  <div class="flex flex-col">
-                    <p class="c-paper my-0 font-500">Пн - Пт: 09:00 - 20:00</p>
-                    <p class="c-paper my-0 font-500">Събота: 09:00 - 12:00</p>
-                    <p class="c-paper my-0 font-500">Неделя: Почивен ден</p>
-                  </div>
-                </div>
-              </div>
-            </AnimatedComponent>
-            <div>
-              <PuzzleButton />
-              <PuzzleButton2
-                class="important-bg-brand-yellow important-hover:bg-brand-yellow-hover important-mt-15px"
-                style2="margin-left:-25px !important; font-weight:500; font-size:17px !important;"
-                img="/assets/sense-yellow-puzzle-piece.svg"
-                href=""
-                text="Услуги"
-              />
+              ))}
+            </div>
+            <div class="flex justify-end justify-center md:justify-end flex-wrap gap-2 mt-2 md:mt-8 mb-2">
+              <button class="b-rd-5px b-solid b-2px b-gray-400 c-gray-500 cursor-pointer px-5 py-2.5 md:px-5 md:py-3 font-size-11px important-font-size-13px bg-transparent hover:bg-gray-400 hover-c-paper transition-all font-[MYRIADPRO-Semibold] uppercase tracking-0.15" onClick={() => setShowSettings(false)}>Затвори</button>
+              <button class="b-rd-5px b-solid b-2px b-brand-blue c-brand-blue cursor-pointer px-5 py-2.5 md:px-5 md:py-3 font-size-11px important-font-size-13px bg-transparent hover:bg-brand-blue hover-c-paper transition-all font-[MYRIADPRO-Semibold] uppercase tracking-0.15" onClick={handleRejectAll}>Отказвам</button>
+              <button class="b-rd-5px b-solid b-2px b-brand-purple c-brand-purple cursor-pointer px-5 py-2.5 md:px-5 md:py-3 font-size-11px important-font-size-13px bg-transparent hover:bg-brand-purple hover-c-paper transition-all font-[MYRIADPRO-Semibold] uppercase tracking-0.15" onClick={handleSaveSettings}>Запази</button>
+              <button class="b-rd-5px b-solid b-2px b-brand hover-c-brand cursor-pointer px-5 py-2.5 md:px-5 md:py-3 font-size-11px important-font-size-13px hover-bg-transparent bg-brand c-paper transition-all font-[MYRIADPRO-Semibold] uppercase tracking-0.15" onClick={handleAcceptAll}>Приемам всички</button>
             </div>
           </div>
         </div>
-      </div>
-    </div>
-  )
+      </Show>
+    </>
+  );
 }

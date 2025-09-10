@@ -1,24 +1,53 @@
+import { createSignal, onCleanup, onMount } from "solid-js";
+
 export const VideoHero = (props: {
-  youtubeId: string;
+  class?: string;
+  youtubeId?: string;
+  videoSrc?: string;
+  videoSrcMobile?: string;
   gifPreview: string;
   gifPreviewMobile: string;
   isPlaying: boolean;
   onPlay: () => void;
 }) => {
+  const isYouTube = !!props.youtubeId;
+  const [isMobile, setIsMobile] = createSignal(false);
+
+  onMount(() => {
+    const mq = window.matchMedia("(max-width: 768px)");
+    setIsMobile(mq.matches);
+
+    const handler = (e: MediaQueryListEvent) => setIsMobile(e.matches);
+    mq.addEventListener("change", handler);
+
+    onCleanup(() => mq.removeEventListener("change", handler));
+  });
+
   return (
     <div
       class="relative w-full h-100vh important-rounded-[0px] overflow-hidden"
       onClick={props.onPlay}
     >
       {props.isPlaying ? (
-        <div class="relative w-full aspect-[16/9] b-none sm:h-full sm:aspect-auto z-10 bg-white md:mt-0px mt-100px">
-          <iframe
-            class="absolute top-0 left-0 w-full h-full b-none"
-            src={`https://www.youtube.com/embed/${props.youtubeId}?autoplay=1&modestbranding=1&rel=0`}
-            title="YouTube video player"
-            allow="autoplay; fullscreen; encrypted-media"
-            allowfullscreen
-          />
+        <div class={`relative w-full aspect-[16/9] b-none sm:h-full sm:aspect-auto z-10 bg-black md:mt-0px mt-100px ${props.class ?? ''}`}>
+          {isYouTube ? (
+            <iframe
+              class="absolute top-0 left-0 w-full h-full b-none"
+              src={`https://www.youtube.com/embed/${props.youtubeId}?autoplay=1&modestbranding=1&rel=0`}
+              title="YouTube video player"
+              allow="autoplay; fullscreen; encrypted-media"
+              allowfullscreen
+            />
+          ) : (
+            <video
+              class="absolute top-0 left-0 w-full h-full object-cover"
+              src={isMobile() ? props.videoSrcMobile : props.videoSrc}
+              autoplay
+              muted={false}
+              controls
+              playsinline
+            />
+          )}
         </div>
       ) : (
         <button
@@ -31,21 +60,8 @@ export const VideoHero = (props: {
         >
           <div class="absolute inset-0 bg-white z-0" />
           <video
-            src={props.gifPreview}
-            class="hidden md:block w-full h-full object-cover z-10 relative important-rounded-[0px]"
-            autoplay
-            muted
-            loop
-            playsinline
-            preload="auto"
-            style={`
-              -webkit-mask-image: linear-gradient(to bottom, white 80%, transparent 100%);
-              mask-image: linear-gradient(to bottom, white 80%, transparent 100%);
-            `}
-          />
-          <video
-            src={props.gifPreviewMobile}
-            class="block md:hidden w-full h-full object-cover z-10 relative important-rounded-[0px]"
+            src={isMobile() ? props.gifPreviewMobile : props.gifPreview}
+            class="w-full h-full object-cover z-10 relative important-rounded-[0px]"
             autoplay
             muted
             loop
@@ -68,26 +84,6 @@ export const VideoHero = (props: {
           </div>
         </button>
       )}
-    </div>
-  );
-};
-
-export const GifHero = (props: { gifPreview: string; }) => {
-  return (
-    <div class="relative w-full h-100vh important-rounded-[0px] overflow-hidden">
-      <video
-        src={props.gifPreview}
-        class="w-full h-full object-cover z-10 relative important-rounded-[0px]"
-        autoplay
-        muted
-        loop
-        playsinline
-        preload="auto"
-        style={`
-              -webkit-mask-image: linear-gradient(to bottom, white 80%, transparent 100%);
-              mask-image: linear-gradient(to bottom, white 80%, transparent 100%);
-            `}
-      />
     </div>
   );
 };

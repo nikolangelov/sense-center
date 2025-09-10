@@ -86,15 +86,15 @@ export const ContainerSlider = (props: { reviews: { name: string }[]; children: 
     );
 };
 
-export function ContainerBox(props: { title: string; text: string; img: string; style: string; link: string; style2?: string; class2?: string; alt: string; }) {
+export function ContainerBox(props: { title: string; text: string; img: string; style: string; style2?: string; class2?: string; alt: string; }) {
     return (
-        <a class="mt-0 m-auto b-rd-12px md:py-10 md:px-6 py-7 px-5 flex flex-col h-full justify-between items-between" style={props.style} target="_blank" rel="noopener" href={props.link}>
+        <div class="mt-0 m-auto b-rd-12px md:py-10 md:px-5 py-7 px-5 flex flex-col h-full justify-between items-between" style={props.style}>
             <div class={`xl:h-48 lg:h-45 md:h-50 sm:h-30 h-48 ${props.class2 ?? ''}`}>
-                <h4 class="text-left c-paper font-600 my-0 important-leading-7.2">{props.title}</h4>
-                <p class="c-paper lg:leading-6 leading-5.5">{props.text}</p>
+                <h4 class="important-font-size-24px important-leading-7 text-left c-paper my-0">{props.title}</h4>
+                <p class="c-paper lg:leading-5.6 leading-5.5 important-md:font-size-17px important-font-size-15px">{props.text}</p>
             </div>
             <img src={props.img} alt={props.alt} class="w-full" style={props.style2} />
-        </a>
+        </div>
     );
 }
 
@@ -107,12 +107,14 @@ export function ReviewPuzzlePiece(props: { title: string; puzzleclass: string; d
                     style={props.style}
                 >
                     <div class="flex justify-between items-center gap-3 mb-2">
-                        <div class="c-paper uppercase italic font-size-4.5 leading-6 font-500 flex items-center">
+                        <div class="c-paper uppercase italic font-size-4.5 leading-6 font-[MYRIADPRO-Bold] flex items-center">
                             {props.title}
                         </div>
-                        <MdiPuzzle class={props.puzzleclass} style="width:35px; height:35px;" />
+                        <div>
+                            <MdiPuzzle class={props.puzzleclass} style="width:30px; height:30px;" />
+                        </div>
                     </div>
-                    <p class="c-paper font-size-14px leading-6.5 mb-0">{props.desc}</p>
+                    <p class="c-paper font-size-14px leading-6.3 mb-0">{props.desc}</p>
                     <p class="c-paper font-300 font-size-14px leading-6.5 mb-0 ">{props.name}</p>
                     <p class="c-paper font-300 font-size-14px leading-6.5 my-0">{props.condition}</p>
                 </div>

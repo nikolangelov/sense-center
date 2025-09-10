@@ -362,10 +362,10 @@ export function GoogleStarReview(props: { stars: number; hrefGoogleReview: strin
     );
 }
 
-export function PuzzleIconReview(props: { href: string; alt: string; title: string; img: string; desc: string; puzzleclass: string; style: string; class?: string; }) {
+export function PuzzleIconReview(props: { alt: string; title: string; img: string; desc: string; puzzleclass: string; style: string; class?: string; }) {
     return (
         <div class={`h-520px md:h-700px lg:h-520px ${props.class}`}>
-            <a href={props.href} class="flex flex-col h-full overflow-hidden rounded-[10px]">
+            <div class="flex flex-col h-full overflow-hidden rounded-[10px]">
                 <div>
                     <img
                         src={props.img}
@@ -374,18 +374,20 @@ export function PuzzleIconReview(props: { href: string; alt: string; title: stri
                     />
                 </div>
                 <div
-                    class="flex flex-col justify-start flex-grow px-5 pt-6.5 pb-15 rounded-bl-10px rounded-br-10px"
+                    class="flex flex-col justify-start flex-grow px-7 pt-6 pb-15 rounded-bl-10px rounded-br-10px"
                     style={props.style}
                 >
                     <div class="flex items-center gap-3 mb-2">
-                        <div class="c-paper font-size-4.5 leading-6 flex items-center">
-                            <MdiPuzzle class={props.puzzleclass} />
+                        <div class="c-paper font-size-4.5 leading-6 flex items-center important-leading-5">
+                            <div>
+                                <MdiPuzzle class={`mt-1.5 w-6 h-6 ${props.puzzleclass}`} />
+                            </div>
                             {props.title}
                         </div>
                     </div>
-                    <p class="c-paper font-size-14px leading-6.5 mb-0 pb-3">{props.desc}</p>
+                    <p class="c-paper font-size-18px leading-6.5 mb-0 pb-3 font-[MYRIADPRO-Light]">{props.desc}</p>
                 </div>
-            </a>
+            </div>
         </div>
     );
 }

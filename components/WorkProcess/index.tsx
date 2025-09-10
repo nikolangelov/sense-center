@@ -11,7 +11,7 @@ interface Step {
 const steps: Step[] = [
     {
         id: 1,
-        title: <>ОРГАНИЗИРАМЕ<br />ПЪРВИЧНА оценка</>,
+        title: <>ОРГАНИЗИРАМЕ<br />първоначална консултация</>,
         color: "bg-brand-blue/70",
         image: "/assets/home/семейство-на-дете-с-нарушения-в-развитието.webp",
     },

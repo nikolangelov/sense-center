@@ -12,10 +12,10 @@ export function ServiceContaner(props: { title: string, img: string, alt: string
 					</div>
 					<div class="w-full py-20px text-center md:px-2">
 						<div class="flex flex-col gap-1">
-							<h4 class="relative font-size-20px important-line-height-7.5 my-0 pt-3 pb-0 text-left">
+							<h4 class="relative font-size-24px important-line-height-7.5 my-0 pt-3 pb-0 text-left important-font-[MYRIADPRO-Semibold]">
 								{props.title}
 							</h4>
-							<p class="text-left font-size-15px leading-7 mt-2">
+							<p class="text-left font-size-15px leading-6.5 mt-2">
 								{props.description}
 							</p>
 						</div>
