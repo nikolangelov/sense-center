@@ -1,5 +1,5 @@
 import "solid-slider/slider.css";
-import { AuthorContainer, GoogleStarReview, PuzzleIconReview, ReviewersImageReview, ReviewSlider, StarReview } from '../../components/ReviewSlider';
+import { AuthorContainer, GoogleStarReview, PuzzleIconReview, ReviewersImageReview, ReviewSlider, ReviewSlider2, StarReview } from '../../components/ReviewSlider';
 import { AnimatedComponent } from '../../components/AnimateOnView';
 import { H2Echo, H3Blue, H3Pink } from '../../components/H2WithImage';
 import { ServiceContaner } from '../../components/ServiceContainer';
@@ -9,7 +9,6 @@ import { GallerySlider2 } from "../../components/GallerySlider";
 import { DoodleDecor } from "../../components/BackgroundDecor";
 import { BackgroundIcons } from "../../components/BackgroundIcons";
 import { WorkProcess } from "../../components/WorkProcess";
-import { GradientFooter } from "../../components/GradientFooter";
 
 export default function Page() {
 	return (
@@ -55,11 +54,6 @@ export default function Page() {
 									<div class="mx--20px">
 										<img src="/assets/umstvena-izostanalost/психично-развитие-обучение-деца-умствена-изостаналост.webp" alt="Pсихично развитие и обучение на деца с умствена изостаналост." class="important-b-rd-0 important-md:b-rd-12px w-full h-auto object-cover shadow" />
 									</div>
-									<div class="flex flex-col items-center gap-1 relative md:hidden">
-										<h2 class="text-transparent bg-clip-text bg-[url(/assets/umstvena-izostanalost/психично-развитие-обучение-деца-умствена-изостаналост.webp)] bg-cover bg-center opacity-8 scale-30 md:scale-50" style="background-position: right 0% top 0%;">
-											изостаналост
-										</h2>
-									</div>
 								</div>
 							</div>
 						</div>
@@ -68,7 +62,7 @@ export default function Page() {
 
 				<section class="md:w-1/2">
 					<AnimatedComponent class="w-full md:px-3 my-auto">
-						<p class="mt-1">
+						<p class="mt-10 md:mt-0">
 							Умствената изостаналост е състояние, при което интелектуалното функциониране е значително под средното ниво. Децата с умствена изостаналост изпитват трудности при изпълнението на ежедневни дейности като общуване, грижа за себе си, учене и социални взаимодействия, може да бъде причинено от различни генетични или биологични фактори.
 						</p>
 					</AnimatedComponent>
@@ -242,7 +236,7 @@ export default function Page() {
 
 				<AnimatedComponent class="max-w-1500px mx-auto">
 					<p>Наличието на тези признаци може да бъде индикация, но не е категорично доказателство за умствена изостаналост. В случай, че ги забележите при Вашето дете Ви препоръчваме да се консултирате със специалист.</p>
-					<div class="flex flex-col justify-center items-start b-rd-12px bg-gradient-to-b from-brand-yellow to-brand px-6 md:px-10 py-2 pd:py-4">
+					<div class="flex flex-col justify-center items-start b-rd-12px bg-gradient-to-b from-brand-yellow to-brand max-w-800px mx-auto px-6 md:px-10 py-2 pd:py-4">
 						<div class="flex justify-center items-center gap-4">
 							<img src="/assets/exclamation-mark-icon.webp" class="w-10 h-10" />
 							<p class="font-[MYRIADPRO-Semibold] c-paper uppercase font-size-17px lg:font-size-21px">80-90% от мозъка на детето се развива до 7-годишна възраст</p>
@@ -265,21 +259,18 @@ export default function Page() {
 					<H3Pink title="Какво следва, ако не предприемем действие" />
 					<div class="flex flex-col lg:flex-row justify-center gap-10 xl:gap-20">
 						<ServiceContaner
-							link=""
 							img="/assets/umstvena-izostanalost/дете-умствена-изостаналост_.webp"
 							alt="Дете с умствена изостаналост."
 							title="Ограничено когнитивно развитие"
 							description="Без подходяща терапия, умствената изостаналост може да доведе до значителни трудности в развитието на когнитивните способности. Детето може да среща постоянни препятствия в усвояването на основни концепции, които са важни за ежедневието и образованието."
 						/>
 						<ServiceContaner
-							link=""
 							img="/assets/umstvena-izostanalost/социална-изолация-трудности-комуникацията.webp"
 							alt="Социална изолация и трудности в комуникацията при дете с умствена изостаналост."
 							title="Социална изолация и трудности в комуникацията"
 							description="Децата с умствена изостаналост често изпитват затруднения в социалните взаимодействия. Липсата на подкрепа може да доведе до чувство за изолация, особено ако детето не може ефективно да общува с връстниците си. Това може да затрудни създаването на приятелства и участието в групови дейности."
 						/>
 						<ServiceContaner
-							link=""
 							img="/assets/umstvena-izostanalost/поведение-деца-умствена-изостаналост.webp"
 							alt="Поведение на деца с умствена изостаналост."
 							title="Ниско самочувствие и емоционални проблеми"
@@ -311,13 +302,8 @@ export default function Page() {
 					<AnimatedComponent class="md:w-1/2">
 						<img src="/assets/umstvena-izostanalost/разпознаване-деца-лека-умствена-изостаналост.webp" alt="Правилно разпознаване на деца с лека умствена изостаналост." class="w-full h-auto object-cover rounded shadow" />
 					</AnimatedComponent>
-					<AnimatedComponent class="flex flex-col items-center gap-1 relative mb-2 md:hidden">
-						<h2 class="text-transparent bg-clip-text bg-[url(/assets/umstvena-izostanalost/разпознаване-деца-лека-умствена-изостаналост.webp)] bg-cover bg-center opacity-8 scale-30 md:scale-50" style="background-position: right 0% top 0%;">
-							разпознаване
-						</h2>
-					</AnimatedComponent>
 
-					<div class="md:hidden block">
+					<div class="md:hidden block pt-15">
 						<DoodleDecor variant="purple" />
 					</div>
 
@@ -338,30 +324,33 @@ export default function Page() {
 
 			<section class="relative md:pb-30 xl:px-30 mx-20px">
 				<H3Blue title="Първична оценка при съмнение за умствена изостаналост" />
-				<div class="flex flex-col justify-center items-center max-w-1500px mx-auto px-20px xl:px-30">
-					<AnimatedComponent class="max-w-1500px px-5 md:px-20 md:py-10 py-5 bg-gradient-to-t from-brand-yellow to-brand b-rd-12px flex flex-col">
-						<p class="c-paper mb-1">
-							В Sense център за деца и младежи с умствена изостаналост предлагаме първична оценка при съмнение за умствена изостаналост при деца.
-						</p>
-						<p class="c-paper">
-							По време на консултацията се извършва анализ на психичното развитие и обучението на деца с умствена изостаналост.
-						</p>
-						<img src="/assets/home/наблюдение-на-дете-с-нарушения-в-развитието.webp" alt="Първична оценка при съмнение за умствена изостаналост." class="my-5 w-full h-auto object-cover rounded shadow" />
-						<p class="c-paper mb-1">
-							Специалистите оценяват уменията му за справяне с ежедневни задачи, способностите му за учене, социализация и адаптация.
-						</p>
-						<p class="c-paper">
-							Едновременно с това се провежда интервю с родителите, за да се съберат наблюдения относно развитието на детето и предизвикателствата, с които то се сблъсква. Целта на този процес е да се разберат индивидуалните нужди и да се определят най-подходящите стъпки за подкрепа на развитието.
-						</p>
-						<img src="/assets/home/семейство-на-дете-с-нарушения-в-развитието.webp" alt="Резултат от първична оценка при съмнение за умствена изостаналост." class="mt-5 w-full h-auto object-cover rounded shadow" />
-						<p class="c-paper italic font-300 mt-1 op-90%" style="font-family: 'Oswald', sans-serif !important; letter-spacing: 1px;">
-							Препоръчително е да донесете всички налични медицински документи, които могат да бъдат от полза за изясняване на актуалното състояние.</p>
-						<div class="pt-10 flex md:flex-row flex-col justify-center items-center gap-2">
-							<PuzzleButton />
-							<PuzzleButton2
-								href=""
-								text="+ 359 879 800 013"
-							/>
+				<div class="flex flex-col justify-center items-center mx-auto px-20px xl:px-30">
+					<AnimatedComponent class="max-w-1500px px-5 md:px-20 md:pb-10 md:pt-4 py-5 md:bg-gradient-to-t lg:from-paper lg:to-paper bg-gradient-to-t from-brand-yellow to-brand b-rd-12px flex flex-col">
+						<div class="flex flex-col lg:flex-row-reverse justify-center items-center gap-8">
+							<div class="xl:w-1/2 w-full md:pl-7">
+								<p class="c-paper lg:c-paper-inv mb-1">
+									В Sense център за деца и младежи с умствена изостаналост предлагаме <strong class="font-[MYRIADPRO-Bold]">първична оценка</strong> при съмнение за умствена изостаналост при деца.
+								</p>
+								<p class="c-paper lg:c-paper-inv">
+									По време на консултацията се извършва анализ на психичното развитие и обучението на деца с умствена изостаналост.
+								</p>
+								<img src="/assets/home/наблюдение-на-дете-с-нарушения-в-развитието.webp" alt="Първична оценка при съмнение за умствена изостаналост." class="lg:hidden my-5 w-full h-auto object-cover rounded shadow" />
+								<p class="c-paper lg:c-paper-inv mb-1">
+									Специалистите оценяват уменията му за справяне с ежедневни задачи, способностите му за учене, социализация и адаптация.
+								</p>
+								<p class="c-paper lg:c-paper-inv">
+									Едновременно с това се провежда интервю с родителите, за да се съберат наблюдения относно развитието на детето и предизвикателствата, с които то се сблъсква. Целта на този процес е да се разберат индивидуалните нужди и да се определят най-подходящите стъпки за подкрепа на развитието.
+								</p>
+								<div class="pt-8 flex md:flex-row flex-col justify-center items-center">
+									<PuzzleButton />
+								</div>
+							</div>
+							<div class="xl:w-1/2 w-full">
+								<img src="/assets/home/семейство-на-дете-с-нарушения-в-развитието.webp" alt="Първична оценка при съмнение за умствена изостаналост." class="mt-5 w-full h-auto object-cover rounded shadow" />
+								<p class="c-paper lg:c-paper-inv italic font-300 mt-2 leading-5 lg:leading-6" style="font-family: 'Oswald', sans-serif !important; letter-spacing: 1px;">
+									Препоръчително е да донесете всички налични медицински документи, които могат да бъдат от полза за изясняване на актуалното състояние.
+								</p>
+							</div>
 						</div>
 					</AnimatedComponent>
 				</div>
@@ -478,18 +467,13 @@ export default function Page() {
 										<div class="mx--20px">
 											<img src="/assets/umstvena-izostanalost/поведение-дете-умствена-изостаналост.webp" alt="Поведение на дете с умствена изостаналост." class="important-b-rd-0 important-md:b-rd-12px w-full h-auto object-cover shadow" />
 										</div>
-										<div class="flex flex-col items-center gap-1 relative md:hidden">
-											<h2 class="text-transparent bg-clip-text bg-[url(/assets/umstvena-izostanalost/поведение-дете-умствена-изостаналост.webp)] bg-cover bg-center opacity-8 scale-30 md:scale-50" style="background-position: right 0% top 0%;">
-												терапия
-											</h2>
-										</div>
 									</div>
 								</div>
 							</div>
 						</AnimatedComponent>
 					</section>
 
-					<section class="md:w-1/2 pt-10 md:pt-0">
+					<section class="md:w-1/2 pt-25 md:pt-0">
 						<AnimatedComponent class="w-full md:px-3 my-auto flex flex-col justify-center items-center w-full md:pl-7 md:pr-0 px-3 mt--10 z-10">
 							<H3Blue title="Какво можем да очакваме" />
 							<div class="relative mt--10">
@@ -512,54 +496,73 @@ export default function Page() {
 				<div class="xl:px-60 mx-auto md:pt-0 pt-10">
 					<H3Pink title="Някои от най-ефективните терапии" />
 					<div class="flex md:flex-row flex-col flex-wrap gap-5 md:gap-0 justify-center items-center">
-						<AuthorContainer
-							href=""
-							style="background:linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0.5)),url(/assets/sindrom-na-daun/звукова-стимулация.webp); background-position: right 50% bottom 85% !important; background-repeat: no-repeat; background-size: cover;"
-							name="Звукова стимулация"
-							description="Подпомага сензорната и слуховата обработка, намалява тревожността и хиперактивността и стимулира езиковото развитие"
-						/>
-						<AuthorContainer
-							href=""
-							style="background:linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0.6)),url(/assets/home/детски-логопед.webp); background-position: right 50% bottom 85% !important; background-repeat: no-repeat; background-size: cover;"
-							name="Детски логопед"
-							description="Терапията подобрява разбирането и изпълнението на команди, формирането на самостоятелни изречения и умението за водене на диалог"
-						/>
-						<AuthorContainer
-							href=""
-							style="background:linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0.5)),url(/assets/sindrom-na-daun/многофункционална-стая.webp); background-position: right 50% bottom 85% !important; background-repeat: no-repeat; background-size: cover;"
-							name="Многофункционална стая"
-							description="Стимулира имитационни умения, подпомага изпълнението на инструкции, развива фината моторика"
-						/>
-						<AuthorContainer
-							href=""
-							style="background:linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.5)),url(/assets/sindrom-na-daun/ерготерапия-деца.webp); background-position: right 50% bottom 85% !important; background-repeat: no-repeat; background-size: cover;"
-							name="Ерготерапия"
-							description="Подобрява координацията и прецизността на ръцете и пръстите, което е ключово за писане, рисуване и работа с малки предмети"
-						/>
-						<AuthorContainer
-							href=""
-							style="background:linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0.5)),url(/assets/sindrom-na-daun/психомоторика.webp); background-position: right 50% bottom 85% !important; background-repeat: no-repeat; background-size: cover;"
-							name="Психомоторика"
-							description="Подобрява контрола при ходене, бягане и скачане, както и координацията на ръцете и пръстите за по-прецизно писане и рисуване"
-						/>
-						<AuthorContainer
-							href=""
-							style="background:linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.6)),url(/assets/umstvena-izostanalost/обучение-концентрация-внимание-деца.webp); background-position: right 50% bottom 85% !important; background-repeat: no-repeat; background-size: cover;"
-							name="Обучение за концентрация и внимание"
-							description="Помага на детето с фокусирането и запаметяването, като го учи да задържа вниманието си по-дълго и да следва инструкции"
-						/>
-						<AuthorContainer
-							href=""
-							style="background:linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0.5)),url(/assets/testing-image.jpg); background-position: right 50% bottom 85% !important; background-repeat: no-repeat; background-size: cover;"
-							name="Консултация с хомеопат"
-							description="Подпомага цялостното здраве и емоционално равновесие на детето, като подкрепя организма по естествен начин и допринася за по-добро ежедневно функциониране"
-						/>
-						<AuthorContainer
-							href=""
-							style="background:linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.6)),url(/assets/testing-image.jpg); background-position: right 50% bottom 85% !important; background-repeat: no-repeat; background-size: cover;"
-							name="Игрова терапия"
-							description="Подобрява емоционалната регулация, развива социални, когнитивни и двигателни умения и намалява тревожността в сигурна и подкрепяща среда"
-						/>
+						<div class="gap-12 md:pt-5 pb-5 md:pb-0">
+							<div class="">
+								<ReviewSlider2
+									variant="dots0"
+									reviews={[
+										{ name: "1" },
+										{ name: "2" },
+										{ name: "3" },
+										{ name: "4" },
+										{ name: "5" },
+										{ name: "6" },
+										{ name: "7" },
+										{ name: "8" },
+
+									]}
+								>
+									<AuthorContainer
+										href=""
+										style="background:linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0.5)),url(/assets/sindrom-na-daun/звукова-стимулация.webp); background-position: right 50% bottom 85% !important; background-repeat: no-repeat; background-size: cover;"
+										name="Звукова стимулация"
+										description="Подпомага сензорната и слуховата обработка, намалява тревожността и хиперактивността и стимулира езиковото развитие"
+									/>
+									<AuthorContainer
+										href=""
+										style="background:linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0.6)),url(/assets/home/детски-логопед.webp); background-position: right 50% bottom 85% !important; background-repeat: no-repeat; background-size: cover;"
+										name="Детски логопед"
+										description="Терапията подобрява разбирането и изпълнението на команди, формирането на самостоятелни изречения и умението за водене на диалог"
+									/>
+									<AuthorContainer
+										href=""
+										style="background:linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0.5)),url(/assets/sindrom-na-daun/многофункционална-стая.webp); background-position: right 50% bottom 85% !important; background-repeat: no-repeat; background-size: cover;"
+										name="Многофункционална стая"
+										description="Стимулира имитационни умения, подпомага изпълнението на инструкции, развива фината моторика"
+									/>
+									<AuthorContainer
+										href=""
+										style="background:linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.5)),url(/assets/sindrom-na-daun/ерготерапия-деца.webp); background-position: right 50% bottom 85% !important; background-repeat: no-repeat; background-size: cover;"
+										name="Ерготерапия"
+										description="Подобрява координацията и прецизността на ръцете и пръстите, което е ключово за писане, рисуване и работа с малки предмети"
+									/>
+									<AuthorContainer
+										href=""
+										style="background:linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0.5)),url(/assets/sindrom-na-daun/психомоторика.webp); background-position: right 50% bottom 85% !important; background-repeat: no-repeat; background-size: cover;"
+										name="Психомоторика"
+										description="Подобрява контрола при ходене, бягане и скачане, както и координацията на ръцете и пръстите за по-прецизно писане и рисуване"
+									/>
+									<AuthorContainer
+										href=""
+										style="background:linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.6)),url(/assets/umstvena-izostanalost/обучение-концентрация-внимание-деца.webp); background-position: right 50% bottom 85% !important; background-repeat: no-repeat; background-size: cover;"
+										name="Обучение за концентрация и внимание"
+										description="Помага на детето с фокусирането и запаметяването, като го учи да задържа вниманието си по-дълго и да следва инструкции"
+									/>
+									<AuthorContainer
+										href=""
+										style="background:linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0.5)),url(/assets/testing-image.jpg); background-position: right 50% bottom 85% !important; background-repeat: no-repeat; background-size: cover;"
+										name="Консултация с хомеопат"
+										description="Подпомага цялостното здраве и емоционално равновесие на детето, като подкрепя организма по естествен начин и допринася за по-добро ежедневно функциониране"
+									/>
+									<AuthorContainer
+										href=""
+										style="background:linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.6)),url(/assets/testing-image.jpg); background-position: right 50% bottom 85% !important; background-repeat: no-repeat; background-size: cover;"
+										name="Игрова терапия"
+										description="Подобрява емоционалната регулация, развива социални, когнитивни и двигателни умения и намалява тревожността в сигурна и подкрепяща среда"
+									/>
+								</ReviewSlider2>
+							</div>
+						</div>
 					</div>
 				</div>
 
@@ -863,7 +866,6 @@ export default function Page() {
 					</section>
 				</div>
 			</section>
-			<GradientFooter />
 		</>
 	);
 }

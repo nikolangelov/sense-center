@@ -29,10 +29,10 @@ export const VideoHero = (props: {
       onClick={props.onPlay}
     >
       {props.isPlaying ? (
-        <div class={`relative w-full aspect-[16/9] b-none sm:h-full sm:aspect-auto z-10 bg-black md:mt-0px mt-100px ${props.class ?? ''}`}>
+        <div class={`relative w-full aspect-[16/9] b-none sm:h-full sm:aspect-auto z-10 bg-black md:mt-0px md:mt-100px ${props.class ?? ''}`}>
           {isYouTube ? (
             <iframe
-              class="absolute top-0 left-0 w-full h-full b-none"
+              class="absolute top-0 top-16 left-0 w-full h-full b-none"
               src={`https://www.youtube.com/embed/${props.youtubeId}?autoplay=1&modestbranding=1&rel=0`}
               title="YouTube video player"
               allow="autoplay; fullscreen; encrypted-media"

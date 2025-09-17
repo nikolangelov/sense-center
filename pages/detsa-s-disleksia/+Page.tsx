@@ -1,5 +1,5 @@
 import "solid-slider/slider.css";
-import { AuthorContainer, GoogleStarReview, PuzzleIconReview, ReviewersImageReview, ReviewSlider, StarReview } from '../../components/ReviewSlider';
+import { AuthorContainer, GoogleStarReview, PuzzleIconReview, ReviewersImageReview, ReviewSlider, ReviewSlider2, StarReview } from '../../components/ReviewSlider';
 import { AnimatedComponent } from '../../components/AnimateOnView';
 import { H2Echo, H3Blue, H3Pink } from '../../components/H2WithImage';
 import { ServiceContaner } from '../../components/ServiceContainer';
@@ -8,7 +8,6 @@ import { PuzzleButton, PuzzleButton2 } from "../../components/PuzzleButton";
 import { DoodleDecor } from "../../components/BackgroundDecor";
 import { BackgroundIcons } from "../../components/BackgroundIcons";
 import { WorkProcess } from "../../components/WorkProcess";
-import { GradientFooter } from "../../components/GradientFooter";
 
 export default function Page() {
 	return (
@@ -72,11 +71,6 @@ export default function Page() {
 									<div class="mx--20px">
 										<img src="/assets/disleksia/обучение-деца-дислексия.webp" alt="Обучение на деца с дислексия в детски сенс център." class="important-b-rd-0 important-md:b-rd-12px w-full h-auto object-cover shadow" />
 									</div>
-									<div class="flex flex-col items-center gap-1 relative md:hidden">
-										<h2 class="text-transparent bg-clip-text bg-[url(/assets/disleksia/обучение-деца-дислексия.webp)] bg-cover bg-center opacity-8 scale-30 md:scale-50" style="background-position: right 0% top 0%;">
-											дислексия
-										</h2>
-									</div>
 								</div>
 							</div>
 						</div>
@@ -85,7 +79,7 @@ export default function Page() {
 
 				<section class="md:w-1/2">
 					<AnimatedComponent class="w-full md:px-3 my-auto">
-						<p class="mt-1">
+						<p class="mt-10 md:mt-0">
 							Дислексията е специфично нарушение, което засяга уменията за четене и писане и оказва влияние върху уменията за учене. Децата с дислексия често изпитват затруднения при разбирането на текстове, имат проблеми с четенето и писането, което може да повлияе негативно на самочувствието им и на мотивацията за учене.
 						</p>
 						<p>
@@ -226,21 +220,18 @@ export default function Page() {
 					<H3Pink title="Какво следва, ако не предприемем действие" />
 					<div class="flex flex-col lg:flex-row justify-center gap-10 xl:gap-20">
 						<ServiceContaner
-							link=""
 							img="/assets/disleksia/трудности-училище-деца-дислексия.webp"
 							alt="Трудности в училище при деца с дислексия."
 							title="Трудности в училище"
 							description="На първо място, липсата на професионална подкрепа ще задълбочи трудностите с четенето, писането и разбирането на текстове, което ще доведе до трайни трудности в училище за децата с дислексия и ще намали мотивацията за учене."
 						/>
 						<ServiceContaner
-							link=""
 							img="/assets/disleksia/социална-изолация-деца-дислексия.webp"
 							alt="Социална изолация при деца с дислексия."
 							title="Социална изолация"
 							description="Децата с дислексия често изпитват тревожност и ниска самооценка, тъй като не успяват да се справят наравно със своите връстници. Това може да доведе до отдръпване от социални ситуации, тревожност и ниска самооценка."
 						/>
 						<ServiceContaner
-							link=""
 							img="/assets/disleksia/ограничени-възможности-деца-дислексия.webp"
 							alt="Ограничени възможности при деца с дислексия."
 							title="Ограничени възможности"
@@ -272,13 +263,8 @@ export default function Page() {
 					<AnimatedComponent class="md:w-1/2">
 						<img src="/assets/disleksia/специалист-дислексия.webp" alt="Правилно разпознаване от специалист по дислексия." class="w-full h-auto object-cover rounded shadow" />
 					</AnimatedComponent>
-					<AnimatedComponent class="flex flex-col items-center gap-1 relative mb-2 md:hidden">
-						<h2 class="text-transparent bg-clip-text bg-[url(/assets/disleksia/специалист-дислексия.webp)] bg-cover bg-center opacity-8 scale-30 md:scale-50" style="background-position: right 0% top 0%;">
-							разпознаване
-						</h2>
-					</AnimatedComponent>
 
-					<div class="md:hidden block">
+					<div class="md:hidden block pt-10">
 						<DoodleDecor variant="purple" />
 					</div>
 
@@ -302,34 +288,37 @@ export default function Page() {
 
 			<section class="relative md:pb-30 xl:px-30 mx-20px">
 				<H3Blue title="Първоначална логопедична консултация при съмнение за дислексия" />
-				<div class="flex flex-col justify-center items-center max-w-1500px mx-auto px-20px xl:px-30">
-					<AnimatedComponent class="max-w-1500px px-5 md:px-20 md:py-10 py-5 bg-gradient-to-t from-brand-yellow to-brand b-rd-12px flex flex-col">
-						<p class="c-paper mb-1">
-							В Sense Center предлагаме първоначална логопедична консултация за деца със съмнение за дислексия.
-						</p>
-						<p class="c-paper">
-							По време на първоначалната логопедична оценка на деца с дислексия в Sense Center специалистът тест за дислексия, като наблюдава как детето чете и разбира текстове, както и уменията му за визуална и слухова преработка на информация.
-						</p>
-						<img src="/assets/home/наблюдение-на-дете-с-нарушения-в-развитието.webp" alt="първична-оценка-дислексия" class="my-5 w-full h-auto object-cover rounded shadow" />
-						<p class="c-paper mb-1">
-							Оценяват се затрудненията при разпознаването на думи и структурирането на текст.
-						</p>
-						<p class="c-paper">
-							Едновременно с това специалистите интервюират родителите за техните наблюдения и за училищното представяне на детето.
-						</p>
-						<p class="c-paper">
-							Целта на този процес е да се разберат нуждите на детето и да се определят следващите стъпки за подкрепа по време на логопедичната работа с деца с дислексия.
-						</p>
-						<img src="/assets/home/семейство-на-дете-с-нарушения-в-развитието.webp" alt="терапия-на-дислексия" class="mt-5 w-full h-auto object-cover rounded shadow" />
-						<p class="c-paper italic font-300 mt-1 op-90%" style="font-family: 'Oswald', sans-serif !important; letter-spacing: 1px;">
-							Препоръчително е да донесете всички налични медицински документи (в случай на предишна проверка за дислексия), които могат да бъдат от полза за изясняване на актуалното състояние.
-						</p>
-						<div class="pt-10 flex md:flex-row flex-col justify-center items-center gap-2">
-							<PuzzleButton />
-							<PuzzleButton2
-								href=""
-								text="+ 359 879 800 013"
-							/>
+
+				<div class="flex flex-col justify-center items-center mx-auto px-20px xl:px-30">
+					<AnimatedComponent class="max-w-1500px px-5 md:px-20 md:pb-10 md:pt-4 py-5 md:bg-gradient-to-t lg:from-paper lg:to-paper bg-gradient-to-t from-brand-yellow to-brand b-rd-12px flex flex-col">
+						<div class="flex flex-col lg:flex-row-reverse justify-center items-center gap-8">
+							<div class="xl:w-1/2 w-full md:pl-7">
+								<p class="c-paper lg:c-paper-inv mb-1">
+									В Sense Center предлагаме <strong class="font-[MYRIADPRO-Bold]">първоначална логопедична консултация</strong> за деца със съмнение за дислексия.
+								</p>
+								<p class="c-paper lg:c-paper-inv">
+									По време на първоначалната логопедична оценка на деца с дислексия в Sense Center специалистът тест за дислексия, като наблюдава как детето чете и разбира текстове, както и уменията му за визуална и слухова преработка на информация.
+								</p>
+								<img src="/assets/home/наблюдение-на-дете-с-нарушения-в-развитието.webp" alt="Наблюдение на дете с нарушения в развитието" class="lg:hidden my-5 w-full h-auto object-cover rounded shadow" />
+								<p class="c-paper lg:c-paper-inv mb-1">
+									Оценяват се затрудненията при разпознаването на думи и структурирането на текст.
+								</p>
+								<p class="c-paper lg:c-paper-inv">
+									Едновременно с това специалистите интервюират родителите за техните наблюдения и за училищното представяне на детето.
+								</p>
+								<p class="c-paper lg:c-paper-inv">
+									Целта на този процес е да се разберат нуждите на детето и да се определят следващите стъпки за подкрепа по време на логопедичната работа с деца с дислексия.
+								</p>
+								<div class="pt-8 flex md:flex-row flex-col justify-center items-center">
+									<PuzzleButton />
+								</div>
+							</div>
+							<div class="xl:w-1/2 w-full">
+								<img src="/assets/home/семейство-на-дете-с-нарушения-в-развитието.webp" alt="Семейство на дете с нарушения в развитието" class="mt-5 w-full h-auto object-cover rounded shadow" />
+								<p class="c-paper lg:c-paper-inv italic font-300 mt-2 leading-5 lg:leading-6" style="font-family: 'Oswald', sans-serif !important; letter-spacing: 1px;">
+									Препоръчително е да донесете всички налични медицински документи (в случай на предишна проверка за дислексия), които могат да бъдат от полза за изясняване на актуалното състояние.
+								</p>
+							</div>
 						</div>
 					</AnimatedComponent>
 				</div>
@@ -446,18 +435,13 @@ export default function Page() {
 										<div class="mx--20px">
 											<img src="/assets/disleksia/логопедична-работа-дете-дислексия.webp" alt="Логопедична работа с дете с дислексия." class="important-b-rd-0 important-md:b-rd-12px w-full h-auto object-cover shadow" />
 										</div>
-										<div class="flex flex-col items-center gap-1 relative md:hidden">
-											<h2 class="text-transparent bg-clip-text bg-[url(/assets/disleksia/логопедична-работа-дете-дислексия.webp)] bg-cover bg-center opacity-8 scale-30 md:scale-50" style="background-position: right 0% top 0%;">
-												терапия
-											</h2>
-										</div>
 									</div>
 								</div>
 							</div>
 						</AnimatedComponent>
 					</section>
 
-					<section class="md:w-1/2 pt-10 md:pt-0">
+					<section class="md:w-1/2 pt-25 md:pt-0">
 						<AnimatedComponent class="w-full md:px-3 my-auto flex flex-col justify-center items-center w-full md:pl-7 md:pr-0 px-3 mt--10 z-10">
 							<H3Blue title="Какво можем да очакваме" />
 							<div class="relative mt--10">
@@ -480,33 +464,46 @@ export default function Page() {
 				<div class="xl:px-30 mx-auto md:pt-0 pt-10">
 					<H3Pink title="Някои от най-ефективните терапии" />
 					<AnimatedComponent>
-						<p class="md:px-10 md:mb-5 mb-2 mt-0 c-gray-700 leading-5 font-size-14px font-400 italic tracking md:pl-6" style="font-family: 'Oswald', sans-serif !important; letter-spacing: 0.3px; ">Препоръчват се от 4 до 8 сесии седмично за оптимални резултати</p>
+						<p class="md:mb-5 mb-2 mt-0 c-gray-700 leading-5 font-size-14px font-400 italic tracking md:pl-6" style="font-family: 'Oswald', sans-serif !important; letter-spacing: 0.3px; ">Препоръчват се от 4 до 8 сесии седмично за оптимални резултати</p>
 					</AnimatedComponent>
-					<div class="flex md:flex-row flex-col flex-wrap gap-5 md:gap-0 justify-center items-center">
-						<AuthorContainer
-							href=""
-							style="background:linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0.5)),url(/assets/sindrom-na-daun/звукова-стимулация.webp); background-position: right 50% bottom 85% !important; background-repeat: no-repeat; background-size: cover;"
-							name="Звукова стимулация"
-							description="Подпомага сензорната и слуховата обработка, намалява тревожността и хиперактивността и стимулира езиковото развитие"
-						/>
-						<AuthorContainer
-							href=""
-							style="background:linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0.4)),url(/assets/home/детски-логопед.webp); background-position: right 50% bottom 85% !important; background-repeat: no-repeat; background-size: cover;"
-							name="Детски логопед"
-							description="Логопедичната работа с деца с дислексия подобрява разбирането и изпълнението на команди, формирането на самостоятелни изречения и умението за водене на диалог"
-						/>
-						<AuthorContainer
-							href=""
-							style="background:linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0.5)),url(/assets/testing-image.jpg); background-position: right 50% bottom 85% !important; background-repeat: no-repeat; background-size: cover;"
-							name="Обучение за концентрация и внимание"
-							description="Помага на детето с фокусирането и запаметяването, като го учи да задържа вниманието си по-дълго и да следва инструкции"
-						/>
-						<AuthorContainer
-							href=""
-							style="background:linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.6)),url(/assets/sindrom-na-daun/детски-психолог.webp); background-position: right 50% bottom 85% !important; background-repeat: no-repeat; background-size: cover;"
-							name="Детски психолог"
-							description="Подкрепя развитието на умения за организиране, планиране и решаване на проблеми, както и за емоционална саморегулация и адаптация към различни ситуации"
-						/>
+					<div class="gap-12 md:pt-5 pb-5 md:pb-0">
+						<div class="">
+							<ReviewSlider2
+								variant="dots0"
+								reviews={[
+									{ name: "1" },
+									{ name: "2" },
+									{ name: "3" },
+									{ name: "4" },
+
+								]}
+							>
+								<AuthorContainer
+									href=""
+									style="background:linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0.5)),url(/assets/sindrom-na-daun/звукова-стимулация.webp); background-position: right 50% bottom 85% !important; background-repeat: no-repeat; background-size: cover;"
+									name="Звукова стимулация"
+									description="Подпомага сензорната и слуховата обработка, намалява тревожността и хиперактивността и стимулира езиковото развитие"
+								/>
+								<AuthorContainer
+									href=""
+									style="background:linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0.4)),url(/assets/home/детски-логопед.webp); background-position: right 50% bottom 85% !important; background-repeat: no-repeat; background-size: cover;"
+									name="Детски логопед"
+									description="Логопедичната работа с деца с дислексия подобрява разбирането и изпълнението на команди, формирането на самостоятелни изречения и умението за водене на диалог"
+								/>
+								<AuthorContainer
+									href=""
+									style="background:linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0.5)),url(/assets/testing-image.jpg); background-position: right 50% bottom 85% !important; background-repeat: no-repeat; background-size: cover;"
+									name="Обучение за концентрация и внимание"
+									description="Помага на детето с фокусирането и запаметяването, като го учи да задържа вниманието си по-дълго и да следва инструкции"
+								/>
+								<AuthorContainer
+									href=""
+									style="background:linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.6)),url(/assets/sindrom-na-daun/детски-психолог.webp); background-position: right 50% bottom 85% !important; background-repeat: no-repeat; background-size: cover;"
+									name="Детски психолог"
+									description="Подкрепя развитието на умения за организиране, планиране и решаване на проблеми, както и за емоционална саморегулация и адаптация към различни ситуации"
+								/>
+							</ReviewSlider2>
+						</div>
 					</div>
 				</div>
 
@@ -796,7 +793,6 @@ export default function Page() {
 					</section>
 				</div>
 			</section>
-			<GradientFooter />
 		</>
 	);
 }

@@ -42,7 +42,7 @@ export const H3Blue = (props: { title: string; variant?: "h2" | "h3"; }) => {
   );
 };
 
-export const H3Pink = (props: { title: string; variant?: "h2" | "h3"; }) => {
+export const H3Pink = (props: { title: string | JSXElement; variant?: "h2" | "h3"; }) => {
   const { variant = "h3" } = props;
 
   return (

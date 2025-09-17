@@ -7,6 +7,9 @@ import RiFacebookFill from '~icons/ri/facebook-fill';
 import RiInstagramLine from '~icons/ri/instagram-line';
 import RiPhoneFill from '~icons/ri/phone-fill';
 import MdiMagnify from '~icons/mdi/magnify';
+import RiCopyrightLine from '~icons/ri/copyright-line';
+import { PuzzleButton2 } from '../components/PuzzleButton';
+import MdiEmail from '~icons/mdi/email';
 
 export default function LayoutDefault(props: { children?: JSX.Element }) {
   const childrenMemo = children(() => props.children);
@@ -30,7 +33,7 @@ export default function LayoutDefault(props: { children?: JSX.Element }) {
       </div> */}
 
       <div class="fixed top-0 left-0 w-full z-50 flex items-center justify-center text-white text-center text-sm md:text-lg">
-        <div class="px-10 bg-brand-blue hidden fixed top-70px sm:top-100px sm:block w-full gap-4">
+        <div class="px-10 bg-brand-blue hidden fixed top-70px sm:top-100px w-full gap-0 md:flex flex-wrap">
           <MenuItem2 href="/detsa-s-autizam">Аутизъм</MenuItem2>
           <MenuItem2 href="/detski-logoped">Детски логопед</MenuItem2>
           <MenuItem2 href="/kak-pomagame">Как помагаме</MenuItem2>
@@ -42,17 +45,18 @@ export default function LayoutDefault(props: { children?: JSX.Element }) {
           <MenuItem2 href="/detsa-sas-sindrom-na-daun">Синдром на Даун</MenuItem2>
           <MenuItem2 href="/pozitsia-logoped">Логопед-позиция</MenuItem2>
           <MenuItem2 href="/detsa-s-umstvena-izostanalost">Деца с умствена изостаналост</MenuItem2>
-          <MenuItem2 href="/detsa-sas-spetsialni-obrazovatelni-potrebnosti">Деца със СОП</MenuItem2>
+          <MenuItem2 href="/detsa-sas-spetsialni-obrazovatelni-potrebnosti">СОП</MenuItem2>
           <MenuItem2 href="/detsa-sas-sindrom-na-asperger">Деца с Аспергер</MenuItem2>
-          <MenuItem2 href="/detsa-s-posttravmatichno-razstroistvo">Деца с посттравматично разстройство</MenuItem2>
+          <MenuItem2 href="/detsa-s-posttravmatichno-razstroistvo">Деца с посттравматично разстр</MenuItem2>
           <MenuItem2 href="/detsa-s-disleksia">Деца с дислекция</MenuItem2>
-          <MenuItem2 href="/detski-psiholog">Деткси психолог</MenuItem2>
+          <MenuItem2 href="/detski-psiholog">Детски психолог</MenuItem2>
           <MenuItem2 href="/tseni">Цени</MenuItem2>
-          <MenuItem2 href="/ergoterapia-za-detsa">Ерготерапия за деца</MenuItem2>
-          <MenuItem2 href="/politika-za-poveritelnost">Политика за поверителност</MenuItem2>
-          <MenuItem2 href="/obshti-uslovia">Общи условия</MenuItem2>
-          <MenuItem2 href="/politika-za-biskvitki">Политика за бисквитки</MenuItem2>
+          <MenuItem2 href="/ergoterapia-za-detsa">Ерготерапия</MenuItem2>
           <MenuItem2 href="/prakticheski-zanimania-za-deca-s-autizam">Практ зан за деца с аутизъм</MenuItem2>
+          <MenuItem2 href="/psihomotorika-za-detsa">Психомоторика</MenuItem2>
+          <MenuItem2 href="/kognitivno-povedencheska-terapia-za-detsa">Когн повед терапия</MenuItem2>
+          <MenuItem2 href="/zvukova-stimulacia-za-detsa">Звукова стимулация</MenuItem2>
+          <MenuItem2 href="/obuchenie-za-koncentracia-i-vnimanie-za-detsa">Обучение за конц и вним</MenuItem2>
         </div>
       </div>
 
@@ -142,15 +146,13 @@ export default function LayoutDefault(props: { children?: JSX.Element }) {
           </a>
         </div>
         <div class="flex ">
-          <p class="my-0 important-tracking-0.2 mr-2 text-shadow-[4px_4px_10px_rgba(0,0,0,0.3)] font-[MYRIADPRO-Light] font-size-11px md:font-size-14px md:text-lg tracking-tight text-white">Всички права запазени <span><RiCopyrightLine class="w-4 h-4 pt-1.3"/></span> <CurrentYear /></p>
+          <p class="my-0 important-tracking-0.2 mr-2 text-shadow-[4px_4px_10px_rgba(0,0,0,0.3)] font-[MYRIADPRO-Light] font-size-11px md:font-size-14px md:text-lg tracking-tight text-white">Всички права запазени <span><RiCopyrightLine class="w-4 h-4 pt-1.3" /></span> <CurrentYear /></p>
         </div>
       </div>
       <BackToTopArrow />
     </div>
   );
 }
-import RiCopyrightLine from '~icons/ri/copyright-line';
-import MdiCopyright from '~icons/mdi/copyright';
 
 function MenuItem2(props: { href: string; children: string }) {
   return (
@@ -182,15 +184,15 @@ function HamburgerMenu(props: { items: { href: string; label: string }[] }) {
         onClick={() => setOpen(!open())}
       >
         <span
-          class={`block absolute h-1 w-7 bg-brand rounded transition-all duration-500 ease-in-out
+          class={`block absolute h-1 w-7 bg-#fa4652 rounded transition-all duration-500 ease-in-out
             ${open() ? "rotate-45 translate-y-0" : "-translate-y-2"}`}
         ></span>
         <span
-          class={`block absolute h-1 w-7 bg-#fa4652 rounded transition-all duration-500 ease-in-out
+          class={`block absolute h-1 w-7 bg-brand-orange rounded transition-all duration-500 ease-in-out
             ${open() ? "opacity-0 scale-50" : "opacity-100"}`}
         ></span>
         <span
-          class={`block absolute h-1 w-7 bg-brand-orange rounded transition-all duration-500 ease-in-out
+          class={`block absolute h-1 w-7 bg-brand-yellow rounded transition-all duration-500 ease-in-out
             ${open() ? "-rotate-45 translate-y-0" : "translate-y-2"}`}
         ></span>
       </button>
@@ -224,10 +226,9 @@ function Topbar(props: { children: JSX.Element }) {
     <div
       class="h-70px sm:h-100px w-full z-40 fixed top-[0] flex-content-center transition-all duration-300 ease-in-out">
       <div
-        class="absolute inset-0 bg-cover bg-top"
-        style={{ "background-image": "url('/assets/detsa-s-autizam/наблюдение-дете-аутизъм.webp')" }}
+        class="absolute inset-0 bg-cover bg-center"
+        style={{ "background-image": "url('/assets/turqouise-gradient3.webp')" }}
       ></div>
-      <div class="absolute inset-0 bg-brand-blue/70"></div>
       <div class="mx-auto w-full flex flex-row justify-between items-center px-4 md:px-10">
         {props.children}
       </div>
@@ -354,18 +355,18 @@ function BackToTopArrow() {
     <>
       {mounted() && (
         <div
-          class={`fixed bottom-1 right-0 md:bottom-4 md:right-5 z-50 flex justify-center items-center cursor-pointer
+          class={`fixed bottom-15 right-0 md:bottom-2 md:right-16 z-50 flex justify-center items-center cursor-pointer
             ${visible() ? 'animate-enterPuzzle' : ''}
             ${exitAnim() ? 'animate-exitPuzzle' : ''}
           `}
         >
           <div class="animate-slowSpin relative mb-1 mr-2">
             <div onClick={handleScrollToTop}>
-              <img src="/assets/sun.png" class="w-14 h-14 lg:w-25 lg:h-25" />
+              <img src="/assets/sun.png" class="w-18 h-18 lg:w-25 lg:h-25" />
             </div>
           </div>
           <div onClick={handleScrollToTop}>
-            <MdiArrowUp class="absolute w-5 h-5 lg:w-8 lg:h-8 c-brand-purple z-10 top-4.3 left-4.62 lg:top-8.5 lg:left-8.5" />
+            <MdiArrowUp class="absolute w-6 h-6 lg:w-8 lg:h-8 c-brand-purple z-10 top-5.7 left-6.1 lg:top-8.5 lg:left-8.5" />
           </div>
         </div>
       )}
@@ -445,47 +446,134 @@ function MainFooter() {
             rgba(255,255,255,0) 100%)]"
         />
 
-        <div class="relative max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
-          <div class="md:hidden block">
-            <img src="/assets/sense_logo_heart_text.webp" class="w-50 mb-10" alt="sense-center-sofia-text-logo" />
-            <h2 class="c-paper important-leading-12 md:px-30 important-font-[MYRIADPRO-BOLDCOND] text-shadow-[4px_4px_10px_rgba(0,0,0,0.2)]">Център за деца с нарушения в развитието</h2>
-          </div>
-          <div class="mb-15 md:mb-20 h-450px md:h-350px md:px-25 py-10 md:p-0 w-full md:hidden block">
-            <GoogleMapIframe />
-            <p class="mt-0 text-center text-5 leading-11 important-font-[MYRIADPRO-SemiboldCond] uppercase c-paper text-shadow-[4px_4px_10px_rgba(0,0,0,0.2)]">Кв. Карпузица, бул. Никола Петков 95А</p>
-          </div>
-          <div>
-            <h3 class="text-center important-font-size-9 important-md:font-size-11 important-leading-10 important-md:leading-11 important-font-[MYRIADPRO-BOLDCOND] mb-7 md:mb-9 uppercase c-paper text-shadow-[4px_4px_10px_rgba(0,0,0,0.2)]">Най-популярните терапии</h3>
-            <ul class="flex flex-col gap-3 justify-center items-center">
-              <FooterMenuItem>Практически занимания за деца с аутизъм</FooterMenuItem>
-              <FooterMenuItem>Детски логопед</FooterMenuItem>
-              <FooterMenuItem>Детски психолог</FooterMenuItem>
-              <FooterMenuItem>Ерготерапия</FooterMenuItem>
-              <FooterMenuItem>Психомоторика</FooterMenuItem>
-            </ul>
-          </div>
-          <div class="hidden md:block">
-            <h3 class="text-center important-font-size-9 important-md:font-size-11 important-leading-10 important-md:leading-11 important-font-[MYRIADPRO-BOLDCOND] mb-7 md:mb-9 uppercase c-paper text-shadow-[4px_4px_10px_rgba(0,0,0,0.2)]">Полезни<br />връзки</h3>
-            <ul class="flex flex-col gap-3 justify-center items-center">
-              <FooterMenuItem>Цени</FooterMenuItem>
-              <FooterMenuItem>Контакти</FooterMenuItem>
-              <FooterMenuItem>Кариери</FooterMenuItem>
-              <FooterMenuItem>За нас</FooterMenuItem>
-            </ul>
-          </div>
-          <div class="mt-10 h-500px px-10 md:px-0 w-full hidden md:block">
-            <GoogleMapIframe />
-            <p class="mt-0 text-center text-5 leading-11 important-font-[MYRIADPRO-SemiboldCond] uppercase c-paper text-shadow-[4px_4px_10px_rgba(0,0,0,0.2)]">Кв. Карпузица, бул. Никола Петков 95А</p>
+        <div class="relative max-w-6xl mx-auto hidden md:flex justify-center items-center md:mt-5 mb-20">
+          <div class="w-full flex justify-center items-center">
+            <div class="md:w-1/3 flex flex-col justify-between">
+              <div class="flex justify-center items-center gap-2">
+                <RiPhoneFill class="c-paper w-11 h-11" />
+                <div class="flex flex-col">
+                  <div class="flex justify-start items-center gap-2 mt--20px">
+                    <p class="font-[MyriadPro-SemiboldCond] c-paper text-shadow-[4px_4px_10px_rgba(0,0,0,0.2)] text-5">+359 879 800 013</p>
+                  </div>
+                  <div class="flex justify-start items-center gap-2 mt--10">
+                    <p class="font-[MyriadPro-SemiboldCond] c-paper text-shadow-[4px_4px_10px_rgba(0,0,0,0.2)] text-5 mb-0">+359 877 800 770</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="md:w-1/3 flex flex-col justify-between">
+              <div>
+                <div class="flex justify-center items-center gap-">
+                  <MdiEmail class="c-paper w-11 h-11 mr-3" />
+                  <p class="font-[MYRIADPRO-BOLDCOND] c-paper text-shadow-[4px_4px_10px_rgba(0,0,0,0.2)] text-5">contact@sense-center.bg</p>
+                </div>
+              </div>
+            </div>
+            <div class="md:w-1/3 flex flex-col justify-between">
+              <div class="">
+                <PuzzleButton2
+                  class="important-bg-brand-blue/80 important-group-hover-bg-brand-blue-hover/80"
+                  href=""
+                  text={
+                    <>
+                      Вижте успешни<br />истории
+                    </>
+                  }
+                />
+              </div>
+            </div>
           </div>
         </div>
-        <div class="w-full mt-20 md:mt-10 flex flex-col md:flex-row justify-center items-center">
-          <div class="flex gap-2 md:gap-4 text-8">
-            <a href="#" aria-label="Facebook" class="c-paper hover-c-brand-yellow transition-all">
-              <RiFacebookFill />
-            </a>
-            <a href="#" aria-label="Instagram" class="c-paper hover-c-brand-yellow transition-all">
-              <RiInstagramLine />
-            </a>
+
+        <div class="relative max-w-6xl mx-auto flex md:flex-row flex-col justify-center mb-5 md:mb-10 px-8 md:px-0">
+          <div class="md:hidden block mb-10">
+            <img src="/assets/sense_logo_heart_text.webp" class="w-40 mb-10" alt="sense-center-sofia-text-logo" />
+            <h2 class="c-paper important-leading-10 md:px-30 important-font-[MYRIADPRO-BOLDCOND] text-shadow-[4px_4px_10px_rgba(0,0,0,0.2)] important-font-size-40px">Център за деца с нарушения в развитието</h2>
+          </div>
+          <div class="mb-35 md:mb-20 h-450px md:h-350px md:px-25 py-6 md:p-0 w-full md:hidden block">
+            <GoogleMapIframe />
+            <p class="mt-2 md:mt-0 text-left text-5 leading-6 important-font-[MYRIADPRO-SemiboldCond] uppercase c-paper text-shadow-[4px_4px_10px_rgba(0,0,0,0.2)]">Кв. Карпузица,<br />бул. Никола Петков 95А</p>
+
+            <div class="flex items-center">
+              <RiPhoneFill class="c-paper w-9 h-9 mr-4.5" />
+              <div class="flex flex-col">
+                <div class="flex justify-start items-center gap-2 mt--20px">
+                  <p class="font-[MyriadPro-SemiboldCond] c-paper text-shadow-[4px_4px_10px_rgba(0,0,0,0.2)] text-5">+359 879 800 013</p>
+                </div>
+                <div class="flex justify-start items-center gap-2 mt--10">
+                  <p class="font-[MyriadPro-SemiboldCond] c-paper text-shadow-[4px_4px_10px_rgba(0,0,0,0.2)] text-5 mb-0">+359 877 800 770</p>
+                </div>
+              </div>
+            </div>
+
+            <div>
+              <div class="flex justify-start items-center gap-2">
+                <MdiEmail class="c-paper w-9 h-9 mr-3" />
+                <p class="font-[MyriadPro-SemiboldCond] c-paper text-shadow-[4px_4px_10px_rgba(0,0,0,0.2)] text-5">contact@sense-center.bg</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="w-full flex justify-center items-stretch">
+            <div class="md:w-1/3 flex flex-col justify-between h-full">
+              <h3 class="text-center important-font-size-8 important-md:font-size-9 important-leading-10 important-md:leading-11 important-font-[MYRIADPRO-BOLDCOND] mt-0 mb-7 md:mb-9 uppercase c-paper text-shadow-[4px_4px_10px_rgba(0,0,0,0.2)]">Най-популярните<br />терапии</h3>
+              <ul class="flex flex-col gap-3 justify-between items-center h-full">
+                <FooterMenuItem>Практически занимания за<br />деца с аутизъм</FooterMenuItem>
+                <FooterMenuItem>Детски логопед</FooterMenuItem>
+                <FooterMenuItem>Детски психолог</FooterMenuItem>
+                <FooterMenuItem>Ерготерапия</FooterMenuItem>
+                <FooterMenuItem>Психомоторика</FooterMenuItem>
+              </ul>
+            </div>
+
+            <div class="md:w-1/3 hidden md:flex flex-col justify-stretch h-full">
+              <h3 class="text-center important-font-size-8 important-md:font-size-9 important-leading-10 important-md:leading-11 important-font-[MYRIADPRO-BOLDCOND] mt-0 mb-7 md:mb-9 uppercase c-paper text-shadow-[4px_4px_10px_rgba(0,0,0,0.2)]">Полезни<br />връзки</h3>
+              <ul class="flex flex-col gap-3 justify-between items-center h-full">
+                <FooterMenuItem>Цени</FooterMenuItem>
+                <FooterMenuItem>Контакти</FooterMenuItem>
+                <FooterMenuItem>Кариери</FooterMenuItem>
+                <FooterMenuItem>За нас</FooterMenuItem>
+              </ul>
+              <div class="w-full flex flex-col md:flex-row justify-center items-center mt-8">
+                <div class="flex gap-2 md:gap-4 text-8">
+                  <a href="#" aria-label="Facebook" class="c-paper hover-c-brand-yellow transition-all">
+                    <RiFacebookFill />
+                  </a>
+                  <a href="#" aria-label="Instagram" class="c-paper hover-c-brand-yellow transition-all">
+                    <RiInstagramLine />
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="md:w-1/3 h-500px px-10 md:px-10 w-full hidden md:flex flex-col justify-between h-full">
+              <GoogleMapIframe />
+              <p class="mt-0 text-center text-5 leading-6 important-font-[MYRIADPRO-SemiboldCond] uppercase c-paper text-shadow-[4px_4px_10px_rgba(0,0,0,0.2)]">Кв. Карпузица, бул. Никола Петков 95А</p>
+              <div class="ml-1">
+                <p class="mt-0 text-6 leading-11 important-font-[MYRIADPRO-SemiboldCond] uppercase c-paper text-shadow-[4px_4px_10px_rgba(0,0,0,0.2)] mb--2">Работно време:</p>
+                <div class="flex flex-col">
+                  <div class="flex justify-between items-center">
+                    <p class="mt-0 text-6 leading-11 important-font-[Myriad-Pro-Light-Condensed] capitalize c-paper text-shadow-[4px_4px_10px_rgba(0,0,0,0.2)] my-0">Понеделник - Петък</p>
+                    <p class="mt-0 text-6 leading-11 important-font-[Myriad-Pro-Light-Condensed] capitalize c-paper text-shadow-[4px_4px_10px_rgba(0,0,0,0.2)] my-0">09:00 - 20:00</p>
+                  </div>
+                  <div class="flex justify-between items-center mt--4">
+                    <p class="mt-0 text-6 leading-11 important-font-[Myriad-Pro-Light-Condensed] capitalize c-paper text-shadow-[4px_4px_10px_rgba(0,0,0,0.2)] my-0">Събота</p>
+                    <p class="mt-0 text-6 leading-11 important-font-[Myriad-Pro-Light-Condensed] capitalize c-paper text-shadow-[4px_4px_10px_rgba(0,0,0,0.2)] my-0">09:00 - 15:00</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="md:hidden w-full mt-15 flex flex-col md:flex-row justify-center items-center mb-3">
+            <div class="flex gap-2 md:gap-4 text-10 mr-3">
+              <a href="#" aria-label="Facebook" class="c-paper hover-c-brand-yellow transition-all">
+                <RiFacebookFill />
+              </a>
+              <a href="#" aria-label="Instagram" class="c-paper hover-c-brand-yellow transition-all">
+                <RiInstagramLine />
+              </a>
+            </div>
           </div>
         </div>
       </footer>
@@ -500,7 +588,7 @@ function GoogleMapIframe() {
     <iframe
       src={mapSrc}
       width="100%"
-      height="350"
+      height="280"
       style="border: 0; border-radius: 12px;"
       loading="lazy"
       referrerPolicy="no-referrer-when-downgrade"
@@ -510,8 +598,8 @@ function GoogleMapIframe() {
 
 function FooterMenuItem(props: { href?: string, children?: JSX.Element }) {
   return (
-    <div>
-      <a href={props.href} class="c-paper text-center font-size-4.5 md:font-size-4.8 tracking-0.3 transition-all cursor-pointer hover-c-brand-yellow uppercase font-[Myriad-Pro-Light-Condensed] text-shadow-[4px_4px_10px_rgba(0,0,0,0.4)]">
+    <div class="text-center">
+      <a href={props.href} class="c-paper important-text-center font-size-4.5 md:font-size-5 tracking-0.3 transition-all cursor-pointer hover-c-brand-yellow uppercase font-[Myriad-Pro-Light-Condensed] text-shadow-[4px_4px_10px_rgba(0,0,0,0.4)]">
         {props.children}
       </a>
     </div>
@@ -668,11 +756,11 @@ function CookieConsentModal() {
   return (
     <>
       <button
-        class="fixed bottom-3 left-3 text-white p-3 b-none bg-transparent z-50"
+        class="fixed bottom-1 right-3 text-white p-3 b-none bg-transparent z-50"
         title="Управление на бисквитки"
         onClick={() => setShowSettings(true)}
       >
-        <img src="/assets/home/cookie.png" class="w-10 h-10 cursor-pointer" />
+        <img src="/assets/home/cookie.png" class="w-9 h-9 md:w-10 md:h-10 cursor-pointer" />
       </button>
       <Show when={showSettings()}>
         <div class="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50 p-4">

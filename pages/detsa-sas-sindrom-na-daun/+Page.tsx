@@ -1,5 +1,5 @@
 import "solid-slider/slider.css";
-import { AuthorContainer, GoogleStarReview, PuzzleIconReview, ReviewersImageReview, ReviewSlider, StarReview } from '../../components/ReviewSlider';
+import { AuthorContainer, GoogleStarReview, PuzzleIconReview, ReviewersImageReview, ReviewSlider, ReviewSlider2, StarReview } from '../../components/ReviewSlider';
 import { AnimatedComponent } from '../../components/AnimateOnView';
 import { H2Echo, H3Blue, H3Pink } from '../../components/H2WithImage';
 import { ServiceContaner } from '../../components/ServiceContainer';
@@ -9,7 +9,6 @@ import { GallerySlider2 } from "../../components/GallerySlider";
 import { DoodleDecor } from "../../components/BackgroundDecor";
 import { BackgroundIcons } from "../../components/BackgroundIcons";
 import { WorkProcess } from "../../components/WorkProcess";
-import { GradientFooter } from "../../components/GradientFooter";
 
 export default function Page() {
 	return (
@@ -70,11 +69,6 @@ export default function Page() {
 									<div class="mx--20px">
 										<img src="/assets/sindrom-na-daun/деца-синдром-даун.webp" alt="Деца със синдром на Даун" class="important-b-rd-0 important-md:b-rd-12px w-full h-auto object-cover shadow" />
 									</div>
-									<div class="flex flex-col items-center gap-1 relative md:hidden">
-										<h2 class="text-transparent bg-clip-text bg-[url(/assets/sindrom-na-daun/деца-синдром-даун.webp)] bg-cover bg-center opacity-8 scale-30 md:scale-50" style="background-position: right 0% top 0%;">
-											Синдром на Даун
-										</h2>
-									</div>
 								</div>
 							</div>
 						</div>
@@ -83,7 +77,7 @@ export default function Page() {
 
 				<section class="md:w-1/2">
 					<AnimatedComponent class="w-full md:px-3 my-auto">
-						<p class="mt-1">
+						<p class="mt-10 md:mt-0">
 							Синдромът на Даун е генетично състояние, причинено от наличието на допълнителна хромозома в 21-вата хромозомна двойка, известно като Тризомия 21. Вместо нормалните 46 хромозоми, хората със Синдром на Даун имат 47. Това е най-често срещаната генетична аномалия, срещаща се при приблизително 1 на 700 раждания, независимо от страна, раса или социална група.
 						</p>
 						<p class="">
@@ -298,10 +292,10 @@ export default function Page() {
 
 				<AnimatedComponent class="max-w-1500px mx-auto">
 					<p>В случай, че детето Ви има Синдром на Даун при Ви препоръчваме да се консултирате със специалист.</p>
-					<div class="flex flex-col justify-center items-start b-rd-12px bg-gradient-to-b from-brand-yellow to-brand px-6 md:px-10 py-2 pd:py-4">
+					<div class="flex flex-col justify-center items-start b-rd-12px bg-gradient-to-b from-brand-yellow to-brand max-w-800px mx-auto px-6 md:px-10 py-2 pd:py-4">
 						<div class="flex justify-center items-center gap-4">
 							<img src="/assets/exclamation-mark-icon.webp" class="w-10 h-10" />
-							<p class="font-[MYRIADPRO-Semibold] c-paper uppercase font-size-17px lg:font-size-21px">80-90% от мозъка на детето се развива до 7-годишна възраст</p>
+							<p class="font-[MYRIADPRO-Semibold] c-paper uppercase font-size-17px lg:font-size-21px">80 - 90% от мозъка на детето се развива до 7-годишна възраст</p>
 						</div>
 						<p class="font-size-15px lg:font-size-18px c-paper mt-2">Ето защо колкото по-рано бъде започната терапия, толкова по-голяма е възможността за напредък в развитието и видими резултати при Синдром на Даун.</p>
 					</div>
@@ -321,21 +315,18 @@ export default function Page() {
 					<H3Pink title="Какво следва, ако не предприемем действие" />
 					<div class="flex flex-col lg:flex-row justify-center gap-10 xl:gap-20">
 						<ServiceContaner
-							link=""
 							img="/assets/sindrom-na-daun/забавяне-комуникативните-умения.webp"
 							alt="Забавяне в развитието на речта и комуникативните умения."
 							title="Значително забавяне в развитието на речта и комуникативните умения"
 							description="Без подходяща терапия, децата със Синдром на Даун могат да изпитват сериозни затруднения в развитието на речта и езика, което води до ограничена способност за изразяване на нуждите и желанията им, както и до трудности в разбирането на околните. В резултат, те могат да се чувстват фрустрирани и да развият поведенчески проблеми често наблюдавани в живота със Синдром на Даун без специализирана помощ."
 						/>
 						<ServiceContaner
-							link=""
 							img="/assets/sindrom-na-daun/трудности-самостоятелността-синдром-даун.webp"
 							alt="Трудности в социалната интеграция и самостоятелността."
 							title="Трудности в социалната интеграция и самостоятелността"
 							description="Липсата на целенасочено обучение в ежедневни умения може да ограничи тяхната способност да се грижат за себе си и да затрудни живота на хора със Синдром на Даун. Това води до продължителна зависимост от грижите на други хора и ограничени възможности за пълноценен и независим живот. Те изпитват трудности при създаването и поддържането на приятелства, което предизвиква социална изолация и ниско самочувствие."
 						/>
 						<ServiceContaner
-							link=""
 							img="/assets/sindrom-na-daun/риск-свързани-здравословни-проблеми.webp"
 							alt="Повишен риск от свързани здравословни проблеми."
 							title="Повишен риск от свързани здравословни проблеми"
@@ -367,13 +358,8 @@ export default function Page() {
 					<AnimatedComponent class="md:w-1/2">
 						<img src="/assets/sindrom-na-daun/синдром-даун-резултати.webp" alt="Правилно разпознаване на синдром на Даун." class="w-full h-auto object-cover rounded shadow" />
 					</AnimatedComponent>
-					<AnimatedComponent class="flex flex-col items-center gap-1 relative mb-2 md:hidden">
-						<h2 class="text-transparent bg-clip-text bg-[url(/assets/sindrom-na-daun/синдром-даун-резултати.webp)] bg-cover bg-center opacity-8 scale-30 md:scale-50" style="background-position: right 0% top 0%;">
-							разпознаване
-						</h2>
-					</AnimatedComponent>
 
-					<div class="md:hidden block">
+					<div class="md:hidden block pt-15">
 						<DoodleDecor variant="purple" />
 					</div>
 
@@ -417,30 +403,33 @@ export default function Page() {
 
 			<section class="relative md:pb-30 xl:px-30 mx-20px">
 				<H3Blue title="Първична оценка при деца със синдром на Даун" />
-				<div class="flex flex-col justify-center items-center max-w-1500px mx-auto px-20px xl:px-30">
-					<AnimatedComponent class="max-w-1500px px-5 md:px-20 md:py-10 py-5 bg-gradient-to-t from-brand-yellow to-brand b-rd-12px flex flex-col">
-						<p class="c-paper mb-1">
-							В Sense Center предлагаме първична оценка за деца със Синдром на Даун.
-						</p>
-						<p class="c-paper">
-							По време на консултацията се извършва обследване на поведението и актуалното състояние на детето.
-						</p>
-						<img src="/assets/home/наблюдение-на-дете-с-нарушения-в-развитието.webp" alt="" class="my-5 w-full h-auto object-cover rounded shadow" />
-						<p class="c-paper mb-1">
-							Отбелязват се дефицитите в развитието и аспектите, които имат нужда от подкрепа.
-						</p>
-						<p class="c-paper">
-							Едновременно с това специалистите интервюират родителите за техните наблюдения върху поведението и развитието на детето.
-						</p>
-						<img src="/assets/home/семейство-на-дете-с-нарушения-в-развитието.webp" alt="" class="mt-5 w-full h-auto object-cover rounded shadow" />
-						<p class="c-paper italic font-300 mt-1 op-90%" style="font-family: 'Oswald', sans-serif !important; letter-spacing: 1px;">
-							Препоръчително е да донесете всички налични медицински документи, които могат да бъдат от полза за изясняване на актуалното състояние.</p>
-						<div class="pt-10 flex md:flex-row flex-col justify-center items-center gap-2">
-							<PuzzleButton />
-							<PuzzleButton2
-								href=""
-								text="+ 359 879 800 013"
-							/>
+				<div class="flex flex-col justify-center items-center mx-auto px-20px xl:px-30">
+					<AnimatedComponent class="max-w-1500px px-5 md:px-20 md:pb-10 md:pt-4 py-5 md:bg-gradient-to-t lg:from-paper lg:to-paper bg-gradient-to-t from-brand-yellow to-brand b-rd-12px flex flex-col">
+						<div class="flex flex-col lg:flex-row-reverse justify-center items-center gap-8">
+							<div class="xl:w-1/2 w-full md:pl-7">
+								<p class="c-paper lg:c-paper-inv mb-1">
+									В Sense Center предлагаме <strong class="font-[MYRIADPRO-Bold]">първична оценка</strong> за деца със Синдром на Даун.
+								</p>
+								<p class="c-paper lg:c-paper-inv">
+									По време на консултацията се извършва обследване на поведението и актуалното състояние на детето.
+								</p>
+								<img src="/assets/home/наблюдение-на-дете-с-нарушения-в-развитието.webp" alt="Търсене на надеждна информация за синдром на Даун" class="lg:hidden my-5 w-full h-auto object-cover rounded shadow" />
+								<p class="c-paper lg:c-paper-inv mb-1">
+									Отбелязват се дефицитите в развитието и аспектите, които имат нужда от подкрепа.
+								</p>
+								<p class="c-paper lg:c-paper-inv">
+									Едновременно с това специалистите интервюират родителите за техните наблюдения върху поведението и развитието на детето.
+								</p>
+								<div class="pt-8 flex md:flex-row flex-col justify-center items-center">
+									<PuzzleButton />
+								</div>
+							</div>
+							<div class="xl:w-1/2 w-full">
+								<img src="/assets/home/семейство-на-дете-с-нарушения-в-развитието.webp" alt="Търсене на надеждна информация за синдром на Даун" class="mt-5 w-full h-auto object-cover rounded shadow" />
+								<p class="c-paper lg:c-paper-inv italic font-300 mt-2 leading-5 lg:leading-6" style="font-family: 'Oswald', sans-serif !important; letter-spacing: 1px;">
+									Препоръчително е да донесете всички налични медицински документи, които могат да бъдат от полза за изясняване на актуалното състояние.
+								</p>
+							</div>
 						</div>
 					</AnimatedComponent>
 				</div>
@@ -557,19 +546,14 @@ export default function Page() {
 										<div class="mx--20px">
 											<img src="/assets/detsa-s-autizam/различни-методи-терапии.webp" alt="Различни методи за терапия." class="important-b-rd-0 important-md:b-rd-12px w-full h-auto object-cover shadow" />
 										</div>
-										<div class="flex flex-col items-center gap-1 relative md:hidden">
-											<h2 class="text-transparent bg-clip-text bg-[url(/assets/detsa-s-autizam/различни-методи-терапии.webp)] bg-cover bg-center opacity-8 scale-30 md:scale-50" style="background-position: right 0% top 0%;">
-												терапия
-											</h2>
-										</div>
 									</div>
 								</div>
 							</div>
 						</AnimatedComponent>
 					</section>
 
-					<section class="md:w-1/2 pt-10 md:pt-0">
-						<AnimatedComponent class="w-full md:px-3 my-auto flex flex-col justify-center items-center w-full md:pl-7 md:pr-0 px-3 mt--10 z-10">
+					<section class="md:w-1/2 pt-25 md:pt-0">
+						<AnimatedComponent class="w-full md:px-0 my-auto flex flex-col justify-center items-center w-full md:pl-2.5 md:pr-0 px-3 mt--10 z-10">
 							<H3Blue title="Какво можем да очакваме" />
 							<div class="relative mt--10">
 								<BackgroundIcons />
@@ -594,64 +578,81 @@ export default function Page() {
 				<div class="xl:px-60 mx-auto md:pt-0 pt-10">
 					<H3Pink title="Някои от най-ефективните терапии" />
 					<AnimatedComponent>
-						<p class="md:px-10 md:mb-5 mb-2 mt-0 c-gray-700 leading-5 font-size-14px font-400 italic tracking md:pl-6" style="font-family: 'Oswald', sans-serif !important; letter-spacing: 0.3px;">Препоръчват се от 8 до 24 сесии седмично за оптимални резултати</p>
+						<p class="md:mb-5 mb-2 mt-0 c-gray-700 leading-5 font-size-14px font-400 italic tracking md:pl-6" style="font-family: 'Oswald', sans-serif !important; letter-spacing: 0.3px;">Препоръчват се от 8 до 24 сесии седмично за оптимални резултати</p>
 					</AnimatedComponent>
-					<div class="flex md:flex-row flex-col flex-wrap gap-5 md:gap-0 justify-center items-center">
-						<AuthorContainer
-							href=""
-							style="background:linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0.5)),url(/assets/sindrom-na-daun/звукова-стимулация.webp); background-position: right 50% bottom 85% !important; background-repeat: no-repeat; background-size: cover;"
-							name="Звукова стимулация"
-							description="Подпомага сензорната и слуховата обработка, намалява тревожността и хиперактивността и стимулира езиковото развитие"
-						/>
-						<AuthorContainer
-							href=""
-							style="background:linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0.6)),url(/assets/home/детски-логопед.webp); background-position: right 50% bottom 85% !important; background-repeat: no-repeat; background-size: cover;"
-							name="Детски логопед"
-							description="Терапията подобрява разбирането и изпълнението на команди, формирането на самостоятелни изречения и умението за водене на диалог"
-						/>
-						<AuthorContainer
-							href=""
-							style="background:linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.5)),url(/assets/sindrom-na-daun/ерготерапия-деца.webp); background-position: right 50% bottom 85% !important; background-repeat: no-repeat; background-size: cover;"
-							name="Ерготерапия"
-							description="Подобрява координацията и прецизността на ръцете и пръстите, което е ключово за писане, рисуване и работа с малки предмети"
-						/>
-						<AuthorContainer
-							href=""
-							style="background:linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.6)),url(/assets/sindrom-na-daun/детски-психолог.webp); background-position: right 50% bottom 85% !important; background-repeat: no-repeat; background-size: cover;"
-							name="Детски психолог"
-							description="Подкрепя развитието на умения за организиране, планиране и решаване на проблеми, както и за емоционална саморегулация и адаптация към различни ситуации"
-						/>
-						<AuthorContainer
-							href=""
-							style="background:linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0.5)),url(/assets/sindrom-na-daun/психомоторика.webp); background-position: right 50% bottom 85% !important; background-repeat: no-repeat; background-size: cover;"
-							name="Психомоторика"
-							description="Подобрява контрола при ходене, бягане и скачане, както и координацията на ръцете и пръстите за по-прецизно писане и рисуване"
-						/>
-						<AuthorContainer
-							href=""
-							style="background:linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0.5)),url(/assets/sindrom-na-daun/многофункционална-стая.webp); background-position: right 50% bottom 85% !important; background-repeat: no-repeat; background-size: cover;"
-							name="Многофункционална стая"
-							description="Стимулира имитационни умения, подпомага изпълнението на инструкции, развива фината моторика"
-						/>
+					<div class="gap-12 md:pt-5 pb-5 md:pb-0">
+						<div class="">
+							<ReviewSlider2
+								variant="dots0"
+								reviews={[
+									{ name: "1" },
+									{ name: "2" },
+									{ name: "3" },
+									{ name: "4" },
+									{ name: "5" },
+									{ name: "6" },
+									{ name: "7" },
+									{ name: "8" },
+									{ name: "9" },
 
-						<AuthorContainer
-							href=""
-							style="background:linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.6)),url(/assets/testing-image.jpg); background-position: right 50% bottom 85% !important; background-repeat: no-repeat; background-size: cover;"
-							name="Когнитивно-поведенческа терапия"
-							description="Помага на децата да разберат и променят негативните си мисли и поведение, за да се справят по-добре с емоциите и отношенията с другите"
-						/>
-						<AuthorContainer
-							href=""
-							style="background:linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0.5)),url(/assets/testing-image.jpg); background-position: right 50% bottom 85% !important; background-repeat: no-repeat; background-size: cover;"
-							name="Консултация с хомеопат"
-							description="Подпомага цялостното здраве и емоционално равновесие на детето, като подкрепя организма по естествен начин и допринася за по-добро ежедневно функциониране"
-						/>
-						<AuthorContainer
-							href=""
-							style="background:linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0.5)),url(/assets/testing-image.jpg); background-position: right 50% bottom 85% !important; background-repeat: no-repeat; background-size: cover;"
-							name="Игрова терапия"
-							description="Подобрява емоционалната регулация, развива социални, когнитивни и двигателни умения и намалява тревожността в сигурна и подкрепяща среда."
-						/>
+								]}
+							>
+								<AuthorContainer
+									href=""
+									style="background:linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0.5)),url(/assets/sindrom-na-daun/звукова-стимулация.webp); background-position: right 50% bottom 85% !important; background-repeat: no-repeat; background-size: cover;"
+									name="Звукова стимулация"
+									description="Подпомага сензорната и слуховата обработка, намалява тревожността и хиперактивността и стимулира езиковото развитие"
+								/>
+								<AuthorContainer
+									href=""
+									style="background:linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0.6)),url(/assets/home/детски-логопед.webp); background-position: right 50% bottom 85% !important; background-repeat: no-repeat; background-size: cover;"
+									name="Детски логопед"
+									description="Терапията подобрява разбирането и изпълнението на команди, формирането на самостоятелни изречения и умението за водене на диалог"
+								/>
+								<AuthorContainer
+									href=""
+									style="background:linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.5)),url(/assets/sindrom-na-daun/ерготерапия-деца.webp); background-position: right 50% bottom 85% !important; background-repeat: no-repeat; background-size: cover;"
+									name="Ерготерапия"
+									description="Подобрява координацията и прецизността на ръцете и пръстите, което е ключово за писане, рисуване и работа с малки предмети"
+								/>
+								<AuthorContainer
+									href=""
+									style="background:linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.6)),url(/assets/sindrom-na-daun/детски-психолог.webp); background-position: right 50% bottom 85% !important; background-repeat: no-repeat; background-size: cover;"
+									name="Детски психолог"
+									description="Подкрепя развитието на умения за организиране, планиране и решаване на проблеми, както и за емоционална саморегулация и адаптация към различни ситуации"
+								/>
+								<AuthorContainer
+									href=""
+									style="background:linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0.5)),url(/assets/sindrom-na-daun/психомоторика.webp); background-position: right 50% bottom 85% !important; background-repeat: no-repeat; background-size: cover;"
+									name="Психомоторика"
+									description="Подобрява контрола при ходене, бягане и скачане, както и координацията на ръцете и пръстите за по-прецизно писане и рисуване"
+								/>
+								<AuthorContainer
+									href=""
+									style="background:linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0.5)),url(/assets/sindrom-na-daun/многофункционална-стая.webp); background-position: right 50% bottom 85% !important; background-repeat: no-repeat; background-size: cover;"
+									name="Многофункционална стая"
+									description="Стимулира имитационни умения, подпомага изпълнението на инструкции, развива фината моторика"
+								/>
+								<AuthorContainer
+									href=""
+									style="background:linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.6)),url(/assets/testing-image.jpg); background-position: right 50% bottom 85% !important; background-repeat: no-repeat; background-size: cover;"
+									name="Когнитивно-поведенческа терапия"
+									description="Помага на децата да разберат и променят негативните си мисли и поведение, за да се справят по-добре с емоциите и отношенията с другите"
+								/>
+								<AuthorContainer
+									href=""
+									style="background:linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0.5)),url(/assets/testing-image.jpg); background-position: right 50% bottom 85% !important; background-repeat: no-repeat; background-size: cover;"
+									name="Консултация с хомеопат"
+									description="Подпомага цялостното здраве и емоционално равновесие на детето, като подкрепя организма по естествен начин и допринася за по-добро ежедневно функциониране"
+								/>
+								<AuthorContainer
+									href=""
+									style="background:linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0.5)),url(/assets/testing-image.jpg); background-position: right 50% bottom 85% !important; background-repeat: no-repeat; background-size: cover;"
+									name="Игрова терапия"
+									description="Подобрява емоционалната регулация, развива социални, когнитивни и двигателни умения и намалява тревожността в сигурна и подкрепяща среда."
+								/>
+							</ReviewSlider2>
+						</div>
 					</div>
 				</div>
 
@@ -699,7 +700,7 @@ export default function Page() {
 									{ name: "Viktoria Simeonova" },
 								]}>
 								<GoogleStarReview
-									img="/assets/GoogleLogoPNGImage.webp"
+									img="https://lh3.googleusercontent.com/a/ACg8ocIZRpc48TQsa_KBvFTmJvD-hLjEWf6LX9fXZ4p1hajsvQRcxg=w72-h72-p-rp-mo-br100"
 									reviewText={
 										<>
 											Изключително сме благодарни на целият екип от професионалисти в Sense Center!<br />
@@ -710,10 +711,10 @@ export default function Page() {
 									}
 									name="Karina Stoqnova"
 									stars={5}
-									hrefGoogleReview="https://maps.app.goo.gl/pgSmLpppJkuxo1SH6"
+									hrefGoogleReview="https://maps.app.goo.gl/77yXvd1jnUBXGt8JA"
 								/>
 								<GoogleStarReview
-									img="/assets/GoogleLogoPNGImage.webp"
+									img="https://lh3.googleusercontent.com/a/ACg8ocJOv6-6inqTacvSZTKuVzDy01uZiWrkJ0IIwwRV4RSqvem3SM8=w72-h72-p-rp-mo-ba2-br100"
 									reviewText={
 										<>
 											Детски център Sense върна усмивките на нашите лица. В центъра се излекува нашият син Марин. Благодаря ви от сърце за професионализма и отдадеността. Вечно благодарни: семейство Марковски
@@ -721,10 +722,10 @@ export default function Page() {
 									}
 									name="Philip Markovski"
 									stars={5}
-									hrefGoogleReview="https://maps.app.goo.gl/pgSmLpppJkuxo1SH6"
+									hrefGoogleReview="https://maps.app.goo.gl/svMKs4vPSk4fSK2J7"
 								/>
 								<GoogleStarReview
-									img="/assets/GoogleLogoPNGImage.webp"
+									img="https://lh3.googleusercontent.com/a/ACg8ocJUDpm4pRLN7nQpE4UqZqdpR6P2ttscgRBo5SIXU1tQorvXuQ=w72-h72-p-rp-mo-br100"
 									reviewText={
 										<>
 											Много уютно място, съобразено с всички нужди и предпоставки за един полезен и приятен престой за всички деца. Персонала от специалисти е много добре подбран и обучен, и влагат много желание и енергия в работата си. С подкрепата и съдействието им, с напредъка в развитието, уменията и знанията, които получават децата ни, са и видимо щастливи след заниманията в центъра! Препоръчвам!
@@ -732,10 +733,10 @@ export default function Page() {
 									}
 									name="Monika Marinova"
 									stars={5}
-									hrefGoogleReview="https://maps.app.goo.gl/pgSmLpppJkuxo1SH6"
+									hrefGoogleReview="https://maps.app.goo.gl/K4ekLdScDgyXJnwJ6"
 								/>
 								<GoogleStarReview
-									img="/assets/GoogleLogoPNGImage.webp"
+									img="https://lh3.googleusercontent.com/a/ACg8ocJ-d8gjlkboTx4M2-40mGVmZBoc7Uv8NOPzfK28REcWfBCNUQ=w72-h72-p-rp-mo-br100"
 									reviewText={
 										<>
 											Развитие и забавление в едно!<br />
@@ -745,10 +746,10 @@ export default function Page() {
 									}
 									name="Viktoria Lybomir"
 									stars={5}
-									hrefGoogleReview="https://maps.app.goo.gl/pgSmLpppJkuxo1SH6"
+									hrefGoogleReview="https://maps.app.goo.gl/fojiE9Y7eQaG983T7"
 								/>
 								<GoogleStarReview
-									img="/assets/GoogleLogoPNGImage.webp"
+									img="https://lh3.googleusercontent.com/a/ACg8ocL8FzRUcI-wvBMBi8H20qvDkOhTHrirdSuqFsf1RHh-bEaMYA=w72-h72-p-rp-mo-br100"
 									reviewText={
 										<>
 											Дъщеря ми посещава центъра от почти 3 месеца . При първото ни посещение ни направи впечатление колко много специалисти има и колко много терапии предлагат . След прегледа се установи , че тя е за Звукова и Речева терапия . Напредъка до момента е огромен .
@@ -756,7 +757,7 @@ export default function Page() {
 									}
 									name="Atanaska Beleva"
 									stars={5}
-									hrefGoogleReview="https://maps.app.goo.gl/pgSmLpppJkuxo1SH6"
+									hrefGoogleReview="https://maps.app.goo.gl/coKvdnjN954kjy1P6"
 								/>
 							</ReviewSlider>
 						</AnimatedComponent>
@@ -928,7 +929,6 @@ export default function Page() {
 					</section>
 				</div>
 			</section>
-			<GradientFooter />
 		</>
 	);
 }

@@ -6,7 +6,6 @@ import { PuzzleButton, PuzzleButton2 } from "../../components/PuzzleButton";
 import { DoodleDecor } from "../../components/BackgroundDecor";
 import { BackgroundIcons } from "../../components/BackgroundIcons";
 import { Collapse } from "../../components/FAQ";
-import { GradientFooter } from "../../components/GradientFooter";
 
 function SingleCollapse() {
 	return (
@@ -95,11 +94,6 @@ export default function Page() {
 									<div class="mx--20px">
 										<img src="/assets/SOP/ограмотяване-деца-специални-образователни-потребности.webp" alt="Ограмотяване на деца със специални образователни потребности." class="important-b-rd-0 important-md:b-rd-12px w-full h-auto object-cover shadow" />
 									</div>
-									<div class="flex flex-col items-center gap-1 relative md:hidden">
-										<h2 class="text-transparent bg-clip-text bg-[url(/assets/SOP/ограмотяване-деца-специални-образователни-потребности.webp)] bg-cover bg-center opacity-8 scale-30 md:scale-50" style="background-position: right 0% top 0%;">
-											ЦЕНАТА
-										</h2>
-									</div>
 								</div>
 							</div>
 						</div>
@@ -108,7 +102,7 @@ export default function Page() {
 
 				<section class="md:w-1/2">
 					<AnimatedComponent class="w-full md:px-3 my-auto">
-						<p class="mt-1">
+						<p class="mt-10 md:mt-0">
 							В Sense Center вярваме, че всяко дете е уникално – със свои нужди, индивидуално темпo на развитие и потенциал. Именно затова нямаме фиксирани универсални програми. Провеждаме първична оценка/консултация по време на която нашите специалисти анализират актуалното състояние, уменията и трудностите на детето. След което започва изготвянето на строго индивидуална терапевтична програма, която определя най-подходящите видове терапии, както и техният брой и честота.
 						</p>
 					</AnimatedComponent>
@@ -200,11 +194,6 @@ export default function Page() {
 									<div class="mx--20px">
 										<img src="/assets/SOP/ограмотяване-деца-специални-образователни-потребности.webp" alt="Ограмотяване на деца със специални образователни потребности." class="important-b-rd-0 important-md:b-rd-12px w-full h-auto object-cover shadow" />
 									</div>
-									<div class="flex flex-col items-center gap-1 relative md:hidden">
-										<h2 class="text-transparent bg-clip-text bg-[url(/assets/SOP/ограмотяване-деца-специални-образователни-потребности.webp)] bg-cover bg-center opacity-8 scale-30 md:scale-50" style="background-position: right 0% top 0%;">
-											ПРОГРАМА
-										</h2>
-									</div>
 								</div>
 							</div>
 						</div>
@@ -213,7 +202,7 @@ export default function Page() {
 
 				<section class="md:w-1/2">
 					<AnimatedComponent class="w-full md:px-3 my-auto">
-						<p class="mt-1">
+						<p class="mt-10 md:mt-0">
 							В Sense Center всяко дете получава индивидуален терапевтичен план, изготвен въз основа на първичната оценка и специфичните му нужди.
 						</p>
 						<p class="mt-1">
@@ -578,11 +567,6 @@ export default function Page() {
 									<div class="mx--20px">
 										<img src="/assets/SOP/ограмотяване-деца-специални-образователни-потребности.webp" alt="Ограмотяване на деца със специални образователни потребности." class="important-b-rd-0 important-md:b-rd-12px w-full h-auto object-cover shadow" />
 									</div>
-									<div class="flex flex-col items-center gap-1 relative md:hidden">
-										<h2 class="text-transparent bg-clip-text bg-[url(/assets/SOP/ограмотяване-деца-специални-образователни-потребности.webp)] bg-cover bg-center opacity-8 scale-30 md:scale-50" style="background-position: right 0% top 0%;">
-											сесия
-										</h2>
-									</div>
 								</div>
 							</div>
 						</div>
@@ -591,7 +575,7 @@ export default function Page() {
 
 				<section class="md:w-1/2">
 					<AnimatedComponent class="w-full md:px-3 my-auto">
-						<p class="mt-1">
+						<p class="mt-10 md:mt-0">
 							Единичната терапевтична сесия представлява възможност за фокусирана работа върху конкретно затруднение, без необходимостта от дългосрочно ангажиране. Сесията е структурирана така, че да предоставим максимална полза за Вас и Вашето дете в рамките на часа. Тази форма на подкрепа е особено подходяща когато се нуждаете от професионална консултация, препоръки и съвети за подкрепа на детското развитие. Въпреки това, нашият подход в Sense Center е комплексен и обикновено препоръчваме комбинирани програми, включващи терапии, които се допълват и подпомагат взаимно за постигане на оптимални резултати.
 						</p>
 					</AnimatedComponent>
@@ -677,30 +661,33 @@ export default function Page() {
 
 			<div class="mx-20px">
 				<H3Blue variant="h2" title="Първична оценка" />
-				<div class="flex flex-col justify-center items-center max-w-1500px mx-auto xl:px-30">
-					<AnimatedComponent class="max-w-1500px px-5 md:px-20 md:py-10 py-5 bg-gradient-to-t from-brand-yellow to-brand b-rd-12px flex flex-col">
-						<p class="c-paper mb-1">
-							В Sense Center предлагаме първична оценка от специалист за деца със съмнение за забавяне в развитието.
-						</p>
-						<p class="c-paper">
-							По време на консултацията се извършва обследване на поведението и актуалното състояние на детето.
-						</p>
-						<img src="/assets/home/наблюдение-на-дете-с-нарушения-в-развитието.webp" alt="Първична оценка при съмнение за соп." class="my-5 w-full h-auto object-cover rounded shadow" />
-						<p class="c-paper mb-1">
-							Оценяват се социалните и комуникативните умения на детето, неговото двигателно развитие, както и общите познавателни способности.
-						</p>
-						<p class="c-paper mb-1">
-							Едновременно с това специалистите интервюират родителите за техните наблюдения и за училищното представяне на детето.
-						</p>
-						<img src="/assets/home/семейство-на-дете-с-нарушения-в-развитието.webp" alt="Резултат от безплатна първична оценка при соп." class="mt-5 w-full h-auto object-cover rounded shadow" />
-						<p class="c-paper italic font-300 mt-1 op-90%" style="font-family: 'Oswald', sans-serif !important; letter-spacing: 1px;">
-							Препоръчително е да донесете всички налични медицински документи, които могат да бъдат от полза за изясняване на актуалното състояние на детето.</p>
-						<div class="pt-10 flex md:flex-row flex-col justify-center items-center gap-2">
-							<PuzzleButton />
-							<PuzzleButton2
-								href=""
-								text="+ 359 879 800 013"
-							/>
+				<div class="flex flex-col justify-center items-center mx-auto px-20px xl:px-30">
+					<AnimatedComponent class="max-w-1500px px-5 md:px-20 md:pb-10 md:pt-4 py-5 md:bg-gradient-to-t lg:from-paper lg:to-paper bg-gradient-to-t from-brand-yellow to-brand b-rd-12px flex flex-col">
+						<div class="flex flex-col lg:flex-row-reverse justify-center items-center gap-8">
+							<div class="xl:w-1/2 w-full md:pl-7">
+								<p class="c-paper lg:c-paper-inv mb-1">
+									В Sense Center предлагаме <strong class="font-[MYRIADPRO-Bold]">първична оценка</strong> от специалист за деца със съмнение за забавяне в развитието.
+								</p>
+								<p class="c-paper lg:c-paper-inv">
+									По време на консултацията се извършва обследване на поведението и актуалното състояние на детето.
+								</p>
+								<img src="/assets/home/наблюдение-на-дете-с-нарушения-в-развитието.webp" alt="" class="lg:hidden my-5 w-full h-auto object-cover rounded shadow" />
+								<p class="c-paper lg:c-paper-inv mb-1">
+									Оценяват се социалните и комуникативните умения на детето, неговото двигателно развитие, както и общите познавателни способности.
+								</p>
+								<p class="c-paper lg:c-paper-inv">
+									Едновременно с това специалистите интервюират родителите за техните наблюдения и за училищното представяне на детето.
+								</p>
+								<div class="pt-8 flex md:flex-row flex-col justify-center items-center">
+									<PuzzleButton />
+								</div>
+							</div>
+							<div class="xl:w-1/2 w-full">
+								<img src="/assets/home/семейство-на-дете-с-нарушения-в-развитието.webp" alt="" class="mt-5 w-full h-auto object-cover rounded shadow" />
+								<p class="c-paper lg:c-paper-inv italic font-300 mt-2 leading-5 lg:leading-6" style="font-family: 'Oswald', sans-serif !important; letter-spacing: 1px;">
+									Препоръчително е да донесете всички налични медицински документи, които могат да бъдат от полза за изясняване на актуалното състояние на детето.
+								</p>
+							</div>
 						</div>
 					</AnimatedComponent>
 				</div>
@@ -796,7 +783,6 @@ export default function Page() {
 			</section>
 
 			<DoodleDecor variant="blue2" />
-			<GradientFooter />
 		</>
 	);
 }

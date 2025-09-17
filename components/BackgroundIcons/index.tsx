@@ -83,7 +83,7 @@ export function BackgroundIcons() {
   });
 
   return (
-    <AnimatedComponent class="relative inset-0 top-0 pointer-events-none z-0">
+    <div class="relative inset-0 top-0 pointer-events-none z-0">
       <For each={icons()}>
         {(icon) => (
           <img
@@ -101,6 +101,6 @@ export function BackgroundIcons() {
           />
         )}
       </For>
-    </AnimatedComponent>
+    </div>
   );
 }

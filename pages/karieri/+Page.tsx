@@ -9,7 +9,6 @@ import { BackgroundIcons } from "../../components/BackgroundIcons";
 import { Collapse } from "../../components/FAQ";
 import { VideoHero } from "../../components/HeroVideo";
 import { createSignal } from 'solid-js';
-import { GradientFooter } from "../../components/GradientFooter";
 
 const [isPlaying, setIsPlaying] = createSignal(false);
 
@@ -75,43 +74,40 @@ export default function Page() {
 				/>
 
 				<div class="absolute inset-0 z-30 pointer-events-none flex flex-col items-center justify-end pb-18 md:pb-10 text-center px-4 text-white">
-					<AnimatedComponent>
+					<div class={`absolute ${isPlaying() ? 'top-32% sm:top-95% lg:top-100% mt-30' : 'top-66% md:top-60% mt-0'}`}>
+
 						<div>
 							<h1
 								class={`mb-4 md:mb-7 transition-colors duration-500 ${isPlaying()
-									? 'text-black md:text-white md:hidden'
-									: 'text-white md:text-white md:block'
+									? 'inline-block pb-[0.2em] bg-gradient-to-r from-[#E11172] to-[#FFAE01] bg-clip-text text-transparent [-webkit-background-clip:text] [-webkit-text-fill-color:transparent]'
+									: 'text-white'
 									}`}
 							>
 								Присъединете се към екип, който вярва в потенциала на всяко дете
 							</h1>
 						</div>
-					</AnimatedComponent>
 
-					<AnimatedComponent
-						class={`important-delay-600 mt-8 md:mt-10 relative text-center ${isPlaying() ? 'md:pb-30' : 'md:pb-0'
-							}`}
-					>
-						<div class="flex md:flex-row flex-col justify-center items-center gap-3 pointer-events-auto">
-							<PuzzleButton2
-								class="important-bg-brand important-hover:bg-brand-hover"
-								style2="font-weight:500; font-size:14px !important;"
-								img="/assets/sense-puzzle-piece.svg"
-								href=""
-								text="Кандидатствайте"
-							/>
-							<PuzzleButton2
-								style2="font-weight:500; font-size:14px !important;"
-								img="/assets/sense-orange-puzzle-piece.svg"
-								href=""
-								text="Вижте успешни истории"
-							/>
+						<div
+							class={`important-delay-600 mt-8 md:mt-10 relative text-center ${isPlaying() ? 'md:pb-30' : 'md:pb-0'
+								}`}
+						>
+							<div class="flex md:flex-row flex-col justify-center items-center gap-3 pointer-events-auto">
+								<PuzzleButton2
+									class="important-bg-brand/80 important-group-hover:bg-brand-hover/80"
+									href=""
+									text="Кандидатствайте"
+								/>
+								<PuzzleButton2
+									href=""
+									text="Вижте успешни истории"
+								/>
+							</div>
 						</div>
-					</AnimatedComponent>
+					</div>
 				</div>
 			</div>
 
-			<section class="gap-12 pb-8 md:pb-20 xl:px-30 pt-20 lg:pt-40">
+			<section class={`gap-12 pb-8 md:pb-20 xl:px-30 ${isPlaying() ? 'mt-40 sm:mt-120 md:mt-150 lg:mt-160' : 'pt-20 lg:pt-40'}`}>
 				<H3Blue variant="h2" title="Смислена работа с реално въздействие върху децата" />
 				<div class="md:pb-0 pb-10">
 					<AnimatedComponent>
@@ -533,13 +529,8 @@ export default function Page() {
 					<AnimatedComponent class="md:w-1/2 md:mx-0 mx--20px">
 						<img src="/assets/home/терапия-чрез-игра-център-за-детско-развитие.webp" alt="" class="w-full h-auto object-cover shadow important-b-rd-0px important-md:b-rd-12px" />
 					</AnimatedComponent>
-					<AnimatedComponent class="flex flex-col items-center gap-1 relative mb-2 md:hidden">
-						<h2 class="text-transparent bg-clip-text bg-[url(/assets/purple-orange-gradient-title-bg.webp)] bg-cover bg-center opacity-8 scale-30 md:scale-50" style="background-position: right 0% top 0%;">
-							позиции
-						</h2>
-					</AnimatedComponent>
 
-					<div class="relative w-full px-3 md:w-1/2 md:pl-7">
+					<div class="relative w-full px-3 md:w-1/2 md:pl-7 mt-10 md:mt-0">
 						<AnimatedComponent>
 							<p class="mt--2">
 								Sense Center е място, което се изгражда от хората в него. Ако чувствате, че можете да допринесете с опита, енергията и идеите си – разгледайте актуалните позиции и кандидатствайте. Ще се радваме да Ви опознаем.
@@ -596,7 +587,6 @@ export default function Page() {
 				<AnimatedComponent>
 					<div class="flex flex-col lg:flex-row justify-center gap-10 xl:gap-20">
 						<ServiceContaner
-							link=""
 							img="/assets/home/мултидисциплинарен-екип.webp"
 							alt="test"
 							title="Иновативен терапевтичен център за деца"
@@ -612,7 +602,6 @@ export default function Page() {
 						</div>
 
 						<ServiceContaner
-							link=""
 							img="/assets/home/емоционална-прегръдка-в-специализиран-детски-център.webp"
 							alt="test"
 							title="Методологията на Sense Center"
@@ -638,9 +627,7 @@ export default function Page() {
 					</h3>
 				</AnimatedComponent>
 				<PuzzleButton2
-					class="important-bg-brand important-hover:bg-brand-hover"
-					style2="font-weight:500; font-size:14px !important;"
-					img="/assets/sense-puzzle-piece.svg"
+					class="important-bg-brand/80 important-group-hover:bg-brand-hover/80"
 					href=""
 					text="Кандидатствайте"
 				/>
@@ -672,9 +659,7 @@ export default function Page() {
 						</div>
 					</AnimatedComponent>
 					<PuzzleButton2
-						class="important-bg-brand important-hover:bg-brand-hover"
-						style2="font-weight:500; font-size:14px !important;"
-						img="/assets/sense-puzzle-piece.svg"
+						class="important-bg-brand/80 important-group-hover:bg-brand-hover/80"
 						href=""
 						text="Кандидатствайте"
 					/>
@@ -687,7 +672,6 @@ export default function Page() {
 				<H3Blue variant="h2" title="Въпроси и отговори" />
 				<SingleCollapse />
 			</section>
-			<GradientFooter />
 		</>
 	);
 }

@@ -1,5 +1,5 @@
 import "solid-slider/slider.css";
-import { AuthorContainer, GoogleStarReview, PuzzleIconReview, ReviewSlider, ReviewSlider2, StarReview } from '../../components/ReviewSlider';
+import { AuthorContainer, GoogleStarReview, PuzzleIconReview, ReviewersImageReview, ReviewSlider, ReviewSlider2 } from '../../components/ReviewSlider';
 import { AnimatedComponent } from '../../components/AnimateOnView';
 import { H2Echo, H3Blue, H3Pink, H3SolidPink } from '../../components/H2WithImage';
 import { ServiceContaner } from '../../components/ServiceContainer';
@@ -18,17 +18,7 @@ function SingleCollapse() {
 	return (
 		<>
 			<div class="flex flex-col gap-5 md-gap-2 cursor-pointer max-w-1200px mx-auto">
-				<Collapse title="1. Могат ли родителите да присъстват по време на терапията?" desc="В Sense дневен център за деца с увреждания София вярваме, че за да бъде терапията наистина ефективна, е важно детето да бъде само с терапевта по време на сесиите.">
-					<div class="mt-4">
-						Присъствието на родител може да разсейва детето и да му попречи да се отпусне и ангажира пълноценно. Понякога то се държи по различен начин, търси защита или подкрепа, вместо да изгради самостоятелност и доверие към терапевта.
-					</div>
-					<div class="mt-4">
-						Също така, когато родителят не присъства, терапевтът по-лесно изгражда авторитет и ефективна връзка с детето.
-						Разбира се, родителите са важна част от целия процес. Затова поддържаме редовна комуникация и споделяме всичко значимо около напредъка и нуждите на детето.
-					</div>
-				</Collapse>
-
-				<Collapse title="2. Какво включва първоначалната оценка на детето?" desc="Първоначалната оценка обикновено включва:">
+				<Collapse title="1. Какво включва първоначалната оценка на детето?" desc="Първоначалната оценка обикновено включва:">
 					<div class="mt-4">
 						<ul class="ml-5">
 							<li class="">
@@ -47,9 +37,9 @@ function SingleCollapse() {
 					</div>
 				</Collapse>
 
-				<Collapse title="3. Трябва ли да нося нещо конкретно за първичната оценка?" desc="В случай, че имате налична медицинска документация от предходни прегледи - епикризи, неврологични изследвания – ЕЕГ, ЯМР, слухови тестове, психиатрични, психологични и логопедични оценки." />
+				<Collapse title="2. Трябва ли да нося нещо конкретно за първичната оценка?" desc="В случай, че имате налична медицинска документация от предходни прегледи - епикризи, неврологични изследвания – ЕЕГ, ЯМР, слухови тестове, психиатрични, психологични и логопедични оценки." />
 
-				<Collapse title="4. Каква информация трябва да предоставя по време на първичната оценка на детето?" desc="По време на първична оценка на актуалното състояние е необходимо да споделите:">
+				<Collapse title="3. Каква информация трябва да предоставя по време на първичната оценка на детето?" desc="По време на първична оценка на актуалното състояние е необходимо да споделите:">
 					<div class="mt-4">
 						<ul class="ml-5">
 							<li class="">
@@ -66,23 +56,23 @@ function SingleCollapse() {
 					<div class="mt-4">Тази информация ще ни помогне да създадем персонализиран и по-ефективен план за терапия.</div>
 				</Collapse>
 
-				<Collapse title="5. Какво се случва, ако детето не иска да съдейства или проявява съпротива по време на терапия?" desc="Случва се понякога децата да се чувстват претоварени, несигурни или просто да имат нужда от повече време за адаптация. В такива моменти подхождаме с търпение и разбиране като променяме дейността или правим пауза." >
+				<Collapse title="4. Какво се случва, ако детето не иска да съдейства или проявява съпротива по време на терапия?" desc="Случва се понякога децата да се чувстват претоварени, несигурни или просто да имат нужда от повече време за адаптация. В такива моменти подхождаме с търпение и разбиране като променяме дейността или правим пауза." >
 					<div class="mt-4">
 						Включваме игрови подходи и се стремим да направим средата максимално приятна. Ако нежеланието е постоянно, провеждаме екипни срещи, за да изградим нова стратегия за работа с детето.
 					</div>
 				</Collapse>
 
-				<Collapse title="6. Как да се справим с емоционални изблици у дома и има ли връзка с терапията?" desc="Емоционалните изблици често са част от процеса на адаптация и развитие. По време на сесиите научаваме детето да разпознава и контролира своите емоции чрез игрови техники и упражнения. Важно е родителите също да прилагат този подход у дома с помощта на нашите препоръки." />
+				<Collapse title="5. Как да се справим с емоционални изблици у дома и има ли връзка с терапията?" desc="Емоционалните изблици често са част от процеса на адаптация и развитие. По време на сесиите научаваме детето да разпознава и контролира своите емоции чрез игрови техники и упражнения. Важно е родителите също да прилагат този подход у дома с помощта на нашите препоръки." />
 
-				<Collapse title="7. Колко често се провеждат терапевтичните сесии и колко дълго продължават?" desc="Всяка терапевтична сесия е с продължителност 40 минути. Честотата и вида на сесиите се определя след провеждането на първична оценка и спрямо индивидуалните нужди на всяко дете. Препоръчителният срок за посещения е средно 6 месеца." />
+				<Collapse title="6. Колко често се провеждат терапевтичните сесии и колко дълго продължават?" desc="Всяка терапевтична сесия е с продължителност 40 минути. Честотата и вида на сесиите се определя след провеждането на първична оценка и спрямо индивидуалните нужди на всяко дете. Препоръчителният срок за посещения е средно 6 месеца." />
 
-				<Collapse title="8. Как се проследява прогресът на детето?" desc="Проследяването на развитието е ключова част от работата ни. Регулярно провеждаме вътрешни оценки и обсъждаме напредъка на срещите с екипа. Всеки месец предоставяме подробна обратна връзка на родителите и при нужда коригираме терапевтичния план." />
+				<Collapse title="7. Как се проследява прогресът на детето?" desc="Проследяването на развитието е ключова част от работата ни. Регулярно провеждаме вътрешни оценки и обсъждаме напредъка на срещите с екипа. Всеки месец предоставяме подробна обратна връзка на родителите и при нужда коригираме терапевтичния план." />
 
-				<Collapse title="9. Предлагате ли консултации и подкрепа за родителите?" desc="Да, активно включваме родителите в терапевтичния процес чрез индивидуални консултации. Те са възможност да обсъдим напредъка на детето, да споделим полезни стратегии за подкрепа у дома и да отговорим на въпросите, които вълнуват семейството. Вярваме, че най-добрите резултати идват, когато работим в партньорство с родителите." />
+				<Collapse title="8. Предлагате ли консултации и подкрепа за родителите?" desc="Да, активно включваме родителите в терапевтичния процес чрез индивидуални консултации. Те са възможност да обсъдим напредъка на детето, да споделим полезни стратегии за подкрепа у дома и да отговорим на въпросите, които вълнуват семейството. Вярваме, че най-добрите резултати идват, когато работим в партньорство с родителите." />
 
-				<Collapse title="10. Какви специалисти работят в центъра за детско развитие?" desc="В Sense Center работят висококвалифицирани експерти в различни области - психолози, логопеди, кинезитерапевти, социални педагози, ерготерапевти и нутриционисти." />
+				<Collapse title="9. Какви специалисти работят в центъра за детско развитие?" desc="В Sense Center работят висококвалифицирани експерти в различни области - психолози, логопеди, кинезитерапевти, социални педагози, ерготерапевти и нутриционисти." />
 
-				<Collapse title="11. С какви възрастови групи работите?" desc="Центърът за деца с нарушения в развитието Sense работи с деца и младежи на възраст от 18 месеца до 18 години, като ги разделяме на три основни групи:">
+				<Collapse title="10. С какви възрастови групи работите?" desc="Центърът за деца с нарушения в развитието Sense работи с деца и младежи на възраст от 18 месеца до 18 години, като ги разделяме на три основни групи:">
 					<div class="mt-4">
 						<ul class="ml-5">
 							<li class="">
@@ -99,12 +89,12 @@ function SingleCollapse() {
 					<div class="mt-4">Освен това, предлагаме психологическа подкрепа за родителите, за да подпомогнем тяхната роля и да им предоставим подходящи насоки, с които да подкрепят децата си независимо дали са със СОП или не. Това включва консултации и стратегии за справяне с различни трудности, с които може да се сблъскат като родители.</div>
 				</Collapse>
 
-				<Collapse title="12. Могат ли родителите да присъстват по време на терапията?" desc="В Sense дневен център за деца с увреждания препоръчваме родителите да не присъстват на терапевтичните сесии, за да гарантираме ефективността на процеса.">
+				<Collapse title="11. Могат ли родителите да присъстват по време на терапията?" desc="В Sense дневен център за деца с увреждания препоръчваме родителите да не присъстват на терапевтичните сесии, за да гарантираме ефективността на процеса.">
 					<div class="mt-4">Присъствието на родител може да отклони фокуса на детето, особено при по-малките, които често стават зависими от сигурността на родителската фигура. Това може да ограничи тяхната самостоятелност и активност в терапията. Също така, когато родителят е в стаята, за терапевта е по-трудно да изгради авторитет, което е важно за успешно взаимодействие с детето.</div>
 					<div class="mt-4">Родителите обаче играят ключова роля извън терапевтичните сесии. Затова редовно ги информираме за напредъка на детето и подходите, които могат да приложат у дома, за да подкрепят процеса. Този баланс между терапевтичната работа и родителската подкрепа е ключов за успеха.</div>
 				</Collapse>
 
-				<Collapse title="13. Предлагате ли консултации за хранене?" desc="Не предлагаме консултации за хранене в традиционния смисъл - с диетолог или специалист по храненето.  В рамките на психологическата ни работа, се фокусираме върху теми, свързани с трудности при храненето на децата.">
+				<Collapse title="12. Предлагате ли консултации за хранене?" desc="Не предлагаме консултации за хранене в традиционния смисъл - с диетолог или специалист по храненето.  В рамките на психологическата ни работа, се фокусираме върху теми, свързани с трудности при храненето на децата.">
 					<div class="mt-4">В нашия център за деца с нарушения в развитието се стремим чрез психологическа подкрепа да разберем какви емоционални, социални или когнитивни фактори могат да влияят на хранителните навици и да предложим стратегии за преодоляването им, с фокус върху емоционалното благополучие на детето.</div>
 				</Collapse>
 			</div>
@@ -119,7 +109,7 @@ function GoogleMapIframe() {
 		<iframe
 			src={mapSrc}
 			width="100%"
-			height="350"
+			height="300"
 			style="border: 0; border-radius: 12px;"
 			loading="lazy"
 			referrerPolicy="no-referrer-when-downgrade"
@@ -143,18 +133,18 @@ export default function Page() {
 				/>
 
 				<div class="absolute inset-0 z-30 pointer-events-none flex flex-col items-center justify-end pb-18 md:pb-10 text-center px-4 text-white">
-					<div class={`absolute ${isPlayingHero() ? 'top-32% sm:top-95% lg:top-100% mt-30' : 'top-46% md:top-60% mt-0'}`}>
+					<div class={`absolute ${isPlayingHero() ? 'top-32% sm:top-95% lg:top-100% mt-30' : 'top-42% md:top-60% mt-0'}`}>
 						<div>
 							<div
-								class={`mb-1 md:mb-3 transition-colors duration-500 important-font-size-48px important-md:font-size-90px important-leading-46px important-md:leading-80px important-font-[MYRIADPRO-Bold] text-center px-10 ${isPlayingHero()
-									? 'text-brand'
+								class={`mb-3 transition-colors duration-500 important-font-size-44px important-md:font-size-90px important-leading-40px important-md:leading-80px important-font-[MYRIADPRO-Bold] text-center md:px-10 ${isPlayingHero()
+									? 'inline-block pb-[0.2em] bg-gradient-to-r from-[#E11172] to-[#FFAE01] bg-clip-text text-transparent [-webkit-background-clip:text] [-webkit-text-fill-color:transparent]'
 									: 'text-white'}`}>
 								Sense Center развива<br />потенциала на Вашето дете
 							</div>
 						</div>
 
 						<h1
-							class={`important-delay-300 font-400 text-center mb-0 important-font-size-5.5 lg-font-size-7 sm-px-0 px-12 important-md:leading-7 important-leading-6 transition-colors duration-500 important-font-[MYRIADPRO-Light] ${isPlayingHero()
+							class={`important-delay-300 font-400 text-center mb-0 important-font-size-4.5 lg-font-size-7 tracking-0.15 sm-px-0 px-5 important-md:leading-7 important-leading-6 transition-colors duration-500 important-font-[MYRIADPRO-Light] ${isPlayingHero()
 								? 'text-brand'
 								: 'text-white'}`}>
 							Център за деца с нарушения<br />в развитието Sense
@@ -181,7 +171,7 @@ export default function Page() {
 			</div>
 
 			<AnimatedComponent class={`xl:px-30 mx-20px pt-30 md:pt-40 ${isPlayingHero() ? 'mt-20 sm:mt-90 md:mt-110 lg:mt-120' : 'mt-0'}`}>
-				<H3Pink variant="h2" title="Над 20 000 проведени терапии в Sense център за детско развитие" />
+				<H3Pink variant="h2" title={<>Над 20 000 проведени терапии<br />в Sense център за детско развитие</>} />
 			</AnimatedComponent>
 
 			<div class="max-w-1500px md:pt-10 mx-auto">
@@ -279,53 +269,47 @@ export default function Page() {
 					<H3SolidPink variant="h2" title="Истории от нашите семейства" />
 				</AnimatedComponent>
 
-				<div class="xl:px-30">
+				<div class="section-px">
 					<div class="">
 						<AnimatedComponent>
 							<ReviewSlider
-								variant="dots2"
+								variant="dots3"
 								reviews={[
 									{ name: "1" },
 									{ name: "2" },
 									{ name: "3" },
 									{ name: "4" },
+									{ name: "5" },
 								]}>
-								<StarReview
-									reviewText={<>Сенс Център е най-доброто място в София за работа с деца!<br />
-										Когато синът ми беше на 3 години и половина, той не говореше. Започна да посещава Сенс Център още от самото му създаване и само след няколко месеца проговори! Опасенията ми се оказаха неоснователни, а днес той е едно прекрасно, лъчезарно и уверено дете - рецитира песнички и стихотворения с радост!<br />
-										Сестра му също посещава центъра и ефектът върху тях е невероятен. Връзката им се заздрави, станаха по-емпатични един към друг и по-уверени в себе си.<br />
-										Препоръчвам с цялото си сърце - място, което променя животи!
-									</>}
-									name="Alexander Soklev"
-									hrefGoogleReview="https://maps.app.goo.gl/8u8YezkPQ8491CrdA"
+								<ReviewersImageReview
+									style="background:linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0.8)),url(/assets/3.webp); background-position: right 50% bottom 85% !important; background-size: cover;"
+									reviewText="“Тук ще срещнете подкрепа, тук ще срещнете разбиране. Децата ще живеят един по-хубав живот.”"
+									name="Александър Соклев"
+									date="баща на Елисавета, 7г., в норма, и Александър, 5 г., съмнение за аутизъм"
 								/>
-								<StarReview
-									reviewText={<>Двете ни дъщери (6 и 4 годишни) ходят на терапия в центъра вече повече от година и виждаме резултати от отдавна: отношенията им са видимо по-добри, разбират се без агресия, разрешават сами споровете си мирно, намират решения, които са добри и за двете, където преди се викаше, пищеше, скубеше и удряше за всяко едно нещо. Сега си организират заедно игри и отстъпват една на друга, когато някой не е съгласен с правилата.<br />
-										Ще продължим редовно да посещавам Сенс център и да го препоръчваме на приятели и познати!
-									</>}
-									name="Petya Kirisheva"
-									hrefGoogleReview="https://maps.app.goo.gl/KV1e8BSgcMhytUpn8"
+								<ReviewersImageReview
+									style="background:linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0.8)),url(/assets/5.webp); background-position: right 50% bottom 85% !important; background-size: cover;"
+									reviewText="“Някак си още с първото идване, на обследването на детето, те създадоха едно доверие в мен. И съм, мога да кажа, много доволна!”"
+									name="Калина Митрева"
+									date="майка на Филип, 5 г., съмнение за Аутизъм"
 								/>
-								<StarReview
-									reviewText={<>Момченцето ни имаше проблем с проговарянето, за няколко месеца работа със специалистите в центъра показа страхотен напредък. Изключително доволни сме със съпруга ми от резултатите, отношението към детето и подхода.
-									</>}
-									name="Silvya Manikatova"
-									hrefGoogleReview="https://maps.app.goo.gl/KmxyBapgNRYeyQm49"
+								<ReviewersImageReview
+									style="background:linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0.6)),url(/assets/1.webp); background-position: right 50% bottom 85% !important; background-size: cover;"
+									reviewText="“На родителите бих казала да не се колебаят да потърсят специалистите тук. Ще почувстват облекчение, ще почувстват топлина, ще се почувстват, че някой ще се погрижи за децата им”"
+									name="Сребрина Соклева"
+									date="майка на Елисавета, 7г., в норма, и Александър, 5 г., съмнение за аутизъм"
 								/>
-								<StarReview
-									reviewText={<>Синът ни посещава центъра от почти половин година и за този период наблюдаваме изключителен напредък по отношение на когнитивните му умения.<br />
-										Започна да проявява интерес към много неща у дома и значително подобри очния контакт.<br />
-										Много сме благодарни на целия екип за разбирането и позитивизма, с който се отнасят към децата и техните родители.<br />
-										Чувстваме се подкрепени! ❤️
-									</>}
-									name="Estel Dimova"
-									hrefGoogleReview="https://maps.app.goo.gl/ZHLVaJygU4ryva9T6"
+								<ReviewersImageReview
+									style="background:linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0.8)),url(/assets/2.webp); background-position: right 50% bottom 85% !important; background-size: cover;"
+									reviewText="“Винаги знам, че винаги мога да разчитам на тях. Те са доста отзивчиви, откликват веднага на нашите въпроси.”"
+									name="Станимира Миленова"
+									date="майка на Самуил, 6 г. разстройство на речта"
 								/>
-								<StarReview
-									reviewText={<>Детето ми посещава центъра от около 9 месеца. За този период има значителен напредък и посещава центъра с голямо желание. Обогати речника и уменията си за общуване, благодарение на екипа от професионалисти работещи с него. Изключително добронамерно отношение към децата и родителите.
-									</>}
-									name="Евелина Стоянова"
-									hrefGoogleReview="https://maps.app.goo.gl/hpinuPpQKdhYPgnc8"
+								<ReviewersImageReview
+									style="background:linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0.8)),url(/assets/SOP/петя-дунчева.webp); background-position: right 50% bottom 85% !important; background-size: cover;"
+									reviewText="“Децата не се разбираха добре, постоянно се караха и бяха в страхотна конкуренция. След терапията децата се разбират много добре. Комуникират добре чувствата си, когато са ядосани, вместо да се карат и бият”"
+									name="Петя Дунчева"
+									date="майка на Луиза 6 г. и Максин 4 г., в норма, имат конфликт помежду си"
 								/>
 							</ReviewSlider>
 						</AnimatedComponent>
@@ -335,58 +319,6 @@ export default function Page() {
 
 			<DoodleDecor variant="pink" />
 
-			<section class="pb-40px xl:px-30 mx-20px">
-				<H3Pink variant="h2" title="Какво следва, ако не предприемем действие" />
-				<AnimatedComponent class="max-w-1500px mx-auto flex flex-col md:flex-row gap-14">
-					<div class="flex flex-col justify-between items-start gap-2 w-full md:w-2/3 px-5">
-						<div class="w-full">
-							<p class="pb-0 mb-5 md:mt-0">Ако не се обърне внимание на затрудненията в развитието и уменията за самостоятелност, те могат да окажат трайно влияние върху бъдещето на детето, а именно:</p>
-						</div>
-						<div class="w-full">
-							<ul style="list-style-type: none;" class="flex flex-col gap-2">
-								<li>
-									<div class="flex items-center gap-2">
-										<img class="max-w-35px md:max-w-30px m-0" src="/assets/sense-head-logo.svg" />
-										<p class="font-600 my-2 leading-6">затруднения в ученето и ниски училищни резултати</p>
-									</div>
-								</li>
-								<li>
-									<div class="flex items-center gap-2">
-										<img class="max-w-35px md:max-w-30px m-0" src="/assets/sense-head-logo.svg" />
-										<p class="font-600 my-2 leading-6">липса на самостоятелност в ежедневието</p>
-									</div>
-								</li>
-								<li>
-									<div class="flex items-center gap-2">
-										<img class="max-w-35px md:max-w-30px m-0" src="/assets/sense-head-logo.svg" />
-										<p class="font-600 my-2 leading-6">ниско самочувствие и социална изолация</p>
-									</div>
-								</li>
-								<li>
-									<div class="flex items-center gap-2">
-										<img class="max-w-35px md:max-w-30px m-0" src="/assets/sense-head-logo.svg" />
-										<p class="font-600 my-2 leading-6">трудности при концентрация и усвояване на нови умения</p>
-									</div>
-								</li>
-								<li>
-									<div class="flex items-center gap-2">
-										<img class="max-w-35px md:max-w-30px m-0" src="/assets/sense-head-logo.svg" />
-										<p class="font-600 my-2 leading-6 md:mb-0">повишено напрежение у детето и семейството</p>
-									</div>
-								</li>
-							</ul>
-						</div>
-					</div>
-					<div class="flex flex-col justify-center items-start b-rd-12px bg-gradient-to-b from-brand-yellow to-brand px-6 md:px-10 xl:px-8 py-2 pd:py-4 w-full md:w-1/3">
-						<div class="flex justify-center items-center gap-4">
-							<img src="/assets/exclamation-mark-icon.webp" class="w-12 h-12" />
-							<p class="font-[MYRIADPRO-Semibold] c-paper uppercase font-size-17px">80% - 90% от мозъка на детето се развива до 7-годишна възраст</p>
-						</div>
-						<p class="font-size-15px c-paper mt-2">Ето защо колкото по-рано бъде започната ерготерапия за деца толкова по-голяма е възможността за трайно подобрение в двигателното, социалното и когнитивното развитие.</p>
-					</div>
-				</AnimatedComponent>
-			</section>
-			
 			<section>
 				<AnimatedComponent class="xl:px-30 mx-auto pt-10">
 					<H3Blue variant="h2" title="Видим напредък в развитието след 9 месеца" />
@@ -397,8 +329,8 @@ export default function Page() {
 					<VideoPlayer
 						desktopSource={{ type: "file", src: "/assets/home/Филип-Sense-Center.mp4", poster: "/thumbs/desktop.jpg" }}
 						mobileSource={{ type: "file", src: "/assets/home/Филип-Sense-Center-Short.mp4" }}
-						desktopGif="/assets/ergoterapia/Сенс-Център-Ерготерапия-Деца.mp4"
-						mobileGif="/assets/ergoterapia/Сенс-Център-Ерготерапия-Деца-Мобилно.mp4"
+						desktopGif="/assets/home/Sense-Center-Autism-Desktop.mp4"
+						mobileGif="/assets/home/Sense-Center-Autism-Mobile.mp4"
 						isPlaying={isPlayingPlayer()}
 						onPlay={() => setIsPlayingPlayer(true)}
 					/>
@@ -492,8 +424,8 @@ export default function Page() {
 						}
 						title="Екипът"
 						bgImage="/assets/home/екипът-зад-sense-center.webp"
-						bgSize="550%"
-						bgPosition="right 0% top 42%"
+						bgSize="700%"
+						bgPosition="right 55% top 35%"
 					/>
 				</AnimatedComponent>
 			</section>
@@ -518,59 +450,59 @@ export default function Page() {
 			</section>
 
 			<div class="max-w-1500px mx-auto pt-20 md:pt-10 pb-20 md:pb-0">
-				<div class="hidden lg:flex flex-row justify-center items-center md:px-20 px-10 ml--20">
-					<AnimatedComponent class="z-5 flex flex-col justify-center items-center w-350px h-350px xl:w-400px xl:h-400px mr--16.6 xl:mr--19" style="background-image: url(/assets/home/home-puzzle-orange.svg); background-position: center; background-repeat: no-repeat; background-size: cover;">
-						<div class="pr-9 pl-6 flex flex-col justify-center items-center w-350px h-350px">
-							<p class="text-center c-paper font-size-45px font-600 mb-0 mt-12">20+</p>
-							<p class="text-center c-paper font-size-15px font-400 leading-5 pt-2 uppercase font-700">вида<br />терапии</p>
+				<div class="hidden lg:flex flex-row justify-center items-center md:px-20 px-10 ml--18">
+					<AnimatedComponent class="z-5 flex flex-col justify-center items-center w-350px h-350px xl:w-400px xl:h-400px mr--16.3 xl:mr--18.5" style="background-image: url(/assets/home/home-puzzle-orange.svg); background-position: center; background-repeat: no-repeat; background-size: cover;">
+						<div class="pl-5 flex flex-col justify-center items-center w-350px h-350px">
+							<p class="text-center c-paper font-size-38px xl:font-size-42px font-[MYRIADPRO-Bold] mb-0 mt-8">20+</p>
+							<p class="pr-3 text-center c-paper font-size-14px xl:font-size-17px leading-4.5 xl:leading-5.5 tracking-0.1 xl:pt-1 uppercase font-[MYRIADPRO-Bold]">вида<br />терапии</p>
 						</div>
 					</AnimatedComponent>
-					<AnimatedComponent class="important-delay-200 z-4 flex flex-col justify-center items-center w-350px h-350px xl:w-400px xl:h-400px mx--16.6 xl:mx--19" style="background-image: url(/assets/home/home-puzzle-purple.svg); background-position: center; background-repeat: no-repeat; background-size: cover;">
-						<div class="pr-8 pl-7 flex flex-col justify-center items-center w-350px h-350px">
-							<p class="text-center c-paper font-size-30px font-600 mb-0 mt-12">20 000+</p>
-							<p class="text-center pr-4 c-paper font-size-15px font-400 leading-5 pt-2 uppercase font-700">проведени<br />терапии</p>
+					<AnimatedComponent class="important-delay-200 z-4 flex flex-col justify-center items-center w-350px h-350px xl:w-400px xl:h-400px mx--15.7 xl:mx--18" style="background-image: url(/assets/home/home-puzzle-purple.svg); background-position: center; background-repeat: no-repeat; background-size: cover;">
+						<div class="pl-5 flex flex-col justify-center items-center w-350px h-350px">
+							<p class="text-center c-paper font-size-36px xl:font-size-42px font-[MYRIADPRO-Bold] mb-0 mt-11 xl:mt-10">20 000+</p>
+							<p class="pr-3 text-center pr-4 c-paper font-size-14px xl:font-size-17px leading-4.5 xl:leading-5.5 tracking-0.1 xl:pt-1 uppercase font-[MYRIADPRO-Bold]">проведени<br />терапии</p>
 						</div>
 					</AnimatedComponent>
-					<AnimatedComponent class="important-delay-400 z-3 flex flex-col justify-center items-center w-350px h-350px xl:w-400px xl:h-400px mx--16.6 xl:mx--19" style="background-image: url(/assets/home/home-puzzle-blue.svg); background-position: center; background-repeat: no-repeat; background-size: cover;">
-						<div class="pr-11 pl-6 flex flex-col justify-center items-center w-350px h-350px">
-							<p class="text-center c-paper font-size-45px font-600 mb-0 mt-12">30+</p>
-							<p class="text-center c-paper font-size-15px font-400 leading-5 pt-2 uppercase font-700">специализирани<br />терапевти</p>
+					<AnimatedComponent class="important-delay-400 z-3 flex flex-col justify-center items-center w-350px h-350px xl:w-400px xl:h-400px mx--15.7 xl:mx--18" style="background-image: url(/assets/home/home-puzzle-blue.svg); background-position: center; background-repeat: no-repeat; background-size: cover;">
+						<div class="pl-5 flex flex-col justify-center items-center w-350px h-350px">
+							<p class="text-center c-paper font-size-38px xl:font-size-42px font-[MYRIADPRO-Bold] mb-0 mt-8">30+</p>
+							<p class="pr-3 text-center c-paper font-size-14px xl:font-size-17px leading-4.5 xl:leading-5.5 tracking-0.1 xl:pt-1 uppercase font-[MYRIADPRO-Bold]">специализирани<br />терапевти</p>
 						</div>
 					</AnimatedComponent>
-					<AnimatedComponent class="important-delay-600 z-2 flex flex-col justify-center items-center w-350px h-350px xl:w-400px xl:h-400px mx--16.6 xl:mx--19" style="background-image: url(/assets/home/home-puzzle-pink.svg); background-position: center; background-repeat: no-repeat; background-size: cover;">
-						<div class="pr-9 pl-6 flex flex-col justify-center items-center w-350px h-350px">
-							<p class="text-center c-paper font-size-45px font-600 mb-0 mt-12">700+</p>
-							<p class="text-center c-paper font-size-15px font-400 leading-5 pt-2 uppercase font-700">подкрепени<br />родители</p>
+					<AnimatedComponent class="important-delay-600 z-2 flex flex-col justify-center items-center w-350px h-350px xl:w-400px xl:h-400px mx--16.3 xl:mx--18.5" style="background-image: url(/assets/home/home-puzzle-pink.svg); background-position: center; background-repeat: no-repeat; background-size: cover;">
+						<div class="pl-5 flex flex-col justify-center items-center w-350px h-350px">
+							<p class="text-center c-paper font-size-38px xl:font-size-42px font-[MYRIADPRO-Bold] mb-0 mt-8">700+</p>
+							<p class="pr-3 text-center c-paper font-size-14px xl:font-size-17px leading-4.5 xl:leading-5.5 tracking-0.1 xl:pt-1 uppercase font-[MYRIADPRO-Bold]">подкрепени<br />родители</p>
 						</div>
 					</AnimatedComponent>
 				</div>
 
-				<div class="lg:hidden flex flex-col justify-center items-center mt--10 pr-2 sm:mr-0">
+				<div class="lg:hidden flex flex-col justify-center items-center mt--10 pr-6 sm:mr-0">
 					<div class="flex">
-						<AnimatedComponent class="z-3 flex flex-col justify-center items-center w-250px h-250px mt--11.5" style="background-image: url(/assets/home/home-puzzle-blue2.svg); background-position: center; background-repeat: no-repeat; background-size: cover;">
-							<div class="flex flex-col justify-center items-end w-250px h-250px mt-6">
-								<p class="text-left c-paper font-size-30px font-600 mb-0 pr-17">20+</p>
-								<p class="text-left c-paper font-size-11px font-600 uppercase leading-4 pr-17" style="font-family:'Roboto Condensed', sans-serif;">вида<br />терапии</p>
+						<AnimatedComponent class="z-3 flex flex-col justify-center items-center w-250px h-250px mb-1" style="background-image: url(/assets/home/home-puzzle-blue2.svg); background-position: center; background-repeat: no-repeat; background-size: cover;">
+							<div class="flex flex-col justify-center items-end w-250px h-250px mb-8">
+								<p class="text-left c-paper font-size-30px font-[MYRIADPRO-Bold] mb-0 pr-14">20+</p>
+								<p class="text-right c-paper font-size-11px font-600 uppercase leading-4 pr-14" style="font-family:'Roboto Condensed', sans-serif;">вида<br />терапии</p>
 							</div>
 						</AnimatedComponent>
-						<AnimatedComponent class="important-delay-200 z-2 flex flex-col justify-center items-center w-250px h-250px  ml--23.75" style="background-image: url(/assets/home/home-puzzle-purple.svg); background-position: center; background-repeat: no-repeat; background-size: cover;">
+						<AnimatedComponent class="important-delay-200 z-2 flex flex-col justify-center items-center w-250px h-250px  ml--23" style="background-image: url(/assets/home/home-puzzle-purple.svg); background-position: center; background-repeat: no-repeat; background-size: cover;">
 							<div class="flex flex-col justify-center items-end w-250px h-250px mb-16">
-								<p class="text-right c-paper font-size-30px font-600 mb-0 mt-8 pr-17">20 000+</p>
-								<p class="text-right c-paper font-size-11px font-600 uppercase leading-4 pr-17" style="font-family:'Roboto Condensed', sans-serif;">проведени<br />терапии</p>
+								<p class="text-right c-paper font-size-30px font-[MYRIADPRO-Bold] mb-0 mt-16 pr-14">20 000+</p>
+								<p class="text-right c-paper font-size-11px font-600 uppercase leading-4 pr-14" style="font-family:'Roboto Condensed', sans-serif;">проведени<br />терапии</p>
 							</div>
 						</AnimatedComponent>
 					</div>
 					<div class="flex">
 						<AnimatedComponent class="important-delay-400 z-4 flex flex-col justify-center items-center w-250px h-250px my--24" style="background-image: url(/assets/home/home-puzzle-orange.svg); background-position: center; background-repeat: no-repeat; background-size: cover;">
-							<div class="flex flex-col justify-center items-end w-250px h-250px mt-5">
-								<p class="text-right c-paper font-size-30px font-600 mb-0 mt-8 pr-17">30+</p>
-								<p class="text-right c-paper font-size-11px font-600 uppercase leading-4 pr-17" style="font-family:'Roboto Condensed', sans-serif;">Месец<br />специализирани<br />терапевти</p>
+							<div class="flex flex-col justify-center items-end w-250px h-250px mt-2">
+								<p class="text-right c-paper font-size-30px font-[MYRIADPRO-Bold] mb-0 mt-8 pr-14">30+</p>
+								<p class="text-right c-paper font-size-11px font-600 uppercase leading-4 pr-14" style="font-family:'Roboto Condensed', sans-serif;">специализирани<br />терапевти</p>
 							</div>
 						</AnimatedComponent>
-						<AnimatedComponent class="important-delay-600 z-1 flex flex-col justify-center items-center w-250px h-250px my--24 ml--23.75" style="background-image: url(/assets/home/home-puzzle-pink.svg); background-position: center; background-repeat: no-repeat; background-size: cover;">
+						<AnimatedComponent class="important-delay-600 z-1 flex flex-col justify-center items-center w-250px h-250px my--24 ml--23" style="background-image: url(/assets/home/home-puzzle-pink.svg); background-position: center; background-repeat: no-repeat; background-size: cover;">
 							<div class="flex flex-col justify-center items-end w-250px h-250px mt-2">
-								<p class="text-right c-paper font-size-30px font-600 mb-0 mt-8 pr-17">700+</p>
-								<p class="text-right c-paper font-size-11px font-600 uppercase leading-4 pr-17" style="font-family:'Roboto Condensed', sans-serif;">подкрепени<br />родители</p>
+								<p class="text-right c-paper font-size-30px font-[MYRIADPRO-Bold] mb-0 mt-8 pr-14">700+</p>
+								<p class="text-right c-paper font-size-11px font-600 uppercase leading-4 pr-14" style="font-family:'Roboto Condensed', sans-serif;">подкрепени<br />родители</p>
 							</div>
 						</AnimatedComponent>
 					</div>
@@ -585,13 +517,12 @@ export default function Page() {
 				<AnimatedComponent>
 					<div class="flex flex-col lg:flex-row justify-center gap-10 xl:gap-20">
 						<ServiceContaner
-							link=""
 							img="/assets/home/мултидисциплинарен-екип.webp"
 							alt="Мултидисциплинарен екип в терапевтичен център за деца"
 							title="Заедно към напредъка на Вашето дете"
 							description={<>
 								Нашият екип е съставен от висококвалифицирани специалисти с богат опит в работата с деца със специални образователни потребности и трудности в развитието. Вярваме, че професионализмът, любовта към децата и постоянният стремеж към развитие са в основата на ефективната терапия.
-								<p class="text-left font-size-15px leading-7 mt-3">Ключът за успеха е нашата координирана екипна работа. Редовната комуникация и обменът на информация между терапевтите ни позволява да работим в синхрон за постигането на поставените индивидуални цели за всяко дете.</p>
+								<p class="text-left font-size-17px leading-6.7 mt-3">Ключът за успеха е нашата координирана екипна работа. Редовната комуникация и обменът на информация между терапевтите ни позволява да работим в синхрон за постигането на поставените индивидуални цели за всяко дете.</p>
 							</>}
 						/>
 
@@ -600,7 +531,6 @@ export default function Page() {
 						</div>
 
 						<ServiceContaner
-							link=""
 							img="/assets/home/емоционална-прегръдка-в-специализиран-детски-център.webp"
 							alt="Емоционална прегръдка между терапевт и дете в специализиран детски център"
 							title="Обединени от любовта към децата"
@@ -612,7 +542,6 @@ export default function Page() {
 						</div>
 
 						<ServiceContaner
-							link=""
 							img="/assets/home/терапевтичен-център-за-деца-иновативни-подходи.webp"
 							alt="Терапевтичен център за деца с иновативни подходи"
 							title="Използваме иновативни подходи"
@@ -622,7 +551,9 @@ export default function Page() {
 				</AnimatedComponent>
 			</section>
 
-			<DoodleDecor variant="pink" />
+			<div class="mt-0 md:mt--30">
+				<DoodleDecor variant="purple2" />
+			</div>
 
 			<div class="mt-10 md:mt-20 gap-12 pb-8 md:pb-20 pt-50px px-20px xl:px-30 bg-brand-blue -mx-20px">
 				<div class="md:px-0px mx-20px md:mx-0px">
@@ -704,7 +635,7 @@ export default function Page() {
 
 			<section class="pb-40 md:pt-10 xl:px-30 px-10px">
 				<H3Blue variant="h2" title="Подпомагаме развитието на всяко дете" />
-				<div class="flex md:flex-row flex-col justify-center items-center md:gap-8 max-w-1500px mx-auto">
+				<div class="flex md:flex-row flex-col justify-center items-center md:gap-5 max-w-1500px mx-auto">
 					<AnimatedComponent class="md:w-1/2 w-full">
 						<div class="flex flex-col gap-2">
 							<img src="/assets/home/център-за-детско-развитие.webp" alt="Дете на люлка в център за деца с проблеми в развитието" class="w-full max-h-150px md:max-h-200px object-cover rounded shadow" />
@@ -713,39 +644,38 @@ export default function Page() {
 						</div>
 					</AnimatedComponent>
 
-					<div class="relative w-full px-3 md:w-1/2 md:pl-7">
+					<div class="relative w-full px-5 md:w-1/2 md:pl-10">
 						<AnimatedComponent>
 							<div class="py-6 md:py-0">
 								<p class="md:mt--5">
 									При нас идват деца, които срещат трудности в ежедневието си. Работим с езикови и комуникативни затруднения, дефицит на внимание, сензорни нарушения, емоционални трудности, тревожност, поведенчески проблеми, както и със забавяне в развитието. С вярната специализирана подкрепа всяко дете може да се чувства уверено и разбрано.
 								</p>
-								<p>
+								<p class="text-center pt-3">
 									Нашите терапевти работят с:
 								</p>
 							</div>
-							<div class="mx-auto flex md:flex-row flex-col justify-center items-center gap-2 mb-2 md:mb-2 md:mt-5">
-								<div class="flex gap-3">
-									<a href="/" class="bg-brand-blue hover:bg-brand-blue-hover transition-all c-paper b-rd-12px px-7 py-3">
+							<div class="mx-auto flex xl:flex-row flex-col justify-center items-center gap-2 mb-5 md:mt-5 md:pl-2">
+								<div class="flex gap-2">
+									<a href="/" class="bg-brand-blue hover:bg-brand-blue-hover transition-all c-paper b-rd-12px w-170px py-4 text-center leading-5">
 										Деца със СОП
 									</a>
-									<a href="/" class="bg-brand-purple hover:bg-brand-purple-hover transition-all c-paper b-rd-12px px-7 py-3">
+									<a href="/" class="bg-brand-purple hover:bg-brand-purple-hover transition-all c-paper b-rd-12px w-120px px-7 py-4 text-center leading-5">
 										Аутизъм
 									</a>
 								</div>
 								<div class="flex gap-2">
-									<a href="/" class="block md:hidden bg-brand-purple hover:bg-brand-purple-hover transition-all c-paper b-rd-12px px-7 py-3">
+									<a href="/" class="block xl:hidden bg-brand-purple hover:bg-brand-purple-hover transition-all c-paper b-rd-12px px-7 py-4 text-center leading-5">
 										ХАДВ
 									</a>
-									<a href="/" class="bg-brand-blue hover:bg-brand-blue-hover transition-all c-paper b-rd-12px px-7 py-3">
+									<a href="/" class="bg-brand-blue hover:bg-brand-blue-hover transition-all c-paper b-rd-12px w-190px xl:w-220px px-7 py-4 text-center leading-5">
 										Синдром на Даун
 									</a>
-									<a href="/" class="hidden md:block bg-brand-purple hover:bg-brand-purple-hover transition-all c-paper b-rd-12px px-7 py-3">
+									<a href="/" class="hidden xl:block bg-brand-purple hover:bg-brand-purple-hover transition-all c-paper b-rd-12px w-100px px-7 py-4 leading-5">
 										ХАДВ
 									</a>
 								</div>
 							</div>
 							<PuzzleButton2
-								class="important-mt-15px"
 								href=""
 								text="Вижте всички състояния"
 							/>
@@ -755,13 +685,13 @@ export default function Page() {
 			</section>
 
 			<section class="gap-12 xl:px-30">
-				<H3Blue variant="h2" title="Първична оценка" />
+				<H3Blue variant="h2" title="Първична оценка при съмнение за нарушения в развитието" />
 			</section>
 
 			<div class="flex flex-col justify-center items-center mx-auto px-20px xl:px-30">
 				<AnimatedComponent class="max-w-1500px px-5 md:px-20 md:pb-10 md:pt-4 py-5 md:bg-gradient-to-t lg:from-paper lg:to-paper bg-gradient-to-t from-brand-yellow to-brand b-rd-12px flex flex-col">
-					<div class="flex flex-col lg:flex-row-reverse justify-center items-center gap-10">
-						<div class="xl:w-1/2 w-full">
+					<div class="flex flex-col lg:flex-row-reverse justify-center items-center gap-8">
+						<div class="xl:w-1/2 w-full md:pl-7">
 							<p class="c-paper lg:c-paper-inv mb-1">
 								В Sense Center терапевтичен център за деца предлагаме <strong class="font-900">първична оценка</strong> за деца при съмнение за забавяне в развитието.
 							</p>
@@ -775,25 +705,34 @@ export default function Page() {
 							<p class="c-paper lg:c-paper-inv">
 								Едновременно с това в защитена и безопасна среда родителите са подкрепени да споделят своите наблюдения за поведението на детето в семейната и социалната сфера.
 							</p>
+							<div class="pt-8 flex md:flex-row flex-col justify-center items-center">
+								<PuzzleButton />
+							</div>
 						</div>
 						<div class="xl:w-1/2 w-full">
 							<img src="/assets/home/семейство-на-дете-с-нарушения-в-развитието.webp" alt="Семейство на дете с нарушения в развитието" class="mt-5 w-full h-auto object-cover rounded shadow" />
-							<p class="c-paper lg:c-paper-inv italic font-300 mt-1 op-90%" style="font-family: 'Oswald', sans-serif !important; letter-spacing: 1px;">
+							<p class="c-paper lg:c-paper-inv italic font-300 mt-2 leading-5 lg:leading-6" style="font-family: 'Oswald', sans-serif !important; letter-spacing: 1px;">
 								Препоръчително е да донесете всички налични медицински документи, които могат да бъдат от полза за изясняване на актуалното състояние.</p>
 						</div>
-					</div>
-					<div class="pt-10 flex md:flex-row flex-col justify-center items-center gap-2">
-						<PuzzleButton />
-						<PuzzleButton2
-							href=""
-							text="+ 359 879 800 013"
-						/>
 					</div>
 				</AnimatedComponent>
 			</div>
 
 			<section class="pt-50 md:pt-70">
-				<AnimatedComponent class="">
+				<AnimatedComponent class="md:block hidden">
+					<H2Echo
+						maintitle={
+							<>
+								Терапия чрез игра
+							</>
+						}
+						title="терапия"
+						bgImage="/assets/home/терапия-чрез-игра-център-за-детско-развитие.webp"
+						bgSize="300%"
+						bgPosition="right 40% top 90%"
+					/>
+				</AnimatedComponent>
+				<AnimatedComponent class="md:hidden block">
 					<H2Echo
 						maintitle={
 							<>
@@ -869,8 +808,8 @@ export default function Page() {
 							<AuthorContainer
 								href=""
 								style="background:linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.5)),url(/assets/testing-image.jpg); background-position: right 50% bottom 85% !important; background-repeat: no-repeat; background-size: cover;"
-								name="Тъмна сензорна стая"
-								description="Чрез светлинни и звукови стимули подобрява концентрацията, визуалното възприятие и двигателните умения."
+								name="Терапия за сензорна интеграция за деца"
+								description="Подобрява обработката на информацията от околната среда, развива фината и грубата моторика и намалява тревожността и хиперактивността."
 							/>
 							<AuthorContainer
 								href=""
@@ -881,8 +820,8 @@ export default function Page() {
 							<AuthorContainer
 								href=""
 								style="background:linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.5)),url(/assets/sindrom-na-daun/многофункционална-стая.webp); background-position: right 50% bottom 85% !important; background-repeat: no-repeat; background-size: cover;"
-								name="Многофункционална стая"
-								description="Стимулира имитационни умения, подпомага изпълнението на инструкции, развива фината моторика."
+								name="Практически занимания за деца с аутизъм"
+								description="Развиват слуха, комуникацията, моториката и емоционалната регулация, като подобряват концентрацията, самостоятелността и социалната адаптация."
 							/>
 						</ReviewSlider2>
 					</div>
@@ -893,14 +832,14 @@ export default function Page() {
 						href=""
 						text="Вижте всички терапии"
 					/>
-					<p class="mt-15">
+					<p class="mt-15 md:mt-25 px-5 md:px-2 max-w-800px mx-auto">
 						Чрез нашите терапевтични сесии децата развиват самостоятелност в ежедневието, укрепват организационните си умения и получават емоционална подкрепа за справяне със своите чувства и страхове.
 						Терапията под формата на игра им помага да опознаят и разберат своя вътрешен свят.
 					</p>
 				</AnimatedComponent>
 
-				<AnimatedComponent class="mx-auto mt-10">
-					<div class="flex flex-col justify-center items-start b-rd-12px bg-gradient-to-b from-brand-yellow to-brand px-6 md:px-10 py-2 pd:py-4">
+				<AnimatedComponent class="mx-auto mt-10 md:mt-10 flex justify-center items-center">
+					<div class="flex flex-col justify-center items-start max-w-800px b-rd-12px bg-gradient-to-b from-brand-yellow to-brand px-6 md:px-10 py-2 pd:py-4">
 						<div class="flex justify-center items-center gap-4">
 							<img src="/assets/white-puzzle-piece.svg" class="w-10 h-10" />
 							<p class="font-600 c-paper uppercase font-size-17px">С любов към всяко дете</p>
@@ -933,6 +872,7 @@ export default function Page() {
 								name="An-Mari Petkova"
 								stars={5}
 								hrefGoogleReview="https://maps.app.goo.gl/nEvL5m6BfSxpvHNr8"
+								class="important-h-350px important-sm:h-350px important-lg:h-350px important-xl:h-350px"
 							/>
 							<GoogleStarReview
 								img="https://lh3.googleusercontent.com/a-/ALV-UjX3Ggthr2B2L0ZObzEwZUcpviSRIfQ1OWGDHFp-SnQG2zH5dnQ=w36-h36-p-rp-mo-br100"
@@ -945,6 +885,7 @@ export default function Page() {
 								name="Viktoriya Nikolova"
 								stars={5}
 								hrefGoogleReview="https://maps.app.goo.gl/z5h7wjaaxazyoB479"
+								class="important-h-350px important-sm:h-350px important-lg:h-350px important-xl:h-350px"
 							/>
 							<GoogleStarReview
 								img="https://lh3.googleusercontent.com/a/ACg8ocLLzynuWWgBOo4FmH8i4k62ibKz8EOv30MXRYEA20n7JMCbIA=w72-h72-p-rp-mo-br100"
@@ -957,6 +898,7 @@ export default function Page() {
 								name="Viktoria Simeonova"
 								stars={5}
 								hrefGoogleReview="https://maps.app.goo.gl/uwNTKmYF8YdnD6Gt6"
+								class="important-h-350px important-sm:h-350px important-lg:h-350px important-xl:h-350px"
 							/>
 							<GoogleStarReview
 								img="https://lh3.googleusercontent.com/a/ACg8ocLHGwZdOxW4-jrVpwo0BtVlGpu_qYNUfT7SiHHJ9W-SaQ56Pw=w72-h72-p-rp-mo-br100"
@@ -968,6 +910,7 @@ export default function Page() {
 								name="Таня Чавдарова"
 								stars={5}
 								hrefGoogleReview="https://maps.app.goo.gl/Z3EaDuSZ1qGH4Y1e7"
+								class="important-h-350px important-sm:h-350px important-lg:h-350px important-xl:h-350px"
 							/>
 							<GoogleStarReview
 								img="https://lh3.googleusercontent.com/a/ACg8ocLcx8TcdYWMcDITA7ChFlyoNTnikv8rNI9l2_o67fixlper2g=w72-h72-p-rp-mo-br100"
@@ -979,6 +922,7 @@ export default function Page() {
 								name="Аделина Петкова"
 								stars={5}
 								hrefGoogleReview="https://maps.app.goo.gl/y9NFMzAQ1Pwf1tX58"
+								class="important-h-350px important-sm:h-350px important-lg:h-350px important-xl:h-350px"
 							/>
 						</ReviewSlider>
 					</AnimatedComponent>
@@ -997,12 +941,12 @@ export default function Page() {
 			<section class="xl:px-30 mx-20px">
 				<AnimatedComponent>
 					<H3Pink variant="h2" title="Сигурно пространство за всяко дете" />
-					<h3 class="text-left pb-2 md:mx-0 mx-10px mt-0 important-font-size-30px important-leading-35px">Къде се намира Sense Center</h3>
-					<div class="flex flex-col justify-center items-center md:mx-0 mx-10px">
+					<h3 class="text-left pb-2 md:mx-0 mx-10px mt-0 important-font-size-30px important-leading-35px px-5">Къде се намира Sense Center</h3>
+					<div class="flex flex-col justify-center items-center md:mx-0 mx-10px px-3">
 						<GoogleMapIframe />
 						<div class="flex justify-center mt-5 md:ml-0 ml--10">
-							<img class="w-20 h-20 ml-0 mr--10 z-2" src="/assets/sense-logo-100px.webp" />
-							<p class="flex py-4 md:px-11 px-14 b-rd-12px bg-brand-purple w-full"><a href="https://maps.app.goo.gl/SKMstkcc8QTk1BzR7" target="_blank" rel="noopener noreferrer" class="c-paper font-[MYRIADPRO-Semibold] md:font-size-22px font-size-18px leading-8">гр. София, кв. Карпузица,<br />бул. "Никола Петков" 95А</a></p>
+							<img class="w-24 md:w-20 h-20 ml-0 mr--10 z-2" src="/assets/sense-logo-100px.webp" />
+							<p class="flex justify-center py-4 md:px-11 px-8 b-rd-12px bg-brand-purple w-full"><a href="https://maps.app.goo.gl/SKMstkcc8QTk1BzR7" target="_blank" rel="noopener noreferrer" class="c-paper font-[MYRIADPRO-Semibold] md:font-size-22px font-size-18px leading-8">гр. София, кв. Карпузица,<br />бул. "Никола Петков" 95А</a></p>
 						</div>
 					</div>
 				</AnimatedComponent>
@@ -1014,7 +958,7 @@ export default function Page() {
 				<AnimatedComponent>
 					<H3Blue title="Иновативен терапевтичен център за деца" />
 				</AnimatedComponent>
-				<AnimatedComponent class="flex xl:flex-row flex-col justify-center items-center max-w-1200px xl:gap-10 relative overflow-hidden mx-auto" style="flex: 0 0 auto;">
+				<AnimatedComponent class="flex xl:flex-row flex-col justify-center items-center max-w-1200px xl:gap-10 relative overflow-hidden mx-auto px-5" style="flex: 0 0 auto;">
 					<div class="xl:w-1/2 w-full">
 						<img class="w-full h-full" src="/assets/home/вход-към-sense-center.webp" alt="Вход към сенс центъра" />
 					</div>
@@ -1033,14 +977,12 @@ export default function Page() {
 
 			<DoodleDecor variant="purple" />
 
-			<section class="xl:px-30 mx-20px">
-				<AnimatedComponent>
-					<h3 class="text-center pb-2 important-mb-0 important-md:mb-40px important-font-size-30px important-leading-35px">Кабинети за сензорна интеграция</h3>
-				</AnimatedComponent>
+			<section class="xl:px-30 mx-20px px-5">
 				<AnimatedComponent class="flex xl:hidden max-w-300px sm:w-300px md:w-700px flex-col max-w-full relative overflow-hidden mx-auto" style="flex: 0 0 auto;">
 					<div>
 						<div class="w-full md:pt-20px text-center">
 							<div class="">
+								<h3 class="text-left pb-2 important-mb-0 important-md:mb-40px important-font-size-30px important-leading-35px">Кабинети за сензорна интеграция</h3>
 								<p class="text-left">
 									Нашите специализирани зали за ерготерапия, музикотерапия и звукова стимулация помагат на децата да развият и подобрят сетивните си умения.
 								</p>
@@ -1072,6 +1014,7 @@ export default function Page() {
 						</div>
 						<div class="xl:w-1/2 w-full pt-20px text-center">
 							<div class="">
+								<h3 class="text-left pb-2 important-mb-0 important-md:mb-40px important-font-size-30px important-leading-35px">Кабинети за сензорна интеграция</h3>
 								<p class="text-left mt-5">
 									Нашите специализирани зали за ерготерапия, музикотерапия и звукова стимулация помагат на децата да развият и подобрят сетивните си умения.
 								</p>
@@ -1083,14 +1026,12 @@ export default function Page() {
 
 			<DoodleDecor variant="pink" />
 
-			<section class="xl:px-30 mx-20px mt-5">
-				<AnimatedComponent>
-					<h3 class="text-center pb-2 important-mb-0 important-md:mb-40px important-font-size-30px important-leading-35px">Кабинети за когнитивно развитие</h3>
-				</AnimatedComponent>
+			<section class="xl:px-30 mx-20px mt-5 px-5">
 				<AnimatedComponent class="flex xl:hidden max-w-300px sm:w-300px md:w-700px flex-col max-w-full relative overflow-hidden mx-auto" style="flex: 0 0 auto;">
 					<div>
 						<div class="w-full md:pt-20px text-center">
 							<div class="">
+								<h3 class="text-left pb-2 important-mb-0 important-md:mb-40px important-font-size-30px important-leading-35px">Кабинети за когнитивно развитие</h3>
 								<p class="text-left">
 									Зали, фокусирани върху развитието на концентрация и внимание, речева и арт терапия, които стимулират детското мислене, творчество и себеизразяването.
 								</p>
@@ -1120,6 +1061,7 @@ export default function Page() {
 						</div>
 						<div class="xl:w-1/2 w-full pt-20px text-center">
 							<div class="">
+								<h3 class="text-left pb-2 important-mb-0 important-md:mb-40px important-font-size-30px important-leading-35px">Кабинети за когнитивно развитие</h3>
 								<p class="text-left mt-5">
 									Зали, фокусирани върху развитието на концентрация и внимание, речева и арт терапия, които стимулират детското мислене, творчество и себеизразяването.
 								</p>
@@ -1131,14 +1073,12 @@ export default function Page() {
 
 			<DoodleDecor variant="blue" />
 
-			<section class="xl:px-30 mx-20px">
-				<AnimatedComponent>
-					<h3 class="text-center pb-2 important-mb-0 important-md:mb-40px important-font-size-30px important-leading-35px">Кабинети за двигателно развитие</h3>
-				</AnimatedComponent>
+			<section class="xl:px-30 mx-20px px-5">
 				<AnimatedComponent class="xl:hidden flex max-w-300px sm:w-300px md:w-700px flex-col max-w-full relative overflow-hidden mx-auto" style="flex: 0 0 auto;">
 					<div>
 						<div class="w-full md:pt-20px text-center">
 							<div class="">
+								<h3 class="text-left pb-2 important-mb-0 important-md:mb-40px important-font-size-30px important-leading-35px">Кабинети за двигателно развитие</h3>
 								<p class="text-left">
 									Специално оборудвани за психомоторика и рефлекторни масажи, които подобряват координацията и двигателните умения.
 								</p>
@@ -1168,6 +1108,7 @@ export default function Page() {
 						</div>
 						<div class="xl:w-1/2 w-full pt-20px text-center">
 							<div class="">
+								<h3 class="text-left pb-2 important-mb-0 important-md:mb-40px important-font-size-30px important-leading-35px">Кабинети за двигателно развитие</h3>
 								<p class="text-left mt-5">
 									Специално оборудвани за психомоторика и рефлекторни масажи, които подобряват координацията и двигателните умения.
 								</p>
@@ -1179,7 +1120,7 @@ export default function Page() {
 
 			{/* <section>
 				<AnimatedComponent class="xl:px-50 mx-20px mx-auto mt-10">
-					<div class="flex flex-col justify-center items-start b-rd-12px bg-gradient-to-b from-brand-yellow to-brand px-6 md:px-10 py-2 pd:py-4">
+					<div class="flex flex-col justify-center items-start b-rd-12px bg-gradient-to-b from-brand-yellow to-brand max-w-800px mx-auto px-6 md:px-10 py-2 pd:py-4">
 						<div class="flex justify-center items-center gap-4">
 							<p class="font-600 c-paper uppercase font-size-17px">Подкрепяща среда</p>
 						</div>
@@ -1245,8 +1186,8 @@ export default function Page() {
 				</AnimatedComponent>
 			</section>
 
-			<section class="mx-20px pt-25 md:pt-10">
-				<h3 class="xl:px-30 font-600 text-left pb-2 important-font-size-26px important-leading-35px">Как да подпомогнете процеса?</h3>
+			<section class="mx-20px pt-25 md:pt-10 px-5">
+				<h3 class="xl:px-30 font-600 text-left pb-2 important-font-size-26px important-leading-30px">Как да подпомогнете процеса?</h3>
 				<div class="gap-12 md:pt-10 xl:px-30">
 					<div class="block md:hidden">
 						<ReviewSlider2
@@ -1271,7 +1212,7 @@ export default function Page() {
 							</div>
 						</ReviewSlider2>
 					</div>
-					<div class="hidden md:flex gap-3 xl:gap-5 max-w-1400px mx-auto">
+					<div class="hidden md:flex gap-3 xl:gap-5 px-1 mx-auto">
 						<div class="bg-brand b-rd-12px px-7 py-5 w-1/3">
 							<p class="font-[MYRIADPRO-Bold] c-paper font-size-22px">Бъдете активни</p>
 							<p class="font-300 c-paper md:leading-7 leading-6.3 md:font-size-17px">Вашето внимание, подкрепа, игри и задачи вкъщи правят чудеса. Когато работим заедно като екип, децата усещат сигурност и се отпускат по-лесно.</p>
@@ -1323,6 +1264,7 @@ export default function Page() {
 									</>}
 									name="Pavlina Zaharieva"
 									condition=""
+									href="https://maps.app.goo.gl/t9oFhnZmk5bQZy1JA"
 								/>
 								<ReviewPuzzlePiece
 									style="background-color:#E11172;"
@@ -1335,6 +1277,7 @@ export default function Page() {
 									</>}
 									name="Севдалина Тютюнджиева"
 									condition=""
+									href="https://maps.app.goo.gl/hg68GR7V57QwrsQe7"
 								/>
 								<ReviewPuzzlePiece
 									style="background-color:#FA7402;"
@@ -1345,10 +1288,11 @@ export default function Page() {
 									</>}
 									name="Любомира Ангелова"
 									condition=""
+									href="https://maps.app.goo.gl/56uPjdLeHeygXbSx5"
 								/>
 								<ReviewPuzzlePiece
-									style="background-color:#FA7402;"
-									puzzleclass="c-brand-purple w-6 mr-2"
+									style="background-color:#088F9D;"
+									puzzleclass="c-brand w-6 mr-2"
 									title="“Място, което променя животи!”"
 									desc={<>
 										Сенс Център е най-доброто място в София за работа с деца!<br />
@@ -1358,28 +1302,31 @@ export default function Page() {
 									</>}
 									name="Alexander Soklev"
 									condition=""
+									href="https://maps.app.goo.gl/ZffsrVwYk7CRd8Th9"
 								/>
 								<ReviewPuzzlePiece
-									style="background-color:#FA7402;"
-									puzzleclass="c-brand-purple w-6 mr-2"
+									style="background-color:#742C8F;"
+									puzzleclass="c-brand-orange w-6 mr-2"
 									title="“Много приятна среда за децата”"
 									desc={<>
 										Мишо посещава детски център SENSE от 6 месеца с голямо желание и нетърпение, за това време започна да говори много повече, да се обръща персонално по име към човека, с който иска да общува , започна да се шегува и да играе повече самостоятелно вкъщи. Другите дечица навън започнаха да му правят впечатление. Впечатленията са за много приятна среда за децата, любезно отношение от терапевтите и чести обратни връзки, свързани с развитието и промените в детето.
 									</>}
 									name="Gergana Berberova"
 									condition=""
+									href="https://maps.app.goo.gl/6b1WiNmmDqAyVvTd7"
 								/>
 							</ContainerSlider>
 						</AnimatedComponent>
-						<PuzzleButton2
-							class="important-mt-30px"
-							href=""
-							text={
-								<>
-									Вижте всички<br />успешни истории
-								</>
-							}
-						/>
+						<div class="mt-10">
+							<PuzzleButton2
+								href=""
+								text={
+									<>
+										Вижте всички<br />успешни истории
+									</>
+								}
+							/>
+						</div>
 					</section>
 				</div>
 			</section>

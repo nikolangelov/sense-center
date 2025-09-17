@@ -7,7 +7,6 @@ import { DoodleDecor } from "../../components/BackgroundDecor";
 import { BackgroundIcons } from "../../components/BackgroundIcons";
 import { createSignal } from "solid-js";
 import { VideoHero } from "../../components/HeroVideo";
-import { GradientFooter } from "../../components/GradientFooter";
 
 function GoogleMapIframe() {
 	const mapSrc = `https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2934.749670548677!2d23.25135671550783!3d42.6696015791651!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40aa9be9899f1247%3A0x9c53f8ec4847cb64!2zU0VOU0Ug0L3QsNGD0YHRgtC-INCf0L7QvdC40LrQsA!5e0!3m2!1sen!2sbg!4v1719513278453!5m2!1sen!2sbg`;
@@ -41,11 +40,11 @@ export default function Page() {
 				/>
 
 				<div class="absolute inset-0 z-30 pointer-events-none flex flex-col items-center justify-end pb-18 md:pb-10 text-center px-4 text-white">
-					<div class={`absolute ${isPlaying() ? 'top-92% sm:top-95% lg:top-100% mt-30' : 'top-42% md:top-55% mt-0'}`}>
+					<div class={`absolute ${isPlaying() ? 'top-92% sm:top-95% lg:top-95% mt-30' : 'top-42% md:top-55% mt-0'}`}>
 						<div>
 							<div
-								class={`mb-2 md:mb-6 transition-colors duration-500 important-font-size-48px important-md:font-size-90px important-leading-46px important-md:leading-80px important-font-[MYRIADPRO-Bold] text-center px-10 ${isPlaying()
-									? 'text-brand'
+								class={`mb-2 md:mb-2 transition-colors duration-500 important-font-size-48px important-md:font-size-90px important-leading-46px important-md:leading-80px important-font-[MYRIADPRO-Bold] text-center px-10 ${isPlaying()
+									? 'inline-block pb-[0.2em] bg-gradient-to-r from-[#E11172] to-[#FFAE01] bg-clip-text text-transparent [-webkit-background-clip:text] [-webkit-text-fill-color:transparent]'
 									: 'text-white'}`}>
 								Помагаме на децата да се справят по-лесно с ежедневните задачи
 							</div>
@@ -59,15 +58,11 @@ export default function Page() {
 						<div class={`important-delay-600 mt-8 md:mt-10 relative text-center ${isPlaying() ? 'md:pb-30' : 'md:pb-0'}`}>
 							<div class="flex md:flex-row flex-col justify-center items-center gap-3 pointer-events-auto">
 								<PuzzleButton2
-									class="important-bg-brand important-hover:bg-brand-hover"
-									style2="font-weight:500; font-size:14px !important;"
-									img="/assets/sense-puzzle-piece.svg"
+									class="important-bg-brand/80 important-group-hover:bg-brand-hover/80"
 									href=""
 									text={<>Запазете час за<br />първична оценка</>}
 								/>
 								<PuzzleButton2
-									style2="font-weight:500; font-size:14px !important;"
-									img="/assets/sense-orange-puzzle-piece.svg"
 									href=""
 									text="Вижте успешни истории"
 								/>
@@ -77,7 +72,7 @@ export default function Page() {
 				</div>
 			</div>
 
-			<section class="xl:px-30 mx-20px pt-30 md:pt-50">
+			<section class={`xl:px-30 mx-20px ${isPlaying() ? 'mt-30 sm:mt-110 md:mt-130 lg:mt-150' : 'pt-30 md:pt-50'}`}>
 				<h2
 					class="h2-za-nas important-normal-case text-left leading-[1.4] font-bold inline-block"
 					style={{
@@ -97,15 +92,10 @@ export default function Page() {
 					<AnimatedComponent class="md:w-1/2 md:mx-0 mx--20px">
 						<img src="/assets/Fulfilling-Vows.webp" alt="" class="w-full h-auto object-cover shadow important-b-rd-0px important-md:b-rd-12px" />
 					</AnimatedComponent>
-					<AnimatedComponent class="flex flex-col items-center gap-1 relative mb-2 md:hidden">
-						<h2 class="text-transparent bg-clip-text bg-[url(/assets/purple-orange-gradient-title-bg.webp)] bg-cover bg-center opacity-8 scale-30 md:scale-50" style="background-position: right 0% top 0%;">
-							аутизъм
-						</h2>
-					</AnimatedComponent>
 
 					<div class="w-full px-3 md:w-1/2 md:pl-7">
 						<AnimatedComponent>
-							<p class="mt--2">
+							<p class="mt-10 md:mt-0">
 								Диагнозата детски аутизъм“ не се поставя с един поглед. Това е внимателен процес, който включва оценка от различни специалисти – детски психиатър, психолог, логопед. Извършва се първична оценка, като се използват утвърдени методики, които дават обективна представа за развитието на детето. Това включва проговаряне, моторни умения и игрово поведение, за да се идентифицират потенциални закъснения или особености.
 							</p>
 							<p>
@@ -289,15 +279,10 @@ export default function Page() {
 					<AnimatedComponent class="md:w-1/2 md:mx-0 mx--20px">
 						<img src="/assets/Fulfilling-Vows.webp" alt="" class="w-full h-auto object-cover shadow important-b-rd-0px important-md:b-rd-12px" />
 					</AnimatedComponent>
-					<AnimatedComponent class="flex flex-col items-center gap-1 relative mb-2 md:hidden">
-						<h2 class="text-transparent bg-clip-text bg-[url(/assets/purple-orange-gradient-title-bg.webp)] bg-cover bg-center opacity-8 scale-30 md:scale-50" style="background-position: right 0% top 0%;">
-							аутизъм
-						</h2>
-					</AnimatedComponent>
 
 					<div class="w-full px-3 md:w-1/2 md:pl-7">
 						<AnimatedComponent>
-							<p class="mt--2">
+							<p class="mt-10 md:mt-0">
 								Диагнозата детски аутизъм“ не се поставя с един поглед. Това е внимателен процес, който включва оценка от различни специалисти – детски психиатър, психолог, логопед. Извършва се първична оценка, като се използват утвърдени методики, които дават обективна представа за развитието на детето. Това включва проговаряне, моторни умения и игрово поведение, за да се идентифицират потенциални закъснения или особености.
 							</p>
 							<p>
@@ -373,15 +358,10 @@ export default function Page() {
 					<AnimatedComponent class="md:w-1/2 md:mx-0 mx--20px">
 						<img src="/assets/Fulfilling-Vows.webp" alt="" class="w-full h-auto object-cover shadow important-b-rd-0px important-md:b-rd-12px" />
 					</AnimatedComponent>
-					<AnimatedComponent class="flex flex-col items-center gap-1 relative mb-2 md:hidden">
-						<h2 class="text-transparent bg-clip-text bg-[url(/assets/purple-orange-gradient-title-bg.webp)] bg-cover bg-center opacity-8 scale-30 md:scale-50" style="background-position: right 0% top 0%;">
-							аутизъм
-						</h2>
-					</AnimatedComponent>
 
 					<div class="w-full px-3 md:w-1/2 md:pl-7">
 						<AnimatedComponent>
-							<p class="mt--2">
+							<p class="mt-10 md:mt-0">
 								Диагнозата детски аутизъм“ не се поставя с един поглед. Това е внимателен процес, който включва оценка от различни специалисти – детски психиатър, психолог, логопед. Извършва се първична оценка, като се използват утвърдени методики, които дават обективна представа за развитието на детето. Това включва проговаряне, моторни умения и игрово поведение, за да се идентифицират потенциални закъснения или особености.
 							</p>
 							<p>
@@ -643,7 +623,6 @@ export default function Page() {
 				</AnimatedComponent>
 				<PuzzleButton />
 			</section>
-			<GradientFooter />
 		</>
 	);
 }

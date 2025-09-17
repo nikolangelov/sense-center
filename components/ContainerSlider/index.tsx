@@ -98,9 +98,9 @@ export function ContainerBox(props: { title: string; text: string; img: string; 
     );
 }
 
-export function ReviewPuzzlePiece(props: { title: string; puzzleclass: string; desc: string | JSXElement; style: string; name: string; condition: string; }) {
+export function ReviewPuzzlePiece(props: { title: string; puzzleclass: string; desc: string | JSXElement; style: string; name: string; condition: string; href: string; }) {
     return (
-        <div class="">
+        <a target="_blank" rel="noopener noreferrer" href={props.href}>
             <div class="flex flex-col h-full overflow-hidden rounded-[10px]">
                 <div
                     class="flex flex-col justify-start flex-grow px-7 py-8"
@@ -114,12 +114,12 @@ export function ReviewPuzzlePiece(props: { title: string; puzzleclass: string; d
                             <MdiPuzzle class={props.puzzleclass} style="width:30px; height:30px;" />
                         </div>
                     </div>
-                    <p class="c-paper font-size-14px leading-6.3 mb-0">{props.desc}</p>
+                    <p class="c-paper font-size-14px leading-5.5 md:leading-6.3 mb-0">{props.desc}</p>
                     <p class="c-paper font-300 font-size-14px leading-6.5 mb-0 ">{props.name}</p>
                     <p class="c-paper font-300 font-size-14px leading-6.5 my-0">{props.condition}</p>
                 </div>
             </div>
-        </div>
+        </a>
     );
 }
 

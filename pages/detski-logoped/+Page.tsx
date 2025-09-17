@@ -7,11 +7,7 @@ import { PuzzleButton, PuzzleButton2 } from "../../components/PuzzleButton";
 import { GallerySlider2 } from "../../components/GallerySlider";
 import { DoodleDecor } from "../../components/BackgroundDecor";
 import { BackgroundIcons } from "../../components/BackgroundIcons";
-import MdiEmail from '~icons/mdi/email';
-import MdiClockTimeTwo from '~icons/mdi/clock-time-two';
-import MdiPhone from '~icons/mdi/phone';
 import { Collapse } from "../../components/FAQ";
-import { GradientFooter } from "../../components/GradientFooter";
 
 function SingleCollapse() {
 	return (
@@ -367,7 +363,6 @@ export default function Page() {
 
 							</AnimatedComponent>
 							<PuzzleButton2
-								class="important-mt-25px"
 								href=""
 								text="Вижте всички състояния"
 							/>
@@ -414,10 +409,10 @@ export default function Page() {
 							</ul>
 						</div>
 					</div>
-					<div class="flex flex-col justify-center items-start b-rd-12px bg-gradient-to-b from-brand-yellow to-brand px-6 md:px-10 xl:px-8 py-2 pd:py-4 w-full md:w-1/3">
+					<div class="flex flex-col justify-center items-start b-rd-12px bg-gradient-to-b from-brand-yellow to-brand max-w-800px mx-auto px-6 md:px-10 xl:px-8 py-2 pd:py-4 w-full md:w-1/3">
 						<div class="flex justify-center items-center gap-4">
 							<img src="/assets/exclamation-mark-icon.webp" class="w-12 h-12" />
-							<p class="font-600 c-paper uppercase font-size-17px">80% - 90% от мозъка на детето се развива до 7-годишна възраст</p>
+							<p class="font-[MYRIADPRO-Semibold] c-paper uppercase font-size-17px">80% - 90% от мозъка на детето се развива до 7-годишна възраст</p>
 						</div>
 						<p class="font-size-15px c-paper mt-2">Ето защо колкото по-рано бъде започната терапия, толкова по-голяма е възможността за видимо подобрение на състоянието и напредване в развитието.</p>
 					</div>
@@ -444,15 +439,10 @@ export default function Page() {
 					<AnimatedComponent class="md:w-1/2 md:mx-0 mx--20px">
 						<img src="/assets/Fulfilling-Vows.webp" alt="" class="w-full h-auto object-cover shadow important-b-rd-0px important-md:b-rd-12px" />
 					</AnimatedComponent>
-					<AnimatedComponent class="flex flex-col items-center gap-1 relative mb-2 md:hidden">
-						<h2 class="text-transparent bg-clip-text bg-[url(/assets/purple-orange-gradient-title-bg.webp)] bg-cover bg-center opacity-8 scale-30 md:scale-50" style="background-position: right 0% top 0%;">
-							аутизъм
-						</h2>
-					</AnimatedComponent>
 
 					<div class="w-full px-3 md:w-1/2 md:pl-7">
 						<AnimatedComponent>
-							<p class="mt--2">
+							<p class="mt-10 md:mt-0">
 								Диагнозата детски аутизъм“ не се поставя с един поглед. Това е внимателен процес, който включва оценка от различни специалисти – детски психиатър, психолог, логопед. Извършва се първична оценка, като се използват утвърдени методики, които дават обективна представа за развитието на детето. Това включва проговаряне, моторни умения и игрово поведение, за да се идентифицират потенциални закъснения или особености.
 							</p>
 							<p>
@@ -605,31 +595,33 @@ export default function Page() {
 
 			<section class="relative md:pb-30 xl:px-30 mx-20px">
 				<H3Blue title="Първична оценка при съмнение за аутизъм" />
-				<div class="flex flex-col justify-center items-center max-w-1500px mx-auto px-20px xl:px-30">
-					<AnimatedComponent class="max-w-1500px px-5 md:px-20 md:py-10 py-5 bg-gradient-to-t from-brand-yellow to-brand b-rd-12px flex flex-col">
-						<p class="c-paper mb-1">
-							В Sense Center предлагаме <strong class="font-900">първична оценка (тест за аутизъм)</strong> за деца със съмнение за аутизъм.
-						</p>
-						<p class="c-paper">
-							По време на консултацията се извършва обследване на поведението и състоянието на детето.
-						</p>
-						<img src="/assets/Fulfilling-Vows.webp" alt="" class="my-5 w-full h-auto object-cover rounded shadow" />
-						<p class="c-paper mb-1">
-							Оценяват се уменията му за социално взаимодействие, способността за комуникация, както и наличието на повтарящи се движения и специфични интереси.
-						</p>
-						<p class="c-paper">
-							Едновременно с това специалистите интервюират родителите за техните наблюдения и за училищното представяне на детето.
-						</p>
-						<img src="/assets/Fulfilling-Vows.webp" alt="" class="mt-5 w-full h-auto object-cover rounded shadow" />
-						<p class="c-paper italic font-300 mt-1 op-90%" style="font-family: 'Oswald', sans-serif !important; letter-spacing: 1px;">
-							Препоръчително е да донесете всички налични медицински документи, които могат да бъдат от полза за изясняване на състоянието.
-						</p>
-						<div class="pt-10 flex md:flex-row flex-col justify-center items-center gap-2">
-							<PuzzleButton />
-							<PuzzleButton2
-								href=""
-								text="+ 359 879 800 013"
-							/>
+				<div class="flex flex-col justify-center items-center mx-auto px-20px xl:px-30">
+					<AnimatedComponent class="max-w-1500px px-5 md:px-20 md:pb-10 md:pt-4 py-5 md:bg-gradient-to-t lg:from-paper lg:to-paper bg-gradient-to-t from-brand-yellow to-brand b-rd-12px flex flex-col">
+						<div class="flex flex-col lg:flex-row-reverse justify-center items-center gap-8">
+							<div class="xl:w-1/2 w-full md:pl-7">
+								<p class="c-paper lg:c-paper-inv mb-1">
+									В Sense Center предлагаме <strong class="font-[MYRIADPRO-Bold]">първична оценка (тест за аутизъм)</strong> за деца със съмнение за аутизъм.
+								</p>
+								<p class="c-paper lg:c-paper-inv">
+									По време на консултацията се извършва обследване на поведението и състоянието на детето.
+								</p>
+								<img src="/assets/home/наблюдение-на-дете-с-нарушения-в-развитието.webp" alt="Наблюдение на дете с нарушения в развитието" class="lg:hidden my-5 w-full h-auto object-cover rounded shadow" />
+								<p class="c-paper lg:c-paper-inv mb-1">
+									Оценяват се уменията му за социално взаимодействие, способността за комуникация, както и наличието на повтарящи се движения и специфични интереси.
+								</p>
+								<p class="c-paper lg:c-paper-inv">
+									Едновременно с това специалистите интервюират родителите за техните наблюдения и за училищното представяне на детето.
+								</p>
+								<div class="pt-8 flex md:flex-row flex-col justify-center items-center">
+									<PuzzleButton />
+								</div>
+							</div>
+							<div class="xl:w-1/2 w-full">
+								<img src="/assets/home/семейство-на-дете-с-нарушения-в-развитието.webp" alt="Семейство на дете с нарушения в развитието" class="mt-5 w-full h-auto object-cover rounded shadow" />
+								<p class="c-paper lg:c-paper-inv italic font-300 mt-2 leading-5 lg:leading-6" style="font-family: 'Oswald', sans-serif !important; letter-spacing: 1px;">
+									Препоръчително е да донесете всички налични медицински документи, които могат да бъдат от полза за изясняване на състоянието.
+								</p>
+							</div>
 						</div>
 					</AnimatedComponent>
 				</div>
@@ -734,7 +726,7 @@ export default function Page() {
 								<div class="">
 									<img class="w-full h-full" src="/assets/testing-image.jpg" alt="" />
 								</div>
-								<p class="italic font-size-26px mb-0 important-font-[MYRIADPRO-CONDIT]">"Всяко дете принадлежи!"</p>
+								<p class="italic font-size-18px leading-5.5 md:leading-8 md:font-size-26px mb-0 important-font-[MYRIADPRO-CONDIT]">"Всяко дете принадлежи!"</p>
 								<p class="italic font-size-16px mt-0 important-font-[MYRIADPRO-CONDIT]">д-р Зорница Маркова</p>
 								<div class="w-full py-20px text-center">
 									<div class="flex flex-col gap-1">
@@ -758,7 +750,7 @@ export default function Page() {
 								<div class="">
 									<img class="w-full h-full" src="/assets/testing-image.jpg" alt="" />
 								</div>
-								<p class="italic font-size-26px mb-0 important-font-[MYRIADPRO-CONDIT]">"Всяко дете принадлежи!"</p>
+								<p class="italic font-size-18px leading-5.5 md:leading-8 md:font-size-26px mb-0 important-font-[MYRIADPRO-CONDIT]">"Всяко дете принадлежи!"</p>
 								<p class="italic font-size-16px mt-0 important-font-[MYRIADPRO-CONDIT]">д-р Зорница Маркова</p>
 								<div class="w-full pb-20px pt-10px text-center">
 									<div class="flex flex-col gap-1">
@@ -782,7 +774,7 @@ export default function Page() {
 								<div class="">
 									<img class="w-full h-full" src="/assets/testing-image.jpg" alt="" />
 								</div>
-								<p class="italic font-size-26px mb-0 important-font-[MYRIADPRO-CONDIT]">"Всяко дете принадлежи!"</p>
+								<p class="italic font-size-18px leading-5.5 md:leading-8 md:font-size-26px mb-0 important-font-[MYRIADPRO-CONDIT]">"Всяко дете принадлежи!"</p>
 								<p class="italic font-size-16px mt-0 important-font-[MYRIADPRO-CONDIT]">д-р Зорница Маркова</p>
 								<div class="w-full pb-20px pt-10px text-center">
 									<div class="flex flex-col gap-1">
@@ -906,15 +898,10 @@ export default function Page() {
 					<AnimatedComponent class="md:w-1/2 md:mx-0 mx--20px">
 						<img src="/assets/Fulfilling-Vows.webp" alt="" class="w-full h-auto object-cover shadow important-b-rd-0px important-md:b-rd-12px" />
 					</AnimatedComponent>
-					<AnimatedComponent class="flex flex-col items-center gap-1 relative mb-2 md:hidden">
-						<h2 class="text-transparent bg-clip-text bg-[url(/assets/purple-orange-gradient-title-bg.webp)] bg-cover bg-center opacity-8 scale-30 md:scale-50" style="background-position: right 0% top 0%;">
-							аутизъм
-						</h2>
-					</AnimatedComponent>
 
 					<div class="relative w-full px-3 md:w-1/2 md:pl-7">
 						<AnimatedComponent>
-							<p class="mt--2">
+							<p class="mt-10 md:mt-0">
 								Диагнозата детски аутизъм“ не се поставя с един поглед. Това е внимателен процес, който включва оценка от различни специалисти – детски психиатър, психолог, логопед. Извършва се първична оценка, като се използват утвърдени методики, които дават обективна представа за развитието на детето. Това включва проговаряне, моторни умения и игрово поведение, за да се идентифицират потенциални закъснения или особености. Правилната оценка включва ясно разбиране на нуждите и възможностите на детето. Ако сте посещавали различни експерти и всички стигат до сходни заключения,  това е знак за потвърждение на състоянието.
 							</p>
 						</AnimatedComponent>
@@ -1089,13 +1076,8 @@ export default function Page() {
 					<AnimatedComponent class="md:w-1/2 md:mx-0 mx--20px">
 						<img src="/assets/Fulfilling-Vows.webp" alt="" class="w-full h-auto object-cover shadow important-b-rd-0px important-md:b-rd-12px" />
 					</AnimatedComponent>
-					<AnimatedComponent class="flex flex-col items-center gap-1 relative mb-2 md:hidden">
-						<h2 class="text-transparent bg-clip-text bg-[url(/assets/purple-orange-gradient-title-bg.webp)] bg-cover bg-center opacity-8 scale-30 md:scale-50" style="background-position: right 0% top 0%;">
-							аутизъм
-						</h2>
-					</AnimatedComponent>
 
-					<div class="relative w-full px-3 md:w-1/2 md:pl-7">
+					<div class="relative w-full px-3 md:w-1/2 md:pl-7 mt-10 md:mt-0">
 						<AnimatedComponent>
 							<p>
 								Диагнозата детски аутизъм“ не се поставя с един поглед. Това е внимателен процес, който включва оценка от различни специалисти – детски психиатър, психолог, логопед. Извършва се първична оценка, като се използват утвърдени методики, които дават обективна представа за развитието на детето. Това включва проговаряне, моторни умения и игрово поведение, за да се идентифицират потенциални закъснения или особености.
@@ -1146,6 +1128,7 @@ export default function Page() {
 									desc="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
 									name="Родител на марти,"
 									condition="дете със съмнение за Аутизъм"
+									href=""
 								/>
 								<ReviewPuzzlePiece
 									style="background-color:#E11172;"
@@ -1154,6 +1137,7 @@ export default function Page() {
 									desc="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
 									name="Родител на марти,"
 									condition="дете със съмнение за Аутизъм"
+									href=""
 								/>
 								<ReviewPuzzlePiece
 									style="background-color:#FA7402;"
@@ -1162,11 +1146,11 @@ export default function Page() {
 									desc="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
 									name="Родител на марти,"
 									condition="дете със съмнение за Аутизъм"
+									href=""
 								/>
 							</ContainerSlider>
 						</AnimatedComponent>
 						<PuzzleButton2
-							class="important-mt-30px"
 							href=""
 							text="Вижте всички успешни истории"
 						/>
@@ -1180,7 +1164,6 @@ export default function Page() {
 				<H3Blue title="Първите сигнали на аутизъм, които не бива да игнорирате" />
 				<SingleCollapse />
 			</section>
-			<GradientFooter />
 		</>
 	);
 }

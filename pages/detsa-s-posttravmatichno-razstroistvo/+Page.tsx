@@ -1,5 +1,5 @@
 import "solid-slider/slider.css";
-import { AuthorContainer, GoogleStarReview, PuzzleIconReview, ReviewersImageReview, ReviewSlider, StarReview } from '../../components/ReviewSlider';
+import { AuthorContainer, GoogleStarReview, PuzzleIconReview, ReviewersImageReview, ReviewSlider, ReviewSlider2, StarReview } from '../../components/ReviewSlider';
 import { AnimatedComponent } from '../../components/AnimateOnView';
 import { H2Echo, H3Blue, H3Pink } from '../../components/H2WithImage';
 import { ServiceContaner } from '../../components/ServiceContainer';
@@ -8,7 +8,6 @@ import { PuzzleButton, PuzzleButton2 } from "../../components/PuzzleButton";
 import { DoodleDecor } from "../../components/BackgroundDecor";
 import { BackgroundIcons } from "../../components/BackgroundIcons";
 import { WorkProcess } from "../../components/WorkProcess";
-import { GradientFooter } from "../../components/GradientFooter";
 
 export default function Page() {
 	return (
@@ -55,11 +54,6 @@ export default function Page() {
 									<div class="mx--20px">
 										<img src="/assets/posttravmatichno-razstr/посттравматично-стресово-разстройство.webp" alt="Дете с посттравматично стресово разстройство." class="important-b-rd-0 important-md:b-rd-12px w-full h-auto object-cover shadow" />
 									</div>
-									<div class="flex flex-col items-center gap-1 relative md:hidden">
-										<h2 class="text-transparent bg-clip-text bg-[url(/assets/posttravmatichno-razstr/посттравматично-стресово-разстройство.webp)] bg-cover bg-center opacity-8 scale-30 md:scale-50" style="background-position: right 0% top 0%;">
-											посттравматично разстройство
-										</h2>
-									</div>
 								</div>
 							</div>
 						</div>
@@ -68,7 +62,7 @@ export default function Page() {
 
 				<section class="md:w-1/2">
 					<AnimatedComponent class="w-full md:px-3 my-auto">
-						<p class="mt-1">
+						<p class="mt-10 md:mt-0">
 							Посттравматичното стресово разстройство (ПТСР) представлява тревожно разстройство, което може да се развие при деца, преживели или станали свидетели на травматично събитие, свързано със сериозни наранявания, заплаха за физическата им безопасност или смърт. Такива преживявания могат да включват природни бедствия, злополуки, насилие, войни, загуба на близък човек или други ситуации, които причиняват силен страх и стрес.
 						</p>
 					</AnimatedComponent>
@@ -192,7 +186,7 @@ export default function Page() {
 
 				<AnimatedComponent class="max-w-1500px mx-auto">
 					<p>В случай, че забележите някои от симптомите на посттравматично разстройство да се проявяват при Вашето дете Ви препоръчваме да се консултирате със специалист.</p>
-					<div class="flex flex-col justify-center items-start b-rd-12px bg-gradient-to-b from-brand-yellow to-brand px-6 md:px-10 py-2 pd:py-4">
+					<div class="flex flex-col justify-center items-start b-rd-12px bg-gradient-to-b from-brand-yellow to-brand max-w-800px mx-auto px-6 md:px-10 py-2 pd:py-4">
 						<div class="flex justify-center items-center gap-4">
 							<img src="/assets/exclamation-mark-icon.webp" class="w-10 h-10" />
 							<p class="font-[MYRIADPRO-Semibold] c-paper uppercase font-size-17px lg:font-size-21px">80-90% от мозъка на детето се развива до 7-годишна възраст</p>
@@ -215,21 +209,18 @@ export default function Page() {
 					<H3Pink title="Какво следва, ако не предприемем действие" />
 					<div class="flex flex-col lg:flex-row justify-center gap-10 xl:gap-20">
 						<ServiceContaner
-							link=""
 							img="/assets/posttravmatichno-razstr/посттравматично-генерализирано-тревожно-разстройство.webp"
 							alt="Посттравматично генерализирано тревожно разстройство."
 							title="Хронична тревожност и депресия"
 							description="Липсата на лечение на посттравматично стресово разстройство може да доведе до трайни състояния на тревожност, депресия и паник атаки. Без навременна терапия, това често води негативни последствия за тялото като проблеми със съня, хронична умора, главоболия и стомашни оплаквания. Ако не се вземат мерки, тези физически симптоми могат да се задълбочат и да доведат до трайни здравословни усложнения."
 						/>
 						<ServiceContaner
-							link=""
 							img="/assets/posttravmatichno-razstr/затруднения-училище-посттравматично-разстройство.webp"
 							alt="Затруднения в училище при посттравматично разстройство."
 							title="Затруднения в училище"
 							description="Травмите и силният емоционален стрес нарушават концентрацията, паметта и способността за организиране на задачите. Без подходяща помощ, децата често носят със себе си последиците от посттравматичното стресово разстройство като затруднения с ученето и силно чувство за неуспех, което може да доведе до избягване на училището."
 						/>
 						<ServiceContaner
-							link=""
 							img="/assets/posttravmatichno-razstr/социална-изолация-посттравматично-разстройство.webp"
 							alt="Социална изолация посттравматично разстройство."
 							title="Социална изолация"
@@ -263,13 +254,8 @@ export default function Page() {
 							<img src="/assets/posttravmatichno-razstr/посттравматично-разстройство-симптоми.webp" alt="Разпознаване на симптомите на посттравматично разстройство." class="important-b-rd-0 important-md:b-rd-12px w-full h-auto object-cover shadow" />
 						</div>
 					</AnimatedComponent>
-					<AnimatedComponent class="flex flex-col items-center gap-1 relative mb-2 md:hidden">
-						<h2 class="text-transparent bg-clip-text bg-[url(/assets/posttravmatichno-razstr/посттравматично-разстройство-симптоми.webp)] bg-cover bg-center opacity-8 scale-30 md:scale-50" style="background-position: right 0% top 0%;">
-							разпознаване
-						</h2>
-					</AnimatedComponent>
 
-					<div class="md:hidden block">
+					<div class="md:hidden block pt-15">
 						<DoodleDecor variant="purple" />
 					</div>
 
@@ -296,35 +282,36 @@ export default function Page() {
 
 			<section class="relative md:pb-30 xl:px-30 mx-20px">
 				<H3Blue title="Първоначална психологическа консултация при съмнение за посттравматично разстройство" />
-				<div class="flex flex-col justify-center items-center max-w-1500px mx-auto px-20px xl:px-30">
-					<AnimatedComponent class="max-w-1500px px-5 md:px-20 md:py-10 py-5 bg-gradient-to-t from-brand-yellow to-brand b-rd-12px flex flex-col">
-						<p class="c-paper mb-1">
-							В Sense Center предлагаме първоначална психологическа консултация за деца със съмнение за посттравматично разстройство.
-						</p>
-						<p class="c-paper">
-							По време на консултацията се извършва обстойно изследване на посттравматично стресово разстройство, което включва наблюдение на поведението и актуалното състояние на детето.
-						</p>
-						<img src="/assets/home/наблюдение-на-дете-с-нарушения-в-развитието.webp" alt="Безплатна първична оценка при съмнение за посттравматично разстройство." class="my-5 w-full h-auto object-cover rounded shadow" />
-						<p class="c-paper mb-1">
-							Наблюдават се емоциите и реакциите на детето свързани с травматичното преживяване.
-						</p>
-						<p class="c-paper mb-1">
-							Едновременно с това специалистите интервюират родителите за техните наблюдения относно начина, по който травмата влияе на живота на детето.
-						</p>
-						<p class="c-paper mb-1">
-							Целта на този процес е да се разберат нуждите на детето и да се определят следващите стъпки за справяне с травмата и подкрепа.
-						</p>
-						<img src="/assets/home/семейство-на-дете-с-нарушения-в-развитието.webp" alt="Резултат след първичната оценка при съмнение за посттравматично разстройство." class="mt-5 w-full h-auto object-cover rounded shadow" />
-						<p class="c-paper italic font-300 mt-1 op-90%" style="font-family: 'Oswald', sans-serif !important; letter-spacing: 1px;">
-							Препоръчително е да донесете всички налични медицински документи, които могат да бъдат от полза за изясняване на актуалното състояние.</p>
-						<div class="pt-10 flex md:flex-row flex-col justify-center items-center gap-2">
-							<PuzzleButton />
-							<PuzzleButton2
-								style2="padding-left:0px !important; font-weight:600; font-size:16px !important;"
-								img="/assets/sense-orange-puzzle-piece.svg"
-								href=""
-								text="+ 359 879 800 013"
-							/>
+				<div class="flex flex-col justify-center items-center mx-auto px-20px xl:px-30">
+					<AnimatedComponent class="max-w-1500px px-5 md:px-20 md:pb-10 md:pt-4 py-5 md:bg-gradient-to-t lg:from-paper lg:to-paper bg-gradient-to-t from-brand-yellow to-brand b-rd-12px flex flex-col">
+						<div class="flex flex-col lg:flex-row-reverse justify-center items-center gap-8">
+							<div class="xl:w-1/2 w-full md:pl-7">
+								<p class="c-paper lg:c-paper-inv mb-1">
+									В Sense Center предлагаме <strong class="font-[MYRIADPRO-Bold]">първоначална психологическа консултация</strong> за деца със съмнение за посттравматично разстройство.
+								</p>
+								<p class="c-paper lg:c-paper-inv">
+									По време на консултацията се извършва обстойно изследване на посттравматично стресово разстройство, което включва наблюдение на поведението и актуалното състояние на детето.
+								</p>
+								<img src="/assets/home/наблюдение-на-дете-с-нарушения-в-развитието.webp" alt="Безплатна първична оценка при съмнение за посттравматично разстройство." class="lg:hidden my-5 w-full h-auto object-cover rounded shadow" />
+								<p class="c-paper lg:c-paper-inv mb-1">
+									Наблюдават се емоциите и реакциите на детето свързани с травматичното преживяване.
+								</p>
+								<p class="c-paper lg:c-paper-inv">
+									Едновременно с това специалистите интервюират родителите за техните наблюдения относно начина, по който травмата влияе на живота на детето.
+								</p>
+								<p class="c-paper lg:c-paper-inv">
+									Целта на този процес е да се разберат нуждите на детето и да се определят следващите стъпки за справяне с травмата и подкрепа.
+								</p>
+								<div class="pt-8 flex md:flex-row flex-col justify-center items-center">
+									<PuzzleButton />
+								</div>
+							</div>
+							<div class="xl:w-1/2 w-full">
+								<img src="/assets/home/семейство-на-дете-с-нарушения-в-развитието.webp" alt="Резултат след първичната оценка при съмнение за посттравматично разстройство." class="mt-5 w-full h-auto object-cover rounded shadow" />
+								<p class="c-paper lg:c-paper-inv italic font-300 mt-2 leading-5 lg:leading-6" style="font-family: 'Oswald', sans-serif !important; letter-spacing: 1px;">
+									Препоръчително е да донесете всички налични медицински документи, които могат да бъдат от полза за изясняване на актуалното състояние.
+									</p>
+							</div>
 						</div>
 					</AnimatedComponent>
 				</div>
@@ -441,18 +428,13 @@ export default function Page() {
 										<div class="mx--20px">
 											<img src="/assets/posttravmatichno-razstr/различни-методи-на-терапия.webp" alt="Различни методи за терапия." class="important-b-rd-0 important-md:b-rd-12px w-full h-auto object-cover shadow" />
 										</div>
-										<div class="flex flex-col items-center gap-1 relative md:hidden">
-											<h2 class="text-transparent bg-clip-text bg-[url(/assets/posttravmatichno-razstr/различни-методи-на-терапия.webp)] bg-cover bg-center opacity-8 scale-30 md:scale-50" style="background-position: right 0% top 0%;">
-												терапия
-											</h2>
-										</div>
 									</div>
 								</div>
 							</div>
 						</AnimatedComponent>
 					</section>
 
-					<section class="md:w-1/2 pt-10 md:pt-0">
+					<section class="md:w-1/2 pt-25 md:pt-0">
 						<AnimatedComponent class="w-full md:px-3 my-auto flex flex-col justify-center items-center w-full md:pl-7 md:pr-0 px-3 mt--10 z-10">
 							<H3Blue title="Какво можем да очакваме" />
 							<div class="relative mt--10">
@@ -478,39 +460,52 @@ export default function Page() {
 				<div class="xl:px-60 mx-auto md:pt-0 pt-10">
 					<H3Pink title="Някои от най-ефективните терапии" />
 					<AnimatedComponent>
-						<p class="md:px-10 xl:px-5 md:mb-5 mb-2 mt-0 c-gray-700 leading-5 font-size-14px font-400 italic tracking" style="font-family: 'Oswald', sans-serif !important; letter-spacing: 0.3px;">Препоръчват се от 4 до 6 сесии седмично за оптимални резултати</p>
+						<p class="xl:px-5 md:mb-5 mb-2 mt-0 c-gray-700 leading-5 font-size-14px font-400 italic tracking" style="font-family: 'Oswald', sans-serif !important; letter-spacing: 0.3px;">Препоръчват се от 4 до 6 сесии седмично за оптимални резултати</p>
 					</AnimatedComponent>
-					<div class="flex md:flex-row flex-col flex-wrap gap-5 md:gap-0 justify-center items-center">
-						<AuthorContainer
-							href=""
-							style="background:linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.6)),url(/assets/sindrom-na-daun/детски-психолог.webp); background-position: right 50% bottom 85% !important; background-repeat: no-repeat; background-size: cover;"
-							name="Детски психолог"
-							description="Подпомага преодоляването на травматични преживявания и стресови ситуации, като помага на детето да се справя с трудностите по-лесно."
-						/>
-						<AuthorContainer
-							href=""
-							style="background:linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0.5)),url(/assets/SOP/развитие-емоционална-интелигентност.webp); background-position: right 50% bottom 85% !important; background-repeat: no-repeat; background-size: cover;"
-							name="Развитие на емоционална интелигентност"
-							description="Помага на децата да разпознават и разбират своите емоции, като развива тяхната емоционална осъзнатост и способност за саморегулация."
-						/>
-						<AuthorContainer
-							href=""
-							style="background:linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0.5)),url(/assets/sindrom-na-daun/психомоторика.webp); background-position: right 50% bottom 85% !important; background-repeat: no-repeat; background-size: cover;"
-							name="Психомоторика"
-							description="Помага на децата да разпознават, изразяват и управляват емоциите си чрез движение и игра."
-						/>
-						<AuthorContainer
-							href=""
-							style="background:linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0.5)),url(/assets/testing-image.jpg); background-position: right 50% bottom 85% !important; background-repeat: no-repeat; background-size: cover;"
-							name="Когнитивно-поведенческа терапия"
-							description="Помага на децата да разберат и променят негативните си мисли и поведение, за да се справят по-добре с емоциите и отношенията с другите."
-						/>
-						<AuthorContainer
-							href=""
-							style="background:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(/assets/testing-image.jpg); background-position: right 50% bottom 85% !important; background-repeat: no-repeat; background-size: cover;"
-							name="Психологически групи за деца"
-							description="Подкрепят децата в развитието на емоционална регулация, социални умения и увереност, като им помагат да изразяват чувствата си и да общуват по-лесно."
-						/>
+					<div class="gap-12 md:pt-5 pb-5 md:pb-0">
+						<div class="">
+							<ReviewSlider2
+								variant="dots0"
+								reviews={[
+									{ name: "1" },
+									{ name: "2" },
+									{ name: "3" },
+									{ name: "4" },
+									{ name: "5" },
+
+								]}>
+								<AuthorContainer
+									href=""
+									style="background:linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.6)),url(/assets/sindrom-na-daun/детски-психолог.webp); background-position: right 50% bottom 85% !important; background-repeat: no-repeat; background-size: cover;"
+									name="Детски психолог"
+									description="Подпомага преодоляването на травматични преживявания и стресови ситуации, като помага на детето да се справя с трудностите по-лесно."
+								/>
+								<AuthorContainer
+									href=""
+									style="background:linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0.5)),url(/assets/SOP/развитие-емоционална-интелигентност.webp); background-position: right 50% bottom 85% !important; background-repeat: no-repeat; background-size: cover;"
+									name="Развитие на емоционална интелигентност"
+									description="Помага на децата да разпознават и разбират своите емоции, като развива тяхната емоционална осъзнатост и способност за саморегулация."
+								/>
+								<AuthorContainer
+									href=""
+									style="background:linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0.5)),url(/assets/sindrom-na-daun/психомоторика.webp); background-position: right 50% bottom 85% !important; background-repeat: no-repeat; background-size: cover;"
+									name="Психомоторика"
+									description="Помага на децата да разпознават, изразяват и управляват емоциите си чрез движение и игра."
+								/>
+								<AuthorContainer
+									href=""
+									style="background:linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0.5)),url(/assets/testing-image.jpg); background-position: right 50% bottom 85% !important; background-repeat: no-repeat; background-size: cover;"
+									name="Когнитивно-поведенческа терапия"
+									description="Помага на децата да разберат и променят негативните си мисли и поведение, за да се справят по-добре с емоциите и отношенията с другите."
+								/>
+								<AuthorContainer
+									href=""
+									style="background:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(/assets/testing-image.jpg); background-position: right 50% bottom 85% !important; background-repeat: no-repeat; background-size: cover;"
+									name="Психологически групи за деца"
+									description="Подкрепят децата в развитието на емоционална регулация, социални умения и увереност, като им помагат да изразяват чувствата си и да общуват по-лесно."
+								/>
+							</ReviewSlider2>
+						</div>
 					</div>
 				</div>
 
@@ -805,7 +800,6 @@ export default function Page() {
 					</section>
 				</div>
 			</section>
-			<GradientFooter />
 		</>
 	);
 }

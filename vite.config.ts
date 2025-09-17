@@ -31,7 +31,7 @@ export default defineConfig({
 					"brand-yellow-hover": "#ffbb29",
 
 					"paper": "#fcfcfc",
-					"paper-inv": "#07111c",
+					"paper-inv": "#2e3235",
 					"paper-border": "#e7e7e7",
 				},
 				fontFamily: {

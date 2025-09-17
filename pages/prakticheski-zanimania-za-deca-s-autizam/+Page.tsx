@@ -1,10 +1,9 @@
 import "solid-slider/slider.css";
-import { GoogleStarReview, PuzzleIconReview, ReviewSlider, StaffSlider, StarReview } from '../../components/ReviewSlider';
+import { GoogleStarReview, PuzzleIconReview, ReviewSlider, ReviewSlider3, StaffSlider, StarReview } from '../../components/ReviewSlider';
 import { AnimatedComponent } from '../../components/AnimateOnView';
 import { H2Echo, H3Blue, H3Pink, H3SolidPink } from '../../components/H2WithImage';
 import { ContainerBox, ContainerSlider, ReviewPuzzlePiece } from "../../components/ContainerSlider";
 import { PuzzleButton, PuzzleButton2 } from "../../components/PuzzleButton";
-import { GallerySlider3 } from "../../components/GallerySlider";
 import { DoodleDecor } from "../../components/BackgroundDecor";
 import { BackgroundIcons } from "../../components/BackgroundIcons";
 import { Collapse } from "../../components/FAQ";
@@ -17,15 +16,15 @@ const workingHours = [
 	{ day: "многофункционална стая", bgClass: "bg-brand-orange/70", bgImage: "/assets/home/терапия-чрез-игра-център-за-детско-развитие.webp" },
 	{ day: "ерготерапия", bgClass: "bg-brand-pink/70", bgImage: "/assets/home/семейство-на-дете-с-нарушения-в-развитието.webp" },
 	{ day: "тъмна сензорна стая", bgClass: "bg-brand-purple/70", bgImage: "/assets/detsa-s-autizam/терапия-на-дете-с-аутизъм.webp" },
-	{ day: "обучение за концентрация и внимание", bgClass: "bg-brand-purple/70", bgImage: "/assets/detsa-s-autizam/терапия-на-дете-с-аутизъм.webp" },
-	{ day: "Психомоторна терапия", bgClass: "bg-brand-orange/70", bgImage: "/assets/home/терапия-чрез-игра-център-за-детско-развитие.webp" },
+	{ day: "обучение за концентрация и внимание", bgClass: "bg-brand-orange/70", bgImage: "/assets/detsa-s-autizam/терапия-на-дете-с-аутизъм.webp" },
+	{ day: "Психомоторна терапия", bgClass: "bg-brand-pink/70", bgImage: "/assets/home/терапия-чрез-игра-център-за-детско-развитие.webp" },
 	{ day: "детски психолог", bgClass: "bg-brand-blue/70", bgImage: "/assets/detsa-s-autizam/поставяне-диагноза-дете-аутизъм.webp" },
-	{ day: "развитие на емоционална интелигентност", bgClass: "bg-brand-pink/70", bgImage: "/assets/home/семейство-на-дете-с-нарушения-в-развитието.webp" },
+	{ day: "развитие на емоционална интелигентност", bgClass: "bg-brand-purple/70", bgImage: "/assets/home/семейство-на-дете-с-нарушения-в-развитието.webp" },
 ];
 
 function ServicesTable() {
 	return (
-		<div class="w-full max-w-xl mx-auto py-4 mt--8">
+		<div class="w-85% md:w-full max-w-xl mx-auto py-4 mt--8">
 			<div class="space-y-3">
 				{workingHours.map(({ day, bgClass, bgImage }) => (
 					<AnimatedComponent class="relative rounded-12px overflow-hidden">
@@ -67,38 +66,50 @@ function SingleCollapse() {
 	return (
 		<>
 			<div class="flex flex-col gap-5 md-gap-2 cursor-pointer max-w-1200px mx-auto">
-				<Collapse title="1. Могат ли родителите да присъстват по време на терапията?" desc="В Sense дневен център за деца с увреждания София вярваме, че за да бъде терапията наистина ефективна, е важно детето да бъде само с терапевта по време на сесиите.">
-					<div class="mt-4">
-						Присъствието на родител може да разсейва детето и да му попречи да се отпусне и ангажира пълноценно. Понякога то се държи по различен начин, търси защита или подкрепа, вместо да изгради самостоятелност и доверие към терапевта.
-					</div>
-					<div class="mt-4">
-						Също така, когато родителят не присъства, терапевтът по-лесно изгражда авторитет и ефективна връзка с детето.
-						Разбира се, родителите са важна част от целия процес. Затова поддържаме редовна комуникация и споделяме всичко значимо около напредъка и нуждите на детето.
-					</div>
+				<Collapse title="1. На каква възраст детето може да започне да посещава практическите занимания за деца с аутизъм?" desc="Няма ограничение във възрастта за стартиране на практически занимания за деца с аутизъм. Въпреки това градинската терапия, музикотерапията и арт терапията се препоръчват след като детето навърши 3-4 годишна възраст." />
+
+
+				<Collapse title="2. Подходящи ли са заниманията за моето дете с тежка форма на аутизъм?" desc="Да. Програмата е адаптивна и се съобразява с индивидуалните нужди на всяко дете. Всеки план е персонализиран, за да се постигнат устойчиви резултати." />
+
+				<Collapse title="3. Каква е разликата между практическите и основните терапии?" desc="Практическите занимания за деца с аутизъм дават възможност на децата да прилагат наученото в реална среда чрез творчески и игрови дейности. Основните терапии, като звукова стимулация, детски логопед, ерготерапия и други, изграждат стабилна основа за развитие, като подобряват речта, вниманието, координацията и емоционалното състояние. Комбинацията от двата вида терапии е доказано най-ефективна за постигане на устойчиви резултати." />
+
+				<Collapse title="4. Какви занимания се практикуват в експерименталната стая за обучение и развитие?" desc="В експерименталната стая за обучение и развитие децата участват в специално подбрани игри и упражнения, които им помагат да преодоляват чувствителности и страхове. Заниманията за деца с аутизъм  включват игри с вода, рисуване с ръце и докосване на различни текстури за постепенно намаляване на непоносимости, ролеви игри с кукли и въображаеми ситуации за развитие на социални умения, както и контролирано излагане на звуци, светлини и движения, което учи детето да се справя по-спокойно с различни стимули." />
+
+				<Collapse title="5. Какви са специалистите, които работят с децата?" desc="Нашите специалисти са опитни психолози с дълбоки познания в областта на детската терапия. Те използват иновативни подходи като музикотерапия, арт терапия, експозиционна терапия и градинска терапия, като адаптират всяка дейност според индивидуалните нужди на детето." />
+
+				<Collapse title="6. Колко време продължава едно практическо занимание за деца с аутизъм?" desc="Обикновено сесиите по музикотерапия при аутизъм, арт терапия и останалите  занимания за деца с аутизъм се провеждат в рамките на 40 минути." />
+
+				<Collapse title="7. Могат ли родителите да присъстват по време на практическите занимания за деца с аутизъм?" desc="В Sense Center препоръчваме родителите да не присъстват на терапевтичните сесии, за да гарантираме ефективността на процеса.">
+					<div class="mt-4">Присъствието на родител по време на практическите занимания за деца с аутизъм може да отклони фокуса на детето, особено при по-малките, които често стават зависими от сигурността на родителската фигура. Това може да ограничи тяхната самостоятелност и активност в терапията. Също така, когато родителят е в стаята, за терапевта е по-трудно да изгради авторитет, което е важно за успешното взаимодействие с детето.</div>
+					<div class="mt-4">Родителите обаче играят ключова роля извън терапевтичните сесии. Затова редовно ги информираме за напредъка на детето и подходите, които могат да приложат у дома, за да подкрепят процеса. Този баланс между терапевтичната работа и родителската подкрепа е ключов за успеха.</div>
 				</Collapse>
 
-				<Collapse title="2. Какво включва първоначалната оценка на детето?" desc="Първоначалната оценка обикновено включва:">
+				<Collapse title="8. Колко често трябва да се посещават практическите занимания за деца с аутизъм?" desc="Честотата на посещенията зависи от индивидуалните нужди на детето и формата на аутизъм." />
+
+				<Collapse title="9. Има ли възможност за провеждане на заниманията онлайн?" desc="Не, към момента не провеждаме терапии онлайн, практическите занимания за деца с аутизъм се извършват на място в нашия кабинет с детски психолог в София на адрес – гр. София, бул. „Никола Петков“ 95a." />
+
+				<Collapse title="10. Какво трябва да носим за първата сесия практични занимания за деца с аутизъм?" desc="Не е необходимо да носите нещо специално. Терапевтът използва разнообразни ресурси под формата на игра, за да направи посещението интересно и приятно за детето." />
+
+				<Collapse title="11. Какво включва първичната оценка на детето?" desc="Първичната оценка обикновено включва:">
 					<div class="mt-4">
 						<ul class="ml-5">
 							<li class="">
-								Разговор с родителите за развитието на детето (медицинска история, реч, език, здравословно състояние, семейна среда).
+								<span class="font-[MYRIADPRO-Bold]">Разговор с родителите</span> относно развитието на детето, поведението и актуалното емоционално състояние, отношенията в семейството и социалната среда.
 							</li>
 							<li class="">
-								Наблюдение на поведението на детето по време на игра и разговор.
+								<span class="font-[MYRIADPRO-Bold]">Наблюдение на детето</span> – Психологът наблюдава поведението и реакциите на детето, за да идентифицира емоционалните и социалните му нужди.
 							</li>
 							<li class="">
-								Оценка на артикулацията, разбирането, изразяването, социалната комуникация и когнитивните умения.
+								<span class="font-[MYRIADPRO-Bold]">Изследване на емоционалните и социалните умения</span> – Използване на психологически инструменти, като тестове за когнитивно развитие, емоционална интелигентност и социална адаптация, за да се определи актуалното състояние на детето.
 							</li>
 							<li class="">
-								Използване на специализирани методи, за определяне нивото на развитие на речта и езика.
+								<span class="font-[MYRIADPRO-Bold]">Обратна връзка</span> – В края на оценката терапевтът предоставя на родителите обобщение и препоръки за работа вкъщи, включително подходящ терапевтичен план за подкрепа.
 							</li>
 						</ul>
 					</div>
 				</Collapse>
 
-				<Collapse title="3. Трябва ли да нося нещо конкретно за първичната оценка?" desc="В случай, че имате налична медицинска документация от предходни прегледи - епикризи, неврологични изследвания – ЕЕГ, ЯМР, слухови тестове, психиатрични, психологични и логопедични оценки." />
-
-				<Collapse title="4. Каква информация трябва да предоставя по време на първичната оценка на детето?" desc="По време на първична оценка на актуалното състояние е необходимо да споделите:">
+				<Collapse title="12. Каква информация трябва да предоставя по време на първичната оценка на детето?" desc="По време на първичната оценка на актуалното състояние е необходимо да споделите:">
 					<div class="mt-4">
 						<ul class="ml-5">
 							<li class="">
@@ -112,67 +123,12 @@ function SingleCollapse() {
 							</li>
 						</ul>
 					</div>
-					<div class="mt-4">Тази информация ще ни помогне да създадем персонализиран и по-ефективен план за терапия.</div>
+					<div class="mt-4">Тази информация ще ни помогне да създадем персонализиран и по-ефективен план за терапия за Вашето дете.</div>
 				</Collapse>
 
-				<Collapse title="5. Какво се случва, ако детето не иска да съдейства или проявява съпротива по време на терапия?" desc="Случва се понякога децата да се чувстват претоварени, несигурни или просто да имат нужда от повече време за адаптация. В такива моменти подхождаме с търпение и разбиране като променяме дейността или правим пауза." >
-					<div class="mt-4">
-						Включваме игрови подходи и се стремим да направим средата максимално приятна. Ако нежеланието е постоянно, провеждаме екипни срещи, за да изградим нова стратегия за работа с детето.
-					</div>
-				</Collapse>
-
-				<Collapse title="6. Как да се справим с емоционални изблици у дома и има ли връзка с терапията?" desc="Емоционалните изблици често са част от процеса на адаптация и развитие. По време на сесиите научаваме детето да разпознава и контролира своите емоции чрез игрови техники и упражнения. Важно е родителите също да прилагат този подход у дома с помощта на нашите препоръки." />
-
-				<Collapse title="7. Колко често се провеждат терапевтичните сесии и колко дълго продължават?" desc="Всяка терапевтична сесия е с продължителност 40 минути. Честотата и вида на сесиите се определя след провеждането на първична оценка и спрямо индивидуалните нужди на всяко дете. Препоръчителният срок за посещения е средно 6 месеца." />
-
-				<Collapse title="8. Как се проследява прогресът на детето?" desc="Проследяването на развитието е ключова част от работата ни. Регулярно провеждаме вътрешни оценки и обсъждаме напредъка на срещите с екипа. Всеки месец предоставяме подробна обратна връзка на родителите и при нужда коригираме терапевтичния план." />
-
-				<Collapse title="9. Предлагате ли консултации и подкрепа за родителите?" desc="Да, активно включваме родителите в терапевтичния процес чрез индивидуални консултации. Те са възможност да обсъдим напредъка на детето, да споделим полезни стратегии за подкрепа у дома и да отговорим на въпросите, които вълнуват семейството. Вярваме, че най-добрите резултати идват, когато работим в партньорство с родителите." />
-
-				<Collapse title="10. Какви специалисти работят в центъра за детско развитие?" desc="В Sense Center работят висококвалифицирани експерти в различни области - психолози, логопеди, кинезитерапевти, социални педагози, ерготерапевти и нутриционисти." />
-
-				<Collapse title="11. С какви възрастови групи работите?" desc="Центърът за деца с нарушения в развитието Sense работи с деца и младежи на възраст от 18 месеца до 18 години, като ги разделяме на три основни групи:">
-					<div class="mt-4">
-						<ul class="ml-5">
-							<li class="">
-								Малки деца (18 месеца – 6 години) – Фокусираме се върху ранното развитие на социални и емоционални умения, като предлагаме персонализирани подходи за деца в норма и деца със специални образователни потребности (СОП).
-							</li>
-							<li class="">
-								Предучилищна и начална училищна възраст (6 – 12 години) – Помагаме за развитието на когнитивни умения и успешната интеграция в училищна и социална среда.
-							</li>
-							<li class="">
-								Тийнейджъри (12 – 18 години) – Подкрепяме развитието на личността, социалните връзки и преодоляването на трудности в училище, семейството и обществото.
-							</li>
-						</ul>
-					</div>
-					<div class="mt-4">Освен това, предлагаме психологическа подкрепа за родителите, за да подпомогнем тяхната роля и да им предоставим подходящи насоки, с които да подкрепят децата си независимо дали са със СОП или не. Това включва консултации и стратегии за справяне с различни трудности, с които може да се сблъскат като родители.</div>
-				</Collapse>
-
-				<Collapse title="12. Могат ли родителите да присъстват по време на терапията?" desc="В Sense дневен център за деца с увреждания препоръчваме родителите да не присъстват на терапевтичните сесии, за да гарантираме ефективността на процеса.">
-					<div class="mt-4">Присъствието на родител може да отклони фокуса на детето, особено при по-малките, които често стават зависими от сигурността на родителската фигура. Това може да ограничи тяхната самостоятелност и активност в терапията. Също така, когато родителят е в стаята, за терапевта е по-трудно да изгради авторитет, което е важно за успешно взаимодействие с детето.</div>
-					<div class="mt-4">Родителите обаче играят ключова роля извън терапевтичните сесии. Затова редовно ги информираме за напредъка на детето и подходите, които могат да приложат у дома, за да подкрепят процеса. Този баланс между терапевтичната работа и родителската подкрепа е ключов за успеха.</div>
-				</Collapse>
-
-				<Collapse title="13. Предлагате ли консултации за хранене?" desc="Не предлагаме консултации за хранене в традиционния смисъл - с диетолог или специалист по храненето.  В рамките на психологическата ни работа, се фокусираме върху теми, свързани с трудности при храненето на децата.">
-					<div class="mt-4">В нашия център за деца с нарушения в развитието се стремим чрез психологическа подкрепа да разберем какви емоционални, социални или когнитивни фактори могат да влияят на хранителните навици и да предложим стратегии за преодоляването им, с фокус върху емоционалното благополучие на детето.</div>
-				</Collapse>
+				<Collapse title="13. Има ли дейности или упражнения, които мога да правя с детето си, за да подкрепя напредъка му?" desc="Да, специалист от Sense Center ще Ви предостави подходящи насоки и ресурси за подпомагане на развитието на детето в домашни условия." />
 			</div>
 		</>
-	);
-}
-
-function GoogleMapIframe() {
-	const mapSrc = `https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2934.749670548677!2d23.25135671550783!3d42.6696015791651!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40aa9be9899f1247%3A0x9c53f8ec4847cb64!2zU0VOU0Ug0L3QsNGD0YHRgtC-INCf0L7QvdC40LrQsA!5e0!3m2!1sen!2sbg!4v1719513278453!5m2!1sen!2sbg`;
-
-	return (
-		<iframe
-			src={mapSrc}
-			width="100%"
-			height="350"
-			style="border: 0; border-radius: 12px;"
-			loading="lazy"
-			referrerPolicy="no-referrer-when-downgrade"
-		></iframe>
 	);
 }
 
@@ -183,26 +139,25 @@ export default function Page() {
 		<>
 			<div class="relative w-full">
 				<VideoHero
-					youtubeId="R1kPm_q7vCc"
-					gifPreview="/assets/home/сенс-център-терапии-терапевти.mp4"
-					gifPreviewMobile="/assets/home/сенс-център-терапии-терапевти-мобилно.mp4"
+					class="important-h-full important-aspect-auto"
+					videoSrc="/assets/pr-zan-za-detsa-s-aut/Сенс-Център-Практически-Занимания-1.mp4"
+					videoSrcMobile="/assets/pr-zan-za-detsa-s-aut/Сенс-Център-Практически-Занимания-Мобилно-1.mp4"
+					gifPreview="/assets/pr-zan-za-detsa-s-aut/Сенс-Център-Практически-Занимания.mp4"
+					gifPreviewMobile="/assets/pr-zan-za-detsa-s-aut/Сенс-Център-Практически-Занимания-Мобилно.mp4"
 					isPlaying={isPlayingHero()}
 					onPlay={() => setIsPlayingHero(true)}
 				/>
 
 				<div class="absolute inset-0 z-30 pointer-events-none flex flex-col items-center justify-end pb-18 md:pb-10 text-center px-4 text-white">
-					<div class={`absolute ${isPlayingHero() ? 'top-32% sm:top-95% lg:top-100% mt-30' : 'top-46% md:top-60% mt-0'}`}>
+					<div class={`absolute ${isPlayingHero() ? 'top-[102%] sm:top-[105%] lg:top-[105%] mt-[30px]' : 'top-[46%] md:top-[60%] mt-0'}`}>
 						<div>
-							<div
-								class={`mb-1 md:mb-3 transition-colors duration-500 important-font-size-48px important-md:font-size-90px important-leading-46px important-md:leading-80px important-font-[MYRIADPRO-Bold] text-center px-10 ${isPlayingHero()
-									? 'text-brand'
-									: 'text-white'}`}>
+							<div class={`mb-3 transition-colors duration-500 text-[48px] md:text-[90px] leading-[46px] md:leading-[90px] font-['MYRIADPRO-Bold'] text-center px-2 md:px-10 ${isPlayingHero() ? 'inline-block pb-[0.2em] bg-gradient-to-r from-[#E11172] to-[#FFAE01] bg-clip-text text-transparent [-webkit-background-clip:text] [-webkit-text-fill-color:transparent]' : 'text-white'}`}>
 								Помагаме на децата с аутизъм да станат по-уверени и общителни
 							</div>
 						</div>
 
 						<h1
-							class={`important-delay-300 font-400 text-center mb-0 important-font-size-5.5 lg-font-size-7 sm-px-0 px-12 md:leading-7 leading-5.5 transition-colors duration-500 important-font-[MYRIADPRO-Light] ${isPlayingHero()
+							class={`important-delay-300 text-center mb-0 important-font-size-5.5 lg-font-size-7 sm-px-0 px-12 md:leading-7 important-leading-5 transition-colors duration-500 important-font-[MYRIADPRO-Light] ${isPlayingHero()
 								? 'text-brand'
 								: 'text-white'}`}>
 							Практически занимания<br />за деца с аутизъм
@@ -228,8 +183,8 @@ export default function Page() {
 				</div>
 			</div>
 
-			<AnimatedComponent class={`xl:px-30 mx-20px pt-30 md:pt-40 ${isPlayingHero() ? 'mt-20 sm:mt-90 md:mt-110 lg:mt-120' : 'mt-0'}`}>
-				<H3Pink variant="h2" title="Заедно  изграждаме умения за саморегулация и справяне с трудностите" />
+			<AnimatedComponent class={`xl:px-30 mx-20px pt-30 md:pt-40 ${isPlayingHero() ? 'mt-120 sm:mt-90 md:mt-110 lg:mt-100' : 'mt-0'}`}>
+				<H3Pink variant="h2" title="Заедно изграждаме умения за саморегулация и справяне с трудностите" />
 			</AnimatedComponent>
 
 			<div class="max-w-1500px md:pt-10 mx-auto">
@@ -242,36 +197,41 @@ export default function Page() {
 										{ name: "Review 1" },
 										{ name: "Review 2" },
 										{ name: "Review 3" },
+										{ name: "Review 4" },
 									]}
 								>
 									<ContainerBox
+										class2="important-xl:h-60 important-lg:h-55 important-md:h-55 important-sm:h-40 important-h-60"
 										style="background-color:#088F9D;"
 										title="Над 200 деца преодоляха трудностите"
 										text="С помощта на опитни терапевти и разнообразни практически занимания за деца с аутизъм децата развиха социални умения, подобриха концентрацията си и станаха по-уверени в ежедневието."
-										img="/assets/home/дневен-център-за-деца-и-младежи-с-увреждания.webp"
-										alt="Терапевт работи с дете по време на терапевтична сесия в специализиран център за детско развитие."
+										img="/assets/pr-zan-za-detsa-s-aut/дете-преодолява-трудностите.webp"
+										alt="Дете преодолява трудностите при аутизъм. "
 									/>
 									<ContainerBox
+										class2="important-xl:h-60 important-lg:h-55 important-md:h-55 important-sm:h-40 important-h-60"
 										style="background-color:#742C8F;"
 										title="Индивидуален подход според нуждите"
 										text="Вярваме, че всяко дете е уникално, затова нашият подход е гъвкав и съобразен, спрямо индивидуалните нужди и потребности на всяко дете."
-										img="/assets/home/дневен-център-за-деца-с-увреждания.webp"
-										alt="Терапевт провежда терапия с дете в център за деца с нарушения в развитието и аутизъм."
+										img="/assets/pr-zan-za-detsa-s-aut/индивидуален-подход-според-нуждите.webp"
+										alt="Индивидуален подход според нуждите на всяко дете."
 									/>
 									<ContainerBox
+										class2="important-xl:h-60 important-lg:h-55 important-md:h-55 important-sm:h-40 important-h-60"
 										style="background-color:#E11172;"
 										title="Създаваме безопасна и подкрепяща среда"
 										text="В Sense Center, ние създаваме безопасна и подкрепяща среда, където всяко дете може свободно да изразява себе си, да се развива и да учи с увереност."
-										img="/assets/home/център-за-деца-с-нарушения-в-развитието.webp"
-										alt="Терапевти наблюдават развитието на дете в център за деца с увреждания и аутистичен спектър."
+										img="/assets/pr-zan-za-detsa-s-aut/дете-безопасна-подкрепяща-среда.webp"
+										alt="Дете в безопасна и подкрепяща среда."
 									/>
 									<ContainerBox
+										class2="important-xl:h-60 important-lg:h-55 important-md:h-55 important-sm:h-40 important-h-60"
 										style="background-color:#FA7402;"
 										title="Практическа програма с реални резултати"
 										text="Използваме методи като арт терапия, градинска терапия, музикотерапия и творчество, които насърчават развитието на детето и доверието към терапевта."
-										img="/assets/home/подкрепа-за-родители.webp"
-										style2="filter: saturate(140%);"
-										alt=""
+										img="/assets/pr-zan-za-detsa-s-aut/реални-резултати-дете-аутизъм.webp"
+										style2="filter: saturate(120%);"
+										alt="Реални резултати на дете с аутизъм."
 									/>
 								</ContainerSlider>
 							</div>
@@ -279,39 +239,43 @@ export default function Page() {
 							<div class="hidden xl:flex mx-auto gap-4 w-full">
 								<div class="w-1/4">
 									<ContainerBox
+										class2="important-xl:h-65 important-lg:h-55 important-md:h-50 important-sm:h-40 important-h-55"
 										style="background-color:#088F9D;"
 										title="Над 200 деца преодоляха трудностите"
 										text="С помощта на опитни терапевти и разнообразни практически занимания за деца с аутизъм децата развиха социални умения, подобриха концентрацията си и станаха по-уверени в ежедневието."
-										img="/assets/home/дневен-център-за-деца-и-младежи-с-увреждания.webp"
-										alt="Терапевт работи с дете по време на терапевтична сесия в специализиран център за детско развитие."
+										img="/assets/pr-zan-za-detsa-s-aut/дете-преодолява-трудностите.webp"
+										alt="Дете преодолява трудностите при аутизъм. "
 									/>
 								</div>
 								<div class="w-1/4">
 									<ContainerBox
+										class2="important-xl:h-65 important-lg:h-55 important-md:h-50 important-sm:h-40 important-h-55"
 										style="background-color:#742C8F;"
 										title="Индивидуален подход според нуждите"
 										text="Вярваме, че всяко дете е уникално, затова нашият подход е гъвкав и съобразен, спрямо индивидуалните нужди и потребности на всяко дете."
-										img="/assets/home/дневен-център-за-деца-с-увреждания.webp"
-										alt="Терапевт провежда терапия с дете в център за деца с нарушения в развитието и аутизъм."
+										img="/assets/pr-zan-za-detsa-s-aut/индивидуален-подход-според-нуждите.webp"
+										alt="Индивидуален подход според нуждите на всяко дете."
 									/>
 								</div>
 								<div class="w-1/4">
 									<ContainerBox
+										class2="important-xl:h-65 important-lg:h-55 important-md:h-50 important-sm:h-40 important-h-55"
 										style="background-color:#E11172;"
 										title="Създаваме безопасна и подкрепяща среда"
 										text="В Sense Center, ние създаваме безопасна и подкрепяща среда, където всяко дете може свободно да изразява себе си, да се развива и да учи с увереност."
-										img="/assets/home/център-за-деца-с-нарушения-в-развитието.webp"
-										alt="Терапевти наблюдават развитието на дете в център за деца с увреждания и аутистичен спектър."
+										img="/assets/pr-zan-za-detsa-s-aut/дете-безопасна-подкрепяща-среда.webp"
+										alt="Дете в безопасна и подкрепяща среда."
 									/>
 								</div>
 								<div class="w-1/4">
 									<ContainerBox
+										class2="important-xl:h-65 important-lg:h-55 important-md:h-50 important-sm:h-40 important-h-55"
 										style="background-color:#FA7402;"
 										title="Практическа програма с реални резултати"
 										text="Използваме методи като арт терапия, градинска терапия, музикотерапия и творчество, които насърчават развитието на детето и доверието към терапевта."
-										img="/assets/home/подкрепа-за-родители.webp"
-										style2="filter: saturate(140%);"
-										alt=""
+										img="/assets/pr-zan-za-detsa-s-aut/реални-резултати-дете-аутизъм.webp"
+										style2="filter: saturate(120%);"
+										alt="Реални резултати на дете с аутизъм."
 									/>
 								</div>
 							</div>
@@ -337,6 +301,7 @@ export default function Page() {
 									{ name: "2" },
 									{ name: "3" },
 									{ name: "4" },
+									{ name: "5" },
 								]}>
 								<StarReview
 									reviewText={<>
@@ -344,23 +309,26 @@ export default function Page() {
 									</>}
 									name="Philip Markovski"
 									hrefGoogleReview="https://maps.app.goo.gl/pTAjYzFwjVY2EuxB6"
-									class="important-h-450px important-sm:h-250px important-md:h-700px important-lg:h-600px important-xl:h-600px"
+									class="important-h-380px important-sm:h-250px important-md:h-400px important-lg:h-310px important-xl:h-350px"
 								/>
 								<StarReview
 									reviewText="Искам да изкажа огромната си благодарност на терапевтите в Сенс Център. Синът ми посещава центъра от април 2025г.В начолото не можеше да говори и не разбираше какво ние му обясняваме. Благодарение на различните видове терапии които посещава звукова, ерготерапия, речева, тъмна стая има голям напредък. Препоръчвам центъра, защото всичко в него е на ниво и синът ми се чувства щастлив"
 									name="Ирена Бакалова"
 									hrefGoogleReview="https://maps.app.goo.gl/cLwbN14c4QtN7Wmc6"
+									class="important-h-380px important-sm:h-250px important-md:h-400px important-lg:h-310px important-xl:h-350px"
 								/>
 								<StarReview
 									reviewText="Марти постъпи в център Sense преди два месеца, без да може да говори и разбира, без навици дори. Днес той е съвсем различно дете, общува, пее песни и ни разбира, дори в детската градина ни съобщиха, че вече всичко е в норма при него. Препоръчвам с две ръце центъра, защото всичко в него е на ниво и най-вече детето обожава да ходи в него. Разбира се, продължаваме, но вече много по-спокойни."
 									name="yt-2007"
 									hrefGoogleReview="https://maps.app.goo.gl/9u3gHoJAR32khXGa7"
+									class="important-h-380px important-sm:h-250px important-md:h-400px important-lg:h-310px important-xl:h-350px"
 								/>
 								<StarReview
 									reviewText={<>Момченцето ни имаше проблем с проговарянето, за няколко месеца работа със специалистите в центъра показа страхотен напредък. Изключително доволни сме със съпруга ми от резултатите, отношението към детето и подхода.
 									</>}
 									name="Silvya Manikatova"
 									hrefGoogleReview="https://maps.app.goo.gl/KmxyBapgNRYeyQm49"
+									class="important-h-380px important-sm:h-250px important-md:h-400px important-lg:h-310px important-xl:h-350px"
 								/>
 								<StarReview
 									reviewText={<>Синът ни посещава центъра от почти половин година и за този период наблюдаваме изключителен напредък по отношение на когнитивните му умения.<br />
@@ -370,6 +338,7 @@ export default function Page() {
 									</>}
 									name="Estel Dimova"
 									hrefGoogleReview="https://maps.app.goo.gl/ZHLVaJygU4ryva9T6"
+									class="important-h-380px important-sm:h-250px important-md:h-400px important-lg:h-310px important-xl:h-350px"
 								/>
 							</ReviewSlider>
 						</AnimatedComponent>
@@ -415,7 +384,7 @@ export default function Page() {
 							</ul>
 						</div>
 					</div>
-					<div class="flex flex-col justify-center items-start b-rd-12px bg-gradient-to-b from-brand-yellow to-brand px-6 md:px-10 xl:px-8 py-2 pd:py-4 w-full md:w-1/3">
+					<div class="flex flex-col justify-center items-start b-rd-12px bg-gradient-to-b from-brand-yellow to-brand max-w-800px mx-auto px-6 md:px-10 xl:px-8 py-2 pd:py-4 w-full md:w-1/3">
 						<div class="flex justify-center items-center gap-4">
 							<img src="/assets/exclamation-mark-icon.webp" class="w-12 h-12" />
 							<p class="font-[MYRIADPRO-Semibold] c-paper uppercase font-size-17px">80% - 90% от мозъка на детето се развива до 7-годишна възраст</p>
@@ -434,7 +403,7 @@ export default function Page() {
 							</>
 						}
 						title="подкрепа"
-						bgImage="/assets/home/екипът-зад-sense-center.webp"
+						bgImage="/assets/pr-zan-za-detsa-s-aut/подкрепа-деца-аутизъм.webp"
 						bgSize="550%"
 						bgPosition="right 0% top 42%"
 					/>
@@ -444,12 +413,12 @@ export default function Page() {
 			<section class="md:pb-30 md:pt-10">
 				<div class="flex md:flex-row flex-col justify-center items-center md:gap-8 max-w-1500px mx-auto">
 					<AnimatedComponent class="md:w-1/2 md:mx-0 mx--20px">
-						<img src="/assets/home/екипът-зад-sense-center.webp" alt="Екипът зад sense център за деца с нарушения в развитието." class="w-full h-auto object-cover shadow important-b-rd-0px important-md:b-rd-12px" />
+						<img src="/assets/pr-zan-za-detsa-s-aut/подкрепа-деца-аутизъм.webp" alt="Подкрепа на дете с аутизъм." class="w-full h-auto object-cover shadow important-b-rd-0px important-md:b-rd-12px" />
 					</AnimatedComponent>
 
 					<div class="relative w-full px-3 md:w-1/2 md:pl-7">
 						<AnimatedComponent>
-							<p class="mt-10">
+							<p class="mt-10 md:mt-0">
 								Практическите занимания за деца с аутизъм са интерактивни дейности от реалния живот, които правят ученето приятно. Те включват градинска терапия, музикотерапия, арт терапия, развитие на социални умения и други активности в експериментална стая за обучение и развитие, които стимулират развитието по интуитивен начин.
 							</p>
 							<p>
@@ -468,7 +437,7 @@ export default function Page() {
 			<section class="gap-12 pb-8 md:pb-20 xl:px-30 mx-20px md:px-20px">
 				<H3Blue variant="h2" title="Видове практически занимания за деца с аутизъм" />
 				<div class="md:pb-0 pb-10">
-					<AnimatedComponent class="max-w-1500px flex lg:flex-row flex-col md:mx-auto gap-5">
+					<AnimatedComponent class="max-w-1500px">
 						<ReviewSlider
 							variant="dots2"
 							reviews={[
@@ -481,40 +450,45 @@ export default function Page() {
 							<PuzzleIconReview
 								style="background-color:#742C8F;"
 								puzzleclass="c-brand w-6 mr-2"
-								img="/assets/home/терапевтичен-център-за-деца.webp"
-								alt="Терапевт провежда терапия с дете в терапевтичен център за деца."
+								class="important-h-700px important-md:h-950px important-lg:h-720px important-xl:h-690px"
+								img="/assets/pr-zan-za-detsa-s-aut/експериментална-стая-обучение-развитие.webp"
+								alt="Експериментална стая за обучение и развитие."
 								title="Експериментална стая за обучение и развитие"
 								desc="Тази терапия е насочена към преодоляване на страхове и сензорни непоносимости като чувствителност към шумове, мокрене, цапане или допир до различни текстури. Използват се  игрови подходи, ролеви ситуации и контролирано излагане на стимули, за да се чувства детето сигурно и спокойно. Така то развива толерантност към различни усещания, намалява тревожността си и изгражда умения за саморегулация."
 							/>
 							<PuzzleIconReview
 								style="background-color:#E11172;"
 								puzzleclass="c-brand-purple w-6 mr-2"
-								img="/assets/home/дневен-център-за-подкрепа-за-деца-и-младежи-с-увреждания.webp"
-								alt="Терапевт провежда терапия с дете в дневен център за подкрепа за деца и младежи с увреждания."
+								class="important-h-700px important-md:h-950px important-lg:h-720px important-xl:h-690px"
+								img="/assets/pr-zan-za-detsa-s-aut/развитие-социални-умения.webp"
+								alt="Развитие на социални умения."
 								title="Развитие на социални умения"
 								desc="Чрез интерактивни игри и преживявания в реална среда децата усвояват умения за общуване, самостоятелност и работа в екип. Развитието на социални умения включва тренировка на ситуации като пазаруване, поздравяване или ориентиране в непознати места и постепенно стават по-уверени и емоционално стабилни. Това им помага да станат по-самостоятелни, спокойни и адаптивни в ежедневието."
 							/>
 							<PuzzleIconReview
 								style="background-color:#088F9D;"
 								puzzleclass="c-brand-orange w-6 mr-2"
-								img="/assets/home/дневен-център-за-деца-с-увреждания-софия.webp"
-								alt="Терапевт провежда терапия с дете в център за деца с увреждания в София."
+								class="important-h-700px important-md:h-950px important-lg:h-720px important-xl:h-690px"
+								img="/assets/pr-zan-za-detsa-s-aut/градинска-терапия.webp"
+								alt="Градинска терапия."
 								title="Градинска терапия"
 								desc="Терапията в градината съчетава игри и творчески дейности с природни материали като рисуване с листа и цветя, ходене боси по пътеки от пясък и трева, засаждане и грижа за растения. Чрез тези занимания за деца с аутизъм,  децата развиват сетивата си, учат се на търпение и отговорност, намаляват стреса и изграждат по-добра емоционална устойчивост."
 							/>
 							<PuzzleIconReview
 								style="background-color:#E11172;"
 								puzzleclass="c-brand-purple w-6 mr-2"
-								img="/assets/home/дневен-център-за-подкрепа-за-деца-и-младежи-с-увреждания.webp"
-								alt="Терапевт провежда терапия с дете в дневен център за подкрепа за деца и младежи с увреждания."
+								class="important-h-700px important-md:h-950px important-lg:h-720px important-xl:h-690px"
+								img="/assets/pr-zan-za-detsa-s-aut/музикотерапия-деца-аутизъм.webp"
+								alt="Музикотерапия при деца с аутизъм."
 								title="Музикотерапия при деца с аутизъм"
 								desc="Музикотерапията за деца със СОП трансформира начина, по който децата с аутизъм се свързват със света около тях. В терапевтичната среда музиката се превръща в средство за учене и игра. Музикотерапията използва пеене, импровизация, слушане на музика и игра с инструменти, които развиват концентрацията, езиковите и социалните умения, подобрява се емоционалната регулация и се изгражда увереност."
 							/>
 							<PuzzleIconReview
 								style="background-color:#088F9D;"
 								puzzleclass="c-brand-orange w-6 mr-2"
-								img="/assets/home/дневен-център-за-деца-с-увреждания-софия.webp"
-								alt="Терапевт провежда терапия с дете в център за деца с увреждания в София."
+								class="important-h-700px important-md:h-950px important-lg:h-720px important-xl:h-690px"
+								img="/assets/pr-zan-za-detsa-s-aut/арт-терапия-деца-аутизъм.webp"
+								alt="Арт терапия при деца с аутизъм."
 								title="Арт терапия при деца"
 								desc="Арт терапията при деца с аутизъм използва силата на творческото изразяване чрез рисуване, моделиране с глина и работа с различни материали за развитие на емоционални и социални умения. Чрез специално структурирани дейности като “рисуване на емоциите”, сензорно изследване на текстури и творчески игри, децата учат да изразяват чувствата си без думи. Фокусът на арт терапията за деца със СОП е върху процеса, а не върху резултата."
 							/>
@@ -525,19 +499,21 @@ export default function Page() {
 
 			<section class="xl:px-30 mx-20px">
 				<AnimatedComponent class="mt-15">
-					<h3>Как постигаме най-добри резултати при аутизъм</h3>
-					<p>
+					<H3SolidPink title="Как постигаме най-добри резултати при аутизъм" />
+					<p class="mx-5 md:mx-10 mt-0">
 						За едно дете с аутизъм най-важно е терапевтичният подход да бъде цялостен. Затова комбинираме практическите занимания за деца с аутизъм с основни терапии, което доказано води до най-добри резултати. Докато практическите занимания за деца с аутизъм дават възможност на децата да прилагат наученото в реална среда, основните терапии изграждат стабилна основа за развитие, като подобряват речта, вниманието, координацията и емоционалното състояние.
 					</p>
 				</AnimatedComponent>
 			</section>
 
-			<div class="w-full xl:px-30 mx-20px mt-20 md:mt-30">
-				<H3Pink variant="h2" title="Основните терапии подходящи за деца с аутизъм" />
+			<div class="w-full xl:px-30 mt-20 md:mt-30">
+				<div class="mx-20px">
+					<H3Pink variant="h2" title="Основните терапии подходящи за деца с аутизъм" />
+				</div>
 				<ServicesTable />
 			</div>
 
-			<section class="pb-40px xl:px-30 mx-20px pt-20 md:pt-30">
+			<section class="pb-40px xl:px-30 mx-20px pt-10 md:pt-30">
 				<AnimatedComponent class="max-w-1500px mx-auto flex flex-col md:flex-row gap-10">
 					<div class="flex flex-col justify-center items-start gap-2 w-full md:w-2/3 px-5">
 						<div class="w-full">
@@ -545,7 +521,7 @@ export default function Page() {
 								осигурява оптимални резултати, като създава синергия между структурираното терапевтично въздействие и естественото учене в реална среда.</p>
 						</div>
 					</div>
-					<div class="flex flex-col justify-center items-center b-rd-12px bg-gradient-to-b from-brand-yellow to-brand px-6 xl:px-5 py-2 pt-7 pb-3 w-full md:w-1/3">
+					<div class="flex flex-col justify-center items-center b-rd-12px bg-gradient-to-b from-brand-yellow to-brand px-8 xl:px-5 py-2 pt-7 pb-3 w-full md:w-1/3">
 						<div class="flex justify-center items-center gap-4 pb-2">
 							<img src="/assets/exclamation-mark-icon.webp" class="w-12 h-12" />
 						</div>
@@ -573,36 +549,36 @@ export default function Page() {
 									]}
 								>
 									<ContainerBox
-										class2="important-xl:h-35 important-lg:h-32 important-md:h-37 important-sm:h-17 important-h-35"
+										class2="important-xl:h-55 important-lg:h-40 important-md:h-48 important-sm:h-30 important-h-45"
 										style="background-color:#E11172;"
 										title="Чрез заниманията за деца с аутизъм детето започва да общува по-уверено с връстници и възрастни."
 										text=""
-										img="/assets/ergoterapia/дете-подобрява-фината-моторика.webp"
-										alt="Детето се учи да общува с детски педагог психолог."
+										img="/assets/pr-zan-za-detsa-s-aut/заниманията-за-деца-с-аутизъм.webp"
+										alt="Заниманията за деца с аутизъм."
 									/>
 									<ContainerBox
-										class2="important-xl:h-35 important-lg:h-32 important-md:h-37 important-sm:h-17 important-h-35"
+										class2="important-xl:h-55 important-lg:h-40 important-md:h-48 important-sm:h-30 important-h-45"
 										style="background-color:#E11172;"
 										title="Ролевите игри подкрепят развитието на социални умения като децата се учат да разрешават конфликти чрез диалог и сътрудничество."
 										text=""
-										img="/assets/ergoterapia/дете-усъвършенства-грубата-моторика.webp"
-										alt="Опитен детски психолог подобрява умението на дете да се изразява."
+										img="/assets/pr-zan-za-detsa-s-aut/развитие-на-социални-умения.webp"
+										alt="Развитие на социални умения."
 									/>
 									<ContainerBox
-										class2="important-xl:h-35 important-lg:h-32 important-md:h-37 important-sm:h-17 important-h-35"
+										class2="important-xl:h-55 important-lg:h-40 important-md:h-48 important-sm:h-30 important-h-45"
 										style="background-color:#E11172;"
 										title="Музикотерапията при деца с аутизъм насърчава социалното взаимодействие и споделеното преживяване."
 										text=""
-										img="/assets/ergoterapia/дете-развива-умения-хранене-обличане.webp"
-										alt="Развиване на активното слушане и разбирането на другите благодарение на детски психолог в София."
+										img="/assets/pr-zan-za-detsa-s-aut/музикотерапията-при-дете-с-аутизъм.webp"
+										alt="Музикотерапията при деца с аутизъм."
 									/>
 									<ContainerBox
-										class2="important-xl:h-35 important-lg:h-32 important-md:h-37 important-sm:h-17 important-h-35"
+										class2="important-xl:h-55 important-lg:h-40 important-md:h-48 important-sm:h-30 important-h-45"
 										style="background-color:#E11172;"
 										title="Участвайки в групови активности, детето развива по-добри умения за сътрудничество и работа в екип."
 										text=""
-										img="/assets/ergoterapia/дете-повишава-издръжливост-концентрация.webp"
-										alt="Изграждане на умения за работа в екип и разрешаване на конфликти от детски психолог."
+										img="/assets/pr-zan-za-detsa-s-aut/групови-активности-дете-аутизъм.webp"
+										alt="Групови активности дете с аутизъм."
 									/>
 								</ContainerSlider>
 							</div>
@@ -610,42 +586,42 @@ export default function Page() {
 							<div class="hidden xl:flex mx-auto gap-4">
 								<div class="w-1/4">
 									<ContainerBox
-										class2="important-xl:h-35 important-lg:h-32 important-md:h-37 important-sm:h-17 important-h-35"
+										class2="important-xl:h-55 important-lg:h-40 important-md:h-48 important-sm:h-30 important-h-45"
 										style="background-color:#E11172;"
 										title="Чрез заниманията за деца с аутизъм детето започва да общува по-уверено с връстници и възрастни."
 										text=""
-										img="/assets/ergoterapia/дете-подобрява-фината-моторика.webp"
-										alt="Детето се учи да общува с детски педагог психолог."
+										img="/assets/pr-zan-za-detsa-s-aut/заниманията-за-деца-с-аутизъм.webp"
+										alt="Заниманията за деца с аутизъм."
 									/>
 								</div>
 								<div class="w-1/4">
 									<ContainerBox
-										class2="important-xl:h-35 important-lg:h-32 important-md:h-37 important-sm:h-17 important-h-35"
+										class2="important-xl:h-55 important-lg:h-40 important-md:h-48 important-sm:h-30 important-h-45"
 										style="background-color:#E11172;"
 										title="Ролевите игри подкрепят развитието на социални умения като децата се учат да разрешават конфликти чрез диалог и сътрудничество."
 										text=""
-										img="/assets/ergoterapia/дете-усъвършенства-грубата-моторика.webp"
-										alt="Опитен детски психолог подобрява умението на дете да се изразява."
+										img="/assets/pr-zan-za-detsa-s-aut/развитие-на-социални-умения.webp"
+										alt="Развитие на социални умения."
 									/>
 								</div>
 								<div class="w-1/4">
 									<ContainerBox
-										class2="important-xl:h-35 important-lg:h-32 important-md:h-37 important-sm:h-17 important-h-35"
+										class2="important-xl:h-55 important-lg:h-40 important-md:h-48 important-sm:h-30 important-h-45"
 										style="background-color:#E11172;"
 										title="Музикотерапията при деца с аутизъм насърчава социалното взаимодействие и споделеното преживяване."
 										text=""
-										img="/assets/ergoterapia/дете-развива-умения-хранене-обличане.webp"
-										alt="Развиване на активното слушане и разбирането на другите благодарение на детски психолог в София."
+										img="/assets/pr-zan-za-detsa-s-aut/музикотерапията-при-дете-с-аутизъм.webp"
+										alt="Музикотерапията при деца с аутизъм."
 									/>
 								</div>
 								<div class="w-1/4">
 									<ContainerBox
-										class2="important-xl:h-35 important-lg:h-32 important-md:h-37 important-sm:h-17 important-h-35"
+										class2="important-xl:h-55 important-lg:h-40 important-md:h-48 important-sm:h-30 important-h-45"
 										style="background-color:#E11172;"
 										title="Участвайки в групови активности, детето развива по-добри умения за сътрудничество и работа в екип."
 										text=""
-										img="/assets/ergoterapia/дете-повишава-издръжливост-концентрация.webp"
-										alt="Изграждане на умения за работа в екип и разрешаване на конфликти от детски психолог."
+										img="/assets/pr-zan-za-detsa-s-aut/групови-активности-дете-аутизъм.webp"
+										alt="Групови активности дете с аутизъм."
 									/>
 								</div>
 							</div>
@@ -671,36 +647,36 @@ export default function Page() {
 									]}
 								>
 									<ContainerBox
-										class2="important-xl:h-35 important-lg:h-32 important-md:h-37 important-sm:h-17 important-h-35"
+										class2="important-xl:h-64 important-lg:h-45 important-md:h-58 important-sm:h-35 important-h-52"
 										style="background-color:#E11172;"
 										title="Арт терапията при деца с аутизъм подобрява емоционалната регулация, като създава усещане за контрол в безопасна среда."
 										text=""
-										img="/assets/ergoterapia/дете-подобрява-фината-моторика.webp"
-										alt="Детето се учи да общува с детски педагог психолог."
+										img="/assets/pr-zan-za-detsa-s-aut/арт-терапия-деца-с-аутизъм.webp"
+										alt="Арт терапията при деца с аутизъм"
 									/>
 									<ContainerBox
-										class2="important-xl:h-35 important-lg:h-32 important-md:h-37 important-sm:h-17 important-h-35"
+										class2="important-xl:h-64 important-lg:h-45 important-md:h-58 important-sm:h-35 important-h-52"
 										style="background-color:#E11172;"
 										title="Заниманията в експерименталната стая за обучение и развитие намаляват сензорните непоносимости и помагат за преодоляване на страхове."
 										text=""
-										img="/assets/ergoterapia/дете-усъвършенства-грубата-моторика.webp"
-										alt="Опитен детски психолог подобрява умението на дете да се изразява."
+										img="/assets/pr-zan-za-detsa-s-aut/експерименталната-стая-за-обучение-и-развитие.webp"
+										alt="Експерименталната стая за обучение и развитие."
 									/>
 									<ContainerBox
-										class2="important-xl:h-35 important-lg:h-32 important-md:h-37 important-sm:h-17 important-h-35"
+										class2="important-xl:h-64 important-lg:h-45 important-md:h-58 important-sm:h-35 important-h-52"
 										style="background-color:#E11172;"
 										title="Градинската терапия помага на децата да развият търпение, концентрация и отговорност по естествен и забавен начин."
 										text=""
-										img="/assets/ergoterapia/дете-развива-умения-хранене-обличане.webp"
-										alt="Развиване на активното слушане и разбирането на другите благодарение на детски психолог в София."
+										img="/assets/pr-zan-za-detsa-s-aut/градинската-терапия-деца-с-аутизъм.webp"
+										alt="Градинската терапия деца с аутизъм."
 									/>
 									<ContainerBox
-										class2="important-xl:h-35 important-lg:h-32 important-md:h-37 important-sm:h-17 important-h-35"
+										class2="important-xl:h-64 important-lg:h-45 important-md:h-58 important-sm:h-35 important-h-52"
 										style="background-color:#E11172;"
 										title="Комбинацията от практически терапии изгражда положителна самооценка, по-добра адаптивност и умения за справяне с различни ситуации."
 										text=""
-										img="/assets/ergoterapia/дете-повишава-издръжливост-концентрация.webp"
-										alt="Изграждане на умения за работа в екип и разрешаване на конфликти от детски психолог."
+										img="/assets/pr-zan-za-detsa-s-aut/комбинацията-от-терапии.webp"
+										alt="Комбинацията от практически терапии за по-добра адаптивност."
 									/>
 								</ContainerSlider>
 							</div>
@@ -708,42 +684,42 @@ export default function Page() {
 							<div class="hidden xl:flex mx-auto gap-4">
 								<div class="w-1/4">
 									<ContainerBox
-										class2="important-xl:h-35 important-lg:h-32 important-md:h-37 important-sm:h-17 important-h-35"
+										class2="important-xl:h-64 important-lg:h-45 important-md:h-58 important-sm:h-35 important-h-52"
 										style="background-color:#E11172;"
 										title="Арт терапията при деца с аутизъм подобрява емоционалната регулация, като създава усещане за контрол в безопасна среда."
 										text=""
-										img="/assets/ergoterapia/дете-подобрява-фината-моторика.webp"
-										alt="Детето се учи да общува с детски педагог психолог."
+										img="/assets/pr-zan-za-detsa-s-aut/арт-терапия-деца-с-аутизъм.webp"
+										alt="Арт терапията при деца с аутизъм"
 									/>
 								</div>
 								<div class="w-1/4">
 									<ContainerBox
-										class2="important-xl:h-35 important-lg:h-32 important-md:h-37 important-sm:h-17 important-h-35"
+										class2="important-xl:h-64 important-lg:h-45 important-md:h-58 important-sm:h-35 important-h-52"
 										style="background-color:#E11172;"
 										title="Заниманията в експерименталната стая за обучение и развитие намаляват сензорните непоносимости и помагат за преодоляване на страхове."
 										text=""
-										img="/assets/ergoterapia/дете-усъвършенства-грубата-моторика.webp"
-										alt="Опитен детски психолог подобрява умението на дете да се изразява."
+										img="/assets/pr-zan-za-detsa-s-aut/експерименталната-стая-за-обучение-и-развитие.webp"
+										alt="Експерименталната стая за обучение и развитие."
 									/>
 								</div>
 								<div class="w-1/4">
 									<ContainerBox
-										class2="important-xl:h-35 important-lg:h-32 important-md:h-37 important-sm:h-17 important-h-35"
+										class2="important-xl:h-64 important-lg:h-45 important-md:h-58 important-sm:h-35 important-h-52"
 										style="background-color:#E11172;"
 										title="Градинската терапия помага на децата да развият търпение, концентрация и отговорност по естествен и забавен начин."
 										text=""
-										img="/assets/ergoterapia/дете-развива-умения-хранене-обличане.webp"
-										alt="Развиване на активното слушане и разбирането на другите благодарение на детски психолог в София."
+										img="/assets/pr-zan-za-detsa-s-aut/градинската-терапия-деца-с-аутизъм.webp"
+										alt="Градинската терапия деца с аутизъм."
 									/>
 								</div>
 								<div class="w-1/4">
 									<ContainerBox
-										class2="important-xl:h-35 important-lg:h-32 important-md:h-37 important-sm:h-17 important-h-35"
+										class2="important-xl:h-64 important-lg:h-45 important-md:h-58 important-sm:h-35 important-h-52"
 										style="background-color:#E11172;"
 										title="Комбинацията от практически терапии изгражда положителна самооценка, по-добра адаптивност и умения за справяне с различни ситуации."
 										text=""
-										img="/assets/ergoterapia/дете-повишава-издръжливост-концентрация.webp"
-										alt="Изграждане на умения за работа в екип и разрешаване на конфликти от детски психолог."
+										img="/assets/pr-zan-za-detsa-s-aut/комбинацията-от-терапии.webp"
+										alt="Комбинацията от практически терапии за по-добра адаптивност."
 									/>
 								</div>
 							</div>
@@ -754,13 +730,13 @@ export default function Page() {
 
 			<DoodleDecor variant="pink" />
 
-			<section class="gap-12 xl:px-30">
+			<section class="gap-12 xl:px-30 mt-5 md:mt-10">
 				<H3Blue variant="h2" title="Първична оценка при съмнение за аутизъм" />
 			</section>
 
 			<div class="flex flex-col justify-center items-center mx-auto px-20px xl:px-30">
 				<AnimatedComponent class="max-w-1500px px-5 md:px-20 md:pb-10 md:pt-4 py-5 md:bg-gradient-to-t lg:from-paper lg:to-paper bg-gradient-to-t from-brand-yellow to-brand b-rd-12px flex flex-col">
-					<div class="flex flex-col lg:flex-row-reverse justify-center items-center gap-10">
+					<div class="flex flex-col lg:flex-row-reverse justify-center items-center gap-0 md:gap-10">
 						<div class="xl:w-1/2 w-full">
 							<p class="c-paper lg:c-paper-inv mb-1">
 								В Sense Center предлагаме първична оценка за деца със съмнение за аутизъм.
@@ -768,7 +744,7 @@ export default function Page() {
 							<p class="c-paper lg:c-paper-inv">
 								По време на консултацията се извършва обследване на поведението и актуалното състояние на детето.
 							</p>
-							<img src="/assets/home/наблюдение-на-дете-с-нарушения-в-развитието.webp" alt="Наблюдение на дете с нарушения в развитието" class="lg:hidden my-5 w-full h-auto object-cover rounded shadow" />
+							<img src="/assets/home/наблюдение-на-дете-с-нарушения-в-развитието.webp" alt="безплатна-първична-оценка-аутизъм-1" class="lg:hidden my-5 w-full h-auto object-cover rounded shadow" />
 							<p class="c-paper lg:c-paper-inv mb-1">
 								Оценяват се уменията на детето за социално взаимодействие, способността за комуникация, както и наличието на повтарящи се движения и специфични интереси.
 							</p>
@@ -777,8 +753,8 @@ export default function Page() {
 							</p>
 						</div>
 						<div class="xl:w-1/2 w-full">
-							<img src="/assets/home/семейство-на-дете-с-нарушения-в-развитието.webp" alt="Семейство на дете с нарушения в развитието" class="mt-5 w-full h-auto object-cover rounded shadow" />
-							<p class="c-paper lg:c-paper-inv italic font-300 mt-1 op-90%" style="font-family: 'Oswald', sans-serif !important; letter-spacing: 1px;">
+							<img src="/assets/home/семейство-на-дете-с-нарушения-в-развитието.webp" alt="безплатна-първична-оценка-дете-аутизъм-1" class="mt-5 w-full h-auto object-cover rounded shadow" />
+							<p class="c-paper lg:c-paper-inv italic font-300 mt-2 leading-5 lg:leading-6" style="font-family: 'Oswald', sans-serif !important; letter-spacing: 1px;">
 								Препоръчително е да донесете всички налични медицински документи, които могат да бъдат от полза за изясняване на актуалното състояние.</p>
 						</div>
 					</div>
@@ -805,30 +781,16 @@ export default function Page() {
 								{ name: "5" },
 							]}>
 							<GoogleStarReview
-								img="https://lh3.googleusercontent.com/a/ACg8ocIZRpc48TQsa_KBvFTmJvD-hLjEWf6LX9fXZ4p1hajsvQRcxg=w72-h72-p-rp-mo-br100"
+								img="https://lh3.googleusercontent.com/a/ACg8ocLjT2QCxtoR7d8rU0bdx9FD68rHT9mNGdz4LLMUjIVxDN2Y1A=w72-h72-p-rp-mo-br100"
 								reviewText={
 									<>
-										Изключително сме благодарни на целият екип от професионалисти в Sense Center!<br />
-										Невероятно мили, сърдечни, квалифицирани млади специалисти, които видимо обичат работата си!<br />
-										Напредъкът при Теди е осезаем, продължаваме смело напред и сме сигурни, че ще постигнем още положителни резултати!!! ❤️❤️❤️
+										Детето ми посещава центъра вече 5 месеца и има значителен напредък.Има интерес към всичко около него,очен контакт,опитва се да говори.Препоръпвам с две ръце центъра.Страхотни хора и професионалисти!
 									</>
 								}
-								name="Karina Stoqnova"
+								name="Лилия Жекова"
 								stars={5}
-								hrefGoogleReview="https://maps.app.goo.gl/csZ7TXUnvWMv8ics5"
-							/>
-							<GoogleStarReview
-								img="https://lh3.googleusercontent.com/a-/ALV-UjUjl00McT7Ni_1g9igLTFW01CCTJedMAXxD56UX74POjLYim-_9=w72-h72-p-rp-mo-br100"
-								reviewText={
-									<>
-										Искам да изкажа огромната си благодарност на терапевтите в Сенс Център. Те са професионалисти с отношение както към децата, така и към родителите. Препоръчвам не само за деца с различни дефицити, но и за деца в норма. Децата имат какво да получат и да надградят в този Център. Оценките им са точни и програмата им е методична, което дава страхотни резултати, особено за деца в аутистичния спектър.<br />
-										Продължавайте да бъдете все така всеотдайни в работата си и да сбъдвате и нашите надежди.
-
-									</>
-								}
-								name="Kalina Ivanova"
-								stars={5}
-								hrefGoogleReview="https://maps.app.goo.gl/ZHpw76QoafV8tsfn7"
+								hrefGoogleReview="https://maps.app.goo.gl/yKeftA9frZsnGrSX8"
+								class="important-h-300px important-sm:h-350px important-lg:h-350px important-xl:h-400px"
 							/>
 							<GoogleStarReview
 								img="https://lh3.googleusercontent.com/a-/ALV-UjXNDMsG5OUiJGd1LM9erKE5VNkTw48t7eeVN5Podk9V-RDbz_UM=w72-h72-p-rp-mo-br100"
@@ -840,28 +802,44 @@ export default function Page() {
 								name="Elena Todorova"
 								stars={5}
 								hrefGoogleReview="https://maps.app.goo.gl/qu9agxG4vrrMb94t7"
+								class="important-h-300px important-sm:h-350px important-lg:h-350px important-xl:h-400px"
 							/>
 							<GoogleStarReview
-								img="https://lh3.googleusercontent.com/a/ACg8ocKQnXIYLxIo9C3S859RjZDb6lZM0RbRmB1bxq4GCSL7095iPw=w72-h72-p-rp-mo-br100"
+								img="https://lh3.googleusercontent.com/a/ACg8ocIaF1OmEh6Z6EBektyPFGKHzyRPhOWDaemlvBl3HaCiLhT1=w72-h72-p-rp-mo-br100"
 								reviewText={
 									<>
-										Екип игграден от професионалисти, събрани със страхотна цел. Обществото ни има нужда от повече хора като вас!
+										Изключително позитивно и добронамерено отношение към децата. Предразполагат ги да развият знанията и потенциала си. Много ефективно работят с тях, което със сигурност носи прекрасни резултати 😇
 									</>
 								}
-								name="Борис Томов"
+								name="Todor Todorov"
 								stars={5}
-								hrefGoogleReview="https://maps.app.goo.gl/aJqMG4mjYLMxNR1Q6"
+								hrefGoogleReview="https://maps.app.goo.gl/YwQz4MpL8L9sTSeQ7"
+								class="important-h-300px important-sm:h-350px important-lg:h-350px important-xl:h-400px"
 							/>
 							<GoogleStarReview
-								img="https://lh3.googleusercontent.com/a-/ALV-UjV_F7MmSNrPIbep13Em26a6_XQ6Sqj4HN8CbunMe69L_EkZ5SBS=w72-h72-p-rp-mo-ba2-br100"
+								img="https://lh3.googleusercontent.com/a/ACg8ocKq8NAnmw7wca9LQEY15myV_1zWHkmnHtj6ulL1vg9KEPJ3cg=w36-h36-p-rp-mo-br100"
 								reviewText={
 									<>
-										Изключително доволна съм от подхода и цялостното отношение към детето ми. Всички терапевти са много позитивни и работят с желание.
+										Синът ми посещава центъра от около 9 месеца.За този период има сериозен напредък в емоционално,социално и когнитивно развитие.Обогати речника и подобри значително говора,благодарение на екипа от професионалисти работещи с него.
 									</>
 								}
-								name="Весела атанасова"
+								name="Ина Светомирова"
 								stars={5}
-								hrefGoogleReview="https://maps.app.goo.gl/iCk3N9iTiz14e4SQ7"
+								hrefGoogleReview="https://maps.app.goo.gl/AT5iuZMxfYMZDh1x7"
+								class="important-h-300px important-sm:h-350px important-lg:h-350px important-xl:h-400px"
+							/>
+							<GoogleStarReview
+								img="https://lh3.googleusercontent.com/a-/ALV-UjXJQKN7k47RjNKK0ezvflSWCN8F4jSiaY3G3l7kWlLYQCI6R3Iq=w36-h36-p-rp-mo-br100"
+								reviewText={
+									<>
+										Прекрасно място за децата и родителите!<br />
+										Sense Center е истинско съкровище! Всичко е организирано професионално, а обстановката е толкова уютна и приветлива. Уверена съм, че детето ми е в най-добрите ръце.
+									</>
+								}
+								name="An-Mari Petkova"
+								stars={5}
+								hrefGoogleReview="https://maps.app.goo.gl/nEvL5m6BfSxpvHNr8"
+								class="important-h-300px important-sm:h-350px important-lg:h-350px important-xl:h-400px"
 							/>
 						</ReviewSlider>
 					</AnimatedComponent>
@@ -873,53 +851,55 @@ export default function Page() {
 			<section class="xl:px-30 mx-20px pt-5 md:pt-0">
 				<BackgroundIcons />
 				<AnimatedComponent>
-					<H3Pink title="Иновативен терапевтичен център за деца" />
+					<H3Pink title="Специалистите провеждащи занимания за деца с аутизъм в Sense Center" />
 				</AnimatedComponent>
 				<AnimatedComponent class="flex xl:flex-row flex-col justify-center items-center max-w-1200px xl:gap-10 relative overflow-hidden mx-auto" style="flex: 0 0 auto;">
 					<div class="xl:w-1/2 w-full">
-						<img class="w-full h-full" src="/assets/home/вход-към-sense-center.webp" alt="Вход към сенс центъра" />
+						<img class="w-full h-full" src="/assets/pr-zan-za-detsa-s-aut/дете-аутизъм-спокойствие-комфорт.webp" alt="Детето с аутизъм е спокойно и активно участва в терапията.
+" />
 					</div>
-					<div class="xl:w-1/2 w-full pt-20px text-center">
+					<div class="xl:w-1/2 w-full pt-20px text-center px-5">
 						<div class="">
 							<p class="text-left mt-5">
-								Sense Center център за детско развитие разполага с модерна и просторна база, разположена на площ от над 700 кв.м.
-							</p>
-							<p class="text-left">
-								Центърът включва 14 специализирани терапевтични кабинета, стая за отдих и социализация, както и удобен паркинг за посетители.
+								Нашите специалисти, провеждащи практически занимания за деца с аутизъм притежават дълбоки познания в областта на детската терапия и холистичното развитие. Под формата на игра създаваме смислени преживявания, които насърчават естественото учене и развитие. Използваме иновативни подходи като музикотерапия при деца със СОП, арт терапия за деца с увреждания, експозиционна терапия, градинска терапия и социални игри. Адаптираме всяка дейност според индивидуалните потребности на детето, като работим в тясно партньорство с родителите за постигане на устойчиви и значими резултати.
 							</p>
 						</div>
 					</div>
 				</AnimatedComponent>
 			</section>
 
-			<section class="xl:px-30 mx-20px pt-50">
+			<section class="xl:px-30 mx-20px pt-25 md:pt-50">
 				<div class="mx-auto px-5">
 					<StaffSlider
 						variant="dots1"
 						reviews={[
-							{ name: "Марчела Йорданова" },
-							{ name: "Марчела Йорданова" },
-							{ name: "Марчела Йорданова" },
+							{ name: "1" },
+							{ name: "2" },
+							{ name: "3" },
+							{ name: "4" },
+							{ name: "5" },
+							{ name: "6" },
+							{ name: "7" },
+							{ name: "8" },
+							{ name: "9" },
+							{ name: "10" },
+							{ name: "11" },
 						]}>
 						<div class="flex flex-col max-w-full relative overflow-hidden mx-auto">
 							<div>
-								<h4 class="mb-0 important-md:font-size-50px text-left">Марчела Йорданова</h4>
-								<p class="important-font-100 pb-5 important-font-[MYRIADPRO-Light]">Главен логопед и управител</p>
+								<h4 class="mb-0 important-md:font-size-40px important-leading-30px text-left">Катя Илиева</h4>
+								<p class="pb-5 important-font-[MYRIADPRO-Regular]"></p>
 								<div class="">
 									<img class="w-full h-full" src="/assets/testing-image.jpg" alt="" />
 								</div>
-								<p class="italic font-size-26px mb-0 important-font-[MYRIADPRO-CONDIT]">"Всяко дете принадлежи!"</p>
-								<p class="italic font-size-16px mt-0 important-font-[MYRIADPRO-CONDIT]">д-р Зорница Маркова</p>
-								<div class="w-full py-20px text-center">
+								<p class="italic font-size-18px leading-5.5 md:leading-8 md:font-size-26px mb-0 important-font-[MYRIADPRO-CONDIT]">"Мисли. Вярвай. Мечтай. Рискувай." - Уолт Дисни</p>
+								<div class="w-full pb-20px pt-20px md:pt-30px text-center">
 									<div class="flex flex-col gap-1">
 										<p class="text-left mt-0">
-											Родителите, учителите и медицинските специалисти могат да забележат характерни прояви, като затруднения в социалното взаимодействие, повтарящи се движения или специфични интереси различни от тези на типичното развитие.
+											Катя е отдаден специалист с дългогодишен опит в работата с деца и възрастни, преподавателски и управленски опит в сферата на образованието, държавната администрация и частния сектор. Завършила е магистратура по „Детско-юношеска и училищна психология“ в Бургаски свободен университет и „Педагогика“ със специализация „Социална педагогика“ в Софийски университет „Св. Климент Охридски“.
 										</p>
 										<p class="text-left mt-1">
-											Родителите, учителите и медицинските специалисти могат да забележат характерни прояви, като затруднения в социалното взаимодействие, повтарящи се движения или специфични интереси различни от тези на типичното развитие.
-										</p>
-										<p class="text-left mt-1">
-											Родителите, учителите и медицинските специалисти могат да забележат характерни прояви, като затруднения в социалното взаимодействие, повтарящи се движения или специфични интереси различни от тези на типичното развитие.
+											Катя е сертифициран треньор по емоционална интелигентност и специалист по детско-родителски отношения, с подготовка по системна фамилна и арт терапия, тя провежда занятия по арт терапия за деца в София, като е акредитиран лектор към МОН. Автор е на образователни програми и ресурси за деца и родители, а интересите ѝ включват арт терапия с приказки (приказкотерапия), работа с МАК карти и терапевтично писане.
 										</p>
 									</div>
 								</div>
@@ -927,23 +907,22 @@ export default function Page() {
 						</div>
 						<div class="max-w-300px sm:w-300px md:w-700px flex flex-col max-w-full relative overflow-hidden mx-auto" style="flex: 0 0 auto;">
 							<div>
-								<h4 class="mb-0 important-md:font-size-50px text-left">Марчела Йорданова</h4>
-								<p class="important-font-100 pb-5 important-font-[MYRIADPRO-Light]">Главен логопед и управител</p>
+								<h4 class="mb-0 important-md:font-size-40px important-leading-30px text-left">Галина Георгиева</h4>
+								<p class="pb-5 important-font-[MYRIADPRO-Regular]"></p>
 								<div class="">
 									<img class="w-full h-full" src="/assets/testing-image.jpg" alt="" />
 								</div>
-								<p class="italic font-size-26px mb-0 important-font-[MYRIADPRO-CONDIT]">"Всяко дете принадлежи!"</p>
-								<p class="italic font-size-16px mt-0 important-font-[MYRIADPRO-CONDIT]">д-р Зорница Маркова</p>
-								<div class="w-full pb-20px pt-10px text-center">
+								<p class="italic font-size-18px leading-5.5 md:leading-8 md:font-size-26px mb-0 important-font-[MYRIADPRO-CONDIT]">“И най - дългия път започва с първата крачка", " Не спирай да мечтаеш"</p>
+								<div class="w-full pb-20px pt-20px md:pt-30px text-center">
 									<div class="flex flex-col gap-1">
 										<p class="text-left mt-0">
-											Родителите, учителите и медицинските специалисти могат да забележат характерни прояви, като затруднения в социалното взаимодействие, повтарящи се движения или специфични интереси различни от тези на типичното развитие.
+											Галина е опитен психолог, който притежава над 15 години богат професионален опит в работата с деца със СОП, като демонстрира постоянен стремеж към професионално усъвършенстване и иновативни терапевтични подходи като музикотерапия при деца с говорни дефекти и експериментална стая за обучение и внимание.
 										</p>
 										<p class="text-left mt-1">
-											Родителите, учителите и медицинските специалисти могат да забележат характерни прояви, като затруднения в социалното взаимодействие, повтарящи се движения или специфични интереси различни от тези на типичното развитие.
+											Завършила е бакалавърска степен "Психология", магистратура "Психология на личността" и специализация по "Консултативна психология" във Великотърновския университет "Св. Св. Кирил и Методий". Непрекъснато обогатява своите знания чрез специализирани обучения по “Когнитивно-поведенческа психотерапия”, “Позитивна психотерапия”, “Психоаналитична психосоматика”, както и иновативни педагогически методи като “Валдорфската и Монтесори педагогика”.
 										</p>
 										<p class="text-left mt-1">
-											Родителите, учителите и медицинските специалисти могат да забележат характерни прояви, като затруднения в социалното взаимодействие, повтарящи се движения или специфични интереси различни от тези на типичното развитие.
+											Професионалният ѝ опит е разнообразен като включва работа като социален работник в дом за деца, лишени от родителска грижа, психолог и педагог в Център за обществена подкрепа, учител във Валдорфска и Монтесори градини, както и специалист-консултант в горещата телефонна линия за домашно насилие. Активно участва в доброволчески инициативи за подкрепа на деца в риск.
 										</p>
 									</div>
 								</div>
@@ -951,23 +930,192 @@ export default function Page() {
 						</div>
 						<div class="max-w-300px sm:w-300px md:w-700px flex flex-col max-w-full relative overflow-hidden mx-auto" style="flex: 0 0 auto;">
 							<div>
-								<h4 class="mb-0 important-md:font-size-50px text-left">Марчела Йорданова</h4>
-								<p class="important-font-100 pb-5 important-font-[MYRIADPRO-Light]">Главен логопед и управител</p>
+								<h4 class="mb-0 important-md:font-size-40px important-leading-30px text-left">Росен Молнар</h4>
+								<p class="pb-5 important-font-[MYRIADPRO-Regular]"></p>
 								<div class="">
 									<img class="w-full h-full" src="/assets/testing-image.jpg" alt="" />
 								</div>
-								<p class="italic font-size-26px mb-0 important-font-[MYRIADPRO-CONDIT]">"Всяко дете принадлежи!"</p>
-								<p class="italic font-size-16px mt-0 important-font-[MYRIADPRO-CONDIT]">д-р Зорница Маркова</p>
-								<div class="w-full pb-20px pt-10px text-center">
+								<p class="italic font-size-18px leading-5.5 md:leading-8 md:font-size-26px mb-0 important-font-[MYRIADPRO-CONDIT]">“Стремя се да подкрепям децата да развиват своя потенциал, да се учат как да се отнасят с другите и да познават себе си.”</p>
+								<div class="w-full pb-20px pt-20px md:pt-30px text-center">
 									<div class="flex flex-col gap-1">
 										<p class="text-left mt-0">
-											Родителите, учителите и медицинските специалисти могат да забележат характерни прояви, като затруднения в социалното взаимодействие, повтарящи се движения или специфични интереси различни от тези на типичното развитие.
+											Росен е млад, отдаден и мотивиран специалист, който подкрепя децата по пътя им към самопознание, увереност и пълноценно общуване. В работата си с деца със СОП често се сблъсква със случаи, в които прилага музикотерапия при деца с комуникативни нарушения и арт терапия при деца със соп.
 										</p>
 										<p class="text-left mt-1">
-											Родителите, учителите и медицинските специалисти могат да забележат характерни прояви, като затруднения в социалното взаимодействие, повтарящи се движения или специфични интереси различни от тези на типичното развитие.
+											Завършил бакалавърска степен по "Психология" във Великотърновския университет и магистърска програма по "Клинична психология" в Нов български университет. Той притежава сертификат като коуч по “Емоционална интелигентност” и е преминал специализирано обучение по "Фокусирана към решения кратка терапия". Освен работата си с деца в Sense Center, Росен консултира и възрастни пациенти в столична болница.
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="max-w-300px sm:w-300px md:w-700px flex flex-col max-w-full relative overflow-hidden mx-auto" style="flex: 0 0 auto;">
+							<div>
+								<h4 class="mb-0 important-md:font-size-40px important-leading-30px text-left">Георги Абрашев</h4>
+								<p class="pb-5 important-font-[MYRIADPRO-Regular]"></p>
+								<div class="">
+									<img class="w-full h-full" src="/assets/testing-image.jpg" alt="" />
+								</div>
+								<p class="italic font-size-18px leading-5.5 md:leading-8 md:font-size-26px mb-0 important-font-[MYRIADPRO-CONDIT]">“Подкрепям децата да изразяват смело вътрешния си свят, да проявяват любопитство и креативност, за да запазят връзката с детето вътре в себе си и като възрастни."</p>
+								<div class="w-full pb-20px pt-20px md:pt-30px text-center">
+									<div class="flex flex-col gap-1">
+										<p class="text-left mt-0">
+											Георги притежава опит в работата както с деца със СОП, така и в норма, вярва, че всяко дете заслужава да бъде разбрано и подкрепено.  Неговата мисия е да вдъхновява децата да откриват себе си чрез свободно изразяване на емоции и креативност.
 										</p>
 										<p class="text-left mt-1">
-											Родителите, учителите и медицинските специалисти могат да забележат характерни прояви, като затруднения в социалното взаимодействие, повтарящи се движения или специфични интереси различни от тези на типичното развитие.
+											Завършил е бакалавър "Психология" в ПУ "Паисий Хилендарски" и магистратура "Клинична психология" в НБУ. Допълнително е сертифициран хипнотерапевт (БАХХ) и усъвършенства знанията си в Аналитичната психология (БОАП).  В практиката си активно прилага музикотерапия при деца с говорни увреждания и арт терапия за деца аутисти.
+										</p>
+										<p class="text-left mt-1">
+											Най-голямо удовлетворение намира в подкрепата и наблюдението на прогресa при децата и в силната екипна връзка, която спомага за тяхното развитие.
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="max-w-300px sm:w-300px md:w-700px flex flex-col max-w-full relative overflow-hidden mx-auto" style="flex: 0 0 auto;">
+							<div>
+								<h4 class="mb-0 important-md:font-size-40px important-leading-30px text-left">Нилюфер Исмаилова-Цветанова</h4>
+								<p class="pb-5 important-font-[MYRIADPRO-Regular]"></p>
+								<div class="">
+									<img class="w-full h-full" src="/assets/testing-image.jpg" alt="" />
+								</div>
+								<p class="italic font-size-18px leading-5.5 md:leading-8 md:font-size-26px mb-0 important-font-[MYRIADPRO-CONDIT]">“Всяко дете, което застава пред мен е като "нова вселена"."</p>
+								<div class="w-full pb-20px pt-20px md:pt-30px text-center">
+									<div class="flex flex-col gap-1">
+										<p class="text-left mt-0">
+											Нилюфер е отдаден и вдъхновен детски психолог, за когото всяко дете е като „нова вселена“, която заслужава да бъде открита с внимание, уважение и любопитство. Вярва, че по време на срещите с децата най-важното е да се изгради желание за свързване и общ език, чрез който заедно да се откриват богатствата и ресурсите на тази „нова вселена“.
+										</p>
+										<p class="text-left mt-1">
+											Завършила е бакалавърска степен „Българска филология“ във Великотърновския университет и магистърска степен по „Детско-юношеска и училищна психология“ в Софийски университет „Св. Климент Охридски“. Преминала е обучение по EMDR-терапия – Ниво 1, има базисно ниво на “Позитивна психотерапия” и е в процес на обучение за Майсторско ниво. В момента специализира и „Детско-юношеска психотерапия“ през призмата на позитивната психотерапия.
+										</p>
+										<p class="text-left mt-1">
+											Вярва, че децата са бъдещите възрастни, а едно от най-ценните неща е, когато дете ти подаде ръка и сподели детството си с теб. За нея работата с деца е като разказване на приказка – понякога с малко думи или дори без тях, но винаги преживелищно и наситено с емоция.
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="max-w-300px sm:w-300px md:w-700px flex flex-col max-w-full relative overflow-hidden mx-auto" style="flex: 0 0 auto;">
+							<div>
+								<h4 class="mb-0 important-md:font-size-40px important-leading-30px text-left">Яница Дочева</h4>
+								<p class="pb-5 important-font-[MYRIADPRO-Regular]"></p>
+								<div class="">
+									<img class="w-full h-full" src="/assets/testing-image.jpg" alt="" />
+								</div>
+								<p class="italic font-size-18px leading-5.5 md:leading-8 md:font-size-26px mb-0 important-font-[MYRIADPRO-CONDIT]">“Вярвам, че във всяко дете има светлина. Понякога тиха, понякога скрита зад различност, но винаги истинска.”</p>
+								<div class="w-full pb-20px pt-20px md:pt-30px text-center">
+									<div class="flex flex-col gap-1">
+										<p class="text-left mt-0">
+											Мисията на Яница е да създава пространство, в което децата могат да бъдат себе си и да се чувстват приети, уверени и смели да споделят своята светлина със света.
+										</p>
+										<p class="text-left mt-1">
+											Завършила е специалност „Психология“ и „Приложна лингвистика на немски език“ в Нов български университет през 2021 г., а през 2025 г. ще завърши и специалност „Обществено здраве“ в Медицински университет – София. Притежава опит в консултиране на деца в норма и в работа с възрастни в контекста на личностно развитие и емоционална подкрепа, провежда множество сесии по музикотерапия за деца с умствени увреждания, както и арт терапия за агресивни деца.
+										</p>
+										<p class="text-left mt-1">
+											Активно участва в благотворителни инициативи, включително организация на събития за деца. Едно от най-вдъхновяващите ѝ преживявания е в клиника по детски болести, където заедно с малките пациенти провеждат сесия по арт терапия за деца и изработват коледна украса, с която превръщат една елха в символ на надежда, топлина и радост.
+										</p>
+										<p class="text-left mt-1">
+											В момента усъвършенства професионалните си умения чрез обучение по „Терапия чрез игра и изкуство“, с цел да разшири и задълбочи уменията си в работата с деца, включвайки музикотерапия при деца с физически увреждания и техники за развитие на социални умения. Най-много цени искрените усмивки и малките победи, които правят всеки ден по-специален.
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="max-w-300px sm:w-300px md:w-700px flex flex-col max-w-full relative overflow-hidden mx-auto" style="flex: 0 0 auto;">
+							<div>
+								<h4 class="mb-0 important-md:font-size-40px important-leading-30px text-left"></h4>
+								<p class="pb-5 important-font-[MYRIADPRO-Regular]">Детски клиничен психолог</p>
+								<div class="">
+									<img class="w-full h-full" src="/assets/testing-image.jpg" alt="" />
+								</div>
+								<p class="italic font-size-18px leading-5.5 md:leading-8 md:font-size-26px mb-0 important-font-[MYRIADPRO-CONDIT]">“Моята мисия е да осигуря стабилна основа за емоционално и социално израстване, която подкрепя децата през целия им живот.”</p>
+								<div class="w-full pb-20px pt-20px md:pt-30px text-center">
+									<div class="flex flex-col gap-1">
+										<p class="text-left mt-0">
+											Александър е отдаден и целеустремен детски клиничен психолог, който приема работата с деца като възможност да изгради мост към техния вътрешен свят – с търпение, емпатия и професионализъм. Вярва, че всяко дете заслужава да бъде чуто, разбрано и подкрепено по пътя към пълноценно разгръщане на своя потенциал.
+										</p>
+										<p class="text-left mt-1">
+											Завършил е бакалавърска степен по „Психология“ във Великотърновски университет „Св. св. Кирил и Методий“ и магистърска степен по „Клинична психология“ в Софийски университет „Св. Климент Охридски“. Преминал е обучение за работа с диагностичния инструмент DESK 3–5, което му позволява да извършва прецизна оценка и ефективно насочване на терапевтичния процес.
+										</p>
+										<p class="text-left mt-1">
+											Провежда индивидуални и групови психологични сесии с деца до 18-годишна възраст, както в норма, така и със затруднения в развитието, също така провежда и сесии по музикотерапия при деца с увреждания. Специализира в работата с деца от аутистичния спектър, с поведенчески затруднения, хиперактивност, тревожност и други емоционални и поведенчески предизвикателства, използвайки занимания за деца с аутизъм и техники за развитие на социални умения.
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="max-w-300px sm:w-300px md:w-700px flex flex-col max-w-full relative overflow-hidden mx-auto" style="flex: 0 0 auto;">
+							<div>
+								<h4 class="mb-0 important-md:font-size-40px important-leading-30px text-left">Венцислава Тодорина</h4>
+								<p class="pb-5 important-font-[MYRIADPRO-Regular]"></p>
+								<div class="">
+									<img class="w-full h-full" src="/assets/testing-image.jpg" alt="" />
+								</div>
+								<p class="italic font-size-18px leading-5.5 md:leading-8 md:font-size-26px mb-0 important-font-[MYRIADPRO-CONDIT]">“Вярвам, че всяко дете заслужава да бъде насърчавано да се развива и да изразява свободно емоциите си.”</p>
+								<div class="w-full pb-20px pt-20px md:pt-30px text-center">
+									<div class="flex flex-col gap-1">
+										<p class="text-left mt-0">
+											Венцислава Тодорина е млад и мотивиран специалист, отдаден на работата с деца и тяхното развитие чрез арт терапия и музикотерапия за деца. Тя вярва, че всяко дете заслужава да бъде насърчавано да изразява свободно емоциите си и да се развива в сигурна и подкрепяща среда.
+										</p>
+										<p class="text-left mt-1">
+											Завършила е бакалавърска степен по „Психология“ в Нов български университет със специализация „Психология на развитието“. Притежава опит в работа с деца със СОП и в норма, като в своята практика проявява отдаденост, внимание и желание за професионално развитие.
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="max-w-300px sm:w-300px md:w-700px flex flex-col max-w-full relative overflow-hidden mx-auto" style="flex: 0 0 auto;">
+							<div>
+								<h4 class="mb-0 important-md:font-size-40px important-leading-30px text-left">Деси-Слава Андонова</h4>
+								<p class="pb-5 important-font-[MYRIADPRO-Regular]"></p>
+								<div class="">
+									<img class="w-full h-full" src="/assets/testing-image.jpg" alt="" />
+								</div>
+								<p class="italic font-size-18px leading-5.5 md:leading-8 md:font-size-26px mb-0 important-font-[MYRIADPRO-CONDIT]">“Убедена съм, че подкрепата е от ключово значение за развитието на всеки човек.”</p>
+								<div class="w-full pb-20px pt-20px md:pt-30px text-center">
+									<div class="flex flex-col gap-1">
+										<p class="text-left mt-0">
+											Деси-Слава е млад, отдаден и мотивиран специалист, който подкрепя децата по пътя им към уверено и пълноценно развитие чрез музикотерапия. Притежава опит в работата с деца със СОП, както и петгодишна практика в сферата на детската анимация, включваща планиране на събития и водене на групови занимания за деца с аутизъм.
+										</p>
+										<p class="text-left mt-1">
+											Завършила е бакалавърска степен по „Психология“ в Нов български университет със специализация „Психология на развитието“. Интересите ѝ са насочени към когнитивното развитие в детска възраст и включват провеждане на тренинги за развитие на социални умения, памет, внимание и екзекутивни функции. В своята работа тя е убедена, че ранната подкрепа е ключът към изграждането на увереност и подготовката на децата за пълноценен живот като възрастни.
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="max-w-300px sm:w-300px md:w-700px flex flex-col max-w-full relative overflow-hidden mx-auto" style="flex: 0 0 auto;">
+							<div>
+								<h4 class="important-md:font-size-40px important-leading-30px text-left">Ани Христова</h4>
+								<div class="">
+									<img class="w-full h-full" src="/assets/testing-image.jpg" alt="" />
+								</div>
+								<p class="italic font-size-18px leading-5.5 md:leading-8 md:font-size-26px mb-0 important-font-[MYRIADPRO-CONDIT]">“Вярвам, че децата могат да развият потенциала си с подходяща подкрепа и насока.”</p>
+								<div class="w-full pb-20px pt-20px md:pt-30px text-center">
+									<div class="flex flex-col gap-1">
+										<p class="text-left mt-0">
+											Ани Христова е всеотдаен и вдъхновен специалист, който подкрепя децата в откриването на техния потенциал и изграждането на увереност в собствените им възможности. Тя има 5-годишен професионален опит в работата с деца на възраст от 2 до 12 години, като прилага индивидуален и комплексен подход, съобразен с нуждите на всяко дете.
+										</p>
+										<p class="text-left mt-1">
+											Завършила е бакалавърска степен по „Психология“ и магистърска програма по „Психология на здравето“ в СУ „Св. Климент Охридски“. Допълнително е преминала обучение по „Детска невропсихология“ под ръководството на проф. Иванка Асенова, базисно ниво по програма „Фамилна и арт психотерапия и консултиране“ към ПИСЕЛ, както и програма „Ефективен комуникационен модел“ за работа с деца с аутизъм, ADHD, ADD, PDD и синдром на Аспергер. Успешно прилага наученото в сесиите по музикотерапия при деца със заекване и други говорни проблеми, както и арт терапия при деца с аутизъм. Ани вярва, че с подходяща подкрепа всяко дете може да разгърне своите способности и да постигне хармонично развитие.
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="max-w-300px sm:w-300px md:w-700px flex flex-col max-w-full relative overflow-hidden mx-auto" style="flex: 0 0 auto;">
+							<div>
+								<h4 class="important-md:font-size-40px important-leading-30px text-left">Цветелина Дескова</h4>
+								<div class="">
+									<img class="w-full h-full" src="/assets/testing-image.jpg" alt="" />
+								</div>
+								<p class="italic font-size-18px leading-5.5 md:leading-8 md:font-size-26px mb-0 important-font-[MYRIADPRO-CONDIT]">“Децата са нашето бъдеще и вярвам, че всяко дете заслужава уважение, търпение и любов, за да разгърне пълния си потенциал.”</p>
+								<div class="w-full pb-20px pt-20px md:pt-30px text-center">
+									<div class="flex flex-col gap-1">
+										<p class="text-left mt-0">
+											Цветелина Дескова е млад и мотивиран специалист, който вярва, че всяко дете заслужава уважение, търпение и любов, за да разгърне своя потенциал. Тя има опит в работата с деца със СОП, като влага усилията си в развитието на техните когнитивни и социални умения, както и на умението им да разбират и изразяват собствените си емоции. Използва методи като музикотерапия при заекващи деца, градинска терапия и арт терапия при деца със СОП.
+										</p>
+										<p class="text-left mt-1">
+											Цветелина е завършила бакалавърска степен по „Психология“ със специализация „Психични нарушения“ в Нов български университет. В практиката си създава спокойна и подкрепяща среда, в която децата се чувстват уверени да бъдат себе си и да растат в посока на своето най-добро развитие на социални умения.
 										</p>
 									</div>
 								</div>
@@ -984,11 +1132,11 @@ export default function Page() {
 					<H2Echo
 						maintitle={
 							<>
-								Терапия<br />чрез игра
+								Иновативни методи
 							</>
 						}
-						title="терапия"
-						bgImage="/assets/home/терапия-чрез-игра-център-за-детско-развитие.webp"
+						title="методи"
+						bgImage="/assets/pr-zan-za-detsa-s-aut/занимание-за-дете-с-аутизъм.webp"
 						bgSize="300%"
 						bgPosition="right 40% top 90%"
 					/>
@@ -998,13 +1146,13 @@ export default function Page() {
 			<section class="md:pt-10">
 				<div class="flex md:flex-row flex-col justify-center items-center md:gap-8 max-w-1500px mx-auto">
 					<AnimatedComponent class="md:w-1/2 md:mx-0 mx--20px">
-						<img src="/assets/home/терапия-чрез-игра-център-за-детско-развитие.webp" alt="Терапия чрез игра център за детско развитие" class="w-full h-auto object-cover shadow important-b-rd-0px important-md:b-rd-12px" />
+						<img src="/assets/pr-zan-za-detsa-s-aut/занимание-за-дете-с-аутизъм.webp" alt="Занимание за дете с аутизъм." class="w-full h-auto object-cover shadow important-b-rd-0px important-md:b-rd-12px" />
 					</AnimatedComponent>
 
 					<div class="relative w-full px-3 md:w-1/2 md:pl-7">
 						<AnimatedComponent>
 							<p class="mt-10">
-								В нашия терапевтичен център за деца вярваме, че всяко дете носи в себе си потенциал за развитие, увереност и независимост. Създаваме подкрепяща среда, в която то да развива ключови умения за по-лесна адаптация и самостоятелност в ежедневието.
+								Практическите занимания за деца с аутизъм включват интерактивни дейности, които подпомагат развитието на социални умения, емоционалната регулация, справяне със страхове и трудности и др. За постигане на оптимални резултати се използват внимателно подбрани и разнообразни терапевтични игри и специализирани материали. Всеки инструмент е индивидуално съобразен с уникалните нужди и потребностите на детето. Правилната комбинация от терапевтични средства е от ключово значение за успеха на процеса, като чрез тях се постигат устойчиви и трайни резултати в цялостното развитие на детето.
 							</p>
 						</AnimatedComponent>
 					</div>
@@ -1012,59 +1160,22 @@ export default function Page() {
 			</section>
 
 			<section class="xl:px-30 mx-20px pt-30 md:pt-50">
-				<H3Pink title="Какво да правим, ако нямаме достъп до терапевт" />
-				<div class="mx-auto">
-					<AnimatedComponent class="flex xl:flex-row flex-col justify-center items-center max-w-1200px xl:gap-10 relative overflow-hidden mx-auto" style="flex: 0 0 auto;">
-						<div class="xl:w-1/2 w-full pt-20px text-center">
-							<h4 class="important-md:font-size-40px important-leading-10 mt-3 mb-0 md:my-3">Вибромасажор Z-Vibe</h4>
+				<H3Pink title="3+ терапевтични инструментa, които правят терапията забавна и ефективна" />
+				<div class="mx-auto px-5">
+					<AnimatedComponent class="flex xl:flex-row-reverse flex-col justify-center items-center max-w-1200px xl:gap-12 relative overflow-hidden mx-auto" style="flex: 0 0 auto;">
+						<div class="xl:w-1/2 w-full md:pt-20px text-center">
+							<h4 class="important-md:font-size-40px important-leading-7 important-md:leading-9 mt-3 mb-0 md:my-3">Контейнери за сензорни игри</h4>
+							<p class="text-left mt-2 font-[MYRIADPRO-COND]">
+								Експериментална стая за обучение и развитие
+							</p>
 							<div>
 								<p class="text-left mt-0 md:mt-2">
-									Родителите, учителите и медицинските специалисти могат да забележат характерни прояви, като затруднения в социалното взаимодействие, повтарящи се движения или специфични интереси различни от тези на типичното развитие.
+									Кутии с различни материали – ориз, пясък, гел топчета – които развиват тактилната чувствителност и позволяват на детето да свикне с различни усещания и да преодолеят чувствителност към мокрене, цапане и текстури.
 								</p>
 							</div>
 						</div>
 						<div class="xl:w-1/2 w-full">
-							<img class="w-full h-full" src="/assets/testing-image.jpg" alt="" />
-						</div>
-					</AnimatedComponent>
-				</div>
-			</section>
-
-			<DoodleDecor variant="pink" />
-
-			<section class="xl:px-30 mx-20px py-5 md:py-10">
-				<div class="mx-auto">
-					<AnimatedComponent class="flex xl:flex-row-reverse flex-col justify-center items-center max-w-1200px xl:gap-10 relative overflow-hidden mx-auto" style="flex: 0 0 auto;">
-						<div class="xl:w-1/2 w-full pt-20px text-center">
-							<h4 class="important-md:font-size-40px important-leading-10 mt-3 mb-0 md:my-3">Вибромасажор Z-Vibe</h4>
-							<div>
-								<p class="text-left mt-0 md:mt-2">
-									Родителите, учителите и медицинските специалисти могат да забележат характерни прояви, като затруднения в социалното взаимодействие, повтарящи се движения или специфични интереси различни от тези на типичното развитие.
-								</p>
-							</div>
-						</div>
-						<div class="xl:w-1/2 w-full">
-							<img class="w-full h-full" src="/assets/testing-image.jpg" alt="" />
-						</div>
-					</AnimatedComponent>
-				</div>
-			</section>
-
-			<DoodleDecor variant="blue" />
-
-			<section class="xl:px-30 mx-20px py-5 md:py-10">
-				<div class="mx-auto">
-					<AnimatedComponent class="flex xl:flex-row flex-col justify-center items-center max-w-1200px xl:gap-10 relative overflow-hidden mx-auto" style="flex: 0 0 auto;">
-						<div class="xl:w-1/2 w-full pt-20px text-center">
-							<h4 class="important-md:font-size-40px important-leading-10 mt-3 mb-0 md:my-3">Вибромасажор Z-Vibe</h4>
-							<div>
-								<p class="text-left mt-0 md:mt-2">
-									Родителите, учителите и медицинските специалисти могат да забележат характерни прояви, като затруднения в социалното взаимодействие, повтарящи се движения или специфични интереси различни от тези на типичното развитие.
-								</p>
-							</div>
-						</div>
-						<div class="xl:w-1/2 w-full">
-							<img class="w-full h-full" src="/assets/testing-image.jpg" alt="" />
+							<img class="w-full h-full" src="/assets/pr-zan-za-detsa-s-aut/контейнери-сензорни-игри.webp" alt="Контейнери за сензорни игри." />
 						</div>
 					</AnimatedComponent>
 				</div>
@@ -1072,39 +1183,91 @@ export default function Page() {
 
 			<DoodleDecor variant="purple2" />
 
-			<section class="xl:px-30 mx-20px py-5 md:py-10">
-				<div class="mx-auto">
-					<AnimatedComponent class="flex xl:flex-row-reverse flex-col justify-center items-center max-w-1200px xl:gap-10 relative overflow-hidden mx-auto" style="flex: 0 0 auto;">
-						<div class="xl:w-1/2 w-full pt-20px text-center">
-							<h4 class="important-md:font-size-40px important-leading-10 mt-3 mb-0 md:my-3">Вибромасажор Z-Vibe</h4>
+			<section class="xl:px-30 px-5 mx-20px md:pt-50">
+				<div class="mx-auto px-5">
+					<AnimatedComponent class="flex xl:flex-row flex-col justify-center items-center max-w-1200px xl:gap-10 relative overflow-hidden mx-auto" style="flex: 0 0 auto;">
+						<div class="xl:w-1/2 w-full md:pt-20px text-center">
+							<h4 class="important-md:font-size-40px important-leading-7 important-md:leading-9 mt-3 mb-0 md:my-3">Комплекти за ролеви игри</h4>
+							<p class="text-left mt-2 font-[MYRIADPRO-COND]">
+								Развитие на социални умения
+							</p>
 							<div>
 								<p class="text-left mt-0 md:mt-2">
-									Родителите, учителите и медицинските специалисти могат да забележат характерни прояви, като затруднения в социалното взаимодействие, повтарящи се движения или специфични интереси различни от тези на типичното развитие.
+									Карти с изображения на обекти и предмети (плодове, зеленчуци, животни) и ролеви аксесоари (пазарски кошници, фалшиви пари, продуктови етикети), които помагат на децата да упражняват социални умения, да взаимодействат с връстници и да тренират самостоятелност в ежедневни ситуации.
 								</p>
 							</div>
 						</div>
 						<div class="xl:w-1/2 w-full">
-							<img class="w-full h-full" src="/assets/testing-image.jpg" alt="" />
+							<img class="w-full h-full" src="/assets/pr-zan-za-detsa-s-aut/комплекти-ролеви-игри.webp" alt="Комплекти за ролеви игри." />
 						</div>
 					</AnimatedComponent>
 				</div>
 			</section>
 
-			<DoodleDecor variant="pink2" />
+			<DoodleDecor variant="pink" />
 
-			<section class="xl:px-30 mx-20px pt-5 md:pt-10">
+			<section class="xl:px-30 pb-5 px-5 mx-20px md:pt-50">
 				<div class="mx-auto">
-					<AnimatedComponent class="flex xl:flex-row flex-col justify-center items-center max-w-1200px xl:gap-10 relative overflow-hidden mx-auto" style="flex: 0 0 auto;">
+					<AnimatedComponent class="flex xl:flex-row-reverse flex-col justify-center items-center max-w-1200px xl:gap-12 relative overflow-hidden mx-auto" style="flex: 0 0 auto;">
 						<div class="xl:w-1/2 w-full pt-20px text-center">
-							<h4 class="important-md:font-size-40px important-leading-10 mt-3 mb-0 md:my-3">Вибромасажор Z-Vibe</h4>
+							<h4 class="important-md:font-size-40px important-leading-7 important-md:leading-9 mt-3 mb-0 md:my-3">Семена и градински инструменти</h4>
+							<p class="text-left mt-2 font-[MYRIADPRO-COND]">
+								Градинска терапия
+							</p>
 							<div>
 								<p class="text-left mt-0 md:mt-2">
-									Родителите, учителите и медицинските специалисти могат да забележат характерни прояви, като затруднения в социалното взаимодействие, повтарящи се движения или специфични интереси различни от тези на типичното развитие.
+									Инструменти за садене и поливане – семена, малки лопатки, лейки и саксийки, които учат децата на грижа и отговорност, докато развиват фината моторика. По време на терапията се използват и природни материали, с които децата създават отпечатъци и рисунки, развивайки креативността и сензорното възприятие.
 								</p>
 							</div>
 						</div>
 						<div class="xl:w-1/2 w-full">
-							<img class="w-full h-full" src="/assets/testing-image.jpg" alt="" />
+							<img class="w-full h-full" src="/assets/pr-zan-za-detsa-s-aut/семена-градински-инструменти.webp" alt="Семена и градински инструменти." />
+						</div>
+					</AnimatedComponent>
+				</div>
+			</section>
+
+			<DoodleDecor variant="blue" />
+
+			<section class="xl:px-30 px-5 mx-20px md:pt-50">
+				<div class="mx-auto">
+					<AnimatedComponent class="flex xl:flex-row flex-col justify-center items-center max-w-1200px xl:gap-10 relative overflow-hidden mx-auto" style="flex: 0 0 auto;">
+						<div class="xl:w-1/2 w-full md:pt-20px text-center">
+							<h4 class="important-md:font-size-40px important-leading-7 important-md:leading-9 mt-3 mb-0 md:my-3">Музикални инструменти</h4>
+							<p class="text-left mt-2 font-[MYRIADPRO-COND]">
+								Музикотерапия
+							</p>
+							<div>
+								<p class="text-left mt-0 md:mt-2">
+									Леки и безопасни музикални инструменти като детски барабанчета, маракаси и ксилофон, които се използват за ритмични упражнения, емоционална регулация и насърчаване на себеизразяването чрез звук.
+								</p>
+							</div>
+						</div>
+						<div class="xl:w-1/2 w-full">
+							<img class="w-full h-full" src="/assets/pr-zan-za-detsa-s-aut/музикални-инструменти.webp" alt="Музикални инструменти." />
+						</div>
+					</AnimatedComponent>
+				</div>
+			</section>
+
+			<DoodleDecor variant="purple2" />
+
+			<section class="xl:px-30 px-5 mx-20px md:pt-50">
+				<div class="mx-auto">
+					<AnimatedComponent class="flex xl:flex-row-reverse flex-col justify-center items-center max-w-1200px xl:gap-12 relative overflow-hidden mx-auto" style="flex: 0 0 auto;">
+						<div class="xl:w-1/2 w-full pt-20px text-center">
+							<h4 class="important-md:font-size-40px important-leading-7 important-md:leading-9 mt-3 mb-0 md:my-3">Материали за изкуство и творчество</h4>
+							<p class="text-left mt-2 font-[MYRIADPRO-COND]">
+								Арт терапия
+							</p>
+							<div>
+								<p class="text-left mt-0 md:mt-2">
+									Инструментите за рисуване и моделиране дават пространство за себеизразяване, креативност и развиване на социални и емоционални умения по естествен и приятен начин.
+								</p>
+							</div>
+						</div>
+						<div class="xl:w-1/2 w-full">
+							<img class="w-full h-full" src="/assets/pr-zan-za-detsa-s-aut/материали-изкуство-творчество.webp" alt="Материали за изкуство и творчество." />
 						</div>
 					</AnimatedComponent>
 				</div>
@@ -1116,8 +1279,7 @@ export default function Page() {
 				<AnimatedComponent class="mb-10 mt-5 md:mt-10 lg:w-800px mx-auto">
 					<div class="flex flex-col justify-center items-start b-rd-12px bg-brand px-10 py-4">
 						<p class="font-size-22px uppercase c-paper font-500 mb-0 tracking-0.5px font-[MYRIADPRO-Semibold]">Устойчиво развитие</p>
-						<p class="c-paper font-300 font-[MYRIADPRO-Light]">Научете повече за особеностите на аутизма и подходящите методи за работа с деца в аутистичния спектър.<br />
-							Използвайте визуални помощни средства и техники за управление на поведението.
+						<p class="c-paper font-300 font-[MYRIADPRO-Light]">Използването на подходящи терапевтични инструменти е ключов елемент в терапията за деца с аутизъм. Чрез комбинация от подходящи методи и индивидуален подход се постигат устойчиви резултати в развитието на речевите и езиковите умения на всяко дете.
 						</p>
 					</div>
 				</AnimatedComponent>
@@ -1127,18 +1289,15 @@ export default function Page() {
 
 			<section class="xl:px-30 mx-20px pt-5 md:pt-0">
 				<AnimatedComponent>
-					<H3Blue title="Иновативен терапевтичен център за деца" />
+					<H3Blue title="Спокойна и стимулираща среда за децата" />
 				</AnimatedComponent>
 				<AnimatedComponent class="flex xl:flex-row flex-col justify-center items-center max-w-1200px xl:gap-10 relative overflow-hidden mx-auto" style="flex: 0 0 auto;">
 					<div class="xl:w-1/2 w-full">
-						<img class="w-full h-full" src="/assets/home/вход-към-sense-center.webp" alt="Вход към сенс центъра" />
+						<img class="w-full h-full" src="/assets/pr-zan-za-detsa-s-aut/спокойна-стимулираща-среда-деца.webp" alt="Спокойна и стимулираща среда за деца." />
 					</div>
-					<div class="xl:w-1/2 w-full pt-20px text-center">
+					<div class="xl:w-1/2 w-full pt-20px text-center px-5">
 						<div class="">
 							<p class="text-left mt-5">
-								Sense Center център за детско развитие разполага с модерна и просторна база, разположена на площ от над 700 кв.м.
-							</p>
-							<p class="text-left">
 								Центърът включва 14 специализирани терапевтични кабинета, стая за отдих и социализация, както и удобен паркинг за посетители.
 							</p>
 						</div>
@@ -1152,38 +1311,26 @@ export default function Page() {
 						<div class="w-full md:pt-20px text-center">
 							<div class="">
 								<p class="text-left">
-									Нашите специализирани зали за ерготерапия, музикотерапия и звукова стимулация помагат на децата да развият и подобрят сетивните си умения.
+									Кабинетите са специално проектирани за детска терапия - с богата колекция от терапевтични игри и обучителни материали за всяка възраст. Всички пространства в Sense Center са създадени така че да предразполагат детето към спокойствие, комфорт и активно участие в терапията.
 								</p>
 							</div>
 						</div>
 						<div class="my-5">
-							<GallerySlider3
-								imgs={[
-									{ src: "/assets/home/стая-сензорна-терапия.webp", alt: "Кабинети за двигателно развитие" },
-									{ src: "/assets/home/кабинети-за-сензорна-интеграция.webp", alt: "Кабинети за сензорна интеграция" },
-									{ src: "/assets/home/кабинет-сензорна-интеграция.webp", alt: "Кабинет сензорна интеграция" },
-									{ src: "/assets/home/кабинет-за-сензорна-интеграция.webp", alt: "Кабинет за сензорна интеграция" },
-								]}
-							/>
+						<img class="w-full h-full" src="/assets/pr-zan-za-detsa-s-aut/терапевтични-игри-обучителни-материали.webp" alt="Терапевтични игри и обучителни материали за деца с аутизъм." />
+
 						</div>
 					</div>
 				</AnimatedComponent>
 				<AnimatedComponent class="hidden xl:flex flex-col max-w-full relative overflow-hidden mx-auto" style="flex: 0 0 auto;">
 					<div class="flex xl:flex-row-reverse flex-col justify-center items-center max-w-1200px mx-auto gap-10">
 						<div class="xl:w-1/2 w-full my-5">
-							<GallerySlider3
-								imgs={[
-									{ src: "/assets/home/стая-сензорна-терапия.webp", alt: "Кабинети за двигателно развитие" },
-									{ src: "/assets/home/кабинети-за-сензорна-интеграция.webp", alt: "Кабинети за сензорна интеграция" },
-									{ src: "/assets/home/кабинет-сензорна-интеграция.webp", alt: "Кабинет сензорна интеграция" },
-									{ src: "/assets/home/кабинет-за-сензорна-интеграция.webp", alt: "Кабинет за сензорна интеграция" },
-								]}
-							/>
+						<img class="w-full h-full" src="/assets/pr-zan-za-detsa-s-aut/терапевтични-игри-обучителни-материали.webp" alt="Терапевтични игри и обучителни материали за деца с аутизъм." />
+
 						</div>
 						<div class="xl:w-1/2 w-full pt-20px text-center">
 							<div class="">
 								<p class="text-left mt-5">
-									Нашите специализирани зали за ерготерапия, музикотерапия и звукова стимулация помагат на децата да развият и подобрят сетивните си умения.
+									Кабинетите са специално проектирани за детска терапия - с богата колекция от терапевтични игри и обучителни материали за всяка възраст. Всички пространства в Sense Center са създадени така че да предразполагат детето към спокойствие, комфорт и активно участие в терапията.
 								</p>
 							</div>
 						</div>
@@ -1194,7 +1341,7 @@ export default function Page() {
 			<DoodleDecor variant="purple2" />
 
 			<section>
-				<AnimatedComponent class="gap-12 pb-8 md:pb-30 pt-100px md:pt-50px xl:px-30">
+				<AnimatedComponent class="gap-12 pb-8 md:pb-30 pt-5 md:pt-10 xl:px-30">
 					<H3SolidPink title="Първи стъпки" />
 					<AnimatedComponent class="px-5 md:px-10 mb-10 relative">
 						<BackgroundIcons />
@@ -1207,7 +1354,7 @@ export default function Page() {
 							</p>
 						</div>
 						<div class="flex flex-col justify-center items-start">
-							<p class="mt-0">Ще обсъдим актуалното състояние на детето и ще организираме час за първична оценка, на която ще се запознаем с уменията на детето към настоящия момент, неговите дефицити и трудности.</p>
+							<p class="mt-0">Ще обсъдим състоянието на детето и ще организираме час за първична оценка, на която ще се запознаем с уменията на детето към настоящия момент, неговите дефицити и трудности.</p>
 						</div>
 						<div class="flex flex-col justify-center items-start">
 							<p class="mt-0">На база Вашата заявка за напредъка, който искате да постигнем и нашето наблюдение по време на оценката,  препоръчваме подходящи терапии и честота на посещенията.</p>
@@ -1222,12 +1369,12 @@ export default function Page() {
 					<H2Echo
 						maintitle={
 							<>
-								Терапия<br />чрез игра
+								Резултати от терапията
 							</>
 						}
-						title="терапия"
-						bgImage="/assets/home/терапия-чрез-игра-център-за-детско-развитие.webp"
-						bgSize="300%"
+						title="Резултати"
+						bgImage="/assets/pr-zan-za-detsa-s-aut/терапията-помага-децата-аутизъм.webp"
+						bgSize="600%"
 						bgPosition="right 40% top 90%"
 					/>
 				</AnimatedComponent>
@@ -1236,13 +1383,13 @@ export default function Page() {
 			<section class="md:pt-10">
 				<div class="flex md:flex-row flex-col justify-center items-center md:gap-8 max-w-1500px mx-auto">
 					<AnimatedComponent class="md:w-1/2 md:mx-0 mx--20px">
-						<img src="/assets/home/терапия-чрез-игра-център-за-детско-развитие.webp" alt="Терапия чрез игра център за детско развитие" class="w-full h-auto object-cover shadow important-b-rd-0px important-md:b-rd-12px" />
+						<img src="/assets/pr-zan-za-detsa-s-aut/терапията-помага-децата-аутизъм.webp" alt="Терапията помага на децата с аутизъм." class="w-full h-auto object-cover shadow important-b-rd-0px important-md:b-rd-12px" />
 					</AnimatedComponent>
 
 					<div class="relative w-full px-3 md:w-1/2 md:pl-7">
 						<AnimatedComponent>
 							<p class="mt-10">
-								В нашия терапевтичен център за деца вярваме, че всяко дете носи в себе си потенциал за развитие, увереност и независимост. Създаваме подкрепяща среда, в която то да развива ключови умения за по-лесна адаптация и самостоятелност в ежедневието.
+								Терапията помага на децата да преодолеят страхове и сензорни непоносимости, като постепенно свикват с различни текстури, звуци и ситуации. Така намаляват тревожността, подобряват саморегулацията и изграждат увереност.
 							</p>
 						</AnimatedComponent>
 					</div>
@@ -1252,15 +1399,15 @@ export default function Page() {
 			<section class="xl:px-30 mx-20px pt-30 md:pt-40">
 				<AnimatedComponent class="flex xl:flex-row-reverse flex-col justify-center items-center max-w-1200px xl:gap-10 relative overflow-hidden mx-auto" style="flex: 0 0 auto;">
 					<div class="xl:w-1/2 w-full">
-						<img class="w-full h-full" src="/assets/home/вход-към-sense-center.webp" alt="Вход към сенс центъра" />
+						<img class="w-full h-full" src="/assets/pr-zan-za-detsa-s-aut/ролеви-игри-деца-аутизъм.webp" alt="Ролеви игри за деца с аутизъм." />
 					</div>
-					<div class="xl:w-1/2 w-full pt-20px text-center">
+					<div class="xl:w-1/2 w-full pt-20px text-center px-5">
 						<div class="">
 							<p class="text-left mt-5">
-								Sense Center център за детско развитие разполага с модерна и просторна база, разположена на площ от над 700 кв.м.
+								Чрез ролеви игри, социални упражнения и групови занимания децата развиват умения за комуникация, сътрудничество и разрешаване на конфликти. Това повишава емоционалната интелигентност, насърчава емпатията и улеснява адаптацията в реална среда.
 							</p>
 							<p class="text-left">
-								Центърът включва 14 специализирани терапевтични кабинета, стая за отдих и социализация, както и удобен паркинг за посетители.
+								Заниманията свързани с музика, изкуство и градинарство подпомагат концентрацията, фината моторика и творческото себеизразяване. Постоянната подкрепа води до по-добра социална свързаност, емоционална устойчивост и трайни резултати в развитието на всяко дете.
 							</p>
 						</div>
 					</div>
@@ -1289,69 +1436,63 @@ export default function Page() {
 								<ReviewPuzzlePiece
 									style="background-color:#088F9D;"
 									puzzleclass="c-brand-pink w-6 mr-2"
-									title="“Без вас бяхме загубени!”"
+									title="“Отношенията им са видимо по-добри”"
 									desc={<>
-										Октомври 2024г. посетихме за първи път Сенс център. Дойдохме, защото имахме нужда от помощ, подкрепа и разбиране, т.като на Синът ни бе поставена диагноза , след което оставени сами да се справяме с този проблем.<br />
-										След като синът ни бе видян от Специалистите в Сенс център се оказа,че проблемът му е друг и с правилната терапия, помощ, подкрепа и време , проблемът ще бъде преодолян.<br />
-										От този момент до ден днешен той посещава няколко вида терапии съобразени с неговите нужди и възможности- Психомоторика, Речева терапия, Ерготерапия,Звукова стимулация. И за кратко време всеки един от семейството и роднините ни забеляза положителната промяна в комуникацията , поведението и навиците на детето.<br />
-										Синът ни посещава с голямо удоволствие терапиите, винаги е усмихнат и щастлив след тях. Харесва много своите терапевти, които винаги са усмихнати, приветливи и насреща за помощ и подкрепа...<br />
-										{/* Има още много работа и сме сигурни, че нашето момче ще се справи със своя проблем, защото знаем, че е в сигурни ръце и на най-правилното място.<br />
-										Изказваме голяма благодарност към всеки един терапевт от Сенс център за грижите, усърдието , вниманието и доброто отношение към нашето момченце и към нас.<br />
-										Без Вас бяхме изгубени.<br />
-										БЛАГОДАРИМ ВИ, че ви има! */}
+										Двете ни дъщери (6 и 4 годишни) ходят на терапия в центъра вече повече от година и виждаме резултати от отдавна: отношенията им са видимо по-добри, разбират се без агресия, разрешават сами споровете си мирно, намират решения, които са добри и за двете, където преди се викаше, пищеше, скубеше и удряше за всяко едно нещо. Сега си организират заедно игри и отстъпват една на друга, когато някой не е съгласен с правилата.<br />
+										Ще продължим редовно да посещавам Сенс център и да го препоръчваме на приятели и познати!
 									</>}
-									name="Pavlina Zaharieva"
+									name="Petya Kirisheva"
 									condition=""
+									href="https://maps.app.goo.gl/Vyjkyd36yhTxojKm9"
 								/>
 								<ReviewPuzzlePiece
 									style="background-color:#E11172;"
 									puzzleclass="c-brand-blue w-6 mr-2"
-									title="“Получих отговори и решения”"
+									title="“Има значителен напредък”"
 									desc={<>
-										Огромни благодарности на екипа от Sense Center за отношението, отдадеността, подкрепата, разбирането и отделеното време за мен и моя син Мартин!<br />
-										Не зная дали мога да разкажа кратко преживяно в няколко реда, но твърдя, че тяхната подкрепа и разбиране не съм среща досега. Синът ми е с проблем, който датира от детската градина и не съм спирала да търся помощ от психолози и психиатри. Търсих и се лутах до август 2024 г., когато ненадейно попаднах на безплатна консултация във Фейсбук и се записах на мига. Казах си, че няма нищо лошо да чуя още едно мнение. В деня на записания час отидох с усещането, че нещо приятно предстои и не грешах. Посрещнаха но с радост, внимание и топло отношение. Получих отговори и решения на проблема. Взех решение още на консултацията, че той е в добри ръце и го записах. Всеки път, когато има консултация, синът ми знае кой е денят и няма търпение да се види с терапевта си. Аз след сесията излиза пълен с любов и щастие в очите си...
-										{/* Имаме път още да извървим, но резултат от консултациите започва да се вижда. Вярвам и знам, че е в добри ръце. Препоръчвам Ви Sense Center. Аз избрах тези специалисти и съм щастлива и благодарна. */}
+										Детето ми посещава центъра вече 5 месеца и има значителен напредък. Има интерес към всичко около него,очен контакт,опитва се да говори.Препоръпвам с две ръце центъра.Страхотни хора и професионалисти!
 									</>}
-									name="Севдалина Тютюнджиева"
+									name="Лилия Жекова"
 									condition=""
+									href="https://maps.app.goo.gl/kGSmAef55t1eo7716"
 								/>
 								<ReviewPuzzlePiece
 									style="background-color:#FA7402;"
 									puzzleclass="c-brand-purple w-6 mr-2"
-									title="“Давате сили на родителите и помагате на децата”"
+									title="“Детето ми се чувства прекрасно там”"
 									desc={<>
-										"SENSE centar" отново ни върна усмивките на лицата. Моето дете посещава центърът от 3 месеца,като не се обръщаше на името си, не обръщаше внимание на оклоните,ходеше на пръсти, не изпълняваше команди! За краткото време в което синът ми посещава центъра, благодарение на истинският професияонализъм и специалното отношение на терапевтите към моето дете,виждаме с всяко изминало посещение развитие в детето. Започнал е да изпълнява команди,започнал е да се обръща на името си, започнал е да ходи по-малко на пръсти , определено е по-фокусиран и всичко това се дължи на "SENSE center". Сърдечно Ви благодарим затова, че давате сили на родителите и помагате на децата. "SENSE center" Благодарим Ви!
+										Великолепно отношение и професионализъм! Детето ми се чувства прекрасно там, винаги ходи с огромно желание и отбелязва значителен напредък, благодарение на този млад и отдаден екип.
 									</>}
-									name="Любомира Ангелова"
+									name="Elena Todorova"
 									condition=""
+									href="https://maps.app.goo.gl/TCyXLwcQRXCx1ocf9"
 								/>
 								<ReviewPuzzlePiece
 									style="background-color:#FA7402;"
 									puzzleclass="c-brand-purple w-6 mr-2"
-									title="“Място, което променя животи!”"
+									title="“Хубави хора с хубава кауза”"
 									desc={<>
-										Сенс Център е най-доброто място в София за работа с деца!<br />
-										Когато синът ми беше на 3 години и половина, той не говореше. Започна да посещава Сенс Център още от самото му създаване и само след няколко месеца проговори! Опасенията ми се оказаха неоснователни, а днес той е едно прекрасно, лъчезарно и уверено дете - рецитира песнички и стихотворения с радост!<br />
-										Сестра му също посещава центъра и ефектът върху тях е невероятен. Връзката им се заздрави, станаха по-емпатични един към друг и по-уверени в себе си.<br />
-										Препоръчвам с цялото си сърце - място, което променя животи!
+										Повече такива места ни трябват в България. Хубави хора с хубава кауза работят там. Истински професионалисти!
 									</>}
-									name="Alexander Soklev"
+									name="Hristo Marinov"
 									condition=""
+									href="https://maps.app.goo.gl/5hd81oWwSCi7uPeQA"
 								/>
 								<ReviewPuzzlePiece
 									style="background-color:#FA7402;"
 									puzzleclass="c-brand-purple w-6 mr-2"
-									title="“Много приятна среда за децата”"
+									title="“Sense Center е истинско съкровище!”"
 									desc={<>
-										Мишо посещава детски център SENSE от 6 месеца с голямо желание и нетърпение, за това време започна да говори много повече, да се обръща персонално по име към човека, с който иска да общува , започна да се шегува и да играе повече самостоятелно вкъщи. Другите дечица навън започнаха да му правят впечатление. Впечатленията са за много приятна среда за децата, любезно отношение от терапевтите и чести обратни връзки, свързани с развитието и промените в детето.
+										Прекрасно място за децата и родителите!<br />
+										Sense Center е истинско съкровище! Всичко е организирано професионално, а обстановката е толкова уютна и приветлива. Уверена съм, че детето ми е в най-добрите ръце.
 									</>}
-									name="Gergana Berberova"
+									name="An-Mari Petkova"
 									condition=""
+									href="https://maps.app.goo.gl/veyQLn9s4p7JnVRWA"
 								/>
 							</ContainerSlider>
 						</AnimatedComponent>
 						<PuzzleButton2
-							class="important-mt-30px"
 							href=""
 							text={
 								<>

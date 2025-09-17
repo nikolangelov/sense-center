@@ -3,15 +3,12 @@ import { GoogleStarReview, PuzzleIconReview, ReviewSlider, StaffSlider, StarRevi
 import { AnimatedComponent } from '../../components/AnimateOnView';
 import { H2Echo, H3Blue, H3Pink } from '../../components/H2WithImage';
 import { ContainerBox, ContainerSlider, ReviewPuzzlePiece } from "../../components/ContainerSlider";
-import { PuzzleButton2 } from "../../components/PuzzleButton";
+import { PuzzleButton, PuzzleButton2 } from "../../components/PuzzleButton";
 import { DoodleDecor } from "../../components/BackgroundDecor";
 import { BackgroundIcons } from "../../components/BackgroundIcons";
 import { Collapse } from "../../components/FAQ";
 import { VideoHero } from "../../components/HeroVideo";
 import { createSignal } from "solid-js";
-import { GradientFooter } from "../../components/GradientFooter";
-
-const [isPlaying, setIsPlaying] = createSignal(false);
 
 function SingleCollapse() {
 	return (
@@ -113,6 +110,8 @@ function SingleCollapse() {
 	);
 }
 
+const [isPlayingHero, setIsPlayingHero] = createSignal(false);
+
 export default function Page() {
 	return (
 		<>
@@ -121,16 +120,16 @@ export default function Page() {
 					youtubeId="R1kPm_q7vCc"
 					gifPreview="/assets/detski-psiholog/сенс-център-детски-психолог.mp4"
 					gifPreviewMobile="/assets/detski-psiholog/сенс-център-детски-психолог-мобилно.mp4"
-					isPlaying={isPlaying()}
-					onPlay={() => setIsPlaying(true)}
+					isPlaying={isPlayingHero()}
+					onPlay={() => setIsPlayingHero(true)}
 				/>
 
 				<div class="absolute inset-0 z-30 pointer-events-none flex flex-col items-center justify-end pb-18 md:pb-10 text-center px-4 text-white">
-					<div class={`absolute ${isPlaying() ? 'top-32% sm:top-95% lg:top-100% mt-30' : 'top-46% md:top-55% mt-0'}`}>
+					<div class={`absolute ${isPlayingHero() ? 'top-32% sm:top-95% lg:top-100% mt-30' : 'top-46% md:top-55% mt-0'}`}>
 						<div>
 							<div
-								class={`mb-4 md:mb-6 transition-colors duration-500 important-font-size-45px important-md:font-size-90px important-leading-50px important-md:leading-80px important-font-[MYRIADPRO-Bold] text-center px-10 ${isPlaying()
-									? 'text-brand'
+								class={`mb-4 md:mb-6 transition-colors duration-500 important-font-size-45px important-md:font-size-90px important-leading-50px important-md:leading-80px important-font-[MYRIADPRO-Bold] text-center px-10 ${isPlayingHero()
+									? 'inline-block pb-[0.2em] bg-gradient-to-r from-[#E11172] to-[#FFAE01] bg-clip-text text-transparent [-webkit-background-clip:text] [-webkit-text-fill-color:transparent]'
 									: 'text-white'
 									}`}
 							>
@@ -139,7 +138,7 @@ export default function Page() {
 						</div>
 
 						<h1
-							class={`important-delay-300 font-400 text-center mb-0 font-size-4.5 lg-font-size-7 sm-px-0 px-12 md:leading-7 leading-5.5 transition-colors duration-500 important-font-[MYRIADPRO-Light] ${isPlaying()
+							class={`important-delay-300 font-400 text-center mb-0 font-size-4.5 important-lg-font-size-5.5 sm-px-0 px-12 md:leading-7 leading-5.5 transition-colors duration-500 important-font-[MYRIADPRO-Light] ${isPlayingHero()
 								? 'text-brand'
 								: 'text-white'
 								}`}
@@ -148,12 +147,12 @@ export default function Page() {
 						</h1>
 
 						<div
-							class={`important-delay-600 mt-8 md:mt-10 relative text-center ${isPlaying() ? 'md:pb-30' : 'md:pb-0'
+							class={`important-delay-600 mt-8 md:mt-10 relative text-center ${isPlayingHero() ? 'md:pb-30' : 'md:pb-0'
 								}`}
 						>
 							<div class="flex md:flex-row flex-col justify-center items-center gap-3 pointer-events-auto">
 								<PuzzleButton2
-									class="important-bg-brand important-hover:bg-brand-hover"
+									class="important-bg-brand/80 important-group-hover:bg-brand-hover/80"
 									href=""
 									text={<>Запазете час за<br />първоначална консултация</>}
 								/>
@@ -167,7 +166,7 @@ export default function Page() {
 				</div>
 			</div>
 
-			<AnimatedComponent class="xl:px-30 mx-20px pt-10 md:pt-20">
+			<AnimatedComponent class={`xl:px-30 mx-20px ${isPlayingHero() ? 'mt-30 sm:mt-100 md:mt-120 lg:mt-140' : 'pt-10 md:pt-20'}`}>
 				<H3Pink title="Работим заедно за изграждане на умения за саморегулация, справяне с трудности и адаптация" />
 			</AnimatedComponent>
 
@@ -426,7 +425,6 @@ export default function Page() {
 
 							</AnimatedComponent>
 							<PuzzleButton2
-								class="important-mt-25px"
 								href=""
 								text="Вижте всички състояния"
 							/>
@@ -479,7 +477,7 @@ export default function Page() {
 							</ul>
 						</div>
 					</div>
-					<div class="flex flex-col justify-center items-start b-rd-12px bg-gradient-to-b from-brand-yellow to-brand px-6 md:px-10 xl:px-8 py-2 pd:py-4 w-full md:w-1/3">
+					<div class="flex flex-col justify-center items-start b-rd-12px bg-gradient-to-b from-brand-yellow to-brand max-w-800px mx-auto px-6 md:px-10 xl:px-8 py-2 pd:py-4 w-full md:w-1/3">
 						<div class="flex justify-center items-center gap-4">
 							<img src="/assets/exclamation-mark-icon.webp" class="w-12 h-12" />
 							<p class="font-[MYRIADPRO-Semibold] c-paper uppercase font-size-17px">80% - 90% от мозъка на детето се развива до 7-годишна възраст</p>
@@ -714,41 +712,41 @@ export default function Page() {
 
 			<section class="relative md:pb-30 xl:px-30 mx-20px">
 				<H3Blue title="Първоначална психологическа консултация с детски психолог" />
-				<div class="flex flex-col justify-center items-center max-w-1500px mx-auto px-20px xl:px-30">
-					<AnimatedComponent class="max-w-1500px px-5 md:px-20 md:py-10 py-5 bg-gradient-to-t from-brand-yellow to-brand b-rd-12px flex flex-col">
-						<p class="c-paper mb-1">
-							В Sense Center предлагаме първоначална консултация с детски психолог за деца, които проявяват емоционални, поведенчески или социални затруднения.
-						</p>
-						<p class="c-paper">
-							По време на консултацията се извършва обследване на поведението и актуалното състояние на детето.
-						</p>
-						<img src="/assets/home/наблюдение-на-дете-с-нарушения-в-развитието.webp" alt="Консултация с детски психолог." class="my-5 w-full h-auto object-cover rounded shadow" />
-						<p class="c-paper mb-1">
-							Оценяват се актуалното емоционално състояние и поведението на детето, както и социалните му умения.
-						</p>
-						<p class="c-paper">
-							Едновременно с това специалистът интервюира родителите за техните наблюдения относно ежедневието, училището или детската градина, взаимоотношенията с връстници и други важни фактори.
-						</p>
-						<p class="c-paper">
-							На база събраната информация се изготвя индивидуален план за работа с детски психолог.
-						</p>
-						<img src="/assets/home/семейство-на-дете-с-нарушения-в-развитието.webp" alt="Резултат от консултация с детски психолог." class="mt-5 w-full h-auto object-cover rounded shadow" />
-						<p class="c-paper italic font-300 mt-1 op-90%" style="font-family: 'Oswald', sans-serif !important; letter-spacing: 1px;">
-							Препоръчително е да донесете всички налични медицински документи, които могат да бъдат от полза за изясняване на актуалното състояние на детето.
-						</p>
-						<div class="pt-10 flex md:flex-row flex-col justify-center items-center gap-2">
-							<PuzzleButton2
-								class="important-bg-brand important-hover:bg-brand-hover"
-								href=""
-								text={<>Запазете час за<br />психологическа консултация</>}
-							/>
-							<PuzzleButton2
-								href=""
-								text="+ 359 879 800 013"
-							/>
+				<div class="flex flex-col justify-center items-center mx-auto px-20px xl:px-30">
+					<AnimatedComponent class="max-w-1500px px-5 md:px-20 md:pb-10 md:pt-4 py-5 md:bg-gradient-to-t lg:from-paper lg:to-paper bg-gradient-to-t from-brand-yellow to-brand b-rd-12px flex flex-col">
+						<div class="flex flex-col lg:flex-row-reverse justify-center items-center gap-8">
+							<div class="xl:w-1/2 w-full md:pl-7">
+								<p class="c-paper lg:c-paper-inv mb-1">
+									В Sense Center предлагаме <strong class="font-[MYRIADPRO-Bold]">първоначална консултация</strong> с детски психолог за деца, които проявяват емоционални, поведенчески или социални затруднения.
+								</p>
+								<p class="c-paper lg:c-paper-inv">
+									По време на консултацията се извършва обследване на поведението и актуалното състояние на детето.
+								</p>
+								<img src="/assets/home/наблюдение-на-дете-с-нарушения-в-развитието.webp" alt="Наблюдение на дете с нарушения в развитието" class="lg:hidden my-5 w-full h-auto object-cover rounded shadow" />
+								<p class="c-paper lg:c-paper-inv mb-1">
+									Оценяват се актуалното емоционално състояние и поведението на детето, както и социалните му умения.
+								</p>
+								<p class="c-paper lg:c-paper-inv">
+									Едновременно с това специалистът интервюира родителите за техните наблюдения относно ежедневието, училището или детската градина, взаимоотношенията с връстници и други важни фактори.
+								</p>
+								<p class="c-paper lg:c-paper-inv">
+									На база събраната информация се изготвя индивидуален план за работа с детски психолог.
+								</p>
+								<div class="pt-8 flex md:flex-row flex-col justify-center items-center">
+									<PuzzleButton />
+								</div>
+							</div>
+							<div class="xl:w-1/2 w-full">
+								<img src="/assets/home/семейство-на-дете-с-нарушения-в-развитието.webp" alt="Семейство на дете с нарушения в развитието" class="mt-5 w-full h-auto object-cover rounded shadow" />
+								<p class="c-paper lg:c-paper-inv italic font-300 mt-2 leading-5 lg:leading-6" style="font-family: 'Oswald', sans-serif !important; letter-spacing: 1px;">
+									Препоръчително е да донесете всички налични медицински документи, които могат да бъдат от полза за изясняване на актуалното състояние на детето.
+								</p>
+							</div>
 						</div>
 					</AnimatedComponent>
 				</div>
+
+
 			</section>
 
 			<div class="mt-20 gap-12 pb-8 md:pb-20 pt-50px xl:px-30 px-20px bg-brand-blue -mx-20px">
@@ -875,8 +873,8 @@ export default function Page() {
 								<div class="">
 									<img class="w-full h-full" src="/assets/testing-image.jpg" alt="" />
 								</div>
-								<p class="italic font-size-26px mb-0 important-font-[MYRIADPRO-CONDIT]">"Мисли. Вярвай. Мечтай. Рискувай." - Уолт Дисни</p>
-								<div class="w-full pb-20px pt-30px text-center">
+								<p class="italic font-size-18px leading-5.5 md:leading-8 md:font-size-26px mb-0 important-font-[MYRIADPRO-CONDIT]">"Мисли. Вярвай. Мечтай. Рискувай." - Уолт Дисни</p>
+								<div class="w-full pb-20px pt-20px md:pt-30px text-center">
 									<div class="flex flex-col gap-1">
 										<p class="text-left mt-0">
 											Катя е отдаден специалист с дългогодишен опит в работата с деца и възрастни, преподавателски и управленски опит в сферата на образованието в образованието, държавната администрация и частния сектор. Завършила е магистратура по „Детско-юношеска и училищна психология“ (БСУ) и „Педагогика“ със специализация „Социална педагогика“ (СУ).
@@ -895,8 +893,8 @@ export default function Page() {
 								<div class="">
 									<img class="w-full h-full" src="/assets/testing-image.jpg" alt="" />
 								</div>
-								<p class="italic font-size-26px mb-0 important-font-[MYRIADPRO-CONDIT]">“Стремя се да подкрепям децата да развиват своя потенциал, да се учат как да се отнасят с другите и да познават себе си.”</p>
-								<div class="w-full pb-20px pt-30px text-center">
+								<p class="italic font-size-18px leading-5.5 md:leading-8 md:font-size-26px mb-0 important-font-[MYRIADPRO-CONDIT]">“Стремя се да подкрепям децата да развиват своя потенциал, да се учат как да се отнасят с другите и да познават себе си.”</p>
+								<div class="w-full pb-20px pt-20px md:pt-30px text-center">
 									<div class="flex flex-col gap-1">
 										<p class="text-left mt-0">
 											Росен е млад, отдаден и мотивиран специалист, който подкрепя децата по пътя им към самопознание, увереност и пълноценно общуване. Притежава опит в работа с деца със СОП, като демонстрира постоянен стремеж към лично и професионално развитие.
@@ -915,8 +913,8 @@ export default function Page() {
 								<div class="">
 									<img class="w-full h-full" src="/assets/testing-image.jpg" alt="" />
 								</div>
-								<p class="italic font-size-26px mb-0 important-font-[MYRIADPRO-CONDIT]">“И най - дългия път започва с първата крачка", " Не спирай да мечтаеш"</p>
-								<div class="w-full pb-20px pt-30px text-center">
+								<p class="italic font-size-18px leading-5.5 md:leading-8 md:font-size-26px mb-0 important-font-[MYRIADPRO-CONDIT]">“И най - дългия път започва с първата крачка", " Не спирай да мечтаеш"</p>
+								<div class="w-full pb-20px pt-20px md:pt-30px text-center">
 									<div class="flex flex-col gap-1">
 										<p class="text-left mt-0">
 											Галина е опитен детски психолог в София, който притежава над 15 години богат професионален опит в работата с деца със СОП, като демонстрира постоянен стремеж към професионално усъвършенстване и иновативни терапевтични подходи.
@@ -938,8 +936,8 @@ export default function Page() {
 								<div class="">
 									<img class="w-full h-full" src="/assets/testing-image.jpg" alt="" />
 								</div>
-								<p class="italic font-size-26px mb-0 important-font-[MYRIADPRO-CONDIT]">“Подкрепям децата да изразяват смело вътрешния си свят, да проявяват любопитство и креативност, за да запазят връзката с детето вътре в себе си и като възрастни."</p>
-								<div class="w-full pb-20px pt-30px text-center">
+								<p class="italic font-size-18px leading-5.5 md:leading-8 md:font-size-26px mb-0 important-font-[MYRIADPRO-CONDIT]">“Подкрепям децата да изразяват смело вътрешния си свят, да проявяват любопитство и креативност, за да запазят връзката с детето вътре в себе си и като възрастни."</p>
+								<div class="w-full pb-20px pt-20px md:pt-30px text-center">
 									<div class="flex flex-col gap-1">
 										<p class="text-left mt-0">
 											Георги е сред отдадените детски клинични психолози в София, с опит в работата както с деца със СОП, така и в норма, той вярва, че всяко дете заслужава да бъде разбрано и подкрепено.  Неговата мисия е да вдъхновява децата да откриват себе си чрез свободно изразяване на емоции и креативност.
@@ -961,8 +959,8 @@ export default function Page() {
 								<div class="">
 									<img class="w-full h-full" src="/assets/testing-image.jpg" alt="" />
 								</div>
-								<p class="italic font-size-26px mb-0 important-font-[MYRIADPRO-CONDIT]">“Всяко дете, което застава пред мен е като "нова вселена"."</p>
-								<div class="w-full pb-20px pt-30px text-center">
+								<p class="italic font-size-18px leading-5.5 md:leading-8 md:font-size-26px mb-0 important-font-[MYRIADPRO-CONDIT]">“Всяко дете, което застава пред мен е като "нова вселена"."</p>
+								<div class="w-full pb-20px pt-20px md:pt-30px text-center">
 									<div class="flex flex-col gap-1">
 										<p class="text-left mt-0">
 											Нилюфер е отдаден и вдъхновен детски психолог, за когото всяко дете е като „нова вселена“, която заслужава да бъде открита с внимание, уважение и любопитство. Вярва, че по време на срещите с децата най-важното е да се изгради желание за свързване и общ език, чрез който заедно да се откриват богатствата и ресурсите на тази „нова вселена“.
@@ -984,8 +982,8 @@ export default function Page() {
 								<div class="">
 									<img class="w-full h-full" src="/assets/testing-image.jpg" alt="" />
 								</div>
-								<p class="italic font-size-26px mb-0 important-font-[MYRIADPRO-CONDIT]">“Вярвам, че във всяко дете има светлина. Понякога тиха, понякога скрита зад различност, но винаги истинска.”</p>
-								<div class="w-full pb-20px pt-30px text-center">
+								<p class="italic font-size-18px leading-5.5 md:leading-8 md:font-size-26px mb-0 important-font-[MYRIADPRO-CONDIT]">“Вярвам, че във всяко дете има светлина. Понякога тиха, понякога скрита зад различност, но винаги истинска.”</p>
+								<div class="w-full pb-20px pt-20px md:pt-30px text-center">
 									<div class="flex flex-col gap-1">
 										<p class="text-left mt-0">
 											Мисията на Яница е да създава пространство, в което децата могат да бъдат себе си и да се чувстват приети, уверени и смели да споделят своята светлина със света.
@@ -1010,8 +1008,8 @@ export default function Page() {
 								<div class="">
 									<img class="w-full h-full" src="/assets/testing-image.jpg" alt="" />
 								</div>
-								<p class="italic font-size-26px mb-0 important-font-[MYRIADPRO-CONDIT]">“Моята мисия е да осигуря стабилна основа за емоционално и социално израстване, която подкрепя децата през целия им живот.”</p>
-								<div class="w-full pb-20px pt-30px text-center">
+								<p class="italic font-size-18px leading-5.5 md:leading-8 md:font-size-26px mb-0 important-font-[MYRIADPRO-CONDIT]">“Моята мисия е да осигуря стабилна основа за емоционално и социално израстване, която подкрепя децата през целия им живот.”</p>
+								<div class="w-full pb-20px pt-20px md:pt-30px text-center">
 									<div class="flex flex-col gap-1">
 										<p class="text-left mt-0">
 											Александър е отдаден и целеустремен детски клиничен психолог, който приема работата с деца като възможност да изгради мост към техния вътрешен свят – с търпение, емпатия и професионализъм. Вярва, че всяко дете заслужава да бъде чуто, разбрано и подкрепено по пътя към пълноценно разгръщане на своя потенциал.
@@ -1033,8 +1031,8 @@ export default function Page() {
 								<div class="">
 									<img class="w-full h-full" src="/assets/testing-image.jpg" alt="" />
 								</div>
-								<p class="italic font-size-26px mb-0 important-font-[MYRIADPRO-CONDIT]">“Вярвам, че всяко дете заслужава да бъде насърчавано да се развива и да изразява свободно емоциите си.”</p>
-								<div class="w-full pb-20px pt-30px text-center">
+								<p class="italic font-size-18px leading-5.5 md:leading-8 md:font-size-26px mb-0 important-font-[MYRIADPRO-CONDIT]">“Вярвам, че всяко дете заслужава да бъде насърчавано да се развива и да изразява свободно емоциите си.”</p>
+								<div class="w-full pb-20px pt-20px md:pt-30px text-center">
 									<div class="flex flex-col gap-1">
 										<p class="text-left mt-0">
 											Венцислава Тодорина е млад и мотивиран специалист, отдаден на работата с деца и тяхното развитие. Тя вярва, че всяко дете заслужава да бъде насърчавано да изразява свободно емоциите си и да се развива в сигурна и подкрепяща среда.
@@ -1053,8 +1051,8 @@ export default function Page() {
 								<div class="">
 									<img class="w-full h-full" src="/assets/testing-image.jpg" alt="" />
 								</div>
-								<p class="italic font-size-26px mb-0 important-font-[MYRIADPRO-CONDIT]">“Убедена съм, че подкрепата е от ключово значение за развитието на всеки човек.”</p>
-								<div class="w-full pb-20px pt-30px text-center">
+								<p class="italic font-size-18px leading-5.5 md:leading-8 md:font-size-26px mb-0 important-font-[MYRIADPRO-CONDIT]">“Убедена съм, че подкрепата е от ключово значение за развитието на всеки човек.”</p>
+								<div class="w-full pb-20px pt-20px md:pt-30px text-center">
 									<div class="flex flex-col gap-1">
 										<p class="text-left mt-0">
 											Деси-Слава е млад, отдаден и мотивиран специалист, който подкрепя децата по пътя им към уверено и пълноценно развитие. Притежава опит в работата с деца със СОП, както и петгодишна практика в сферата на детската анимация, включваща планиране на събития и водене на групови занимания.
@@ -1161,15 +1159,10 @@ export default function Page() {
 					<AnimatedComponent class="md:w-1/2 md:mx-0 mx--20px">
 						<img src="/assets/detski-psiholog/иновативни-методи.webp" alt="Иновативни методи в детската психология." class="w-full h-auto object-cover shadow important-b-rd-0px important-md:b-rd-12px" />
 					</AnimatedComponent>
-					<AnimatedComponent class="flex flex-col items-center gap-1 relative mb-2 md:hidden">
-						<h2 class="text-transparent bg-clip-text bg-[url(/assets/detski-psiholog/иновативни-методи.webp)] bg-cover bg-center opacity-8 scale-30 md:scale-50" style="background-position: right 0% top 0%;">
-							аутизъм
-						</h2>
-					</AnimatedComponent>
 
 					<div class="relative w-full px-3 md:w-1/2 md:pl-7">
 						<AnimatedComponent>
-							<p class="mt--2">
+							<p class="mt-10 md:mt-0">
 								Терапията с детски психолог използва специално подбрани инструменти и оборудване, които подпомагат изразяването на емоциите и стимулират личностното и социалното развитие на детето. Чрез игрови и творчески подходи, детето се чувства в безопасна среда, където може свободно да споделя и изразява своите чувства и преживявания.
 							</p>
 						</AnimatedComponent>
@@ -1302,7 +1295,7 @@ export default function Page() {
 						</div>
 					</AnimatedComponent>
 					<PuzzleButton2
-						class="important-bg-brand important-hover:bg-brand-hover"
+						class="important-bg-brand/80 important-group-hover:bg-brand-hover/80"
 						href=""
 						text={<>Запазете час за<br />първоначална консултация</>}
 					/>
@@ -1341,13 +1334,8 @@ export default function Page() {
 							<p class="mt-15 font-[MYRIADPRO-Semibold]">Макар резултатите да не са забележими веднага, с постоянство и професионална подкрепа те стават видими и трайни.</p>
 						</div>
 					</AnimatedComponent>
-					<AnimatedComponent class="flex flex-col items-center gap-1 relative mb-2 md:hidden">
-						<h2 class="text-transparent bg-clip-text bg-[url(/assets/detski-psiholog/резултат-детски-психолог-мобилно.webp)] bg-cover bg-center opacity-8 scale-30 md:scale-50" style="background-position: right 0% top 0%;">
-							детски психолог
-						</h2>
-					</AnimatedComponent>
 
-					<div class="relative w-full px-5 md:w-1/2 md:pl-7">
+					<div class="relative w-full px-5 md:w-1/2 md:pl-7 mt-10 md:mt-0">
 						<AnimatedComponent>
 							<div class="hidden md:block">
 								<p>
@@ -1399,6 +1387,7 @@ export default function Page() {
 									</>}
 									name="Petya Kirisheva"
 									condition=""
+									href="https://maps.app.goo.gl/CKfRipMFsDQGbML29"
 								/>
 								<ReviewPuzzlePiece
 									style="background-color:#E11172;"
@@ -1409,6 +1398,7 @@ export default function Page() {
 									</>}
 									name="Лилия Жекова"
 									condition=""
+									href="https://maps.app.goo.gl/NP4ypf2sSjAk7mbM9"
 								/>
 								<ReviewPuzzlePiece
 									style="background-color:#FA7402;"
@@ -1419,6 +1409,7 @@ export default function Page() {
 									</>}
 									name="Elena Todorova"
 									condition=""
+									href="https://maps.app.goo.gl/a6Bvkv2g8ip6Ue2u9"
 								/>
 								<ReviewPuzzlePiece
 									style="background-color:#E11172;"
@@ -1429,6 +1420,7 @@ export default function Page() {
 									</>}
 									name="Hristo Marinov"
 									condition=""
+									href="https://maps.app.goo.gl/EfnTQiSNydi4jcoM8"
 								/>
 								<ReviewPuzzlePiece
 									style="background-color:#742C8F;"
@@ -1440,18 +1432,17 @@ export default function Page() {
 									</>}
 									name="An-Mari Petkova"
 									condition=""
+									href="https://maps.app.goo.gl/wdf8jU1PmdZBfokx6"
 								/>
 							</ContainerSlider>
 						</AnimatedComponent>
 						<PuzzleButton2
-							class="important-mt-30px"
 							href=""
 							text="Вижте всички успешни истории"
 						/>
 					</section>
 				</div>
 			</section>
-			<GradientFooter />
 		</>
 	);
 }

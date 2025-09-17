@@ -9,7 +9,6 @@ import { VideoHero } from "../../components/HeroVideo";
 import { createSignal, JSX } from 'solid-js';
 import { VideoPlayer } from "../../components/VideoPlayer";
 import { Slider, SliderProvider } from "solid-slider";
-import { GradientFooter } from "../../components/GradientFooter";
 
 export const StaffSlider = (props: {
 	reviews: { name: string }[];
@@ -62,7 +61,6 @@ export const StaffSlider = (props: {
 	);
 };
 
-
 const [isPlaying, setIsPlaying] = createSignal(false);
 
 export default function Page() {
@@ -80,32 +78,31 @@ export default function Page() {
 				/>
 
 				<div class="absolute inset-0 z-30 pointer-events-none flex flex-col items-center justify-end pb-18 md:pb-10 text-center px-4 text-white">
-					<AnimatedComponent>
+					<div class={`absolute ${isPlaying() ? 'top-32% sm:top-95% lg:top-100% mt-30' : 'top-66% md:top-60% mt-0'}`}>
+
 						<div>
 							<h1
-								class={`mb-4 md:mb-7 transition-colors duration-500 ${isPlaying()
-									? 'text-black md:text-white md:hidden'
-									: 'text-white md:text-white md:block'
+								class={`mb-4 md:mb-4 transition-colors duration-500 ${isPlaying()
+									? 'inline-block pb-[0.2em] bg-gradient-to-r from-[#E11172] to-[#FFAE01] bg-clip-text text-transparent [-webkit-background-clip:text] [-webkit-text-fill-color:transparent]'
+									: 'text-white'
 									}`}>
 								Присъединете се към екип, който вярва в потенциала на всяко дете
 							</h1>
 						</div>
-					</AnimatedComponent>
 
-					<AnimatedComponent
-						class={`important-delay-600 mt-8 md:mt-10 relative text-center ${isPlaying() ? 'md:pb-30' : 'md:pb-0'
-							}`}
-					>
-						<div class="flex md:flex-row flex-col justify-center items-center gap-3 pointer-events-auto">
-							<PuzzleButton />
+						<div
+							class={`important-delay-600 mt-8 md:mt-10 relative text-center ${isPlaying() ? 'md:pb-30' : 'md:pb-0'
+								}`}
+						>
+							<div class="flex md:flex-row flex-col justify-center items-center gap-3 pointer-events-auto">
+								<PuzzleButton />
+							</div>
 						</div>
-					</AnimatedComponent>
+					</div>
 				</div>
 			</div>
 
-			<DoodleDecor variant="pink" />
-
-			<section class="gap-12 pb-8 md:pb-20 xl:px-30 pt-20">
+			<section class={`gap-12 pb-8 md:pb-20 xl:px-30 ${isPlaying() ? 'mt-40 sm:mt-120 md:mt-150 lg:mt-160' : 'pt-20 lg:pt-40'}`}>
 				<H3Blue variant="h2" title="Смислена работа с реално въздействие върху децата" />
 				<div class="md:pb-0 pb-10">
 					<AnimatedComponent>
@@ -616,14 +613,12 @@ export default function Page() {
 							Едновременно с това специалистите интервюират родителите за техните наблюдения и за училищното представяне на детето.
 						</p>
 						<img src="/assets/Fulfilling-Vows.webp" alt="" class="mt-5 w-full h-auto object-cover rounded shadow" />
-						<p class="c-paper italic font-300 mt-1 op-90%" style="font-family: 'Oswald', sans-serif !important; letter-spacing: 1px;">
+						<p class="c-paper italic font-300 mt-2 leading-5 lg:leading-6" style="font-family: 'Oswald', sans-serif !important; letter-spacing: 1px;">
 							Препоръчително е да донесете всички налични медицински документи, които могат да бъдат от полза за изясняване на състоянието.
 						</p>
 						<div class="pt-10 flex md:flex-row flex-col justify-center items-center gap-2">
 							<PuzzleButton />
 							<PuzzleButton2
-								style2="padding-left:0px !important; font-weight:600; font-size:16px !important;"
-								img="/assets/sense-orange-puzzle-piece.svg"
 								href=""
 								text="+ 359 879 800 013"
 							/>
@@ -631,7 +626,6 @@ export default function Page() {
 					</AnimatedComponent>
 				</div>
 			</section>
-			<GradientFooter />
 		</>
 	);
 }

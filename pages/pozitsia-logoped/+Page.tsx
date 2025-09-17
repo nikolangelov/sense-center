@@ -8,7 +8,6 @@ import { BackgroundIcons } from "../../components/BackgroundIcons";
 import { VideoHero } from "../../components/HeroVideo";
 import { createSignal } from 'solid-js';
 import { ContainerSlider } from "../../components/ContainerSlider";
-import { GradientFooter } from "../../components/GradientFooter";
 
 const [isPlaying, setIsPlaying] = createSignal(false);
 
@@ -28,8 +27,8 @@ export default function Page() {
 					<div class={`absolute ${isPlaying() ? 'top-32% sm:top-95% lg:top-100% mt-30' : 'top-46% md:top-60% mt-0'}`}>
 						<div>
 							<h1
-								class={`mb-4 md:mb-7 transition-colors duration-500 ${isPlaying()
-									? 'text-brand'
+								class={`mb-4 md:mb-2 transition-colors duration-500 ${isPlaying()
+									? 'inline-block pb-[0.2em] bg-gradient-to-r from-[#E11172] to-[#FFAE01] bg-clip-text text-transparent [-webkit-background-clip:text] [-webkit-text-fill-color:transparent]'
 									: 'text-white'
 									}`}
 							>
@@ -38,7 +37,7 @@ export default function Page() {
 						</div>
 
 						<div
-							class={`important-delay-300 font-400 text-center mb-0 font-size-4.5 lg-font-size-7 sm-px-0 px-12 md:leading-7 leading-5.5 transition-colors duration-500 ${isPlaying()
+							class={`important-delay-300 font-400 text-center mb-0 font-size-4.5 important-lg-font-size-5.5 sm-px-0 px-12 md:leading-7 leading-5.5 transition-colors duration-500 important-font-[MYRIADPRO-Light] ${isPlaying()
 								? 'text-brand'
 								: 'text-white'
 								}`}
@@ -52,9 +51,7 @@ export default function Page() {
 						>
 							<div class="flex md:flex-row flex-col justify-center items-center gap-3 pointer-events-auto">
 								<PuzzleButton2
-									class="important-bg-brand important-hover:bg-brand-hover"
-									style2="font-weight:500; font-size:14px !important;"
-									img="/assets/sense-puzzle-piece.svg"
+									class="important-bg-brand/80 important-group-hover:bg-brand-hover/80"
 									href=""
 									text="Кандидатствайте"
 								/>
@@ -630,9 +627,7 @@ export default function Page() {
 						</div>
 					</AnimatedComponent>
 					<PuzzleButton2
-						class="important-bg-brand important-hover:bg-brand-hover"
-						style2="font-weight:500; font-size:14px !important;"
-						img="/assets/sense-puzzle-piece.svg"
+						class="important-bg-brand/80 important-group-hover:bg-brand-hover/80"
 						href=""
 						text="Кандидатствайте"
 					/>
@@ -640,7 +635,6 @@ export default function Page() {
 			</section>
 
 			<DoodleDecor variant="purple" />
-			<GradientFooter />
 		</>
 	);
 }

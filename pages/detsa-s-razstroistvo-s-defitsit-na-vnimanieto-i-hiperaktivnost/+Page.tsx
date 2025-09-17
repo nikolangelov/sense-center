@@ -1,5 +1,5 @@
 import "solid-slider/slider.css";
-import { AuthorContainer, GoogleStarReview, PuzzleIconReview, ReviewersImageReview, ReviewSlider, StarReview } from '../../components/ReviewSlider';
+import { AuthorContainer, GoogleStarReview, PuzzleIconReview, ReviewersImageReview, ReviewSlider, ReviewSlider2, StarReview } from '../../components/ReviewSlider';
 import { AnimatedComponent } from '../../components/AnimateOnView';
 import { H2Echo, H3Blue, H3Pink } from '../../components/H2WithImage';
 import { ServiceContaner } from '../../components/ServiceContainer';
@@ -9,7 +9,6 @@ import { GallerySlider2 } from "../../components/GallerySlider";
 import { DoodleDecor } from "../../components/BackgroundDecor";
 import { BackgroundIcons } from "../../components/BackgroundIcons";
 import { WorkProcess } from "../../components/WorkProcess";
-import { GradientFooter } from "../../components/GradientFooter";
 
 export default function Page() {
 	return (
@@ -73,11 +72,6 @@ export default function Page() {
 									<div class="mx--20px">
 										<img src="/assets/HADV/разстройство-дефицит-вниманието-.webp" alt="cc" class="important-b-rd-0 important-md:b-rd-12px w-full h-auto object-cover shadow" />
 									</div>
-									<div class="flex flex-col items-center gap-1 relative md:hidden">
-										<h2 class="text-transparent bg-clip-text bg-[url(/assets/HADV/разстройство-дефицит-вниманието-.webp)] bg-cover bg-center opacity-8 scale-30 md:scale-50" style="background-position: right 0% top 0%;">
-											хиперактивност
-										</h2>
-									</div>
 								</div>
 							</div>
 						</div>
@@ -86,7 +80,7 @@ export default function Page() {
 
 				<section class="md:w-1/2">
 					<AnimatedComponent class="w-full md:px-3 my-auto">
-						<p class="mt-1">
+						<p class="mt-10 md:mt-0">
 							Хиперактивността с дефицит на внимание (ХАДВ), известно още като ADHD  е емоционално-поведенческо разстройство, свързано с трудности в концентрацията и контрола на импулсите. При засегнатите деца симптомите са постоянни и по-силно изразени от обичайната активност на техните връстници, като вниманието им лесно се разсейва от множество мисли и стимули.
 						</p>
 						<p class="font-[MYRIADPRO-Semibold]">
@@ -322,7 +316,7 @@ export default function Page() {
 				<AnimatedComponent class="max-w-1500px mx-auto">
 					<p>Наличието на тези признаци може да бъде индикация, но не е категорично доказателство за синдром на хиперактивност и дефицит на вниманието ADHD. За оценка на актуалното състояние се използва комплексен подход който включва диагностика на ADHD и разграничаване от състояния като разстройство в поведението с хиперкинетични прояви на негативизъм или несоциализирано разстройство на поведението.</p>
 					<p class="font-[MYRIADPRO-Semibold] pb-4">В случай, че забележите някои от симптомите на хиперактивност с дефицит на внимание да се проявяват при Вашето дете Ви препоръчваме да се консултирате със специалист.</p>
-					<div class="flex flex-col justify-center items-start b-rd-12px bg-gradient-to-b from-brand-yellow to-brand px-6 md:px-10 py-2 pd:py-4">
+					<div class="flex flex-col justify-center items-start b-rd-12px bg-gradient-to-b from-brand-yellow to-brand max-w-800px mx-auto px-6 md:px-10 py-2 pd:py-4">
 						<div class="flex justify-center items-center gap-4">
 							<img src="/assets/exclamation-mark-icon.webp" class="w-10 h-10" />
 							<p class="font-[MYRIADPRO-Semibold] c-paper uppercase font-size-17px lg:font-size-21px">80-90% от мозъка на детето се развива до 7-годишна възраст</p>
@@ -345,21 +339,18 @@ export default function Page() {
 					<H3Pink title="Какво следва, ако не предприемем действие" />
 					<div class="flex flex-col lg:flex-row justify-center gap-10 xl:gap-20">
 						<ServiceContaner
-							link=""
 							img="/assets/HADV/управление-симптомите-adhd.webp"
 							alt="test"
 							title="Трудности в образованието"
 							description="Децата с разстройство с дефицит на вниманието и хиперактивност често изпитват затруднения в училище, поради невнимание, липса на концентрация, импулсивност и неспособност да завършват задачи. Това може да доведе до липса на мотивация, пропуски в знанията и лоши академични резултати."
 						/>
 						<ServiceContaner
-							link=""
 							img="/assets/HADV/несоциализирано-разстройство-поведението.webp"
 							alt="test"
 							title="Депресия и ниско самочувствие"
 							description="При децата с ХАДВ обикновено се наблюдават повишени нива на стрес и тревожност вследствие на невниманието и липсата на контрол над импулсите, произвеждани от тялото им. В дългосрочен план това може да доведе до понижена самооценка, както и до симптоми на разстройство на личността и поведението."
 						/>
 						<ServiceContaner
-							link=""
 							img="/assets/HADV/рисково-поведение-adhd.webp"
 							alt="test"
 							title="Рисково поведение"
@@ -391,13 +382,8 @@ export default function Page() {
 					<AnimatedComponent class="md:w-1/2">
 						<img src="/assets/HADV/диагностика-adhd.webp" alt="" class="w-full h-auto object-cover rounded shadow" />
 					</AnimatedComponent>
-					<AnimatedComponent class="flex flex-col items-center gap-1 relative mb-2 md:hidden">
-						<h2 class="text-transparent bg-clip-text bg-[url(/assets/HADV/диагностика-adhd.webp)] bg-cover bg-center opacity-8 scale-30 md:scale-50" style="background-position: right 0% top 0%;">
-							разпознаване
-						</h2>
-					</AnimatedComponent>
 
-					<div class="md:hidden block">
+					<div class="md:hidden block pt-15">
 						<DoodleDecor variant="purple" />
 					</div>
 
@@ -427,33 +413,33 @@ export default function Page() {
 
 			<section class="relative md:pb-30 xl:px-30 mx-20px">
 				<H3Blue title="Първична оценка при съмнение за деца с разстройство с дефицит на вниманието и хиперактивност" />
-				<div class="flex flex-col justify-center items-center max-w-1500px mx-auto px-20px xl:px-30">
-					<AnimatedComponent class="max-w-1500px px-5 md:px-20 md:py-10 py-5 bg-gradient-to-t from-brand-yellow to-brand b-rd-12px flex flex-col">
-						<p class="c-paper mb-1">
-							В Sense Center предлагаме първична оценка за деца със съмнение за разстройство с дефицит на вниманието и хиперактивност.
-						</p>
-						<p class="c-paper">
-							По време на консултацията се извършва цялостно наблюдение върху поведението и актуалното състояние на детето.
-						</p>
-						<img src="/assets/home/наблюдение-на-дете-с-нарушения-в-развитието.webp" alt="" class="my-5 w-full h-auto object-cover rounded shadow" />
-						<p class="c-paper mb-1">
-							Оценяват се нивото на концентрация, способността за организиране и изпълнение на задачи, както и проявите на импулсивност и хиперактивност.
-						</p>
-						<p class="c-paper">
-							Паралелно с това специалистите провеждат интервю с родителите, като се вземат предвид техните наблюдения от ежедневието и училищната среда на детето.
-						</p>
-						<img src="/assets/home/семейство-на-дете-с-нарушения-в-развитието.webp" alt="" class="mt-5 w-full h-auto object-cover rounded shadow" />
-						<p class="c-paper italic font-300 mt-1 op-90%" style="font-family: 'Oswald', sans-serif !important; letter-spacing: 1px;">
-							Препоръчително е да донесете всички налични медицински документи, които биха помогнали за по-точна преценка на актуалното състояние.
-						</p>
-						<div class="pt-10 flex md:flex-row flex-col justify-center items-center gap-2">
-							<PuzzleButton />
-							<PuzzleButton2
-								style2="padding-left:0px !important; font-weight:600; font-size:16px !important;"
-								img="/assets/sense-orange-puzzle-piece.svg"
-								href=""
-								text="+ 359 879 800 013"
-							/>
+				<div class="flex flex-col justify-center items-center mx-auto px-20px xl:px-30">
+					<AnimatedComponent class="max-w-1500px px-5 md:px-20 md:pb-10 md:pt-4 py-5 md:bg-gradient-to-t lg:from-paper lg:to-paper bg-gradient-to-t from-brand-yellow to-brand b-rd-12px flex flex-col">
+						<div class="flex flex-col lg:flex-row-reverse justify-center items-center gap-8">
+							<div class="xl:w-1/2 w-full md:pl-7">
+								<p class="c-paper lg:c-paper-inv mb-1">
+									В Sense Center предлагаме <strong class="font-[MYRIADPRO-Bold]">първична оценка</strong> за деца със съмнение за разстройство с дефицит на вниманието и хиперактивност.
+								</p>
+								<p class="c-paper lg:c-paper-inv">
+									По време на консултацията се извършва цялостно наблюдение върху поведението и актуалното състояние на детето.
+								</p>
+								<img src="/assets/home/наблюдение-на-дете-с-нарушения-в-развитието.webp" alt="Наблюдение на дете с нарушения в развитието" class="lg:hidden my-5 w-full h-auto object-cover rounded shadow" />
+								<p class="c-paper lg:c-paper-inv mb-1">
+									Оценяват се нивото на концентрация, способността за организиране и изпълнение на задачи, както и проявите на импулсивност и хиперактивност.
+								</p>
+								<p class="c-paper lg:c-paper-inv">
+									Паралелно с това специалистите провеждат интервю с родителите, като се вземат предвид техните наблюдения от ежедневието и училищната среда на детето.
+								</p>
+								<div class="pt-8 flex md:flex-row flex-col justify-center items-center">
+									<PuzzleButton />
+								</div>
+							</div>
+							<div class="xl:w-1/2 w-full">
+								<img src="/assets/home/семейство-на-дете-с-нарушения-в-развитието.webp" alt="Семейство на дете с нарушения в развитието" class="mt-5 w-full h-auto object-cover rounded shadow" />
+								<p class="c-paper lg:c-paper-inv italic font-300 mt-2 leading-5 lg:leading-6" style="font-family: 'Oswald', sans-serif !important; letter-spacing: 1px;">
+									Препоръчително е да донесете всички налични медицински документи, които биха помогнали за по-точна преценка на актуалното състояние.
+								</p>
+							</div>
 						</div>
 					</AnimatedComponent>
 				</div>
@@ -570,18 +556,13 @@ export default function Page() {
 										<div class="mx--20px">
 											<img src="/assets/HADV/методи-терапия-adhd-деца.webp" alt="cc" class="important-b-rd-0 important-md:b-rd-12px w-full h-auto object-cover shadow" />
 										</div>
-										<div class="flex flex-col items-center gap-1 relative md:hidden">
-											<h2 class="text-transparent bg-clip-text bg-[url(/assets/HADV/методи-терапия-adhd-деца.webp)] bg-cover bg-center opacity-8 scale-30 md:scale-50" style="background-position: right 0% top 0%;">
-												хиперактивност
-											</h2>
-										</div>
 									</div>
 								</div>
 							</div>
 						</AnimatedComponent>
 					</section>
 
-					<section class="md:w-1/2 pt-10 md:pt-0">
+					<section class="md:w-1/2 pt-25 md:pt-0">
 						<AnimatedComponent class="w-full md:px-3 my-auto flex flex-col justify-center items-center w-full md:pl-7 md:pr-0 px-3 mt--10 z-10">
 							<H3Blue title="Какво можем да очакваме" />
 							<div class="relative mt--10">
@@ -607,57 +588,67 @@ export default function Page() {
 				<div class="xl:px-30 mx-auto md:pt-0 pt-10">
 					<H3Pink title="Някои от най-ефективните терапии" />
 					<AnimatedComponent>
-						<p class="md:px-10 md:mb-5 mb-2 mt-0 c-gray-700 leading-5 font-size-14px font-400 italic tracking md:pl-6" style="font-family: 'Oswald', sans-serif !important; letter-spacing: 0.3px; ">Препоръчват се от 8 до 24 сесии седмично за оптимални резултати</p>
+						<p class="md:mb-5 mb-2 mt-0 c-gray-700 leading-5 font-size-14px font-400 italic tracking md:pl-6" style="font-family: 'Oswald', sans-serif !important; letter-spacing: 0.3px; ">Препоръчват се от 8 до 24 сесии седмично за оптимални резултати</p>
 					</AnimatedComponent>
-					<div class="flex md:flex-row flex-col flex-wrap gap-5 md:gap-0 justify-center items-center">
-						<AuthorContainer
-							href=""
-							style="background:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(/assets/testing-image.jpg); background-position: right 50% bottom 85% !important; background-repeat: no-repeat; background-size: cover;"
-							name="Детски психолог"
-							description="Подкрепя развитието на умения за организиране, планиране и решаване на проблеми, както и за емоционална саморегулация и адаптация към различни ситуации."
-						/>
-						<AuthorContainer
-							href=""
-							style="background:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(/assets/testing-image.jpg); background-position: right 50% bottom 85% !important; background-repeat: no-repeat; background-size: cover;"
-							name="Психомоторика"
-							description="Подобрява контрола при ходене, бягане и скачане, както и координацията на ръцете и пръстите за по-прецизно писане и рисуване."
-						/>
-						<AuthorContainer
-							href=""
-							style="background:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(/assets/testing-image.jpg); background-position: right 50% bottom 85% !important; background-repeat: no-repeat; background-size: cover;"
-							name="Звукова стимулация"
-							description="Тя подпомага сензорната и слуховата обработка, намалява тревожността и хиперактивността и стимулира езиковото развитие."
-						/>
-						<AuthorContainer
-							href=""
-							style="background:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(/assets/testing-image.jpg); background-position: right 50% bottom 85% !important; background-repeat: no-repeat; background-size: cover;"
-							name="Обучение за концентрация и внимание"
-							description="Помага на детето с фокусирането и запаметяването, като го учи да задържа вниманието си по-дълго и да следва инструкции."
-						/>
+					<div class="gap-12 md:pt-5 pb-5 md:pb-0">
+						<div class="">
+							<ReviewSlider2
+								variant="dots0"
+								reviews={[
+									{ name: "1" },
+									{ name: "2" },
+									{ name: "3" },
+									{ name: "4" },
+									{ name: "5" },
+									{ name: "6" },
+									{ name: "7" },
 
-
-
-
-
-
-						<AuthorContainer
-							href=""
-							style="background:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(/assets/testing-image.jpg); background-position: right 50% bottom 85% !important; background-repeat: no-repeat; background-size: cover;"
-							name="Когнитивно-поведенческа терапия за деца"
-							description="Помага на децата да разберат и променят негативните си мисли и поведение, за да се справят по-добре с емоциите и отношенията с другите."
-						/>
-						<AuthorContainer
-							href=""
-							style="background:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(/assets/testing-image.jpg); background-position: right 50% bottom 85% !important; background-repeat: no-repeat; background-size: cover;"
-							name="Консултация с хомеопат за деца"
-							description="Подпомага цялостното здраве и емоционално равновесие на детето, като подкрепя организма по естествен начин и допринася за по-добро ежедневно функциониране."
-						/>
-						<AuthorContainer
-							href=""
-							style="background:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(/assets/testing-image.jpg); background-position: right 50% bottom 85% !important; background-repeat: no-repeat; background-size: cover;"
-							name="Психологически групи за деца"
-							description="Подкрепят децата в развитието на емоционална регулация, социални умения и увереност, като им помагат да изразяват чувствата си и да общуват по-лесно."
-						/>
+								]}
+							>
+								<AuthorContainer
+									href=""
+									style="background:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(/assets/testing-image.jpg); background-position: right 50% bottom 85% !important; background-repeat: no-repeat; background-size: cover;"
+									name="Детски психолог"
+									description="Подкрепя развитието на умения за организиране, планиране и решаване на проблеми, както и за емоционална саморегулация и адаптация към различни ситуации."
+								/>
+								<AuthorContainer
+									href=""
+									style="background:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(/assets/testing-image.jpg); background-position: right 50% bottom 85% !important; background-repeat: no-repeat; background-size: cover;"
+									name="Психомоторика"
+									description="Подобрява контрола при ходене, бягане и скачане, както и координацията на ръцете и пръстите за по-прецизно писане и рисуване."
+								/>
+								<AuthorContainer
+									href=""
+									style="background:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(/assets/testing-image.jpg); background-position: right 50% bottom 85% !important; background-repeat: no-repeat; background-size: cover;"
+									name="Звукова стимулация"
+									description="Тя подпомага сензорната и слуховата обработка, намалява тревожността и хиперактивността и стимулира езиковото развитие."
+								/>
+								<AuthorContainer
+									href=""
+									style="background:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(/assets/testing-image.jpg); background-position: right 50% bottom 85% !important; background-repeat: no-repeat; background-size: cover;"
+									name="Обучение за концентрация и внимание"
+									description="Помага на детето с фокусирането и запаметяването, като го учи да задържа вниманието си по-дълго и да следва инструкции."
+								/>
+								<AuthorContainer
+									href=""
+									style="background:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(/assets/testing-image.jpg); background-position: right 50% bottom 85% !important; background-repeat: no-repeat; background-size: cover;"
+									name="Когнитивно-поведенческа терапия за деца"
+									description="Помага на децата да разберат и променят негативните си мисли и поведение, за да се справят по-добре с емоциите и отношенията с другите."
+								/>
+								<AuthorContainer
+									href=""
+									style="background:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(/assets/testing-image.jpg); background-position: right 50% bottom 85% !important; background-repeat: no-repeat; background-size: cover;"
+									name="Консултация с хомеопат за деца"
+									description="Подпомага цялостното здраве и емоционално равновесие на детето, като подкрепя организма по естествен начин и допринася за по-добро ежедневно функциониране."
+								/>
+								<AuthorContainer
+									href=""
+									style="background:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(/assets/testing-image.jpg); background-position: right 50% bottom 85% !important; background-repeat: no-repeat; background-size: cover;"
+									name="Психологически групи за деца"
+									description="Подкрепят децата в развитието на емоционална регулация, социални умения и увереност, като им помагат да изразяват чувствата си и да общуват по-лесно."
+								/>
+							</ReviewSlider2>
+						</div>
 					</div>
 				</div>
 
@@ -933,7 +924,6 @@ export default function Page() {
 					</section>
 				</div>
 			</section>
-			<GradientFooter />
 		</>
 	);
 }
