@@ -58,21 +58,21 @@ export default function Page() {
 			<div class="flex flex-col items-center gap-3 md:gap-10 mt-35 lg:mt-65 md:mb-30 mb-20">
 				<div class="grid grid-cols-1 lg:grid-cols-3 gap-15 md:gap-6 max-w-screen-xl w-full">
 					<AuthorContainer
-						href=""
+						href="/detski-logoped"
 						style="background:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0)),url(/assets/assets_task_01jzpz2g6xecb88e22va909k3x_1752043792_img_0.webp); background-position: right 50% bottom 85% !important; background-repeat: no-repeat; background-size: cover;"
 						name="Детски логопед"
 						description="Терапията подобрява разбирането и изпълнението на команди."
 					/>
 					<AuthorContainer
-						href=""
+						href="/pozitsia-logoped"
 						style="background:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0)),url(/assets/assets_task_01jzpz2g6xecb88e22va909k3x_1752043792_img_0.webp); background-position: right 50% bottom 85% !important; background-repeat: no-repeat; background-size: cover;"
-						name="Детски логопед"
+						name="Позиция логопед"
 						description="Терапията подобрява разбирането и изпълнението на команди."
 					/>
 					<AuthorContainer
-						href=""
+						href="/detski-psiholog"
 						style="background:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0)),url(/assets/assets_task_01jzpz2g6xecb88e22va909k3x_1752043792_img_0.webp); background-position: right 50% bottom 85% !important; background-repeat: no-repeat; background-size: cover;"
-						name="Детски логопед"
+						name="Детски психолог"
 						description="Терапията подобрява разбирането и изпълнението на команди."
 					/>
 				</div>
@@ -87,21 +87,21 @@ export default function Page() {
 
 				<div class="grid grid-cols-1 lg:grid-cols-3 gap-15 md:gap-6 max-w-screen-xl w-full">
 					<AuthorContainer
-						href=""
+						href="/ergoterapia-za-detsa"
 						style="background:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0)),url(/assets/assets_task_01jzpz2g6xecb88e22va909k3x_1752043792_img_0.webp); background-position: right 50% bottom 85% !important; background-repeat: no-repeat; background-size: cover;"
-						name="Детски логопед"
+						name="Ерготерапия за деца"
 						description="Терапията подобрява разбирането и изпълнението на команди."
 					/>
 					<AuthorContainer
-						href=""
+						href="/prakticheski-zanimania-za-deca-s-autizam"
 						style="background:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0)),url(/assets/assets_task_01jzpz2g6xecb88e22va909k3x_1752043792_img_0.webp); background-position: right 50% bottom 85% !important; background-repeat: no-repeat; background-size: cover;"
-						name="Детски логопед"
+						name="Практически занимания за деца с аутизъм"
 						description="Терапията подобрява разбирането и изпълнението на команди."
 					/>
 					<AuthorContainer
-						href=""
+						href="/psihomotorika-za-detsa"
 						style="background:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0)),url(/assets/assets_task_01jzpz2g6xecb88e22va909k3x_1752043792_img_0.webp); background-position: right 50% bottom 85% !important; background-repeat: no-repeat; background-size: cover;"
-						name="Детски логопед"
+						name="Психомоторика за деца"
 						description="Терапията подобрява разбирането и изпълнението на команди."
 					/>
 				</div>
@@ -116,21 +116,21 @@ export default function Page() {
 
 				<div class="grid grid-cols-1 lg:grid-cols-3 gap-15 md:gap-6 max-w-screen-xl w-full">
 					<AuthorContainer
-						href=""
+						href="/kognitivno-povedencheska-terapia-za-detsa"
 						style="background:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0)),url(/assets/assets_task_01jzpz2g6xecb88e22va909k3x_1752043792_img_0.webp); background-position: right 50% bottom 85% !important; background-repeat: no-repeat; background-size: cover;"
-						name="Детски логопед"
+						name="Когнитивно поведенческа терапия за деца"
 						description="Терапията подобрява разбирането и изпълнението на команди."
 					/>
 					<AuthorContainer
-						href=""
+						href="/zvukova-stimulacia-za-detsa"
 						style="background:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0)),url(/assets/assets_task_01jzpz2g6xecb88e22va909k3x_1752043792_img_0.webp); background-position: right 50% bottom 85% !important; background-repeat: no-repeat; background-size: cover;"
-						name="Детски логопед"
+						name="Звукова стимулация за деца"
 						description="Терапията подобрява разбирането и изпълнението на команди."
 					/>
 					<AuthorContainer
-						href=""
+						href="/obuchenie-za-koncentracia-i-vnimanie-za-detsa"
 						style="background:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0)),url(/assets/assets_task_01jzpz2g6xecb88e22va909k3x_1752043792_img_0.webp); background-position: right 50% bottom 85% !important; background-repeat: no-repeat; background-size: cover;"
-						name="Детски логопед"
+						name="Обучение за концентрация и внимание за деца"
 						description="Терапията подобрява разбирането и изпълнението на команди."
 					/>
 				</div>
@@ -143,20 +143,20 @@ export default function Page() {
 					<AuthorContainer
 						href=""
 						style="background:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0)),url(/assets/assets_task_01jzpz2g6xecb88e22va909k3x_1752043792_img_0.webp); background-position: right 50% bottom 85% !important; background-repeat: no-repeat; background-size: cover;"
-						name="Детски логопед"
-						description="Терапията подобрява разбирането и изпълнението на команди."
+						name=""
+						description=""
 					/>
 					<AuthorContainer
 						href=""
 						style="background:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0)),url(/assets/assets_task_01jzpz2g6xecb88e22va909k3x_1752043792_img_0.webp); background-position: right 50% bottom 85% !important; background-repeat: no-repeat; background-size: cover;"
-						name="Детски логопед"
-						description="Терапията подобрява разбирането и изпълнението на команди."
+						name=""
+						description=""
 					/>
 					<AuthorContainer
 						href=""
 						style="background:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0)),url(/assets/assets_task_01jzpz2g6xecb88e22va909k3x_1752043792_img_0.webp); background-position: right 50% bottom 85% !important; background-repeat: no-repeat; background-size: cover;"
-						name="Детски логопед"
-						description="Терапията подобрява разбирането и изпълнението на команди."
+						name=""
+						description=""
 					/>
 				</div>
 
@@ -172,20 +172,20 @@ export default function Page() {
 					<AuthorContainer
 						href=""
 						style="background:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0)),url(/assets/assets_task_01jzpz2g6xecb88e22va909k3x_1752043792_img_0.webp); background-position: right 50% bottom 85% !important; background-repeat: no-repeat; background-size: cover;"
-						name="Детски логопед"
-						description="Терапията подобрява разбирането и изпълнението на команди."
+						name=""
+						description=""
 					/>
 					<AuthorContainer
 						href=""
 						style="background:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0)),url(/assets/assets_task_01jzpz2g6xecb88e22va909k3x_1752043792_img_0.webp); background-position: right 50% bottom 85% !important; background-repeat: no-repeat; background-size: cover;"
-						name="Детски логопед"
-						description="Терапията подобрява разбирането и изпълнението на команди."
+						name=""
+						description=""
 					/>
 					<AuthorContainer
 						href=""
 						style="background:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0)),url(/assets/assets_task_01jzpz2g6xecb88e22va909k3x_1752043792_img_0.webp); background-position: right 50% bottom 85% !important; background-repeat: no-repeat; background-size: cover;"
-						name="Детски логопед"
-						description="Терапията подобрява разбирането и изпълнението на команди."
+						name=""
+						description=""
 					/>
 				</div>
 
@@ -201,20 +201,20 @@ export default function Page() {
 					<AuthorContainer
 						href=""
 						style="background:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0)),url(/assets/assets_task_01jzpz2g6xecb88e22va909k3x_1752043792_img_0.webp); background-position: right 50% bottom 85% !important; background-repeat: no-repeat; background-size: cover;"
-						name="Детски логопед"
-						description="Терапията подобрява разбирането и изпълнението на команди."
+						name=""
+						description=""
 					/>
 					<AuthorContainer
 						href=""
 						style="background:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0)),url(/assets/assets_task_01jzpz2g6xecb88e22va909k3x_1752043792_img_0.webp); background-position: right 50% bottom 85% !important; background-repeat: no-repeat; background-size: cover;"
-						name="Детски логопед"
-						description="Терапията подобрява разбирането и изпълнението на команди."
+						name=""
+						description=""
 					/>
 					<AuthorContainer
 						href=""
 						style="background:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0)),url(/assets/assets_task_01jzpz2g6xecb88e22va909k3x_1752043792_img_0.webp); background-position: right 50% bottom 85% !important; background-repeat: no-repeat; background-size: cover;"
-						name="Детски логопед"
-						description="Терапията подобрява разбирането и изпълнението на команди."
+						name=""
+						description=""
 					/>
 				</div>
 			</div>

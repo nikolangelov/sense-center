@@ -31,35 +31,6 @@ export default function LayoutDefault(props: { children?: JSX.Element }) {
       {/* <div class="fixed top-0 left-0 w-full h-[53px] bg-brand z-50 flex items-center justify-center c-paper text-center text-sm md:text-lg">
         По случай деня на детето можете да се възползвате от безплатна първична оценка!
       </div> */}
-
-      <div class="fixed top-0 left-0 w-full z-50 flex items-center justify-center text-white text-center text-sm md:text-lg">
-        <div class="px-10 bg-brand-blue hidden fixed top-70px sm:top-100px w-full gap-0 md:flex flex-wrap">
-          <MenuItem2 href="/detsa-s-autizam">Аутизъм</MenuItem2>
-          <MenuItem2 href="/detski-logoped">Детски логопед</MenuItem2>
-          <MenuItem2 href="/kak-pomagame">Как помагаме</MenuItem2>
-          <MenuItem2 href="/na-kogo-pomagame">На кого помагаме</MenuItem2>
-          <MenuItem2 href="/za-nas">За нас</MenuItem2>
-          <MenuItem2 href="/karieri">Кариери</MenuItem2>
-          <MenuItem2 href="/otzivi">Отзиви</MenuItem2>
-          <MenuItem2 href="/detsa-s-razstroistvo-s-defitsit-na-vnimanieto-i-hiperaktivnost/">ХАДВ</MenuItem2>
-          <MenuItem2 href="/detsa-sas-sindrom-na-daun">Синдром на Даун</MenuItem2>
-          <MenuItem2 href="/pozitsia-logoped">Логопед-позиция</MenuItem2>
-          <MenuItem2 href="/detsa-s-umstvena-izostanalost">Деца с умствена изостаналост</MenuItem2>
-          <MenuItem2 href="/detsa-sas-spetsialni-obrazovatelni-potrebnosti">СОП</MenuItem2>
-          <MenuItem2 href="/detsa-sas-sindrom-na-asperger">Деца с Аспергер</MenuItem2>
-          <MenuItem2 href="/detsa-s-posttravmatichno-razstroistvo">Деца с посттравматично разстр</MenuItem2>
-          <MenuItem2 href="/detsa-s-disleksia">Деца с дислекция</MenuItem2>
-          <MenuItem2 href="/detski-psiholog">Детски психолог</MenuItem2>
-          <MenuItem2 href="/tseni">Цени</MenuItem2>
-          <MenuItem2 href="/ergoterapia-za-detsa">Ерготерапия</MenuItem2>
-          <MenuItem2 href="/prakticheski-zanimania-za-deca-s-autizam">Практ зан за деца с аутизъм</MenuItem2>
-          <MenuItem2 href="/psihomotorika-za-detsa">Психомоторика</MenuItem2>
-          <MenuItem2 href="/kognitivno-povedencheska-terapia-za-detsa">Когн повед терапия</MenuItem2>
-          <MenuItem2 href="/zvukova-stimulacia-za-detsa">Звукова стимулация</MenuItem2>
-          <MenuItem2 href="/obuchenie-za-koncentracia-i-vnimanie-za-detsa">Обучение за конц и вним</MenuItem2>
-        </div>
-      </div>
-
       <Topbar>
         <>
           <a href="/" class="flex items-center">

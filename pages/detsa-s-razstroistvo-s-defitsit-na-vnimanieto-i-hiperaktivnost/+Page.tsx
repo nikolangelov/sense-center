@@ -4,7 +4,7 @@ import { AnimatedComponent } from '../../components/AnimateOnView';
 import { H2Echo, H3Blue, H3Pink } from '../../components/H2WithImage';
 import { ServiceContaner } from '../../components/ServiceContainer';
 import { ContainerBox, ContainerSlider } from "../../components/ContainerSlider";
-import { PuzzleButton, PuzzleButton2 } from "../../components/PuzzleButton";
+import { PuzzleButton } from "../../components/PuzzleButton";
 import { GallerySlider2 } from "../../components/GallerySlider";
 import { DoodleDecor } from "../../components/BackgroundDecor";
 import { BackgroundIcons } from "../../components/BackgroundIcons";
@@ -126,97 +126,99 @@ export default function Page() {
 					<div class="">
 						<AnimatedComponent>
 							<H3Blue title="Най-често срещани признаци" />
-							<h4 class="font-600 text-left pb-2">Симптоми на невнимание</h4>
-							<div class="block xl:hidden">
-								<ContainerSlider
-									reviews={[
-										{ name: "Review 1" },
-										{ name: "Review 2" },
-										{ name: "Review 3" },
-										{ name: "Review 4" },
-									]}
-								>
-									<ContainerBox
-										class2="important-h-43"
-										style="background-color:#FA7402;"
-										title="Бърза загуба на интерес"
-										text="Започва дейност с ентусиазъм, но бързо губи фокус и интерес и не я довършва"
-										img="/assets/HADV/загуба-интерес-хадв.webp"
-										alt=""
-									/>
-									<ContainerBox
-										class2="important-h-43"
-										style="background-color:#FA7402;"
-										style2=""
-										title="Трудности със следване на инструкции"
-										text="Затруднява се с организиране на задачите и спазване на ред или последователност"
-										img="/assets/HADV/разстройство-поведението-хиперкинетични-прояви-негативизъм.webp"
-										alt=""
-									/>
-									<ContainerBox
-										class2="important-h-43"
-										style="background-color:#FA7402;"
-										style2=""
-										title="Грешки по невнимание"
-										text="Допуска чести пропуски и грешки, дори при познати и лесни задачи"
-										img="/assets/HADV/хиперкинетично-разстройство-поведението.webp"
-										alt=""
-									/>
-									<ContainerBox
-										class2="important-h-43"
-										style="background-color:#FA7402;"
-										style2=""
-										title="Често губи вещи"
-										text="Губи предмети, необходими за ежедневието – играчки, училищни пособия, дрехи и други"
-										img="/assets/HADV/хиперактивно-дете-често-губи-вещи.jpg"
-										alt=""
-									/>
-								</ContainerSlider>
-							</div>
+							<div class="md:px-5">
+								<h4 class="font-600 text-left pb-2">Симптоми на невнимание</h4>
+								<div class="block xl:hidden">
+									<ContainerSlider
+										reviews={[
+											{ name: "Review 1" },
+											{ name: "Review 2" },
+											{ name: "Review 3" },
+											{ name: "Review 4" },
+										]}
+									>
+										<ContainerBox
+											class2="important-xl:h-55 important-lg:h-45 important-md:h-40 important-sm:h-30 important-h-44"
+											style="background-color:#FA7402;"
+											title="Бърза загуба на интерес"
+											text="Започва дейност с ентусиазъм, но бързо губи фокус и интерес и не я довършва"
+											img="/assets/HADV/загуба-интерес-хадв.webp"
+											alt=""
+										/>
+										<ContainerBox
+											class2="important-xl:h-55 important-lg:h-45 important-md:h-40 important-sm:h-30 important-h-44"
+											style="background-color:#FA7402;"
+											style2=""
+											title="Трудности със следване на инструкции"
+											text="Затруднява се с организиране на задачите и спазване на ред или последователност"
+											img="/assets/HADV/разстройство-поведението-хиперкинетични-прояви-негативизъм.webp"
+											alt=""
+										/>
+										<ContainerBox
+											class2="important-xl:h-55 important-lg:h-45 important-md:h-40 important-sm:h-30 important-h-44"
+											style="background-color:#FA7402;"
+											style2=""
+											title="Грешки по невнимание"
+											text="Допуска чести пропуски и грешки, дори при познати и лесни задачи"
+											img="/assets/HADV/хиперкинетично-разстройство-поведението.webp"
+											alt=""
+										/>
+										<ContainerBox
+											class2="important-xl:h-55 important-lg:h-45 important-md:h-40 important-sm:h-30 important-h-44"
+											style="background-color:#FA7402;"
+											style2=""
+											title="Често губи вещи"
+											text="Губи предмети, необходими за ежедневието – играчки, училищни пособия, дрехи и други"
+											img="/assets/HADV/хиперактивно-дете-често-губи-вещи.jpg"
+											alt=""
+										/>
+									</ContainerSlider>
+								</div>
 
-							<div class="hidden xl:flex mx-auto gap-4 w-full">
-								<div class="w-1/4">
-									<ContainerBox
-										class2="important-h-43"
-										style="background-color:#FA7402;"
-										title="Бърза загуба на интерес"
-										text="Започва дейност с ентусиазъм, но бързо губи фокус и интерес и не я довършва"
-										img="/assets/HADV/загуба-интерес-хадв.webp"
-										alt=""
-									/>
-								</div>
-								<div class="w-1/4">
-									<ContainerBox
-										class2="important-h-43"
-										style="background-color:#FA7402;"
-										style2=""
-										title="Трудности със следване на инструкции"
-										text="Затруднява се с организиране на задачите и спазване на ред или последователност"
-										img="/assets/HADV/разстройство-поведението-хиперкинетични-прояви-негативизъм.webp"
-										alt=""
-									/>
-								</div>
-								<div class="w-1/4">
-									<ContainerBox
-										class2="important-h-43"
-										style="background-color:#FA7402;"
-										style2=""
-										title="Грешки по невнимание"
-										text="Допуска чести пропуски и грешки, дори при познати и лесни задачи"
-										img="/assets/HADV/хиперкинетично-разстройство-поведението.webp"
-										alt=""
-									/>
-								</div>
-								<div class="w-1/4">
-									<ContainerBox
-										class2="important-h-43"
-										style="background-color:#FA7402;"
-										style2=""
-										title="Често губи вещи"
-										text="Губи предмети, необходими за ежедневието – играчки, училищни пособия, дрехи и други"
-										img="/assets/HADV/хиперактивно-дете-често-губи-вещи.jpg"
-										alt=""
-									/>
+								<div class="hidden xl:flex mx-auto gap-4 w-full">
+									<div class="w-1/4">
+										<ContainerBox
+											class2="important-xl:h-55 important-lg:h-45 important-md:h-50 important-sm:h-30 important-h-48"
+											style="background-color:#FA7402;"
+											title="Бърза загуба на интерес"
+											text="Започва дейност с ентусиазъм, но бързо губи фокус и интерес и не я довършва"
+											img="/assets/HADV/загуба-интерес-хадв.webp"
+											alt=""
+										/>
+									</div>
+									<div class="w-1/4">
+										<ContainerBox
+											class2="important-xl:h-55 important-lg:h-45 important-md:h-50 important-sm:h-30 important-h-48"
+											style="background-color:#FA7402;"
+											style2=""
+											title="Трудности със следване на инструкции"
+											text="Затруднява се с организиране на задачите и спазване на ред или последователност"
+											img="/assets/HADV/разстройство-поведението-хиперкинетични-прояви-негативизъм.webp"
+											alt=""
+										/>
+									</div>
+									<div class="w-1/4">
+										<ContainerBox
+											class2="important-xl:h-55 important-lg:h-45 important-md:h-50 important-sm:h-30 important-h-48"
+											style="background-color:#FA7402;"
+											style2=""
+											title="Грешки по невнимание"
+											text="Допуска чести пропуски и грешки, дори при познати и лесни задачи"
+											img="/assets/HADV/хиперкинетично-разстройство-поведението.webp"
+											alt=""
+										/>
+									</div>
+									<div class="w-1/4">
+										<ContainerBox
+											class2="important-xl:h-55 important-lg:h-45 important-md:h-50 important-sm:h-30 important-h-48"
+											style="background-color:#FA7402;"
+											style2=""
+											title="Често губи вещи"
+											text="Губи предмети, необходими за ежедневието – играчки, училищни пособия, дрехи и други"
+											img="/assets/HADV/хиперактивно-дете-често-губи-вещи.jpg"
+											alt=""
+										/>
+									</div>
 								</div>
 							</div>
 						</AnimatedComponent>
@@ -228,83 +230,85 @@ export default function Page() {
 				<div class="pb-50px xl:px-30">
 					<div class="">
 						<AnimatedComponent>
-							<h4 class="font-600 text-left pb-2">Симптоми на хиперактивност</h4>
-							<div class="block xl:hidden">
-								<ContainerSlider
-									reviews={[
-										{ name: "Review 1" },
-										{ name: "Review 2" },
-										{ name: "Review 3" },
-										{ name: "Review 4" },
-									]}
-								>
-									<ContainerBox
-										style="background-color:#742C8F;"
-										title="Постоянно движение"
-										text="Тича, катери се или се движи непрекъснато, дори на неподходящи места"
-										img="/assets/HADV/синдром-хиперактивност-дефицит-внимание-adhd.webp"
-										alt=""
-									/>
-									<ContainerBox
-										style="background-color:#742C8F;"
-										title="Прекомерно говорене"
-										text="Говори без да спира, често прекъсва другите и не изчаква реда си"
-										img="/assets/HADV/разстройство-личността-поведението.webp"
-										alt=""
-									/>
-									<ContainerBox
-										style="background-color:#742C8F;"
-										title="Трудно стои на едно място"
-										text="Изпитва затруднение да остане спокойно в седнало положение – например по време на хранене"
-										img="/assets/HADV/хиперактивност-деца-хадв.webp"
-										alt=""
-									/>
-									<ContainerBox
-										style="background-color:#742C8F;"
-										title="Бурно изразяване на емоции"
-										text="Реагира с прекомерен гняв, радост или разочарование, често без видима причина"
-										img="/assets/HADV/опозиционно-предизвикателно-разстройство.webp"
-										alt=""
-									/>
-								</ContainerSlider>
-							</div>
+							<div class="md:px-5">
+								<h4 class="font-600 text-left pb-2">Симптоми на хиперактивност</h4>
+								<div class="block xl:hidden">
+									<ContainerSlider
+										reviews={[
+											{ name: "Review 1" },
+											{ name: "Review 2" },
+											{ name: "Review 3" },
+											{ name: "Review 4" },
+										]}
+									>
+										<ContainerBox
+											style="background-color:#742C8F;"
+											title="Постоянно движение"
+											text="Тича, катери се или се движи непрекъснато, дори на неподходящи места"
+											img="/assets/HADV/синдром-хиперактивност-дефицит-внимание-adhd.webp"
+											alt=""
+										/>
+										<ContainerBox
+											style="background-color:#742C8F;"
+											title="Прекомерно говорене"
+											text="Говори без да спира, често прекъсва другите и не изчаква реда си"
+											img="/assets/HADV/разстройство-личността-поведението.webp"
+											alt=""
+										/>
+										<ContainerBox
+											style="background-color:#742C8F;"
+											title="Трудно стои на едно място"
+											text="Изпитва затруднение да остане спокойно в седнало положение – например по време на хранене"
+											img="/assets/HADV/хиперактивност-деца-хадв.webp"
+											alt=""
+										/>
+										<ContainerBox
+											style="background-color:#742C8F;"
+											title="Бурно изразяване на емоции"
+											text="Реагира с прекомерен гняв, радост или разочарование, често без видима причина"
+											img="/assets/HADV/опозиционно-предизвикателно-разстройство.webp"
+											alt=""
+										/>
+									</ContainerSlider>
+								</div>
 
-							<div class="hidden xl:flex mx-auto gap-4 w-full">
-								<div class="w-1/4">
-									<ContainerBox
-										style="background-color:#742C8F;"
-										title="Постоянно движение"
-										text="Тича, катери се или се движи непрекъснато, дори на неподходящи места"
-										img="/assets/HADV/синдром-хиперактивност-дефицит-внимание-adhd.webp"
-										alt=""
-									/>
-								</div>
-								<div class="w-1/4">
-									<ContainerBox
-										style="background-color:#742C8F;"
-										title="Прекомерно говорене"
-										text="Говори без да спира, често прекъсва другите и не изчаква реда си"
-										img="/assets/HADV/разстройство-личността-поведението.webp"
-										alt=""
-									/>
-								</div>
-								<div class="w-1/4">
-									<ContainerBox
-										style="background-color:#742C8F;"
-										title="Трудно стои на едно място"
-										text="Изпитва затруднение да остане спокойно в седнало положение – например по време на хранене"
-										img="/assets/HADV/хиперактивност-деца-хадв.webp"
-										alt=""
-									/>
-								</div>
-								<div class="w-1/4">
-									<ContainerBox
-										style="background-color:#742C8F;"
-										title="Бурно изразяване на емоции"
-										text="Реагира с прекомерен гняв, радост или разочарование, често без видима причина"
-										img="/assets/HADV/опозиционно-предизвикателно-разстройство.webp"
-										alt=""
-									/>
+								<div class="hidden xl:flex mx-auto gap-4 w-full">
+									<div class="w-1/4">
+										<ContainerBox
+											style="background-color:#742C8F;"
+											title="Постоянно движение"
+											text="Тича, катери се или се движи непрекъснато, дори на неподходящи места"
+											img="/assets/HADV/синдром-хиперактивност-дефицит-внимание-adhd.webp"
+											alt=""
+										/>
+									</div>
+									<div class="w-1/4">
+										<ContainerBox
+											style="background-color:#742C8F;"
+											title="Прекомерно говорене"
+											text="Говори без да спира, често прекъсва другите и не изчаква реда си"
+											img="/assets/HADV/разстройство-личността-поведението.webp"
+											alt=""
+										/>
+									</div>
+									<div class="w-1/4">
+										<ContainerBox
+											style="background-color:#742C8F;"
+											title="Трудно стои на едно място"
+											text="Изпитва затруднение да остане спокойно в седнало положение – например по време на хранене"
+											img="/assets/HADV/хиперактивност-деца-хадв.webp"
+											alt=""
+										/>
+									</div>
+									<div class="w-1/4">
+										<ContainerBox
+											style="background-color:#742C8F;"
+											title="Бурно изразяване на емоции"
+											text="Реагира с прекомерен гняв, радост или разочарование, често без видима причина"
+											img="/assets/HADV/опозиционно-предизвикателно-разстройство.webp"
+											alt=""
+										/>
+									</div>
 								</div>
 							</div>
 						</AnimatedComponent>
@@ -313,10 +317,10 @@ export default function Page() {
 
 				<DoodleDecor variant="blue2" />
 
-				<AnimatedComponent class="max-w-1500px mx-auto">
+				<AnimatedComponent class="max-w-800px mx-auto">
 					<p>Наличието на тези признаци може да бъде индикация, но не е категорично доказателство за синдром на хиперактивност и дефицит на вниманието ADHD. За оценка на актуалното състояние се използва комплексен подход който включва диагностика на ADHD и разграничаване от състояния като разстройство в поведението с хиперкинетични прояви на негативизъм или несоциализирано разстройство на поведението.</p>
 					<p class="font-[MYRIADPRO-Semibold] pb-4">В случай, че забележите някои от симптомите на хиперактивност с дефицит на внимание да се проявяват при Вашето дете Ви препоръчваме да се консултирате със специалист.</p>
-					<div class="flex flex-col justify-center items-start b-rd-12px bg-gradient-to-b from-brand-yellow to-brand max-w-800px mx-auto px-6 md:px-10 py-2 pd:py-4">
+					<div class="flex flex-col justify-center items-start b-rd-12px bg-gradient-to-b from-brand-yellow to-brand mx-auto px-6 md:px-10 py-2 md:py-4 md:mt-10">
 						<div class="flex justify-center items-center gap-4">
 							<img src="/assets/exclamation-mark-icon.webp" class="w-10 h-10" />
 							<p class="font-[MYRIADPRO-Semibold] c-paper uppercase font-size-17px lg:font-size-21px">80-90% от мозъка на детето се развива до 7-годишна възраст</p>
@@ -337,7 +341,7 @@ export default function Page() {
 			<section class="xl:px-30 mx-20px">
 				<AnimatedComponent>
 					<H3Pink title="Какво следва, ако не предприемем действие" />
-					<div class="flex flex-col lg:flex-row justify-center gap-10 xl:gap-20">
+					<div class="flex flex-col lg:flex-row justify-center gap-10 xl:gap-0">
 						<ServiceContaner
 							img="/assets/HADV/управление-симптомите-adhd.webp"
 							alt="test"
@@ -411,7 +415,7 @@ export default function Page() {
 
 			<DoodleDecor variant="purple" />
 
-			<section class="relative md:pb-30 xl:px-30 mx-20px">
+			<section class="relative xl:px-30 mx-20px">
 				<H3Blue title="Първична оценка при съмнение за деца с разстройство с дефицит на вниманието и хиперактивност" />
 				<div class="flex flex-col justify-center items-center mx-auto px-20px xl:px-30">
 					<AnimatedComponent class="max-w-1500px px-5 md:px-20 md:pb-10 md:pt-4 py-5 md:bg-gradient-to-t lg:from-paper lg:to-paper bg-gradient-to-t from-brand-yellow to-brand b-rd-12px flex flex-col">
@@ -443,9 +447,11 @@ export default function Page() {
 						</div>
 					</AnimatedComponent>
 				</div>
+			</section>
 
-				<DoodleDecor variant="purple2" />
+			<DoodleDecor variant="purple2" />
 
+			<section class="relative xl:px-30 mx-20px">
 				<div class="gap-12 pb-20 pt-10 xl:px-30">
 					<div class="">
 						<AnimatedComponent>
@@ -501,9 +507,11 @@ export default function Page() {
 						</AnimatedComponent>
 					</div>
 				</div>
+			</section>
 
-				<DoodleDecor variant="pink2" />
+			<DoodleDecor variant="pink2" />
 
+			<section class="relative md:pb-30 xl:px-30 mx-20px">
 				<div class="pt-10 mx-auto">
 					<H3Blue title="Какво да правим, ако нямаме достъп до терапевт" />
 					<AnimatedComponent class="max-w-300px sm:w-300px md:w-700px flex flex-col max-w-full relative overflow-hidden mx-auto" style="flex: 0 0 auto;">
@@ -563,7 +571,7 @@ export default function Page() {
 					</section>
 
 					<section class="md:w-1/2 pt-25 md:pt-0">
-						<AnimatedComponent class="w-full md:px-3 my-auto flex flex-col justify-center items-center w-full md:pl-7 md:pr-0 px-3 mt--10 z-10">
+						<AnimatedComponent class="w-full my-auto flex flex-col justify-center items-center w-full md:pr-0 px-3 md:px-3 mt--10 z-10">
 							<H3Blue title="Какво можем да очакваме" />
 							<div class="relative mt--10">
 								<BackgroundIcons />
@@ -585,10 +593,10 @@ export default function Page() {
 					<DoodleDecor variant="blue" />
 				</div>
 
-				<div class="xl:px-30 mx-auto md:pt-0 pt-10">
+				<div class="xl:px-60 mx-auto md:pt-0 pt-10">
 					<H3Pink title="Някои от най-ефективните терапии" />
 					<AnimatedComponent>
-						<p class="md:mb-5 mb-2 mt-0 c-gray-700 leading-5 font-size-14px font-400 italic tracking md:pl-6" style="font-family: 'Oswald', sans-serif !important; letter-spacing: 0.3px; ">Препоръчват се от 8 до 24 сесии седмично за оптимални резултати</p>
+						<p class="md:mb-5 mb-2 mt-0 c-gray-700 leading-5 font-size-14px font-400 italic tracking" style="font-family: 'Oswald', sans-serif !important; letter-spacing: 0.3px; ">Препоръчват се от 8 до 24 сесии седмично за оптимални резултати</p>
 					</AnimatedComponent>
 					<div class="gap-12 md:pt-5 pb-5 md:pb-0">
 						<div class="">
@@ -607,19 +615,19 @@ export default function Page() {
 							>
 								<AuthorContainer
 									href=""
-									style="background:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(/assets/testing-image.jpg); background-position: right 50% bottom 85% !important; background-repeat: no-repeat; background-size: cover;"
+									style="background:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(/assets/sindrom-na-daun/детски-психолог.webp); background-position: right 50% bottom 85% !important; background-repeat: no-repeat; background-size: cover;"
 									name="Детски психолог"
 									description="Подкрепя развитието на умения за организиране, планиране и решаване на проблеми, както и за емоционална саморегулация и адаптация към различни ситуации."
 								/>
 								<AuthorContainer
 									href=""
-									style="background:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(/assets/testing-image.jpg); background-position: right 50% bottom 85% !important; background-repeat: no-repeat; background-size: cover;"
+									style="background:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(/assets/sindrom-na-daun/психомоторика.webp); background-position: right 50% bottom 85% !important; background-repeat: no-repeat; background-size: cover;"
 									name="Психомоторика"
 									description="Подобрява контрола при ходене, бягане и скачане, както и координацията на ръцете и пръстите за по-прецизно писане и рисуване."
 								/>
 								<AuthorContainer
 									href=""
-									style="background:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(/assets/testing-image.jpg); background-position: right 50% bottom 85% !important; background-repeat: no-repeat; background-size: cover;"
+									style="background:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(/assets/sindrom-na-daun/звукова-стимулация.webp); background-position: right 50% bottom 85% !important; background-repeat: no-repeat; background-size: cover;"
 									name="Звукова стимулация"
 									description="Тя подпомага сензорната и слуховата обработка, намалява тревожността и хиперактивността и стимулира езиковото развитие."
 								/>
@@ -654,16 +662,16 @@ export default function Page() {
 
 				<DoodleDecor variant="pink" />
 
-				<div class="pt-10 md:pt-20 xl:px-30 mx-20px mx-auto">
+				<div class="pt-10 xl:px-30 mx-20px mx-auto">
 					<H3Pink title="Какъв е процесът на работа" />
 					<WorkProcess />
 				</div>
 
 				<DoodleDecor variant="purple" />
 
-				<div class="xl:px-30 md:mx-20px md:mx-auto">
+				<div class="xl:px-30 md:mx-20px mx-auto">
 					<H3Blue title="Резултати от терапията" />
-					<div class="w-full sm:w-300px md:w-700px flex flex-col max-w-full relative md:mx-auto">
+					<div class="w-full sm:w-300px md:w-700px flex flex-col max-w-full relative mx-auto">
 						<AnimatedComponent class="flex flex-col gap-1">
 							<p class="text-left mt-2">
 								Професионалната терапия води до видим напредък при деца с ХАДВ. С постоянство и индивидуален подход могат да се постигнат значителни подобрения в концентрацията, самоконтрола, емоционалната регулация и учебната мотивация.
@@ -689,7 +697,6 @@ export default function Page() {
 				</div>
 
 				<div class="mt-20 gap-12 pb-8 md:pb-20 pt-50px xl:px-30 bg-brand-blue -mx-20px">
-					<h3 class="c-brand-yellow px-5 md:px-0">Резултати от терапията</h3>
 					<div class="mx-20px">
 						<AnimatedComponent>
 							<ReviewSlider
@@ -702,7 +709,7 @@ export default function Page() {
 									{ name: "5" },
 								]}>
 								<GoogleStarReview
-									img="/assets/GoogleLogoPNGImage.webp"
+									img="/https://lh3.googleusercontent.com/a/ACg8ocIZRpc48TQsa_KBvFTmJvD-hLjEWf6LX9fXZ4p1hajsvQRcxg=w72-h72-p-rp-mo-br100"
 									reviewText={
 										<>
 											Изключително сме благодарни на целият екип от професионалисти в Sense Center!<br />
@@ -713,10 +720,11 @@ export default function Page() {
 									}
 									name="Karina Stoqnova"
 									stars={5}
-									hrefGoogleReview="https://maps.app.goo.gl/pgSmLpppJkuxo1SH6"
+									hrefGoogleReview="https://maps.app.goo.gl/xJ4LJziRro312cev6"
+									class="important-h-390px important-sm:h-400px important-lg:h-400px important-xl:h-400px"
 								/>
 								<GoogleStarReview
-									img="/assets/GoogleLogoPNGImage.webp"
+									img="https://lh3.googleusercontent.com/a/ACg8ocJOv6-6inqTacvSZTKuVzDy01uZiWrkJ0IIwwRV4RSqvem3SM8=w72-h72-p-rp-mo-ba2-br100"
 									reviewText={
 										<>
 											Детски център Sense върна усмивките на нашите лица. В центъра се излекува нашият син Марин. Благодаря ви от сърце за професионализма и отдадеността. Вечно благодарни: семейство Марковски
@@ -724,10 +732,11 @@ export default function Page() {
 									}
 									name="Philip Markovski"
 									stars={5}
-									hrefGoogleReview="https://maps.app.goo.gl/pgSmLpppJkuxo1SH6"
+									hrefGoogleReview="https://maps.app.goo.gl/prUJexPosVAPrrUA8"
+									class="important-h-390px important-sm:h-400px important-lg:h-400px important-xl:h-400px"
 								/>
 								<GoogleStarReview
-									img="/assets/GoogleLogoPNGImage.webp"
+									img="https://lh3.googleusercontent.com/a/ACg8ocJUDpm4pRLN7nQpE4UqZqdpR6P2ttscgRBo5SIXU1tQorvXuQ=w72-h72-p-rp-mo-br100"
 									reviewText={
 										<>
 											Много уютно място, съобразено с всички нужди и предпоставки за един полезен и приятен престой за всички деца. Персонала от специалисти е много добре подбран и обучен, и влагат много желание и енергия в работата си. С подкрепата и съдействието им, с напредъка в развитието, уменията и знанията, които получават децата ни, са и видимо щастливи след заниманията в центъра! Препоръчвам!
@@ -735,10 +744,11 @@ export default function Page() {
 									}
 									name="Monika Marinova"
 									stars={5}
-									hrefGoogleReview="https://maps.app.goo.gl/pgSmLpppJkuxo1SH6"
+									hrefGoogleReview="https://maps.app.goo.gl/KficMzhYBcT3Wttq6"
+									class="important-h-390px important-sm:h-400px important-lg:h-400px important-xl:h-400px"
 								/>
 								<GoogleStarReview
-									img="/assets/GoogleLogoPNGImage.webp"
+									img="https://lh3.googleusercontent.com/a/ACg8ocJVqa43Sua1jSX47JdICudARTFAg3NmP5f6VC0kHnykoTvTAA=w72-h72-p-rp-mo-ba2-br100"
 									reviewText={
 										<>
 											Отнасят се изключително професионално и внимателно, както към нас, така и към синът ни. За момента имаме много голям напредък, определено ще продължим да използваме услугите им.
@@ -746,10 +756,11 @@ export default function Page() {
 									}
 									name="Ivailo Zhekov"
 									stars={5}
-									hrefGoogleReview="https://maps.app.goo.gl/pgSmLpppJkuxo1SH6"
+									hrefGoogleReview="https://maps.app.goo.gl/GWFYtoAhKN6V58Aj9"
+									class="important-h-390px important-sm:h-400px important-lg:h-400px important-xl:h-400px"
 								/>
 								<GoogleStarReview
-									img="/assets/GoogleLogoPNGImage.webp"
+									img="https://lh3.googleusercontent.com/a/ACg8ocLLzynuWWgBOo4FmH8i4k62ibKz8EOv30MXRYEA20n7JMCbIA=w72-h72-p-rp-mo-br100"
 									reviewText={
 										<>
 											Много сме доволни!<br />
@@ -758,7 +769,8 @@ export default function Page() {
 									}
 									name="Viktoria Simeonova"
 									stars={5}
-									hrefGoogleReview="https://maps.app.goo.gl/pgSmLpppJkuxo1SH6"
+									hrefGoogleReview="https://maps.app.goo.gl/KUyUvA7qWd4VPWdUA"
+									class="important-h-390px important-sm:h-400px important-lg:h-400px important-xl:h-400px"
 								/>
 							</ReviewSlider>
 						</AnimatedComponent>
@@ -772,7 +784,7 @@ export default function Page() {
 					<div class="md:pb-0 pb-10">
 						<AnimatedComponent>
 							<ReviewSlider
-								variant="dots3"
+								variant="dots2"
 								reviews={[
 									{ name: "1" },
 									{ name: "2" },
@@ -786,6 +798,7 @@ export default function Page() {
 									alt=""
 									title="Използвайте напомнящи бележки и съобщения"
 									desc="Те биха помогнали при разсейване и евентуално забравяне на някоя важна задача."
+									class="important-h-520px important-sm:h-670px important-md:h-550px important-lg:h-560px"
 								/>
 								<PuzzleIconReview
 									style="background-color:#E11172;"
@@ -794,6 +807,7 @@ export default function Page() {
 									alt=""
 									title="Създайте график съвместно с детето за ежедневните дейности"
 									desc="Това би подобрило организацията и дисциплината, както и ще улесни преминаването от една задача към друга."
+									class="important-h-520px important-sm:h-670px important-md:h-550px important-lg:h-560px"
 								/>
 								<PuzzleIconReview
 									style="background-color:#088F9D;"
@@ -802,6 +816,7 @@ export default function Page() {
 									alt=""
 									title="Давайте кратки и ясни инструкции"
 									desc="Избягвайте дълги обяснения и използвайте визуални средства за представяне на информация."
+									class="important-h-520px important-sm:h-670px important-md:h-550px important-lg:h-560px"
 								/>
 								<PuzzleIconReview
 									style="background-color:#FA7402;"
@@ -810,6 +825,7 @@ export default function Page() {
 									alt=""
 									title="Дайте възможност на детето да изразходва натрупаната енергия"
 									desc="Чести паузи между дейностите биха помогнали като постепенно се опитвате да увеличавате продължителността на работния процес и да намалявате времето за почивка."
+									class="important-h-520px important-sm:h-670px important-md:h-550px important-lg:h-560px"
 								/>
 							</ReviewSlider>
 						</AnimatedComponent>
@@ -820,27 +836,45 @@ export default function Page() {
 
 				<div class="gap-12 pb-8 md:pb-20 xl:px-30 mx-20px mx-auto">
 					<H3Pink title="Необходими ресурси" />
-					<div class="relative md:mx-10">
+					<div class="relative gap-12 xl:px-30">
 						<BackgroundIcons />
-						<AnimatedComponent class="mb-10">
-							<div class="flex flex-col justify-center items-start b-rd-12px bg-brand px-10 py-4">
-								<p class="font-size-22px c-paper mb-0 font-[MYRIADPRO-Semibold]">Знания и умения</p>
-								<p class="c-paper">Научете повече за същността на разстройството, за да можете да разберете по-добре нуждите на детето си. Запознайте се с особеностите на ХАДВ и подходящите методи за подкрепа на деца с това състояние. Обърнете внимание на възможните съпътстващи състояния като разстройство в поведението с хиперкинетични прояви на негативизъм.
-								</p>
+						<div class="block md:hidden">
+							<ReviewSlider2
+								variant="dots0"
+								reviews={[
+									{ name: "1" },
+									{ name: "2" },
+									{ name: "3" },
+								]}
+							>
+								<div class="bg-brand b-rd-12px px-7 py-5">
+									<p class="font-[MYRIADPRO-Semibold] c-paper font-size-20px">Знания и умения</p>
+									<p class="font-300 c-paper md:leading-7 leading-6.3 font-size-16px font-[MYRIADPRO-Light]">Научете повече за същността на разстройството, за да можете да разберете по-добре нуждите на детето си. Запознайте се с особеностите на ХАДВ и подходящите методи за подкрепа на деца с това състояние. Обърнете внимание на възможните съпътстващи състояния като разстройство в поведението с хиперкинетични прояви на негативизъм.</p>
+								</div>
+								<div class="bg-brand-blue b-rd-12px px-7 py-5">
+									<p class="font-[MYRIADPRO-Semibold] c-paper font-size-20px">Търпение и последователност</p>
+									<p class="font-300 c-paper md:leading-7 leading-6.3 font-size-16px font-[MYRIADPRO-Light]">Работата с деца с разстройство с дефицит на вниманието и хиперактивност изисква внимание и последователност в практикуването на разнообразни занимания. Бъдете търпеливи и готови да адаптирате подхода спрямо променящите се нужди на детето.</p>
+								</div>
+								<div class="bg-brand-orange b-rd-12px px-7 py-5">
+									<p class="font-[MYRIADPRO-Semibold] c-paper font-size-20px">Инвестиция</p>
+									<p class="font-300 c-paper md:leading-7 leading-6.3 font-size-16px font-[MYRIADPRO-Light]">Специализирани материали като визуални графици, учебни помагала и интерактивни приложения могат да помогнат на детето да развива своите умения.</p>
+								</div>
+							</ReviewSlider2>
+						</div>
+						<div class="hidden md:flex gap-3 xl:gap-5 px-1 mx-auto">
+							<div class="bg-brand b-rd-12px px-7 py-5 w-1/3">
+								<p class="font-[MYRIADPRO-Bold] c-paper font-size-22px">Знания и умения</p>
+								<p class="font-300 c-paper md:leading-7 leading-6.3 md:font-size-17px">Научете повече за същността на разстройството, за да можете да разберете по-добре нуждите на детето си. Запознайте се с особеностите на ХАДВ и подходящите методи за подкрепа на деца с това състояние. Обърнете внимание на възможните съпътстващи състояния като разстройство в поведението с хиперкинетични прояви на негативизъм.</p>
 							</div>
-						</AnimatedComponent>
-						<AnimatedComponent class="mb-10">
-							<div class="flex flex-col justify-center items-start b-rd-12px bg-brand-blue px-10 py-4">
-								<p class="font-size-22px c-paper mb-0 font-[MYRIADPRO-Semibold]">Търпение и последователност</p>
-								<p class="c-paper">Работата с деца с разстройство с дефицит на вниманието и хиперактивност изисква внимание и последователност в практикуването на разнообразни занимания. Бъдете търпеливи и готови да адаптирате подхода спрямо променящите се нужди на детето.</p>
+							<div class="bg-brand-blue b-rd-12px px-7 py-5 w-1/3">
+								<p class="font-[MYRIADPRO-Bold] c-paper font-size-22px">Търпение и последователност</p>
+								<p class="font-300 c-paper md:leading-7 leading-6.3 md:font-size-17px">Работата с деца с разстройство с дефицит на вниманието и хиперактивност изисква внимание и последователност в практикуването на разнообразни занимания. Бъдете търпеливи и готови да адаптирате подхода спрямо променящите се нужди на детето.</p>
 							</div>
-						</AnimatedComponent>
-						<AnimatedComponent class="mb-10">
-							<div class="flex flex-col justify-center items-start b-rd-12px bg-#F7871D px-10 py-4">
-								<p class="font-size-22px c-paper mb-0 font-[MYRIADPRO-Semibold]">Инвестиция</p>
-								<p class="c-paper">Специализирани материали като визуални графици, учебни помагала и интерактивни приложения могат да помогнат на детето да развива своите умения.</p>
+							<div class="bg-brand-orange b-rd-12px px-7 py-5 w-1/3">
+								<p class="font-[MYRIADPRO-Bold] c-paper font-size-22px">Инвестиция</p>
+								<p class="font-300 c-paper md:leading-7 leading-6.3 md:font-size-17px">Специализирани материали като визуални графици, учебни помагала и интерактивни приложения могат да помогнат на детето да развива своите умения.</p>
 							</div>
-						</AnimatedComponent>
+						</div>
 					</div>
 				</div>
 
@@ -849,7 +883,7 @@ export default function Page() {
 					<div class="gap-12 pb-0 pt-50px xl:px-30 mx-20px mx-auto">
 						<H3Blue title="Резултати от терапията в домашни условия" />
 						<AnimatedComponent class="mb-10">
-							<div class="flex flex-col justify-center items-start ">
+							<div class="flex flex-col justify-center items-start">
 								<p class="mt-0">Работата с дете с ADHD у дома може да подобри уменията му за справяне в ежедневието, комуникацията и социалните му взаимоотношения. Прилагането на утвърдени подходи и стратегии от родителите със сигурност е крачка във вярната посока. Въпреки че приложението на подходите може да бъде полезно, те не са универсално решение за всички деца с разстройство с дефицит на вниманието и хиперактивност. Ако симптомите на детето Ви продължават да създават трудности в ежедневието му, консултирайте се със специалист по лечение на ADHD при деца.</p>
 							</div>
 						</AnimatedComponent>
@@ -881,7 +915,7 @@ export default function Page() {
 											</>}
 											name="Viktoriya Nikolova"
 											hrefGoogleReview="https://maps.app.goo.gl/z5h7wjaaxazyoB479"
-											class="important-h-450px important-sm:h-200px important-md:h-750px important-lg:h-600px important-xl:h-600px"
+											class="important-h-450px important-sm:h-350px important-sm:h-200px important-md:h-430px important-lg:h-430px important-xl:h-520px"
 										/>
 										<StarReview
 											reviewText={<>
@@ -889,17 +923,16 @@ export default function Page() {
 											</>}
 											name="Stanimira Milenova"
 											hrefGoogleReview="https://maps.app.goo.gl/MZrttCtS4MRmFGPX8"
-											class="important-h-450px important-sm:h-200px important-md:h-750px important-lg:h-600px important-xl:h-600px"
+											class="important-h-450px important-sm:h-350px important-sm:h-200px important-md:h-430px important-lg:h-430px important-xl:h-520px"
 										/>
 										<StarReview
 											reviewText={<>
-												Искам да изкажа огромната си благодарност на терапевтите в Сенс Център. Те са професионалисти с отношение както към децата, така и към родителите. Препоръчвам не само за деца с различни дефицити, но и за деца в норма. Децата имат какво да получат и да надградят в този Център. Оценките им са точни и програмата им е методична, което дава страхотни резултати, особено за деца в аутистичния спектър.<br />
-												Продължавайте да бъдете все така всеотдайни в работата си и да сбъдвате и нашите надежди.
+												Искам да изкажа огромната си благодарност на терапевтите в Сенс Център. Те са професионалисти с отношение както към децата, така и към родителите. Препоръчвам не само за деца с различни дефицити, но и за деца в норма. Децата имат какво да получат и да надградят в този Център. Оценките им са точни и програмата им е методична, което дава страхотни резултати, особено за деца в аутистичния спектър...
 
 											</>}
 											name="Kalina Ivanova"
 											hrefGoogleReview="https://maps.app.goo.gl/4TXB8ykbsV9hqFMw7"
-											class="important-h-450px important-sm:h-200px important-md:h-750px important-lg:h-600px important-xl:h-600px"
+											class="important-h-450px important-sm:h-350px important-sm:h-200px important-md:h-430px important-lg:h-430px important-xl:h-520px"
 										/>
 										<StarReview
 											reviewText={<>
@@ -907,15 +940,15 @@ export default function Page() {
 											</>}
 											name="Martin Ivanov"
 											hrefGoogleReview="https://maps.app.goo.gl/Trd6cP7wrDdCyXTq9"
-											class="important-h-450px important-sm:h-200px important-md:h-750px important-lg:h-600px important-xl:h-600px"
+											class="important-h-450px important-sm:h-350px important-sm:h-200px important-md:h-430px important-lg:h-430px important-xl:h-520px"
 										/>
 										<StarReview
 											reviewText={<>
-												Препоръчвам на всички родители, които имат притеснения да отидат. Безплатната консултация беше много полезна, продължи достатъчно време, за да ни зададат всички въпроси и обясненията бяха много полезни - без бързане, в спокойна атмосфера. Взеха малкия за половин час и като се върна, беше щастлив и усмихнат. Останахме с впечатление за висок професионализъм и невероятно отношение към децата. Винаги бихме се обърнали отново за подкрепа и това би бил първият ни избор, ако имаме нужда. Благодарим от сърце!
+												Препоръчвам на всички родители, които имат притеснения да отидат. Безплатната консултация беше много полезна, продължи достатъчно време, за да ни зададат всички въпроси и обясненията бяха много полезни - без бързане, в спокойна атмосфера. Взеха малкия за половин час и като се върна, беше щастлив и усмихнат. Останахме с впечатление за висок професионализъм и невероятно отношение към децата...
 											</>}
 											name="Stefan Yordanov"
 											hrefGoogleReview="https://maps.app.goo.gl/RZxjcfbus3gU8dFo6"
-											class="important-h-450px important-sm:h-200px important-md:h-750px important-lg:h-600px important-xl:h-600px"
+											class="important-h-450px important-sm:h-350px important-sm:h-200px important-md:h-430px important-lg:h-430px important-xl:h-520px"
 										/>
 									</ReviewSlider>
 								</AnimatedComponent>
